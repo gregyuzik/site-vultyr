@@ -86,6 +86,17 @@
             color: #888;
             line-height: 1.5;
         }
+        .badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(255, 153, 38, 0.2);
+            color: #ff9926;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
         footer {
             text-align: center;
             padding: 40px 24px;
@@ -107,7 +118,8 @@
     <div class="hero">
         <img src="icon.png" alt="vultyr" class="icon">
         <h1>vultyr</h1>
-        <p class="subtitle">See if it's down. <span class="highlight">200+ services</span>, one app.</p>
+        <p class="subtitle">Circling your stack.</p>
+        <p class="subtitle"><span class="highlight">200+ services</span> monitored from one app.</p>
         <p class="free">Completely free on iPhone and Mac.</p>
     </div>
 
@@ -127,6 +139,13 @@
             </div>
         </div>
         <div class="feature">
+            <div class="feature-icon">☁️</div>
+            <div>
+                <h3>Cross-Device Alerts</h3>
+                <p>Your Mac monitors services and pushes status changes to your iPhone via iCloud — no setup, no keys, no server.</p>
+            </div>
+        </div>
+        <div class="feature">
             <div class="feature-icon">🖥️</div>
             <div>
                 <h3>iPhone & Mac</h3>
@@ -138,6 +157,20 @@
             <div>
                 <h3>Incident Details</h3>
                 <p>See affected components, active incidents, scheduled maintenance, and timeline updates — straight from the source.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🤖</div>
+            <div>
+                <h3>AI Status Parsing <span class="badge">Experimental</span></h3>
+                <p>Uses on-device Apple Intelligence to parse status pages that don't have public APIs. All processing stays on your device.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🎨</div>
+            <div>
+                <h3>Retro Themes</h3>
+                <p>System default, green phosphor, or amber phosphor with bright and dim modes. Full dark mode and accessibility support.</p>
             </div>
         </div>
         <div class="feature">
