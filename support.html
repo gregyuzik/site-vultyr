@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Chirpless</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+            background: #000;
+            color: #ccc;
+            min-height: 100vh;
+            padding: 60px 24px;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        h1 { color: #fff; font-size: 2rem; margin-bottom: 24px; }
+        h2 { color: #fff; font-size: 1.1rem; margin-top: 28px; margin-bottom: 8px; }
+        p { margin-bottom: 16px; font-size: 0.9375rem; }
+        a { color: #ff9926; }
+        .faq { margin-bottom: 24px; }
+        .faq h3 { color: #fff; font-size: 1rem; margin-bottom: 4px; }
+        .faq p { color: #999; }
+        footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #1a1a1a; }
+        footer a { color: #888; text-decoration: none; margin-right: 16px; font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+    <h1>Support</h1>
+
+    <h2>Contact</h2>
+    <p>For bug reports, feature requests, or questions:<br>
+    <a href="mailto:greg@legendapps.dev">greg@legendapps.dev</a></p>
+
+    <h2>FAQ</h2>
+
+    <div class="faq">
+        <h3>How often does Chirpless check service status?</h3>
+        <p>While the app is open: every 5 minutes (configurable in Settings). The app also performs periodic background checks when conditions allow, but iOS manages the timing of these.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Why don't I get notifications when the app is closed?</h3>
+        <p>Chirpless currently checks status directly from your device. Notifications work while the app is in the foreground, with periodic background checks managed by iOS. Real-time push notifications via a dedicated server are planned for a future update.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Why do some services say "Link only"?</h3>
+        <p>Some services don't have a public status API. For these, Chirpless links directly to their official status page so you can check manually. Services with APIs show live status, components, and incident details automatically.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Does Chirpless collect my data?</h3>
+        <p>No. All data stays on your device. No accounts, no servers, no tracking. See our <a href="/privacy">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="faq">
+        <h3>How do I sync my services across devices?</h3>
+        <p>Enable iCloud Sync in Settings. Your watched services, starred items, and order will sync across iPhone, Mac, and Apple Watch via iCloud.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Can I request a new service?</h3>
+        <p>Yes! Email <a href="mailto:greg@legendapps.dev">greg@legendapps.dev</a> with the service name and its status page URL.</p>
+    </div>
+
+    <footer>
+        <a href="/">Home</a>
+        <a href="/privacy">Privacy Policy</a>
+    </footer>
+</body>
+</html>

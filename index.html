@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirpless — Service Status Monitor</title>
+    <meta name="description" content="Monitor 200+ cloud services, dev tools, and platforms. Built for DevOps, SRE, and developers.">
+    <link rel="apple-touch-icon" href="icon.png">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 24px 40px;
+            max-width: 680px;
+        }
+        .icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 26px;
+            margin-bottom: 32px;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: #999;
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+        .badge {
+            display: inline-block;
+            margin: 8px;
+        }
+        .badge img { height: 54px; }
+        .features {
+            max-width: 680px;
+            padding: 40px 24px;
+            width: 100%;
+        }
+        .feature {
+            display: flex;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        .feature:last-child { border-bottom: none; }
+        .feature-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            width: 40px;
+            text-align: center;
+        }
+        .feature h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .feature p {
+            font-size: 0.875rem;
+            color: #888;
+            line-height: 1.5;
+        }
+        .cta {
+            text-align: center;
+            padding: 40px 24px;
+            color: #666;
+            font-size: 0.875rem;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid #1a1a1a;
+            width: 100%;
+            max-width: 680px;
+        }
+        footer a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 16px;
+            font-size: 0.875rem;
+        }
+        footer a:hover { color: #fff; }
+        .highlight { color: #ff9926; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="icon.png" alt="Chirpless" class="icon">
+        <h1>Chirpless</h1>
+        <p class="subtitle">Monitor <span class="highlight">200+ services</span> in one place.<br>Know when things go down — before your users do.</p>
+        <div>
+            <a href="https://apps.apple.com/app/chirpless/id0000000000" class="badge">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+        </div>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <div class="feature-icon">📊</div>
+            <div>
+                <h3>Live Status Dashboard</h3>
+                <p>AWS, GitHub, Cloudflare, Slack, Stripe, OpenAI, and 200+ more. Categorized and searchable.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🔔</div>
+            <div>
+                <h3>Status Change Alerts</h3>
+                <p>Get notified when services go down or recover. Mute individual services you don't need alerts for.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🖥️</div>
+            <div>
+                <h3>iPhone, Mac & Apple Watch</h3>
+                <p>Menu bar app on Mac for always-on monitoring. Glanceable status on your wrist.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">☁️</div>
+            <div>
+                <h3>iCloud Sync</h3>
+                <p>Your watched services sync across all your devices automatically.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🔒</div>
+            <div>
+                <h3>Privacy First</h3>
+                <p>No accounts. No servers. No tracking. All data stays on your device.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta">
+        Built for DevOps engineers, SREs, and developers who need to know.
+    </div>
+
+    <footer>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/support">Support</a>
+        <a href="mailto:greg@legendapps.dev">Contact</a>
+    </footer>
+</body>
+</html>
