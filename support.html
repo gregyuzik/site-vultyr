@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support — Chirpless</title>
+    <title>Support — Vultyr</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -37,33 +37,38 @@
     <h2>FAQ</h2>
 
     <div class="faq">
-        <h3>How often does Chirpless check service status?</h3>
-        <p>While the app is open: every 5 minutes (configurable in Settings). The app also performs periodic background checks when conditions allow, but iOS manages the timing of these.</p>
+        <h3>How often does Vultyr check service status?</h3>
+        <p>On Mac: as often as every minute (configurable). On iPhone: every 5 minutes while the app is open. iOS also performs periodic background checks when conditions allow.</p>
     </div>
 
     <div class="faq">
-        <h3>Why don't I get notifications when the app is closed?</h3>
-        <p>Chirpless currently checks status directly from your device. Notifications work while the app is in the foreground, with periodic background checks managed by iOS. Real-time push notifications via a dedicated server are planned for a future update.</p>
+        <h3>Can my Mac send notifications to my iPhone?</h3>
+        <p>Yes! Enable "Push to iPhone" in Mac settings and import your APNS auth key. Your Mac will send push notifications directly to your iPhone when a service status changes — no external server needed.</p>
     </div>
 
     <div class="faq">
         <h3>Why do some services say "Link only"?</h3>
-        <p>Some services don't have a public status API. For these, Chirpless links directly to their official status page so you can check manually. Services with APIs show live status, components, and incident details automatically.</p>
+        <p>Some services don't have a public status API. For these, Vultyr links directly to their official status page so you can check manually. Services with APIs show live status, components, and incident details automatically.</p>
     </div>
 
     <div class="faq">
-        <h3>Does Chirpless collect my data?</h3>
+        <h3>Does Vultyr collect my data?</h3>
         <p>No. All data stays on your device. No accounts, no servers, no tracking. See our <a href="privacy.html">Privacy Policy</a>.</p>
     </div>
 
     <div class="faq">
         <h3>How do I sync my services across devices?</h3>
-        <p>Enable iCloud Sync in Settings. Your watched services, starred items, and order will sync across iPhone, Mac, and Apple Watch via iCloud.</p>
+        <p>Enable iCloud Sync in Settings. Your watched services, starred items, and order will sync across iPhone, Mac, and Apple Watch.</p>
     </div>
 
     <div class="faq">
         <h3>Can I request a new service?</h3>
         <p>Yes! Email <a href="mailto:greg@legendapps.dev">greg@legendapps.dev</a> with the service name and its status page URL.</p>
+    </div>
+
+    <div class="faq">
+        <h3>What are the theme options?</h3>
+        <p>System (default), Green Phosphor, or Amber Phosphor. Change it in Settings.</p>
     </div>
 
     <footer>
