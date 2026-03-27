@@ -56,6 +56,19 @@
     </div>
 
     <div class="faq">
+        <h3>How do I set up Mac-to-iPhone push notifications?</h3>
+        <p>This is a one-time setup for developers who have an Apple Developer account:</p>
+        <p>1. Go to <a href="https://appstoreconnect.apple.com/access/integrations/api">App Store Connect → Keys</a><br>
+        2. Click the + button to create a new key<br>
+        3. Name it anything (e.g. "vultyr push")<br>
+        4. Select "Admin" access<br>
+        5. Download the .p8 file<br>
+        6. In vultyr on Mac, open Settings → Push to iPhone → Import Auth Key<br>
+        7. Select the .p8 file you downloaded<br>
+        8. Enable the toggle — done. The key is stored in your Mac's Keychain.</p>
+    </div>
+
+    <div class="faq">
         <h3>Why do some services say "Link only"?</h3>
         <p>Some services don't have a public status API. For these, Vultyr links directly to their official status page so you can check manually. Services with APIs show live status, components, and incident details automatically.</p>
     </div>
