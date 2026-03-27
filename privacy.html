@@ -11,7 +11,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Vultyr</title>
+    <title>Privacy Policy — vultyr</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -39,10 +39,10 @@
     <p class="date">Last updated: March 27, 2026</p>
 
     <h2>Summary</h2>
-    <p>Vultyr does not collect, store, or transmit any personal data. Period.</p>
+    <p>vultyr does not collect, store, or transmit any personal data. Period.</p>
 
     <h2>Data Collection</h2>
-    <p>Vultyr does not collect any personal information. The app does not require an account, does not use analytics, and does not include any third-party tracking SDKs.</p>
+    <p>vultyr does not collect any personal information. The app does not require an account, does not include any third-party tracking SDKs, and does not phone home to any server we operate.</p>
 
     <h2>Network Requests</h2>
     <p>The app makes direct HTTPS requests to public status page APIs (such as Statuspage.io, Apple, Google Cloud, and others) to check service status. These requests go directly from your device to the service's public API — they do not pass through any server we operate.</p>
@@ -50,20 +50,23 @@
     <h2>Data Storage</h2>
     <p>All data is stored locally on your device using Apple's SwiftData framework. If you enable iCloud Sync, your list of watched services is synced via Apple's iCloud Key-Value Store, which is governed by Apple's privacy policy. We never see this data.</p>
 
-    <h2>Mac-to-iPhone Push</h2>
-    <p>If you enable "Push to iPhone" on the Mac app, your Mac sends push notifications directly to your iPhone via Apple's Push Notification Service (APNS). The device token is synced between your devices via iCloud. No third-party server is involved.</p>
+    <h2>Cross-Device Alerts</h2>
+    <p>If you enable Cross-Device Alerts, status changes are shared between your devices via Apple's CloudKit. When your Mac detects a status change, it writes a record to your iCloud account's public database. Your iPhone receives a push notification via Apple's infrastructure. No third-party server is involved — all communication goes through Apple's CloudKit service. You can toggle this from any device.</p>
+
+    <h2>AI Status Parsing (Experimental)</h2>
+    <p>For services without a public API, vultyr can optionally use Apple Intelligence (FoundationModels) to parse status page content. This processing happens entirely on your device — no page content is sent to any server. This feature requires Apple Silicon hardware and must be explicitly enabled by the user.</p>
 
     <h2>Favicons</h2>
     <p>Service favicons are fetched from Google's public favicon service and cached locally on your device.</p>
 
-    <h2>Link-Only Services</h2>
-    <p>Some services do not have a public status API. For these, Vultyr links directly to their official status page so you can check manually. No data is collected from these visits.</p>
+    <h2>Website Analytics</h2>
+    <p>This website (vultyr.app) uses Google Analytics to understand visitor traffic. The vultyr app itself does not include any analytics or tracking.</p>
 
     <h2>Third-Party Services</h2>
-    <p>Vultyr does not integrate with any third-party analytics, advertising, or tracking services.</p>
+    <p>The vultyr app does not integrate with any third-party analytics, advertising, or tracking services. The only external requests are to public status APIs and Google's favicon service.</p>
 
     <h2>Children's Privacy</h2>
-    <p>Vultyr does not collect data from anyone, including children under 13.</p>
+    <p>vultyr does not collect data from anyone, including children under 13.</p>
 
     <h2>Changes</h2>
     <p>If this policy changes, we will update the date above.</p>
