@@ -52,20 +52,7 @@
 
     <div class="faq">
         <h3>Can my Mac send notifications to my iPhone?</h3>
-        <p>Yes! Enable "Push to iPhone" in Mac settings and import your APNS auth key. Your Mac will send push notifications directly to your iPhone when a service status changes — no external server needed.</p>
-    </div>
-
-    <div class="faq">
-        <h3>How do I set up Mac-to-iPhone push notifications?</h3>
-        <p>This is a one-time setup for developers who have an Apple Developer account:</p>
-        <p>1. Go to <a href="https://appstoreconnect.apple.com/access/integrations/api">App Store Connect → Keys</a><br>
-        2. Click the + button to create a new key<br>
-        3. Name it anything (e.g. "vultyr push")<br>
-        4. Select "Admin" access<br>
-        5. Download the .p8 file<br>
-        6. In vultyr on Mac, open Settings → Push to iPhone → Import Auth Key<br>
-        7. Select the .p8 file you downloaded<br>
-        8. Enable the toggle — done. The key is stored in your Mac's Keychain.</p>
+        <p>Yes! When your Mac detects a status change, it pushes the update via iCloud to all your other devices automatically. Just make sure iCloud is enabled — no setup needed.</p>
     </div>
 
     <div class="faq">
