@@ -51,7 +51,7 @@
     <p>All data is stored locally on your device using Apple's SwiftData framework. If you enable iCloud Sync, your list of watched services is synced via Apple's iCloud Key-Value Store, which is governed by Apple's privacy policy. We never see this data.</p>
 
     <h2>Cross-Device Alerts</h2>
-    <p>If you enable Cross-Device Alerts, status changes are shared between your devices via Apple's CloudKit. When your Mac detects a status change, it writes a record to your iCloud account's public database. Your iPhone receives a push notification via Apple's infrastructure. No third-party server is involved — all communication goes through Apple's CloudKit service. You can toggle this from any device.</p>
+    <p>If you enable Cross-Device Alerts, status changes are shared between your devices via Apple's iCloud Key-Value Store. When your Mac detects a status change, it writes a lightweight signal to your iCloud account. Your other devices observe the change and run their own local check. No third-party server is involved — all communication goes through Apple's iCloud infrastructure. You can toggle this from any device.</p>
 
     <h2>Favicons</h2>
     <p>Service favicons are fetched from Google's public favicon service and cached locally on your device.</p>
