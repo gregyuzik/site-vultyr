@@ -47,32 +47,42 @@
 
     <div class="faq">
         <h3>How often does vultyr check service status?</h3>
-        <p>On Mac: as often as every minute (configurable). On iPhone: every 5 minutes while the app is open. iOS also performs periodic background checks when conditions allow.</p>
+        <p>On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions.</p>
     </div>
 
     <div class="faq">
         <h3>How do Cross-Device Alerts work?</h3>
-        <p>When your Mac detects a status change, it writes a signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup. Just enable "Cross-Device Alerts" in settings on either device. Keep the Mac app running for real-time monitoring.</p>
+        <p>When your Mac detects a status change, it writes a lightweight signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup — just enable "Cross-Device Alerts" in settings on any device. Keep the Mac app running for real-time monitoring.</p>
     </div>
 
     <div class="faq">
         <h3>Why do some services say "Link only"?</h3>
-        <p>Some services don't have a public status API. For these, vultyr links directly to their official status page so you can check manually.</p>
+        <p>Some services don't have a public status API. For these, vultyr links directly to their official status page so you can check manually. Link-only services are hidden by default but can be shown in Settings.</p>
     </div>
 
     <div class="faq">
         <h3>Does vultyr collect my data?</h3>
-        <p>No. All data stays on your device. No accounts, no servers, no tracking. See our <a href="privacy.html">Privacy Policy</a>.</p>
+        <p>No. All data stays on your device. No accounts, no servers, no tracking, no analytics. See our <a href="privacy.html">Privacy Policy</a>.</p>
     </div>
 
     <div class="faq">
         <h3>How do I sync my services across devices?</h3>
-        <p>Enable iCloud Sync in Settings. Your watched services, starred items, and order will sync across all your Apple devices.</p>
+        <p>Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store.</p>
     </div>
 
     <div class="faq">
         <h3>What are the theme options?</h3>
-        <p>System (default), Green Phosphor, or Amber Phosphor — each with bright and dim intensity. The retro themes give the app a classic terminal aesthetic.</p>
+        <p>System (default), Green Phosphor, or Amber Phosphor — each with bright and dim intensity. Themes sync across all your devices automatically.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Can I mute notifications for a known incident?</h3>
+        <p>Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about.</p>
+    </div>
+
+    <div class="faq">
+        <h3>What platforms are supported?</h3>
+        <p>iPhone, Mac (with menu bar app), Apple Watch (with complications), Apple TV, and Apple Vision Pro. The app is completely free on all platforms.</p>
     </div>
 
     <div class="faq">
