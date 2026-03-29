@@ -41,21 +41,21 @@
             margin-bottom: 16px;
         }
         h1 {
-            font-size: 4rem;
+            font-size: clamp(2.5rem, 8vw, 4rem);
             font-weight: 400;
             font-family: 'Audiowide', sans-serif;
             letter-spacing: -0.02em;
             margin-bottom: 12px;
         }
         .subtitle {
-            font-size: 1.25rem;
-            color: #999;
+            font-size: clamp(1.1rem, 3vw, 1.25rem);
+            color: #bbb;
             margin-bottom: 12px;
             line-height: 1.5;
         }
         .free {
-            font-size: 0.875rem;
-            color: #666;
+            font-size: clamp(0.8rem, 2.5vw, 0.875rem);
+            color: #888;
             margin-bottom: 32px;
         }
         .features {
@@ -82,13 +82,14 @@
             height: 32px;
         }
         .feature h3 {
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
             font-weight: 600;
+            color: #eee;
             margin-bottom: 4px;
         }
         .feature p {
-            font-size: 0.875rem;
-            color: #888;
+            font-size: clamp(0.8rem, 2.5vw, 0.875rem);
+            color: #aaa;
             line-height: 1.5;
         }
         footer {
@@ -99,7 +100,7 @@
             max-width: 680px;
         }
         footer a {
-            color: #888;
+            color: #aaa;
             text-decoration: none;
             margin: 0 16px;
             font-size: 0.875rem;
@@ -112,10 +113,10 @@
     <div class="hero">
         <img src="icon.png" alt="vultyr" class="icon">
         <h1>vultyr</h1>
-        <p class="subtitle">Circling your stack.</p>
-        <p class="subtitle"><span class="highlight">Instant outage alerts.</span></p>
-        <p class="subtitle">150+ services monitored from one app.</p>
-        <p class="free">Completely free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.</p>
+        <p class="subtitle">Circling your stack</p>
+        <p class="subtitle"><span class="highlight">Instant outage alerts</span></p>
+        <p class="subtitle">150+ services monitored from one app</p>
+        <p class="free">Completely free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro</p>
     </div>
 
     <div class="features">
