@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-YYDJLZG0X1");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vultyr — Monitored Services</title>
+    <meta name="description" content="All services monitored by vultyr, organized by category. Cloud, dev tools, communication, AI, and more.">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 24px 24px;
+            max-width: 800px;
+            width: 100%;
+        }
+        .header a {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        .header a:hover { color: #fff; }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            font-family: 'Audiowide', sans-serif;
+            letter-spacing: -0.02em;
+            margin: 16px 0 8px;
+        }
+        .subtitle {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 8px;
+        }
+        .highlight { color: #ff9926; }
+        .content {
+            max-width: 800px;
+            padding: 0 24px 40px;
+            width: 100%;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category h2 {
+            font-family: 'Audiowide', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #ff9926;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #1a1a1a;
+            margin-bottom: 4px;
+        }
+        .category h2 span {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            font-size: 0.8rem;
+            color: #555;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+        .service {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #111;
+        }
+        .service:last-child { border-bottom: none; }
+        .service-favicon {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+        .service-name {
+            font-size: 0.95rem;
+            font-weight: 500;
+            flex: 1;
+            min-width: 0;
+        }
+        .service-links {
+            display: flex;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        .service-links a {
+            font-size: 0.75rem;
+            color: #666;
+            text-decoration: none;
+            padding: 4px 8px;
+            border: 1px solid #222;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+        .service-links a:hover {
+            color: #ff9926;
+            border-color: #ff9926;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid #1a1a1a;
+            width: 100%;
+            max-width: 800px;
+        }
+        footer a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 16px;
+            font-size: 0.875rem;
+        }
+        footer a:hover { color: #fff; }
+        @media (max-width: 500px) {
+            .service { flex-wrap: wrap; gap: 8px; }
+            .service-links { width: 100%; padding-left: 36px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">&larr; Back to vultyr</a>
+        <h1>Monitored <span class="highlight">Services</span></h1>
+        <p class="subtitle">All services vultyr actively monitors via status APIs.</p>
+    </div>
+
+    <div class="content">
+
+        <!-- Cloud & Infrastructure -->
+        <div class="category">
+            <h2>Cloud &amp; Infrastructure <span>19 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=aiven.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Aiven</div>
+                <div class="service-links">
+                    <a href="https://status.aiven.io" target="_blank">Status Page</a>
+                    <a href="https://status.aiven.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=akamai.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Akamai</div>
+                <div class="service-links">
+                    <a href="https://www.akamaistatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.akamaistatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=aptible.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Aptible</div>
+                <div class="service-links">
+                    <a href="https://aptible.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://aptible.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=bunny.net&sz=32" alt="" loading="lazy">
+                <div class="service-name">Bunny CDN</div>
+                <div class="service-links">
+                    <a href="https://status.bunny.net" target="_blank">Status Page</a>
+                    <a href="https://status.bunny.net/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=cloudflare.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Cloudflare</div>
+                <div class="service-links">
+                    <a href="https://www.cloudflarestatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.cloudflarestatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=cockroachlabs.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">CockroachDB</div>
+                <div class="service-links">
+                    <a href="https://status.cockroachlabs.cloud" target="_blank">Status Page</a>
+                    <a href="https://status.cockroachlabs.cloud/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=confluent.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Confluent (Kafka)</div>
+                <div class="service-links">
+                    <a href="https://status.confluent.cloud" target="_blank">Status Page</a>
+                    <a href="https://status.confluent.cloud/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=digitalocean.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">DigitalOcean</div>
+                <div class="service-links">
+                    <a href="https://status.digitalocean.com" target="_blank">Status Page</a>
+                    <a href="https://status.digitalocean.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=dropbox.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Dropbox</div>
+                <div class="service-links">
+                    <a href="https://status.dropbox.com" target="_blank">Status Page</a>
+                    <a href="https://status.dropbox.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=elastic.co&sz=32" alt="" loading="lazy">
+                <div class="service-name">Elastic Cloud</div>
+                <div class="service-links">
+                    <a href="https://status.elastic.co" target="_blank">Status Page</a>
+                    <a href="https://status.elastic.co/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=fly.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Fly.io</div>
+                <div class="service-links">
+                    <a href="https://status.flyio.net" target="_blank">Status Page</a>
+                    <a href="https://status.flyio.net/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=influxdata.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">InfluxDB Cloud</div>
+                <div class="service-links">
+                    <a href="https://status.influxdata.com" target="_blank">Status Page</a>
+                    <a href="https://status.influxdata.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=linode.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Linode</div>
+                <div class="service-links">
+                    <a href="https://status.linode.com" target="_blank">Status Page</a>
+                    <a href="https://status.linode.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=mongodb.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">MongoDB Cloud</div>
+                <div class="service-links">
+                    <a href="https://status.mongodb.com" target="_blank">Status Page</a>
+                    <a href="https://status.mongodb.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=planetscale.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">PlanetScale</div>
+                <div class="service-links">
+                    <a href="https://www.planetscalestatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.planetscalestatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=railway.app&sz=32" alt="" loading="lazy">
+                <div class="service-name">Railway</div>
+                <div class="service-links">
+                    <a href="https://railway.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://railway.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=render.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Render</div>
+                <div class="service-links">
+                    <a href="https://status.render.com" target="_blank">Status Page</a>
+                    <a href="https://status.render.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=snowflake.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Snowflake</div>
+                <div class="service-links">
+                    <a href="https://status.snowflake.com" target="_blank">Status Page</a>
+                    <a href="https://status.snowflake.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=vercel.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Vercel</div>
+                <div class="service-links">
+                    <a href="https://www.vercel-status.com" target="_blank">Status Page</a>
+                    <a href="https://www.vercel-status.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Developer Tools -->
+        <div class="category">
+            <h2>Developer Tools <span>41 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=bitbucket.org&sz=32" alt="" loading="lazy">
+                <div class="service-name">Bitbucket</div>
+                <div class="service-links">
+                    <a href="https://bitbucket.status.atlassian.com" target="_blank">Status Page</a>
+                    <a href="https://bitbucket.status.atlassian.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=buildkite.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Buildkite</div>
+                <div class="service-links">
+                    <a href="https://www.buildkitestatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.buildkitestatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=circleci.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">CircleCI</div>
+                <div class="service-links">
+                    <a href="https://status.circleci.com" target="_blank">Status Page</a>
+                    <a href="https://status.circleci.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=cloudinary.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Cloudinary</div>
+                <div class="service-links">
+                    <a href="https://status.cloudinary.com" target="_blank">Status Page</a>
+                    <a href="https://status.cloudinary.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=codecov.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Codecov</div>
+                <div class="service-links">
+                    <a href="https://status.codecov.com" target="_blank">Status Page</a>
+                    <a href="https://status.codecov.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=codefresh.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Codefresh</div>
+                <div class="service-links">
+                    <a href="https://status.codefresh.io" target="_blank">Status Page</a>
+                    <a href="https://status.codefresh.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=cocoapods.org&sz=32" alt="" loading="lazy">
+                <div class="service-name">CocoaPods</div>
+                <div class="service-links">
+                    <a href="https://status.cocoapods.org" target="_blank">Status Page</a>
+                    <a href="https://status.cocoapods.org/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=contentful.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Contentful</div>
+                <div class="service-links">
+                    <a href="https://contentful.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://contentful.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=convex.dev&sz=32" alt="" loading="lazy">
+                <div class="service-name">Convex</div>
+                <div class="service-links">
+                    <a href="https://status.convex.dev" target="_blank">Status Page</a>
+                    <a href="https://status.convex.dev/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=crates.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Crates.io</div>
+                <div class="service-links">
+                    <a href="https://status.crates.io" target="_blank">Status Page</a>
+                    <a href="https://status.crates.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=doppler.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Doppler</div>
+                <div class="service-links">
+                    <a href="https://www.dopplerstatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.dopplerstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=github.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">GitHub</div>
+                <div class="service-links">
+                    <a href="https://www.githubstatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.githubstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=gitpod.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Gitpod</div>
+                <div class="service-links">
+                    <a href="https://www.gitpodstatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.gitpodstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=grafana.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Grafana</div>
+                <div class="service-links">
+                    <a href="https://status.grafana.com" target="_blank">Status Page</a>
+                    <a href="https://status.grafana.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=harness.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Harness</div>
+                <div class="service-links">
+                    <a href="https://status.harness.io" target="_blank">Status Page</a>
+                    <a href="https://status.harness.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=hashicorp.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">HashiCorp</div>
+                <div class="service-links">
+                    <a href="https://status.hashicorp.com" target="_blank">Status Page</a>
+                    <a href="https://status.hashicorp.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=honeycomb.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Honeycomb</div>
+                <div class="service-links">
+                    <a href="https://status.honeycomb.io" target="_blank">Status Page</a>
+                    <a href="https://status.honeycomb.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=incident.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">incident.io</div>
+                <div class="service-links">
+                    <a href="https://incidentio.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://incidentio.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=jfrog.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">JFrog</div>
+                <div class="service-links">
+                    <a href="https://status.jfrog.io" target="_blank">Status Page</a>
+                    <a href="https://status.jfrog.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=launchdarkly.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">LaunchDarkly</div>
+                <div class="service-links">
+                    <a href="https://status.launchdarkly.com" target="_blank">Status Page</a>
+                    <a href="https://status.launchdarkly.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=maven.org&sz=32" alt="" loading="lazy">
+                <div class="service-name">Maven Central</div>
+                <div class="service-links">
+                    <a href="https://status.maven.org" target="_blank">Status Page</a>
+                    <a href="https://status.maven.org/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=netlify.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Netlify</div>
+                <div class="service-links">
+                    <a href="https://www.netlifystatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.netlifystatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=newrelic.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">New Relic</div>
+                <div class="service-links">
+                    <a href="https://status.newrelic.com" target="_blank">Status Page</a>
+                    <a href="https://status.newrelic.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=npmjs.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">npm</div>
+                <div class="service-links">
+                    <a href="https://status.npmjs.org" target="_blank">Status Page</a>
+                    <a href="https://status.npmjs.org/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=opsgenie.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Opsgenie</div>
+                <div class="service-links">
+                    <a href="https://opsgenie.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://opsgenie.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=postman.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Postman</div>
+                <div class="service-links">
+                    <a href="https://status.postman.com" target="_blank">Status Page</a>
+                    <a href="https://status.postman.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=pulumi.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Pulumi</div>
+                <div class="service-links">
+                    <a href="https://status.pulumi.com" target="_blank">Status Page</a>
+                    <a href="https://status.pulumi.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=pypi.org&sz=32" alt="" loading="lazy">
+                <div class="service-name">PyPI</div>
+                <div class="service-links">
+                    <a href="https://status.python.org" target="_blank">Status Page</a>
+                    <a href="https://status.python.org/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=retool.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Retool</div>
+                <div class="service-links">
+                    <a href="https://status.retool.com" target="_blank">Status Page</a>
+                    <a href="https://status.retool.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=rubygems.org&sz=32" alt="" loading="lazy">
+                <div class="service-name">RubyGems</div>
+                <div class="service-links">
+                    <a href="https://status.rubygems.org" target="_blank">Status Page</a>
+                    <a href="https://status.rubygems.org/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=sentry.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Sentry</div>
+                <div class="service-links">
+                    <a href="https://status.sentry.io" target="_blank">Status Page</a>
+                    <a href="https://status.sentry.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=snyk.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Snyk</div>
+                <div class="service-links">
+                    <a href="https://snyk.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://snyk.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=sourcegraph.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Sourcegraph</div>
+                <div class="service-links">
+                    <a href="https://sourcegraphstatus.com" target="_blank">Status Page</a>
+                    <a href="https://sourcegraphstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=spacelift.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Spacelift</div>
+                <div class="service-links">
+                    <a href="https://spacelift.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://spacelift.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=splunk.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Splunk Cloud</div>
+                <div class="service-links">
+                    <a href="https://status.splunkcloud.com" target="_blank">Status Page</a>
+                    <a href="https://status.splunkcloud.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=victorops.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Splunk On-Call</div>
+                <div class="service-links">
+                    <a href="https://status.victorops.com" target="_blank">Status Page</a>
+                    <a href="https://status.victorops.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=supabase.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Supabase</div>
+                <div class="service-links">
+                    <a href="https://status.supabase.com" target="_blank">Status Page</a>
+                    <a href="https://status.supabase.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=travis-ci.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Travis CI</div>
+                <div class="service-links">
+                    <a href="https://www.traviscistatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.traviscistatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=upstash.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Upstash</div>
+                <div class="service-links">
+                    <a href="https://status.upstash.com" target="_blank">Status Page</a>
+                    <a href="https://status.upstash.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=warp.dev&sz=32" alt="" loading="lazy">
+                <div class="service-name">Warp</div>
+                <div class="service-links">
+                    <a href="https://status.warp.dev" target="_blank">Status Page</a>
+                    <a href="https://status.warp.dev/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=webflow.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Webflow</div>
+                <div class="service-links">
+                    <a href="https://status.webflow.com" target="_blank">Status Page</a>
+                    <a href="https://status.webflow.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Communication -->
+        <div class="category">
+            <h2>Communication <span>7 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=discord.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Discord</div>
+                <div class="service-links">
+                    <a href="https://discordstatus.com" target="_blank">Status Page</a>
+                    <a href="https://discordstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=livekit.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">LiveKit</div>
+                <div class="service-links">
+                    <a href="https://livekit.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://livekit.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=slack.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Slack</div>
+                <div class="service-links">
+                    <a href="https://slack-status.com" target="_blank">Status Page</a>
+                    <a href="https://slack-status.com" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=twilio.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Twilio</div>
+                <div class="service-links">
+                    <a href="https://status.twilio.com" target="_blank">Status Page</a>
+                    <a href="https://status.twilio.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=vonage.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Vonage</div>
+                <div class="service-links">
+                    <a href="https://vonageapi.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://vonageapi.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=webex.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Webex</div>
+                <div class="service-links">
+                    <a href="https://ciscospark.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://ciscospark.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=zoom.us&sz=32" alt="" loading="lazy">
+                <div class="service-name">Zoom</div>
+                <div class="service-links">
+                    <a href="https://www.zoomstatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.zoomstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Productivity & SaaS -->
+        <div class="category">
+            <h2>Productivity &amp; SaaS <span>21 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=airtable.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Airtable</div>
+                <div class="service-links">
+                    <a href="https://status.airtable.com" target="_blank">Status Page</a>
+                    <a href="https://status.airtable.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=amplitude.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Amplitude</div>
+                <div class="service-links">
+                    <a href="https://status.amplitude.com" target="_blank">Status Page</a>
+                    <a href="https://status.amplitude.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=asana.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Asana</div>
+                <div class="service-links">
+                    <a href="https://status.asana.com" target="_blank">Status Page</a>
+                    <a href="https://status.asana.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=atlassian.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Atlassian</div>
+                <div class="service-links">
+                    <a href="https://status.atlassian.com" target="_blank">Status Page</a>
+                    <a href="https://status.atlassian.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=box.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Box</div>
+                <div class="service-links">
+                    <a href="https://status.box.com" target="_blank">Status Page</a>
+                    <a href="https://status.box.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=canva.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Canva</div>
+                <div class="service-links">
+                    <a href="https://www.canvastatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.canvastatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=clickup.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">ClickUp</div>
+                <div class="service-links">
+                    <a href="https://clickup.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://clickup.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=clerk.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Clerk</div>
+                <div class="service-links">
+                    <a href="https://status.clerk.com" target="_blank">Status Page</a>
+                    <a href="https://status.clerk.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=datadoghq.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Datadog</div>
+                <div class="service-links">
+                    <a href="https://status.datadoghq.com" target="_blank">Status Page</a>
+                    <a href="https://status.datadoghq.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=hellosign.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Dropbox Sign</div>
+                <div class="service-links">
+                    <a href="https://status.hellosign.com" target="_blank">Status Page</a>
+                    <a href="https://status.hellosign.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=figma.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Figma</div>
+                <div class="service-links">
+                    <a href="https://status.figma.com" target="_blank">Status Page</a>
+                    <a href="https://status.figma.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=grammarly.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Grammarly</div>
+                <div class="service-links">
+                    <a href="https://status.grammarly.com" target="_blank">Status Page</a>
+                    <a href="https://status.grammarly.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">HubSpot</div>
+                <div class="service-links">
+                    <a href="https://status.hubspot.com" target="_blank">Status Page</a>
+                    <a href="https://status.hubspot.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=intercom.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Intercom</div>
+                <div class="service-links">
+                    <a href="https://www.intercomstatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.intercomstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=linear.app&sz=32" alt="" loading="lazy">
+                <div class="service-name">Linear</div>
+                <div class="service-links">
+                    <a href="https://linearstatus.com" target="_blank">Status Page</a>
+                    <a href="https://linearstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=login.gov&sz=32" alt="" loading="lazy">
+                <div class="service-name">Login.gov</div>
+                <div class="service-links">
+                    <a href="https://status.login.gov" target="_blank">Status Page</a>
+                    <a href="https://status.login.gov/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=mixpanel.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Mixpanel</div>
+                <div class="service-links">
+                    <a href="https://www.mixpanelstatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.mixpanelstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=monday.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Monday.com</div>
+                <div class="service-links">
+                    <a href="https://status.monday.com" target="_blank">Status Page</a>
+                    <a href="https://status.monday.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=notion.so&sz=32" alt="" loading="lazy">
+                <div class="service-name">Notion</div>
+                <div class="service-links">
+                    <a href="https://www.notion-status.com" target="_blank">Status Page</a>
+                    <a href="https://www.notion-status.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=sanity.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Sanity</div>
+                <div class="service-links">
+                    <a href="https://www.sanity-status.com" target="_blank">Status Page</a>
+                    <a href="https://www.sanity-status.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=segment.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Segment</div>
+                <div class="service-links">
+                    <a href="https://status.segment.com" target="_blank">Status Page</a>
+                    <a href="https://status.segment.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payments & Commerce -->
+        <div class="category">
+            <h2>Payments &amp; Commerce <span>10 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=coinbase.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Coinbase</div>
+                <div class="service-links">
+                    <a href="https://coinbase.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://coinbase.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=exchange.coinbase.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Coinbase Exchange</div>
+                <div class="service-links">
+                    <a href="https://status.exchange.coinbase.com" target="_blank">Status Page</a>
+                    <a href="https://status.exchange.coinbase.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=gemini.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Gemini Exchange</div>
+                <div class="service-links">
+                    <a href="https://status.gemini.com" target="_blank">Status Page</a>
+                    <a href="https://status.gemini.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=kraken.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Kraken</div>
+                <div class="service-links">
+                    <a href="https://status.kraken.com" target="_blank">Status Page</a>
+                    <a href="https://status.kraken.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=plaid.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Plaid</div>
+                <div class="service-links">
+                    <a href="https://plaidinc1.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://plaidinc1.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=shopify.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Shopify</div>
+                <div class="service-links">
+                    <a href="https://www.shopifystatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.shopifystatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=squareup.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Square</div>
+                <div class="service-links">
+                    <a href="https://issquareup.com" target="_blank">Status Page</a>
+                    <a href="https://issquareup.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=stripe.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Stripe</div>
+                <div class="service-links">
+                    <a href="https://www.stripestatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.stripestatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=uber.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Uber</div>
+                <div class="service-links">
+                    <a href="https://uber.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://uber.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=wise.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Wise</div>
+                <div class="service-links">
+                    <a href="https://status.wise.com" target="_blank">Status Page</a>
+                    <a href="https://status.wise.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apple -->
+        <div class="category">
+            <h2>Apple <span>2 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=developer.apple.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Apple Developer</div>
+                <div class="service-links">
+                    <a href="https://developer.apple.com/system-status/" target="_blank">Status Page</a>
+                    <a href="https://www.apple.com/support/systemstatus/data/developer/system_status_en_US.js" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=apple.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Apple Services</div>
+                <div class="service-links">
+                    <a href="https://www.apple.com/support/systemstatus/" target="_blank">Status Page</a>
+                    <a href="https://www.apple.com/support/systemstatus/data/system_status_en_US.js" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google -->
+        <div class="category">
+            <h2>Google <span>5 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=gmail.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Gmail</div>
+                <div class="service-links">
+                    <a href="https://www.google.com/appsstatus/dashboard/" target="_blank">Status Page</a>
+                    <a href="https://www.google.com/appsstatus/dashboard/incidents.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=cloud.google.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Google Cloud</div>
+                <div class="service-links">
+                    <a href="https://status.cloud.google.com" target="_blank">Status Page</a>
+                    <a href="https://status.cloud.google.com/incidents.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=drive.google.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Google Drive</div>
+                <div class="service-links">
+                    <a href="https://www.google.com/appsstatus/dashboard/" target="_blank">Status Page</a>
+                    <a href="https://www.google.com/appsstatus/dashboard/incidents.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=meet.google.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Google Meet</div>
+                <div class="service-links">
+                    <a href="https://www.google.com/appsstatus/dashboard/" target="_blank">Status Page</a>
+                    <a href="https://www.google.com/appsstatus/dashboard/incidents.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=workspace.google.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Google Workspace</div>
+                <div class="service-links">
+                    <a href="https://www.google.com/appsstatus/dashboard/" target="_blank">Status Page</a>
+                    <a href="https://www.google.com/appsstatus/dashboard/incidents.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microsoft -->
+        <div class="category">
+            <h2>Microsoft <span>1 service</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=azure.microsoft.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Azure</div>
+                <div class="service-links">
+                    <a href="https://azure.status.microsoft/en-us/status" target="_blank">Status Page</a>
+                    <a href="https://azure.status.microsoft/en-us/status/feed/" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amazon -->
+        <div class="category">
+            <h2>Amazon <span>1 service</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">AWS</div>
+                <div class="service-links">
+                    <a href="https://health.aws.amazon.com/health/status" target="_blank">Status Page</a>
+                    <a href="https://status.aws.amazon.com/rss/all.rss" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI & Machine Learning -->
+        <div class="category">
+            <h2>AI &amp; Machine Learning <span>9 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Anthropic</div>
+                <div class="service-links">
+                    <a href="https://status.claude.com" target="_blank">Status Page</a>
+                    <a href="https://status.claude.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=cohere.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Cohere</div>
+                <div class="service-links">
+                    <a href="https://status.cohere.com" target="_blank">Status Page</a>
+                    <a href="https://status.cohere.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=cursor.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Cursor</div>
+                <div class="service-links">
+                    <a href="https://status.cursor.com" target="_blank">Status Page</a>
+                    <a href="https://status.cursor.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=deepseek.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">DeepSeek</div>
+                <div class="service-links">
+                    <a href="https://status.deepseek.com" target="_blank">Status Page</a>
+                    <a href="https://status.deepseek.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=elevenlabs.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">ElevenLabs</div>
+                <div class="service-links">
+                    <a href="https://status.elevenlabs.io" target="_blank">Status Page</a>
+                    <a href="https://status.elevenlabs.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=groq.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Groq</div>
+                <div class="service-links">
+                    <a href="https://groqstatus.com" target="_blank">Status Page</a>
+                    <a href="https://groqstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=openai.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">OpenAI</div>
+                <div class="service-links">
+                    <a href="https://status.openai.com" target="_blank">Status Page</a>
+                    <a href="https://status.openai.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=replicate.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Replicate</div>
+                <div class="service-links">
+                    <a href="https://www.replicatestatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.replicatestatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=stability.ai&sz=32" alt="" loading="lazy">
+                <div class="service-name">Stability AI</div>
+                <div class="service-links">
+                    <a href="https://status.stability.ai" target="_blank">Status Page</a>
+                    <a href="https://status.stability.ai/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media -->
+        <div class="category">
+            <h2>Social Media <span>7 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=bsky.app&sz=32" alt="" loading="lazy">
+                <div class="service-name">Bluesky</div>
+                <div class="service-links">
+                    <a href="https://bluesky.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://bluesky.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">LinkedIn</div>
+                <div class="service-links">
+                    <a href="https://www.linkedin-status.com" target="_blank">Status Page</a>
+                    <a href="https://www.linkedin-status.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=mastodon.social&sz=32" alt="" loading="lazy">
+                <div class="service-name">Mastodon</div>
+                <div class="service-links">
+                    <a href="https://mastodon.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://mastodon.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=medium.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Medium</div>
+                <div class="service-links">
+                    <a href="https://medium.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://medium.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=pinterest.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Pinterest</div>
+                <div class="service-links">
+                    <a href="https://www.pintereststatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.pintereststatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=reddit.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Reddit</div>
+                <div class="service-links">
+                    <a href="https://www.redditstatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.redditstatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=substack.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Substack</div>
+                <div class="service-links">
+                    <a href="https://substack.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://substack.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Streaming & Media -->
+        <div class="category">
+            <h2>Streaming &amp; Media <span>6 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=dailymotion.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Dailymotion</div>
+                <div class="service-links">
+                    <a href="https://status.dailymotion.com" target="_blank">Status Page</a>
+                    <a href="https://status.dailymotion.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=giphy.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Giphy</div>
+                <div class="service-links">
+                    <a href="https://status.giphy.com" target="_blank">Status Page</a>
+                    <a href="https://status.giphy.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=imgur.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Imgur</div>
+                <div class="service-links">
+                    <a href="https://status.imgur.com" target="_blank">Status Page</a>
+                    <a href="https://status.imgur.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=spotify.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Spotify</div>
+                <div class="service-links">
+                    <a href="https://spotify.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://spotify.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=twitch.tv&sz=32" alt="" loading="lazy">
+                <div class="service-name">Twitch</div>
+                <div class="service-links">
+                    <a href="https://status.twitch.com" target="_blank">Status Page</a>
+                    <a href="https://status.twitch.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=vimeo.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Vimeo</div>
+                <div class="service-links">
+                    <a href="https://www.vimeostatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.vimeostatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gaming -->
+        <div class="category">
+            <h2>Gaming <span>3 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=epicgames.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Epic Games</div>
+                <div class="service-links">
+                    <a href="https://status.epicgames.com" target="_blank">Status Page</a>
+                    <a href="https://status.epicgames.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=fortnite.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Fortnite</div>
+                <div class="service-links">
+                    <a href="https://fortnite.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://fortnite.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=unity.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Unity</div>
+                <div class="service-links">
+                    <a href="https://unity.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://unity.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Telecom & ISP -->
+        <div class="category">
+            <h2>Telecom &amp; ISP <span>8 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=att.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">AT&amp;T</div>
+                <div class="service-links">
+                    <a href="https://att.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://att.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=bell.ca&sz=32" alt="" loading="lazy">
+                <div class="service-name">Bell Canada</div>
+                <div class="service-links">
+                    <a href="https://bell.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://bell.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=cox.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Cox</div>
+                <div class="service-links">
+                    <a href="https://cox.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://cox.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=lumen.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Lumen</div>
+                <div class="service-links">
+                    <a href="https://lumen.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://lumen.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=o2.co.uk&sz=32" alt="" loading="lazy">
+                <div class="service-name">O2</div>
+                <div class="service-links">
+                    <a href="https://o2.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://o2.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=starlink.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Starlink</div>
+                <div class="service-links">
+                    <a href="https://starlink.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://starlink.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=verizon.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Verizon</div>
+                <div class="service-links">
+                    <a href="https://verizon.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://verizon.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=visible.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Visible</div>
+                <div class="service-links">
+                    <a href="https://status.visible.vc" target="_blank">Status Page</a>
+                    <a href="https://status.visible.vc/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security -->
+        <div class="category">
+            <h2>Security <span>11 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=1password.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">1Password</div>
+                <div class="service-links">
+                    <a href="https://1password.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://1password.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=cloudflare.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Cloudflare Zero Trust</div>
+                <div class="service-links">
+                    <a href="https://www.cloudflarestatus.com" target="_blank">Status Page</a>
+                    <a href="https://www.cloudflarestatus.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=duo.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Duo Security</div>
+                <div class="service-links">
+                    <a href="https://status.duo.com" target="_blank">Status Page</a>
+                    <a href="https://status.duo.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=keepersecurity.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Keeper</div>
+                <div class="service-links">
+                    <a href="https://keeper.statuspage.io" target="_blank">Status Page</a>
+                    <a href="https://keeper.statuspage.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=lastpass.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">LastPass</div>
+                <div class="service-links">
+                    <a href="https://status.lastpass.com" target="_blank">Status Page</a>
+                    <a href="https://status.lastpass.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=paloaltonetworks.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Palo Alto Networks</div>
+                <div class="service-links">
+                    <a href="https://status.paloaltonetworks.com" target="_blank">Status Page</a>
+                    <a href="https://status.paloaltonetworks.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=proton.me&sz=32" alt="" loading="lazy">
+                <div class="service-name">Proton</div>
+                <div class="service-links">
+                    <a href="https://status.proton.me" target="_blank">Status Page</a>
+                    <a href="https://status.proton.me/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=semgrep.dev&sz=32" alt="" loading="lazy">
+                <div class="service-name">Semgrep</div>
+                <div class="service-links">
+                    <a href="https://status.semgrep.dev" target="_blank">Status Page</a>
+                    <a href="https://status.semgrep.dev/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=tailscale.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Tailscale</div>
+                <div class="service-links">
+                    <a href="https://status.tailscale.com" target="_blank">Status Page</a>
+                    <a href="https://status.tailscale.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=wiz.io&sz=32" alt="" loading="lazy">
+                <div class="service-name">Wiz</div>
+                <div class="service-links">
+                    <a href="https://status.wiz.io" target="_blank">Status Page</a>
+                    <a href="https://status.wiz.io/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=workos.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">WorkOS</div>
+                <div class="service-links">
+                    <a href="https://status.workos.com" target="_blank">Status Page</a>
+                    <a href="https://status.workos.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Email & Marketing -->
+        <div class="category">
+            <h2>Email &amp; Marketing <span>2 services</span></h2>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=mailgun.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">Mailgun</div>
+                <div class="service-links">
+                    <a href="https://status.mailgun.com" target="_blank">Status Page</a>
+                    <a href="https://status.mailgun.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+            <div class="service">
+                <img class="service-favicon" src="https://www.google.com/s2/favicons?domain=sendgrid.com&sz=32" alt="" loading="lazy">
+                <div class="service-name">SendGrid</div>
+                <div class="service-links">
+                    <a href="https://status.sendgrid.com" target="_blank">Status Page</a>
+                    <a href="https://status.sendgrid.com/api/v2/status.json" target="_blank">Check URL</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="index.html">&larr; Back to vultyr</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:support@vultyr.app">Contact</a>
+    </footer>
+</body>
+</html>
