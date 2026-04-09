@@ -18,195 +18,527 @@
     <meta property="og:image" content="https://vultyr.app/icon.png">
     <meta property="og:url" content="https://vultyr.app">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:site_name" content="Vultyr">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
+    <link rel="canonical" href="https://vultyr.app">
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Vultyr",
+      "alternateName": "vultyr",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "iOS, macOS, tvOS, watchOS, visionOS",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Monitor 200+ cloud services, dev tools, and platforms with instant outage alerts.",
+      "url": "https://vultyr.app",
+      "downloadUrl": "https://apps.apple.com/us/app/vultyr/id6761264004"
+    }
+    </script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
             background: #000;
             color: #fff;
             min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Subtle noise texture */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* ── Utility ── */
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+        .highlight { color: #00ff41; }
+        .highlight-orange { color: #ff9926; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+        /* ── Animations ── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 65, 0.15); }
+            50% { box-shadow: 0 0 40px rgba(0, 255, 65, 0.25); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .fade-up {
+            opacity: 0;
+            animation: fadeUp 0.6s ease-out forwards;
+        }
+        .fade-up-1 { animation-delay: 0.1s; }
+        .fade-up-2 { animation-delay: 0.2s; }
+        .fade-up-3 { animation-delay: 0.3s; }
+        .fade-up-4 { animation-delay: 0.4s; }
+        .fade-up-5 { animation-delay: 0.5s; }
+
+        /* ── Hero ── */
+        .hero {
+            text-align: center;
+            padding: 60px 24px 40px;
+            position: relative;
+        }
+        .hero-inner {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            margin-bottom: 20px;
+            animation: glow 3s ease-in-out infinite;
+        }
+        h1 {
+            font-size: clamp(2.8rem, 8vw, 4.5rem);
+            font-weight: 400;
+            font-family: 'Audiowide', sans-serif;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        .tagline {
+            font-size: clamp(1.15rem, 3vw, 1.35rem);
+            color: #ccc;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        .tagline-services {
+            font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+            color: #888;
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .badge-link {
+            display: inline-block;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .badge-link:hover { transform: translateY(-2px); }
+        .badge-img { height: 54px; }
+        .platforms {
+            font-size: 0.8rem;
+            color: #666;
+            letter-spacing: 0.02em;
+        }
+        .platforms span {
+            color: #888;
+        }
+
+        /* ── Screenshots ── */
+        .screenshots {
+            padding: 40px 0 60px;
+            overflow: hidden;
+        }
+        .screenshots-track {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 24px;
+        }
+        .phone-frame {
+            flex-shrink: 0;
+            width: 220px;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 2px solid #1a1a1a;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 65, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .phone-frame:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 255, 65, 0.1);
+        }
+        .phone-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 720px) {
+            .phone-frame { width: 180px; }
+            .screenshots-track { gap: 12px; }
+        }
+        @media (max-width: 580px) {
+            .screenshots-track {
+                justify-content: flex-start;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                padding: 0 24px;
+            }
+            .phone-frame {
+                scroll-snap-align: center;
+                width: 240px;
+            }
+        }
+
+        /* ── Section divider ── */
+        .divider {
+            width: 100%;
+            max-width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00ff41, transparent);
+            margin: 0 auto;
+            opacity: 0.3;
+        }
+
+        /* ── Features ── */
+        .features {
+            padding: 60px 24px;
+        }
+        .features-heading {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .features-heading h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .features-heading p {
+            color: #888;
+            font-size: 0.95rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .feature-card {
+            display: flex;
+            gap: 16px;
+            padding: 24px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #1a1a1a;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .feature-card:hover {
+            border-color: rgba(0, 255, 65, 0.2);
+            background: rgba(0, 255, 65, 0.02);
+        }
+        .feature-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: rgba(0, 255, 65, 0.08);
+        }
+        .feature-icon img {
+            width: 22px;
+            height: 22px;
+            filter: brightness(0) saturate(100%) invert(62%) sepia(92%) saturate(3000%) hue-rotate(95deg) brightness(105%);
+        }
+        .feature-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #eee;
+            margin-bottom: 6px;
+        }
+        .feature-card p {
+            font-size: 0.875rem;
+            color: #999;
+            line-height: 1.55;
+        }
+
+        /* ── Stats bar ── */
+        .stats {
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        .stat {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        .hero {
-            text-align: center;
-            padding: 40px 24px 40px;
-            max-width: 680px;
-        }
-        .icon {
-            width: 160px;
-            height: 160px;
-            border-radius: 32px;
-            margin-bottom: 16px;
-        }
-        h1 {
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            font-weight: 400;
+        .stat-value {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 700;
             font-family: 'Audiowide', sans-serif;
-            letter-spacing: -0.02em;
-            margin-bottom: 12px;
+            color: #00ff41;
         }
-        .subtitle {
-            font-size: clamp(1.1rem, 3vw, 1.25rem);
-            color: #bbb;
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-        .free {
-            font-size: clamp(0.8rem, 2.5vw, 0.875rem);
+        .stat-label {
+            font-size: 0.8rem;
             color: #888;
-            margin-bottom: 4px;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
         }
-        .free:last-child {
-            margin-bottom: 32px;
+
+        /* ── Bottom CTA ── */
+        .bottom-cta {
+            text-align: center;
+            padding: 60px 24px;
         }
-        .features {
-            max-width: 680px;
-            padding: 40px 24px;
-            width: 100%;
-        }
-        .feature {
-            display: flex;
-            gap: 16px;
-            padding: 20px 0;
-            border-bottom: 1px solid #1a1a1a;
-        }
-        .feature:last-child { border-bottom: none; }
-        .feature-icon {
-            flex-shrink: 0;
-            width: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .feature-icon svg {
-            width: 32px;
-            height: 32px;
-        }
-        .feature h3 {
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
+        .bottom-cta h2 {
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
             font-weight: 600;
-            color: #eee;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
-        .feature p {
-            font-size: clamp(0.8rem, 2.5vw, 0.875rem);
-            color: #aaa;
-            line-height: 1.5;
+        .bottom-cta p {
+            color: #888;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
         }
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: #00ff41;
+            color: #000;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 255, 65, 0.25);
+        }
+        .cta-button img {
+            width: 18px;
+            height: 18px;
+            filter: brightness(0);
+        }
+
+        /* ── Footer ── */
         footer {
             text-align: center;
             padding: 40px 24px;
-            border-top: 1px solid #1a1a1a;
-            width: 100%;
-            max-width: 680px;
+            border-top: 1px solid #111;
+        }
+        footer nav {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
         }
         footer a {
-            color: #aaa;
-            text-decoration: none;
-            margin: 0 16px;
-            font-size: 0.875rem;
+            color: #666;
+            font-size: 0.85rem;
+            transition: color 0.2s;
         }
-        footer a:hover { color: #fff; }
-        .highlight { color: #ff9926; }
-        .badge-link { display: inline-block; transition: transform .2s, opacity .2s; opacity: .92; margin-bottom: 16px; }
-        .badge-link:hover { opacity: 1; transform: translateY(-2px); }
-        .badge-img { height: 48px; }
+        footer a:hover { color: #ccc; }
+        .copyright {
+            font-size: 0.75rem;
+            color: #444;
+        }
+
+        /* ── Focus styles ── */
+        :focus-visible {
+            outline: 2px solid #00ff41;
+            outline-offset: 3px;
+        }
+
+        /* ── Reduced motion ── */
+        @media (prefers-reduced-motion: reduce) {
+            .fade-up { animation: none; opacity: 1; }
+            .icon { animation: none; }
+            .phone-frame { transition: none; }
+            .feature-card { transition: none; }
+            .cta-button { transition: none; }
+            .badge-link { transition: none; }
+        }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <img src="icon.png" alt="Vultyr" class="icon">
-        <h1>vultyr</h1>
-        <p class="subtitle">Is it down? <span class="highlight">Know before your users do.</span></p>
-        <p class="subtitle">Monitor 200+ services — AWS, GitHub, Slack, Stripe & more — with instant outage alerts.</p>
-        <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener" class="badge-link">
-            <img src="assets/app-store-badge.svg" alt="Download on the App Store" class="badge-img">
+    <a href="#main" class="sr-only">Skip to main content</a>
+
+    <!-- Hero -->
+    <header class="hero" id="main">
+        <div class="hero-inner">
+            <img src="icon.png" alt="Vultyr app icon" class="icon fade-up">
+            <h1 class="fade-up fade-up-1">vultyr</h1>
+            <p class="tagline fade-up fade-up-2">Is it down? <span class="highlight">Know before your users do.</span></p>
+            <p class="tagline-services fade-up fade-up-3">Monitor 200+ services — AWS, GitHub, Slack, Stripe & more — with instant outage alerts across every Apple device.</p>
+            <div class="cta-group fade-up fade-up-4">
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener" class="badge-link" aria-label="Download Vultyr on the App Store">
+                    <img src="assets/app-store-badge.svg" alt="Download on the App Store" class="badge-img">
+                </a>
+                <p class="platforms">Free on <span>iPhone</span> &middot; <span>iPad</span> &middot; <span>Mac</span> &middot; <span>Apple TV</span> &middot; <span>Apple Watch</span> &middot; <span>Vision Pro</span></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Screenshots -->
+    <section class="screenshots fade-up fade-up-5" aria-label="App screenshots">
+        <div class="screenshots-track">
+            <div class="phone-frame">
+                <img src="assets/screenshot-dashboard.png" alt="Vultyr dashboard showing All Clear status with services like AWS, GitHub, and Slack monitored" loading="lazy" width="390" height="844">
+            </div>
+            <div class="phone-frame">
+                <img src="assets/screenshot-settings.png" alt="Vultyr appearance settings with 12 themes including Terminal, Amber, Dracula, and Nord" loading="lazy" width="390" height="844">
+            </div>
+            <div class="phone-frame">
+                <img src="assets/screenshot-services.png" alt="Vultyr service browser showing 16 categories including Cloud, Dev Tools, and AI" loading="lazy" width="390" height="844">
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Stats -->
+    <section class="stats" aria-label="Key numbers">
+        <div class="stats-grid">
+            <div class="stat">
+                <span class="stat-value">200+</span>
+                <span class="stat-label">Services</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">16</span>
+                <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">5</span>
+                <span class="stat-label">Platforms</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">16</span>
+                <span class="stat-label">Languages</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Features -->
+    <section class="features" aria-label="Features">
+        <div class="features-heading">
+            <h2>Everything you need to stay ahead of outages</h2>
+            <p>No accounts, no servers, no tracking. Just status.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><img src="assets/icons/chart-bar-regular.svg" alt="" width="22" height="22"></div>
+                <div>
+                    <h3>Live Status Dashboard</h3>
+                    <p>AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic and 200+ more — all in one place.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22"></div>
+                <div>
+                    <h3>Smart Alerts</h3>
+                    <p>Get notified when a service goes down or comes back up. Mute known incidents and star critical services.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="assets/icons/cloud-check-regular.svg" alt="" width="22" height="22"></div>
+                <div>
+                    <h3>Cross-Device Sync</h3>
+                    <p>Your Mac monitors continuously and pushes status changes to all your devices via iCloud. No setup needed.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="assets/icons/devices-regular.svg" alt="" width="22" height="22"></div>
+                <div>
+                    <h3>Every Apple Platform</h3>
+                    <p>iPhone, Mac menu bar, Apple TV, Apple Watch, and Vision Pro. Services sync across all devices.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="assets/icons/lightning-regular.svg" alt="" width="22" height="22"></div>
+                <div>
+                    <h3>Incident Details</h3>
+                    <p>See affected components, active incidents, scheduled maintenance, and timeline updates from the source.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="assets/icons/battery-charging-regular.svg" alt="" width="22" height="22"></div>
+                <div>
+                    <h3>Battery-Aware Polling</h3>
+                    <p>Smart auto-refresh adapts to battery, power state, and thermals. Every minute on Mac, 5-15 on iPhone.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="assets/icons/palette-regular.svg" alt="" width="22" height="22"></div>
+                <div>
+                    <h3>12 Themes</h3>
+                    <p>Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, HAL, or Standard.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="assets/icons/shield-check-regular.svg" alt="" width="22" height="22"></div>
+                <div>
+                    <h3>No Account Needed</h3>
+                    <p>No sign-up, no tracking, no data collection. All data stays on your device. Completely private.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="assets/icons/translate-regular.svg" alt="" width="22" height="22"></div>
+                <div>
+                    <h3>16 Languages</h3>
+                    <p>English, German, French, Spanish, Japanese, Korean, Chinese, Portuguese, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Bottom CTA -->
+    <section class="bottom-cta">
+        <h2>Ready to monitor your stack?</h2>
+        <p>Free. No account required. Available everywhere.</p>
+        <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener" class="cta-button" aria-label="Download Vultyr free on the App Store">
+            <img src="assets/icons/download-simple-regular.svg" alt="" width="18" height="18">
+            Download Free
         </a>
-        <p class="free">Free on iPhone, iPad, Mac, Apple TV, Apple Watch, and Apple Vision Pro</p>
-        <p class="free">No account needed. No ads. No tracking.</p>
-    </div>
+    </section>
 
-    <div class="features">
-        <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g-dash" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#ff9926"/><stop offset="1" stop-color="#ffd60a"/></linearGradient></defs><rect x="4" y="18" width="6" height="10" rx="1.5" fill="url(#g-dash)"/><rect x="13" y="12" width="6" height="16" rx="1.5" fill="url(#g-dash)"/><rect x="22" y="4" width="6" height="24" rx="1.5" fill="url(#g-dash)"/></svg></div>
-            <div>
-                <h3>Live Status Dashboard</h3>
-                <p>Monitor AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic, and 200+ more — all in one place across 16 categories.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g-bell" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#ff3b30"/><stop offset="1" stop-color="#ff9926"/></linearGradient></defs><path d="M16 3a1.5 1.5 0 0 1 1.5 1.5v1.07A8 8 0 0 1 24 13v5l2.4 3.6a1 1 0 0 1-.83 1.55H6.43a1 1 0 0 1-.83-1.55L8 18v-5a8 8 0 0 1 6.5-7.43V4.5A1.5 1.5 0 0 1 16 3Zm-2.5 24.15a2.75 2.75 0 0 0 5 0" fill="url(#g-bell)"/></svg></div>
-            <div>
-                <h3>Smart Alerts</h3>
-                <p>Get notified when a service goes down or comes back up. Mute known incidents, star your critical services, and never miss what matters.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g-cloud" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#007aff"/><stop offset="1" stop-color="#30d5c8"/></linearGradient></defs><path d="M8 24h16a6 6 0 0 0 1.36-11.84A8 8 0 0 0 10 10a8 8 0 0 0-.5 2A6 6 0 0 0 8 24Z" fill="url(#g-cloud)"/></svg></div>
-            <div>
-                <h3>Cross-Device Alerts</h3>
-                <p>Your Mac monitors services and pushes status changes to your other devices via iCloud — no setup, no keys, no server.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g-monitor" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#af52de"/><stop offset="1" stop-color="#007aff"/></linearGradient></defs><rect x="3" y="4" width="26" height="18" rx="3" fill="url(#g-monitor)"/><rect x="11" y="4" width="10" height="18" rx="0" fill="url(#g-monitor)" opacity="0.5"/><path d="M12 25h8l1 4H11l1-4Z" fill="url(#g-monitor)"/></svg></div>
-            <div>
-                <h3>Every Apple Platform</h3>
-                <p>iPhone, Mac menu bar, Apple TV, Apple Watch, and Apple Vision Pro. Your watched services and settings sync across all devices via iCloud.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g-bolt" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#ffd60a"/><stop offset="1" stop-color="#ff9926"/></linearGradient></defs><path d="M18 2 7 18h7l-2 12L25 14h-7l2-12Z" fill="url(#g-bolt)"/></svg></div>
-            <div>
-                <h3>Incident Details</h3>
-                <p>See affected components, active incidents, scheduled maintenance, and timeline updates — straight from the source.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g-batt" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#34c759"/><stop offset="1" stop-color="#30d5c8"/></linearGradient></defs><rect x="2" y="8" width="24" height="16" rx="3" fill="url(#g-batt)"/><rect x="5" y="11" width="12" height="10" rx="1.5" fill="#000" opacity="0.3"/><rect x="26" y="12" width="4" height="8" rx="1.5" fill="url(#g-batt)"/></svg></div>
-            <div>
-                <h3>Battery-Aware Polling</h3>
-                <p>Smart auto-refresh adapts to your battery level, power state, and thermal conditions. Configurable intervals from every minute on Mac to every 5–15 minutes on iPhone.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g-palette" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#af52de"/><stop offset="1" stop-color="#ff2d55"/></linearGradient></defs><path d="M16 2C8.27 2 2 8.27 2 16s6.27 14 14 14c1.66 0 3-1.34 3-3 0-.77-.29-1.47-.77-2.02-.46-.52-.73-1.2-.73-1.98 0-1.66 1.34-3 3-3h3.5c4.14 0 7.5-3.13 7.5-7 0-7.18-6.5-13-16.5-13Z" fill="url(#g-palette)"/><circle cx="10" cy="13" r="2.5" fill="#ff3b30"/><circle cx="16" cy="9" r="2.5" fill="#ffd60a"/><circle cx="22" cy="13" r="2.5" fill="#34c759"/></svg></div>
-            <div>
-                <h3>Retro Themes</h3>
-                <p>System default, green phosphor, or amber phosphor with bright and dim modes. Themes sync across all your devices.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g-lock" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#ff3b30"/><stop offset="1" stop-color="#ff9926"/></linearGradient></defs><path d="M10 14V10a6 6 0 1 1 12 0v4" stroke="url(#g-lock)" stroke-width="2.5" stroke-linecap="round" fill="none"/><rect x="6" y="14" width="20" height="15" rx="3" fill="url(#g-lock)"/><circle cx="16" cy="22" r="2.5" fill="#000" opacity="0.3"/></svg></div>
-            <div>
-                <h3>No Account Needed</h3>
-                <p>No sign-up, no tracking, no data collection. All data stays on your device. No servers, no analytics, completely private.</p>
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-icon"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g-globe" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="#007aff"/><stop offset="1" stop-color="#5856d6"/></linearGradient></defs><circle cx="16" cy="16" r="13" stroke="url(#g-globe)" stroke-width="2.5" fill="none"/><ellipse cx="16" cy="16" rx="6" ry="13" stroke="url(#g-globe)" stroke-width="2" fill="none"/><line x1="3" y1="16" x2="29" y2="16" stroke="url(#g-globe)" stroke-width="2"/><line x1="16" y1="3" x2="16" y2="29" stroke="url(#g-globe)" stroke-width="2"/></svg></div>
-            <div>
-                <h3>16 Languages</h3>
-                <p>Available in English, German, French, Spanish, Japanese, Korean, Chinese, and more.</p>
-            </div>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer>
-        <a href="services.html">Services</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="support.html">Support</a>
-        <a href="mailto:support@vultyr.app">Contact</a>
-        <a href="https://klosyt.com">Klosyt</a>
+        <nav aria-label="Footer navigation">
+            <a href="services.html">Services</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="support.html">Support</a>
+            <a href="mailto:support@vultyr.app">Contact</a>
+            <a href="https://klosyt.com" target="_blank" rel="noopener">Klosyt</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Klosyt. All rights reserved.</p>
     </footer>
 </body>
 </html>
