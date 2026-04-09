@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-YYDJLZG0X1");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Status Monitor — 5 Services | Vultyr</title>
+    <meta name="description" content="Monitor the status of 5 gaming services. Real-time outage alerts for Epic Games, Fortnite, Nintendo, PlayStation, and more.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Gaming Status Monitor — 5 Services | Vultyr">
+    <meta property="og:description" content="Monitor the status of 5 gaming services. Real-time outage alerts for Epic Games, Fortnite, Nintendo, PlayStation, and more.">
+    <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:url" content="https://vultyr.app/categories/gaming.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Gaming Status Monitor — 5 Services | Vultyr">
+    <meta name="twitter:description" content="Monitor the status of 5 gaming services. Real-time outage alerts for Epic Games, Fortnite, Nintendo, PlayStation, and more.">
+    <meta name="twitter:image" content="https://vultyr.app/icon.png">
+    <link rel="canonical" href="https://vultyr.app/categories/gaming.html">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Vultyr",
+          "item": "https://vultyr.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://vultyr.app/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gaming"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Gaming Status Monitors",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Epic Games",
+          "url": "https://vultyr.app/status/epic-games.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Fortnite",
+          "url": "https://vultyr.app/status/fortnite.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Nintendo",
+          "url": "https://vultyr.app/status/nintendo.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "PlayStation",
+          "url": "https://vultyr.app/status/playstation.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Unity",
+          "url": "https://vultyr.app/status/unity.html"
+        }
+      ]
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: #000;
+            color: #ccc;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+        a { color: inherit; text-decoration: none; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        :focus-visible { outline: 2px solid #00ff41; outline-offset: 3px; }
+        .highlight { color: #00ff41; }
+        .highlight-orange { color: #ff9926; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 0; }
+        .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+        .breadcrumb a { color: #888; }
+        .breadcrumb a:hover { color: #fff; }
+        .breadcrumb .sep { margin: 0 6px; }
+
+        .cat-header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+        .cat-icon { width: 36px; height: 36px; color: #ff9926; }
+        .cat-header h1 { font-family: 'Audiowide', sans-serif; font-size: 1.5rem; color: #fff; }
+        .cat-subtitle { color: #888; font-size: 0.9rem; margin-bottom: 32px; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-bottom: 40px; }
+        .service-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border: 1px solid #1a1a1a;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.02);
+            transition: border-color 0.2s;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        .service-card:hover { border-color: #333; color: #fff; }
+        .service-card img { width: 24px; height: 24px; border-radius: 4px; flex-shrink: 0; }
+        .service-card .card-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #333;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        .other-categories { margin-bottom: 32px; }
+        .other-categories h2 { font-family: 'Audiowide', sans-serif; font-size: 1rem; color: #ff9926; margin-bottom: 16px; }
+        .cat-links { display: flex; flex-wrap: wrap; gap: 8px; }
+        .cat-link {
+            padding: 6px 14px;
+            border: 1px solid #1a1a1a;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: #888;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .cat-link:hover { border-color: #444; color: #fff; }
+
+        .cta {
+            text-align: center;
+            padding: 40px 24px;
+            margin-bottom: 16px;
+        }
+        .cta h2 { font-family: 'Audiowide', sans-serif; font-size: 1.2rem; color: #fff; margin-bottom: 8px; }
+        .cta p { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+        .cta a {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #00ff41;
+            color: #000;
+            font-weight: 600;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+        .cta a:hover { opacity: 0.85; }
+
+        footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
+        footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+        footer a { color: #666; font-size: 0.8rem; }
+        footer a:hover { color: #aaa; }
+        .copyright { font-size: 0.7rem; color: #555; margin-top: 12px; }
+
+        @media (max-width: 500px) {
+            .services-grid { grid-template-columns: 1fr; }
+            .cat-header h1 { font-size: 1.2rem; }
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <main id="main">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
+            <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
+            <span style="color:#ccc">Gaming</span>
+        </div>
+
+        <div class="cat-header">
+            <svg class="cat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M176,112H152a8,8,0,0,1,0-16h24a8,8,0,0,1,0,16ZM104,96H96V88a8,8,0,0,0-16,0v8H72a8,8,0,0,0,0,16h8v8a8,8,0,0,0,16,0v-8h8a8,8,0,0,0,0-16ZM241.48,200.65a36,36,0,0,1-54.94,4.81c-.12-.12-.24-.24-.35-.37L146.48,160h-37L69.81,205.09l-.35.37A36.08,36.08,0,0,1,44,216,36,36,0,0,1,8.56,173.75a.68.68,0,0,1,0-.14L24.93,89.52A59.88,59.88,0,0,1,83.89,40H172a60.08,60.08,0,0,1,59,49.25c0,.06,0,.12,0,.18l16.37,84.17a.68.68,0,0,1,0,.14A35.74,35.74,0,0,1,241.48,200.65ZM172,144a44,44,0,0,0,0-88H83.89A43.9,43.9,0,0,0,40.68,92.37l0,.13L24.3,176.59A20,20,0,0,0,58,194.3l41.92-47.59a8,8,0,0,1,6-2.71Zm59.7,32.59-8.74-45A60,60,0,0,1,172,160h-4.2L198,194.31a20.09,20.09,0,0,0,17.46,5.39,20,20,0,0,0,16.23-23.11Z"/></svg>
+            <h1>Gaming</h1>
+        </div>
+        <p class="cat-subtitle">5 services monitored by Vultyr</p>
+
+        <div class="services-grid">
+            <a class="service-card" href="/status/epic-games.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=epicgames.com&sz=32" alt="" loading="lazy" width="24" height="24">
+                <span>Epic Games</span>
+                <span class="card-status-dot" data-slug="epic-games"></span>
+            </a>
+            <a class="service-card" href="/status/fortnite.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=fortnite.com&sz=32" alt="" loading="lazy" width="24" height="24">
+                <span>Fortnite</span>
+                <span class="card-status-dot" data-slug="fortnite"></span>
+            </a>
+            <a class="service-card" href="/status/nintendo.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=nintendo.com&sz=32" alt="" loading="lazy" width="24" height="24">
+                <span>Nintendo</span>
+                <span class="card-status-dot" data-slug="nintendo"></span>
+            </a>
+            <a class="service-card" href="/status/playstation.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=playstation.com&sz=32" alt="" loading="lazy" width="24" height="24">
+                <span>PlayStation</span>
+                <span class="card-status-dot" data-slug="playstation"></span>
+            </a>
+            <a class="service-card" href="/status/unity.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=unity.com&sz=32" alt="" loading="lazy" width="24" height="24">
+                <span>Unity</span>
+                <span class="card-status-dot" data-slug="unity"></span>
+            </a>
+        </div>
+
+        <div class="other-categories">
+            <h2>Other Categories</h2>
+            <div class="cat-links">
+            <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
+            <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
+            <a class="cat-link" href="/categories/communication.html">Communication</a>
+            <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
+            <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
+            <a class="cat-link" href="/categories/apple.html">Apple</a>
+            <a class="cat-link" href="/categories/google.html">Google</a>
+            <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
+            <a class="cat-link" href="/categories/amazon.html">Amazon</a>
+            <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
+            <a class="cat-link" href="/categories/social-media.html">Social Media</a>
+            <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
+            <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
+            <a class="cat-link" href="/categories/security.html">Security</a>
+            <a class="cat-link" href="/categories/email-marketing.html">Email &amp; Marketing</a>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Monitor all 5 services instantly</h2>
+            <p>Get real-time outage alerts on all your Apple devices. Free.</p>
+            <a href="https://apps.apple.com/us/app/vultyr/id6761264004" aria-label="Download Vultyr on the App Store">Download Vultyr</a>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <nav aria-label="Footer navigation">
+            <a href="/services.html">Services</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/support.html">Support</a>
+            <a href="mailto:support@vultyr.app">Contact</a>
+            <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Klosyt. All rights reserved.</p>
+    </footer>
+
+    <script src="/assets/js/status-checker.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var services = [{"slug": "epic-games", "apiUrl": "https://status.epicgames.com/api/v2/status.json"}, {"slug": "fortnite", "apiUrl": "https://fortnite.statuspage.io/api/v2/status.json"}, {"slug": "unity", "apiUrl": "https://unity.statuspage.io/api/v2/status.json"}];
+        VultyrStatus.checkMultiple(services, function(slug, result) {
+            var dot = document.querySelector('[data-slug="' + slug + '"]');
+            if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;
+        });
+    });
+    </script>
+</body>
+</html>

@@ -18,11 +18,94 @@
     <meta property="og:url" content="https://vultyr.app/support.html">
     <meta property="og:type" content="website">
     <meta name="description" content="Get help with Vultyr, the service status monitor for iPhone, Mac, Apple Watch, Apple TV, and Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta name="theme-color" content="#000000">
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Support — Vultyr">
+    <meta name="twitter:description" content="Get help with Vultyr, the service status monitor for iPhone, Mac, Apple Watch, Apple TV, and Vision Pro. FAQs, contact, and troubleshooting.">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/support.html">
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="icon" type="image/png" href="favicon.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How often does vultyr check service status?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do Cross-Device Alerts work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When your Mac detects a status change, it writes a lightweight signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup — just enable Cross-Device Alerts in settings on any device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do some services say Link only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some services don't have a public status API. For these, vultyr links directly to their official status page so you can check manually. Link-only services are hidden by default but can be shown in Settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does vultyr collect my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All data stays on your device. No accounts, no servers, no tracking, no analytics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I sync my services across devices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the theme options?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Themes sync across all your devices automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I mute notifications for a known incident?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What platforms are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "iPhone, Mac (with menu bar app), Apple Watch (with complications), Apple TV, and Apple Vision Pro. The app is completely free on all platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I request a new service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Email support@vultyr.app with the service name and its status page URL."
+          }
+        }
+      ]
+    }
+    </script>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         body {

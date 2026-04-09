@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-YYDJLZG0X1");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email &amp; Marketing Status Monitor — 4 Services | Vultyr</title>
+    <meta name="description" content="Monitor the status of 4 email &amp; marketing services. Real-time outage alerts for Mailchimp, Mailgun, Postmark, SendGrid, and more.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Email &amp; Marketing Status Monitor — 4 Services | Vultyr">
+    <meta property="og:description" content="Monitor the status of 4 email &amp; marketing services. Real-time outage alerts for Mailchimp, Mailgun, Postmark, SendGrid, and more.">
+    <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:url" content="https://vultyr.app/categories/email-marketing.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Email &amp; Marketing Status Monitor — 4 Services | Vultyr">
+    <meta name="twitter:description" content="Monitor the status of 4 email &amp; marketing services. Real-time outage alerts for Mailchimp, Mailgun, Postmark, SendGrid, and more.">
+    <meta name="twitter:image" content="https://vultyr.app/icon.png">
+    <link rel="canonical" href="https://vultyr.app/categories/email-marketing.html">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Vultyr",
+          "item": "https://vultyr.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://vultyr.app/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Email & Marketing"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Email & Marketing Status Monitors",
+      "numberOfItems": 4,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Mailchimp",
+          "url": "https://vultyr.app/status/mailchimp.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mailgun",
+          "url": "https://vultyr.app/status/mailgun.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Postmark",
+          "url": "https://vultyr.app/status/postmark.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "SendGrid",
+          "url": "https://vultyr.app/status/sendgrid.html"
+        }
+      ]
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: #000;
+            color: #ccc;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+        a { color: inherit; text-decoration: none; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        :focus-visible { outline: 2px solid #00ff41; outline-offset: 3px; }
+        .highlight { color: #00ff41; }
+        .highlight-orange { color: #ff9926; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 0; }
+        .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+        .breadcrumb a { color: #888; }
+        .breadcrumb a:hover { color: #fff; }
+        .breadcrumb .sep { margin: 0 6px; }
+
+        .cat-header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+        .cat-icon { width: 36px; height: 36px; color: #ff9926; }
+        .cat-header h1 { font-family: 'Audiowide', sans-serif; font-size: 1.5rem; color: #fff; }
+        .cat-subtitle { color: #888; font-size: 0.9rem; margin-bottom: 32px; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-bottom: 40px; }
+        .service-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border: 1px solid #1a1a1a;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.02);
+            transition: border-color 0.2s;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        .service-card:hover { border-color: #333; color: #fff; }
+        .service-card img { width: 24px; height: 24px; border-radius: 4px; flex-shrink: 0; }
+        .service-card .card-status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #333;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+
+        .other-categories { margin-bottom: 32px; }
+        .other-categories h2 { font-family: 'Audiowide', sans-serif; font-size: 1rem; color: #ff9926; margin-bottom: 16px; }
+        .cat-links { display: flex; flex-wrap: wrap; gap: 8px; }
+        .cat-link {
+            padding: 6px 14px;
+            border: 1px solid #1a1a1a;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: #888;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .cat-link:hover { border-color: #444; color: #fff; }
+
+        .cta {
+            text-align: center;
+            padding: 40px 24px;
+            margin-bottom: 16px;
+        }
+        .cta h2 { font-family: 'Audiowide', sans-serif; font-size: 1.2rem; color: #fff; margin-bottom: 8px; }
+        .cta p { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+        .cta a {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #00ff41;
+            color: #000;
+            font-weight: 600;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+        .cta a:hover { opacity: 0.85; }
+
+        footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
+        footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+        footer a { color: #666; font-size: 0.8rem; }
+        footer a:hover { color: #aaa; }
+        .copyright { font-size: 0.7rem; color: #555; margin-top: 12px; }
+
+        @media (max-width: 500px) {
+            .services-grid { grid-template-columns: 1fr; }
+            .cat-header h1 { font-size: 1.2rem; }
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <main id="main">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
+            <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
+            <span style="color:#ccc">Email &amp; Marketing</span>
+        </div>
+
+        <div class="cat-header">
+            <svg class="cat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
+            <h1>Email &amp; Marketing</h1>
+        </div>
+        <p class="cat-subtitle">4 services monitored by Vultyr</p>
+
+        <div class="services-grid">
+            <a class="service-card" href="/status/mailchimp.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=mailchimp.com&sz=32" alt="" loading="lazy" width="24" height="24">
+                <span>Mailchimp</span>
+                <span class="card-status-dot" data-slug="mailchimp"></span>
+            </a>
+            <a class="service-card" href="/status/mailgun.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=mailgun.com&sz=32" alt="" loading="lazy" width="24" height="24">
+                <span>Mailgun</span>
+                <span class="card-status-dot" data-slug="mailgun"></span>
+            </a>
+            <a class="service-card" href="/status/postmark.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=postmarkapp.com&sz=32" alt="" loading="lazy" width="24" height="24">
+                <span>Postmark</span>
+                <span class="card-status-dot" data-slug="postmark"></span>
+            </a>
+            <a class="service-card" href="/status/sendgrid.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=sendgrid.com&sz=32" alt="" loading="lazy" width="24" height="24">
+                <span>SendGrid</span>
+                <span class="card-status-dot" data-slug="sendgrid"></span>
+            </a>
+        </div>
+
+        <div class="other-categories">
+            <h2>Other Categories</h2>
+            <div class="cat-links">
+            <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
+            <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
+            <a class="cat-link" href="/categories/communication.html">Communication</a>
+            <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
+            <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
+            <a class="cat-link" href="/categories/apple.html">Apple</a>
+            <a class="cat-link" href="/categories/google.html">Google</a>
+            <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
+            <a class="cat-link" href="/categories/amazon.html">Amazon</a>
+            <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
+            <a class="cat-link" href="/categories/social-media.html">Social Media</a>
+            <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
+            <a class="cat-link" href="/categories/gaming.html">Gaming</a>
+            <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
+            <a class="cat-link" href="/categories/security.html">Security</a>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h2>Monitor all 4 services instantly</h2>
+            <p>Get real-time outage alerts on all your Apple devices. Free.</p>
+            <a href="https://apps.apple.com/us/app/vultyr/id6761264004" aria-label="Download Vultyr on the App Store">Download Vultyr</a>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <nav aria-label="Footer navigation">
+            <a href="/services.html">Services</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/support.html">Support</a>
+            <a href="mailto:support@vultyr.app">Contact</a>
+            <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Klosyt. All rights reserved.</p>
+    </footer>
+
+    <script src="/assets/js/status-checker.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var services = [{"slug": "mailgun", "apiUrl": "https://status.mailgun.com/api/v2/status.json"}, {"slug": "sendgrid", "apiUrl": "https://status.sendgrid.com/api/v2/status.json"}];
+        VultyrStatus.checkMultiple(services, function(slug, result) {
+            var dot = document.querySelector('[data-slug="' + slug + '"]');
+            if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;
+        });
+    });
+    </script>
+</body>
+</html>
