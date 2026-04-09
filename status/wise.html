@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag("js", new Date());
+      gtag("config", "G-YYDJLZG0X1");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Wise Down? Wise Status Monitor | Vultyr</title>
+    <meta name="description" content="Check if Wise is down right now. Live Wise status updates and outage monitoring with Vultyr. Free on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Is Wise Down? Wise Status Monitor | Vultyr">
+    <meta property="og:description" content="Check if Wise is down right now. Live Wise status updates and outage monitoring with Vultyr. Free on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro.">
+    <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:url" content="https://vultyr.app/status/wise.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Is Wise Down? Wise Status Monitor | Vultyr">
+    <meta name="twitter:description" content="Check if Wise is down right now. Live Wise status updates and outage monitoring with Vultyr. Free on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro.">
+    <meta name="twitter:image" content="https://vultyr.app/icon.png">
+    <link rel="canonical" href="https://vultyr.app/status/wise.html">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Vultyr",
+          "item": "https://vultyr.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://vultyr.app/services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Payments & Commerce",
+          "item": "https://vultyr.app/categories/payments-commerce.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Wise"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Wise down right now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the current Wise service status on this page. Vultyr checks Wise status in real-time via the Statuspage.io API. You can also visit the official Wise status page at https://status.wise.com or download the free Vultyr app for instant outage alerts on all your Apple devices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I monitor Wise status?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Download Vultyr (free) to monitor Wise and 200+ other services with real-time alerts on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro. Vultyr checks service status automatically and notifies you the moment an outage is detected."
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: #000;
+            color: #ccc;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+        a { color: inherit; text-decoration: none; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        :focus-visible { outline: 2px solid #00ff41; outline-offset: 3px; }
+        .highlight { color: #00ff41; }
+        .highlight-orange { color: #ff9926; }
+
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 0; }
+        .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+        .breadcrumb a { color: #888; }
+        .breadcrumb a:hover { color: #fff; }
+        .breadcrumb .sep { margin: 0 6px; }
+
+        .service-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+        .service-header img { width: 48px; height: 48px; border-radius: 8px; }
+        .service-header h1 { font-family: 'Audiowide', sans-serif; font-size: 1.6rem; color: #fff; }
+
+        .status-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 999px;
+            border: 1px solid #222;
+            background: rgba(255,255,255,0.02);
+        }
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #555;
+            flex-shrink: 0;
+        }
+        .status-dot.pulse { animation: pulse 2s ease-in-out infinite; }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .status-text { font-size: 0.95rem; }
+        .status-time { font-size: 0.75rem; color: #555; margin-top: 8px; }
+
+        .links-row { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
+        .links-row a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border: 1px solid #222;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            color: #ccc;
+            background: rgba(255,255,255,0.02);
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .links-row a:hover { border-color: #444; color: #fff; }
+
+        .section-title { font-family: 'Audiowide', sans-serif; font-size: 1rem; color: #ff9926; margin-bottom: 16px; }
+
+        .faq { margin-bottom: 20px; }
+        .faq h3 { color: #fff; font-size: 0.95rem; margin-bottom: 4px; }
+        .faq p { color: #999; font-size: 0.875rem; }
+
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-bottom: 32px; }
+        .related-card {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border: 1px solid #1a1a1a;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.02);
+            transition: border-color 0.2s;
+            font-size: 0.875rem;
+            color: #ccc;
+        }
+        .related-card:hover { border-color: #333; color: #fff; }
+        .related-card img { width: 20px; height: 20px; border-radius: 4px; }
+
+        .cta {
+            text-align: center;
+            padding: 40px 24px;
+            margin-bottom: 16px;
+        }
+        .cta h2 { font-family: 'Audiowide', sans-serif; font-size: 1.2rem; color: #fff; margin-bottom: 8px; }
+        .cta p { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+        .cta a {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #00ff41;
+            color: #000;
+            font-weight: 600;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+        .cta a:hover { opacity: 0.85; }
+
+        footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
+        footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+        footer a { color: #666; font-size: 0.8rem; }
+        footer a:hover { color: #aaa; }
+        .copyright { font-size: 0.7rem; color: #555; margin-top: 12px; }
+
+        @media (max-width: 500px) {
+            .service-header h1 { font-size: 1.2rem; }
+            .links-row { flex-direction: column; }
+            .related-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .status-dot.pulse { animation: none; }
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <main id="main">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
+            <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
+            <a href="/categories/payments-commerce.html">Payments &amp; Commerce</a><span class="sep">&rsaquo;</span>
+            <span style="color:#ccc">Wise</span>
+        </div>
+        <div class="service-header">
+            <img src="https://www.google.com/s2/favicons?domain=wise.com&sz=64" alt="Wise icon" width="48" height="48">
+            <h1>Wise</h1>
+        </div>
+
+        <div class="status-card">
+            <div class="status-badge">
+                <span class="status-dot" id="status-dot"></span>
+                <span class="status-text" id="status-text">Checking status…</span>
+            </div>
+            <p class="status-time" id="status-time"></p>
+        </div>
+
+        <div class="links-row">
+            <a href="https://status.wise.com" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-26.37,144H96a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8h5.63a8,8,0,0,1,5.66,2.34l56,56a8,8,0,0,1-11.32,11.32L101.63,107.31V160A8,8,0,0,1,101.63,168Z"/></svg>
+                Official Status Page
+            </a>
+            <a href="https://wise.com" target="_blank" rel="noopener noreferrer">
+                <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M128,16a112,112,0,1,0,112,112A112.13,112.13,0,0,0,128,16ZM40,128a87.5,87.5,0,0,1,8.43-37.65l46.46,127.38A88.14,88.14,0,0,1,40,128Zm88,88a87.53,87.53,0,0,1-28.34-4.67l30.09-87.39,30.83,84.49A88.18,88.18,0,0,1,128,216Z"/></svg>
+                Wise Homepage
+            </a>
+        </div>
+
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq">
+            <h3>Is Wise down right now?</h3>
+            <p>This page checks Wise status in real-time via the Statuspage.io API. The status shown above updates automatically when you visit. For continuous monitoring with instant alerts, download the free Vultyr app.</p>
+        </div>
+        <div class="faq">
+            <h3>How can I monitor Wise status?</h3>
+            <p>Vultyr monitors Wise and 200+ other cloud services, dev tools, and platforms. Get instant outage alerts on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro — completely free.</p>
+        </div>
+
+        <h2 class="section-title">Related Services</h2>
+        <div class="related-grid">
+            <a class="related-card" href="/status/cash-app.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=cash.app&sz=32" alt="" loading="lazy" width="20" height="20">
+                Cash App
+            </a>
+            <a class="related-card" href="/status/coinbase.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=coinbase.com&sz=32" alt="" loading="lazy" width="20" height="20">
+                Coinbase
+            </a>
+            <a class="related-card" href="/status/coinbase-exchange.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=exchange.coinbase.com&sz=32" alt="" loading="lazy" width="20" height="20">
+                Coinbase Exchange
+            </a>
+            <a class="related-card" href="/status/gemini-exchange.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=gemini.com&sz=32" alt="" loading="lazy" width="20" height="20">
+                Gemini Exchange
+            </a>
+            <a class="related-card" href="/status/kraken.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=kraken.com&sz=32" alt="" loading="lazy" width="20" height="20">
+                Kraken
+            </a>
+            <a class="related-card" href="/status/plaid.html">
+                <img role="presentation" src="https://www.google.com/s2/favicons?domain=plaid.com&sz=32" alt="" loading="lazy" width="20" height="20">
+                Plaid
+            </a>
+        </div>
+        <div class="cta">
+            <h2>Monitor Wise on all your devices</h2>
+            <p>Get instant alerts when Wise goes down. Free on all Apple platforms.</p>
+            <a href="https://apps.apple.com/us/app/vultyr/id6761264004" aria-label="Download Vultyr on the App Store">Download Vultyr</a>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <nav aria-label="Footer navigation">
+            <a href="/services.html">Services</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/support.html">Support</a>
+            <a href="mailto:support@vultyr.app">Contact</a>
+            <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Klosyt. All rights reserved.</p>
+    </footer>
+
+    <script src="/assets/js/status-checker.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var dot = document.getElementById("status-dot");
+        var text = document.getElementById("status-text");
+        var time = document.getElementById("status-time");
+        VultyrStatus.checkStatus("https://status.wise.com/api/v2/status.json", "wise").then(function(r) {
+            dot.style.background = VultyrStatus.COLORS[r.indicator] || VultyrStatus.COLORS.unknown;
+            dot.classList.add("pulse");
+            text.textContent = r.description || VultyrStatus.LABELS[r.indicator] || "Unknown";
+            time.textContent = "Checked just now";
+        });
+    });
+    </script>
+</body>
+</html>
