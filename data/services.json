@@ -1533,7 +1533,7 @@
       "name": "Google Search",
       "slug": "google-search",
       "faviconDomain": "google.com",
-      "statusUrl": "https://www.google.com",
+      "statusUrl": "https://status.search.google.com/",
       "homepageUrl": "https://www.google.com",
       "statuspageApi": null,
       "categories": [

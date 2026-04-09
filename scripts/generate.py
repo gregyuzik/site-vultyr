@@ -13,6 +13,17 @@ STATUS_DIR = os.path.join(ROOT_DIR, "status")
 CATEGORIES_DIR = os.path.join(ROOT_DIR, "categories")
 TODAY = date.today().isoformat()
 ELLIPSIS = "\u2026"
+FAVICONS_DIR = os.path.join(ROOT_DIR, "assets", "favicons")
+
+# Domains where Google's favicon service returned 404 — use runtime fallback
+_FAVICON_FALLBACK_DOMAINS = {"codecov.io", "gitpod.io", "paloaltonetworks.com"}
+
+
+def favicon_url(domain, size):
+    """Return local favicon path, falling back to Google's service for missing icons."""
+    if domain in _FAVICON_FALLBACK_DOMAINS:
+        return f"https://www.google.com/s2/favicons?domain={domain}&sz={size}"
+    return f"/assets/favicons/{domain}-{size}.png"
 
 GA_SNIPPET = """    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
@@ -139,7 +150,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
         cards = ""
         for rs in related:
             cards += f'''            <a class="related-card" href="/status/{e(rs["slug"])}.html">
-                <img role="presentation" src="https://www.google.com/s2/favicons?domain={e(rs["faviconDomain"])}&sz=32" alt="" loading="lazy" width="20" height="20">
+                <img role="presentation" src="{favicon_url(rs["faviconDomain"], 32)}" alt="" loading="lazy" width="20" height="20">
                 {e(rs["name"])}
             </a>\n'''
         related_html = f'''        <h2 class="section-title">Related Services</h2>
@@ -194,7 +205,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
     <div class="container">
 {breadcrumb_html}
         <div class="service-header">
-            <img src="https://www.google.com/s2/favicons?domain={e(favicon_domain)}&sz=64" alt="{e(name)} icon" width="48" height="48">
+            <img src="{favicon_url(favicon_domain, 64)}" alt="{e(name)} icon" width="48" height="48">
             <h1>{e(name)}</h1>
         </div>
 
@@ -257,7 +268,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
         if not svc:
             continue
         cards += f'''            <a class="service-card" href="/status/{e(svc["slug"])}.html">
-                <img role="presentation" src="https://www.google.com/s2/favicons?domain={e(svc["faviconDomain"])}&sz=32" alt="" loading="lazy" width="24" height="24">
+                <img role="presentation" src="{favicon_url(svc["faviconDomain"], 32)}" alt="" loading="lazy" width="24" height="24">
                 <span>{e(svc["name"])}</span>
             </a>\n'''
 
