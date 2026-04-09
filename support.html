@@ -15,7 +15,7 @@
     <meta property="og:title" content="Support — Vultyr">
     <meta property="og:description" content="Get help with Vultyr, the service status monitor for iPhone, Mac, Apple Watch, Apple TV, and Vision Pro.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:url" content="https://vultyr.app/support">
+    <meta property="og:url" content="https://vultyr.app/support.html">
     <meta property="og:type" content="website">
     <meta name="description" content="Get help with Vultyr, the service status monitor for iPhone, Mac, Apple Watch, Apple TV, and Vision Pro. FAQs, contact, and troubleshooting.">
     <meta name="twitter:card" content="summary">
@@ -24,9 +24,9 @@
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif;
             background: #000;
             color: #ccc;
             min-height: 100vh;
@@ -44,9 +44,13 @@
         .faq p { color: #999; }
         footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #1a1a1a; }
         footer a { color: #888; text-decoration: none; margin-right: 16px; font-size: 0.875rem; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        :focus-visible { outline: 2px solid #00ff41; outline-offset: 3px; }
     </style>
 </head>
 <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <main id="main">
     <h1>Support</h1>
 
     <h2>Contact</h2>
@@ -82,7 +86,7 @@
 
     <div class="faq">
         <h3>What are the theme options?</h3>
-        <p>System (default), Green Phosphor, or Amber Phosphor — each with bright and dim intensity. Themes sync across all your devices automatically.</p>
+        <p>12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Themes sync across all your devices automatically.</p>
     </div>
 
     <div class="faq">
@@ -100,6 +104,7 @@
         <p>Yes! Email <a href="mailto:support@vultyr.app">support@vultyr.app</a> with the service name and its status page URL.</p>
     </div>
 
+    </main>
     <footer>
         <nav aria-label="Footer navigation">
             <a href="services.html">Services</a>
@@ -108,7 +113,7 @@
             <a href="mailto:support@vultyr.app">Contact</a>
             <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
         </nav>
-        <p style="font-size: 0.75rem; color: #444; margin-top: 16px;">&copy; 2026 Klosyt. All rights reserved.</p>
+        <p style="font-size: 0.75rem; color: #777; margin-top: 16px;">&copy; 2026 Klosyt. All rights reserved.</p>
     </footer>
 </body>
 </html>
