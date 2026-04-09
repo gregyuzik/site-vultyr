@@ -23,21 +23,7 @@ GA_SNIPPET = """    <!-- Google tag (gtag.js) -->
       gtag("config", "G-YYDJLZG0X1");
     </script>"""
 
-SHARED_CSS = """
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-            background: #000;
-            color: #ccc;
-            min-height: 100vh;
-            line-height: 1.7;
-        }
-        a { color: inherit; text-decoration: none; }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
-        :focus-visible { outline: 2px solid #00ff41; outline-offset: 3px; }
-        .highlight { color: #00ff41; }
-        .highlight-orange { color: #ff9926; }
-"""
+CSP_META = """    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">"""
 
 FOOTER_HTML = """    <footer>
         <nav aria-label="Footer navigation">
@@ -56,8 +42,23 @@ def e(text):
 
 
 def load_data():
-    with open(JSON_PATH) as f:
-        return json.load(f)
+    """Load services data with error handling."""
+    try:
+        with open(JSON_PATH) as f:
+            return json.load(f)
+    except (OSError, json.JSONDecodeError) as exc:
+        print(f"Error loading {JSON_PATH}: {exc}")
+        raise SystemExit(1)
+
+
+def write_file(path, content):
+    """Write content to a file with error handling."""
+    try:
+        with open(path, "w") as f:
+            f.write(content)
+    except OSError as exc:
+        print(f"Error writing {path}: {exc}")
+        raise SystemExit(1)
 
 
 def json_ld(obj):
@@ -67,121 +68,13 @@ def json_ld(obj):
 
 # ─── SERVICE PAGE ──────────────────────────────────────────────────────────────
 
-SERVICE_CSS = """
-        .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 0; }
-        .breadcrumb { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
-        .breadcrumb a { color: #888; }
-        .breadcrumb a:hover { color: #fff; }
-        .breadcrumb .sep { margin: 0 6px; }
-
-        .service-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
-        .service-header img { width: 48px; height: 48px; border-radius: 8px; }
-        .service-header h1 { font-family: 'Audiowide', sans-serif; font-size: 1.6rem; color: #fff; }
-
-        .status-card {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid #1a1a1a;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 24px;
-            text-align: center;
-        }
-        .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
-            color: #fff;
-            padding: 10px 24px;
-            border-radius: 999px;
-            border: 1px solid #222;
-            background: rgba(255,255,255,0.02);
-            text-decoration: none;
-            transition: border-color 0.2s;
-        }
-        .status-badge:hover { border-color: #444; }
-        .status-text { font-size: 0.95rem; }
-        .status-time { font-size: 0.85rem; color: #888; margin-top: 12px; }
-        .status-time a { color: #00ff41; }
-
-        .links-row { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
-        .links-row a {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border: 1px solid #222;
-            border-radius: 999px;
-            font-size: 0.875rem;
-            color: #ccc;
-            background: rgba(255,255,255,0.02);
-            transition: border-color 0.2s, color 0.2s;
-        }
-        .links-row a:hover { border-color: #444; color: #fff; }
-
-        .section-title { font-family: 'Audiowide', sans-serif; font-size: 1rem; color: #ff9926; margin-bottom: 16px; }
-
-        .faq { margin-bottom: 20px; }
-        .faq h3 { color: #fff; font-size: 0.95rem; margin-bottom: 4px; }
-        .faq p { color: #999; font-size: 0.875rem; }
-
-        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-bottom: 32px; }
-        .related-card {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 14px;
-            border: 1px solid #1a1a1a;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.02);
-            transition: border-color 0.2s;
-            font-size: 0.875rem;
-            color: #ccc;
-        }
-        .related-card:hover { border-color: #333; color: #fff; }
-        .related-card img { width: 20px; height: 20px; border-radius: 4px; }
-
-        .cta {
-            text-align: center;
-            padding: 40px 24px;
-            margin-bottom: 16px;
-        }
-        .cta h2 { font-family: 'Audiowide', sans-serif; font-size: 1.2rem; color: #fff; margin-bottom: 8px; }
-        .cta p { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
-        .cta a {
-            display: inline-block;
-            padding: 12px 28px;
-            background: #00ff41;
-            color: #000;
-            font-weight: 600;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            transition: opacity 0.2s;
-        }
-        .cta a:hover { opacity: 0.85; }
-
-        footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
-        footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-        footer a { color: #888; font-size: 0.8rem; }
-        footer a:hover { color: #ccc; }
-        .copyright { font-size: 0.7rem; color: #888; margin-top: 12px; }
-
-        @media (max-width: 500px) {
-            .service-header h1 { font-size: 1.2rem; }
-            .links-row { flex-direction: column; }
-            .related-grid { grid-template-columns: 1fr 1fr; }
-        }
-"""
-
-
-def generate_service_page(svc, categories_lookup, all_services_by_slug):
+def generate_service_page(svc, categories_lookup, all_services_by_slug, total_services):
     """Generate HTML for an individual service page."""
     name = svc["name"]
     slug = svc["slug"]
     favicon_domain = svc["faviconDomain"]
     status_url = svc["statusUrl"]
     homepage_url = svc["homepageUrl"]
-    api_url = svc.get("statuspageApi")
     cat_slugs = svc["categories"]
 
     # Get primary category info
@@ -226,20 +119,18 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
                 "name": f"How can I monitor {name} status?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": f"Download Vultyr (free) to monitor {name} and 200+ other services with real-time alerts on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro. Vultyr checks service status automatically and notifies you the moment an outage is detected."
+                    "text": f"Download Vultyr (free) to monitor {name} and {total_services}+ other services with real-time alerts on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro. Vultyr checks service status automatically and notifies you the moment an outage is detected."
                 }
             },
         ]
     }
-
-    status_script = ""
 
     # Category links for breadcrumb
     breadcrumb_html = f'''        <div class="breadcrumb">
             <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
             <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
             <a href="/categories/{e(primary_cat["slug"])}.html">{e(primary_cat["name"])}</a><span class="sep">&rsaquo;</span>
-            <span style="color:#ccc">{e(name)}</span>
+            <span class="breadcrumb-current">{e(name)}</span>
         </div>'''
 
     # Related services HTML
@@ -259,10 +150,10 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
     cat_links_html = ""
     if len(cat_slugs) > 1:
         links = ", ".join(
-            f'<a href="/categories/{e(cs)}.html" style="color:#ff9926">{e(categories_lookup.get(cs, {}).get("name", cs))}</a>'
+            f'<a href="/categories/{e(cs)}.html" class="highlight-orange">{e(categories_lookup.get(cs, {}).get("name", cs))}</a>'
             for cs in cat_slugs
         )
-        cat_links_html = f'        <p style="font-size:0.8rem;color:#888;margin-bottom:24px">Categories: {links}</p>'
+        cat_links_html = f'        <p class="category-note">Categories: {links}</p>'
 
     title = f"Is {name} Down? {name} Status Monitor | Vultyr"
     description = f"Check if {name} is down right now. Live {name} status updates and outage monitoring with Vultyr. Free on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro."
@@ -271,6 +162,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
 <html lang="en">
 <head>
 {GA_SNIPPET}
+{CSP_META}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{e(title)}</title>
@@ -293,8 +185,8 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 {json_ld(breadcrumb_ld)}
 {json_ld(faq_ld)}
-    <style>{SHARED_CSS}{SERVICE_CSS}
-    </style>
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/service.css">
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
@@ -331,7 +223,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
         </div>
         <div class="faq">
             <h3>How can I monitor {e(name)} status?</h3>
-            <p>Vultyr monitors {e(name)} and 200+ other cloud services, dev tools, and platforms. Get instant outage alerts on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro — completely free.</p>
+            <p>Vultyr monitors {e(name)} and {total_services}+ other cloud services, dev tools, and platforms. Get instant outage alerts on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro — completely free.</p>
         </div>
 
 {related_html}
@@ -343,86 +235,12 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
     </div>
     </main>
 {FOOTER_HTML}
-{status_script}
 </body>
 </html>
 """
 
 
 # ─── CATEGORY PAGE ─────────────────────────────────────────────────────────────
-
-CATEGORY_CSS = """
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 0; }
-        .breadcrumb { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
-        .breadcrumb a { color: #888; }
-        .breadcrumb a:hover { color: #fff; }
-        .breadcrumb .sep { margin: 0 6px; }
-
-        .cat-header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
-        .cat-icon { width: 36px; height: 36px; color: #ff9926; }
-        .cat-header h1 { font-family: 'Audiowide', sans-serif; font-size: 1.5rem; color: #fff; }
-        .cat-subtitle { color: #888; font-size: 0.9rem; margin-bottom: 32px; }
-
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; margin-bottom: 40px; }
-        .service-card {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 16px;
-            border: 1px solid #1a1a1a;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.02);
-            transition: border-color 0.2s;
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-        .service-card:hover { border-color: #333; color: #fff; }
-        .service-card img { width: 24px; height: 24px; border-radius: 4px; flex-shrink: 0; }
-
-        .other-categories { margin-bottom: 32px; }
-        .other-categories h2 { font-family: 'Audiowide', sans-serif; font-size: 1rem; color: #ff9926; margin-bottom: 16px; }
-        .cat-links { display: flex; flex-wrap: wrap; gap: 8px; }
-        .cat-link {
-            padding: 6px 14px;
-            border: 1px solid #1a1a1a;
-            border-radius: 999px;
-            font-size: 0.8rem;
-            color: #888;
-            transition: border-color 0.2s, color 0.2s;
-        }
-        .cat-link:hover { border-color: #444; color: #fff; }
-
-        .cta {
-            text-align: center;
-            padding: 40px 24px;
-            margin-bottom: 16px;
-        }
-        .cta h2 { font-family: 'Audiowide', sans-serif; font-size: 1.2rem; color: #fff; margin-bottom: 8px; }
-        .cta p { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
-        .cta a {
-            display: inline-block;
-            padding: 12px 28px;
-            background: #00ff41;
-            color: #000;
-            font-weight: 600;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            transition: opacity 0.2s;
-        }
-        .cta a:hover { opacity: 0.85; }
-
-        footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
-        footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-        footer a { color: #888; font-size: 0.8rem; }
-        footer a:hover { color: #ccc; }
-        .copyright { font-size: 0.7rem; color: #888; margin-top: 12px; }
-
-        @media (max-width: 500px) {
-            .services-grid { grid-template-columns: 1fr; }
-            .cat-header h1 { font-size: 1.2rem; }
-        }
-"""
-
 
 def generate_category_page(cat, all_services_by_slug, all_categories):
     """Generate HTML for a category page."""
@@ -454,11 +272,13 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
     if icon:
         icon_path = os.path.join(ROOT_DIR, "assets", "icons", icon)
         if os.path.exists(icon_path):
-            with open(icon_path) as f:
-                svg = f.read()
-            # Add class to SVG
-            svg = svg.replace("<svg", '<svg class="cat-icon"', 1)
-            icon_html = svg
+            try:
+                with open(icon_path) as f:
+                    svg = f.read()
+                svg = svg.replace("<svg", '<svg class="cat-icon"', 1)
+                icon_html = svg
+            except OSError as exc:
+                print(f"Warning: could not read icon {icon_path}: {exc}")
 
     # Breadcrumb JSON-LD
     breadcrumb_ld = {
@@ -488,8 +308,6 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
         ]
     }
 
-    status_script = ""
-
     title = f"{name} Status Monitor — {count} Services | Vultyr"
     description = f"Monitor the status of {count} {name.lower()} services. Real-time outage alerts for {', '.join(all_services_by_slug[s]['name'] for s in service_slugs[:4] if s in all_services_by_slug)}, and more."
 
@@ -497,6 +315,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
 <html lang="en">
 <head>
 {GA_SNIPPET}
+{CSP_META}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{e(title)}</title>
@@ -519,8 +338,8 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 {json_ld(breadcrumb_ld)}
 {json_ld(item_list_ld)}
-    <style>{SHARED_CSS}{CATEGORY_CSS}
-    </style>
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/category.css">
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
@@ -529,7 +348,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
         <div class="breadcrumb">
             <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
             <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
-            <span style="color:#ccc">{e(name)}</span>
+            <span class="breadcrumb-current">{e(name)}</span>
         </div>
 
         <div class="cat-header">
@@ -555,7 +374,6 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
     </div>
     </main>
 {FOOTER_HTML}
-{status_script}
 </body>
 </html>
 """
@@ -568,6 +386,7 @@ def generate_404():
 <html lang="en">
 <head>
 {GA_SNIPPET}
+{CSP_META}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found — Vultyr</title>
@@ -579,7 +398,8 @@ def generate_404():
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <style>{SHARED_CSS}
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <style>
         body {{ display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; }}
         h1 {{ font-family: 'Audiowide', sans-serif; font-size: 4rem; color: #ff9926; margin-bottom: 8px; }}
         .subtitle {{ font-size: 1.2rem; color: #fff; margin-bottom: 24px; }}
@@ -594,11 +414,7 @@ def generate_404():
             transition: border-color 0.2s, color 0.2s;
         }}
         .links a:hover {{ border-color: #00ff41; color: #fff; }}
-        footer {{ margin-top: auto; text-align: center; padding: 24px; border-top: 1px solid #111; width: 100%; }}
-        footer nav {{ display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }}
-        footer a {{ color: #888; font-size: 0.8rem; }}
-        footer a:hover {{ color: #ccc; }}
-        .copyright {{ font-size: 0.7rem; color: #888; margin-top: 12px; }}
+        footer {{ margin-top: auto; width: 100%; }}
     </style>
 </head>
 <body>
@@ -668,38 +484,36 @@ def main():
     os.makedirs(STATUS_DIR, exist_ok=True)
     os.makedirs(CATEGORIES_DIR, exist_ok=True)
 
+    total_services = len(services)
+
     # Generate service pages
-    print(f"Generating {len(services)} service pages...")
+    print(f"Generating {total_services} service pages...")
     for svc in services:
-        html = generate_service_page(svc, categories_by_slug, services_by_slug)
+        html = generate_service_page(svc, categories_by_slug, services_by_slug, total_services)
         path = os.path.join(STATUS_DIR, f"{svc['slug']}.html")
-        with open(path, "w") as f:
-            f.write(html)
+        write_file(path, html)
 
     # Generate category pages
     print(f"Generating {len(categories)} category pages...")
     for cat in categories:
         html = generate_category_page(cat, services_by_slug, categories)
         path = os.path.join(CATEGORIES_DIR, f"{cat['slug']}.html")
-        with open(path, "w") as f:
-            f.write(html)
+        write_file(path, html)
 
     # Generate 404
     print("Generating 404.html...")
-    with open(os.path.join(ROOT_DIR, "404.html"), "w") as f:
-        f.write(generate_404())
+    write_file(os.path.join(ROOT_DIR, "404.html"), generate_404())
 
     # Generate sitemap
     print("Generating sitemap.xml...")
-    with open(os.path.join(ROOT_DIR, "sitemap.xml"), "w") as f:
-        f.write(generate_sitemap(services, categories))
+    write_file(os.path.join(ROOT_DIR, "sitemap.xml"), generate_sitemap(services, categories))
 
-    total = len(services) + len(categories) + 2  # +2 for 404 and sitemap
+    total = total_services + len(categories) + 2  # +2 for 404 and sitemap
     print(f"\nDone! Generated {total} files:")
-    print(f"  {len(services)} service pages in /status/")
+    print(f"  {total_services} service pages in /status/")
     print(f"  {len(categories)} category pages in /categories/")
-    print(f"  1 × 404.html")
-    print(f"  1 × sitemap.xml ({len(services) + len(categories) + 4} URLs)")
+    print(f"  1 x 404.html")
+    print(f"  1 x sitemap.xml ({total_services + len(categories) + 4} URLs)")
 
 
 if __name__ == "__main__":
