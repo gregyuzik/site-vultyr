@@ -2,12 +2,16 @@
 .claude/
 CLAUDE.md
 
-# OS files
-.DS_Store
-Thumbs.db
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials.json
+service-account*.json
 
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
+# Build artifacts
+dist/
+build/
+node_modules/
