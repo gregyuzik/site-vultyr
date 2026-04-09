@@ -36,13 +36,16 @@
     var cached = getCached(slug);
     if (cached) return Promise.resolve(cached);
 
+    // Use summary.json instead of status.json to catch active incidents
+    var summaryUrl = apiUrl.replace(/\/status\.json$/, "/summary.json");
+
     var controller =
       typeof AbortController !== "undefined" ? new AbortController() : null;
     var timeoutId = controller
       ? setTimeout(function () { controller.abort(); }, 8000)
       : null;
 
-    return fetch(apiUrl, {
+    return fetch(summaryUrl, {
       signal: controller ? controller.signal : undefined,
     })
       .then(function (resp) {
@@ -53,6 +56,16 @@
       .then(function (json) {
         var indicator = json.status.indicator;
         var description = json.status.description;
+
+        // Check for active incidents that the top-level status may not reflect
+        var incidents = json.incidents || [];
+        if (incidents.length > 0 && indicator === "none") {
+          var latest = incidents[0];
+          var impact = latest.impact || "minor";
+          indicator = impact === "none" ? "minor" : impact;
+          description = latest.name || "Active incident";
+        }
+
         setCache(slug, indicator, description);
         return { indicator: indicator, description: description };
       })

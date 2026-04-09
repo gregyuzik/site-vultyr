@@ -264,7 +264,7 @@
     <script src="/assets/js/status-checker.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var services = [{"slug": "mailgun", "apiUrl": "https://status.mailgun.com/api/v2/status.json"}, {"slug": "sendgrid", "apiUrl": "https://status.sendgrid.com/api/v2/status.json"}];
+        var services = [{"slug": "mailgun", "apiUrl": "https://status.mailgun.com/api/v2/summary.json"}, {"slug": "sendgrid", "apiUrl": "https://status.sendgrid.com/api/v2/summary.json"}];
         VultyrStatus.checkMultiple(services, function(slug, result) {
             var dot = document.querySelector('[data-slug="' + slug + '"]');
             if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;

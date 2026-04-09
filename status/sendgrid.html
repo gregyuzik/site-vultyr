@@ -296,7 +296,7 @@
         var dot = document.getElementById("status-dot");
         var text = document.getElementById("status-text");
         var time = document.getElementById("status-time");
-        VultyrStatus.checkStatus("https://status.sendgrid.com/api/v2/status.json", "sendgrid").then(function(r) {
+        VultyrStatus.checkStatus("https://status.sendgrid.com/api/v2/summary.json", "sendgrid").then(function(r) {
             dot.style.background = VultyrStatus.COLORS[r.indicator] || VultyrStatus.COLORS.unknown;
             dot.classList.add("pulse");
             text.textContent = r.description || VultyrStatus.LABELS[r.indicator] || "Unknown";

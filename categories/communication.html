@@ -319,7 +319,7 @@
     <script src="/assets/js/status-checker.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var services = [{"slug": "discord", "apiUrl": "https://discordstatus.com/api/v2/status.json"}, {"slug": "livekit", "apiUrl": "https://livekit.statuspage.io/api/v2/status.json"}, {"slug": "matrix", "apiUrl": "https://status.matrix.org/api/v2/status.json"}, {"slug": "twilio", "apiUrl": "https://status.twilio.com/api/v2/status.json"}, {"slug": "vonage", "apiUrl": "https://vonageapi.statuspage.io/api/v2/status.json"}, {"slug": "webex", "apiUrl": "https://ciscospark.statuspage.io/api/v2/status.json"}, {"slug": "zoom", "apiUrl": "https://www.zoomstatus.com/api/v2/status.json"}];
+        var services = [{"slug": "discord", "apiUrl": "https://discordstatus.com/api/v2/summary.json"}, {"slug": "livekit", "apiUrl": "https://livekit.statuspage.io/api/v2/summary.json"}, {"slug": "matrix", "apiUrl": "https://status.matrix.org/api/v2/summary.json"}, {"slug": "twilio", "apiUrl": "https://status.twilio.com/api/v2/summary.json"}, {"slug": "vonage", "apiUrl": "https://vonageapi.statuspage.io/api/v2/summary.json"}, {"slug": "webex", "apiUrl": "https://ciscospark.statuspage.io/api/v2/summary.json"}, {"slug": "zoom", "apiUrl": "https://www.zoomstatus.com/api/v2/summary.json"}];
         VultyrStatus.checkMultiple(services, function(slug, result) {
             var dot = document.querySelector('[data-slug="' + slug + '"]');
             if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;
