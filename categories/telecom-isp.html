@@ -146,7 +146,7 @@
         .highlight-orange { color: #ff9926; }
 
         .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 0; }
-        .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+        .breadcrumb { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
         .breadcrumb a { color: #888; }
         .breadcrumb a:hover { color: #fff; }
         .breadcrumb .sep { margin: 0 6px; }
@@ -171,14 +171,6 @@
         }
         .service-card:hover { border-color: #333; color: #fff; }
         .service-card img { width: 24px; height: 24px; border-radius: 4px; flex-shrink: 0; }
-        .service-card .card-status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #333;
-            margin-left: auto;
-            flex-shrink: 0;
-        }
 
         .other-categories { margin-bottom: 32px; }
         .other-categories h2 { font-family: 'Audiowide', sans-serif; font-size: 1rem; color: #ff9926; margin-bottom: 16px; }
@@ -214,9 +206,9 @@
 
         footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
         footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-        footer a { color: #666; font-size: 0.8rem; }
-        footer a:hover { color: #aaa; }
-        .copyright { font-size: 0.7rem; color: #555; margin-top: 12px; }
+        footer a { color: #888; font-size: 0.8rem; }
+        footer a:hover { color: #ccc; }
+        .copyright { font-size: 0.7rem; color: #888; margin-top: 12px; }
 
         @media (max-width: 500px) {
             .services-grid { grid-template-columns: 1fr; }
@@ -245,57 +237,46 @@
             <a class="service-card" href="/status/atandt.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=att.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>AT&amp;T</span>
-                <span class="card-status-dot" data-slug="atandt"></span>
             </a>
             <a class="service-card" href="/status/bell-canada.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=bell.ca&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Bell Canada</span>
-                <span class="card-status-dot" data-slug="bell-canada"></span>
             </a>
             <a class="service-card" href="/status/comcast-xfinity.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=xfinity.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Comcast / Xfinity</span>
-                <span class="card-status-dot" data-slug="comcast-xfinity"></span>
             </a>
             <a class="service-card" href="/status/cox.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=cox.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Cox</span>
-                <span class="card-status-dot" data-slug="cox"></span>
             </a>
             <a class="service-card" href="/status/lumen.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=lumen.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Lumen</span>
-                <span class="card-status-dot" data-slug="lumen"></span>
             </a>
             <a class="service-card" href="/status/o2.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=o2.co.uk&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>O2</span>
-                <span class="card-status-dot" data-slug="o2"></span>
             </a>
             <a class="service-card" href="/status/starlink.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=starlink.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Starlink</span>
-                <span class="card-status-dot" data-slug="starlink"></span>
             </a>
             <a class="service-card" href="/status/telus.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=telus.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Telus</span>
-                <span class="card-status-dot" data-slug="telus"></span>
             </a>
             <a class="service-card" href="/status/t-mobile.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=t-mobile.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>T-Mobile</span>
-                <span class="card-status-dot" data-slug="t-mobile"></span>
             </a>
             <a class="service-card" href="/status/verizon.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=verizon.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Verizon</span>
-                <span class="card-status-dot" data-slug="verizon"></span>
             </a>
             <a class="service-card" href="/status/visible.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=visible.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Visible</span>
-                <span class="card-status-dot" data-slug="visible"></span>
             </a>
         </div>
 
@@ -333,20 +314,9 @@
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>
             <a href="mailto:support@vultyr.app">Contact</a>
-            <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
         </nav>
-        <p class="copyright">&copy; 2026 Klosyt. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 Vultyr. All rights reserved.</p>
     </footer>
 
-    <script src="/assets/js/status-checker.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var services = [{"slug": "atandt", "apiUrl": "https://att.statuspage.io/api/v2/summary.json"}, {"slug": "bell-canada", "apiUrl": "https://bell.statuspage.io/api/v2/summary.json"}, {"slug": "cox", "apiUrl": "https://cox.statuspage.io/api/v2/summary.json"}, {"slug": "lumen", "apiUrl": "https://lumen.statuspage.io/api/v2/summary.json"}, {"slug": "o2", "apiUrl": "https://o2.statuspage.io/api/v2/summary.json"}, {"slug": "starlink", "apiUrl": "https://starlink.statuspage.io/api/v2/summary.json"}, {"slug": "verizon", "apiUrl": "https://verizon.statuspage.io/api/v2/summary.json"}, {"slug": "visible", "apiUrl": "https://status.visible.vc/api/v2/summary.json"}];
-        VultyrStatus.checkMultiple(services, function(slug, result) {
-            var dot = document.querySelector('[data-slug="' + slug + '"]');
-            if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;
-        });
-    });
-    </script>
 </body>
 </html>

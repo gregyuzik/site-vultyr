@@ -194,7 +194,7 @@
         .highlight-orange { color: #ff9926; }
 
         .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 0; }
-        .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+        .breadcrumb { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
         .breadcrumb a { color: #888; }
         .breadcrumb a:hover { color: #fff; }
         .breadcrumb .sep { margin: 0 6px; }
@@ -219,14 +219,6 @@
         }
         .service-card:hover { border-color: #333; color: #fff; }
         .service-card img { width: 24px; height: 24px; border-radius: 4px; flex-shrink: 0; }
-        .service-card .card-status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #333;
-            margin-left: auto;
-            flex-shrink: 0;
-        }
 
         .other-categories { margin-bottom: 32px; }
         .other-categories h2 { font-family: 'Audiowide', sans-serif; font-size: 1rem; color: #ff9926; margin-bottom: 16px; }
@@ -262,9 +254,9 @@
 
         footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
         footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-        footer a { color: #666; font-size: 0.8rem; }
-        footer a:hover { color: #aaa; }
-        .copyright { font-size: 0.7rem; color: #555; margin-top: 12px; }
+        footer a { color: #888; font-size: 0.8rem; }
+        footer a:hover { color: #ccc; }
+        .copyright { font-size: 0.7rem; color: #888; margin-top: 12px; }
 
         @media (max-width: 500px) {
             .services-grid { grid-template-columns: 1fr; }
@@ -293,97 +285,78 @@
             <a class="service-card" href="/status/1password.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=1password.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>1Password</span>
-                <span class="card-status-dot" data-slug="1password"></span>
             </a>
             <a class="service-card" href="/status/auth0.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=auth0.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Auth0</span>
-                <span class="card-status-dot" data-slug="auth0"></span>
             </a>
             <a class="service-card" href="/status/bitwarden.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=bitwarden.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Bitwarden</span>
-                <span class="card-status-dot" data-slug="bitwarden"></span>
             </a>
             <a class="service-card" href="/status/cloudflare-zero-trust.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=cloudflare.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Cloudflare Zero Trust</span>
-                <span class="card-status-dot" data-slug="cloudflare-zero-trust"></span>
             </a>
             <a class="service-card" href="/status/dashlane.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=dashlane.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Dashlane</span>
-                <span class="card-status-dot" data-slug="dashlane"></span>
             </a>
             <a class="service-card" href="/status/duo-security.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=duo.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Duo Security</span>
-                <span class="card-status-dot" data-slug="duo-security"></span>
             </a>
             <a class="service-card" href="/status/keeper.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=keepersecurity.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Keeper</span>
-                <span class="card-status-dot" data-slug="keeper"></span>
             </a>
             <a class="service-card" href="/status/lastpass.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=lastpass.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>LastPass</span>
-                <span class="card-status-dot" data-slug="lastpass"></span>
             </a>
             <a class="service-card" href="/status/malwarebytes.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=malwarebytes.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Malwarebytes</span>
-                <span class="card-status-dot" data-slug="malwarebytes"></span>
             </a>
             <a class="service-card" href="/status/nordvpn.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=nordvpn.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>NordVPN</span>
-                <span class="card-status-dot" data-slug="nordvpn"></span>
             </a>
             <a class="service-card" href="/status/okta.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=okta.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Okta</span>
-                <span class="card-status-dot" data-slug="okta"></span>
             </a>
             <a class="service-card" href="/status/palo-alto-networks.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=paloaltonetworks.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Palo Alto Networks</span>
-                <span class="card-status-dot" data-slug="palo-alto-networks"></span>
             </a>
             <a class="service-card" href="/status/proton.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=proton.me&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Proton</span>
-                <span class="card-status-dot" data-slug="proton"></span>
             </a>
             <a class="service-card" href="/status/semgrep.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=semgrep.dev&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Semgrep</span>
-                <span class="card-status-dot" data-slug="semgrep"></span>
             </a>
             <a class="service-card" href="/status/stytch.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=stytch.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Stytch</span>
-                <span class="card-status-dot" data-slug="stytch"></span>
             </a>
             <a class="service-card" href="/status/tailscale.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=tailscale.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Tailscale</span>
-                <span class="card-status-dot" data-slug="tailscale"></span>
             </a>
             <a class="service-card" href="/status/wiz.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=wiz.io&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Wiz</span>
-                <span class="card-status-dot" data-slug="wiz"></span>
             </a>
             <a class="service-card" href="/status/workos.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=workos.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>WorkOS</span>
-                <span class="card-status-dot" data-slug="workos"></span>
             </a>
             <a class="service-card" href="/status/zscaler.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=zscaler.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Zscaler</span>
-                <span class="card-status-dot" data-slug="zscaler"></span>
             </a>
         </div>
 
@@ -421,20 +394,9 @@
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>
             <a href="mailto:support@vultyr.app">Contact</a>
-            <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
         </nav>
-        <p class="copyright">&copy; 2026 Klosyt. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 Vultyr. All rights reserved.</p>
     </footer>
 
-    <script src="/assets/js/status-checker.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var services = [{"slug": "1password", "apiUrl": "https://1password.statuspage.io/api/v2/summary.json"}, {"slug": "auth0", "apiUrl": "https://auth0.statuspage.io/api/v2/summary.json"}, {"slug": "cloudflare-zero-trust", "apiUrl": "https://www.cloudflarestatus.com/api/v2/summary.json"}, {"slug": "duo-security", "apiUrl": "https://status.duo.com/api/v2/summary.json"}, {"slug": "keeper", "apiUrl": "https://keeper.statuspage.io/api/v2/summary.json"}, {"slug": "lastpass", "apiUrl": "https://status.lastpass.com/api/v2/summary.json"}, {"slug": "palo-alto-networks", "apiUrl": "https://status.paloaltonetworks.com/api/v2/summary.json"}, {"slug": "proton", "apiUrl": "https://status.proton.me/api/v2/summary.json"}, {"slug": "semgrep", "apiUrl": "https://status.semgrep.dev/api/v2/summary.json"}, {"slug": "tailscale", "apiUrl": "https://status.tailscale.com/api/v2/summary.json"}, {"slug": "wiz", "apiUrl": "https://status.wiz.io/api/v2/summary.json"}, {"slug": "workos", "apiUrl": "https://status.workos.com/api/v2/summary.json"}];
-        VultyrStatus.checkMultiple(services, function(slug, result) {
-            var dot = document.querySelector('[data-slug="' + slug + '"]');
-            if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;
-        });
-    });
-    </script>
 </body>
 </html>
