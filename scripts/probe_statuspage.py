@@ -3,19 +3,40 @@
 Updates data/services.json with statuspageApi field where found."""
 
 import json
+import logging
 import os
-import urllib.request
-import urllib.error
 import ssl
+import urllib.error
+import urllib.request
+
+logger = logging.getLogger(__name__)
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 JSON_PATH = os.path.join(ROOT_DIR, "data", "services.json")
 
-# Don't verify SSL for probing (some status pages have cert issues)
-ctx = ssl.create_default_context()
-ctx.check_hostname = False
-ctx.verify_mode = ssl.CERT_NONE
+# Secure SSL context (default)
+_secure_ctx = ssl.create_default_context()
+
+# Insecure fallback for status pages with certificate issues
+_insecure_ctx = ssl.create_default_context()
+_insecure_ctx.check_hostname = False
+_insecure_ctx.verify_mode = ssl.CERT_NONE
+
+
+def _try_fetch(api_url, ctx):
+    """Attempt to fetch and validate a Statuspage.io API endpoint."""
+    req = urllib.request.Request(api_url, headers={
+        "User-Agent": "Mozilla/5.0 (compatible; VultyrProbe/1.0)",
+        "Accept": "application/json",
+    })
+    with urllib.request.urlopen(req, timeout=8, context=ctx) as resp:
+        if resp.status != 200:
+            return None
+        data = json.loads(resp.read().decode())
+        if "status" in data and "indicator" in data.get("status", {}):
+            return api_url
+    return None
 
 
 def probe_statuspage_api(status_url):
@@ -24,27 +45,22 @@ def probe_statuspage_api(status_url):
     if not status_url:
         return None
 
-    # Normalize URL
     base = status_url.rstrip("/")
-
-    # Some status URLs already point to specific pages, get the root
-    # e.g., https://developer.apple.com/system-status/ -> not statuspage.io
     api_url = f"{base}/api/v2/status.json"
 
+    # Try with secure SSL first
     try:
-        req = urllib.request.Request(api_url, headers={
-            "User-Agent": "Mozilla/5.0 (compatible; VultyrProbe/1.0)",
-            "Accept": "application/json",
-        })
-        with urllib.request.urlopen(req, timeout=8, context=ctx) as resp:
-            if resp.status != 200:
-                return None
-            data = json.loads(resp.read().decode())
-            # Validate it's a Statuspage.io response
-            if "status" in data and "indicator" in data.get("status", {}):
-                return api_url
-    except Exception:
-        pass
+        return _try_fetch(api_url, _secure_ctx)
+    except ssl.SSLError:
+        # Retry with verification disabled for status pages with cert issues
+        try:
+            return _try_fetch(api_url, _insecure_ctx)
+        except (urllib.error.URLError, urllib.error.HTTPError, ssl.SSLError,
+                json.JSONDecodeError, TimeoutError, OSError) as exc:
+            logger.debug("Probe failed (insecure fallback) for %s: %s", api_url, exc)
+    except (urllib.error.URLError, urllib.error.HTTPError,
+            json.JSONDecodeError, TimeoutError, OSError) as exc:
+        logger.debug("Probe failed for %s: %s", api_url, exc)
 
     return None
 
