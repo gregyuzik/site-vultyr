@@ -363,7 +363,7 @@
     <script src="/assets/js/status-checker.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var services = [{"slug": "dailymotion", "apiUrl": "https://status.dailymotion.com/api/v2/status.json"}, {"slug": "giphy", "apiUrl": "https://status.giphy.com/api/v2/status.json"}, {"slug": "imgur", "apiUrl": "https://status.imgur.com/api/v2/status.json"}, {"slug": "spotify", "apiUrl": "https://spotify.statuspage.io/api/v2/status.json"}, {"slug": "twitch", "apiUrl": "https://status.twitch.com/api/v2/status.json"}, {"slug": "vimeo", "apiUrl": "https://www.vimeostatus.com/api/v2/status.json"}];
+        var services = [{"slug": "dailymotion", "apiUrl": "https://status.dailymotion.com/api/v2/summary.json"}, {"slug": "giphy", "apiUrl": "https://status.giphy.com/api/v2/summary.json"}, {"slug": "imgur", "apiUrl": "https://status.imgur.com/api/v2/summary.json"}, {"slug": "spotify", "apiUrl": "https://spotify.statuspage.io/api/v2/summary.json"}, {"slug": "twitch", "apiUrl": "https://status.twitch.com/api/v2/summary.json"}, {"slug": "vimeo", "apiUrl": "https://www.vimeostatus.com/api/v2/summary.json"}];
         VultyrStatus.checkMultiple(services, function(slug, result) {
             var dot = document.querySelector('[data-slug="' + slug + '"]');
             if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;

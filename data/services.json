@@ -6,7 +6,7 @@
       "faviconDomain": "aiven.io",
       "statusUrl": "https://status.aiven.io",
       "homepageUrl": "https://aiven.io",
-      "statuspageApi": "https://status.aiven.io/api/v2/status.json",
+      "statuspageApi": "https://status.aiven.io/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -17,7 +17,7 @@
       "faviconDomain": "akamai.com",
       "statusUrl": "https://www.akamaistatus.com",
       "homepageUrl": "https://www.akamai.com",
-      "statuspageApi": "https://www.akamaistatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.akamaistatus.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -28,7 +28,7 @@
       "faviconDomain": "aptible.com",
       "statusUrl": "https://aptible.statuspage.io",
       "homepageUrl": "https://www.aptible.com",
-      "statuspageApi": "https://aptible.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://aptible.statuspage.io/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -39,7 +39,7 @@
       "faviconDomain": "bunny.net",
       "statusUrl": "https://status.bunny.net",
       "homepageUrl": "https://bunny.net",
-      "statuspageApi": "https://status.bunny.net/api/v2/status.json",
+      "statuspageApi": "https://status.bunny.net/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -50,7 +50,7 @@
       "faviconDomain": "cloudflare.com",
       "statusUrl": "https://www.cloudflarestatus.com",
       "homepageUrl": "https://www.cloudflare.com",
-      "statuspageApi": "https://www.cloudflarestatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.cloudflarestatus.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -61,7 +61,7 @@
       "faviconDomain": "cockroachlabs.com",
       "statusUrl": "https://status.cockroachlabs.cloud",
       "homepageUrl": "https://www.cockroachlabs.com",
-      "statuspageApi": "https://status.cockroachlabs.cloud/api/v2/status.json",
+      "statuspageApi": "https://status.cockroachlabs.cloud/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -72,7 +72,7 @@
       "faviconDomain": "confluent.io",
       "statusUrl": "https://status.confluent.cloud",
       "homepageUrl": "https://www.confluent.io",
-      "statuspageApi": "https://status.confluent.cloud/api/v2/status.json",
+      "statuspageApi": "https://status.confluent.cloud/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -83,7 +83,7 @@
       "faviconDomain": "digitalocean.com",
       "statusUrl": "https://status.digitalocean.com",
       "homepageUrl": "https://www.digitalocean.com",
-      "statuspageApi": "https://status.digitalocean.com/api/v2/status.json",
+      "statuspageApi": "https://status.digitalocean.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -94,7 +94,7 @@
       "faviconDomain": "dropbox.com",
       "statusUrl": "https://status.dropbox.com",
       "homepageUrl": "https://www.dropbox.com",
-      "statuspageApi": "https://status.dropbox.com/api/v2/status.json",
+      "statuspageApi": "https://status.dropbox.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -105,7 +105,7 @@
       "faviconDomain": "elastic.co",
       "statusUrl": "https://status.elastic.co",
       "homepageUrl": "https://www.elastic.co",
-      "statuspageApi": "https://status.elastic.co/api/v2/status.json",
+      "statuspageApi": "https://status.elastic.co/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -127,7 +127,7 @@
       "faviconDomain": "fly.io",
       "statusUrl": "https://status.flyio.net",
       "homepageUrl": "https://fly.io",
-      "statuspageApi": "https://status.flyio.net/api/v2/status.json",
+      "statuspageApi": "https://status.flyio.net/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -149,7 +149,7 @@
       "faviconDomain": "influxdata.com",
       "statusUrl": "https://status.influxdata.com",
       "homepageUrl": "https://www.influxdata.com",
-      "statuspageApi": "https://status.influxdata.com/api/v2/status.json",
+      "statuspageApi": "https://status.influxdata.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -171,7 +171,7 @@
       "faviconDomain": "linode.com",
       "statusUrl": "https://status.linode.com",
       "homepageUrl": "https://www.linode.com",
-      "statuspageApi": "https://status.linode.com/api/v2/status.json",
+      "statuspageApi": "https://status.linode.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -182,7 +182,7 @@
       "faviconDomain": "mongodb.com",
       "statusUrl": "https://status.mongodb.com",
       "homepageUrl": "https://www.mongodb.com",
-      "statuspageApi": "https://status.mongodb.com/api/v2/status.json",
+      "statuspageApi": "https://status.mongodb.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -204,7 +204,7 @@
       "faviconDomain": "oracle.com",
       "statusUrl": "https://ocistatus.oraclecloud.com",
       "homepageUrl": "https://www.oracle.com/cloud/",
-      "statuspageApi": "https://ocistatus.oraclecloud.com/api/v2/status.json",
+      "statuspageApi": "https://ocistatus.oraclecloud.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -215,7 +215,7 @@
       "faviconDomain": "planetscale.com",
       "statusUrl": "https://www.planetscalestatus.com",
       "homepageUrl": "https://planetscale.com",
-      "statuspageApi": "https://www.planetscalestatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.planetscalestatus.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -226,7 +226,7 @@
       "faviconDomain": "railway.app",
       "statusUrl": "https://railway.statuspage.io",
       "homepageUrl": "https://railway.app",
-      "statuspageApi": "https://railway.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://railway.statuspage.io/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -248,7 +248,7 @@
       "faviconDomain": "render.com",
       "statusUrl": "https://status.render.com",
       "homepageUrl": "https://render.com",
-      "statuspageApi": "https://status.render.com/api/v2/status.json",
+      "statuspageApi": "https://status.render.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -270,7 +270,7 @@
       "faviconDomain": "scaleway.com",
       "statusUrl": "https://status.scaleway.com",
       "homepageUrl": "https://www.scaleway.com",
-      "statuspageApi": "https://status.scaleway.com/api/v2/status.json",
+      "statuspageApi": "https://status.scaleway.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -281,7 +281,7 @@
       "faviconDomain": "snowflake.com",
       "statusUrl": "https://status.snowflake.com",
       "homepageUrl": "https://www.snowflake.com",
-      "statuspageApi": "https://status.snowflake.com/api/v2/status.json",
+      "statuspageApi": "https://status.snowflake.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -314,7 +314,7 @@
       "faviconDomain": "vercel.com",
       "statusUrl": "https://www.vercel-status.com",
       "homepageUrl": "https://vercel.com",
-      "statuspageApi": "https://www.vercel-status.com/api/v2/status.json",
+      "statuspageApi": "https://www.vercel-status.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -325,7 +325,7 @@
       "faviconDomain": "wasabi.com",
       "statusUrl": "https://status.wasabi.com",
       "homepageUrl": "https://wasabi.com",
-      "statuspageApi": "https://status.wasabi.com/api/v2/status.json",
+      "statuspageApi": "https://status.wasabi.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
       ]
@@ -358,7 +358,7 @@
       "faviconDomain": "bitbucket.org",
       "statusUrl": "https://bitbucket.status.atlassian.com",
       "homepageUrl": "https://bitbucket.org",
-      "statuspageApi": "https://bitbucket.status.atlassian.com/api/v2/status.json",
+      "statuspageApi": "https://bitbucket.status.atlassian.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -369,7 +369,7 @@
       "faviconDomain": "bitrise.io",
       "statusUrl": "https://status.bitrise.io",
       "homepageUrl": "https://www.bitrise.io",
-      "statuspageApi": "https://status.bitrise.io/api/v2/status.json",
+      "statuspageApi": "https://status.bitrise.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -380,7 +380,7 @@
       "faviconDomain": "buildkite.com",
       "statusUrl": "https://www.buildkitestatus.com",
       "homepageUrl": "https://buildkite.com",
-      "statuspageApi": "https://www.buildkitestatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.buildkitestatus.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -391,7 +391,7 @@
       "faviconDomain": "circleci.com",
       "statusUrl": "https://status.circleci.com",
       "homepageUrl": "https://circleci.com",
-      "statuspageApi": "https://status.circleci.com/api/v2/status.json",
+      "statuspageApi": "https://status.circleci.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -402,7 +402,7 @@
       "faviconDomain": "cloudinary.com",
       "statusUrl": "https://status.cloudinary.com",
       "homepageUrl": "https://cloudinary.com",
-      "statuspageApi": "https://status.cloudinary.com/api/v2/status.json",
+      "statuspageApi": "https://status.cloudinary.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -413,7 +413,7 @@
       "faviconDomain": "cloudsmith.com",
       "statusUrl": "https://status.cloudsmith.com",
       "homepageUrl": "https://cloudsmith.com",
-      "statuspageApi": "https://status.cloudsmith.com/api/v2/status.json",
+      "statuspageApi": "https://status.cloudsmith.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -424,7 +424,7 @@
       "faviconDomain": "codecov.io",
       "statusUrl": "https://status.codecov.com",
       "homepageUrl": "https://codecov.io",
-      "statuspageApi": "https://status.codecov.com/api/v2/status.json",
+      "statuspageApi": "https://status.codecov.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -435,7 +435,7 @@
       "faviconDomain": "codefresh.io",
       "statusUrl": "https://status.codefresh.io",
       "homepageUrl": "https://codefresh.io",
-      "statuspageApi": "https://status.codefresh.io/api/v2/status.json",
+      "statuspageApi": "https://status.codefresh.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -446,7 +446,7 @@
       "faviconDomain": "cocoapods.org",
       "statusUrl": "https://status.cocoapods.org",
       "homepageUrl": "https://cocoapods.org",
-      "statuspageApi": "https://status.cocoapods.org/api/v2/status.json",
+      "statuspageApi": "https://status.cocoapods.org/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -457,7 +457,7 @@
       "faviconDomain": "contentful.com",
       "statusUrl": "https://contentful.statuspage.io",
       "homepageUrl": "https://www.contentful.com",
-      "statuspageApi": "https://contentful.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://contentful.statuspage.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -468,7 +468,7 @@
       "faviconDomain": "convex.dev",
       "statusUrl": "https://status.convex.dev",
       "homepageUrl": "https://www.convex.dev",
-      "statuspageApi": "https://status.convex.dev/api/v2/status.json",
+      "statuspageApi": "https://status.convex.dev/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -479,7 +479,7 @@
       "faviconDomain": "crates.io",
       "statusUrl": "https://status.crates.io",
       "homepageUrl": "https://crates.io",
-      "statuspageApi": "https://status.crates.io/api/v2/status.json",
+      "statuspageApi": "https://status.crates.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -490,7 +490,7 @@
       "faviconDomain": "getdbt.com",
       "statusUrl": "https://status.getdbt.com",
       "homepageUrl": "https://www.getdbt.com",
-      "statuspageApi": "https://status.getdbt.com/api/v2/status.json",
+      "statuspageApi": "https://status.getdbt.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -523,7 +523,7 @@
       "faviconDomain": "doppler.com",
       "statusUrl": "https://www.dopplerstatus.com",
       "homepageUrl": "https://www.doppler.com",
-      "statuspageApi": "https://www.dopplerstatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.dopplerstatus.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -545,7 +545,7 @@
       "faviconDomain": "expo.dev",
       "statusUrl": "https://status.expo.dev",
       "homepageUrl": "https://expo.dev",
-      "statuspageApi": "https://status.expo.dev/api/v2/status.json",
+      "statuspageApi": "https://status.expo.dev/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -556,7 +556,7 @@
       "faviconDomain": "github.com",
       "statusUrl": "https://www.githubstatus.com",
       "homepageUrl": "https://github.com",
-      "statuspageApi": "https://www.githubstatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.githubstatus.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -578,7 +578,7 @@
       "faviconDomain": "gitpod.io",
       "statusUrl": "https://www.gitpodstatus.com",
       "homepageUrl": "https://www.gitpod.io",
-      "statuspageApi": "https://www.gitpodstatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.gitpodstatus.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -589,7 +589,7 @@
       "faviconDomain": "grafana.com",
       "statusUrl": "https://status.grafana.com",
       "homepageUrl": "https://grafana.com",
-      "statuspageApi": "https://status.grafana.com/api/v2/status.json",
+      "statuspageApi": "https://status.grafana.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -600,7 +600,7 @@
       "faviconDomain": "harness.io",
       "statusUrl": "https://status.harness.io",
       "homepageUrl": "https://www.harness.io",
-      "statuspageApi": "https://status.harness.io/api/v2/status.json",
+      "statuspageApi": "https://status.harness.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -611,7 +611,7 @@
       "faviconDomain": "hashicorp.com",
       "statusUrl": "https://status.hashicorp.com",
       "homepageUrl": "https://www.hashicorp.com",
-      "statuspageApi": "https://status.hashicorp.com/api/v2/status.json",
+      "statuspageApi": "https://status.hashicorp.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -622,7 +622,7 @@
       "faviconDomain": "honeycomb.io",
       "statusUrl": "https://status.honeycomb.io",
       "homepageUrl": "https://www.honeycomb.io",
-      "statuspageApi": "https://status.honeycomb.io/api/v2/status.json",
+      "statuspageApi": "https://status.honeycomb.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -633,7 +633,7 @@
       "faviconDomain": "incident.io",
       "statusUrl": "https://incidentio.statuspage.io",
       "homepageUrl": "https://incident.io",
-      "statuspageApi": "https://incidentio.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://incidentio.statuspage.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -644,7 +644,7 @@
       "faviconDomain": "jfrog.com",
       "statusUrl": "https://status.jfrog.io",
       "homepageUrl": "https://jfrog.com",
-      "statuspageApi": "https://status.jfrog.io/api/v2/status.json",
+      "statuspageApi": "https://status.jfrog.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -655,7 +655,7 @@
       "faviconDomain": "launchdarkly.com",
       "statusUrl": "https://status.launchdarkly.com",
       "homepageUrl": "https://launchdarkly.com",
-      "statuspageApi": "https://status.launchdarkly.com/api/v2/status.json",
+      "statuspageApi": "https://status.launchdarkly.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -666,7 +666,7 @@
       "faviconDomain": "search.maven.org",
       "statusUrl": "https://status.maven.org",
       "homepageUrl": "https://search.maven.org",
-      "statuspageApi": "https://status.maven.org/api/v2/status.json",
+      "statuspageApi": "https://status.maven.org/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -677,7 +677,7 @@
       "faviconDomain": "netlify.com",
       "statusUrl": "https://www.netlifystatus.com",
       "homepageUrl": "https://www.netlify.com",
-      "statuspageApi": "https://www.netlifystatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.netlifystatus.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -688,7 +688,7 @@
       "faviconDomain": "newrelic.com",
       "statusUrl": "https://status.newrelic.com",
       "homepageUrl": "https://newrelic.com",
-      "statuspageApi": "https://status.newrelic.com/api/v2/status.json",
+      "statuspageApi": "https://status.newrelic.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -699,7 +699,7 @@
       "faviconDomain": "npmjs.com",
       "statusUrl": "https://status.npmjs.org",
       "homepageUrl": "https://www.npmjs.com",
-      "statuspageApi": "https://status.npmjs.org/api/v2/status.json",
+      "statuspageApi": "https://status.npmjs.org/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -710,7 +710,7 @@
       "faviconDomain": "nuget.org",
       "statusUrl": "https://nuget.statuspage.io",
       "homepageUrl": "https://www.nuget.org",
-      "statuspageApi": "https://nuget.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://nuget.statuspage.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -721,7 +721,7 @@
       "faviconDomain": "atlassian.com",
       "statusUrl": "https://opsgenie.statuspage.io",
       "homepageUrl": "https://www.atlassian.com/software/opsgenie",
-      "statuspageApi": "https://opsgenie.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://opsgenie.statuspage.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -743,7 +743,7 @@
       "faviconDomain": "postman.com",
       "statusUrl": "https://status.postman.com",
       "homepageUrl": "https://www.postman.com",
-      "statuspageApi": "https://status.postman.com/api/v2/status.json",
+      "statuspageApi": "https://status.postman.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -754,7 +754,7 @@
       "faviconDomain": "pulumi.com",
       "statusUrl": "https://status.pulumi.com",
       "homepageUrl": "https://www.pulumi.com",
-      "statuspageApi": "https://status.pulumi.com/api/v2/status.json",
+      "statuspageApi": "https://status.pulumi.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -765,7 +765,7 @@
       "faviconDomain": "pypi.org",
       "statusUrl": "https://status.python.org",
       "homepageUrl": "https://pypi.org",
-      "statuspageApi": "https://status.python.org/api/v2/status.json",
+      "statuspageApi": "https://status.python.org/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -776,7 +776,7 @@
       "faviconDomain": "retool.com",
       "statusUrl": "https://status.retool.com",
       "homepageUrl": "https://retool.com",
-      "statuspageApi": "https://status.retool.com/api/v2/status.json",
+      "statuspageApi": "https://status.retool.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -787,7 +787,7 @@
       "faviconDomain": "rollbar.com",
       "statusUrl": "https://status.rollbar.com",
       "homepageUrl": "https://rollbar.com",
-      "statuspageApi": "https://status.rollbar.com/api/v2/status.json",
+      "statuspageApi": "https://status.rollbar.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -798,7 +798,7 @@
       "faviconDomain": "rubygems.org",
       "statusUrl": "https://status.rubygems.org",
       "homepageUrl": "https://rubygems.org",
-      "statuspageApi": "https://status.rubygems.org/api/v2/status.json",
+      "statuspageApi": "https://status.rubygems.org/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -809,7 +809,7 @@
       "faviconDomain": "sentry.io",
       "statusUrl": "https://status.sentry.io",
       "homepageUrl": "https://sentry.io",
-      "statuspageApi": "https://status.sentry.io/api/v2/status.json",
+      "statuspageApi": "https://status.sentry.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -820,7 +820,7 @@
       "faviconDomain": "snyk.io",
       "statusUrl": "https://snyk.statuspage.io",
       "homepageUrl": "https://snyk.io",
-      "statuspageApi": "https://snyk.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://snyk.statuspage.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -831,7 +831,7 @@
       "faviconDomain": "sourcegraph.com",
       "statusUrl": "https://sourcegraphstatus.com",
       "homepageUrl": "https://sourcegraph.com",
-      "statuspageApi": "https://sourcegraphstatus.com/api/v2/status.json",
+      "statuspageApi": "https://sourcegraphstatus.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -842,7 +842,7 @@
       "faviconDomain": "spacelift.io",
       "statusUrl": "https://spacelift.statuspage.io",
       "homepageUrl": "https://spacelift.io",
-      "statuspageApi": "https://spacelift.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://spacelift.statuspage.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -853,7 +853,7 @@
       "faviconDomain": "splunk.com",
       "statusUrl": "https://status.splunkcloud.com",
       "homepageUrl": "https://www.splunk.com",
-      "statuspageApi": "https://status.splunkcloud.com/api/v2/status.json",
+      "statuspageApi": "https://status.splunkcloud.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -864,7 +864,7 @@
       "faviconDomain": "splunk.com",
       "statusUrl": "https://status.victorops.com",
       "homepageUrl": "https://www.splunk.com/en_us/products/on-call.html",
-      "statuspageApi": "https://status.victorops.com/api/v2/status.json",
+      "statuspageApi": "https://status.victorops.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -875,7 +875,7 @@
       "faviconDomain": "supabase.com",
       "statusUrl": "https://status.supabase.com",
       "homepageUrl": "https://supabase.com",
-      "statuspageApi": "https://status.supabase.com/api/v2/status.json",
+      "statuspageApi": "https://status.supabase.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -886,7 +886,7 @@
       "faviconDomain": "travis-ci.com",
       "statusUrl": "https://www.traviscistatus.com",
       "homepageUrl": "https://www.travis-ci.com",
-      "statuspageApi": "https://www.traviscistatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.traviscistatus.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -897,7 +897,7 @@
       "faviconDomain": "upstash.com",
       "statusUrl": "https://status.upstash.com",
       "homepageUrl": "https://upstash.com",
-      "statuspageApi": "https://status.upstash.com/api/v2/status.json",
+      "statuspageApi": "https://status.upstash.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -908,7 +908,7 @@
       "faviconDomain": "warp.dev",
       "statusUrl": "https://status.warp.dev",
       "homepageUrl": "https://www.warp.dev",
-      "statuspageApi": "https://status.warp.dev/api/v2/status.json",
+      "statuspageApi": "https://status.warp.dev/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -919,7 +919,7 @@
       "faviconDomain": "webflow.com",
       "statusUrl": "https://status.webflow.com",
       "homepageUrl": "https://webflow.com",
-      "statuspageApi": "https://status.webflow.com/api/v2/status.json",
+      "statuspageApi": "https://status.webflow.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -930,7 +930,7 @@
       "faviconDomain": "discord.com",
       "statusUrl": "https://discordstatus.com",
       "homepageUrl": "https://discord.com",
-      "statuspageApi": "https://discordstatus.com/api/v2/status.json",
+      "statuspageApi": "https://discordstatus.com/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -941,7 +941,7 @@
       "faviconDomain": "livekit.io",
       "statusUrl": "https://livekit.statuspage.io",
       "homepageUrl": "https://livekit.io",
-      "statuspageApi": "https://livekit.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://livekit.statuspage.io/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -952,7 +952,7 @@
       "faviconDomain": "matrix.org",
       "statusUrl": "https://status.matrix.org",
       "homepageUrl": "https://matrix.org",
-      "statuspageApi": "https://status.matrix.org/api/v2/status.json",
+      "statuspageApi": "https://status.matrix.org/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -985,7 +985,7 @@
       "faviconDomain": "twilio.com",
       "statusUrl": "https://status.twilio.com",
       "homepageUrl": "https://www.twilio.com",
-      "statuspageApi": "https://status.twilio.com/api/v2/status.json",
+      "statuspageApi": "https://status.twilio.com/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -996,7 +996,7 @@
       "faviconDomain": "vonage.com",
       "statusUrl": "https://vonageapi.statuspage.io",
       "homepageUrl": "https://www.vonage.com",
-      "statuspageApi": "https://vonageapi.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://vonageapi.statuspage.io/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -1007,7 +1007,7 @@
       "faviconDomain": "webex.com",
       "statusUrl": "https://ciscospark.statuspage.io",
       "homepageUrl": "https://www.webex.com",
-      "statuspageApi": "https://ciscospark.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://ciscospark.statuspage.io/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -1018,7 +1018,7 @@
       "faviconDomain": "zoom.us",
       "statusUrl": "https://www.zoomstatus.com",
       "homepageUrl": "https://zoom.us",
-      "statuspageApi": "https://www.zoomstatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.zoomstatus.com/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -1029,7 +1029,7 @@
       "faviconDomain": "airtable.com",
       "statusUrl": "https://status.airtable.com",
       "homepageUrl": "https://www.airtable.com",
-      "statuspageApi": "https://status.airtable.com/api/v2/status.json",
+      "statuspageApi": "https://status.airtable.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1040,7 +1040,7 @@
       "faviconDomain": "amplitude.com",
       "statusUrl": "https://status.amplitude.com",
       "homepageUrl": "https://amplitude.com",
-      "statuspageApi": "https://status.amplitude.com/api/v2/status.json",
+      "statuspageApi": "https://status.amplitude.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1051,7 +1051,7 @@
       "faviconDomain": "asana.com",
       "statusUrl": "https://status.asana.com",
       "homepageUrl": "https://asana.com",
-      "statuspageApi": "https://status.asana.com/api/v2/status.json",
+      "statuspageApi": "https://status.asana.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1062,7 +1062,7 @@
       "faviconDomain": "atlassian.com",
       "statusUrl": "https://status.atlassian.com",
       "homepageUrl": "https://www.atlassian.com",
-      "statuspageApi": "https://status.atlassian.com/api/v2/status.json",
+      "statuspageApi": "https://status.atlassian.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1073,7 +1073,7 @@
       "faviconDomain": "box.com",
       "statusUrl": "https://status.box.com",
       "homepageUrl": "https://www.box.com",
-      "statuspageApi": "https://status.box.com/api/v2/status.json",
+      "statuspageApi": "https://status.box.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1084,7 +1084,7 @@
       "faviconDomain": "canva.com",
       "statusUrl": "https://www.canvastatus.com",
       "homepageUrl": "https://www.canva.com",
-      "statuspageApi": "https://www.canvastatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.canvastatus.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1095,7 +1095,7 @@
       "faviconDomain": "clickup.com",
       "statusUrl": "https://clickup.statuspage.io",
       "homepageUrl": "https://clickup.com",
-      "statuspageApi": "https://clickup.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://clickup.statuspage.io/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1106,7 +1106,7 @@
       "faviconDomain": "clerk.com",
       "statusUrl": "https://status.clerk.com",
       "homepageUrl": "https://clerk.com",
-      "statuspageApi": "https://status.clerk.com/api/v2/status.json",
+      "statuspageApi": "https://status.clerk.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1117,7 +1117,7 @@
       "faviconDomain": "coda.io",
       "statusUrl": "https://status.coda.io",
       "homepageUrl": "https://coda.io",
-      "statuspageApi": "https://status.coda.io/api/v2/status.json",
+      "statuspageApi": "https://status.coda.io/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1128,7 +1128,7 @@
       "faviconDomain": "datadoghq.com",
       "statusUrl": "https://status.datadoghq.com",
       "homepageUrl": "https://www.datadoghq.com",
-      "statuspageApi": "https://status.datadoghq.com/api/v2/status.json",
+      "statuspageApi": "https://status.datadoghq.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1139,7 +1139,7 @@
       "faviconDomain": "sign.dropbox.com",
       "statusUrl": "https://status.hellosign.com",
       "homepageUrl": "https://sign.dropbox.com",
-      "statuspageApi": "https://status.hellosign.com/api/v2/status.json",
+      "statuspageApi": "https://status.hellosign.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1150,7 +1150,7 @@
       "faviconDomain": "fathom.video",
       "statusUrl": "https://status.fathom.video",
       "homepageUrl": "https://fathom.video",
-      "statuspageApi": "https://status.fathom.video/api/v2/status.json",
+      "statuspageApi": "https://status.fathom.video/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1161,7 +1161,7 @@
       "faviconDomain": "figma.com",
       "statusUrl": "https://status.figma.com",
       "homepageUrl": "https://www.figma.com",
-      "statuspageApi": "https://status.figma.com/api/v2/status.json",
+      "statuspageApi": "https://status.figma.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1183,7 +1183,7 @@
       "faviconDomain": "grammarly.com",
       "statusUrl": "https://status.grammarly.com",
       "homepageUrl": "https://www.grammarly.com",
-      "statuspageApi": "https://status.grammarly.com/api/v2/status.json",
+      "statuspageApi": "https://status.grammarly.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1194,7 +1194,7 @@
       "faviconDomain": "hubspot.com",
       "statusUrl": "https://status.hubspot.com",
       "homepageUrl": "https://www.hubspot.com",
-      "statuspageApi": "https://status.hubspot.com/api/v2/status.json",
+      "statuspageApi": "https://status.hubspot.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1205,7 +1205,7 @@
       "faviconDomain": "intercom.com",
       "statusUrl": "https://www.intercomstatus.com",
       "homepageUrl": "https://www.intercom.com",
-      "statuspageApi": "https://www.intercomstatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.intercomstatus.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1216,7 +1216,7 @@
       "faviconDomain": "linear.app",
       "statusUrl": "https://linearstatus.com",
       "homepageUrl": "https://linear.app",
-      "statuspageApi": "https://linearstatus.com/api/v2/status.json",
+      "statuspageApi": "https://linearstatus.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1227,7 +1227,7 @@
       "faviconDomain": "login.gov",
       "statusUrl": "https://status.login.gov",
       "homepageUrl": "https://login.gov",
-      "statuspageApi": "https://status.login.gov/api/v2/status.json",
+      "statuspageApi": "https://status.login.gov/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1238,7 +1238,7 @@
       "faviconDomain": "miro.com",
       "statusUrl": "https://status.miro.com",
       "homepageUrl": "https://miro.com",
-      "statuspageApi": "https://status.miro.com/api/v2/status.json",
+      "statuspageApi": "https://status.miro.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1249,7 +1249,7 @@
       "faviconDomain": "mixpanel.com",
       "statusUrl": "https://www.mixpanelstatus.com",
       "homepageUrl": "https://mixpanel.com",
-      "statuspageApi": "https://www.mixpanelstatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.mixpanelstatus.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1260,7 +1260,7 @@
       "faviconDomain": "monday.com",
       "statusUrl": "https://status.monday.com",
       "homepageUrl": "https://monday.com",
-      "statuspageApi": "https://status.monday.com/api/v2/status.json",
+      "statuspageApi": "https://status.monday.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1271,7 +1271,7 @@
       "faviconDomain": "notion.so",
       "statusUrl": "https://www.notion-status.com",
       "homepageUrl": "https://www.notion.so",
-      "statuspageApi": "https://www.notion-status.com/api/v2/status.json",
+      "statuspageApi": "https://www.notion-status.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1282,7 +1282,7 @@
       "faviconDomain": "otter.ai",
       "statusUrl": "https://status.otter.ai",
       "homepageUrl": "https://otter.ai",
-      "statuspageApi": "https://status.otter.ai/api/v2/status.json",
+      "statuspageApi": "https://status.otter.ai/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1293,7 +1293,7 @@
       "faviconDomain": "sanity.io",
       "statusUrl": "https://www.sanity-status.com",
       "homepageUrl": "https://www.sanity.io",
-      "statuspageApi": "https://www.sanity-status.com/api/v2/status.json",
+      "statuspageApi": "https://www.sanity-status.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1304,7 +1304,7 @@
       "faviconDomain": "segment.com",
       "statusUrl": "https://status.segment.com",
       "homepageUrl": "https://segment.com",
-      "statuspageApi": "https://status.segment.com/api/v2/status.json",
+      "statuspageApi": "https://status.segment.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1326,7 +1326,7 @@
       "faviconDomain": "cash.app",
       "statusUrl": "https://status.cash.app",
       "homepageUrl": "https://cash.app",
-      "statuspageApi": "https://status.cash.app/api/v2/status.json",
+      "statuspageApi": "https://status.cash.app/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1337,7 +1337,7 @@
       "faviconDomain": "coinbase.com",
       "statusUrl": "https://coinbase.statuspage.io",
       "homepageUrl": "https://www.coinbase.com",
-      "statuspageApi": "https://coinbase.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://coinbase.statuspage.io/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1348,7 +1348,7 @@
       "faviconDomain": "exchange.coinbase.com",
       "statusUrl": "https://status.exchange.coinbase.com",
       "homepageUrl": "https://exchange.coinbase.com",
-      "statuspageApi": "https://status.exchange.coinbase.com/api/v2/status.json",
+      "statuspageApi": "https://status.exchange.coinbase.com/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1359,7 +1359,7 @@
       "faviconDomain": "gemini.com",
       "statusUrl": "https://status.gemini.com",
       "homepageUrl": "https://www.gemini.com",
-      "statuspageApi": "https://status.gemini.com/api/v2/status.json",
+      "statuspageApi": "https://status.gemini.com/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1370,7 +1370,7 @@
       "faviconDomain": "kraken.com",
       "statusUrl": "https://status.kraken.com",
       "homepageUrl": "https://www.kraken.com",
-      "statuspageApi": "https://status.kraken.com/api/v2/status.json",
+      "statuspageApi": "https://status.kraken.com/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1381,7 +1381,7 @@
       "faviconDomain": "plaid.com",
       "statusUrl": "https://plaidinc1.statuspage.io",
       "homepageUrl": "https://plaid.com",
-      "statuspageApi": "https://plaidinc1.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://plaidinc1.statuspage.io/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1392,7 +1392,7 @@
       "faviconDomain": "shopify.com",
       "statusUrl": "https://www.shopifystatus.com",
       "homepageUrl": "https://www.shopify.com",
-      "statuspageApi": "https://www.shopifystatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.shopifystatus.com/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1403,7 +1403,7 @@
       "faviconDomain": "squareup.com",
       "statusUrl": "https://issquareup.com",
       "homepageUrl": "https://squareup.com",
-      "statuspageApi": "https://issquareup.com/api/v2/status.json",
+      "statuspageApi": "https://issquareup.com/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1414,7 +1414,7 @@
       "faviconDomain": "stripe.com",
       "statusUrl": "https://www.stripestatus.com",
       "homepageUrl": "https://stripe.com",
-      "statuspageApi": "https://www.stripestatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.stripestatus.com/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1425,7 +1425,7 @@
       "faviconDomain": "uber.com",
       "statusUrl": "https://uber.statuspage.io",
       "homepageUrl": "https://www.uber.com",
-      "statuspageApi": "https://uber.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://uber.statuspage.io/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1436,7 +1436,7 @@
       "faviconDomain": "wise.com",
       "statusUrl": "https://status.wise.com",
       "homepageUrl": "https://wise.com",
-      "statuspageApi": "https://status.wise.com/api/v2/status.json",
+      "statuspageApi": "https://status.wise.com/api/v2/summary.json",
       "categories": [
         "payments-commerce"
       ]
@@ -1679,7 +1679,7 @@
       "faviconDomain": "ring.com",
       "statusUrl": "https://status.ring.com",
       "homepageUrl": "https://ring.com",
-      "statuspageApi": "https://status.ring.com/api/v2/status.json",
+      "statuspageApi": "https://status.ring.com/api/v2/summary.json",
       "categories": [
         "amazon"
       ]
@@ -1690,7 +1690,7 @@
       "faviconDomain": "anthropic.com",
       "statusUrl": "https://status.claude.com",
       "homepageUrl": "https://www.anthropic.com",
-      "statuspageApi": "https://status.claude.com/api/v2/status.json",
+      "statuspageApi": "https://status.claude.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1701,7 +1701,7 @@
       "faviconDomain": "cohere.com",
       "statusUrl": "https://status.cohere.com",
       "homepageUrl": "https://cohere.com",
-      "statuspageApi": "https://status.cohere.com/api/v2/status.json",
+      "statuspageApi": "https://status.cohere.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1712,7 +1712,7 @@
       "faviconDomain": "cursor.com",
       "statusUrl": "https://status.cursor.com",
       "homepageUrl": "https://cursor.com",
-      "statuspageApi": "https://status.cursor.com/api/v2/status.json",
+      "statuspageApi": "https://status.cursor.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1723,7 +1723,7 @@
       "faviconDomain": "deepseek.com",
       "statusUrl": "https://status.deepseek.com",
       "homepageUrl": "https://www.deepseek.com",
-      "statuspageApi": "https://status.deepseek.com/api/v2/status.json",
+      "statuspageApi": "https://status.deepseek.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1734,7 +1734,7 @@
       "faviconDomain": "elevenlabs.io",
       "statusUrl": "https://status.elevenlabs.io",
       "homepageUrl": "https://elevenlabs.io",
-      "statuspageApi": "https://status.elevenlabs.io/api/v2/status.json",
+      "statuspageApi": "https://status.elevenlabs.io/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1756,7 +1756,7 @@
       "faviconDomain": "groq.com",
       "statusUrl": "https://groqstatus.com",
       "homepageUrl": "https://groq.com",
-      "statuspageApi": "https://groqstatus.com/api/v2/status.json",
+      "statuspageApi": "https://groqstatus.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1778,7 +1778,7 @@
       "faviconDomain": "midjourney.com",
       "statusUrl": "https://midjourney.statuspage.io",
       "homepageUrl": "https://www.midjourney.com",
-      "statuspageApi": "https://midjourney.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://midjourney.statuspage.io/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1800,7 +1800,7 @@
       "faviconDomain": "openai.com",
       "statusUrl": "https://status.openai.com",
       "homepageUrl": "https://openai.com",
-      "statuspageApi": "https://status.openai.com/api/v2/status.json",
+      "statuspageApi": "https://status.openai.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1822,7 +1822,7 @@
       "faviconDomain": "pinecone.io",
       "statusUrl": "https://status.pinecone.io",
       "homepageUrl": "https://www.pinecone.io",
-      "statuspageApi": "https://status.pinecone.io/api/v2/status.json",
+      "statuspageApi": "https://status.pinecone.io/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1833,7 +1833,7 @@
       "faviconDomain": "replicate.com",
       "statusUrl": "https://www.replicatestatus.com",
       "homepageUrl": "https://replicate.com",
-      "statuspageApi": "https://www.replicatestatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.replicatestatus.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1844,7 +1844,7 @@
       "faviconDomain": "runwayml.com",
       "statusUrl": "https://status.runwayml.com",
       "homepageUrl": "https://runwayml.com",
-      "statuspageApi": "https://status.runwayml.com/api/v2/status.json",
+      "statuspageApi": "https://status.runwayml.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1855,7 +1855,7 @@
       "faviconDomain": "stability.ai",
       "statusUrl": "https://status.stability.ai",
       "homepageUrl": "https://stability.ai",
-      "statuspageApi": "https://status.stability.ai/api/v2/status.json",
+      "statuspageApi": "https://status.stability.ai/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1866,7 +1866,7 @@
       "faviconDomain": "bsky.app",
       "statusUrl": "https://bluesky.statuspage.io",
       "homepageUrl": "https://bsky.app",
-      "statuspageApi": "https://bluesky.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://bluesky.statuspage.io/api/v2/summary.json",
       "categories": [
         "social-media"
       ]
@@ -1899,7 +1899,7 @@
       "faviconDomain": "linkedin.com",
       "statusUrl": "https://www.linkedin-status.com",
       "homepageUrl": "https://www.linkedin.com",
-      "statuspageApi": "https://www.linkedin-status.com/api/v2/status.json",
+      "statuspageApi": "https://www.linkedin-status.com/api/v2/summary.json",
       "categories": [
         "social-media"
       ]
@@ -1910,7 +1910,7 @@
       "faviconDomain": "mastodon.social",
       "statusUrl": "https://mastodon.statuspage.io",
       "homepageUrl": "https://mastodon.social",
-      "statuspageApi": "https://mastodon.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://mastodon.statuspage.io/api/v2/summary.json",
       "categories": [
         "social-media"
       ]
@@ -1921,7 +1921,7 @@
       "faviconDomain": "medium.com",
       "statusUrl": "https://medium.statuspage.io",
       "homepageUrl": "https://medium.com",
-      "statuspageApi": "https://medium.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://medium.statuspage.io/api/v2/summary.json",
       "categories": [
         "social-media"
       ]
@@ -1932,7 +1932,7 @@
       "faviconDomain": "pinterest.com",
       "statusUrl": "https://www.pintereststatus.com",
       "homepageUrl": "https://www.pinterest.com",
-      "statuspageApi": "https://www.pintereststatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.pintereststatus.com/api/v2/summary.json",
       "categories": [
         "social-media"
       ]
@@ -1943,7 +1943,7 @@
       "faviconDomain": "reddit.com",
       "statusUrl": "https://www.redditstatus.com",
       "homepageUrl": "https://www.reddit.com",
-      "statuspageApi": "https://www.redditstatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.redditstatus.com/api/v2/summary.json",
       "categories": [
         "social-media"
       ]
@@ -1954,7 +1954,7 @@
       "faviconDomain": "substack.com",
       "statusUrl": "https://substack.statuspage.io",
       "homepageUrl": "https://substack.com",
-      "statuspageApi": "https://substack.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://substack.statuspage.io/api/v2/summary.json",
       "categories": [
         "social-media"
       ]
@@ -1998,7 +1998,7 @@
       "faviconDomain": "tumblr.com",
       "statusUrl": "https://tumblr.statuspage.io",
       "homepageUrl": "https://www.tumblr.com",
-      "statuspageApi": "https://tumblr.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://tumblr.statuspage.io/api/v2/summary.json",
       "categories": [
         "social-media"
       ]
@@ -2042,7 +2042,7 @@
       "faviconDomain": "dailymotion.com",
       "statusUrl": "https://status.dailymotion.com",
       "homepageUrl": "https://www.dailymotion.com",
-      "statuspageApi": "https://status.dailymotion.com/api/v2/status.json",
+      "statuspageApi": "https://status.dailymotion.com/api/v2/summary.json",
       "categories": [
         "streaming-media"
       ]
@@ -2053,7 +2053,7 @@
       "faviconDomain": "giphy.com",
       "statusUrl": "https://status.giphy.com",
       "homepageUrl": "https://giphy.com",
-      "statuspageApi": "https://status.giphy.com/api/v2/status.json",
+      "statuspageApi": "https://status.giphy.com/api/v2/summary.json",
       "categories": [
         "streaming-media"
       ]
@@ -2075,7 +2075,7 @@
       "faviconDomain": "imgur.com",
       "statusUrl": "https://status.imgur.com",
       "homepageUrl": "https://imgur.com",
-      "statuspageApi": "https://status.imgur.com/api/v2/status.json",
+      "statuspageApi": "https://status.imgur.com/api/v2/summary.json",
       "categories": [
         "streaming-media"
       ]
@@ -2130,7 +2130,7 @@
       "faviconDomain": "spotify.com",
       "statusUrl": "https://spotify.statuspage.io",
       "homepageUrl": "https://www.spotify.com",
-      "statuspageApi": "https://spotify.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://spotify.statuspage.io/api/v2/summary.json",
       "categories": [
         "streaming-media"
       ]
@@ -2141,7 +2141,7 @@
       "faviconDomain": "twitch.tv",
       "statusUrl": "https://status.twitch.com",
       "homepageUrl": "https://www.twitch.tv",
-      "statuspageApi": "https://status.twitch.com/api/v2/status.json",
+      "statuspageApi": "https://status.twitch.com/api/v2/summary.json",
       "categories": [
         "streaming-media"
       ]
@@ -2152,7 +2152,7 @@
       "faviconDomain": "vimeo.com",
       "statusUrl": "https://www.vimeostatus.com",
       "homepageUrl": "https://vimeo.com",
-      "statuspageApi": "https://www.vimeostatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.vimeostatus.com/api/v2/summary.json",
       "categories": [
         "streaming-media"
       ]
@@ -2163,7 +2163,7 @@
       "faviconDomain": "epicgames.com",
       "statusUrl": "https://status.epicgames.com",
       "homepageUrl": "https://www.epicgames.com",
-      "statuspageApi": "https://status.epicgames.com/api/v2/status.json",
+      "statuspageApi": "https://status.epicgames.com/api/v2/summary.json",
       "categories": [
         "gaming"
       ]
@@ -2174,7 +2174,7 @@
       "faviconDomain": "fortnite.com",
       "statusUrl": "https://fortnite.statuspage.io",
       "homepageUrl": "https://www.fortnite.com",
-      "statuspageApi": "https://fortnite.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://fortnite.statuspage.io/api/v2/summary.json",
       "categories": [
         "gaming"
       ]
@@ -2207,7 +2207,7 @@
       "faviconDomain": "unity.com",
       "statusUrl": "https://unity.statuspage.io",
       "homepageUrl": "https://unity.com",
-      "statuspageApi": "https://unity.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://unity.statuspage.io/api/v2/summary.json",
       "categories": [
         "gaming"
       ]
@@ -2218,7 +2218,7 @@
       "faviconDomain": "att.com",
       "statusUrl": "https://att.statuspage.io",
       "homepageUrl": "https://www.att.com",
-      "statuspageApi": "https://att.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://att.statuspage.io/api/v2/summary.json",
       "categories": [
         "telecom-isp"
       ]
@@ -2229,7 +2229,7 @@
       "faviconDomain": "bell.ca",
       "statusUrl": "https://bell.statuspage.io",
       "homepageUrl": "https://www.bell.ca",
-      "statuspageApi": "https://bell.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://bell.statuspage.io/api/v2/summary.json",
       "categories": [
         "telecom-isp"
       ]
@@ -2251,7 +2251,7 @@
       "faviconDomain": "cox.com",
       "statusUrl": "https://cox.statuspage.io",
       "homepageUrl": "https://www.cox.com",
-      "statuspageApi": "https://cox.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://cox.statuspage.io/api/v2/summary.json",
       "categories": [
         "telecom-isp"
       ]
@@ -2262,7 +2262,7 @@
       "faviconDomain": "lumen.com",
       "statusUrl": "https://lumen.statuspage.io",
       "homepageUrl": "https://www.lumen.com",
-      "statuspageApi": "https://lumen.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://lumen.statuspage.io/api/v2/summary.json",
       "categories": [
         "telecom-isp"
       ]
@@ -2273,7 +2273,7 @@
       "faviconDomain": "o2.co.uk",
       "statusUrl": "https://o2.statuspage.io",
       "homepageUrl": "https://www.o2.co.uk",
-      "statuspageApi": "https://o2.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://o2.statuspage.io/api/v2/summary.json",
       "categories": [
         "telecom-isp"
       ]
@@ -2284,7 +2284,7 @@
       "faviconDomain": "starlink.com",
       "statusUrl": "https://starlink.statuspage.io",
       "homepageUrl": "https://www.starlink.com",
-      "statuspageApi": "https://starlink.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://starlink.statuspage.io/api/v2/summary.json",
       "categories": [
         "telecom-isp"
       ]
@@ -2317,7 +2317,7 @@
       "faviconDomain": "verizon.com",
       "statusUrl": "https://verizon.statuspage.io",
       "homepageUrl": "https://www.verizon.com",
-      "statuspageApi": "https://verizon.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://verizon.statuspage.io/api/v2/summary.json",
       "categories": [
         "telecom-isp"
       ]
@@ -2328,7 +2328,7 @@
       "faviconDomain": "visible.com",
       "statusUrl": "https://status.visible.vc",
       "homepageUrl": "https://www.visible.com",
-      "statuspageApi": "https://status.visible.vc/api/v2/status.json",
+      "statuspageApi": "https://status.visible.vc/api/v2/summary.json",
       "categories": [
         "telecom-isp"
       ]
@@ -2339,7 +2339,7 @@
       "faviconDomain": "1password.com",
       "statusUrl": "https://1password.statuspage.io",
       "homepageUrl": "https://1password.com",
-      "statuspageApi": "https://1password.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://1password.statuspage.io/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2350,7 +2350,7 @@
       "faviconDomain": "auth0.com",
       "statusUrl": "https://auth0.statuspage.io",
       "homepageUrl": "https://auth0.com",
-      "statuspageApi": "https://auth0.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://auth0.statuspage.io/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2372,7 +2372,7 @@
       "faviconDomain": "cloudflare.com",
       "statusUrl": "https://www.cloudflarestatus.com",
       "homepageUrl": "https://www.cloudflare.com/zero-trust/",
-      "statuspageApi": "https://www.cloudflarestatus.com/api/v2/status.json",
+      "statuspageApi": "https://www.cloudflarestatus.com/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2394,7 +2394,7 @@
       "faviconDomain": "duo.com",
       "statusUrl": "https://status.duo.com",
       "homepageUrl": "https://duo.com",
-      "statuspageApi": "https://status.duo.com/api/v2/status.json",
+      "statuspageApi": "https://status.duo.com/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2405,7 +2405,7 @@
       "faviconDomain": "keepersecurity.com",
       "statusUrl": "https://keeper.statuspage.io",
       "homepageUrl": "https://www.keepersecurity.com",
-      "statuspageApi": "https://keeper.statuspage.io/api/v2/status.json",
+      "statuspageApi": "https://keeper.statuspage.io/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2416,7 +2416,7 @@
       "faviconDomain": "lastpass.com",
       "statusUrl": "https://status.lastpass.com",
       "homepageUrl": "https://www.lastpass.com",
-      "statuspageApi": "https://status.lastpass.com/api/v2/status.json",
+      "statuspageApi": "https://status.lastpass.com/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2460,7 +2460,7 @@
       "faviconDomain": "paloaltonetworks.com",
       "statusUrl": "https://status.paloaltonetworks.com",
       "homepageUrl": "https://www.paloaltonetworks.com",
-      "statuspageApi": "https://status.paloaltonetworks.com/api/v2/status.json",
+      "statuspageApi": "https://status.paloaltonetworks.com/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2471,7 +2471,7 @@
       "faviconDomain": "proton.me",
       "statusUrl": "https://status.proton.me",
       "homepageUrl": "https://proton.me",
-      "statuspageApi": "https://status.proton.me/api/v2/status.json",
+      "statuspageApi": "https://status.proton.me/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2482,7 +2482,7 @@
       "faviconDomain": "semgrep.dev",
       "statusUrl": "https://status.semgrep.dev",
       "homepageUrl": "https://semgrep.dev",
-      "statuspageApi": "https://status.semgrep.dev/api/v2/status.json",
+      "statuspageApi": "https://status.semgrep.dev/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2504,7 +2504,7 @@
       "faviconDomain": "tailscale.com",
       "statusUrl": "https://status.tailscale.com",
       "homepageUrl": "https://tailscale.com",
-      "statuspageApi": "https://status.tailscale.com/api/v2/status.json",
+      "statuspageApi": "https://status.tailscale.com/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2515,7 +2515,7 @@
       "faviconDomain": "wiz.io",
       "statusUrl": "https://status.wiz.io",
       "homepageUrl": "https://www.wiz.io",
-      "statuspageApi": "https://status.wiz.io/api/v2/status.json",
+      "statuspageApi": "https://status.wiz.io/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2526,7 +2526,7 @@
       "faviconDomain": "workos.com",
       "statusUrl": "https://status.workos.com",
       "homepageUrl": "https://workos.com",
-      "statuspageApi": "https://status.workos.com/api/v2/status.json",
+      "statuspageApi": "https://status.workos.com/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2559,7 +2559,7 @@
       "faviconDomain": "mailgun.com",
       "statusUrl": "https://status.mailgun.com",
       "homepageUrl": "https://www.mailgun.com",
-      "statuspageApi": "https://status.mailgun.com/api/v2/status.json",
+      "statuspageApi": "https://status.mailgun.com/api/v2/summary.json",
       "categories": [
         "email-marketing"
       ]
@@ -2581,7 +2581,7 @@
       "faviconDomain": "sendgrid.com",
       "statusUrl": "https://status.sendgrid.com",
       "homepageUrl": "https://sendgrid.com",
-      "statuspageApi": "https://status.sendgrid.com/api/v2/status.json",
+      "statuspageApi": "https://status.sendgrid.com/api/v2/summary.json",
       "categories": [
         "email-marketing"
       ]

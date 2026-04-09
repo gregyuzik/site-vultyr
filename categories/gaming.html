@@ -275,7 +275,7 @@
     <script src="/assets/js/status-checker.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var services = [{"slug": "epic-games", "apiUrl": "https://status.epicgames.com/api/v2/status.json"}, {"slug": "fortnite", "apiUrl": "https://fortnite.statuspage.io/api/v2/status.json"}, {"slug": "unity", "apiUrl": "https://unity.statuspage.io/api/v2/status.json"}];
+        var services = [{"slug": "epic-games", "apiUrl": "https://status.epicgames.com/api/v2/summary.json"}, {"slug": "fortnite", "apiUrl": "https://fortnite.statuspage.io/api/v2/summary.json"}, {"slug": "unity", "apiUrl": "https://unity.statuspage.io/api/v2/summary.json"}];
         VultyrStatus.checkMultiple(services, function(slug, result) {
             var dot = document.querySelector('[data-slug="' + slug + '"]');
             if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;

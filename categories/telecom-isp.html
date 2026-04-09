@@ -341,7 +341,7 @@
     <script src="/assets/js/status-checker.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        var services = [{"slug": "atandt", "apiUrl": "https://att.statuspage.io/api/v2/status.json"}, {"slug": "bell-canada", "apiUrl": "https://bell.statuspage.io/api/v2/status.json"}, {"slug": "cox", "apiUrl": "https://cox.statuspage.io/api/v2/status.json"}, {"slug": "lumen", "apiUrl": "https://lumen.statuspage.io/api/v2/status.json"}, {"slug": "o2", "apiUrl": "https://o2.statuspage.io/api/v2/status.json"}, {"slug": "starlink", "apiUrl": "https://starlink.statuspage.io/api/v2/status.json"}, {"slug": "verizon", "apiUrl": "https://verizon.statuspage.io/api/v2/status.json"}, {"slug": "visible", "apiUrl": "https://status.visible.vc/api/v2/status.json"}];
+        var services = [{"slug": "atandt", "apiUrl": "https://att.statuspage.io/api/v2/summary.json"}, {"slug": "bell-canada", "apiUrl": "https://bell.statuspage.io/api/v2/summary.json"}, {"slug": "cox", "apiUrl": "https://cox.statuspage.io/api/v2/summary.json"}, {"slug": "lumen", "apiUrl": "https://lumen.statuspage.io/api/v2/summary.json"}, {"slug": "o2", "apiUrl": "https://o2.statuspage.io/api/v2/summary.json"}, {"slug": "starlink", "apiUrl": "https://starlink.statuspage.io/api/v2/summary.json"}, {"slug": "verizon", "apiUrl": "https://verizon.statuspage.io/api/v2/summary.json"}, {"slug": "visible", "apiUrl": "https://status.visible.vc/api/v2/summary.json"}];
         VultyrStatus.checkMultiple(services, function(slug, result) {
             var dot = document.querySelector('[data-slug="' + slug + '"]');
             if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;
