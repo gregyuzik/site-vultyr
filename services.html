@@ -16,7 +16,7 @@
     <meta property="og:title" content="Vultyr — Monitored Services">
     <meta property="og:description" content="All 200+ services monitored by Vultyr, organized by category. Cloud, dev tools, communication, AI, and more.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:url" content="https://vultyr.app/services">
+    <meta property="og:url" content="https://vultyr.app/services.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
             background: #000;
@@ -82,7 +82,7 @@
         .category h2 span {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
             font-size: 0.8rem;
-            color: #555;
+            color: #777;
             font-weight: 400;
             margin-left: 8px;
         }
@@ -113,7 +113,7 @@
         }
         .service-links a {
             font-size: 0.75rem;
-            color: #666;
+            color: #888;
             text-decoration: none;
             padding: 4px 8px;
             border: 1px solid #222;
@@ -138,6 +138,8 @@
             font-size: 0.875rem;
         }
         footer a:hover { color: #fff; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        :focus-visible { outline: 2px solid #00ff41; outline-offset: 3px; }
         @media (max-width: 500px) {
             .service { flex-wrap: wrap; gap: 8px; }
             .service-links { width: 100%; padding-left: 36px; }
@@ -145,6 +147,8 @@
     </style>
 </head>
 <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <main id="main">
     <div class="header">
         <a href="index.html">&larr; Back to vultyr</a>
         <h1>Monitored <span class="highlight">Services</span></h1>
@@ -2122,6 +2126,7 @@
         </div>
 
     </div>
+    </main>
 
     <footer>
         <nav aria-label="Footer navigation">
@@ -2131,7 +2136,7 @@
             <a href="mailto:support@vultyr.app">Contact</a>
             <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
         </nav>
-        <p style="font-size: 0.75rem; color: #444; margin-top: 16px;">&copy; 2026 Klosyt. All rights reserved.</p>
+        <p style="font-size: 0.75rem; color: #777; margin-top: 16px;">&copy; 2026 Klosyt. All rights reserved.</p>
     </footer>
 </body>
 </html>

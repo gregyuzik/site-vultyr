@@ -15,7 +15,7 @@
     <meta property="og:title" content="Privacy Policy — Vultyr">
     <meta property="og:description" content="Vultyr privacy policy. No data collection, no accounts, no tracking. All status data stays on your device.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:url" content="https://vultyr.app/privacy">
+    <meta property="og:url" content="https://vultyr.app/privacy.html">
     <meta property="og:type" content="website">
     <meta name="description" content="Vultyr privacy policy. No data collection, no accounts, no tracking. All status data stays on your device.">
     <meta name="twitter:card" content="summary">
@@ -24,9 +24,9 @@
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', sans-serif;
             background: #000;
             color: #ccc;
             min-height: 100vh;
@@ -42,9 +42,13 @@
         a { color: #ff9926; }
         footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #1a1a1a; }
         footer a { color: #888; text-decoration: none; margin-right: 16px; font-size: 0.875rem; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+        :focus-visible { outline: 2px solid #00ff41; outline-offset: 3px; }
     </style>
 </head>
 <body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <main id="main">
     <h1>Privacy Policy</h1>
     <p class="date">Last updated: March 28, 2026</p>
 
@@ -81,6 +85,7 @@
     <h2>Contact</h2>
     <p>Questions? Email <a href="mailto:support@vultyr.app">support@vultyr.app</a></p>
 
+    </main>
     <footer>
         <nav aria-label="Footer navigation">
             <a href="services.html">Services</a>
@@ -89,7 +94,7 @@
             <a href="mailto:support@vultyr.app">Contact</a>
             <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
         </nav>
-        <p style="font-size: 0.75rem; color: #444; margin-top: 16px;">&copy; 2026 Klosyt. All rights reserved.</p>
+        <p style="font-size: 0.75rem; color: #777; margin-top: 16px;">&copy; 2026 Klosyt. All rights reserved.</p>
     </footer>
 </body>
 </html>
