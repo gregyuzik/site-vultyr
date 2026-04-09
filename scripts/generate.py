@@ -45,9 +45,8 @@ FOOTER_HTML = """    <footer>
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>
             <a href="mailto:support@vultyr.app">Contact</a>
-            <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
         </nav>
-        <p class="copyright">&copy; 2026 Klosyt. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 Vultyr. All rights reserved.</p>
     </footer>"""
 
 
@@ -70,7 +69,7 @@ def json_ld(obj):
 
 SERVICE_CSS = """
         .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 0; }
-        .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+        .breadcrumb { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
         .breadcrumb a { color: #888; }
         .breadcrumb a:hover { color: #fff; }
         .breadcrumb .sep { margin: 0 6px; }
@@ -97,18 +96,13 @@ SERVICE_CSS = """
             border-radius: 999px;
             border: 1px solid #222;
             background: rgba(255,255,255,0.02);
+            text-decoration: none;
+            transition: border-color 0.2s;
         }
-        .status-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #555;
-            flex-shrink: 0;
-        }
-        .status-dot.pulse { animation: pulse 2s ease-in-out infinite; }
-        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .status-badge:hover { border-color: #444; }
         .status-text { font-size: 0.95rem; }
-        .status-time { font-size: 0.75rem; color: #555; margin-top: 8px; }
+        .status-time { font-size: 0.85rem; color: #888; margin-top: 12px; }
+        .status-time a { color: #00ff41; }
 
         .links-row { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
         .links-row a {
@@ -168,17 +162,14 @@ SERVICE_CSS = """
 
         footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
         footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-        footer a { color: #666; font-size: 0.8rem; }
-        footer a:hover { color: #aaa; }
-        .copyright { font-size: 0.7rem; color: #555; margin-top: 12px; }
+        footer a { color: #888; font-size: 0.8rem; }
+        footer a:hover { color: #ccc; }
+        .copyright { font-size: 0.7rem; color: #888; margin-top: 12px; }
 
         @media (max-width: 500px) {
             .service-header h1 { font-size: 1.2rem; }
             .links-row { flex-direction: column; }
             .related-grid { grid-template-columns: 1fr 1fr; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .status-dot.pulse { animation: none; }
         }
 """
 
@@ -227,7 +218,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
                 "name": f"Is {name} down right now?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": f"Check the current {name} service status on this page.{' Vultyr checks ' + name + ' status in real-time via the Statuspage.io API.' if api_url else ''} You can also visit the official {name} status page at {status_url} or download the free Vultyr app for instant outage alerts on all your Apple devices."
+                    "text": f"Check the official {name} status page at {status_url} for current status. Download the free Vultyr app for instant outage alerts on all your Apple devices."
                 }
             },
             {
@@ -241,25 +232,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
         ]
     }
 
-    # Status check script
-    if api_url:
-        status_script = f"""
-    <script src="/assets/js/status-checker.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {{
-        var dot = document.getElementById("status-dot");
-        var text = document.getElementById("status-text");
-        var time = document.getElementById("status-time");
-        VultyrStatus.checkStatus("{api_url}", "{slug}").then(function(r) {{
-            dot.style.background = VultyrStatus.COLORS[r.indicator] || VultyrStatus.COLORS.unknown;
-            dot.classList.add("pulse");
-            text.textContent = r.description || VultyrStatus.LABELS[r.indicator] || "Unknown";
-            time.textContent = "Checked just now";
-        }});
-    }});
-    </script>"""
-    else:
-        status_script = ""
+    status_script = ""
 
     # Category links for breadcrumb
     breadcrumb_html = f'''        <div class="breadcrumb">
@@ -289,7 +262,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
             f'<a href="/categories/{e(cs)}.html" style="color:#ff9926">{e(categories_lookup.get(cs, {}).get("name", cs))}</a>'
             for cs in cat_slugs
         )
-        cat_links_html = f'        <p style="font-size:0.8rem;color:#666;margin-bottom:24px">Categories: {links}</p>'
+        cat_links_html = f'        <p style="font-size:0.8rem;color:#888;margin-bottom:24px">Categories: {links}</p>'
 
     title = f"Is {name} Down? {name} Status Monitor | Vultyr"
     description = f"Check if {name} is down right now. Live {name} status updates and outage monitoring with Vultyr. Free on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro."
@@ -334,11 +307,10 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
         </div>
 
         <div class="status-card">
-            <div class="status-badge">
-                <span class="status-dot" id="status-dot"></span>
-                <span class="status-text" id="status-text">{"Checking status" + ELLIPSIS if api_url else "Visit status page for current status"}</span>
-            </div>
-            <p class="status-time" id="status-time">{"" if api_url else ""}</p>
+            <a href="{e(status_url)}" target="_blank" rel="noopener noreferrer" class="status-badge">
+                <span class="status-text">View Current Status &rarr;</span>
+            </a>
+            <p class="status-time">For live alerts, <a href="https://apps.apple.com/us/app/vultyr/id6761264004">download Vultyr</a></p>
         </div>
 {cat_links_html}
         <div class="links-row">
@@ -355,7 +327,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
         <h2 class="section-title">FAQ</h2>
         <div class="faq">
             <h3>Is {e(name)} down right now?</h3>
-            <p>{"This page checks " + e(name) + " status in real-time via the Statuspage.io API. The status shown above updates automatically when you visit." if api_url else "Visit the official " + e(name) + " status page linked above for current status information."} For continuous monitoring with instant alerts, download the free Vultyr app.</p>
+            <p>Check the official {e(name)} status page linked above for current status. For continuous monitoring with instant outage alerts on all your Apple devices, download the free Vultyr app.</p>
         </div>
         <div class="faq">
             <h3>How can I monitor {e(name)} status?</h3>
@@ -381,7 +353,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug):
 
 CATEGORY_CSS = """
         .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 0; }
-        .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+        .breadcrumb { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
         .breadcrumb a { color: #888; }
         .breadcrumb a:hover { color: #fff; }
         .breadcrumb .sep { margin: 0 6px; }
@@ -406,14 +378,6 @@ CATEGORY_CSS = """
         }
         .service-card:hover { border-color: #333; color: #fff; }
         .service-card img { width: 24px; height: 24px; border-radius: 4px; flex-shrink: 0; }
-        .service-card .card-status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #333;
-            margin-left: auto;
-            flex-shrink: 0;
-        }
 
         .other-categories { margin-bottom: 32px; }
         .other-categories h2 { font-family: 'Audiowide', sans-serif; font-size: 1rem; color: #ff9926; margin-bottom: 16px; }
@@ -449,9 +413,9 @@ CATEGORY_CSS = """
 
         footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
         footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-        footer a { color: #666; font-size: 0.8rem; }
-        footer a:hover { color: #aaa; }
-        .copyright { font-size: 0.7rem; color: #555; margin-top: 12px; }
+        footer a { color: #888; font-size: 0.8rem; }
+        footer a:hover { color: #ccc; }
+        .copyright { font-size: 0.7rem; color: #888; margin-top: 12px; }
 
         @media (max-width: 500px) {
             .services-grid { grid-template-columns: 1fr; }
@@ -468,9 +432,6 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
     service_slugs = cat["serviceSlugs"]
     count = len(service_slugs)
 
-    # Collect services with API URLs for status checking
-    api_services = []
-
     # Build service cards
     cards = ""
     for ss in service_slugs:
@@ -480,10 +441,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
         cards += f'''            <a class="service-card" href="/status/{e(svc["slug"])}.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain={e(svc["faviconDomain"])}&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>{e(svc["name"])}</span>
-                <span class="card-status-dot" data-slug="{e(svc["slug"])}"></span>
             </a>\n'''
-        if svc.get("statuspageApi"):
-            api_services.append({"slug": svc["slug"], "apiUrl": svc["statuspageApi"]})
 
     # Other category links
     other_cats = ""
@@ -530,22 +488,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories):
         ]
     }
 
-    # Status checking script for category page
-    if api_services:
-        svc_json = json.dumps(api_services)
-        status_script = f"""
-    <script src="/assets/js/status-checker.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {{
-        var services = {svc_json};
-        VultyrStatus.checkMultiple(services, function(slug, result) {{
-            var dot = document.querySelector('[data-slug="' + slug + '"]');
-            if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;
-        }});
-    }});
-    </script>"""
-    else:
-        status_script = ""
+    status_script = ""
 
     title = f"{name} Status Monitor — {count} Services | Vultyr"
     description = f"Monitor the status of {count} {name.lower()} services. Real-time outage alerts for {', '.join(all_services_by_slug[s]['name'] for s in service_slugs[:4] if s in all_services_by_slug)}, and more."
@@ -653,9 +596,9 @@ def generate_404():
         .links a:hover {{ border-color: #00ff41; color: #fff; }}
         footer {{ margin-top: auto; text-align: center; padding: 24px; border-top: 1px solid #111; width: 100%; }}
         footer nav {{ display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }}
-        footer a {{ color: #666; font-size: 0.8rem; }}
-        footer a:hover {{ color: #aaa; }}
-        .copyright {{ font-size: 0.7rem; color: #555; margin-top: 12px; }}
+        footer a {{ color: #888; font-size: 0.8rem; }}
+        footer a:hover {{ color: #ccc; }}
+        .copyright {{ font-size: 0.7rem; color: #888; margin-top: 12px; }}
     </style>
 </head>
 <body>

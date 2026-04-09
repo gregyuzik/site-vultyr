@@ -70,7 +70,7 @@
           "name": "Is Amazon.com down right now?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Check the current Amazon.com service status on this page. You can also visit the official Amazon.com status page at https://www.amazon.com or download the free Vultyr app for instant outage alerts on all your Apple devices."
+            "text": "Check the official Amazon.com status page at https://www.amazon.com for current status. Download the free Vultyr app for instant outage alerts on all your Apple devices."
           }
         },
         {
@@ -100,7 +100,7 @@
         .highlight-orange { color: #ff9926; }
 
         .container { max-width: 720px; margin: 0 auto; padding: 40px 24px 0; }
-        .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+        .breadcrumb { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
         .breadcrumb a { color: #888; }
         .breadcrumb a:hover { color: #fff; }
         .breadcrumb .sep { margin: 0 6px; }
@@ -127,18 +127,13 @@
             border-radius: 999px;
             border: 1px solid #222;
             background: rgba(255,255,255,0.02);
+            text-decoration: none;
+            transition: border-color 0.2s;
         }
-        .status-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #555;
-            flex-shrink: 0;
-        }
-        .status-dot.pulse { animation: pulse 2s ease-in-out infinite; }
-        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .status-badge:hover { border-color: #444; }
         .status-text { font-size: 0.95rem; }
-        .status-time { font-size: 0.75rem; color: #555; margin-top: 8px; }
+        .status-time { font-size: 0.85rem; color: #888; margin-top: 12px; }
+        .status-time a { color: #00ff41; }
 
         .links-row { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
         .links-row a {
@@ -198,17 +193,14 @@
 
         footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
         footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-        footer a { color: #666; font-size: 0.8rem; }
-        footer a:hover { color: #aaa; }
-        .copyright { font-size: 0.7rem; color: #555; margin-top: 12px; }
+        footer a { color: #888; font-size: 0.8rem; }
+        footer a:hover { color: #ccc; }
+        .copyright { font-size: 0.7rem; color: #888; margin-top: 12px; }
 
         @media (max-width: 500px) {
             .service-header h1 { font-size: 1.2rem; }
             .links-row { flex-direction: column; }
             .related-grid { grid-template-columns: 1fr 1fr; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .status-dot.pulse { animation: none; }
         }
 
     </style>
@@ -229,11 +221,10 @@
         </div>
 
         <div class="status-card">
-            <div class="status-badge">
-                <span class="status-dot" id="status-dot"></span>
-                <span class="status-text" id="status-text">Visit status page for current status</span>
-            </div>
-            <p class="status-time" id="status-time"></p>
+            <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer" class="status-badge">
+                <span class="status-text">View Current Status &rarr;</span>
+            </a>
+            <p class="status-time">For live alerts, <a href="https://apps.apple.com/us/app/vultyr/id6761264004">download Vultyr</a></p>
         </div>
 
         <div class="links-row">
@@ -250,7 +241,7 @@
         <h2 class="section-title">FAQ</h2>
         <div class="faq">
             <h3>Is Amazon.com down right now?</h3>
-            <p>Visit the official Amazon.com status page linked above for current status information. For continuous monitoring with instant alerts, download the free Vultyr app.</p>
+            <p>Check the official Amazon.com status page linked above for current status. For continuous monitoring with instant outage alerts on all your Apple devices, download the free Vultyr app.</p>
         </div>
         <div class="faq">
             <h3>How can I monitor Amazon.com status?</h3>
@@ -289,9 +280,8 @@
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>
             <a href="mailto:support@vultyr.app">Contact</a>
-            <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
         </nav>
-        <p class="copyright">&copy; 2026 Klosyt. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 Vultyr. All rights reserved.</p>
     </footer>
 
 </body>

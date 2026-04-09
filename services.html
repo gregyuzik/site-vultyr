@@ -1505,7 +1505,7 @@
         .category h2 span {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
             font-size: 0.8rem;
-            color: #777;
+            color: #888;
             font-weight: 400;
             margin-left: 8px;
         }
@@ -1568,6 +1568,19 @@
         h2 a:hover { color: #ff9926; }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
         :focus-visible { outline: 2px solid #00ff41; outline-offset: 3px; }
+        .categories-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+        .cat-pill {
+            padding: 6px 14px;
+            border: 1px solid #1a1a1a;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: #888;
+            text-decoration: none;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .cat-pill:hover { border-color: #444; color: #fff; }
+        .cat-pill span { color: #555; margin-left: 4px; }
+        .cat-pill:hover span { color: #999; }
         @media (max-width: 500px) {
             .service { flex-wrap: wrap; gap: 8px; }
             .service-links { width: 100%; padding-left: 36px; }
@@ -1582,6 +1595,25 @@
         <h1>Monitored <span class="highlight">Services</span></h1>
         <p class="subtitle">All services vultyr actively monitors via status APIs.</p>
     </div>
+
+    <nav class="content categories-nav" aria-label="Browse by category">
+        <a class="cat-pill" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure <span>30</span></a>
+        <a class="cat-pill" href="/categories/developer-tools.html">Developer Tools <span>54</span></a>
+        <a class="cat-pill" href="/categories/communication.html">Communication <span>9</span></a>
+        <a class="cat-pill" href="/categories/productivity-saas.html">Productivity &amp; SaaS <span>27</span></a>
+        <a class="cat-pill" href="/categories/payments-commerce.html">Payments &amp; Commerce <span>11</span></a>
+        <a class="cat-pill" href="/categories/apple.html">Apple <span>2</span></a>
+        <a class="cat-pill" href="/categories/google.html">Google <span>9</span></a>
+        <a class="cat-pill" href="/categories/microsoft.html">Microsoft <span>6</span></a>
+        <a class="cat-pill" href="/categories/amazon.html">Amazon <span>5</span></a>
+        <a class="cat-pill" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning <span>16</span></a>
+        <a class="cat-pill" href="/categories/social-media.html">Social Media <span>15</span></a>
+        <a class="cat-pill" href="/categories/streaming-media.html">Streaming &amp; Media <span>13</span></a>
+        <a class="cat-pill" href="/categories/gaming.html">Gaming <span>5</span></a>
+        <a class="cat-pill" href="/categories/telecom-isp.html">Telecom &amp; ISP <span>11</span></a>
+        <a class="cat-pill" href="/categories/security.html">Security <span>19</span></a>
+        <a class="cat-pill" href="/categories/email-marketing.html">Email &amp; Marketing <span>4</span></a>
+    </nav>
 
     <div class="content">
 
@@ -3558,13 +3590,13 @@
 
     <footer>
         <nav aria-label="Footer navigation">
+            <a href="/">Home</a>
             <a href="services.html">Services</a>
             <a href="privacy.html">Privacy</a>
             <a href="support.html">Support</a>
             <a href="mailto:support@vultyr.app">Contact</a>
-            <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
         </nav>
-        <p style="font-size: 0.75rem; color: #777; margin-top: 16px;">&copy; 2026 Klosyt. All rights reserved.</p>
+        <p style="font-size: 0.75rem; color: #888; margin-top: 16px;">&copy; 2026 Vultyr. All rights reserved.</p>
     </footer>
 </body>
 </html>

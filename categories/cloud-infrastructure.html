@@ -260,7 +260,7 @@
         .highlight-orange { color: #ff9926; }
 
         .container { max-width: 800px; margin: 0 auto; padding: 40px 24px 0; }
-        .breadcrumb { font-size: 0.8rem; color: #666; margin-bottom: 24px; }
+        .breadcrumb { font-size: 0.8rem; color: #888; margin-bottom: 24px; }
         .breadcrumb a { color: #888; }
         .breadcrumb a:hover { color: #fff; }
         .breadcrumb .sep { margin: 0 6px; }
@@ -285,14 +285,6 @@
         }
         .service-card:hover { border-color: #333; color: #fff; }
         .service-card img { width: 24px; height: 24px; border-radius: 4px; flex-shrink: 0; }
-        .service-card .card-status-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #333;
-            margin-left: auto;
-            flex-shrink: 0;
-        }
 
         .other-categories { margin-bottom: 32px; }
         .other-categories h2 { font-family: 'Audiowide', sans-serif; font-size: 1rem; color: #ff9926; margin-bottom: 16px; }
@@ -328,9 +320,9 @@
 
         footer { text-align: center; padding: 24px; border-top: 1px solid #111; }
         footer nav { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-        footer a { color: #666; font-size: 0.8rem; }
-        footer a:hover { color: #aaa; }
-        .copyright { font-size: 0.7rem; color: #555; margin-top: 12px; }
+        footer a { color: #888; font-size: 0.8rem; }
+        footer a:hover { color: #ccc; }
+        .copyright { font-size: 0.7rem; color: #888; margin-top: 12px; }
 
         @media (max-width: 500px) {
             .services-grid { grid-template-columns: 1fr; }
@@ -359,152 +351,122 @@
             <a class="service-card" href="/status/aiven.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=aiven.io&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Aiven</span>
-                <span class="card-status-dot" data-slug="aiven"></span>
             </a>
             <a class="service-card" href="/status/akamai.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=akamai.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Akamai</span>
-                <span class="card-status-dot" data-slug="akamai"></span>
             </a>
             <a class="service-card" href="/status/aptible.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=aptible.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Aptible</span>
-                <span class="card-status-dot" data-slug="aptible"></span>
             </a>
             <a class="service-card" href="/status/bunny-cdn.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=bunny.net&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Bunny CDN</span>
-                <span class="card-status-dot" data-slug="bunny-cdn"></span>
             </a>
             <a class="service-card" href="/status/cloudflare.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=cloudflare.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Cloudflare</span>
-                <span class="card-status-dot" data-slug="cloudflare"></span>
             </a>
             <a class="service-card" href="/status/cockroachdb.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=cockroachlabs.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>CockroachDB</span>
-                <span class="card-status-dot" data-slug="cockroachdb"></span>
             </a>
             <a class="service-card" href="/status/confluent.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=confluent.io&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Confluent (Kafka)</span>
-                <span class="card-status-dot" data-slug="confluent"></span>
             </a>
             <a class="service-card" href="/status/digitalocean.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=digitalocean.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>DigitalOcean</span>
-                <span class="card-status-dot" data-slug="digitalocean"></span>
             </a>
             <a class="service-card" href="/status/dropbox.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=dropbox.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Dropbox</span>
-                <span class="card-status-dot" data-slug="dropbox"></span>
             </a>
             <a class="service-card" href="/status/elastic-cloud.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=elastic.co&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Elastic Cloud</span>
-                <span class="card-status-dot" data-slug="elastic-cloud"></span>
             </a>
             <a class="service-card" href="/status/fastly.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=fastly.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Fastly</span>
-                <span class="card-status-dot" data-slug="fastly"></span>
             </a>
             <a class="service-card" href="/status/flyio.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=fly.io&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Fly.io</span>
-                <span class="card-status-dot" data-slug="flyio"></span>
             </a>
             <a class="service-card" href="/status/heroku.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=heroku.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Heroku</span>
-                <span class="card-status-dot" data-slug="heroku"></span>
             </a>
             <a class="service-card" href="/status/influxdb-cloud.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=influxdata.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>InfluxDB Cloud</span>
-                <span class="card-status-dot" data-slug="influxdb-cloud"></span>
             </a>
             <a class="service-card" href="/status/keycdn.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=keycdn.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>KeyCDN</span>
-                <span class="card-status-dot" data-slug="keycdn"></span>
             </a>
             <a class="service-card" href="/status/linode.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=linode.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Linode</span>
-                <span class="card-status-dot" data-slug="linode"></span>
             </a>
             <a class="service-card" href="/status/mongodb-cloud.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=mongodb.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>MongoDB Cloud</span>
-                <span class="card-status-dot" data-slug="mongodb-cloud"></span>
             </a>
             <a class="service-card" href="/status/neon.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=neon.tech&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Neon</span>
-                <span class="card-status-dot" data-slug="neon"></span>
             </a>
             <a class="service-card" href="/status/oracle-cloud.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=oracle.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Oracle Cloud</span>
-                <span class="card-status-dot" data-slug="oracle-cloud"></span>
             </a>
             <a class="service-card" href="/status/planetscale.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=planetscale.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>PlanetScale</span>
-                <span class="card-status-dot" data-slug="planetscale"></span>
             </a>
             <a class="service-card" href="/status/railway.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=railway.app&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Railway</span>
-                <span class="card-status-dot" data-slug="railway"></span>
             </a>
             <a class="service-card" href="/status/redis.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=redis.io&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Redis</span>
-                <span class="card-status-dot" data-slug="redis"></span>
             </a>
             <a class="service-card" href="/status/render.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=render.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Render</span>
-                <span class="card-status-dot" data-slug="render"></span>
             </a>
             <a class="service-card" href="/status/salesforce.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=salesforce.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Salesforce</span>
-                <span class="card-status-dot" data-slug="salesforce"></span>
             </a>
             <a class="service-card" href="/status/scaleway.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=scaleway.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Scaleway</span>
-                <span class="card-status-dot" data-slug="scaleway"></span>
             </a>
             <a class="service-card" href="/status/snowflake.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=snowflake.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Snowflake</span>
-                <span class="card-status-dot" data-slug="snowflake"></span>
             </a>
             <a class="service-card" href="/status/timescale.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=timescale.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Timescale</span>
-                <span class="card-status-dot" data-slug="timescale"></span>
             </a>
             <a class="service-card" href="/status/turso.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=turso.tech&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Turso</span>
-                <span class="card-status-dot" data-slug="turso"></span>
             </a>
             <a class="service-card" href="/status/vercel.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=vercel.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Vercel</span>
-                <span class="card-status-dot" data-slug="vercel"></span>
             </a>
             <a class="service-card" href="/status/wasabi.html">
                 <img role="presentation" src="https://www.google.com/s2/favicons?domain=wasabi.com&sz=32" alt="" loading="lazy" width="24" height="24">
                 <span>Wasabi</span>
-                <span class="card-status-dot" data-slug="wasabi"></span>
             </a>
         </div>
 
@@ -542,20 +504,9 @@
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>
             <a href="mailto:support@vultyr.app">Contact</a>
-            <a href="https://klosyt.com" target="_blank" rel="noopener noreferrer">Klosyt</a>
         </nav>
-        <p class="copyright">&copy; 2026 Klosyt. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 Vultyr. All rights reserved.</p>
     </footer>
 
-    <script src="/assets/js/status-checker.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var services = [{"slug": "aiven", "apiUrl": "https://status.aiven.io/api/v2/summary.json"}, {"slug": "akamai", "apiUrl": "https://www.akamaistatus.com/api/v2/summary.json"}, {"slug": "aptible", "apiUrl": "https://aptible.statuspage.io/api/v2/summary.json"}, {"slug": "bunny-cdn", "apiUrl": "https://status.bunny.net/api/v2/summary.json"}, {"slug": "cloudflare", "apiUrl": "https://www.cloudflarestatus.com/api/v2/summary.json"}, {"slug": "cockroachdb", "apiUrl": "https://status.cockroachlabs.cloud/api/v2/summary.json"}, {"slug": "confluent", "apiUrl": "https://status.confluent.cloud/api/v2/summary.json"}, {"slug": "digitalocean", "apiUrl": "https://status.digitalocean.com/api/v2/summary.json"}, {"slug": "dropbox", "apiUrl": "https://status.dropbox.com/api/v2/summary.json"}, {"slug": "elastic-cloud", "apiUrl": "https://status.elastic.co/api/v2/summary.json"}, {"slug": "flyio", "apiUrl": "https://status.flyio.net/api/v2/summary.json"}, {"slug": "influxdb-cloud", "apiUrl": "https://status.influxdata.com/api/v2/summary.json"}, {"slug": "linode", "apiUrl": "https://status.linode.com/api/v2/summary.json"}, {"slug": "mongodb-cloud", "apiUrl": "https://status.mongodb.com/api/v2/summary.json"}, {"slug": "oracle-cloud", "apiUrl": "https://ocistatus.oraclecloud.com/api/v2/summary.json"}, {"slug": "planetscale", "apiUrl": "https://www.planetscalestatus.com/api/v2/summary.json"}, {"slug": "railway", "apiUrl": "https://railway.statuspage.io/api/v2/summary.json"}, {"slug": "render", "apiUrl": "https://status.render.com/api/v2/summary.json"}, {"slug": "scaleway", "apiUrl": "https://status.scaleway.com/api/v2/summary.json"}, {"slug": "snowflake", "apiUrl": "https://status.snowflake.com/api/v2/summary.json"}, {"slug": "vercel", "apiUrl": "https://www.vercel-status.com/api/v2/summary.json"}, {"slug": "wasabi", "apiUrl": "https://status.wasabi.com/api/v2/summary.json"}];
-        VultyrStatus.checkMultiple(services, function(slug, result) {
-            var dot = document.querySelector('[data-slug="' + slug + '"]');
-            if (dot) dot.style.background = VultyrStatus.COLORS[result.indicator] || VultyrStatus.COLORS.unknown;
-        });
-    });
-    </script>
 </body>
 </html>
