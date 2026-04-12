@@ -10,13 +10,12 @@ Output directory: assets/favicons/
 """
 
 import json
-import os
+import re
 import sys
-import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from urllib.request import urlopen, Request
-from urllib.error import URLError, HTTPError
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent
@@ -24,13 +23,16 @@ SERVICES_JSON = PROJECT_ROOT / "data" / "services.json"
 FAVICONS_DIR = PROJECT_ROOT / "assets" / "favicons"
 SIZES = [32, 64]
 GOOGLE_FAVICON_URL = "https://www.google.com/s2/favicons?domain={domain}&sz={size}"
-MAX_WORKERS = 20
+MAX_WORKERS = 6  # Google rate-limits aggressive concurrency
 TIMEOUT = 10  # seconds per request
+
+# Allow only the subset of characters that make up real DNS labels.
+_SAFE_DOMAIN = re.compile(r"^[a-z0-9][a-z0-9.\-]*$")
 
 
 def load_domains():
     """Load unique favicon domains from services.json."""
-    with open(SERVICES_JSON) as f:
+    with open(SERVICES_JSON, encoding="utf-8") as f:
         data = json.load(f)
     domains = set()
     for service in data["services"]:
@@ -42,6 +44,9 @@ def load_domains():
 
 def download_favicon(domain, size):
     """Download a single favicon. Returns (domain, size, success, error_msg)."""
+    if not _SAFE_DOMAIN.match(domain):
+        return (domain, size, False, f"Unsafe domain {domain!r}")
+
     url = GOOGLE_FAVICON_URL.format(domain=domain, size=size)
     out_path = FAVICONS_DIR / f"{domain}-{size}.png"
 
@@ -51,15 +56,14 @@ def download_favicon(domain, size):
             data = resp.read()
             if len(data) < 10:
                 return (domain, size, False, "Empty response")
-            with open(out_path, "wb") as f:
-                f.write(data)
+            out_path.write_bytes(data)
             return (domain, size, True, None)
-    except HTTPError as e:
-        return (domain, size, False, f"HTTP {e.code}")
-    except URLError as e:
-        return (domain, size, False, str(e.reason))
-    except Exception as e:
-        return (domain, size, False, str(e))
+    except HTTPError as exc:
+        return (domain, size, False, f"HTTP {exc.code}")
+    except URLError as exc:
+        return (domain, size, False, str(exc.reason))
+    except (OSError, TimeoutError) as exc:
+        return (domain, size, False, str(exc))
 
 
 def main():
@@ -68,10 +72,8 @@ def main():
     domains = load_domains()
     print(f"Found {len(domains)} unique domains in services.json")
     print(f"Downloading favicons at sizes: {SIZES}")
-    print(f"Output directory: {FAVICONS_DIR}")
-    print()
+    print(f"Output directory: {FAVICONS_DIR}\n")
 
-    # Build task list: (domain, size) pairs
     tasks = [(d, s) for d in domains for s in SIZES]
     total = len(tasks)
 
@@ -88,17 +90,15 @@ def main():
                 successes.append((domain, size))
             else:
                 failures.append((domain, size, err))
-            # Progress every 50
             if completed % 50 == 0 or completed == total:
                 print(f"  Progress: {completed}/{total}")
 
     print()
     print("=" * 60)
-    print(f"RESULTS")
+    print("RESULTS")
     print(f"  Total tasks:    {total}")
     print(f"  Successes:      {len(successes)}")
-    print(f"  Failures:       {len(failures)}")
-    print()
+    print(f"  Failures:       {len(failures)}\n")
 
     if failures:
         print("FAILURES:")
@@ -106,20 +106,18 @@ def main():
             print(f"  {domain} (sz={size}): {err}")
         print()
 
-    # Report unique domains with at least one success
-    successful_domains = set(d for d, s in successes)
-    failed_domains = set(d for d, s, e in failures) - successful_domains
+    successful_domains = {d for d, _ in successes}
+    failed_domains = {d for d, _, _ in failures} - successful_domains
     print(f"Domains with at least one favicon: {len(successful_domains)}")
     if failed_domains:
         print(f"Domains with NO favicons at all:  {len(failed_domains)}")
         for d in sorted(failed_domains):
             print(f"  - {d}")
 
-    # Directory size
     total_size = sum(f.stat().st_size for f in FAVICONS_DIR.iterdir() if f.is_file())
+    file_count = len(list(FAVICONS_DIR.glob("*.png")))
     print()
     print(f"Total favicons directory size: {total_size:,} bytes ({total_size / 1024:.1f} KB)")
-    file_count = len(list(FAVICONS_DIR.glob("*.png")))
     print(f"Total PNG files: {file_count}")
 
     return 0 if not failures else 1

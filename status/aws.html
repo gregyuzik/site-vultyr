@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YYDJLZG0X1");
-    </script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Is AWS Down? AWS Status Monitor | Vultyr</title>
     <meta name="description" content="Check if AWS is down right now. Live AWS status updates and outage monitoring with Vultyr. Free on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro.">
     <meta name="theme-color" content="#000000">
@@ -27,9 +19,8 @@
     <link rel="canonical" href="https://vultyr.app/status/aws.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/service.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -85,21 +76,27 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/service.css">
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
+    </script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <main id="main">
     <div class="container">
-        <div class="breadcrumb">
-            <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
-            <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
-            <a href="/categories/amazon.html">Amazon</a><span class="sep">&rsaquo;</span>
-            <span class="breadcrumb-current">AWS</span>
-        </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Vultyr</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <a href="/services.html">Services</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <a href="/categories/amazon.html">Amazon</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <span class="breadcrumb-current" aria-current="page">AWS</span>
+        </nav>
         <div class="service-header">
-            <img src="/assets/favicons/aws.amazon.com-64.png" alt="AWS icon" width="48" height="48">
+            <img src="/assets/favicons/aws.amazon.com-64.png" alt="" width="48" height="48" decoding="async" aria-hidden="true">
             <h1>AWS</h1>
         </div>
 
@@ -112,11 +109,11 @@
 
         <div class="links-row">
             <a href="https://health.aws.amazon.com/health/status" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-26.37,144H96a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8h5.63a8,8,0,0,1,5.66,2.34l56,56a8,8,0,0,1-11.32,11.32L101.63,107.31V160A8,8,0,0,1,101.63,168Z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-26.37,144H96a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8h5.63a8,8,0,0,1,5.66,2.34l56,56a8,8,0,0,1-11.32,11.32L101.63,107.31V160A8,8,0,0,1,101.63,168Z"/></svg>
                 Official Status Page
             </a>
             <a href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M128,16a112,112,0,1,0,112,112A112.13,112.13,0,0,0,128,16ZM40,128a87.5,87.5,0,0,1,8.43-37.65l46.46,127.38A88.14,88.14,0,0,1,40,128Zm88,88a87.53,87.53,0,0,1-28.34-4.67l30.09-87.39,30.83,84.49A88.18,88.18,0,0,1,128,216Z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,16a112,112,0,1,0,112,112A112.13,112.13,0,0,0,128,16ZM40,128a87.5,87.5,0,0,1,8.43-37.65l46.46,127.38A88.14,88.14,0,0,1,40,128Zm88,88a87.53,87.53,0,0,1-28.34-4.67l30.09-87.39,30.83,84.49A88.18,88.18,0,0,1,128,216Z"/></svg>
                 AWS Homepage
             </a>
         </div>
@@ -132,24 +129,24 @@
         </div>
 
         <h2 class="section-title">Related Services</h2>
-        <div class="related-grid">
-            <a class="related-card" href="/status/alexa.html">
-                <img role="presentation" src="/assets/favicons/alexa.amazon.com-32.png" alt="" loading="lazy" width="20" height="20">
-                Alexa
-            </a>
-            <a class="related-card" href="/status/amazoncom.html">
-                <img role="presentation" src="/assets/favicons/amazon.com-32.png" alt="" loading="lazy" width="20" height="20">
-                Amazon.com
-            </a>
-            <a class="related-card" href="/status/prime-video.html">
-                <img role="presentation" src="/assets/favicons/primevideo.com-32.png" alt="" loading="lazy" width="20" height="20">
-                Prime Video
-            </a>
-            <a class="related-card" href="/status/ring.html">
-                <img role="presentation" src="/assets/favicons/ring.com-32.png" alt="" loading="lazy" width="20" height="20">
-                Ring
-            </a>
-        </div>
+        <nav class="related-grid" aria-label="Related services">
+                <a class="related-card" href="/status/alexa.html">
+                    <img src="/assets/favicons/alexa.amazon.com-32.png" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    Alexa
+                </a>
+                <a class="related-card" href="/status/amazoncom.html">
+                    <img src="/assets/favicons/amazon.com-32.png" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    Amazon.com
+                </a>
+                <a class="related-card" href="/status/prime-video.html">
+                    <img src="/assets/favicons/primevideo.com-32.png" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    Prime Video
+                </a>
+                <a class="related-card" href="/status/ring.html">
+                    <img src="/assets/favicons/ring.com-32.png" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    Ring
+                </a>
+        </nav>
         <div class="cta">
             <h2>Monitor AWS on all your devices</h2>
             <p>Get instant alerts when AWS goes down. Free on all Apple platforms.</p>
@@ -159,6 +156,7 @@
     </main>
     <footer>
         <nav aria-label="Footer navigation">
+            <a href="/">Home</a>
             <a href="/services.html">Services</a>
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>

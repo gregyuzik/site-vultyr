@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YYDJLZG0X1");
-    </script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Payments &amp; Commerce Status Monitor — 11 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 11 payments &amp; commerce services. Real-time outage alerts for Cash App, Coinbase, Coinbase Exchange, Gemini Exchange, and more.">
     <meta name="theme-color" content="#000000">
@@ -27,9 +19,8 @@
     <link rel="canonical" href="https://vultyr.app/categories/payments-commerce.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -131,92 +122,98 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/category.css">
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
+    </script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <main id="main">
     <div class="container">
-        <div class="breadcrumb">
-            <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
-            <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
-            <span class="breadcrumb-current">Payments &amp; Commerce</span>
-        </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Vultyr</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <a href="/services.html">Services</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <span class="breadcrumb-current" aria-current="page">Payments &amp; Commerce</span>
+        </nav>
 
         <div class="cat-header">
-            <svg class="cat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"/></svg>
+            <svg class="cat-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"/></svg>
             <h1>Payments &amp; Commerce</h1>
         </div>
         <p class="cat-subtitle">11 services monitored by Vultyr</p>
 
-        <div class="services-grid">
+        <nav class="services-grid" aria-label="Payments &amp; Commerce services">
             <a class="service-card" href="/status/cash-app.html">
-                <img role="presentation" src="/assets/favicons/cash.app-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/cash.app-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Cash App</span>
             </a>
             <a class="service-card" href="/status/coinbase.html">
-                <img role="presentation" src="/assets/favicons/coinbase.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/coinbase.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Coinbase</span>
             </a>
             <a class="service-card" href="/status/coinbase-exchange.html">
-                <img role="presentation" src="/assets/favicons/exchange.coinbase.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/exchange.coinbase.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Coinbase Exchange</span>
             </a>
             <a class="service-card" href="/status/gemini-exchange.html">
-                <img role="presentation" src="/assets/favicons/gemini.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/gemini.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Gemini Exchange</span>
             </a>
             <a class="service-card" href="/status/kraken.html">
-                <img role="presentation" src="/assets/favicons/kraken.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/kraken.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Kraken</span>
             </a>
             <a class="service-card" href="/status/plaid.html">
-                <img role="presentation" src="/assets/favicons/plaid.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/plaid.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Plaid</span>
             </a>
             <a class="service-card" href="/status/shopify.html">
-                <img role="presentation" src="/assets/favicons/shopify.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/shopify.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Shopify</span>
             </a>
             <a class="service-card" href="/status/square.html">
-                <img role="presentation" src="/assets/favicons/squareup.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/squareup.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Square</span>
             </a>
             <a class="service-card" href="/status/stripe.html">
-                <img role="presentation" src="/assets/favicons/stripe.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/stripe.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Stripe</span>
             </a>
             <a class="service-card" href="/status/uber.html">
-                <img role="presentation" src="/assets/favicons/uber.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/uber.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Uber</span>
             </a>
             <a class="service-card" href="/status/wise.html">
-                <img role="presentation" src="/assets/favicons/wise.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/wise.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Wise</span>
             </a>
-        </div>
+        </nav>
 
-        <div class="other-categories">
-            <h2>Other Categories</h2>
+        <nav class="other-categories" aria-labelledby="other-cats-heading">
+            <h2 id="other-cats-heading">Other Categories</h2>
             <div class="cat-links">
-            <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
-            <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
-            <a class="cat-link" href="/categories/communication.html">Communication</a>
-            <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
-            <a class="cat-link" href="/categories/apple.html">Apple</a>
-            <a class="cat-link" href="/categories/google.html">Google</a>
-            <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
-            <a class="cat-link" href="/categories/amazon.html">Amazon</a>
-            <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
-            <a class="cat-link" href="/categories/social-media.html">Social Media</a>
-            <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
-            <a class="cat-link" href="/categories/gaming.html">Gaming</a>
-            <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
-            <a class="cat-link" href="/categories/security.html">Security</a>
-            <a class="cat-link" href="/categories/email-marketing.html">Email &amp; Marketing</a>
+                <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
+                <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
+                <a class="cat-link" href="/categories/communication.html">Communication</a>
+                <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
+                <a class="cat-link" href="/categories/apple.html">Apple</a>
+                <a class="cat-link" href="/categories/google.html">Google</a>
+                <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
+                <a class="cat-link" href="/categories/amazon.html">Amazon</a>
+                <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
+                <a class="cat-link" href="/categories/social-media.html">Social Media</a>
+                <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
+                <a class="cat-link" href="/categories/gaming.html">Gaming</a>
+                <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
+                <a class="cat-link" href="/categories/security.html">Security</a>
+                <a class="cat-link" href="/categories/email-marketing.html">Email &amp; Marketing</a>
             </div>
-        </div>
+        </nav>
 
         <div class="cta">
             <h2>Monitor all 11 services instantly</h2>
@@ -227,6 +224,7 @@
     </main>
     <footer>
         <nav aria-label="Footer navigation">
+            <a href="/">Home</a>
             <a href="/services.html">Services</a>
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>

@@ -1,34 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YYDJLZG0X1");
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vultyr — Monitored Services</title>
-    <meta name="description" content="All 200+ services monitored by Vultyr, organized by category. Cloud, dev tools, communication, AI, and more.">
-    <meta property="og:title" content="Vultyr — Monitored Services">
-    <meta property="og:description" content="All 200+ services monitored by Vultyr, organized by category. Cloud, dev tools, communication, AI, and more.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <title>Vultyr — 235+ Monitored Services</title>
+    <meta name="description" content="All 235+ services monitored by Vultyr, organized by category. Cloud, dev tools, communication, AI, and more.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Vultyr — 235+ Monitored Services">
+    <meta property="og:description" content="All 235+ services monitored by Vultyr, organized by category. Cloud, dev tools, communication, AI, and more.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
     <meta property="og:url" content="https://vultyr.app/services.html">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#000000">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Vultyr — Monitored Services">
-    <meta name="twitter:description" content="All 200+ services monitored by Vultyr, organized by category. Cloud, dev tools, communication, AI, and more.">
+    <meta name="twitter:title" content="Vultyr — 235+ Monitored Services">
+    <meta name="twitter:description" content="All 235+ services monitored by Vultyr, organized by category. Cloud, dev tools, communication, AI, and more.">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/services.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/services-list.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -1449,151 +1441,22 @@
       ]
     }
     </script>
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-            background: #000;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .header {
-            text-align: center;
-            padding: 40px 24px 24px;
-            max-width: 800px;
-            width: 100%;
-        }
-        .header a {
-            color: #888;
-            text-decoration: none;
-            font-size: 0.875rem;
-        }
-        .header a:hover { color: #fff; }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 400;
-            font-family: 'Audiowide', sans-serif;
-            letter-spacing: -0.02em;
-            margin: 16px 0 8px;
-        }
-        .subtitle {
-            font-size: 1rem;
-            color: #888;
-            margin-bottom: 8px;
-        }
-        .highlight { color: #ff9926; }
-        .content {
-            max-width: 800px;
-            padding: 0 24px 40px;
-            width: 100%;
-        }
-        .category {
-            margin-bottom: 40px;
-        }
-        .category h2 {
-            font-family: 'Audiowide', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: #ff9926;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #1a1a1a;
-            margin-bottom: 4px;
-        }
-        .category h2 span {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-            font-size: 0.8rem;
-            color: #888;
-            font-weight: 400;
-            margin-left: 8px;
-        }
-        .service {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 0;
-            border-bottom: 1px solid #111;
-        }
-        .service:last-child { border-bottom: none; }
-        .service-favicon {
-            width: 24px;
-            height: 24px;
-            border-radius: 4px;
-            flex-shrink: 0;
-        }
-        .service-name {
-            font-size: 0.95rem;
-            font-weight: 500;
-            flex: 1;
-            min-width: 0;
-        }
-        .service-links {
-            display: flex;
-            gap: 12px;
-            flex-shrink: 0;
-        }
-        .service-links a {
-            font-size: 0.75rem;
-            color: #888;
-            text-decoration: none;
-            padding: 4px 8px;
-            border: 1px solid #222;
-            border-radius: 6px;
-            white-space: nowrap;
-        }
-        .service-links a:hover {
-            color: #ff9926;
-            border-color: #ff9926;
-        }
-        footer {
-            text-align: center;
-            padding: 40px 24px;
-            border-top: 1px solid #1a1a1a;
-            width: 100%;
-            max-width: 800px;
-        }
-        footer a {
-            color: #888;
-            text-decoration: none;
-            margin: 0 16px;
-            font-size: 0.875rem;
-        }
-        footer a:hover { color: #fff; }
-
-        .service-name a { color: inherit; text-decoration: none; }
-        .service-name a:hover { color: #00ff41; }
-        h2 a { color: inherit; text-decoration: none; }
-        h2 a:hover { color: #ff9926; }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
-        :focus-visible { outline: 2px solid #00ff41; outline-offset: 3px; }
-        .categories-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
-        .cat-pill {
-            padding: 6px 14px;
-            border: 1px solid #1a1a1a;
-            border-radius: 999px;
-            font-size: 0.8rem;
-            color: #888;
-            text-decoration: none;
-            transition: border-color 0.2s, color 0.2s;
-        }
-        .cat-pill:hover { border-color: #444; color: #fff; }
-        .cat-pill span { color: #555; margin-left: 4px; }
-        .cat-pill:hover span { color: #999; }
-        @media (max-width: 500px) {
-            .service { flex-wrap: wrap; gap: 8px; }
-            .service-links { width: 100%; padding-left: 36px; }
-        }
-    </style>
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
+    </script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <main id="main">
     <div class="header">
-        <a href="index.html">&larr; Back to vultyr</a>
-        <h1>Monitored <span class="highlight">Services</span></h1>
-        <p class="subtitle">All services vultyr actively monitors via status APIs.</p>
+        <a href="/">&larr; Back to vultyr</a>
+        <h1>Monitored <span class="highlight-orange">Services</span></h1>
+        <p class="subtitle">All 235 services vultyr actively monitors via status APIs.</p>
     </div>
 
     <nav class="content categories-nav" aria-label="Browse by category">
@@ -1616,12 +1479,10 @@
     </nav>
 
     <div class="content">
-
-        <!-- Cloud & Infrastructure -->
         <div class="category">
             <h2><a href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a> <span>30 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/aiven.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/aiven.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/aiven.html">Aiven</a></div>
                 <div class="service-links">
                     <a href="https://status.aiven.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1629,7 +1490,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/akamai.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/akamai.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/akamai.html">Akamai</a></div>
                 <div class="service-links">
                     <a href="https://www.akamaistatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1637,7 +1498,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/aptible.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/aptible.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/aptible.html">Aptible</a></div>
                 <div class="service-links">
                     <a href="https://aptible.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1645,7 +1506,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/bunny.net-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/bunny.net-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/bunny-cdn.html">Bunny CDN</a></div>
                 <div class="service-links">
                     <a href="https://status.bunny.net" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1653,7 +1514,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cloudflare.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cloudflare.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cloudflare.html">Cloudflare</a></div>
                 <div class="service-links">
                     <a href="https://www.cloudflarestatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1661,7 +1522,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cockroachlabs.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cockroachlabs.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cockroachdb.html">CockroachDB</a></div>
                 <div class="service-links">
                     <a href="https://status.cockroachlabs.cloud" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1669,7 +1530,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/confluent.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/confluent.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/confluent.html">Confluent (Kafka)</a></div>
                 <div class="service-links">
                     <a href="https://status.confluent.cloud" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1677,7 +1538,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/digitalocean.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/digitalocean.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/digitalocean.html">DigitalOcean</a></div>
                 <div class="service-links">
                     <a href="https://status.digitalocean.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1685,7 +1546,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/dropbox.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/dropbox.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/dropbox.html">Dropbox</a></div>
                 <div class="service-links">
                     <a href="https://status.dropbox.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1693,7 +1554,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/elastic.co-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/elastic.co-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/elastic-cloud.html">Elastic Cloud</a></div>
                 <div class="service-links">
                     <a href="https://status.elastic.co" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1701,7 +1562,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/fastly.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/fastly.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/fastly.html">Fastly</a></div>
                 <div class="service-links">
                     <a href="https://www.fastlystatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1709,7 +1570,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/fly.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/fly.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/flyio.html">Fly.io</a></div>
                 <div class="service-links">
                     <a href="https://status.flyio.net" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1717,7 +1578,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/heroku.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/heroku.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/heroku.html">Heroku</a></div>
                 <div class="service-links">
                     <a href="https://status.heroku.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1725,7 +1586,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/influxdata.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/influxdata.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/influxdb-cloud.html">InfluxDB Cloud</a></div>
                 <div class="service-links">
                     <a href="https://status.influxdata.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1733,7 +1594,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/keycdn.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/keycdn.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/keycdn.html">KeyCDN</a></div>
                 <div class="service-links">
                     <a href="https://status.keycdn.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1741,7 +1602,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/linode.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/linode.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/linode.html">Linode</a></div>
                 <div class="service-links">
                     <a href="https://status.linode.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1749,7 +1610,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/mongodb.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/mongodb.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/mongodb-cloud.html">MongoDB Cloud</a></div>
                 <div class="service-links">
                     <a href="https://status.mongodb.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1757,7 +1618,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/neon.tech-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/neon.tech-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/neon.html">Neon</a></div>
                 <div class="service-links">
                     <a href="https://neonstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1765,7 +1626,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/oracle.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/oracle.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/oracle-cloud.html">Oracle Cloud</a></div>
                 <div class="service-links">
                     <a href="https://ocistatus.oraclecloud.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1773,7 +1634,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/planetscale.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/planetscale.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/planetscale.html">PlanetScale</a></div>
                 <div class="service-links">
                     <a href="https://www.planetscalestatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1781,7 +1642,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/railway.app-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/railway.app-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/railway.html">Railway</a></div>
                 <div class="service-links">
                     <a href="https://railway.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1789,7 +1650,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/redis.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/redis.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/redis.html">Redis</a></div>
                 <div class="service-links">
                     <a href="https://status.redis.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1797,7 +1658,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/render.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/render.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/render.html">Render</a></div>
                 <div class="service-links">
                     <a href="https://status.render.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1805,7 +1666,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/salesforce.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/salesforce.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/salesforce.html">Salesforce</a></div>
                 <div class="service-links">
                     <a href="https://status.salesforce.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1813,7 +1674,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/scaleway.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/scaleway.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/scaleway.html">Scaleway</a></div>
                 <div class="service-links">
                     <a href="https://status.scaleway.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1821,7 +1682,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/snowflake.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/snowflake.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/snowflake.html">Snowflake</a></div>
                 <div class="service-links">
                     <a href="https://status.snowflake.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1829,7 +1690,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/timescale.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/timescale.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/timescale.html">Timescale</a></div>
                 <div class="service-links">
                     <a href="https://status.timescale.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1837,7 +1698,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/turso.tech-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/turso.tech-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/turso.html">Turso</a></div>
                 <div class="service-links">
                     <a href="https://status.turso.tech" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1845,7 +1706,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/vercel.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/vercel.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/vercel.html">Vercel</a></div>
                 <div class="service-links">
                     <a href="https://www.vercel-status.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1853,7 +1714,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/wasabi.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/wasabi.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/wasabi.html">Wasabi</a></div>
                 <div class="service-links">
                     <a href="https://status.wasabi.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1862,11 +1723,10 @@
             </div>
         </div>
 
-        <!-- Developer Tools -->
         <div class="category">
             <h2><a href="/categories/developer-tools.html">Developer Tools</a> <span>54 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/airbyte.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/airbyte.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/airbyte.html">Airbyte</a></div>
                 <div class="service-links">
                     <a href="https://status.airbyte.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1874,7 +1734,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/betterstack.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/betterstack.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/better-stack.html">Better Stack</a></div>
                 <div class="service-links">
                     <a href="https://status.betterstack.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1882,7 +1742,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/bitbucket.org-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/bitbucket.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/bitbucket.html">Bitbucket</a></div>
                 <div class="service-links">
                     <a href="https://bitbucket.status.atlassian.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1890,7 +1750,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/bitrise.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/bitrise.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/bitrise.html">Bitrise</a></div>
                 <div class="service-links">
                     <a href="https://status.bitrise.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1898,7 +1758,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/buildkite.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/buildkite.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/buildkite.html">Buildkite</a></div>
                 <div class="service-links">
                     <a href="https://www.buildkitestatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1906,7 +1766,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/circleci.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/circleci.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/circleci.html">CircleCI</a></div>
                 <div class="service-links">
                     <a href="https://status.circleci.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1914,7 +1774,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cloudinary.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cloudinary.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cloudinary.html">Cloudinary</a></div>
                 <div class="service-links">
                     <a href="https://status.cloudinary.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1922,7 +1782,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cloudsmith.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cloudsmith.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cloudsmith.html">Cloudsmith</a></div>
                 <div class="service-links">
                     <a href="https://status.cloudsmith.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1930,7 +1790,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="https://www.google.com/s2/favicons?domain=codecov.io&sz=32" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/codecov.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/codecov.html">Codecov</a></div>
                 <div class="service-links">
                     <a href="https://status.codecov.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1938,7 +1798,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/codefresh.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/codefresh.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/codefresh.html">Codefresh</a></div>
                 <div class="service-links">
                     <a href="https://status.codefresh.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1946,7 +1806,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cocoapods.org-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cocoapods.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cocoapods.html">CocoaPods</a></div>
                 <div class="service-links">
                     <a href="https://status.cocoapods.org" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1954,7 +1814,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/contentful.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/contentful.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/contentful.html">Contentful</a></div>
                 <div class="service-links">
                     <a href="https://contentful.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1962,7 +1822,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/convex.dev-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/convex.dev-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/convex.html">Convex</a></div>
                 <div class="service-links">
                     <a href="https://status.convex.dev" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1970,7 +1830,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/crates.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/crates.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cratesio.html">Crates.io</a></div>
                 <div class="service-links">
                     <a href="https://status.crates.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1978,7 +1838,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/getdbt.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/getdbt.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/dbt-cloud.html">dbt Cloud</a></div>
                 <div class="service-links">
                     <a href="https://status.getdbt.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1986,7 +1846,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/deno.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/deno.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/deno.html">Deno</a></div>
                 <div class="service-links">
                     <a href="https://denostatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -1994,7 +1854,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/docker.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/docker.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/docker.html">Docker</a></div>
                 <div class="service-links">
                     <a href="https://www.dockerstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2002,7 +1862,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/doppler.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/doppler.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/doppler.html">Doppler</a></div>
                 <div class="service-links">
                     <a href="https://www.dopplerstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2010,7 +1870,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/env0.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/env0.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/env0.html">env0</a></div>
                 <div class="service-links">
                     <a href="https://status.env0.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2018,7 +1878,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/expo.dev-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/expo.dev-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/expo.html">Expo</a></div>
                 <div class="service-links">
                     <a href="https://status.expo.dev" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2026,7 +1886,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/github.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/github.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/github.html">GitHub</a></div>
                 <div class="service-links">
                     <a href="https://www.githubstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2034,7 +1894,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/gitlab.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/gitlab.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/gitlab.html">GitLab</a></div>
                 <div class="service-links">
                     <a href="https://status.gitlab.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2042,7 +1902,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="https://www.google.com/s2/favicons?domain=gitpod.io&sz=32" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/gitpod.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/gitpod.html">Gitpod</a></div>
                 <div class="service-links">
                     <a href="https://www.gitpodstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2050,7 +1910,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/grafana.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/grafana.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/grafana.html">Grafana</a></div>
                 <div class="service-links">
                     <a href="https://status.grafana.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2058,7 +1918,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/harness.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/harness.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/harness.html">Harness</a></div>
                 <div class="service-links">
                     <a href="https://status.harness.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2066,7 +1926,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/hashicorp.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/hashicorp.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/hashicorp.html">HashiCorp</a></div>
                 <div class="service-links">
                     <a href="https://status.hashicorp.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2074,7 +1934,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/honeycomb.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/honeycomb.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/honeycomb.html">Honeycomb</a></div>
                 <div class="service-links">
                     <a href="https://status.honeycomb.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2082,7 +1942,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/incident.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/incident.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/incidentio.html">incident.io</a></div>
                 <div class="service-links">
                     <a href="https://incidentio.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2090,7 +1950,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/jfrog.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/jfrog.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/jfrog.html">JFrog</a></div>
                 <div class="service-links">
                     <a href="https://status.jfrog.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2098,7 +1958,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/launchdarkly.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/launchdarkly.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/launchdarkly.html">LaunchDarkly</a></div>
                 <div class="service-links">
                     <a href="https://status.launchdarkly.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2106,7 +1966,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/search.maven.org-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/search.maven.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/maven-central.html">Maven Central</a></div>
                 <div class="service-links">
                     <a href="https://status.maven.org" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2114,7 +1974,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/netlify.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/netlify.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/netlify.html">Netlify</a></div>
                 <div class="service-links">
                     <a href="https://www.netlifystatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2122,7 +1982,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/newrelic.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/newrelic.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/new-relic.html">New Relic</a></div>
                 <div class="service-links">
                     <a href="https://status.newrelic.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2130,7 +1990,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/npmjs.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/npmjs.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/npm.html">npm</a></div>
                 <div class="service-links">
                     <a href="https://status.npmjs.org" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2138,7 +1998,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/nuget.org-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/nuget.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/nuget.html">NuGet</a></div>
                 <div class="service-links">
                     <a href="https://nuget.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2146,7 +2006,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/atlassian.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/atlassian.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/opsgenie.html">Opsgenie</a></div>
                 <div class="service-links">
                     <a href="https://opsgenie.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2154,7 +2014,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/pagerduty.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/pagerduty.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/pagerduty.html">PagerDuty</a></div>
                 <div class="service-links">
                     <a href="https://status.pagerduty.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2162,7 +2022,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/postman.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/postman.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/postman.html">Postman</a></div>
                 <div class="service-links">
                     <a href="https://status.postman.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2170,7 +2030,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/pulumi.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/pulumi.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/pulumi.html">Pulumi</a></div>
                 <div class="service-links">
                     <a href="https://status.pulumi.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2178,7 +2038,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/pypi.org-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/pypi.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/pypi.html">PyPI</a></div>
                 <div class="service-links">
                     <a href="https://status.python.org" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2186,7 +2046,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/retool.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/retool.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/retool.html">Retool</a></div>
                 <div class="service-links">
                     <a href="https://status.retool.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2194,7 +2054,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/rollbar.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/rollbar.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/rollbar.html">Rollbar</a></div>
                 <div class="service-links">
                     <a href="https://status.rollbar.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2202,7 +2062,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/rubygems.org-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/rubygems.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/rubygems.html">RubyGems</a></div>
                 <div class="service-links">
                     <a href="https://status.rubygems.org" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2210,7 +2070,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/sentry.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/sentry.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/sentry.html">Sentry</a></div>
                 <div class="service-links">
                     <a href="https://status.sentry.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2218,7 +2078,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/snyk.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/snyk.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/snyk.html">Snyk</a></div>
                 <div class="service-links">
                     <a href="https://snyk.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2226,7 +2086,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/sourcegraph.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/sourcegraph.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/sourcegraph.html">Sourcegraph</a></div>
                 <div class="service-links">
                     <a href="https://sourcegraphstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2234,7 +2094,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/spacelift.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/spacelift.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/spacelift.html">Spacelift</a></div>
                 <div class="service-links">
                     <a href="https://spacelift.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2242,7 +2102,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/splunk.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/splunk.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/splunk-cloud.html">Splunk Cloud</a></div>
                 <div class="service-links">
                     <a href="https://status.splunkcloud.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2250,7 +2110,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/splunk.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/splunk.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/splunk-on-call.html">Splunk On-Call</a></div>
                 <div class="service-links">
                     <a href="https://status.victorops.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2258,7 +2118,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/supabase.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/supabase.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/supabase.html">Supabase</a></div>
                 <div class="service-links">
                     <a href="https://status.supabase.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2266,7 +2126,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/travis-ci.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/travis-ci.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/travis-ci.html">Travis CI</a></div>
                 <div class="service-links">
                     <a href="https://www.traviscistatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2274,7 +2134,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/upstash.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/upstash.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/upstash.html">Upstash</a></div>
                 <div class="service-links">
                     <a href="https://status.upstash.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2282,7 +2142,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/warp.dev-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/warp.dev-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/warp.html">Warp</a></div>
                 <div class="service-links">
                     <a href="https://status.warp.dev" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2290,7 +2150,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/webflow.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/webflow.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/webflow.html">Webflow</a></div>
                 <div class="service-links">
                     <a href="https://status.webflow.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2299,11 +2159,10 @@
             </div>
         </div>
 
-        <!-- Communication -->
         <div class="category">
             <h2><a href="/categories/communication.html">Communication</a> <span>9 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/discord.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/discord.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/discord.html">Discord</a></div>
                 <div class="service-links">
                     <a href="https://discordstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2311,7 +2170,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/livekit.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/livekit.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/livekit.html">LiveKit</a></div>
                 <div class="service-links">
                     <a href="https://livekit.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2319,7 +2178,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/matrix.org-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/matrix.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/matrix.html">Matrix</a></div>
                 <div class="service-links">
                     <a href="https://status.matrix.org" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2327,7 +2186,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/signal.org-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/signal.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/signal.html">Signal</a></div>
                 <div class="service-links">
                     <a href="https://status.signal.org" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2335,7 +2194,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/slack.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/slack.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/slack.html">Slack</a></div>
                 <div class="service-links">
                     <a href="https://slack-status.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2343,7 +2202,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/twilio.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/twilio.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/twilio.html">Twilio</a></div>
                 <div class="service-links">
                     <a href="https://status.twilio.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2351,7 +2210,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/vonage.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/vonage.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/vonage.html">Vonage</a></div>
                 <div class="service-links">
                     <a href="https://vonageapi.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2359,7 +2218,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/webex.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/webex.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/webex.html">Webex</a></div>
                 <div class="service-links">
                     <a href="https://ciscospark.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2367,7 +2226,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/zoom.us-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/zoom.us-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/zoom.html">Zoom</a></div>
                 <div class="service-links">
                     <a href="https://www.zoomstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2376,11 +2235,10 @@
             </div>
         </div>
 
-        <!-- Productivity & SaaS -->
         <div class="category">
             <h2><a href="/categories/productivity-saas.html">Productivity &amp; SaaS</a> <span>27 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/airtable.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/airtable.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/airtable.html">Airtable</a></div>
                 <div class="service-links">
                     <a href="https://status.airtable.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2388,7 +2246,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/amplitude.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/amplitude.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/amplitude.html">Amplitude</a></div>
                 <div class="service-links">
                     <a href="https://status.amplitude.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2396,7 +2254,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/asana.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/asana.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/asana.html">Asana</a></div>
                 <div class="service-links">
                     <a href="https://status.asana.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2404,7 +2262,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/atlassian.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/atlassian.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/atlassian.html">Atlassian</a></div>
                 <div class="service-links">
                     <a href="https://status.atlassian.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2412,7 +2270,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/box.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/box.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/box.html">Box</a></div>
                 <div class="service-links">
                     <a href="https://status.box.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2420,7 +2278,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/canva.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/canva.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/canva.html">Canva</a></div>
                 <div class="service-links">
                     <a href="https://www.canvastatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2428,7 +2286,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/clickup.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/clickup.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/clickup.html">ClickUp</a></div>
                 <div class="service-links">
                     <a href="https://clickup.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2436,7 +2294,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/clerk.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/clerk.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/clerk.html">Clerk</a></div>
                 <div class="service-links">
                     <a href="https://status.clerk.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2444,7 +2302,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/coda.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/coda.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/coda.html">Coda</a></div>
                 <div class="service-links">
                     <a href="https://status.coda.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2452,7 +2310,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/datadoghq.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/datadoghq.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/datadog.html">Datadog</a></div>
                 <div class="service-links">
                     <a href="https://status.datadoghq.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2460,7 +2318,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/sign.dropbox.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/sign.dropbox.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/dropbox-sign.html">Dropbox Sign</a></div>
                 <div class="service-links">
                     <a href="https://status.hellosign.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2468,7 +2326,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/fathom.video-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/fathom.video-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/fathom.html">Fathom</a></div>
                 <div class="service-links">
                     <a href="https://status.fathom.video" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2476,7 +2334,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/figma.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/figma.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/figma.html">Figma</a></div>
                 <div class="service-links">
                     <a href="https://status.figma.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2484,7 +2342,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/freshworks.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/freshworks.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/freshworks.html">Freshworks</a></div>
                 <div class="service-links">
                     <a href="https://status.freshworks.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2492,7 +2350,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/grammarly.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/grammarly.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/grammarly.html">Grammarly</a></div>
                 <div class="service-links">
                     <a href="https://status.grammarly.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2500,7 +2358,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/hubspot.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/hubspot.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/hubspot.html">HubSpot</a></div>
                 <div class="service-links">
                     <a href="https://status.hubspot.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2508,7 +2366,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/intercom.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/intercom.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/intercom.html">Intercom</a></div>
                 <div class="service-links">
                     <a href="https://www.intercomstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2516,7 +2374,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/linear.app-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/linear.app-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/linear.html">Linear</a></div>
                 <div class="service-links">
                     <a href="https://linearstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2524,7 +2382,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/login.gov-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/login.gov-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/logingov.html">Login.gov</a></div>
                 <div class="service-links">
                     <a href="https://status.login.gov" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2532,7 +2390,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/miro.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/miro.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/miro.html">Miro</a></div>
                 <div class="service-links">
                     <a href="https://status.miro.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2540,7 +2398,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/mixpanel.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/mixpanel.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/mixpanel.html">Mixpanel</a></div>
                 <div class="service-links">
                     <a href="https://www.mixpanelstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2548,7 +2406,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/monday.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/monday.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/mondaycom.html">Monday.com</a></div>
                 <div class="service-links">
                     <a href="https://status.monday.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2556,7 +2414,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/notion.so-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/notion.so-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/notion.html">Notion</a></div>
                 <div class="service-links">
                     <a href="https://www.notion-status.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2564,7 +2422,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/otter.ai-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/otter.ai-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/otterai.html">Otter.ai</a></div>
                 <div class="service-links">
                     <a href="https://status.otter.ai" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2572,7 +2430,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/sanity.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/sanity.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/sanity.html">Sanity</a></div>
                 <div class="service-links">
                     <a href="https://www.sanity-status.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2580,7 +2438,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/segment.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/segment.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/segment.html">Segment</a></div>
                 <div class="service-links">
                     <a href="https://status.segment.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2588,7 +2446,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/zendesk.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/zendesk.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/zendesk.html">Zendesk</a></div>
                 <div class="service-links">
                     <a href="https://status.zendesk.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2597,11 +2455,10 @@
             </div>
         </div>
 
-        <!-- Payments & Commerce -->
         <div class="category">
             <h2><a href="/categories/payments-commerce.html">Payments &amp; Commerce</a> <span>11 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cash.app-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cash.app-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cash-app.html">Cash App</a></div>
                 <div class="service-links">
                     <a href="https://status.cash.app" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2609,7 +2466,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/coinbase.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/coinbase.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/coinbase.html">Coinbase</a></div>
                 <div class="service-links">
                     <a href="https://coinbase.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2617,7 +2474,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/exchange.coinbase.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/exchange.coinbase.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/coinbase-exchange.html">Coinbase Exchange</a></div>
                 <div class="service-links">
                     <a href="https://status.exchange.coinbase.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2625,7 +2482,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/gemini.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/gemini.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/gemini-exchange.html">Gemini Exchange</a></div>
                 <div class="service-links">
                     <a href="https://status.gemini.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2633,7 +2490,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/kraken.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/kraken.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/kraken.html">Kraken</a></div>
                 <div class="service-links">
                     <a href="https://status.kraken.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2641,7 +2498,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/plaid.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/plaid.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/plaid.html">Plaid</a></div>
                 <div class="service-links">
                     <a href="https://plaidinc1.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2649,7 +2506,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/shopify.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/shopify.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/shopify.html">Shopify</a></div>
                 <div class="service-links">
                     <a href="https://www.shopifystatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2657,7 +2514,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/squareup.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/squareup.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/square.html">Square</a></div>
                 <div class="service-links">
                     <a href="https://issquareup.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2665,7 +2522,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/stripe.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/stripe.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/stripe.html">Stripe</a></div>
                 <div class="service-links">
                     <a href="https://www.stripestatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2673,7 +2530,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/uber.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/uber.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/uber.html">Uber</a></div>
                 <div class="service-links">
                     <a href="https://uber.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2681,7 +2538,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/wise.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/wise.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/wise.html">Wise</a></div>
                 <div class="service-links">
                     <a href="https://status.wise.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2690,11 +2547,10 @@
             </div>
         </div>
 
-        <!-- Apple -->
         <div class="category">
             <h2><a href="/categories/apple.html">Apple</a> <span>2 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/developer.apple.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/developer.apple.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/apple-developer.html">Apple Developer</a></div>
                 <div class="service-links">
                     <a href="https://developer.apple.com/system-status/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2702,7 +2558,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/apple.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/apple.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/apple-services.html">Apple Services</a></div>
                 <div class="service-links">
                     <a href="https://www.apple.com/support/systemstatus/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2711,11 +2567,10 @@
             </div>
         </div>
 
-        <!-- Google -->
         <div class="category">
             <h2><a href="/categories/google.html">Google</a> <span>9 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/mail.google.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/mail.google.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/gmail.html">Gmail</a></div>
                 <div class="service-links">
                     <a href="https://www.google.com/appsstatus/dashboard/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2723,7 +2578,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cloud.google.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cloud.google.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/google-cloud.html">Google Cloud</a></div>
                 <div class="service-links">
                     <a href="https://status.cloud.google.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2731,7 +2586,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/drive.google.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/drive.google.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/google-drive.html">Google Drive</a></div>
                 <div class="service-links">
                     <a href="https://www.google.com/appsstatus/dashboard/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2739,7 +2594,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/gemini.google.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/gemini.google.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/google-gemini.html">Google Gemini</a></div>
                 <div class="service-links">
                     <a href="https://aistudio.google.com/status" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2747,7 +2602,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/maps.google.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/maps.google.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/google-maps.html">Google Maps</a></div>
                 <div class="service-links">
                     <a href="https://status.cloud.google.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2755,7 +2610,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/meet.google.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/meet.google.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/google-meet.html">Google Meet</a></div>
                 <div class="service-links">
                     <a href="https://www.google.com/appsstatus/dashboard/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2763,15 +2618,15 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/google.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/google.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/google-search.html">Google Search</a></div>
                 <div class="service-links">
-                    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Status Page</a>
+                    <a href="https://status.search.google.com/" target="_blank" rel="noopener noreferrer">Status Page</a>
                     <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Homepage</a>
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/workspace.google.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/workspace.google.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/google-workspace.html">Google Workspace</a></div>
                 <div class="service-links">
                     <a href="https://www.google.com/appsstatus/dashboard/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2779,7 +2634,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/youtube.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/youtube.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/youtube.html">YouTube</a></div>
                 <div class="service-links">
                     <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2788,11 +2643,10 @@
             </div>
         </div>
 
-        <!-- Microsoft -->
         <div class="category">
             <h2><a href="/categories/microsoft.html">Microsoft</a> <span>6 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/azure.microsoft.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/azure.microsoft.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/azure.html">Azure</a></div>
                 <div class="service-links">
                     <a href="https://azure.status.microsoft/en-us/status" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2800,7 +2654,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/microsoft365.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/microsoft365.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/microsoft-365.html">Microsoft 365</a></div>
                 <div class="service-links">
                     <a href="https://status.cloud.microsoft/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2808,7 +2662,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/microsoft.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/microsoft.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/microsoft-teams.html">Microsoft Teams</a></div>
                 <div class="service-links">
                     <a href="https://status.cloud.microsoft/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2816,7 +2670,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/onedrive.live.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/onedrive.live.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/onedrive.html">OneDrive</a></div>
                 <div class="service-links">
                     <a href="https://status.cloud.microsoft/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2824,7 +2678,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/outlook.live.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/outlook.live.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/outlook.html">Outlook</a></div>
                 <div class="service-links">
                     <a href="https://status.cloud.microsoft/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2832,7 +2686,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/xbox.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/xbox.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/xbox-live.html">Xbox Live</a></div>
                 <div class="service-links">
                     <a href="https://support.xbox.com/en-US/xbox-live-status" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2841,11 +2695,10 @@
             </div>
         </div>
 
-        <!-- Amazon -->
         <div class="category">
             <h2><a href="/categories/amazon.html">Amazon</a> <span>5 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/alexa.amazon.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/alexa.amazon.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/alexa.html">Alexa</a></div>
                 <div class="service-links">
                     <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=201602230" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2853,7 +2706,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/amazon.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/amazon.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/amazoncom.html">Amazon.com</a></div>
                 <div class="service-links">
                     <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2861,7 +2714,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/aws.amazon.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/aws.amazon.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/aws.html">AWS</a></div>
                 <div class="service-links">
                     <a href="https://health.aws.amazon.com/health/status" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2869,7 +2722,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/primevideo.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/primevideo.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/prime-video.html">Prime Video</a></div>
                 <div class="service-links">
                     <a href="https://www.primevideo.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2877,7 +2730,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/ring.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/ring.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/ring.html">Ring</a></div>
                 <div class="service-links">
                     <a href="https://status.ring.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2886,11 +2739,10 @@
             </div>
         </div>
 
-        <!-- AI & Machine Learning -->
         <div class="category">
             <h2><a href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a> <span>16 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/anthropic.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/anthropic.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/anthropic.html">Anthropic</a></div>
                 <div class="service-links">
                     <a href="https://status.claude.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2898,7 +2750,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cohere.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cohere.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cohere.html">Cohere</a></div>
                 <div class="service-links">
                     <a href="https://status.cohere.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2906,7 +2758,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cursor.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cursor.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cursor.html">Cursor</a></div>
                 <div class="service-links">
                     <a href="https://status.cursor.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2914,7 +2766,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/deepseek.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/deepseek.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/deepseek.html">DeepSeek</a></div>
                 <div class="service-links">
                     <a href="https://status.deepseek.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2922,7 +2774,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/elevenlabs.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/elevenlabs.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/elevenlabs.html">ElevenLabs</a></div>
                 <div class="service-links">
                     <a href="https://status.elevenlabs.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2930,7 +2782,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/fal.ai-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/fal.ai-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/falai.html">Fal.ai</a></div>
                 <div class="service-links">
                     <a href="https://status.fal.ai" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2938,7 +2790,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/groq.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/groq.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/groq.html">Groq</a></div>
                 <div class="service-links">
                     <a href="https://groqstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2946,7 +2798,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/huggingface.co-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/huggingface.co-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/hugging-face.html">Hugging Face</a></div>
                 <div class="service-links">
                     <a href="https://status.huggingface.co" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2954,7 +2806,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/midjourney.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/midjourney.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/midjourney.html">Midjourney</a></div>
                 <div class="service-links">
                     <a href="https://midjourney.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2962,7 +2814,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/mistral.ai-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/mistral.ai-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/mistral-ai.html">Mistral AI</a></div>
                 <div class="service-links">
                     <a href="https://status.mistral.ai" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2970,7 +2822,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/openai.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/openai.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/openai.html">OpenAI</a></div>
                 <div class="service-links">
                     <a href="https://status.openai.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2978,7 +2830,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/perplexity.ai-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/perplexity.ai-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/perplexity.html">Perplexity</a></div>
                 <div class="service-links">
                     <a href="https://status.perplexity.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2986,7 +2838,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/pinecone.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/pinecone.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/pinecone.html">Pinecone</a></div>
                 <div class="service-links">
                     <a href="https://status.pinecone.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -2994,7 +2846,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/replicate.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/replicate.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/replicate.html">Replicate</a></div>
                 <div class="service-links">
                     <a href="https://www.replicatestatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3002,7 +2854,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/runwayml.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/runwayml.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/runway.html">Runway</a></div>
                 <div class="service-links">
                     <a href="https://status.runwayml.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3010,7 +2862,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/stability.ai-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/stability.ai-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/stability-ai.html">Stability AI</a></div>
                 <div class="service-links">
                     <a href="https://status.stability.ai" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3019,11 +2871,10 @@
             </div>
         </div>
 
-        <!-- Social Media -->
         <div class="category">
             <h2><a href="/categories/social-media.html">Social Media</a> <span>15 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/bsky.app-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/bsky.app-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/bluesky.html">Bluesky</a></div>
                 <div class="service-links">
                     <a href="https://bluesky.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3031,7 +2882,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/facebook.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/facebook.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/facebook.html">Facebook</a></div>
                 <div class="service-links">
                     <a href="https://metastatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3039,7 +2890,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/instagram.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/instagram.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/instagram.html">Instagram</a></div>
                 <div class="service-links">
                     <a href="https://metastatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3047,7 +2898,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/linkedin.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/linkedin.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/linkedin.html">LinkedIn</a></div>
                 <div class="service-links">
                     <a href="https://www.linkedin-status.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3055,7 +2906,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/mastodon.social-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/mastodon.social-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/mastodon.html">Mastodon</a></div>
                 <div class="service-links">
                     <a href="https://mastodon.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3063,7 +2914,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/medium.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/medium.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/medium.html">Medium</a></div>
                 <div class="service-links">
                     <a href="https://medium.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3071,7 +2922,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/pinterest.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/pinterest.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/pinterest.html">Pinterest</a></div>
                 <div class="service-links">
                     <a href="https://www.pintereststatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3079,7 +2930,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/reddit.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/reddit.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/reddit.html">Reddit</a></div>
                 <div class="service-links">
                     <a href="https://www.redditstatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3087,7 +2938,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/substack.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/substack.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/substack.html">Substack</a></div>
                 <div class="service-links">
                     <a href="https://substack.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3095,7 +2946,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/telegram.org-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/telegram.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/telegram.html">Telegram</a></div>
                 <div class="service-links">
                     <a href="https://telegram.org" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3103,7 +2954,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/threads.net-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/threads.net-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/threads.html">Threads</a></div>
                 <div class="service-links">
                     <a href="https://metastatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3111,7 +2962,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/tiktok.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/tiktok.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/tiktok.html">TikTok</a></div>
                 <div class="service-links">
                     <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3119,7 +2970,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/tumblr.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/tumblr.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/tumblr.html">Tumblr</a></div>
                 <div class="service-links">
                     <a href="https://tumblr.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3127,7 +2978,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/whatsapp.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/whatsapp.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/whatsapp.html">WhatsApp</a></div>
                 <div class="service-links">
                     <a href="https://metastatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3135,7 +2986,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/x.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/x.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/x-twitter.html">X / Twitter</a></div>
                 <div class="service-links">
                     <a href="https://x.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3144,11 +2995,10 @@
             </div>
         </div>
 
-        <!-- Streaming & Media -->
         <div class="category">
             <h2><a href="/categories/streaming-media.html">Streaming &amp; Media</a> <span>13 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/crunchyroll.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/crunchyroll.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/crunchyroll.html">Crunchyroll</a></div>
                 <div class="service-links">
                     <a href="https://status.crunchyroll.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3156,7 +3006,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/dailymotion.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/dailymotion.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/dailymotion.html">Dailymotion</a></div>
                 <div class="service-links">
                     <a href="https://status.dailymotion.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3164,7 +3014,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/giphy.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/giphy.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/giphy.html">Giphy</a></div>
                 <div class="service-links">
                     <a href="https://status.giphy.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3172,7 +3022,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/hulu.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/hulu.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/hulu.html">Hulu</a></div>
                 <div class="service-links">
                     <a href="https://help.hulu.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3180,7 +3030,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/imgur.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/imgur.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/imgur.html">Imgur</a></div>
                 <div class="service-links">
                     <a href="https://status.imgur.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3188,7 +3038,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/kick.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/kick.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/kick.html">Kick</a></div>
                 <div class="service-links">
                     <a href="https://status.kick.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3196,7 +3046,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/netflix.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/netflix.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/netflix.html">Netflix</a></div>
                 <div class="service-links">
                     <a href="https://help.netflix.com/en/is-netflix-down" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3204,7 +3054,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/paramountplus.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/paramountplus.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/paramountplus.html">Paramount+</a></div>
                 <div class="service-links">
                     <a href="https://www.paramountplus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3212,7 +3062,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/peacocktv.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/peacocktv.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/peacock.html">Peacock</a></div>
                 <div class="service-links">
                     <a href="https://www.peacocktv.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3220,7 +3070,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/spotify.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/spotify.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/spotify.html">Spotify</a></div>
                 <div class="service-links">
                     <a href="https://spotify.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3228,7 +3078,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/twitch.tv-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/twitch.tv-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/twitch.html">Twitch</a></div>
                 <div class="service-links">
                     <a href="https://status.twitch.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3236,7 +3086,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/vimeo.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/vimeo.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/vimeo.html">Vimeo</a></div>
                 <div class="service-links">
                     <a href="https://www.vimeostatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3244,7 +3094,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/youtube.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/youtube.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/youtube.html">YouTube</a></div>
                 <div class="service-links">
                     <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3253,11 +3103,10 @@
             </div>
         </div>
 
-        <!-- Gaming -->
         <div class="category">
             <h2><a href="/categories/gaming.html">Gaming</a> <span>5 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/epicgames.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/epicgames.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/epic-games.html">Epic Games</a></div>
                 <div class="service-links">
                     <a href="https://status.epicgames.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3265,7 +3114,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/fortnite.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/fortnite.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/fortnite.html">Fortnite</a></div>
                 <div class="service-links">
                     <a href="https://fortnite.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3273,7 +3122,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/nintendo.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/nintendo.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/nintendo.html">Nintendo</a></div>
                 <div class="service-links">
                     <a href="https://www.nintendo.com/us/network-status/" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3281,7 +3130,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/playstation.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/playstation.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/playstation.html">PlayStation</a></div>
                 <div class="service-links">
                     <a href="https://status.playstation.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3289,7 +3138,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/unity.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/unity.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/unity.html">Unity</a></div>
                 <div class="service-links">
                     <a href="https://unity.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3298,19 +3147,18 @@
             </div>
         </div>
 
-        <!-- Telecom & ISP -->
         <div class="category">
             <h2><a href="/categories/telecom-isp.html">Telecom &amp; ISP</a> <span>11 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/att.com-32.png" alt="" loading="lazy">
-                <div class="service-name">AT&amp;T</div>
+                <img class="service-favicon" src="/assets/favicons/att.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
+                <div class="service-name"><a href="/status/atandt.html">AT&amp;T</a></div>
                 <div class="service-links">
                     <a href="https://att.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
                     <a href="https://www.att.com" target="_blank" rel="noopener noreferrer">Homepage</a>
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/bell.ca-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/bell.ca-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/bell-canada.html">Bell Canada</a></div>
                 <div class="service-links">
                     <a href="https://bell.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3318,7 +3166,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/xfinity.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/xfinity.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/comcast-xfinity.html">Comcast / Xfinity</a></div>
                 <div class="service-links">
                     <a href="https://www.xfinity.com/support/status" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3326,7 +3174,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cox.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cox.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cox.html">Cox</a></div>
                 <div class="service-links">
                     <a href="https://cox.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3334,7 +3182,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/lumen.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/lumen.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/lumen.html">Lumen</a></div>
                 <div class="service-links">
                     <a href="https://lumen.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3342,7 +3190,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/o2.co.uk-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/o2.co.uk-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/o2.html">O2</a></div>
                 <div class="service-links">
                     <a href="https://o2.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3350,7 +3198,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/starlink.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/starlink.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/starlink.html">Starlink</a></div>
                 <div class="service-links">
                     <a href="https://starlink.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3358,7 +3206,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/telus.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/telus.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/telus.html">Telus</a></div>
                 <div class="service-links">
                     <a href="https://www.telus.com/en/support/article/service-outage" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3366,7 +3214,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/t-mobile.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/t-mobile.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/t-mobile.html">T-Mobile</a></div>
                 <div class="service-links">
                     <a href="https://www.t-mobile.com/support/coverage/network-outages" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3374,7 +3222,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/verizon.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/verizon.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/verizon.html">Verizon</a></div>
                 <div class="service-links">
                     <a href="https://verizon.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3382,7 +3230,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/visible.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/visible.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/visible.html">Visible</a></div>
                 <div class="service-links">
                     <a href="https://status.visible.vc" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3391,11 +3239,10 @@
             </div>
         </div>
 
-        <!-- Security -->
         <div class="category">
             <h2><a href="/categories/security.html">Security</a> <span>19 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/1password.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/1password.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/1password.html">1Password</a></div>
                 <div class="service-links">
                     <a href="https://1password.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3403,7 +3250,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/auth0.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/auth0.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/auth0.html">Auth0</a></div>
                 <div class="service-links">
                     <a href="https://auth0.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3411,7 +3258,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/bitwarden.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/bitwarden.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/bitwarden.html">Bitwarden</a></div>
                 <div class="service-links">
                     <a href="https://status.bitwarden.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3419,7 +3266,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/cloudflare.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/cloudflare.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cloudflare-zero-trust.html">Cloudflare Zero Trust</a></div>
                 <div class="service-links">
                     <a href="https://www.cloudflarestatus.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3427,7 +3274,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/dashlane.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/dashlane.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/dashlane.html">Dashlane</a></div>
                 <div class="service-links">
                     <a href="https://status.dashlane.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3435,7 +3282,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/duo.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/duo.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/duo-security.html">Duo Security</a></div>
                 <div class="service-links">
                     <a href="https://status.duo.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3443,7 +3290,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/keepersecurity.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/keepersecurity.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/keeper.html">Keeper</a></div>
                 <div class="service-links">
                     <a href="https://keeper.statuspage.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3451,7 +3298,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/lastpass.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/lastpass.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/lastpass.html">LastPass</a></div>
                 <div class="service-links">
                     <a href="https://status.lastpass.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3459,7 +3306,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/malwarebytes.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/malwarebytes.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/malwarebytes.html">Malwarebytes</a></div>
                 <div class="service-links">
                     <a href="https://status.threatdown.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3467,7 +3314,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/nordvpn.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/nordvpn.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/nordvpn.html">NordVPN</a></div>
                 <div class="service-links">
                     <a href="https://status.nordvpn.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3475,7 +3322,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/okta.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/okta.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/okta.html">Okta</a></div>
                 <div class="service-links">
                     <a href="https://status.okta.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3483,7 +3330,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="https://www.google.com/s2/favicons?domain=paloaltonetworks.com&sz=32" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/paloaltonetworks.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/palo-alto-networks.html">Palo Alto Networks</a></div>
                 <div class="service-links">
                     <a href="https://status.paloaltonetworks.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3491,7 +3338,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/proton.me-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/proton.me-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/proton.html">Proton</a></div>
                 <div class="service-links">
                     <a href="https://status.proton.me" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3499,7 +3346,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/semgrep.dev-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/semgrep.dev-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/semgrep.html">Semgrep</a></div>
                 <div class="service-links">
                     <a href="https://status.semgrep.dev" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3507,7 +3354,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/stytch.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/stytch.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/stytch.html">Stytch</a></div>
                 <div class="service-links">
                     <a href="https://status.stytch.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3515,7 +3362,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/tailscale.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/tailscale.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/tailscale.html">Tailscale</a></div>
                 <div class="service-links">
                     <a href="https://status.tailscale.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3523,7 +3370,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/wiz.io-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/wiz.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/wiz.html">Wiz</a></div>
                 <div class="service-links">
                     <a href="https://status.wiz.io" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3531,7 +3378,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/workos.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/workos.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/workos.html">WorkOS</a></div>
                 <div class="service-links">
                     <a href="https://status.workos.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3539,7 +3386,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/zscaler.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/zscaler.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/zscaler.html">Zscaler</a></div>
                 <div class="service-links">
                     <a href="https://trust.zscaler.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3548,11 +3395,10 @@
             </div>
         </div>
 
-        <!-- Email & Marketing -->
         <div class="category">
             <h2><a href="/categories/email-marketing.html">Email &amp; Marketing</a> <span>4 services</span></h2>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/mailchimp.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/mailchimp.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/mailchimp.html">Mailchimp</a></div>
                 <div class="service-links">
                     <a href="https://status.mailchimp.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3560,7 +3406,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/mailgun.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/mailgun.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/mailgun.html">Mailgun</a></div>
                 <div class="service-links">
                     <a href="https://status.mailgun.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3568,7 +3414,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/postmarkapp.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/postmarkapp.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/postmark.html">Postmark</a></div>
                 <div class="service-links">
                     <a href="https://status.postmarkapp.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3576,7 +3422,7 @@
                 </div>
             </div>
             <div class="service">
-                <img class="service-favicon" role="presentation" src="/assets/favicons/sendgrid.com-32.png" alt="" loading="lazy">
+                <img class="service-favicon" src="/assets/favicons/sendgrid.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/sendgrid.html">SendGrid</a></div>
                 <div class="service-links">
                     <a href="https://status.sendgrid.com" target="_blank" rel="noopener noreferrer">Status Page</a>
@@ -3584,19 +3430,18 @@
                 </div>
             </div>
         </div>
-
     </div>
     </main>
 
     <footer>
         <nav aria-label="Footer navigation">
             <a href="/">Home</a>
-            <a href="services.html">Services</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="support.html">Support</a>
+            <a href="/services.html">Services</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/support.html">Support</a>
             <a href="mailto:support@vultyr.app">Contact</a>
         </nav>
-        <p style="font-size: 0.75rem; color: #888; margin-top: 16px;">&copy; 2026 Vultyr. All rights reserved.</p>
+        <p class="copyright">&copy; 2026 Vultyr. All rights reserved.</p>
     </footer>
 </body>
 </html>
