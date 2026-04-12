@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YYDJLZG0X1");
-    </script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Microsoft Status Monitor — 6 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 6 microsoft services. Real-time outage alerts for Azure, Microsoft 365, Microsoft Teams, OneDrive, and more.">
     <meta name="theme-color" content="#000000">
@@ -27,9 +19,8 @@
     <link rel="canonical" href="https://vultyr.app/categories/microsoft.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -101,72 +92,78 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/category.css">
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
+    </script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <main id="main">
     <div class="container">
-        <div class="breadcrumb">
-            <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
-            <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
-            <span class="breadcrumb-current">Microsoft</span>
-        </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Vultyr</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <a href="/services.html">Services</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <span class="breadcrumb-current" aria-current="page">Microsoft</span>
+        </nav>
 
         <div class="cat-header">
-            <svg class="cat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40Zm8,136a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8Zm-48,48a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,224Z"/></svg>
+            <svg class="cat-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24H208a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40Zm8,136a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8Zm-48,48a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,224Z"/></svg>
             <h1>Microsoft</h1>
         </div>
         <p class="cat-subtitle">6 services monitored by Vultyr</p>
 
-        <div class="services-grid">
+        <nav class="services-grid" aria-label="Microsoft services">
             <a class="service-card" href="/status/azure.html">
-                <img role="presentation" src="/assets/favicons/azure.microsoft.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/azure.microsoft.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Azure</span>
             </a>
             <a class="service-card" href="/status/microsoft-365.html">
-                <img role="presentation" src="/assets/favicons/microsoft365.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/microsoft365.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Microsoft 365</span>
             </a>
             <a class="service-card" href="/status/microsoft-teams.html">
-                <img role="presentation" src="/assets/favicons/microsoft.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/microsoft.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Microsoft Teams</span>
             </a>
             <a class="service-card" href="/status/onedrive.html">
-                <img role="presentation" src="/assets/favicons/onedrive.live.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/onedrive.live.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>OneDrive</span>
             </a>
             <a class="service-card" href="/status/outlook.html">
-                <img role="presentation" src="/assets/favicons/outlook.live.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/outlook.live.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Outlook</span>
             </a>
             <a class="service-card" href="/status/xbox-live.html">
-                <img role="presentation" src="/assets/favicons/xbox.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/xbox.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Xbox Live</span>
             </a>
-        </div>
+        </nav>
 
-        <div class="other-categories">
-            <h2>Other Categories</h2>
+        <nav class="other-categories" aria-labelledby="other-cats-heading">
+            <h2 id="other-cats-heading">Other Categories</h2>
             <div class="cat-links">
-            <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
-            <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
-            <a class="cat-link" href="/categories/communication.html">Communication</a>
-            <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
-            <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
-            <a class="cat-link" href="/categories/apple.html">Apple</a>
-            <a class="cat-link" href="/categories/google.html">Google</a>
-            <a class="cat-link" href="/categories/amazon.html">Amazon</a>
-            <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
-            <a class="cat-link" href="/categories/social-media.html">Social Media</a>
-            <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
-            <a class="cat-link" href="/categories/gaming.html">Gaming</a>
-            <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
-            <a class="cat-link" href="/categories/security.html">Security</a>
-            <a class="cat-link" href="/categories/email-marketing.html">Email &amp; Marketing</a>
+                <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
+                <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
+                <a class="cat-link" href="/categories/communication.html">Communication</a>
+                <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
+                <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
+                <a class="cat-link" href="/categories/apple.html">Apple</a>
+                <a class="cat-link" href="/categories/google.html">Google</a>
+                <a class="cat-link" href="/categories/amazon.html">Amazon</a>
+                <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
+                <a class="cat-link" href="/categories/social-media.html">Social Media</a>
+                <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
+                <a class="cat-link" href="/categories/gaming.html">Gaming</a>
+                <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
+                <a class="cat-link" href="/categories/security.html">Security</a>
+                <a class="cat-link" href="/categories/email-marketing.html">Email &amp; Marketing</a>
             </div>
-        </div>
+        </nav>
 
         <div class="cta">
             <h2>Monitor all 6 services instantly</h2>
@@ -177,6 +174,7 @@
     </main>
     <footer>
         <nav aria-label="Footer navigation">
+            <a href="/">Home</a>
             <a href="/services.html">Services</a>
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>

@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YYDJLZG0X1");
-    </script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Email &amp; Marketing Status Monitor — 4 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 4 email &amp; marketing services. Real-time outage alerts for Mailchimp, Mailgun, Postmark, SendGrid, and more.">
     <meta name="theme-color" content="#000000">
@@ -27,9 +19,8 @@
     <link rel="canonical" href="https://vultyr.app/categories/email-marketing.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -89,64 +80,70 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/category.css">
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
+    </script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <main id="main">
     <div class="container">
-        <div class="breadcrumb">
-            <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
-            <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
-            <span class="breadcrumb-current">Email &amp; Marketing</span>
-        </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Vultyr</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <a href="/services.html">Services</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <span class="breadcrumb-current" aria-current="page">Email &amp; Marketing</span>
+        </nav>
 
         <div class="cat-header">
-            <svg class="cat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
+            <svg class="cat-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
             <h1>Email &amp; Marketing</h1>
         </div>
         <p class="cat-subtitle">4 services monitored by Vultyr</p>
 
-        <div class="services-grid">
+        <nav class="services-grid" aria-label="Email &amp; Marketing services">
             <a class="service-card" href="/status/mailchimp.html">
-                <img role="presentation" src="/assets/favicons/mailchimp.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/mailchimp.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Mailchimp</span>
             </a>
             <a class="service-card" href="/status/mailgun.html">
-                <img role="presentation" src="/assets/favicons/mailgun.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/mailgun.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Mailgun</span>
             </a>
             <a class="service-card" href="/status/postmark.html">
-                <img role="presentation" src="/assets/favicons/postmarkapp.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/postmarkapp.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Postmark</span>
             </a>
             <a class="service-card" href="/status/sendgrid.html">
-                <img role="presentation" src="/assets/favicons/sendgrid.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/sendgrid.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>SendGrid</span>
             </a>
-        </div>
+        </nav>
 
-        <div class="other-categories">
-            <h2>Other Categories</h2>
+        <nav class="other-categories" aria-labelledby="other-cats-heading">
+            <h2 id="other-cats-heading">Other Categories</h2>
             <div class="cat-links">
-            <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
-            <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
-            <a class="cat-link" href="/categories/communication.html">Communication</a>
-            <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
-            <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
-            <a class="cat-link" href="/categories/apple.html">Apple</a>
-            <a class="cat-link" href="/categories/google.html">Google</a>
-            <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
-            <a class="cat-link" href="/categories/amazon.html">Amazon</a>
-            <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
-            <a class="cat-link" href="/categories/social-media.html">Social Media</a>
-            <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
-            <a class="cat-link" href="/categories/gaming.html">Gaming</a>
-            <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
-            <a class="cat-link" href="/categories/security.html">Security</a>
+                <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
+                <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
+                <a class="cat-link" href="/categories/communication.html">Communication</a>
+                <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
+                <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
+                <a class="cat-link" href="/categories/apple.html">Apple</a>
+                <a class="cat-link" href="/categories/google.html">Google</a>
+                <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
+                <a class="cat-link" href="/categories/amazon.html">Amazon</a>
+                <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
+                <a class="cat-link" href="/categories/social-media.html">Social Media</a>
+                <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
+                <a class="cat-link" href="/categories/gaming.html">Gaming</a>
+                <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
+                <a class="cat-link" href="/categories/security.html">Security</a>
             </div>
-        </div>
+        </nav>
 
         <div class="cta">
             <h2>Monitor all 4 services instantly</h2>
@@ -157,6 +154,7 @@
     </main>
     <footer>
         <nav aria-label="Footer navigation">
+            <a href="/">Home</a>
             <a href="/services.html">Services</a>
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>

@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YYDJLZG0X1");
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
-    <title>Vultyr — Service Status Monitor for AWS, Slack, GitHub & More</title>
-    <meta name="description" content="Is it down? Monitor 200+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <title>Vultyr — Service Status Monitor for AWS, Slack, GitHub &amp; More</title>
+    <meta name="description" content="Is it down? Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.">
+    <meta name="theme-color" content="#000000">
     <meta property="og:title" content="Vultyr — Service Status Monitor">
-    <meta property="og:description" content="Is it down? Monitor 200+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.">
+    <meta property="og:description" content="Is it down? Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
     <meta property="og:url" content="https://vultyr.app">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Vultyr">
     <meta property="og:locale" content="en_US">
-    <meta name="theme-color" content="#000000">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vultyr — Service Status Monitor">
-    <meta name="twitter:description" content="Is it down? Monitor 200+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.">
+    <meta name="twitter:description" content="Is it down? Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="/assets/icon-256.png" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -39,11 +33,18 @@
       "name": "Vultyr",
       "alternateName": "vultyr",
       "applicationCategory": "UtilitiesApplication",
-      "operatingSystem": "iOS, macOS, tvOS, watchOS, visionOS",
+      "operatingSystem": "iOS, iPadOS, macOS, tvOS, watchOS, visionOS",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "description": "Monitor 200+ cloud services, dev tools, and platforms with instant outage alerts.",
+      "description": "Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts.",
       "url": "https://vultyr.app",
-      "downloadUrl": "https://apps.apple.com/us/app/vultyr/id6761264004"
+      "downloadUrl": "https://apps.apple.com/us/app/vultyr/id6761264004",
+      "screenshot": [
+        "https://vultyr.app/assets/dash.webp",
+        "https://vultyr.app/assets/settings.webp",
+        "https://vultyr.app/assets/services.webp"
+      ],
+      "author": { "@type": "Organization", "name": "Vultyr", "url": "https://vultyr.app" },
+      "publisher": { "@type": "Organization", "name": "Vultyr", "url": "https://vultyr.app" }
     }
     </script>
     <script type="application/ld+json">
@@ -59,399 +60,56 @@
       }
     }
     </script>
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-            background: #000;
-            color: #fff;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* Subtle noise texture */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        a { color: inherit; text-decoration: none; }
-
-        /* ── Utility ── */
-        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-        .highlight { color: #00ff41; }
-        .highlight-orange { color: #ff9926; }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
-
-        /* ── Animations ── */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(0, 255, 65, 0.15); }
-            50% { box-shadow: 0 0 40px rgba(0, 255, 65, 0.25); }
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        .fade-up {
-            opacity: 0;
-            animation: fadeUp 0.6s ease-out forwards;
-        }
-        .fade-up-1 { animation-delay: 0.1s; }
-        .fade-up-2 { animation-delay: 0.2s; }
-        .fade-up-3 { animation-delay: 0.3s; }
-        .fade-up-4 { animation-delay: 0.4s; }
-        .fade-up-5 { animation-delay: 0.5s; }
-
-        /* ── Hero ── */
-        .hero {
-            text-align: center;
-            padding: 60px 24px 40px;
-            position: relative;
-        }
-        .hero-inner {
-            max-width: 680px;
-            margin: 0 auto;
-        }
-        .icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 28px;
-            margin-bottom: 20px;
-            animation: glow 3s ease-in-out infinite;
-        }
-        h1 {
-            font-size: clamp(2.8rem, 8vw, 4.5rem);
-            font-weight: 400;
-            font-family: 'Audiowide', sans-serif;
-            letter-spacing: -0.02em;
-            margin-bottom: 16px;
-            line-height: 1.1;
-        }
-        .tagline {
-            font-size: clamp(1.15rem, 3vw, 1.35rem);
-            color: #ccc;
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-        .tagline-services {
-            font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-            color: #888;
-            margin-bottom: 28px;
-            line-height: 1.5;
-        }
-        .cta-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-        .badge-link {
-            display: inline-block;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-        .badge-link:hover { transform: translateY(-2px); }
-        .badge-img { height: 54px; }
-        .platforms {
-            font-size: 0.8rem;
-            color: #777;
-            letter-spacing: 0.02em;
-        }
-        .platforms span {
-            color: #888;
-        }
-
-        /* ── Screenshots ── */
-        .screenshots {
-            padding: 40px 0 60px;
-            overflow: hidden;
-        }
-        .screenshots-track {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 0 24px;
-        }
-        .phone-frame {
-            flex-shrink: 0;
-            width: 220px;
-            border-radius: 28px;
-            overflow: hidden;
-            border: 2px solid #1a1a1a;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 255, 65, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .phone-frame:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 255, 65, 0.1);
-        }
-        .phone-frame img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        @media (max-width: 720px) {
-            .phone-frame { width: 180px; }
-            .screenshots-track { gap: 12px; }
-        }
-        @media (max-width: 580px) {
-            .screenshots-track {
-                justify-content: flex-start;
-                overflow-x: auto;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-                padding: 0 24px;
-            }
-            .phone-frame {
-                scroll-snap-align: center;
-                width: 240px;
-            }
-        }
-
-        /* ── Section divider ── */
-        .divider {
-            width: 100%;
-            max-width: 200px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #00ff41, transparent);
-            margin: 0 auto;
-            opacity: 0.3;
-        }
-
-        /* ── Features ── */
-        .features {
-            padding: 60px 24px;
-        }
-        .features-heading {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-        .features-heading h2 {
-            font-size: clamp(1.5rem, 4vw, 2rem);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .features-heading p {
-            color: #888;
-            font-size: 0.95rem;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        .feature-card {
-            display: flex;
-            gap: 16px;
-            padding: 24px;
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid #1a1a1a;
-            transition: border-color 0.3s, background 0.3s;
-        }
-        .feature-card:hover {
-            border-color: rgba(0, 255, 65, 0.2);
-            background: rgba(0, 255, 65, 0.02);
-        }
-        .feature-icon {
-            flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            background: rgba(0, 255, 65, 0.08);
-        }
-        .feature-icon img {
-            width: 22px;
-            height: 22px;
-            filter: brightness(0) saturate(100%) invert(62%) sepia(92%) saturate(3000%) hue-rotate(95deg) brightness(105%);
-        }
-        .feature-card h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #eee;
-            margin-bottom: 6px;
-        }
-        .feature-card p {
-            font-size: 0.875rem;
-            color: #999;
-            line-height: 1.55;
-        }
-
-        /* ── Stats bar ── */
-        .stats {
-            padding: 48px 24px;
-            text-align: center;
-        }
-        .stats-grid {
-            display: flex;
-            justify-content: center;
-            gap: 48px;
-            flex-wrap: wrap;
-            max-width: 680px;
-            margin: 0 auto;
-        }
-        .stat {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .stat-value {
-            font-size: clamp(2rem, 5vw, 2.5rem);
-            font-weight: 700;
-            font-family: 'Audiowide', sans-serif;
-            color: #00ff41;
-        }
-        .stat-label {
-            font-size: 0.8rem;
-            color: #888;
-            margin-top: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        /* ── Bottom CTA ── */
-        .bottom-cta {
-            text-align: center;
-            padding: 60px 24px;
-        }
-        .bottom-cta h2 {
-            font-size: clamp(1.4rem, 4vw, 1.8rem);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .bottom-cta p {
-            color: #888;
-            margin-bottom: 24px;
-            font-size: 0.95rem;
-        }
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            background: #00ff41;
-            color: #000;
-            font-weight: 600;
-            font-size: 1rem;
-            border-radius: 50px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0, 255, 65, 0.25);
-        }
-        .cta-button img {
-            width: 18px;
-            height: 18px;
-            filter: brightness(0);
-        }
-
-        /* ── Footer ── */
-        footer {
-            text-align: center;
-            padding: 40px 24px;
-            border-top: 1px solid #111;
-        }
-        footer nav {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            flex-wrap: wrap;
-            margin-bottom: 16px;
-        }
-        footer a {
-            color: #888;
-            font-size: 0.85rem;
-            transition: color 0.2s;
-        }
-        footer a:hover { color: #ccc; }
-        .copyright {
-            font-size: 0.75rem;
-            color: #888;
-        }
-
-        /* ── Focus styles ── */
-        :focus-visible {
-            outline: 2px solid #00ff41;
-            outline-offset: 3px;
-        }
-
-        /* ── Reduced motion ── */
-        @media (prefers-reduced-motion: reduce) {
-            .fade-up { animation: none; opacity: 1; }
-            .icon { animation: none; }
-            .phone-frame { transition: none; }
-            .feature-card { transition: none; }
-            .cta-button { transition: none; }
-            .badge-link { transition: none; }
-        }
-    </style>
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
+    </script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
 
-    <!-- Hero -->
     <main id="main">
     <header class="hero">
         <div class="hero-inner">
-            <img src="/icon.png" alt="Vultyr app icon" class="icon">
+            <img src="/assets/icon-256.png" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
             <h1 class="fade-up fade-up-1">vultyr</h1>
             <p class="tagline fade-up fade-up-2">Is it down? <span class="highlight">Know before your users do.</span></p>
-            <p class="tagline-services fade-up fade-up-3">Monitor 200+ services — AWS, GitHub, Slack, Stripe & more — with instant outage alerts across every Apple device.</p>
+            <p class="tagline-services fade-up fade-up-3">Monitor 235+ services — AWS, GitHub, Slack, Stripe &amp; more — with instant outage alerts across every Apple device.</p>
             <div class="cta-group fade-up fade-up-4">
                 <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="Download Vultyr on the App Store">
-                    <img src="/assets/app-store-badge.svg" alt="Download on the App Store" class="badge-img">
+                    <img src="/assets/app-store-badge.svg" alt="Download on the App Store" class="badge-img" width="180" height="54" decoding="async">
                 </a>
                 <p class="platforms">Free on <span>iPhone</span> &middot; <span>iPad</span> &middot; <span>Mac</span> &middot; <span>Apple TV</span> &middot; <span>Apple Watch</span> &middot; <span>Vision Pro</span></p>
             </div>
         </div>
     </header>
 
-    <!-- Screenshots -->
-    <section class="screenshots fade-up fade-up-5" aria-label="App screenshots">
+    <section class="screenshots fade-up fade-up-5" aria-labelledby="screenshots-heading">
+        <h2 id="screenshots-heading" class="sr-only">App screenshots</h2>
         <div class="screenshots-track">
             <div class="phone-frame">
-                <picture>
-                    <source srcset="/assets/dash.webp" type="image/webp">
-                    <img src="/assets/dash.jpeg" alt="Vultyr dashboard showing All Clear status with services like AWS, GitHub, and Slack monitored" loading="lazy" width="390" height="844">
-                </picture>
+                <img src="/assets/dash.webp" alt="Vultyr dashboard showing All Clear status with services like AWS, GitHub, and Slack monitored" width="390" height="844" decoding="async" fetchpriority="high">
             </div>
             <div class="phone-frame">
-                <picture>
-                    <source srcset="/assets/settings.webp" type="image/webp">
-                    <img src="/assets/settings.jpeg" alt="Vultyr appearance settings with 12 themes including Terminal, Amber, Dracula, and Nord" loading="lazy" width="390" height="844">
-                </picture>
+                <img src="/assets/settings.webp" alt="Vultyr appearance settings with 12 themes including Terminal, Amber, Dracula, and Nord" width="390" height="844" decoding="async">
             </div>
             <div class="phone-frame">
-                <picture>
-                    <source srcset="/assets/services.webp" type="image/webp">
-                    <img src="/assets/services.jpeg" alt="Vultyr service browser showing 16 categories including Cloud, Dev Tools, and AI" loading="lazy" width="390" height="844">
-                </picture>
+                <img src="/assets/services.webp" alt="Vultyr service browser showing 16 categories including Cloud, Dev Tools, and AI" width="390" height="844" decoding="async">
             </div>
         </div>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
 
-    <!-- Stats -->
-    <section class="stats" aria-label="Key numbers">
+    <section class="stats" aria-labelledby="stats-heading">
+        <h2 id="stats-heading" class="sr-only">Key numbers</h2>
         <div class="stats-grid">
             <div class="stat">
-                <span class="stat-value">200+</span>
+                <span class="stat-value">235+</span>
                 <span class="stat-label">Services</span>
             </div>
             <div class="stat">
@@ -464,100 +122,97 @@
             </div>
             <div class="stat">
                 <span class="stat-value">16</span>
-                <span class="stat-label">Languages</span>
+                <span class="stat-label">App Languages</span>
             </div>
         </div>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
 
-    <!-- Features -->
-    <section class="features" aria-label="Features">
+    <section class="features" aria-labelledby="features-heading">
         <div class="features-heading">
-            <h2>Everything you need to stay ahead of outages</h2>
-            <p>No accounts, no servers, no tracking. Just status.</p>
+            <h2 id="features-heading">Everything you need to stay ahead of outages</h2>
+            <p>No app accounts, no servers, no in-app tracking. Just status.</p>
         </div>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22"></div>
+                <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Live Status Dashboard</h3>
-                    <p>AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic and 200+ more — all in one place.</p>
+                    <p>AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic and 235+ more — all in one place.</p>
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22"></div>
+                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Smart Alerts</h3>
                     <p>Get notified when a service goes down or comes back up. Mute known incidents and star critical services.</p>
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22"></div>
+                <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Cross-Device Sync</h3>
                     <p>Your Mac monitors continuously and pushes status changes to all your devices via iCloud. No setup needed.</p>
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22"></div>
+                <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Every Apple Platform</h3>
                     <p>iPhone, Mac menu bar, Apple TV, Apple Watch, and Vision Pro. Services sync across all devices.</p>
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22"></div>
+                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Incident Details</h3>
                     <p>See affected components, active incidents, scheduled maintenance, and timeline updates from the source.</p>
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22"></div>
+                <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Battery-Aware Polling</h3>
                     <p>Smart auto-refresh adapts to battery, power state, and thermals. Every minute on Mac, 5-15 on iPhone.</p>
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22"></div>
+                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>12 Themes</h3>
                     <p>Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, HAL, or Standard.</p>
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22"></div>
+                <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
-                    <h3>No Account Needed</h3>
-                    <p>No sign-up, no tracking, no data collection. All data stays on your device. Completely private.</p>
+                    <h3>App Data Stays Local</h3>
+                    <p>The app has no sign-up and no in-app analytics. Your watched services stay on your device.</p>
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22"></div>
+                <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
-                    <h3>16 Languages</h3>
+                    <h3>16 App Languages</h3>
                     <p>English, German, French, Spanish, Japanese, Korean, Chinese, Portuguese, and more.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="divider"></div>
+    <div class="divider" aria-hidden="true"></div>
 
-    <!-- Bottom CTA -->
-    <section class="bottom-cta">
-        <h2>Ready to monitor your stack?</h2>
-        <p>Free. No account required. Available everywhere.</p>
+    <section class="bottom-cta" aria-labelledby="bottom-cta-heading">
+        <h2 id="bottom-cta-heading">Ready to monitor your stack?</h2>
+        <p>Free. No app account required. Available everywhere.</p>
         <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Download Vultyr free on the App Store">
-            <img src="/assets/icons/download-simple-regular.svg" alt="" width="18" height="18">
+            <img src="/assets/icons/download-simple-regular.svg" alt="" width="18" height="18" aria-hidden="true">
             Download Free
         </a>
     </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <nav aria-label="Footer navigation">
             <a href="/services.html">Services</a>
