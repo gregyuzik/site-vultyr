@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YYDJLZG0X1");
-    </script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Telecom &amp; ISP Status Monitor — 11 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 11 telecom &amp; isp services. Real-time outage alerts for AT&amp;T, Bell Canada, Comcast / Xfinity, Cox, and more.">
     <meta name="theme-color" content="#000000">
@@ -27,9 +19,8 @@
     <link rel="canonical" href="https://vultyr.app/categories/telecom-isp.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -131,92 +122,98 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/category.css">
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
+    </script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <main id="main">
     <div class="container">
-        <div class="breadcrumb">
-            <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
-            <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
-            <span class="breadcrumb-current">Telecom &amp; ISP</span>
-        </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Vultyr</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <a href="/services.html">Services</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <span class="breadcrumb-current" aria-current="page">Telecom &amp; ISP</span>
+        </nav>
 
         <div class="cat-header">
-            <svg class="cat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M140,204a12,12,0,1,1-12-12A12,12,0,0,1,140,204ZM237.08,87A172,172,0,0,0,18.92,87,8,8,0,0,0,29.08,99.37a156,156,0,0,1,197.84,0A8,8,0,0,0,237.08,87ZM205,122.77a124,124,0,0,0-153.94,0A8,8,0,0,0,61,135.31a108,108,0,0,1,134.06,0,8,8,0,0,0,11.24-1.3A8,8,0,0,0,205,122.77Zm-32.26,35.76a76.05,76.05,0,0,0-89.42,0,8,8,0,0,0,9.42,12.94,60,60,0,0,1,70.58,0,8,8,0,1,0,9.42-12.94Z"/></svg>
+            <svg class="cat-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M140,204a12,12,0,1,1-12-12A12,12,0,0,1,140,204ZM237.08,87A172,172,0,0,0,18.92,87,8,8,0,0,0,29.08,99.37a156,156,0,0,1,197.84,0A8,8,0,0,0,237.08,87ZM205,122.77a124,124,0,0,0-153.94,0A8,8,0,0,0,61,135.31a108,108,0,0,1,134.06,0,8,8,0,0,0,11.24-1.3A8,8,0,0,0,205,122.77Zm-32.26,35.76a76.05,76.05,0,0,0-89.42,0,8,8,0,0,0,9.42,12.94,60,60,0,0,1,70.58,0,8,8,0,1,0,9.42-12.94Z"/></svg>
             <h1>Telecom &amp; ISP</h1>
         </div>
         <p class="cat-subtitle">11 services monitored by Vultyr</p>
 
-        <div class="services-grid">
+        <nav class="services-grid" aria-label="Telecom &amp; ISP services">
             <a class="service-card" href="/status/atandt.html">
-                <img role="presentation" src="/assets/favicons/att.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/att.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>AT&amp;T</span>
             </a>
             <a class="service-card" href="/status/bell-canada.html">
-                <img role="presentation" src="/assets/favicons/bell.ca-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/bell.ca-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Bell Canada</span>
             </a>
             <a class="service-card" href="/status/comcast-xfinity.html">
-                <img role="presentation" src="/assets/favicons/xfinity.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/xfinity.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Comcast / Xfinity</span>
             </a>
             <a class="service-card" href="/status/cox.html">
-                <img role="presentation" src="/assets/favicons/cox.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/cox.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Cox</span>
             </a>
             <a class="service-card" href="/status/lumen.html">
-                <img role="presentation" src="/assets/favicons/lumen.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/lumen.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Lumen</span>
             </a>
             <a class="service-card" href="/status/o2.html">
-                <img role="presentation" src="/assets/favicons/o2.co.uk-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/o2.co.uk-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>O2</span>
             </a>
             <a class="service-card" href="/status/starlink.html">
-                <img role="presentation" src="/assets/favicons/starlink.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/starlink.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Starlink</span>
             </a>
             <a class="service-card" href="/status/telus.html">
-                <img role="presentation" src="/assets/favicons/telus.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/telus.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Telus</span>
             </a>
             <a class="service-card" href="/status/t-mobile.html">
-                <img role="presentation" src="/assets/favicons/t-mobile.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/t-mobile.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>T-Mobile</span>
             </a>
             <a class="service-card" href="/status/verizon.html">
-                <img role="presentation" src="/assets/favicons/verizon.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/verizon.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Verizon</span>
             </a>
             <a class="service-card" href="/status/visible.html">
-                <img role="presentation" src="/assets/favicons/visible.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/visible.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Visible</span>
             </a>
-        </div>
+        </nav>
 
-        <div class="other-categories">
-            <h2>Other Categories</h2>
+        <nav class="other-categories" aria-labelledby="other-cats-heading">
+            <h2 id="other-cats-heading">Other Categories</h2>
             <div class="cat-links">
-            <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
-            <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
-            <a class="cat-link" href="/categories/communication.html">Communication</a>
-            <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
-            <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
-            <a class="cat-link" href="/categories/apple.html">Apple</a>
-            <a class="cat-link" href="/categories/google.html">Google</a>
-            <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
-            <a class="cat-link" href="/categories/amazon.html">Amazon</a>
-            <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
-            <a class="cat-link" href="/categories/social-media.html">Social Media</a>
-            <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
-            <a class="cat-link" href="/categories/gaming.html">Gaming</a>
-            <a class="cat-link" href="/categories/security.html">Security</a>
-            <a class="cat-link" href="/categories/email-marketing.html">Email &amp; Marketing</a>
+                <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
+                <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
+                <a class="cat-link" href="/categories/communication.html">Communication</a>
+                <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
+                <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
+                <a class="cat-link" href="/categories/apple.html">Apple</a>
+                <a class="cat-link" href="/categories/google.html">Google</a>
+                <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
+                <a class="cat-link" href="/categories/amazon.html">Amazon</a>
+                <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
+                <a class="cat-link" href="/categories/social-media.html">Social Media</a>
+                <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
+                <a class="cat-link" href="/categories/gaming.html">Gaming</a>
+                <a class="cat-link" href="/categories/security.html">Security</a>
+                <a class="cat-link" href="/categories/email-marketing.html">Email &amp; Marketing</a>
             </div>
-        </div>
+        </nav>
 
         <div class="cta">
             <h2>Monitor all 11 services instantly</h2>
@@ -227,6 +224,7 @@
     </main>
     <footer>
         <nav aria-label="Footer navigation">
+            <a href="/">Home</a>
             <a href="/services.html">Services</a>
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>

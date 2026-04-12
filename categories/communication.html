@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-YYDJLZG0X1");
-    </script>
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' https: data:;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Communication Status Monitor — 9 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 9 communication services. Real-time outage alerts for Discord, LiveKit, Matrix, Signal, and more.">
     <meta name="theme-color" content="#000000">
@@ -27,9 +19,8 @@
     <link rel="canonical" href="https://vultyr.app/categories/communication.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -119,84 +110,90 @@
       ]
     }
     </script>
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/category.css">
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
+    </script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
     <main id="main">
     <div class="container">
-        <div class="breadcrumb">
-            <a href="/">Vultyr</a><span class="sep">&rsaquo;</span>
-            <a href="/services.html">Services</a><span class="sep">&rsaquo;</span>
-            <span class="breadcrumb-current">Communication</span>
-        </div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Vultyr</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <a href="/services.html">Services</a><span class="sep" aria-hidden="true">&rsaquo;</span>
+            <span class="breadcrumb-current" aria-current="page">Communication</span>
+        </nav>
 
         <div class="cat-header">
-            <svg class="cat-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>
+            <svg class="cat-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>
             <h1>Communication</h1>
         </div>
         <p class="cat-subtitle">9 services monitored by Vultyr</p>
 
-        <div class="services-grid">
+        <nav class="services-grid" aria-label="Communication services">
             <a class="service-card" href="/status/discord.html">
-                <img role="presentation" src="/assets/favicons/discord.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/discord.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Discord</span>
             </a>
             <a class="service-card" href="/status/livekit.html">
-                <img role="presentation" src="/assets/favicons/livekit.io-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/livekit.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>LiveKit</span>
             </a>
             <a class="service-card" href="/status/matrix.html">
-                <img role="presentation" src="/assets/favicons/matrix.org-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/matrix.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Matrix</span>
             </a>
             <a class="service-card" href="/status/signal.html">
-                <img role="presentation" src="/assets/favicons/signal.org-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/signal.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Signal</span>
             </a>
             <a class="service-card" href="/status/slack.html">
-                <img role="presentation" src="/assets/favicons/slack.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/slack.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Slack</span>
             </a>
             <a class="service-card" href="/status/twilio.html">
-                <img role="presentation" src="/assets/favicons/twilio.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/twilio.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Twilio</span>
             </a>
             <a class="service-card" href="/status/vonage.html">
-                <img role="presentation" src="/assets/favicons/vonage.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/vonage.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Vonage</span>
             </a>
             <a class="service-card" href="/status/webex.html">
-                <img role="presentation" src="/assets/favicons/webex.com-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/webex.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Webex</span>
             </a>
             <a class="service-card" href="/status/zoom.html">
-                <img role="presentation" src="/assets/favicons/zoom.us-32.png" alt="" loading="lazy" width="24" height="24">
+                <img src="/assets/favicons/zoom.us-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Zoom</span>
             </a>
-        </div>
+        </nav>
 
-        <div class="other-categories">
-            <h2>Other Categories</h2>
+        <nav class="other-categories" aria-labelledby="other-cats-heading">
+            <h2 id="other-cats-heading">Other Categories</h2>
             <div class="cat-links">
-            <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
-            <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
-            <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
-            <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
-            <a class="cat-link" href="/categories/apple.html">Apple</a>
-            <a class="cat-link" href="/categories/google.html">Google</a>
-            <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
-            <a class="cat-link" href="/categories/amazon.html">Amazon</a>
-            <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
-            <a class="cat-link" href="/categories/social-media.html">Social Media</a>
-            <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
-            <a class="cat-link" href="/categories/gaming.html">Gaming</a>
-            <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
-            <a class="cat-link" href="/categories/security.html">Security</a>
-            <a class="cat-link" href="/categories/email-marketing.html">Email &amp; Marketing</a>
+                <a class="cat-link" href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a>
+                <a class="cat-link" href="/categories/developer-tools.html">Developer Tools</a>
+                <a class="cat-link" href="/categories/productivity-saas.html">Productivity &amp; SaaS</a>
+                <a class="cat-link" href="/categories/payments-commerce.html">Payments &amp; Commerce</a>
+                <a class="cat-link" href="/categories/apple.html">Apple</a>
+                <a class="cat-link" href="/categories/google.html">Google</a>
+                <a class="cat-link" href="/categories/microsoft.html">Microsoft</a>
+                <a class="cat-link" href="/categories/amazon.html">Amazon</a>
+                <a class="cat-link" href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a>
+                <a class="cat-link" href="/categories/social-media.html">Social Media</a>
+                <a class="cat-link" href="/categories/streaming-media.html">Streaming &amp; Media</a>
+                <a class="cat-link" href="/categories/gaming.html">Gaming</a>
+                <a class="cat-link" href="/categories/telecom-isp.html">Telecom &amp; ISP</a>
+                <a class="cat-link" href="/categories/security.html">Security</a>
+                <a class="cat-link" href="/categories/email-marketing.html">Email &amp; Marketing</a>
             </div>
-        </div>
+        </nav>
 
         <div class="cta">
             <h2>Monitor all 9 services instantly</h2>
@@ -207,6 +204,7 @@
     </main>
     <footer>
         <nav aria-label="Footer navigation">
+            <a href="/">Home</a>
             <a href="/services.html">Services</a>
             <a href="/privacy.html">Privacy</a>
             <a href="/support.html">Support</a>
