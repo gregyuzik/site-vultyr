@@ -17,6 +17,7 @@ FAVICONS_DIR = ROOT_DIR / "assets" / "favicons"
 TODAY = date.today().isoformat()
 
 GA_ID = "G-YYDJLZG0X1"
+FAVICON_HREF = "/favicon.png?v=20260413"
 
 ALLOWED_URL_SCHEMES = {"https", "mailto"}
 
@@ -203,7 +204,7 @@ def generate_services_page(data, favicon):
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/services.html">
     <link rel="apple-touch-icon" href="/icon.png">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/services-list.css">
 {json_ld(item_list_ld)}
@@ -351,7 +352,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/status/{e(slug)}.html">
     <link rel="apple-touch-icon" href="/icon.png">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/service.css">
 {json_ld(breadcrumb_ld)}
@@ -503,7 +504,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/categories/{e(slug)}.html">
     <link rel="apple-touch-icon" href="/icon.png">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/category.css">
 {json_ld(breadcrumb_ld)}
@@ -579,7 +580,7 @@ def generate_404(data, favicon):
     <meta name="theme-color" content="#000000">
     <meta name="robots" content="noindex">
     <link rel="apple-touch-icon" href="/icon.png">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
     <link rel="stylesheet" href="/assets/css/shared.css">
     <style>
         .error-main {{ text-align: center; padding: 80px 24px 40px; max-width: 720px; margin: 0 auto; }}
