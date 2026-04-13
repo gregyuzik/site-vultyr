@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-S9NUwzxO+eByzgc1QD6faIxkuDMb2d0wgYazR4oAseU=' 'sha256-JjJCyohJzDzvtepsmOZ6XxI3NA56EQ2wVdde4U2qaNY='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Security Status Monitor — 19 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 19 security services. Real-time outage alerts for 1Password, Auth0, Bitwarden, Cloudflare Zero Trust, and more.">
     <meta name="theme-color" content="#000000">
@@ -22,162 +22,157 @@
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Vultyr",
-          "item": "https://vultyr.app"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://vultyr.app/services.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Security"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Vultyr",
+      "item": "https://vultyr.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://vultyr.app/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Security"
     }
-    </script>
+  ]
+}
+</script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Security Status Monitors",
+  "numberOfItems": 19,
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Security Status Monitors",
-      "numberOfItems": 19,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "1Password",
-          "url": "https://vultyr.app/status/1password.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Auth0",
-          "url": "https://vultyr.app/status/auth0.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Bitwarden",
-          "url": "https://vultyr.app/status/bitwarden.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Cloudflare Zero Trust",
-          "url": "https://vultyr.app/status/cloudflare-zero-trust.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Dashlane",
-          "url": "https://vultyr.app/status/dashlane.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Duo Security",
-          "url": "https://vultyr.app/status/duo-security.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Keeper",
-          "url": "https://vultyr.app/status/keeper.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "LastPass",
-          "url": "https://vultyr.app/status/lastpass.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "Malwarebytes",
-          "url": "https://vultyr.app/status/malwarebytes.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "name": "NordVPN",
-          "url": "https://vultyr.app/status/nordvpn.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 11,
-          "name": "Okta",
-          "url": "https://vultyr.app/status/okta.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "name": "Palo Alto Networks",
-          "url": "https://vultyr.app/status/palo-alto-networks.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 13,
-          "name": "Proton",
-          "url": "https://vultyr.app/status/proton.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 14,
-          "name": "Semgrep",
-          "url": "https://vultyr.app/status/semgrep.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 15,
-          "name": "Stytch",
-          "url": "https://vultyr.app/status/stytch.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 16,
-          "name": "Tailscale",
-          "url": "https://vultyr.app/status/tailscale.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 17,
-          "name": "Wiz",
-          "url": "https://vultyr.app/status/wiz.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 18,
-          "name": "WorkOS",
-          "url": "https://vultyr.app/status/workos.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 19,
-          "name": "Zscaler",
-          "url": "https://vultyr.app/status/zscaler.html"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "1Password",
+      "url": "https://vultyr.app/status/1password.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Auth0",
+      "url": "https://vultyr.app/status/auth0.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Bitwarden",
+      "url": "https://vultyr.app/status/bitwarden.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Cloudflare Zero Trust",
+      "url": "https://vultyr.app/status/cloudflare-zero-trust.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Dashlane",
+      "url": "https://vultyr.app/status/dashlane.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Duo Security",
+      "url": "https://vultyr.app/status/duo-security.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Keeper",
+      "url": "https://vultyr.app/status/keeper.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "LastPass",
+      "url": "https://vultyr.app/status/lastpass.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Malwarebytes",
+      "url": "https://vultyr.app/status/malwarebytes.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "NordVPN",
+      "url": "https://vultyr.app/status/nordvpn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Okta",
+      "url": "https://vultyr.app/status/okta.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Palo Alto Networks",
+      "url": "https://vultyr.app/status/palo-alto-networks.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "Proton",
+      "url": "https://vultyr.app/status/proton.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "Semgrep",
+      "url": "https://vultyr.app/status/semgrep.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "Stytch",
+      "url": "https://vultyr.app/status/stytch.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "Tailscale",
+      "url": "https://vultyr.app/status/tailscale.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "Wiz",
+      "url": "https://vultyr.app/status/wiz.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "WorkOS",
+      "url": "https://vultyr.app/status/workos.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "Zscaler",
+      "url": "https://vultyr.app/status/zscaler.html"
     }
-    </script>
+  ]
+}
+</script>
     <!-- Google tag (gtag.js) — cookieless, anonymized -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
-    </script>
+    <script defer src="/assets/js/analytics.js"></script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>

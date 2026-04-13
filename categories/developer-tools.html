@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-hJP+RYCNissmkRWFw949Pg3GGxbF3e4JLRyvpbrigYA=' 'sha256-2JpTtXOPigd4oPpMFMfZWKIa2lfLPTgNyJm4VVr1r/8='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Developer Tools Status Monitor — 54 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 54 developer tools services. Real-time outage alerts for Airbyte, Better Stack, Bitbucket, Bitrise, and more.">
     <meta name="theme-color" content="#000000">
@@ -22,372 +22,367 @@
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Vultyr",
-          "item": "https://vultyr.app"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://vultyr.app/services.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Developer Tools"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Vultyr",
+      "item": "https://vultyr.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://vultyr.app/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Developer Tools"
     }
-    </script>
+  ]
+}
+</script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Developer Tools Status Monitors",
+  "numberOfItems": 54,
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Developer Tools Status Monitors",
-      "numberOfItems": 54,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Airbyte",
-          "url": "https://vultyr.app/status/airbyte.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Better Stack",
-          "url": "https://vultyr.app/status/better-stack.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Bitbucket",
-          "url": "https://vultyr.app/status/bitbucket.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Bitrise",
-          "url": "https://vultyr.app/status/bitrise.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Buildkite",
-          "url": "https://vultyr.app/status/buildkite.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "CircleCI",
-          "url": "https://vultyr.app/status/circleci.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Cloudinary",
-          "url": "https://vultyr.app/status/cloudinary.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "Cloudsmith",
-          "url": "https://vultyr.app/status/cloudsmith.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "Codecov",
-          "url": "https://vultyr.app/status/codecov.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "name": "Codefresh",
-          "url": "https://vultyr.app/status/codefresh.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 11,
-          "name": "CocoaPods",
-          "url": "https://vultyr.app/status/cocoapods.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "name": "Contentful",
-          "url": "https://vultyr.app/status/contentful.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 13,
-          "name": "Convex",
-          "url": "https://vultyr.app/status/convex.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 14,
-          "name": "Crates.io",
-          "url": "https://vultyr.app/status/cratesio.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 15,
-          "name": "dbt Cloud",
-          "url": "https://vultyr.app/status/dbt-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 16,
-          "name": "Deno",
-          "url": "https://vultyr.app/status/deno.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 17,
-          "name": "Docker",
-          "url": "https://vultyr.app/status/docker.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 18,
-          "name": "Doppler",
-          "url": "https://vultyr.app/status/doppler.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 19,
-          "name": "env0",
-          "url": "https://vultyr.app/status/env0.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 20,
-          "name": "Expo",
-          "url": "https://vultyr.app/status/expo.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 21,
-          "name": "GitHub",
-          "url": "https://vultyr.app/status/github.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 22,
-          "name": "GitLab",
-          "url": "https://vultyr.app/status/gitlab.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 23,
-          "name": "Gitpod",
-          "url": "https://vultyr.app/status/gitpod.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 24,
-          "name": "Grafana",
-          "url": "https://vultyr.app/status/grafana.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 25,
-          "name": "Harness",
-          "url": "https://vultyr.app/status/harness.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 26,
-          "name": "HashiCorp",
-          "url": "https://vultyr.app/status/hashicorp.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 27,
-          "name": "Honeycomb",
-          "url": "https://vultyr.app/status/honeycomb.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 28,
-          "name": "incident.io",
-          "url": "https://vultyr.app/status/incidentio.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 29,
-          "name": "JFrog",
-          "url": "https://vultyr.app/status/jfrog.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 30,
-          "name": "LaunchDarkly",
-          "url": "https://vultyr.app/status/launchdarkly.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 31,
-          "name": "Maven Central",
-          "url": "https://vultyr.app/status/maven-central.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 32,
-          "name": "Netlify",
-          "url": "https://vultyr.app/status/netlify.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 33,
-          "name": "New Relic",
-          "url": "https://vultyr.app/status/new-relic.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 34,
-          "name": "npm",
-          "url": "https://vultyr.app/status/npm.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 35,
-          "name": "NuGet",
-          "url": "https://vultyr.app/status/nuget.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 36,
-          "name": "Opsgenie",
-          "url": "https://vultyr.app/status/opsgenie.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 37,
-          "name": "PagerDuty",
-          "url": "https://vultyr.app/status/pagerduty.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 38,
-          "name": "Postman",
-          "url": "https://vultyr.app/status/postman.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 39,
-          "name": "Pulumi",
-          "url": "https://vultyr.app/status/pulumi.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 40,
-          "name": "PyPI",
-          "url": "https://vultyr.app/status/pypi.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 41,
-          "name": "Retool",
-          "url": "https://vultyr.app/status/retool.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 42,
-          "name": "Rollbar",
-          "url": "https://vultyr.app/status/rollbar.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 43,
-          "name": "RubyGems",
-          "url": "https://vultyr.app/status/rubygems.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 44,
-          "name": "Sentry",
-          "url": "https://vultyr.app/status/sentry.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 45,
-          "name": "Snyk",
-          "url": "https://vultyr.app/status/snyk.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 46,
-          "name": "Sourcegraph",
-          "url": "https://vultyr.app/status/sourcegraph.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 47,
-          "name": "Spacelift",
-          "url": "https://vultyr.app/status/spacelift.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 48,
-          "name": "Splunk Cloud",
-          "url": "https://vultyr.app/status/splunk-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 49,
-          "name": "Splunk On-Call",
-          "url": "https://vultyr.app/status/splunk-on-call.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 50,
-          "name": "Supabase",
-          "url": "https://vultyr.app/status/supabase.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 51,
-          "name": "Travis CI",
-          "url": "https://vultyr.app/status/travis-ci.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 52,
-          "name": "Upstash",
-          "url": "https://vultyr.app/status/upstash.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 53,
-          "name": "Warp",
-          "url": "https://vultyr.app/status/warp.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 54,
-          "name": "Webflow",
-          "url": "https://vultyr.app/status/webflow.html"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Airbyte",
+      "url": "https://vultyr.app/status/airbyte.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Better Stack",
+      "url": "https://vultyr.app/status/better-stack.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Bitbucket",
+      "url": "https://vultyr.app/status/bitbucket.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Bitrise",
+      "url": "https://vultyr.app/status/bitrise.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Buildkite",
+      "url": "https://vultyr.app/status/buildkite.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "CircleCI",
+      "url": "https://vultyr.app/status/circleci.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Cloudinary",
+      "url": "https://vultyr.app/status/cloudinary.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Cloudsmith",
+      "url": "https://vultyr.app/status/cloudsmith.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Codecov",
+      "url": "https://vultyr.app/status/codecov.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Codefresh",
+      "url": "https://vultyr.app/status/codefresh.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "CocoaPods",
+      "url": "https://vultyr.app/status/cocoapods.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Contentful",
+      "url": "https://vultyr.app/status/contentful.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "Convex",
+      "url": "https://vultyr.app/status/convex.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "Crates.io",
+      "url": "https://vultyr.app/status/cratesio.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "dbt Cloud",
+      "url": "https://vultyr.app/status/dbt-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "Deno",
+      "url": "https://vultyr.app/status/deno.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "Docker",
+      "url": "https://vultyr.app/status/docker.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "Doppler",
+      "url": "https://vultyr.app/status/doppler.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "env0",
+      "url": "https://vultyr.app/status/env0.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "name": "Expo",
+      "url": "https://vultyr.app/status/expo.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "name": "GitHub",
+      "url": "https://vultyr.app/status/github.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "name": "GitLab",
+      "url": "https://vultyr.app/status/gitlab.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "name": "Gitpod",
+      "url": "https://vultyr.app/status/gitpod.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "name": "Grafana",
+      "url": "https://vultyr.app/status/grafana.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "name": "Harness",
+      "url": "https://vultyr.app/status/harness.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "name": "HashiCorp",
+      "url": "https://vultyr.app/status/hashicorp.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "name": "Honeycomb",
+      "url": "https://vultyr.app/status/honeycomb.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "name": "incident.io",
+      "url": "https://vultyr.app/status/incidentio.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "name": "JFrog",
+      "url": "https://vultyr.app/status/jfrog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "name": "LaunchDarkly",
+      "url": "https://vultyr.app/status/launchdarkly.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "name": "Maven Central",
+      "url": "https://vultyr.app/status/maven-central.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "name": "Netlify",
+      "url": "https://vultyr.app/status/netlify.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "name": "New Relic",
+      "url": "https://vultyr.app/status/new-relic.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "name": "npm",
+      "url": "https://vultyr.app/status/npm.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "name": "NuGet",
+      "url": "https://vultyr.app/status/nuget.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "name": "Opsgenie",
+      "url": "https://vultyr.app/status/opsgenie.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "name": "PagerDuty",
+      "url": "https://vultyr.app/status/pagerduty.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "name": "Postman",
+      "url": "https://vultyr.app/status/postman.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "name": "Pulumi",
+      "url": "https://vultyr.app/status/pulumi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "name": "PyPI",
+      "url": "https://vultyr.app/status/pypi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "name": "Retool",
+      "url": "https://vultyr.app/status/retool.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 42,
+      "name": "Rollbar",
+      "url": "https://vultyr.app/status/rollbar.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 43,
+      "name": "RubyGems",
+      "url": "https://vultyr.app/status/rubygems.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 44,
+      "name": "Sentry",
+      "url": "https://vultyr.app/status/sentry.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 45,
+      "name": "Snyk",
+      "url": "https://vultyr.app/status/snyk.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 46,
+      "name": "Sourcegraph",
+      "url": "https://vultyr.app/status/sourcegraph.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 47,
+      "name": "Spacelift",
+      "url": "https://vultyr.app/status/spacelift.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 48,
+      "name": "Splunk Cloud",
+      "url": "https://vultyr.app/status/splunk-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 49,
+      "name": "Splunk On-Call",
+      "url": "https://vultyr.app/status/splunk-on-call.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 50,
+      "name": "Supabase",
+      "url": "https://vultyr.app/status/supabase.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 51,
+      "name": "Travis CI",
+      "url": "https://vultyr.app/status/travis-ci.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 52,
+      "name": "Upstash",
+      "url": "https://vultyr.app/status/upstash.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 53,
+      "name": "Warp",
+      "url": "https://vultyr.app/status/warp.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 54,
+      "name": "Webflow",
+      "url": "https://vultyr.app/status/webflow.html"
     }
-    </script>
+  ]
+}
+</script>
     <!-- Google tag (gtag.js) — cookieless, anonymized -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
-    </script>
+    <script defer src="/assets/js/analytics.js"></script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>

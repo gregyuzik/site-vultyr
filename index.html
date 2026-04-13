@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-A90v2hhXqXJnm4cKtT1LuI23/CeJHnkunbOARXFnBA8=' 'sha256-uDkrWlwQXS2p3dVG9Jb01/xaRgNeWmXfoz7Le9P9TK4='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Vultyr — Service Status Monitor for AWS, Slack, GitHub &amp; More</title>
-    <meta name="description" content="Is it down? Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.">
+    <meta name="description" content="Is it down? Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro.">
     <meta name="theme-color" content="#000000">
     <meta property="og:title" content="Vultyr — Service Status Monitor">
-    <meta property="og:description" content="Is it down? Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.">
+    <meta property="og:description" content="Is it down? Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
     <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
     <meta property="og:url" content="https://vultyr.app">
@@ -17,7 +17,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vultyr — Service Status Monitor">
-    <meta name="twitter:description" content="Is it down? Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, Mac, Apple TV, Apple Watch, and Apple Vision Pro.">
+    <meta name="twitter:description" content="Is it down? Monitor 235+ cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro.">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app">
     <link rel="apple-touch-icon" href="/icon.png">
@@ -62,12 +62,7 @@
     </script>
     <!-- Google tag (gtag.js) — cookieless, anonymized -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
-    </script>
+    <script defer src="/assets/js/analytics.js"></script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
@@ -117,7 +112,7 @@
                 <span class="stat-label">Categories</span>
             </div>
             <div class="stat">
-                <span class="stat-value">5</span>
+                <span class="stat-value">6</span>
                 <span class="stat-label">Platforms</span>
             </div>
             <div class="stat">
@@ -160,7 +155,7 @@
                 <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Every Apple Platform</h3>
-                    <p>iPhone, Mac menu bar, Apple TV, Apple Watch, and Vision Pro. Services sync across all devices.</p>
+                    <p>iPhone, iPad, Mac menu bar, Apple TV, Apple Watch, and Vision Pro. Services sync across all devices.</p>
                 </div>
             </div>
             <div class="feature-card">
