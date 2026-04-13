@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-ZCcVs5397WUa5s7CLnFhr7fgouvavnVbEMkoWC5Bqoo='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Vultyr — 235+ Monitored Services</title>
     <meta name="description" content="All 235+ services monitored by Vultyr, organized by category. Cloud, dev tools, communication, AI, and more.">
     <meta name="theme-color" content="#000000">
@@ -22,1433 +22,1428 @@
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/services-list.css">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Services Monitored by Vultyr",
+  "numberOfItems": 235,
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Services Monitored by Vultyr",
-      "numberOfItems": 235,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Aiven",
-          "url": "https://vultyr.app/status/aiven.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Akamai",
-          "url": "https://vultyr.app/status/akamai.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Aptible",
-          "url": "https://vultyr.app/status/aptible.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Bunny CDN",
-          "url": "https://vultyr.app/status/bunny-cdn.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Cloudflare",
-          "url": "https://vultyr.app/status/cloudflare.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "CockroachDB",
-          "url": "https://vultyr.app/status/cockroachdb.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Confluent (Kafka)",
-          "url": "https://vultyr.app/status/confluent.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "DigitalOcean",
-          "url": "https://vultyr.app/status/digitalocean.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "Dropbox",
-          "url": "https://vultyr.app/status/dropbox.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "name": "Elastic Cloud",
-          "url": "https://vultyr.app/status/elastic-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 11,
-          "name": "Fastly",
-          "url": "https://vultyr.app/status/fastly.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "name": "Fly.io",
-          "url": "https://vultyr.app/status/flyio.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 13,
-          "name": "Heroku",
-          "url": "https://vultyr.app/status/heroku.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 14,
-          "name": "InfluxDB Cloud",
-          "url": "https://vultyr.app/status/influxdb-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 15,
-          "name": "KeyCDN",
-          "url": "https://vultyr.app/status/keycdn.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 16,
-          "name": "Linode",
-          "url": "https://vultyr.app/status/linode.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 17,
-          "name": "MongoDB Cloud",
-          "url": "https://vultyr.app/status/mongodb-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 18,
-          "name": "Neon",
-          "url": "https://vultyr.app/status/neon.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 19,
-          "name": "Oracle Cloud",
-          "url": "https://vultyr.app/status/oracle-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 20,
-          "name": "PlanetScale",
-          "url": "https://vultyr.app/status/planetscale.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 21,
-          "name": "Railway",
-          "url": "https://vultyr.app/status/railway.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 22,
-          "name": "Redis",
-          "url": "https://vultyr.app/status/redis.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 23,
-          "name": "Render",
-          "url": "https://vultyr.app/status/render.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 24,
-          "name": "Salesforce",
-          "url": "https://vultyr.app/status/salesforce.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 25,
-          "name": "Scaleway",
-          "url": "https://vultyr.app/status/scaleway.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 26,
-          "name": "Snowflake",
-          "url": "https://vultyr.app/status/snowflake.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 27,
-          "name": "Timescale",
-          "url": "https://vultyr.app/status/timescale.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 28,
-          "name": "Turso",
-          "url": "https://vultyr.app/status/turso.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 29,
-          "name": "Vercel",
-          "url": "https://vultyr.app/status/vercel.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 30,
-          "name": "Wasabi",
-          "url": "https://vultyr.app/status/wasabi.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 31,
-          "name": "Airbyte",
-          "url": "https://vultyr.app/status/airbyte.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 32,
-          "name": "Better Stack",
-          "url": "https://vultyr.app/status/better-stack.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 33,
-          "name": "Bitbucket",
-          "url": "https://vultyr.app/status/bitbucket.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 34,
-          "name": "Bitrise",
-          "url": "https://vultyr.app/status/bitrise.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 35,
-          "name": "Buildkite",
-          "url": "https://vultyr.app/status/buildkite.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 36,
-          "name": "CircleCI",
-          "url": "https://vultyr.app/status/circleci.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 37,
-          "name": "Cloudinary",
-          "url": "https://vultyr.app/status/cloudinary.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 38,
-          "name": "Cloudsmith",
-          "url": "https://vultyr.app/status/cloudsmith.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 39,
-          "name": "Codecov",
-          "url": "https://vultyr.app/status/codecov.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 40,
-          "name": "Codefresh",
-          "url": "https://vultyr.app/status/codefresh.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 41,
-          "name": "CocoaPods",
-          "url": "https://vultyr.app/status/cocoapods.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 42,
-          "name": "Contentful",
-          "url": "https://vultyr.app/status/contentful.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 43,
-          "name": "Convex",
-          "url": "https://vultyr.app/status/convex.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 44,
-          "name": "Crates.io",
-          "url": "https://vultyr.app/status/cratesio.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 45,
-          "name": "dbt Cloud",
-          "url": "https://vultyr.app/status/dbt-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 46,
-          "name": "Deno",
-          "url": "https://vultyr.app/status/deno.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 47,
-          "name": "Docker",
-          "url": "https://vultyr.app/status/docker.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 48,
-          "name": "Doppler",
-          "url": "https://vultyr.app/status/doppler.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 49,
-          "name": "env0",
-          "url": "https://vultyr.app/status/env0.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 50,
-          "name": "Expo",
-          "url": "https://vultyr.app/status/expo.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 51,
-          "name": "GitHub",
-          "url": "https://vultyr.app/status/github.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 52,
-          "name": "GitLab",
-          "url": "https://vultyr.app/status/gitlab.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 53,
-          "name": "Gitpod",
-          "url": "https://vultyr.app/status/gitpod.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 54,
-          "name": "Grafana",
-          "url": "https://vultyr.app/status/grafana.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 55,
-          "name": "Harness",
-          "url": "https://vultyr.app/status/harness.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 56,
-          "name": "HashiCorp",
-          "url": "https://vultyr.app/status/hashicorp.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 57,
-          "name": "Honeycomb",
-          "url": "https://vultyr.app/status/honeycomb.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 58,
-          "name": "incident.io",
-          "url": "https://vultyr.app/status/incidentio.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 59,
-          "name": "JFrog",
-          "url": "https://vultyr.app/status/jfrog.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 60,
-          "name": "LaunchDarkly",
-          "url": "https://vultyr.app/status/launchdarkly.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 61,
-          "name": "Maven Central",
-          "url": "https://vultyr.app/status/maven-central.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 62,
-          "name": "Netlify",
-          "url": "https://vultyr.app/status/netlify.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 63,
-          "name": "New Relic",
-          "url": "https://vultyr.app/status/new-relic.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 64,
-          "name": "npm",
-          "url": "https://vultyr.app/status/npm.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 65,
-          "name": "NuGet",
-          "url": "https://vultyr.app/status/nuget.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 66,
-          "name": "Opsgenie",
-          "url": "https://vultyr.app/status/opsgenie.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 67,
-          "name": "PagerDuty",
-          "url": "https://vultyr.app/status/pagerduty.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 68,
-          "name": "Postman",
-          "url": "https://vultyr.app/status/postman.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 69,
-          "name": "Pulumi",
-          "url": "https://vultyr.app/status/pulumi.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 70,
-          "name": "PyPI",
-          "url": "https://vultyr.app/status/pypi.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 71,
-          "name": "Retool",
-          "url": "https://vultyr.app/status/retool.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 72,
-          "name": "Rollbar",
-          "url": "https://vultyr.app/status/rollbar.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 73,
-          "name": "RubyGems",
-          "url": "https://vultyr.app/status/rubygems.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 74,
-          "name": "Sentry",
-          "url": "https://vultyr.app/status/sentry.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 75,
-          "name": "Snyk",
-          "url": "https://vultyr.app/status/snyk.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 76,
-          "name": "Sourcegraph",
-          "url": "https://vultyr.app/status/sourcegraph.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 77,
-          "name": "Spacelift",
-          "url": "https://vultyr.app/status/spacelift.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 78,
-          "name": "Splunk Cloud",
-          "url": "https://vultyr.app/status/splunk-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 79,
-          "name": "Splunk On-Call",
-          "url": "https://vultyr.app/status/splunk-on-call.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 80,
-          "name": "Supabase",
-          "url": "https://vultyr.app/status/supabase.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 81,
-          "name": "Travis CI",
-          "url": "https://vultyr.app/status/travis-ci.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 82,
-          "name": "Upstash",
-          "url": "https://vultyr.app/status/upstash.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 83,
-          "name": "Warp",
-          "url": "https://vultyr.app/status/warp.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 84,
-          "name": "Webflow",
-          "url": "https://vultyr.app/status/webflow.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 85,
-          "name": "Discord",
-          "url": "https://vultyr.app/status/discord.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 86,
-          "name": "LiveKit",
-          "url": "https://vultyr.app/status/livekit.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 87,
-          "name": "Matrix",
-          "url": "https://vultyr.app/status/matrix.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 88,
-          "name": "Signal",
-          "url": "https://vultyr.app/status/signal.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 89,
-          "name": "Slack",
-          "url": "https://vultyr.app/status/slack.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 90,
-          "name": "Twilio",
-          "url": "https://vultyr.app/status/twilio.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 91,
-          "name": "Vonage",
-          "url": "https://vultyr.app/status/vonage.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 92,
-          "name": "Webex",
-          "url": "https://vultyr.app/status/webex.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 93,
-          "name": "Zoom",
-          "url": "https://vultyr.app/status/zoom.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 94,
-          "name": "Airtable",
-          "url": "https://vultyr.app/status/airtable.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 95,
-          "name": "Amplitude",
-          "url": "https://vultyr.app/status/amplitude.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 96,
-          "name": "Asana",
-          "url": "https://vultyr.app/status/asana.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 97,
-          "name": "Atlassian",
-          "url": "https://vultyr.app/status/atlassian.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 98,
-          "name": "Box",
-          "url": "https://vultyr.app/status/box.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 99,
-          "name": "Canva",
-          "url": "https://vultyr.app/status/canva.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 100,
-          "name": "ClickUp",
-          "url": "https://vultyr.app/status/clickup.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 101,
-          "name": "Clerk",
-          "url": "https://vultyr.app/status/clerk.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 102,
-          "name": "Coda",
-          "url": "https://vultyr.app/status/coda.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 103,
-          "name": "Datadog",
-          "url": "https://vultyr.app/status/datadog.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 104,
-          "name": "Dropbox Sign",
-          "url": "https://vultyr.app/status/dropbox-sign.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 105,
-          "name": "Fathom",
-          "url": "https://vultyr.app/status/fathom.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 106,
-          "name": "Figma",
-          "url": "https://vultyr.app/status/figma.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 107,
-          "name": "Freshworks",
-          "url": "https://vultyr.app/status/freshworks.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 108,
-          "name": "Grammarly",
-          "url": "https://vultyr.app/status/grammarly.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 109,
-          "name": "HubSpot",
-          "url": "https://vultyr.app/status/hubspot.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 110,
-          "name": "Intercom",
-          "url": "https://vultyr.app/status/intercom.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 111,
-          "name": "Linear",
-          "url": "https://vultyr.app/status/linear.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 112,
-          "name": "Login.gov",
-          "url": "https://vultyr.app/status/logingov.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 113,
-          "name": "Miro",
-          "url": "https://vultyr.app/status/miro.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 114,
-          "name": "Mixpanel",
-          "url": "https://vultyr.app/status/mixpanel.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 115,
-          "name": "Monday.com",
-          "url": "https://vultyr.app/status/mondaycom.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 116,
-          "name": "Notion",
-          "url": "https://vultyr.app/status/notion.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 117,
-          "name": "Otter.ai",
-          "url": "https://vultyr.app/status/otterai.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 118,
-          "name": "Sanity",
-          "url": "https://vultyr.app/status/sanity.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 119,
-          "name": "Segment",
-          "url": "https://vultyr.app/status/segment.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 120,
-          "name": "Zendesk",
-          "url": "https://vultyr.app/status/zendesk.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 121,
-          "name": "Cash App",
-          "url": "https://vultyr.app/status/cash-app.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 122,
-          "name": "Coinbase",
-          "url": "https://vultyr.app/status/coinbase.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 123,
-          "name": "Coinbase Exchange",
-          "url": "https://vultyr.app/status/coinbase-exchange.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 124,
-          "name": "Gemini Exchange",
-          "url": "https://vultyr.app/status/gemini-exchange.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 125,
-          "name": "Kraken",
-          "url": "https://vultyr.app/status/kraken.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 126,
-          "name": "Plaid",
-          "url": "https://vultyr.app/status/plaid.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 127,
-          "name": "Shopify",
-          "url": "https://vultyr.app/status/shopify.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 128,
-          "name": "Square",
-          "url": "https://vultyr.app/status/square.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 129,
-          "name": "Stripe",
-          "url": "https://vultyr.app/status/stripe.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 130,
-          "name": "Uber",
-          "url": "https://vultyr.app/status/uber.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 131,
-          "name": "Wise",
-          "url": "https://vultyr.app/status/wise.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 132,
-          "name": "Apple Developer",
-          "url": "https://vultyr.app/status/apple-developer.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 133,
-          "name": "Apple Services",
-          "url": "https://vultyr.app/status/apple-services.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 134,
-          "name": "Gmail",
-          "url": "https://vultyr.app/status/gmail.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 135,
-          "name": "Google Cloud",
-          "url": "https://vultyr.app/status/google-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 136,
-          "name": "Google Drive",
-          "url": "https://vultyr.app/status/google-drive.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 137,
-          "name": "Google Gemini",
-          "url": "https://vultyr.app/status/google-gemini.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 138,
-          "name": "Google Maps",
-          "url": "https://vultyr.app/status/google-maps.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 139,
-          "name": "Google Meet",
-          "url": "https://vultyr.app/status/google-meet.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 140,
-          "name": "Google Search",
-          "url": "https://vultyr.app/status/google-search.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 141,
-          "name": "Google Workspace",
-          "url": "https://vultyr.app/status/google-workspace.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 142,
-          "name": "YouTube",
-          "url": "https://vultyr.app/status/youtube.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 143,
-          "name": "Azure",
-          "url": "https://vultyr.app/status/azure.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 144,
-          "name": "Microsoft 365",
-          "url": "https://vultyr.app/status/microsoft-365.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 145,
-          "name": "Microsoft Teams",
-          "url": "https://vultyr.app/status/microsoft-teams.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 146,
-          "name": "OneDrive",
-          "url": "https://vultyr.app/status/onedrive.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 147,
-          "name": "Outlook",
-          "url": "https://vultyr.app/status/outlook.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 148,
-          "name": "Xbox Live",
-          "url": "https://vultyr.app/status/xbox-live.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 149,
-          "name": "Alexa",
-          "url": "https://vultyr.app/status/alexa.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 150,
-          "name": "Amazon.com",
-          "url": "https://vultyr.app/status/amazoncom.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 151,
-          "name": "AWS",
-          "url": "https://vultyr.app/status/aws.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 152,
-          "name": "Prime Video",
-          "url": "https://vultyr.app/status/prime-video.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 153,
-          "name": "Ring",
-          "url": "https://vultyr.app/status/ring.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 154,
-          "name": "Anthropic",
-          "url": "https://vultyr.app/status/anthropic.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 155,
-          "name": "Cohere",
-          "url": "https://vultyr.app/status/cohere.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 156,
-          "name": "Cursor",
-          "url": "https://vultyr.app/status/cursor.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 157,
-          "name": "DeepSeek",
-          "url": "https://vultyr.app/status/deepseek.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 158,
-          "name": "ElevenLabs",
-          "url": "https://vultyr.app/status/elevenlabs.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 159,
-          "name": "Fal.ai",
-          "url": "https://vultyr.app/status/falai.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 160,
-          "name": "Groq",
-          "url": "https://vultyr.app/status/groq.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 161,
-          "name": "Hugging Face",
-          "url": "https://vultyr.app/status/hugging-face.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 162,
-          "name": "Midjourney",
-          "url": "https://vultyr.app/status/midjourney.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 163,
-          "name": "Mistral AI",
-          "url": "https://vultyr.app/status/mistral-ai.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 164,
-          "name": "OpenAI",
-          "url": "https://vultyr.app/status/openai.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 165,
-          "name": "Perplexity",
-          "url": "https://vultyr.app/status/perplexity.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 166,
-          "name": "Pinecone",
-          "url": "https://vultyr.app/status/pinecone.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 167,
-          "name": "Replicate",
-          "url": "https://vultyr.app/status/replicate.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 168,
-          "name": "Runway",
-          "url": "https://vultyr.app/status/runway.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 169,
-          "name": "Stability AI",
-          "url": "https://vultyr.app/status/stability-ai.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 170,
-          "name": "Bluesky",
-          "url": "https://vultyr.app/status/bluesky.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 171,
-          "name": "Facebook",
-          "url": "https://vultyr.app/status/facebook.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 172,
-          "name": "Instagram",
-          "url": "https://vultyr.app/status/instagram.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 173,
-          "name": "LinkedIn",
-          "url": "https://vultyr.app/status/linkedin.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 174,
-          "name": "Mastodon",
-          "url": "https://vultyr.app/status/mastodon.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 175,
-          "name": "Medium",
-          "url": "https://vultyr.app/status/medium.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 176,
-          "name": "Pinterest",
-          "url": "https://vultyr.app/status/pinterest.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 177,
-          "name": "Reddit",
-          "url": "https://vultyr.app/status/reddit.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 178,
-          "name": "Substack",
-          "url": "https://vultyr.app/status/substack.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 179,
-          "name": "Telegram",
-          "url": "https://vultyr.app/status/telegram.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 180,
-          "name": "Threads",
-          "url": "https://vultyr.app/status/threads.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 181,
-          "name": "TikTok",
-          "url": "https://vultyr.app/status/tiktok.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 182,
-          "name": "Tumblr",
-          "url": "https://vultyr.app/status/tumblr.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 183,
-          "name": "WhatsApp",
-          "url": "https://vultyr.app/status/whatsapp.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 184,
-          "name": "X / Twitter",
-          "url": "https://vultyr.app/status/x-twitter.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 185,
-          "name": "Crunchyroll",
-          "url": "https://vultyr.app/status/crunchyroll.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 186,
-          "name": "Dailymotion",
-          "url": "https://vultyr.app/status/dailymotion.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 187,
-          "name": "Giphy",
-          "url": "https://vultyr.app/status/giphy.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 188,
-          "name": "Hulu",
-          "url": "https://vultyr.app/status/hulu.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 189,
-          "name": "Imgur",
-          "url": "https://vultyr.app/status/imgur.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 190,
-          "name": "Kick",
-          "url": "https://vultyr.app/status/kick.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 191,
-          "name": "Netflix",
-          "url": "https://vultyr.app/status/netflix.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 192,
-          "name": "Paramount+",
-          "url": "https://vultyr.app/status/paramountplus.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 193,
-          "name": "Peacock",
-          "url": "https://vultyr.app/status/peacock.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 194,
-          "name": "Spotify",
-          "url": "https://vultyr.app/status/spotify.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 195,
-          "name": "Twitch",
-          "url": "https://vultyr.app/status/twitch.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 196,
-          "name": "Vimeo",
-          "url": "https://vultyr.app/status/vimeo.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 197,
-          "name": "Epic Games",
-          "url": "https://vultyr.app/status/epic-games.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 198,
-          "name": "Fortnite",
-          "url": "https://vultyr.app/status/fortnite.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 199,
-          "name": "Nintendo",
-          "url": "https://vultyr.app/status/nintendo.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 200,
-          "name": "PlayStation",
-          "url": "https://vultyr.app/status/playstation.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 201,
-          "name": "Unity",
-          "url": "https://vultyr.app/status/unity.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 202,
-          "name": "AT&T",
-          "url": "https://vultyr.app/status/atandt.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 203,
-          "name": "Bell Canada",
-          "url": "https://vultyr.app/status/bell-canada.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 204,
-          "name": "Comcast / Xfinity",
-          "url": "https://vultyr.app/status/comcast-xfinity.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 205,
-          "name": "Cox",
-          "url": "https://vultyr.app/status/cox.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 206,
-          "name": "Lumen",
-          "url": "https://vultyr.app/status/lumen.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 207,
-          "name": "O2",
-          "url": "https://vultyr.app/status/o2.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 208,
-          "name": "Starlink",
-          "url": "https://vultyr.app/status/starlink.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 209,
-          "name": "Telus",
-          "url": "https://vultyr.app/status/telus.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 210,
-          "name": "T-Mobile",
-          "url": "https://vultyr.app/status/t-mobile.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 211,
-          "name": "Verizon",
-          "url": "https://vultyr.app/status/verizon.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 212,
-          "name": "Visible",
-          "url": "https://vultyr.app/status/visible.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 213,
-          "name": "1Password",
-          "url": "https://vultyr.app/status/1password.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 214,
-          "name": "Auth0",
-          "url": "https://vultyr.app/status/auth0.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 215,
-          "name": "Bitwarden",
-          "url": "https://vultyr.app/status/bitwarden.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 216,
-          "name": "Cloudflare Zero Trust",
-          "url": "https://vultyr.app/status/cloudflare-zero-trust.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 217,
-          "name": "Dashlane",
-          "url": "https://vultyr.app/status/dashlane.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 218,
-          "name": "Duo Security",
-          "url": "https://vultyr.app/status/duo-security.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 219,
-          "name": "Keeper",
-          "url": "https://vultyr.app/status/keeper.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 220,
-          "name": "LastPass",
-          "url": "https://vultyr.app/status/lastpass.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 221,
-          "name": "Malwarebytes",
-          "url": "https://vultyr.app/status/malwarebytes.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 222,
-          "name": "NordVPN",
-          "url": "https://vultyr.app/status/nordvpn.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 223,
-          "name": "Okta",
-          "url": "https://vultyr.app/status/okta.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 224,
-          "name": "Palo Alto Networks",
-          "url": "https://vultyr.app/status/palo-alto-networks.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 225,
-          "name": "Proton",
-          "url": "https://vultyr.app/status/proton.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 226,
-          "name": "Semgrep",
-          "url": "https://vultyr.app/status/semgrep.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 227,
-          "name": "Stytch",
-          "url": "https://vultyr.app/status/stytch.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 228,
-          "name": "Tailscale",
-          "url": "https://vultyr.app/status/tailscale.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 229,
-          "name": "Wiz",
-          "url": "https://vultyr.app/status/wiz.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 230,
-          "name": "WorkOS",
-          "url": "https://vultyr.app/status/workos.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 231,
-          "name": "Zscaler",
-          "url": "https://vultyr.app/status/zscaler.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 232,
-          "name": "Mailchimp",
-          "url": "https://vultyr.app/status/mailchimp.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 233,
-          "name": "Mailgun",
-          "url": "https://vultyr.app/status/mailgun.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 234,
-          "name": "Postmark",
-          "url": "https://vultyr.app/status/postmark.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 235,
-          "name": "SendGrid",
-          "url": "https://vultyr.app/status/sendgrid.html"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aiven",
+      "url": "https://vultyr.app/status/aiven.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Akamai",
+      "url": "https://vultyr.app/status/akamai.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Aptible",
+      "url": "https://vultyr.app/status/aptible.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Bunny CDN",
+      "url": "https://vultyr.app/status/bunny-cdn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Cloudflare",
+      "url": "https://vultyr.app/status/cloudflare.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "CockroachDB",
+      "url": "https://vultyr.app/status/cockroachdb.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Confluent (Kafka)",
+      "url": "https://vultyr.app/status/confluent.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "DigitalOcean",
+      "url": "https://vultyr.app/status/digitalocean.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Dropbox",
+      "url": "https://vultyr.app/status/dropbox.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Elastic Cloud",
+      "url": "https://vultyr.app/status/elastic-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Fastly",
+      "url": "https://vultyr.app/status/fastly.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Fly.io",
+      "url": "https://vultyr.app/status/flyio.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "Heroku",
+      "url": "https://vultyr.app/status/heroku.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "InfluxDB Cloud",
+      "url": "https://vultyr.app/status/influxdb-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "KeyCDN",
+      "url": "https://vultyr.app/status/keycdn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "Linode",
+      "url": "https://vultyr.app/status/linode.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "MongoDB Cloud",
+      "url": "https://vultyr.app/status/mongodb-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "Neon",
+      "url": "https://vultyr.app/status/neon.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "Oracle Cloud",
+      "url": "https://vultyr.app/status/oracle-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "name": "PlanetScale",
+      "url": "https://vultyr.app/status/planetscale.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "name": "Railway",
+      "url": "https://vultyr.app/status/railway.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "name": "Redis",
+      "url": "https://vultyr.app/status/redis.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "name": "Render",
+      "url": "https://vultyr.app/status/render.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "name": "Salesforce",
+      "url": "https://vultyr.app/status/salesforce.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "name": "Scaleway",
+      "url": "https://vultyr.app/status/scaleway.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "name": "Snowflake",
+      "url": "https://vultyr.app/status/snowflake.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "name": "Timescale",
+      "url": "https://vultyr.app/status/timescale.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "name": "Turso",
+      "url": "https://vultyr.app/status/turso.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "name": "Vercel",
+      "url": "https://vultyr.app/status/vercel.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "name": "Wasabi",
+      "url": "https://vultyr.app/status/wasabi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "name": "Airbyte",
+      "url": "https://vultyr.app/status/airbyte.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "name": "Better Stack",
+      "url": "https://vultyr.app/status/better-stack.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "name": "Bitbucket",
+      "url": "https://vultyr.app/status/bitbucket.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "name": "Bitrise",
+      "url": "https://vultyr.app/status/bitrise.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "name": "Buildkite",
+      "url": "https://vultyr.app/status/buildkite.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "name": "CircleCI",
+      "url": "https://vultyr.app/status/circleci.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "name": "Cloudinary",
+      "url": "https://vultyr.app/status/cloudinary.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "name": "Cloudsmith",
+      "url": "https://vultyr.app/status/cloudsmith.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "name": "Codecov",
+      "url": "https://vultyr.app/status/codecov.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "name": "Codefresh",
+      "url": "https://vultyr.app/status/codefresh.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "name": "CocoaPods",
+      "url": "https://vultyr.app/status/cocoapods.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 42,
+      "name": "Contentful",
+      "url": "https://vultyr.app/status/contentful.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 43,
+      "name": "Convex",
+      "url": "https://vultyr.app/status/convex.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 44,
+      "name": "Crates.io",
+      "url": "https://vultyr.app/status/cratesio.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 45,
+      "name": "dbt Cloud",
+      "url": "https://vultyr.app/status/dbt-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 46,
+      "name": "Deno",
+      "url": "https://vultyr.app/status/deno.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 47,
+      "name": "Docker",
+      "url": "https://vultyr.app/status/docker.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 48,
+      "name": "Doppler",
+      "url": "https://vultyr.app/status/doppler.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 49,
+      "name": "env0",
+      "url": "https://vultyr.app/status/env0.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 50,
+      "name": "Expo",
+      "url": "https://vultyr.app/status/expo.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 51,
+      "name": "GitHub",
+      "url": "https://vultyr.app/status/github.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 52,
+      "name": "GitLab",
+      "url": "https://vultyr.app/status/gitlab.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 53,
+      "name": "Gitpod",
+      "url": "https://vultyr.app/status/gitpod.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 54,
+      "name": "Grafana",
+      "url": "https://vultyr.app/status/grafana.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 55,
+      "name": "Harness",
+      "url": "https://vultyr.app/status/harness.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 56,
+      "name": "HashiCorp",
+      "url": "https://vultyr.app/status/hashicorp.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 57,
+      "name": "Honeycomb",
+      "url": "https://vultyr.app/status/honeycomb.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 58,
+      "name": "incident.io",
+      "url": "https://vultyr.app/status/incidentio.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 59,
+      "name": "JFrog",
+      "url": "https://vultyr.app/status/jfrog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 60,
+      "name": "LaunchDarkly",
+      "url": "https://vultyr.app/status/launchdarkly.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 61,
+      "name": "Maven Central",
+      "url": "https://vultyr.app/status/maven-central.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 62,
+      "name": "Netlify",
+      "url": "https://vultyr.app/status/netlify.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 63,
+      "name": "New Relic",
+      "url": "https://vultyr.app/status/new-relic.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 64,
+      "name": "npm",
+      "url": "https://vultyr.app/status/npm.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 65,
+      "name": "NuGet",
+      "url": "https://vultyr.app/status/nuget.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 66,
+      "name": "Opsgenie",
+      "url": "https://vultyr.app/status/opsgenie.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 67,
+      "name": "PagerDuty",
+      "url": "https://vultyr.app/status/pagerduty.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 68,
+      "name": "Postman",
+      "url": "https://vultyr.app/status/postman.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 69,
+      "name": "Pulumi",
+      "url": "https://vultyr.app/status/pulumi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 70,
+      "name": "PyPI",
+      "url": "https://vultyr.app/status/pypi.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 71,
+      "name": "Retool",
+      "url": "https://vultyr.app/status/retool.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 72,
+      "name": "Rollbar",
+      "url": "https://vultyr.app/status/rollbar.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 73,
+      "name": "RubyGems",
+      "url": "https://vultyr.app/status/rubygems.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 74,
+      "name": "Sentry",
+      "url": "https://vultyr.app/status/sentry.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 75,
+      "name": "Snyk",
+      "url": "https://vultyr.app/status/snyk.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 76,
+      "name": "Sourcegraph",
+      "url": "https://vultyr.app/status/sourcegraph.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 77,
+      "name": "Spacelift",
+      "url": "https://vultyr.app/status/spacelift.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 78,
+      "name": "Splunk Cloud",
+      "url": "https://vultyr.app/status/splunk-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 79,
+      "name": "Splunk On-Call",
+      "url": "https://vultyr.app/status/splunk-on-call.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 80,
+      "name": "Supabase",
+      "url": "https://vultyr.app/status/supabase.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 81,
+      "name": "Travis CI",
+      "url": "https://vultyr.app/status/travis-ci.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 82,
+      "name": "Upstash",
+      "url": "https://vultyr.app/status/upstash.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 83,
+      "name": "Warp",
+      "url": "https://vultyr.app/status/warp.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 84,
+      "name": "Webflow",
+      "url": "https://vultyr.app/status/webflow.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 85,
+      "name": "Discord",
+      "url": "https://vultyr.app/status/discord.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 86,
+      "name": "LiveKit",
+      "url": "https://vultyr.app/status/livekit.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 87,
+      "name": "Matrix",
+      "url": "https://vultyr.app/status/matrix.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 88,
+      "name": "Signal",
+      "url": "https://vultyr.app/status/signal.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 89,
+      "name": "Slack",
+      "url": "https://vultyr.app/status/slack.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 90,
+      "name": "Twilio",
+      "url": "https://vultyr.app/status/twilio.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 91,
+      "name": "Vonage",
+      "url": "https://vultyr.app/status/vonage.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 92,
+      "name": "Webex",
+      "url": "https://vultyr.app/status/webex.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 93,
+      "name": "Zoom",
+      "url": "https://vultyr.app/status/zoom.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 94,
+      "name": "Airtable",
+      "url": "https://vultyr.app/status/airtable.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 95,
+      "name": "Amplitude",
+      "url": "https://vultyr.app/status/amplitude.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 96,
+      "name": "Asana",
+      "url": "https://vultyr.app/status/asana.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 97,
+      "name": "Atlassian",
+      "url": "https://vultyr.app/status/atlassian.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 98,
+      "name": "Box",
+      "url": "https://vultyr.app/status/box.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 99,
+      "name": "Canva",
+      "url": "https://vultyr.app/status/canva.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 100,
+      "name": "ClickUp",
+      "url": "https://vultyr.app/status/clickup.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 101,
+      "name": "Clerk",
+      "url": "https://vultyr.app/status/clerk.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 102,
+      "name": "Coda",
+      "url": "https://vultyr.app/status/coda.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 103,
+      "name": "Datadog",
+      "url": "https://vultyr.app/status/datadog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 104,
+      "name": "Dropbox Sign",
+      "url": "https://vultyr.app/status/dropbox-sign.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 105,
+      "name": "Fathom",
+      "url": "https://vultyr.app/status/fathom.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 106,
+      "name": "Figma",
+      "url": "https://vultyr.app/status/figma.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 107,
+      "name": "Freshworks",
+      "url": "https://vultyr.app/status/freshworks.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 108,
+      "name": "Grammarly",
+      "url": "https://vultyr.app/status/grammarly.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 109,
+      "name": "HubSpot",
+      "url": "https://vultyr.app/status/hubspot.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 110,
+      "name": "Intercom",
+      "url": "https://vultyr.app/status/intercom.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 111,
+      "name": "Linear",
+      "url": "https://vultyr.app/status/linear.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 112,
+      "name": "Login.gov",
+      "url": "https://vultyr.app/status/logingov.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 113,
+      "name": "Miro",
+      "url": "https://vultyr.app/status/miro.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 114,
+      "name": "Mixpanel",
+      "url": "https://vultyr.app/status/mixpanel.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 115,
+      "name": "Monday.com",
+      "url": "https://vultyr.app/status/mondaycom.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 116,
+      "name": "Notion",
+      "url": "https://vultyr.app/status/notion.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 117,
+      "name": "Otter.ai",
+      "url": "https://vultyr.app/status/otterai.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 118,
+      "name": "Sanity",
+      "url": "https://vultyr.app/status/sanity.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 119,
+      "name": "Segment",
+      "url": "https://vultyr.app/status/segment.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 120,
+      "name": "Zendesk",
+      "url": "https://vultyr.app/status/zendesk.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 121,
+      "name": "Cash App",
+      "url": "https://vultyr.app/status/cash-app.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 122,
+      "name": "Coinbase",
+      "url": "https://vultyr.app/status/coinbase.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 123,
+      "name": "Coinbase Exchange",
+      "url": "https://vultyr.app/status/coinbase-exchange.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 124,
+      "name": "Gemini Exchange",
+      "url": "https://vultyr.app/status/gemini-exchange.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 125,
+      "name": "Kraken",
+      "url": "https://vultyr.app/status/kraken.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 126,
+      "name": "Plaid",
+      "url": "https://vultyr.app/status/plaid.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 127,
+      "name": "Shopify",
+      "url": "https://vultyr.app/status/shopify.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 128,
+      "name": "Square",
+      "url": "https://vultyr.app/status/square.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 129,
+      "name": "Stripe",
+      "url": "https://vultyr.app/status/stripe.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 130,
+      "name": "Uber",
+      "url": "https://vultyr.app/status/uber.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 131,
+      "name": "Wise",
+      "url": "https://vultyr.app/status/wise.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 132,
+      "name": "Apple Developer",
+      "url": "https://vultyr.app/status/apple-developer.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 133,
+      "name": "Apple Services",
+      "url": "https://vultyr.app/status/apple-services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 134,
+      "name": "Gmail",
+      "url": "https://vultyr.app/status/gmail.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 135,
+      "name": "Google Cloud",
+      "url": "https://vultyr.app/status/google-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 136,
+      "name": "Google Drive",
+      "url": "https://vultyr.app/status/google-drive.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 137,
+      "name": "Google Gemini",
+      "url": "https://vultyr.app/status/google-gemini.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 138,
+      "name": "Google Maps",
+      "url": "https://vultyr.app/status/google-maps.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 139,
+      "name": "Google Meet",
+      "url": "https://vultyr.app/status/google-meet.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 140,
+      "name": "Google Search",
+      "url": "https://vultyr.app/status/google-search.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 141,
+      "name": "Google Workspace",
+      "url": "https://vultyr.app/status/google-workspace.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 142,
+      "name": "YouTube",
+      "url": "https://vultyr.app/status/youtube.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 143,
+      "name": "Azure",
+      "url": "https://vultyr.app/status/azure.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 144,
+      "name": "Microsoft 365",
+      "url": "https://vultyr.app/status/microsoft-365.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 145,
+      "name": "Microsoft Teams",
+      "url": "https://vultyr.app/status/microsoft-teams.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 146,
+      "name": "OneDrive",
+      "url": "https://vultyr.app/status/onedrive.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 147,
+      "name": "Outlook",
+      "url": "https://vultyr.app/status/outlook.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 148,
+      "name": "Xbox Live",
+      "url": "https://vultyr.app/status/xbox-live.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 149,
+      "name": "Alexa",
+      "url": "https://vultyr.app/status/alexa.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 150,
+      "name": "Amazon.com",
+      "url": "https://vultyr.app/status/amazoncom.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 151,
+      "name": "AWS",
+      "url": "https://vultyr.app/status/aws.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 152,
+      "name": "Prime Video",
+      "url": "https://vultyr.app/status/prime-video.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 153,
+      "name": "Ring",
+      "url": "https://vultyr.app/status/ring.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 154,
+      "name": "Anthropic",
+      "url": "https://vultyr.app/status/anthropic.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 155,
+      "name": "Cohere",
+      "url": "https://vultyr.app/status/cohere.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 156,
+      "name": "Cursor",
+      "url": "https://vultyr.app/status/cursor.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 157,
+      "name": "DeepSeek",
+      "url": "https://vultyr.app/status/deepseek.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 158,
+      "name": "ElevenLabs",
+      "url": "https://vultyr.app/status/elevenlabs.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 159,
+      "name": "Fal.ai",
+      "url": "https://vultyr.app/status/falai.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 160,
+      "name": "Groq",
+      "url": "https://vultyr.app/status/groq.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 161,
+      "name": "Hugging Face",
+      "url": "https://vultyr.app/status/hugging-face.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 162,
+      "name": "Midjourney",
+      "url": "https://vultyr.app/status/midjourney.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 163,
+      "name": "Mistral AI",
+      "url": "https://vultyr.app/status/mistral-ai.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 164,
+      "name": "OpenAI",
+      "url": "https://vultyr.app/status/openai.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 165,
+      "name": "Perplexity",
+      "url": "https://vultyr.app/status/perplexity.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 166,
+      "name": "Pinecone",
+      "url": "https://vultyr.app/status/pinecone.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 167,
+      "name": "Replicate",
+      "url": "https://vultyr.app/status/replicate.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 168,
+      "name": "Runway",
+      "url": "https://vultyr.app/status/runway.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 169,
+      "name": "Stability AI",
+      "url": "https://vultyr.app/status/stability-ai.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 170,
+      "name": "Bluesky",
+      "url": "https://vultyr.app/status/bluesky.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 171,
+      "name": "Facebook",
+      "url": "https://vultyr.app/status/facebook.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 172,
+      "name": "Instagram",
+      "url": "https://vultyr.app/status/instagram.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 173,
+      "name": "LinkedIn",
+      "url": "https://vultyr.app/status/linkedin.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 174,
+      "name": "Mastodon",
+      "url": "https://vultyr.app/status/mastodon.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 175,
+      "name": "Medium",
+      "url": "https://vultyr.app/status/medium.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 176,
+      "name": "Pinterest",
+      "url": "https://vultyr.app/status/pinterest.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 177,
+      "name": "Reddit",
+      "url": "https://vultyr.app/status/reddit.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 178,
+      "name": "Substack",
+      "url": "https://vultyr.app/status/substack.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 179,
+      "name": "Telegram",
+      "url": "https://vultyr.app/status/telegram.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 180,
+      "name": "Threads",
+      "url": "https://vultyr.app/status/threads.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 181,
+      "name": "TikTok",
+      "url": "https://vultyr.app/status/tiktok.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 182,
+      "name": "Tumblr",
+      "url": "https://vultyr.app/status/tumblr.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 183,
+      "name": "WhatsApp",
+      "url": "https://vultyr.app/status/whatsapp.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 184,
+      "name": "X / Twitter",
+      "url": "https://vultyr.app/status/x-twitter.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 185,
+      "name": "Crunchyroll",
+      "url": "https://vultyr.app/status/crunchyroll.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 186,
+      "name": "Dailymotion",
+      "url": "https://vultyr.app/status/dailymotion.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 187,
+      "name": "Giphy",
+      "url": "https://vultyr.app/status/giphy.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 188,
+      "name": "Hulu",
+      "url": "https://vultyr.app/status/hulu.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 189,
+      "name": "Imgur",
+      "url": "https://vultyr.app/status/imgur.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 190,
+      "name": "Kick",
+      "url": "https://vultyr.app/status/kick.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 191,
+      "name": "Netflix",
+      "url": "https://vultyr.app/status/netflix.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 192,
+      "name": "Paramount+",
+      "url": "https://vultyr.app/status/paramountplus.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 193,
+      "name": "Peacock",
+      "url": "https://vultyr.app/status/peacock.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 194,
+      "name": "Spotify",
+      "url": "https://vultyr.app/status/spotify.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 195,
+      "name": "Twitch",
+      "url": "https://vultyr.app/status/twitch.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 196,
+      "name": "Vimeo",
+      "url": "https://vultyr.app/status/vimeo.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 197,
+      "name": "Epic Games",
+      "url": "https://vultyr.app/status/epic-games.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 198,
+      "name": "Fortnite",
+      "url": "https://vultyr.app/status/fortnite.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 199,
+      "name": "Nintendo",
+      "url": "https://vultyr.app/status/nintendo.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 200,
+      "name": "PlayStation",
+      "url": "https://vultyr.app/status/playstation.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 201,
+      "name": "Unity",
+      "url": "https://vultyr.app/status/unity.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 202,
+      "name": "AT&T",
+      "url": "https://vultyr.app/status/atandt.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 203,
+      "name": "Bell Canada",
+      "url": "https://vultyr.app/status/bell-canada.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 204,
+      "name": "Comcast / Xfinity",
+      "url": "https://vultyr.app/status/comcast-xfinity.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 205,
+      "name": "Cox",
+      "url": "https://vultyr.app/status/cox.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 206,
+      "name": "Lumen",
+      "url": "https://vultyr.app/status/lumen.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 207,
+      "name": "O2",
+      "url": "https://vultyr.app/status/o2.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 208,
+      "name": "Starlink",
+      "url": "https://vultyr.app/status/starlink.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 209,
+      "name": "Telus",
+      "url": "https://vultyr.app/status/telus.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 210,
+      "name": "T-Mobile",
+      "url": "https://vultyr.app/status/t-mobile.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 211,
+      "name": "Verizon",
+      "url": "https://vultyr.app/status/verizon.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 212,
+      "name": "Visible",
+      "url": "https://vultyr.app/status/visible.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 213,
+      "name": "1Password",
+      "url": "https://vultyr.app/status/1password.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 214,
+      "name": "Auth0",
+      "url": "https://vultyr.app/status/auth0.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 215,
+      "name": "Bitwarden",
+      "url": "https://vultyr.app/status/bitwarden.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 216,
+      "name": "Cloudflare Zero Trust",
+      "url": "https://vultyr.app/status/cloudflare-zero-trust.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 217,
+      "name": "Dashlane",
+      "url": "https://vultyr.app/status/dashlane.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 218,
+      "name": "Duo Security",
+      "url": "https://vultyr.app/status/duo-security.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 219,
+      "name": "Keeper",
+      "url": "https://vultyr.app/status/keeper.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 220,
+      "name": "LastPass",
+      "url": "https://vultyr.app/status/lastpass.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 221,
+      "name": "Malwarebytes",
+      "url": "https://vultyr.app/status/malwarebytes.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 222,
+      "name": "NordVPN",
+      "url": "https://vultyr.app/status/nordvpn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 223,
+      "name": "Okta",
+      "url": "https://vultyr.app/status/okta.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 224,
+      "name": "Palo Alto Networks",
+      "url": "https://vultyr.app/status/palo-alto-networks.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 225,
+      "name": "Proton",
+      "url": "https://vultyr.app/status/proton.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 226,
+      "name": "Semgrep",
+      "url": "https://vultyr.app/status/semgrep.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 227,
+      "name": "Stytch",
+      "url": "https://vultyr.app/status/stytch.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 228,
+      "name": "Tailscale",
+      "url": "https://vultyr.app/status/tailscale.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 229,
+      "name": "Wiz",
+      "url": "https://vultyr.app/status/wiz.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 230,
+      "name": "WorkOS",
+      "url": "https://vultyr.app/status/workos.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 231,
+      "name": "Zscaler",
+      "url": "https://vultyr.app/status/zscaler.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 232,
+      "name": "Mailchimp",
+      "url": "https://vultyr.app/status/mailchimp.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 233,
+      "name": "Mailgun",
+      "url": "https://vultyr.app/status/mailgun.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 234,
+      "name": "Postmark",
+      "url": "https://vultyr.app/status/postmark.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 235,
+      "name": "SendGrid",
+      "url": "https://vultyr.app/status/sendgrid.html"
     }
-    </script>
+  ]
+}
+</script>
     <!-- Google tag (gtag.js) — cookieless, anonymized -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
-    </script>
+    <script defer src="/assets/js/analytics.js"></script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>

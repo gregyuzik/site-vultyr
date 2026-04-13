@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-PsEuADY5MFGT2SkfGXg9mApPnAQ9eYyJc9ZuA4DiPbo=' 'sha256-BAXp/YkmzvdlShPln4rFvV5YwLo9jSxdi682M65/l7w='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Productivity &amp; SaaS Status Monitor — 27 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 27 productivity &amp; saas services. Real-time outage alerts for Airtable, Amplitude, Asana, Atlassian, and more.">
     <meta name="theme-color" content="#000000">
@@ -22,210 +22,205 @@
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Vultyr",
-          "item": "https://vultyr.app"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://vultyr.app/services.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Productivity & SaaS"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Vultyr",
+      "item": "https://vultyr.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://vultyr.app/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Productivity & SaaS"
     }
-    </script>
+  ]
+}
+</script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Productivity & SaaS Status Monitors",
+  "numberOfItems": 27,
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Productivity & SaaS Status Monitors",
-      "numberOfItems": 27,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Airtable",
-          "url": "https://vultyr.app/status/airtable.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Amplitude",
-          "url": "https://vultyr.app/status/amplitude.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Asana",
-          "url": "https://vultyr.app/status/asana.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Atlassian",
-          "url": "https://vultyr.app/status/atlassian.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Box",
-          "url": "https://vultyr.app/status/box.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Canva",
-          "url": "https://vultyr.app/status/canva.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "ClickUp",
-          "url": "https://vultyr.app/status/clickup.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "Clerk",
-          "url": "https://vultyr.app/status/clerk.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "Coda",
-          "url": "https://vultyr.app/status/coda.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "name": "Datadog",
-          "url": "https://vultyr.app/status/datadog.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 11,
-          "name": "Dropbox Sign",
-          "url": "https://vultyr.app/status/dropbox-sign.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "name": "Fathom",
-          "url": "https://vultyr.app/status/fathom.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 13,
-          "name": "Figma",
-          "url": "https://vultyr.app/status/figma.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 14,
-          "name": "Freshworks",
-          "url": "https://vultyr.app/status/freshworks.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 15,
-          "name": "Grammarly",
-          "url": "https://vultyr.app/status/grammarly.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 16,
-          "name": "HubSpot",
-          "url": "https://vultyr.app/status/hubspot.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 17,
-          "name": "Intercom",
-          "url": "https://vultyr.app/status/intercom.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 18,
-          "name": "Linear",
-          "url": "https://vultyr.app/status/linear.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 19,
-          "name": "Login.gov",
-          "url": "https://vultyr.app/status/logingov.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 20,
-          "name": "Miro",
-          "url": "https://vultyr.app/status/miro.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 21,
-          "name": "Mixpanel",
-          "url": "https://vultyr.app/status/mixpanel.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 22,
-          "name": "Monday.com",
-          "url": "https://vultyr.app/status/mondaycom.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 23,
-          "name": "Notion",
-          "url": "https://vultyr.app/status/notion.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 24,
-          "name": "Otter.ai",
-          "url": "https://vultyr.app/status/otterai.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 25,
-          "name": "Sanity",
-          "url": "https://vultyr.app/status/sanity.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 26,
-          "name": "Segment",
-          "url": "https://vultyr.app/status/segment.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 27,
-          "name": "Zendesk",
-          "url": "https://vultyr.app/status/zendesk.html"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Airtable",
+      "url": "https://vultyr.app/status/airtable.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Amplitude",
+      "url": "https://vultyr.app/status/amplitude.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Asana",
+      "url": "https://vultyr.app/status/asana.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Atlassian",
+      "url": "https://vultyr.app/status/atlassian.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Box",
+      "url": "https://vultyr.app/status/box.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Canva",
+      "url": "https://vultyr.app/status/canva.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "ClickUp",
+      "url": "https://vultyr.app/status/clickup.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "Clerk",
+      "url": "https://vultyr.app/status/clerk.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Coda",
+      "url": "https://vultyr.app/status/coda.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Datadog",
+      "url": "https://vultyr.app/status/datadog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Dropbox Sign",
+      "url": "https://vultyr.app/status/dropbox-sign.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Fathom",
+      "url": "https://vultyr.app/status/fathom.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "Figma",
+      "url": "https://vultyr.app/status/figma.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "Freshworks",
+      "url": "https://vultyr.app/status/freshworks.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "Grammarly",
+      "url": "https://vultyr.app/status/grammarly.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "HubSpot",
+      "url": "https://vultyr.app/status/hubspot.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "Intercom",
+      "url": "https://vultyr.app/status/intercom.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "Linear",
+      "url": "https://vultyr.app/status/linear.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "Login.gov",
+      "url": "https://vultyr.app/status/logingov.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "name": "Miro",
+      "url": "https://vultyr.app/status/miro.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "name": "Mixpanel",
+      "url": "https://vultyr.app/status/mixpanel.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "name": "Monday.com",
+      "url": "https://vultyr.app/status/mondaycom.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "name": "Notion",
+      "url": "https://vultyr.app/status/notion.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "name": "Otter.ai",
+      "url": "https://vultyr.app/status/otterai.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "name": "Sanity",
+      "url": "https://vultyr.app/status/sanity.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "name": "Segment",
+      "url": "https://vultyr.app/status/segment.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "name": "Zendesk",
+      "url": "https://vultyr.app/status/zendesk.html"
     }
-    </script>
+  ]
+}
+</script>
     <!-- Google tag (gtag.js) — cookieless, anonymized -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
-    </script>
+    <script defer src="/assets/js/analytics.js"></script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>

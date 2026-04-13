@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-cHiDGePUW+bXy7DTkOw0cPveBScVtY4xX+uvlaA6glU=' 'sha256-raq332YUGmG+Tf7vMEnlMbU9sIcPJYhcfQ1ln9Lr8xY='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Cloud &amp; Infrastructure Status Monitor — 30 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 30 cloud &amp; infrastructure services. Real-time outage alerts for Aiven, Akamai, Aptible, Bunny CDN, and more.">
     <meta name="theme-color" content="#000000">
@@ -22,228 +22,223 @@
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Vultyr",
-          "item": "https://vultyr.app"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://vultyr.app/services.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Cloud & Infrastructure"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Vultyr",
+      "item": "https://vultyr.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://vultyr.app/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Cloud & Infrastructure"
     }
-    </script>
+  ]
+}
+</script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Cloud & Infrastructure Status Monitors",
+  "numberOfItems": 30,
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Cloud & Infrastructure Status Monitors",
-      "numberOfItems": 30,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Aiven",
-          "url": "https://vultyr.app/status/aiven.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Akamai",
-          "url": "https://vultyr.app/status/akamai.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Aptible",
-          "url": "https://vultyr.app/status/aptible.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Bunny CDN",
-          "url": "https://vultyr.app/status/bunny-cdn.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Cloudflare",
-          "url": "https://vultyr.app/status/cloudflare.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "CockroachDB",
-          "url": "https://vultyr.app/status/cockroachdb.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "name": "Confluent (Kafka)",
-          "url": "https://vultyr.app/status/confluent.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 8,
-          "name": "DigitalOcean",
-          "url": "https://vultyr.app/status/digitalocean.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "name": "Dropbox",
-          "url": "https://vultyr.app/status/dropbox.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "name": "Elastic Cloud",
-          "url": "https://vultyr.app/status/elastic-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 11,
-          "name": "Fastly",
-          "url": "https://vultyr.app/status/fastly.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 12,
-          "name": "Fly.io",
-          "url": "https://vultyr.app/status/flyio.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 13,
-          "name": "Heroku",
-          "url": "https://vultyr.app/status/heroku.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 14,
-          "name": "InfluxDB Cloud",
-          "url": "https://vultyr.app/status/influxdb-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 15,
-          "name": "KeyCDN",
-          "url": "https://vultyr.app/status/keycdn.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 16,
-          "name": "Linode",
-          "url": "https://vultyr.app/status/linode.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 17,
-          "name": "MongoDB Cloud",
-          "url": "https://vultyr.app/status/mongodb-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 18,
-          "name": "Neon",
-          "url": "https://vultyr.app/status/neon.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 19,
-          "name": "Oracle Cloud",
-          "url": "https://vultyr.app/status/oracle-cloud.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 20,
-          "name": "PlanetScale",
-          "url": "https://vultyr.app/status/planetscale.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 21,
-          "name": "Railway",
-          "url": "https://vultyr.app/status/railway.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 22,
-          "name": "Redis",
-          "url": "https://vultyr.app/status/redis.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 23,
-          "name": "Render",
-          "url": "https://vultyr.app/status/render.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 24,
-          "name": "Salesforce",
-          "url": "https://vultyr.app/status/salesforce.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 25,
-          "name": "Scaleway",
-          "url": "https://vultyr.app/status/scaleway.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 26,
-          "name": "Snowflake",
-          "url": "https://vultyr.app/status/snowflake.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 27,
-          "name": "Timescale",
-          "url": "https://vultyr.app/status/timescale.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 28,
-          "name": "Turso",
-          "url": "https://vultyr.app/status/turso.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 29,
-          "name": "Vercel",
-          "url": "https://vultyr.app/status/vercel.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 30,
-          "name": "Wasabi",
-          "url": "https://vultyr.app/status/wasabi.html"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aiven",
+      "url": "https://vultyr.app/status/aiven.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Akamai",
+      "url": "https://vultyr.app/status/akamai.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Aptible",
+      "url": "https://vultyr.app/status/aptible.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Bunny CDN",
+      "url": "https://vultyr.app/status/bunny-cdn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Cloudflare",
+      "url": "https://vultyr.app/status/cloudflare.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "CockroachDB",
+      "url": "https://vultyr.app/status/cockroachdb.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Confluent (Kafka)",
+      "url": "https://vultyr.app/status/confluent.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "DigitalOcean",
+      "url": "https://vultyr.app/status/digitalocean.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Dropbox",
+      "url": "https://vultyr.app/status/dropbox.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Elastic Cloud",
+      "url": "https://vultyr.app/status/elastic-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Fastly",
+      "url": "https://vultyr.app/status/fastly.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Fly.io",
+      "url": "https://vultyr.app/status/flyio.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "Heroku",
+      "url": "https://vultyr.app/status/heroku.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "InfluxDB Cloud",
+      "url": "https://vultyr.app/status/influxdb-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "KeyCDN",
+      "url": "https://vultyr.app/status/keycdn.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "Linode",
+      "url": "https://vultyr.app/status/linode.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "MongoDB Cloud",
+      "url": "https://vultyr.app/status/mongodb-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "Neon",
+      "url": "https://vultyr.app/status/neon.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "Oracle Cloud",
+      "url": "https://vultyr.app/status/oracle-cloud.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "name": "PlanetScale",
+      "url": "https://vultyr.app/status/planetscale.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "name": "Railway",
+      "url": "https://vultyr.app/status/railway.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "name": "Redis",
+      "url": "https://vultyr.app/status/redis.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "name": "Render",
+      "url": "https://vultyr.app/status/render.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "name": "Salesforce",
+      "url": "https://vultyr.app/status/salesforce.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "name": "Scaleway",
+      "url": "https://vultyr.app/status/scaleway.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "name": "Snowflake",
+      "url": "https://vultyr.app/status/snowflake.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "name": "Timescale",
+      "url": "https://vultyr.app/status/timescale.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "name": "Turso",
+      "url": "https://vultyr.app/status/turso.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "name": "Vercel",
+      "url": "https://vultyr.app/status/vercel.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "name": "Wasabi",
+      "url": "https://vultyr.app/status/wasabi.html"
     }
-    </script>
+  ]
+}
+</script>
     <!-- Google tag (gtag.js) — cookieless, anonymized -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
-    </script>
+    <script defer src="/assets/js/analytics.js"></script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>

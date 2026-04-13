@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Generate services.html, category pages, service pages, 404.html, and sitemap.xml from services.json."""
 
+import base64
+import hashlib
 import html as html_module
 import json
-import re
 from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
@@ -18,21 +19,13 @@ TODAY = date.today().isoformat()
 
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260413"
+PLATFORM_DEVICE_LIST = "iPhone, iPad, Mac, Apple Watch, Apple TV, and Vision Pro"
 
 ALLOWED_URL_SCHEMES = {"https", "mailto"}
 
-HEAD_COMMON = """    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">"""
-
 GA_SNIPPET = f"""    <!-- Google tag (gtag.js) — cookieless, anonymized -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){{dataLayer.push(arguments);}}
-      gtag('js', new Date());
-      gtag('config', '{GA_ID}', {{ anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false }});
-    </script>"""
+    <script defer src="/assets/js/analytics.js"></script>"""
 
 FOOTER_HTML = """    <footer>
         <nav aria-label="Footer navigation">
@@ -62,12 +55,44 @@ def safe_url(url):
     return e(url)
 
 
-def json_ld(obj):
-    """Serialize `obj` into a JSON-LD <script> block, escaping the `</` sequence
-    so the JSON content cannot break out of the enclosing <script> tag."""
+def csp_hash(content):
+    """Return a CSP sha256 hash token for inline script content."""
+    digest = hashlib.sha256(content.encode("utf-8")).digest()
+    return f"'sha256-{base64.b64encode(digest).decode('ascii')}'"
+
+
+def build_csp(script_hashes=()):
+    """Build a CSP that avoids unsafe-inline while allowing hashed JSON-LD."""
+    script_src = ["'self'", "https://www.googletagmanager.com", *script_hashes]
+    directives = [
+        "default-src 'self'",
+        f"script-src {' '.join(script_src)}",
+        "style-src 'self'",
+        "font-src 'self'",
+        "img-src 'self' data:",
+        "connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
+        "frame-ancestors 'none'",
+        "object-src 'none'",
+        "base-uri 'self'",
+        "form-action 'none'",
+    ]
+    return "; ".join(directives)
+
+
+def head_common(script_hashes=()):
+    """Shared head tags plus a per-page CSP."""
+    return "\n".join([
+        '    <meta charset="UTF-8">',
+        '    <meta name="viewport" content="width=device-width, initial-scale=1.0">',
+        f'    <meta http-equiv="Content-Security-Policy" content="{build_csp(script_hashes=script_hashes)}">',
+    ])
+
+
+def json_ld_block(obj):
+    """Return a JSON-LD block and matching CSP hash."""
     body = json.dumps(obj, indent=2, ensure_ascii=False).replace("</", "<\\/")
-    indented = re.sub(r"(^|\n)", r"\1    ", body)
-    return f'    <script type="application/ld+json">\n{indented}\n    </script>'
+    content = f"\n{body}\n"
+    return f'    <script type="application/ld+json">{content}</script>', csp_hash(content)
 
 
 def load_data():
@@ -87,6 +112,16 @@ def write_file(path, content):
     except OSError as exc:
         print(f"Error writing {path}: {exc}")
         raise SystemExit(1)
+
+
+def prune_generated_dir(directory, expected_names):
+    """Remove generated HTML files that no longer exist in the source data."""
+    removed = []
+    for path in sorted(directory.glob("*.html")):
+        if path.name not in expected_names:
+            path.unlink()
+            removed.append(path.name)
+    return removed
 
 
 _PLACEHOLDER = (
@@ -186,10 +221,12 @@ def generate_services_page(data, favicon):
         ],
     }
 
+    item_list_ld_html, item_list_ld_hash = json_ld_block(item_list_ld)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-{HEAD_COMMON}
+{head_common(script_hashes=(item_list_ld_hash,))}
     <title>{e(title)}</title>
     <meta name="description" content="{e(description)}">
     <meta name="theme-color" content="#000000">
@@ -207,7 +244,7 @@ def generate_services_page(data, favicon):
     <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/services-list.css">
-{json_ld(item_list_ld)}
+{item_list_ld_html}
 {GA_SNIPPET}
 </head>
 <body>
@@ -287,7 +324,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
                 "name": f"How can I monitor {name} status?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": f"Download Vultyr (free) to monitor {name} and {total_services}+ other services with real-time alerts on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro. Vultyr checks service status automatically and notifies you the moment an outage is detected.",
+                    "text": f"Download Vultyr (free) to monitor {name} and {total_services}+ other services with real-time alerts on {PLATFORM_DEVICE_LIST}. Vultyr checks service status automatically and notifies you the moment an outage is detected.",
                 },
             },
         ],
@@ -328,16 +365,18 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
     title = f"Is {name} Down? {name} Status Monitor | Vultyr"
     description = (
         f"Check if {name} is down right now. Live {name} status updates and outage monitoring with Vultyr. "
-        "Free on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro."
+        f"Free on {PLATFORM_DEVICE_LIST}."
     )
 
     status_href = safe_url(status_url)
     home_href = safe_url(homepage_url)
+    breadcrumb_ld_html, breadcrumb_ld_hash = json_ld_block(breadcrumb_ld)
+    faq_ld_html, faq_ld_hash = json_ld_block(faq_ld)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-{HEAD_COMMON}
+{head_common(script_hashes=(breadcrumb_ld_hash, faq_ld_hash))}
     <title>{e(title)}</title>
     <meta name="description" content="{e(description)}">
     <meta name="theme-color" content="#000000">
@@ -355,8 +394,8 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
     <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/service.css">
-{json_ld(breadcrumb_ld)}
-{json_ld(faq_ld)}
+{breadcrumb_ld_html}
+{faq_ld_html}
 {GA_SNIPPET}
 </head>
 <body>
@@ -394,7 +433,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
         </div>
         <div class="faq">
             <h3>How can I monitor {e(name)} status?</h3>
-            <p>Vultyr monitors {e(name)} and {total_services}+ other cloud services, dev tools, and platforms. Get instant outage alerts on iPhone, Mac, Apple Watch, Apple TV, and Vision Pro — completely free.</p>
+            <p>Vultyr monitors {e(name)} and {total_services}+ other cloud services, dev tools, and platforms. Get instant outage alerts on {PLATFORM_DEVICE_LIST} — completely free.</p>
         </div>
 
 {related_html}
@@ -486,10 +525,13 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
     )
     description = f"Monitor the status of {count} {name.lower()} services. Real-time outage alerts for {sample_names}, and more."
 
+    breadcrumb_ld_html, breadcrumb_ld_hash = json_ld_block(breadcrumb_ld)
+    item_list_ld_html, item_list_ld_hash = json_ld_block(item_list_ld)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-{HEAD_COMMON}
+{head_common(script_hashes=(breadcrumb_ld_hash, item_list_ld_hash))}
     <title>{e(title)}</title>
     <meta name="description" content="{e(description)}">
     <meta name="theme-color" content="#000000">
@@ -507,8 +549,8 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
     <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/category.css">
-{json_ld(breadcrumb_ld)}
-{json_ld(item_list_ld)}
+{breadcrumb_ld_html}
+{item_list_ld_html}
 {GA_SNIPPET}
 </head>
 <body>
@@ -574,7 +616,7 @@ def generate_404(data, favicon):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
-{HEAD_COMMON}
+{head_common()}
     <title>Page Not Found — Vultyr</title>
     <meta name="description" content="The page you're looking for doesn't exist.">
     <meta name="theme-color" content="#000000">
@@ -582,20 +624,7 @@ def generate_404(data, favicon):
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
     <link rel="stylesheet" href="/assets/css/shared.css">
-    <style>
-        .error-main {{ text-align: center; padding: 80px 24px 40px; max-width: 720px; margin: 0 auto; }}
-        .error-code {{ font-family: var(--font-display); font-size: 4rem; color: var(--accent-warm); margin-bottom: 8px; }}
-        .error-title {{ font-size: 1.2rem; color: var(--text-strong); margin-bottom: 24px; }}
-        .error-message {{ color: var(--text-muted); max-width: 400px; margin: 0 auto 40px; font-size: 0.95rem; }}
-        .error-section {{ margin-top: 40px; text-align: left; }}
-        .error-section h2 {{ font-family: var(--font-display); font-size: 1rem; color: var(--accent-warm); margin-bottom: 16px; text-align: center; }}
-        .popular {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-bottom: 40px; }}
-        .popular a {{ display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); color: var(--text); font-size: 0.875rem; transition: border-color 0.2s, color 0.2s; }}
-        .popular a:hover {{ border-color: var(--border-hover); color: var(--text-strong); }}
-        .cat-links {{ display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }}
-        .cat-link {{ padding: 6px 14px; border: 1px solid var(--border); border-radius: var(--radius-pill); font-size: 0.8rem; color: var(--text-muted); transition: border-color 0.2s, color 0.2s; }}
-        .cat-link:hover {{ border-color: var(--border-hover); color: var(--text-strong); }}
-    </style>
+    <link rel="stylesheet" href="/assets/css/404.css">
 {GA_SNIPPET}
 </head>
 <body>
@@ -671,11 +700,13 @@ def main():
     for svc in services:
         html = generate_service_page(svc, categories_by_slug, services_by_slug, total_services, favicon)
         write_file(STATUS_DIR / f"{svc['slug']}.html", html)
+    removed_status = prune_generated_dir(STATUS_DIR, {f"{svc['slug']}.html" for svc in services})
 
     print(f"Generating {len(categories)} category pages...")
     for cat in categories:
         html = generate_category_page(cat, services_by_slug, categories, favicon)
         write_file(CATEGORIES_DIR / f"{cat['slug']}.html", html)
+    removed_categories = prune_generated_dir(CATEGORIES_DIR, {f"{cat['slug']}.html" for cat in categories})
 
     print("Generating 404.html...")
     write_file(ROOT_DIR / "404.html", generate_404(data, favicon))
@@ -690,6 +721,8 @@ def main():
     print(f"  {len(categories)} category pages in /categories/")
     print(f"  404.html")
     print(f"  sitemap.xml ({total_services + len(categories) + 4} URLs)")
+    if removed_status or removed_categories:
+        print(f"  Removed {len(removed_status) + len(removed_categories)} stale generated page(s)")
 
     if favicon.missing:
         print(f"\nWarning: {len(favicon.missing)} missing favicon(s), using placeholder:")

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-5mOiA52KYHs08kP8nHFN88kZIgrkwH+bshI5A1ybQO8=' 'sha256-6Z9w7VDzFCidVQxTmohlbEVWBDACqoM40oHa7Tuhnts='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Amazon Status Monitor — 5 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 5 amazon services. Real-time outage alerts for Alexa, Amazon.com, AWS, Prime Video, and more.">
     <meta name="theme-color" content="#000000">
@@ -22,78 +22,73 @@
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Vultyr",
-          "item": "https://vultyr.app"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://vultyr.app/services.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Amazon"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Vultyr",
+      "item": "https://vultyr.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://vultyr.app/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Amazon"
     }
-    </script>
+  ]
+}
+</script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Amazon Status Monitors",
+  "numberOfItems": 5,
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Amazon Status Monitors",
-      "numberOfItems": 5,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Alexa",
-          "url": "https://vultyr.app/status/alexa.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Amazon.com",
-          "url": "https://vultyr.app/status/amazoncom.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "AWS",
-          "url": "https://vultyr.app/status/aws.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Prime Video",
-          "url": "https://vultyr.app/status/prime-video.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Ring",
-          "url": "https://vultyr.app/status/ring.html"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Alexa",
+      "url": "https://vultyr.app/status/alexa.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Amazon.com",
+      "url": "https://vultyr.app/status/amazoncom.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AWS",
+      "url": "https://vultyr.app/status/aws.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Prime Video",
+      "url": "https://vultyr.app/status/prime-video.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Ring",
+      "url": "https://vultyr.app/status/ring.html"
     }
-    </script>
+  ]
+}
+</script>
     <!-- Google tag (gtag.js) — cookieless, anonymized -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
-    </script>
+    <script defer src="/assets/js/analytics.js"></script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>

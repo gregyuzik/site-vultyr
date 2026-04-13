@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-Lg2L/anvIos/JZfCvd7LbVtRg10sDYpmsIxP632J8e4=' 'sha256-afsIbK25s1i2+frAWWAXmjKaLcJgtvf30vvWQPvDezY='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
     <title>Email &amp; Marketing Status Monitor — 4 Services | Vultyr</title>
     <meta name="description" content="Monitor the status of 4 email &amp; marketing services. Real-time outage alerts for Mailchimp, Mailgun, Postmark, SendGrid, and more.">
     <meta name="theme-color" content="#000000">
@@ -22,72 +22,67 @@
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/category.css">
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Vultyr",
-          "item": "https://vultyr.app"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Services",
-          "item": "https://vultyr.app/services.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Email & Marketing"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Vultyr",
+      "item": "https://vultyr.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://vultyr.app/services.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Email & Marketing"
     }
-    </script>
+  ]
+}
+</script>
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Email & Marketing Status Monitors",
+  "numberOfItems": 4,
+  "itemListElement": [
     {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Email & Marketing Status Monitors",
-      "numberOfItems": 4,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Mailchimp",
-          "url": "https://vultyr.app/status/mailchimp.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Mailgun",
-          "url": "https://vultyr.app/status/mailgun.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Postmark",
-          "url": "https://vultyr.app/status/postmark.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "SendGrid",
-          "url": "https://vultyr.app/status/sendgrid.html"
-        }
-      ]
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Mailchimp",
+      "url": "https://vultyr.app/status/mailchimp.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mailgun",
+      "url": "https://vultyr.app/status/mailgun.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Postmark",
+      "url": "https://vultyr.app/status/postmark.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "SendGrid",
+      "url": "https://vultyr.app/status/sendgrid.html"
     }
-    </script>
+  ]
+}
+</script>
     <!-- Google tag (gtag.js) — cookieless, anonymized -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YYDJLZG0X1', { anonymize_ip: true, client_storage: 'none', allow_google_signals: false, allow_ad_personalization_signals: false });
-    </script>
+    <script defer src="/assets/js/analytics.js"></script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>

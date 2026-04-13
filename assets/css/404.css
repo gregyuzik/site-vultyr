@@ -1,0 +1,12 @@
+.error-main { text-align: center; padding: 80px 24px 40px; max-width: 720px; margin: 0 auto; }
+.error-code { font-family: var(--font-display); font-size: 4rem; color: var(--accent-warm); margin-bottom: 8px; }
+.error-title { font-size: 1.2rem; color: var(--text-strong); margin-bottom: 24px; }
+.error-message { color: var(--text-muted); max-width: 400px; margin: 0 auto 40px; font-size: 0.95rem; }
+.error-section { margin-top: 40px; text-align: left; }
+.error-section h2 { font-family: var(--font-display); font-size: 1rem; color: var(--accent-warm); margin-bottom: 16px; text-align: center; }
+.popular { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin-bottom: 40px; }
+.popular a { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); color: var(--text); font-size: 0.875rem; transition: border-color 0.2s, color 0.2s; }
+.popular a:hover { border-color: var(--border-hover); color: var(--text-strong); }
+.cat-links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.cat-link { padding: 6px 14px; border: 1px solid var(--border); border-radius: var(--radius-pill); font-size: 0.8rem; color: var(--text-muted); transition: border-color 0.2s, color 0.2s; }
+.cat-link:hover { border-color: var(--border-hover); color: var(--text-strong); }
