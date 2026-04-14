@@ -180,10 +180,10 @@ def generate_services_page(data, favicon):
     categories = data["categories"]
     total = len(data["services"])
 
-    title = f"Vultyr — {total}+ Monitored Services"
+    title = "Vultyr — 200+ Status Checks"
     description = (
-        f"All {total}+ services monitored by Vultyr, organized by category. "
-        "Cloud, dev tools, communication, AI, and more."
+        "200+ status checks across cloud services, dev tools, communication, "
+        "AI, and more — all monitored by Vultyr."
     )
 
     # Category pills at top
@@ -272,8 +272,8 @@ def generate_services_page(data, favicon):
     <main id="main">
     <div class="header">
         <a href="/">&larr; Back to vultyr</a>
-        <h1>Monitored <span class="highlight-orange">Services</span></h1>
-        <p class="subtitle">All {total} services vultyr actively monitors via status APIs.</p>
+        <h1>Status <span class="highlight-orange">Checks</span></h1>
+        <p class="subtitle">200+ status checks vultyr runs across cloud services, dev tools, and platforms.</p>
     </div>
 
     <nav class="content categories-nav" aria-label="Browse by category">
@@ -293,7 +293,7 @@ def generate_services_page(data, favicon):
 
 # ─── SERVICE PAGE ──────────────────────────────────────────────────────────────
 
-def generate_service_page(svc, categories_lookup, all_services_by_slug, total_services, favicon):
+def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon):
     name = svc["name"]
     slug = svc["slug"]
     favicon_domain = svc["faviconDomain"]
@@ -344,7 +344,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
                 "name": f"How can I monitor {name} status?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": f"Download Vultyr (free) to monitor {name} and {total_services}+ other services with real-time alerts on {PLATFORM_DEVICE_LIST}. Vultyr checks service status automatically and notifies you the moment an outage is detected.",
+                    "text": f"Download Vultyr (free) to monitor {name} as part of 200+ status checks with real-time alerts on {PLATFORM_DEVICE_LIST}. Vultyr runs each check automatically and notifies you the moment an outage is detected.",
                 },
             },
         ],
@@ -453,7 +453,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
         </div>
         <div class="faq">
             <h3>How can I monitor {e(name)} status?</h3>
-            <p>Vultyr monitors {e(name)} and {total_services}+ other cloud services, dev tools, and platforms. Get instant outage alerts on {PLATFORM_DEVICE_LIST} — completely free.</p>
+            <p>Vultyr monitors {e(name)} as part of 200+ status checks across cloud services, dev tools, and platforms. Get instant outage alerts on {PLATFORM_DEVICE_LIST} — completely free.</p>
         </div>
 
 {related_html}
@@ -619,7 +619,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
 
 HOME_FEATURES = [
     ("chart-bar-regular.svg", "Live Status Dashboard",
-     "AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic and {total}+ more — all in one place."),
+     "AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic and 200+ more — all in one place."),
     ("bell-ringing-regular.svg", "Smart Alerts",
      "Get notified when a service goes down or comes back up. Mute known incidents and star critical services."),
     ("cloud-check-regular.svg", "Cross-Device Sync",
@@ -640,12 +640,10 @@ HOME_FEATURES = [
 
 
 def generate_home_page(data):
-    total = len(data["services"])
-
     title = "Vultyr — Service Status Monitor for AWS, Slack, GitHub & More"
     description = (
-        f"Is it down? Monitor {total}+ cloud services, dev tools, and platforms with instant outage alerts. "
-        f"Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro."
+        "Is it down? 200+ status checks across cloud services, dev tools, and platforms with instant outage alerts. "
+        "Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro."
     )
     og_title = "Vultyr — Service Status Monitor"
 
@@ -657,7 +655,7 @@ def generate_home_page(data):
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": ["iOS", "iPadOS", "macOS", "tvOS", "watchOS", "visionOS"],
         "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-        "description": f"Monitor {total}+ cloud services, dev tools, and platforms with instant outage alerts.",
+        "description": "Monitor 200+ status checks across cloud services, dev tools, and platforms with instant outage alerts.",
         "url": f"{SITE_ORIGIN}/",
         "downloadUrl": APP_STORE_URL,
         "screenshot": [
@@ -691,7 +689,7 @@ def generate_home_page(data):
         f'                <div class="feature-icon"><img src="/assets/icons/{icon}" alt="" width="22" height="22" aria-hidden="true"></div>\n'
         f'                <div>\n'
         f'                    <h3>{e(name)}</h3>\n'
-        f'                    <p>{e(body.format(total=total))}</p>\n'
+        f'                    <p>{e(body)}</p>\n'
         f'                </div>\n'
         f'            </div>'
         for icon, name, body in HOME_FEATURES
@@ -734,7 +732,7 @@ def generate_home_page(data):
             <img src="/assets/icon-256.png" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
             <h1 class="fade-up fade-up-1">vultyr</h1>
             <p class="tagline fade-up fade-up-2">Is it down? <span class="highlight">Know before your users do.</span></p>
-            <p class="tagline-services fade-up fade-up-3">Monitor {total}+ services — AWS, GitHub, Slack, Stripe &amp; more — with instant outage alerts across every Apple device.</p>
+            <p class="tagline-services fade-up fade-up-3">200+ status checks — AWS, GitHub, Slack, Stripe &amp; more — with instant outage alerts across every Apple device.</p>
             <div class="cta-group fade-up fade-up-4">
                 <a href="{APP_STORE_URL}" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="Download Vultyr on the App Store">
                     <img src="/assets/app-store-badge.svg" alt="Download on the App Store" class="badge-img" width="180" height="54" decoding="async">
@@ -765,8 +763,8 @@ def generate_home_page(data):
         <h2 id="stats-heading" class="sr-only">Key numbers</h2>
         <div class="stats-grid">
             <div class="stat">
-                <span class="stat-value">{total}+</span>
-                <span class="stat-label">Services</span>
+                <span class="stat-value">200+</span>
+                <span class="stat-label">Checks</span>
             </div>
             <div class="stat">
                 <span class="stat-value">{len(data["categories"])}</span>
@@ -986,7 +984,7 @@ def main():
     print(f"Generating {total_services} service pages...")
     for svc in services:
         path = STATUS_DIR / f"{svc['slug']}.html"
-        html = generate_service_page(svc, categories_by_slug, services_by_slug, total_services, favicon)
+        html = generate_service_page(svc, categories_by_slug, services_by_slug, favicon)
         write_file(path, html)
         written_paths.append(path)
     removed_status = prune_generated_dir(STATUS_DIR, {f"{svc['slug']}.html" for svc in services})
