@@ -41,6 +41,7 @@
     transition: border-color 0.2s, color 0.2s;
 }
 .links-row a:hover { border-color: var(--border-hover); color: var(--text-strong); }
+.links-row a img { width: 16px; height: 16px; filter: brightness(0) invert(0.85); }
 
 .section-title {
     font-family: var(--font-display);

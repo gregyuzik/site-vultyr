@@ -31,16 +31,6 @@
     color: var(--accent-warm);
     margin-bottom: 16px;
 }
-.cat-links { display: flex; flex-wrap: wrap; gap: 8px; }
-.cat-link {
-    padding: 6px 14px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-pill);
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    transition: border-color 0.2s, color 0.2s;
-}
-.cat-link:hover { border-color: var(--border-hover); color: var(--text-strong); }
 
 @media (max-width: 500px) {
     .services-grid { grid-template-columns: 1fr; }

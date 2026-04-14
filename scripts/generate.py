@@ -15,17 +15,25 @@ JSON_PATH = ROOT_DIR / "data" / "services.json"
 STATUS_DIR = ROOT_DIR / "status"
 CATEGORIES_DIR = ROOT_DIR / "categories"
 FAVICONS_DIR = ROOT_DIR / "assets" / "favicons"
+ICONS_DIR = ROOT_DIR / "assets" / "icons"
 TODAY = date.today().isoformat()
 
+SITE_ORIGIN = "https://vultyr.app"
+APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260413"
 PLATFORM_DEVICE_LIST = "iPhone, iPad, Mac, Apple Watch, Apple TV, and Vision Pro"
+OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
 
 ALLOWED_URL_SCHEMES = {"https", "mailto"}
 
+# Order matters: analytics.js must run before gtag.js so the dataLayer is
+# populated with the privacy config (anonymize_ip, client_storage: 'none')
+# before gtag.js processes the queue. Both deferred so they execute in
+# document order after HTML parsing — async would race.
 GA_SNIPPET = f"""    <!-- Google tag (gtag.js) — cookieless, anonymized -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
-    <script defer src="/assets/js/analytics.js"></script>"""
+    <script defer src="/assets/js/analytics.js"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>"""
 
 FOOTER_HTML = """    <footer>
         <nav aria-label="Footer navigation">
@@ -62,29 +70,41 @@ def csp_hash(content):
 
 
 def build_csp(script_hashes=()):
-    """Build a CSP that avoids unsafe-inline while allowing hashed JSON-LD."""
+    """Build a CSP that avoids unsafe-inline while allowing hashed JSON-LD.
+
+    Note: directives like frame-ancestors, form-action, sandbox, and report-uri
+    are silently ignored when CSP is delivered via <meta http-equiv> (per CSP3
+    spec). GitHub Pages cannot set HTTP headers, so we omit them here rather
+    than create a false sense of security. To get clickjacking/form-submission
+    protection, deploy behind a CDN that can inject HTTP headers.
+    """
     script_src = ["'self'", "https://www.googletagmanager.com", *script_hashes]
+    # GA4 sends measurement pings to www.google.com/g/collect (in addition to
+    # www.google-analytics.com). Without it, all GA4 events are CSP-blocked
+    # silently. Privacy is unchanged: same Google Analytics measurement,
+    # client_storage='none' still suppresses cookies.
     directives = [
         "default-src 'self'",
         f"script-src {' '.join(script_src)}",
         "style-src 'self'",
         "font-src 'self'",
         "img-src 'self' data:",
-        "connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com",
-        "frame-ancestors 'none'",
+        "connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect",
         "object-src 'none'",
         "base-uri 'self'",
-        "form-action 'none'",
     ]
     return "; ".join(directives)
 
 
 def head_common(script_hashes=()):
-    """Shared head tags plus a per-page CSP."""
+    """Shared head tags: charset, viewport, CSP, preconnects, font preload."""
     return "\n".join([
         '    <meta charset="UTF-8">',
         '    <meta name="viewport" content="width=device-width, initial-scale=1.0">',
         f'    <meta http-equiv="Content-Security-Policy" content="{build_csp(script_hashes=script_hashes)}">',
+        '    <link rel="preconnect" href="https://www.googletagmanager.com">',
+        '    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>',
+        '    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>',
     ])
 
 
@@ -417,11 +437,11 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, total_se
 {cat_links_html}
         <div class="links-row">
             <a href="{status_href}" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-26.37,144H96a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8h5.63a8,8,0,0,1,5.66,2.34l56,56a8,8,0,0,1-11.32,11.32L101.63,107.31V160A8,8,0,0,1,101.63,168Z"/></svg>
+                <img src="/assets/icons/chart-bar-regular.svg" alt="" width="16" height="16" aria-hidden="true">
                 Official Status Page
             </a>
             <a href="{home_href}" target="_blank" rel="noopener noreferrer">
-                <svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,16a112,112,0,1,0,112,112A112.13,112.13,0,0,0,128,16ZM40,128a87.5,87.5,0,0,1,8.43-37.65l46.46,127.38A88.14,88.14,0,0,1,40,128Zm88,88a87.53,87.53,0,0,1-28.34-4.67l30.09-87.39,30.83,84.49A88.18,88.18,0,0,1,128,216Z"/></svg>
+                <img src="/assets/icons/globe-regular.svg" alt="" width="16" height="16" aria-hidden="true">
                 {e(name)} Homepage
             </a>
         </div>
@@ -481,11 +501,15 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
 
     icon_html = ""
     if icon:
-        icon_path = ROOT_DIR / "assets" / "icons" / icon
+        icon_path = ICONS_DIR / icon
         if icon_path.exists():
             try:
                 svg = icon_path.read_text(encoding="utf-8")
-                svg = svg.replace("<svg", '<svg class="cat-icon" aria-hidden="true" focusable="false"', 1)
+                svg = svg.replace(
+                    "<svg",
+                    '<svg class="cat-icon" width="36" height="36" aria-hidden="true" focusable="false"',
+                    1,
+                )
                 icon_html = svg
             except OSError as exc:
                 print(f"Warning: could not read icon {icon_path}: {exc}")
@@ -591,21 +615,231 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
 """
 
 
+# ─── HOME PAGE ─────────────────────────────────────────────────────────────────
+
+HOME_FEATURES = [
+    ("chart-bar-regular.svg", "Live Status Dashboard",
+     "AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic and {total}+ more — all in one place."),
+    ("bell-ringing-regular.svg", "Smart Alerts",
+     "Get notified when a service goes down or comes back up. Mute known incidents and star critical services."),
+    ("cloud-check-regular.svg", "Cross-Device Sync",
+     "Your Mac monitors continuously and pushes status changes to all your devices via iCloud. No setup needed."),
+    ("devices-regular.svg", "Every Apple Platform",
+     "iPhone, iPad, Mac menu bar, Apple TV, Apple Watch, and Vision Pro. Services sync across all devices."),
+    ("lightning-regular.svg", "Incident Details",
+     "See affected components, active incidents, scheduled maintenance, and timeline updates from the source."),
+    ("battery-charging-regular.svg", "Battery-Aware Polling",
+     "Smart auto-refresh adapts to battery, power state, and thermals. Every minute on Mac, 5-15 on iPhone."),
+    ("palette-regular.svg", "12 Themes",
+     "Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, HAL, or Standard."),
+    ("shield-check-regular.svg", "App Data Stays Local",
+     "The app has no sign-up and no in-app analytics. Your watched services stay on your device."),
+    ("translate-regular.svg", "16 App Languages",
+     "English, German, French, Spanish, Japanese, Korean, Chinese, Portuguese, and more."),
+]
+
+
+def generate_home_page(data):
+    total = len(data["services"])
+
+    title = "Vultyr — Service Status Monitor for AWS, Slack, GitHub & More"
+    description = (
+        f"Is it down? Monitor {total}+ cloud services, dev tools, and platforms with instant outage alerts. "
+        f"Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro."
+    )
+    og_title = "Vultyr — Service Status Monitor"
+
+    app_ld = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Vultyr",
+        "alternateName": "vultyr",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": ["iOS", "iPadOS", "macOS", "tvOS", "watchOS", "visionOS"],
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "description": f"Monitor {total}+ cloud services, dev tools, and platforms with instant outage alerts.",
+        "url": f"{SITE_ORIGIN}/",
+        "downloadUrl": APP_STORE_URL,
+        "screenshot": [
+            f"{SITE_ORIGIN}/assets/dash.webp",
+            f"{SITE_ORIGIN}/assets/settings.webp",
+            f"{SITE_ORIGIN}/assets/services.webp",
+        ],
+        "author": {"@type": "Organization", "name": "Vultyr", "url": f"{SITE_ORIGIN}/"},
+        "publisher": {"@type": "Organization", "name": "Vultyr", "url": f"{SITE_ORIGIN}/"},
+    }
+
+    org_ld = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Vultyr",
+        "url": f"{SITE_ORIGIN}/",
+        "logo": f"{SITE_ORIGIN}/icon.png",
+        "sameAs": [APP_STORE_URL],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@vultyr.app",
+            "contactType": "customer support",
+        },
+    }
+
+    app_ld_html, app_ld_hash = json_ld_block(app_ld)
+    org_ld_html, org_ld_hash = json_ld_block(org_ld)
+
+    feature_cards = "\n".join(
+        f'            <div class="feature-card">\n'
+        f'                <div class="feature-icon"><img src="/assets/icons/{icon}" alt="" width="22" height="22" aria-hidden="true"></div>\n'
+        f'                <div>\n'
+        f'                    <h3>{e(name)}</h3>\n'
+        f'                    <p>{e(body.format(total=total))}</p>\n'
+        f'                </div>\n'
+        f'            </div>'
+        for icon, name, body in HOME_FEATURES
+    )
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+{head_common(script_hashes=(app_ld_hash, org_ld_hash))}
+    <title>{e(title)}</title>
+    <meta name="description" content="{e(description)}">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="{e(og_title)}">
+    <meta property="og:description" content="{e(description)}">
+    <meta property="og:image" content="{OG_IMAGE}">
+    <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
+    <meta property="og:url" content="{SITE_ORIGIN}/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vultyr">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{e(og_title)}">
+    <meta name="twitter:description" content="{e(description)}">
+    <meta name="twitter:image" content="{OG_IMAGE}">
+    <link rel="canonical" href="{SITE_ORIGIN}/">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
+    <link rel="stylesheet" href="/assets/css/shared.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+{app_ld_html}
+{org_ld_html}
+{GA_SNIPPET}
+</head>
+<body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+
+    <main id="main">
+    <header class="hero">
+        <div class="hero-inner">
+            <img src="/assets/icon-256.png" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
+            <h1 class="fade-up fade-up-1">vultyr</h1>
+            <p class="tagline fade-up fade-up-2">Is it down? <span class="highlight">Know before your users do.</span></p>
+            <p class="tagline-services fade-up fade-up-3">Monitor {total}+ services — AWS, GitHub, Slack, Stripe &amp; more — with instant outage alerts across every Apple device.</p>
+            <div class="cta-group fade-up fade-up-4">
+                <a href="{APP_STORE_URL}" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="Download Vultyr on the App Store">
+                    <img src="/assets/app-store-badge.svg" alt="Download on the App Store" class="badge-img" width="180" height="54" decoding="async">
+                </a>
+                <p class="platforms">Free on <span>iPhone</span> &middot; <span>iPad</span> &middot; <span>Mac</span> &middot; <span>Apple TV</span> &middot; <span>Apple Watch</span> &middot; <span>Vision Pro</span></p>
+            </div>
+        </div>
+    </header>
+
+    <section class="screenshots fade-up fade-up-5" aria-labelledby="screenshots-heading">
+        <h2 id="screenshots-heading" class="sr-only">App screenshots</h2>
+        <div class="screenshots-track">
+            <div class="phone-frame">
+                <img src="/assets/dash.webp" alt="Vultyr dashboard showing All Clear status with services like AWS, GitHub, and Slack monitored" width="390" height="844" decoding="async">
+            </div>
+            <div class="phone-frame">
+                <img src="/assets/settings.webp" alt="Vultyr appearance settings with 12 themes including Terminal, Amber, Dracula, and Nord" width="390" height="844" decoding="async">
+            </div>
+            <div class="phone-frame">
+                <img src="/assets/services.webp" alt="Vultyr service browser showing 16 categories including Cloud, Dev Tools, and AI" width="390" height="844" decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="stats" aria-labelledby="stats-heading">
+        <h2 id="stats-heading" class="sr-only">Key numbers</h2>
+        <div class="stats-grid">
+            <div class="stat">
+                <span class="stat-value">{total}+</span>
+                <span class="stat-label">Services</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">{len(data["categories"])}</span>
+                <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">6</span>
+                <span class="stat-label">Platforms</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">16</span>
+                <span class="stat-label">App Languages</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="features" aria-labelledby="features-heading">
+        <div class="features-heading">
+            <h2 id="features-heading">Everything you need to stay ahead of outages</h2>
+            <p>No app accounts, no servers, no in-app tracking. Just status.</p>
+        </div>
+        <div class="features-grid">
+{feature_cards}
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="bottom-cta" aria-labelledby="bottom-cta-heading">
+        <h2 id="bottom-cta-heading">Ready to monitor your stack?</h2>
+        <p>Free. No app account required. Available everywhere.</p>
+        <a href="{APP_STORE_URL}" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Download Vultyr free on the App Store">
+            <img src="/assets/icons/download-simple-regular.svg" alt="" width="18" height="18" aria-hidden="true">
+            Download Free
+        </a>
+    </section>
+    </main>
+
+    <footer>
+        <nav aria-label="Footer navigation">
+            <a href="/services.html">Services</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/support.html">Support</a>
+            <a href="mailto:support@vultyr.app">Contact</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Vultyr. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+"""
+
+
 # ─── 404 PAGE ──────────────────────────────────────────────────────────────────
 
 def generate_404(data, favicon):
     # Popular services and all categories for recovery navigation.
     popular = ["aws", "github", "cloudflare", "slack", "stripe", "discord", "openai", "anthropic"]
     services_by_slug = {s["slug"]: s for s in data["services"]}
+    missing = [slug for slug in popular if slug not in services_by_slug]
+    if missing:
+        print(f"Error: 404 page references missing services: {missing}")
+        raise SystemExit(1)
+
     popular_links = []
     for slug in popular:
-        svc = services_by_slug.get(slug)
-        if svc:
-            popular_links.append(
-                f'            <a href="/status/{e(slug)}.html">'
-                f'<img src="{favicon(svc["faviconDomain"], 32)}" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true"> '
-                f'{e(svc["name"])}</a>'
-            )
+        svc = services_by_slug[slug]
+        popular_links.append(
+            f'            <a href="/status/{e(slug)}.html">'
+            f'<img src="{favicon(svc["faviconDomain"], 32)}" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true"> '
+            f'{e(svc["name"])}</a>'
+        )
     popular_html = "\n".join(popular_links)
 
     cat_links = "\n".join(
@@ -679,6 +913,51 @@ def generate_sitemap(services, categories):
 
 # ─── MAIN ──────────────────────────────────────────────────────────────────────
 
+def validate_html(paths):
+    """Light-weight sanity check: parses each generated HTML file and verifies
+    basic well-formedness (parser doesn't raise) plus a few invariants. Catches
+    silly mistakes like unclosed tags or missing CSP hashes after refactors.
+    """
+    from html.parser import HTMLParser
+
+    class _Counter(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=True)
+            self.errors = []
+
+        def error(self, message):
+            self.errors.append(message)
+
+    failed = []
+    for path in paths:
+        text = path.read_text(encoding="utf-8")
+        parser = _Counter()
+        try:
+            parser.feed(text)
+            parser.close()
+        except Exception as exc:
+            failed.append((path, f"parse error: {exc}"))
+            continue
+        if parser.errors:
+            failed.append((path, "; ".join(parser.errors)))
+            continue
+        if "<html lang=\"en\">" not in text:
+            failed.append((path, "missing <html lang=\"en\">"))
+            continue
+        if "</body>" not in text or "</html>" not in text:
+            failed.append((path, "missing closing body/html tag"))
+            continue
+        if "Content-Security-Policy" not in text:
+            failed.append((path, "missing CSP meta tag"))
+            continue
+
+    if failed:
+        print("\nHTML validation failures:")
+        for path, msg in failed:
+            print(f"  {path.relative_to(ROOT_DIR)}: {msg}")
+        raise SystemExit(1)
+
+
 def main():
     data = load_data()
     services = data["services"]
@@ -692,30 +971,48 @@ def main():
     CATEGORIES_DIR.mkdir(parents=True, exist_ok=True)
 
     total_services = len(services)
+    written_paths = []
 
-    print(f"Generating services.html...")
-    write_file(ROOT_DIR / "services.html", generate_services_page(data, favicon))
+    print("Generating index.html...")
+    home_path = ROOT_DIR / "index.html"
+    write_file(home_path, generate_home_page(data))
+    written_paths.append(home_path)
+
+    print("Generating services.html...")
+    services_path = ROOT_DIR / "services.html"
+    write_file(services_path, generate_services_page(data, favicon))
+    written_paths.append(services_path)
 
     print(f"Generating {total_services} service pages...")
     for svc in services:
+        path = STATUS_DIR / f"{svc['slug']}.html"
         html = generate_service_page(svc, categories_by_slug, services_by_slug, total_services, favicon)
-        write_file(STATUS_DIR / f"{svc['slug']}.html", html)
+        write_file(path, html)
+        written_paths.append(path)
     removed_status = prune_generated_dir(STATUS_DIR, {f"{svc['slug']}.html" for svc in services})
 
     print(f"Generating {len(categories)} category pages...")
     for cat in categories:
+        path = CATEGORIES_DIR / f"{cat['slug']}.html"
         html = generate_category_page(cat, services_by_slug, categories, favicon)
-        write_file(CATEGORIES_DIR / f"{cat['slug']}.html", html)
+        write_file(path, html)
+        written_paths.append(path)
     removed_categories = prune_generated_dir(CATEGORIES_DIR, {f"{cat['slug']}.html" for cat in categories})
 
     print("Generating 404.html...")
-    write_file(ROOT_DIR / "404.html", generate_404(data, favicon))
+    path_404 = ROOT_DIR / "404.html"
+    write_file(path_404, generate_404(data, favicon))
+    written_paths.append(path_404)
 
     print("Generating sitemap.xml...")
     write_file(ROOT_DIR / "sitemap.xml", generate_sitemap(services, categories))
 
-    total = total_services + len(categories) + 3  # +3 for services, 404, sitemap
+    print(f"Validating {len(written_paths)} HTML files...")
+    validate_html(written_paths)
+
+    total = total_services + len(categories) + 4  # +4 for index, services, 404, sitemap
     print(f"\nDone! Generated {total} files:")
+    print(f"  index.html")
     print(f"  services.html")
     print(f"  {total_services} service pages in /status/")
     print(f"  {len(categories)} category pages in /categories/")
