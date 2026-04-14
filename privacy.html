@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
     <title>Privacy Policy — Vultyr</title>
     <meta name="description" content="Vultyr privacy policy. The app collects no personal data. This website uses cookieless Google Analytics for aggregate visitor traffic.">
     <meta name="theme-color" content="#000000">
@@ -22,8 +25,8 @@
     <link rel="stylesheet" href="/assets/css/shared.css">
     <link rel="stylesheet" href="/assets/css/docs.css">
     <!-- Google tag (gtag.js) — cookieless, anonymized -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
     <script defer src="/assets/js/analytics.js"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
@@ -57,6 +60,7 @@
     <ul>
         <li><strong>www.googletagmanager.com</strong> — loads the gtag.js script</li>
         <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong> — receives anonymized page-view beacons</li>
+        <li><strong>www.google.com/g/collect</strong> — receives the same anonymized page-view beacons (Google Analytics 4 fallback collection endpoint)</li>
     </ul>
     <p>We do not load Google Fonts (the Audiowide font is self-hosted on vultyr.app) and do not use a third-party favicon service for the website's own imagery.</p>
 
