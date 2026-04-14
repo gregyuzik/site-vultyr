@@ -1552,18 +1552,6 @@
       ]
     },
     {
-      "name": "YouTube",
-      "slug": "youtube",
-      "faviconDomain": "youtube.com",
-      "statusUrl": "https://www.youtube.com",
-      "homepageUrl": "https://www.youtube.com",
-      "statuspageApi": null,
-      "categories": [
-        "google",
-        "streaming-media"
-      ]
-    },
-    {
       "name": "Azure",
       "slug": "azure",
       "faviconDomain": "azure.microsoft.com",
@@ -1630,44 +1618,11 @@
       ]
     },
     {
-      "name": "Alexa",
-      "slug": "alexa",
-      "faviconDomain": "alexa.amazon.com",
-      "statusUrl": "https://www.amazon.com/gp/help/customer/display.html?nodeId=201602230",
-      "homepageUrl": "https://alexa.amazon.com",
-      "statuspageApi": null,
-      "categories": [
-        "amazon"
-      ]
-    },
-    {
-      "name": "Amazon.com",
-      "slug": "amazoncom",
-      "faviconDomain": "amazon.com",
-      "statusUrl": "https://www.amazon.com",
-      "homepageUrl": "https://www.amazon.com",
-      "statuspageApi": null,
-      "categories": [
-        "amazon"
-      ]
-    },
-    {
       "name": "AWS",
       "slug": "aws",
       "faviconDomain": "aws.amazon.com",
       "statusUrl": "https://health.aws.amazon.com/health/status",
       "homepageUrl": "https://aws.amazon.com",
-      "statuspageApi": null,
-      "categories": [
-        "amazon"
-      ]
-    },
-    {
-      "name": "Prime Video",
-      "slug": "prime-video",
-      "faviconDomain": "primevideo.com",
-      "statusUrl": "https://www.primevideo.com",
-      "homepageUrl": "https://www.primevideo.com",
       "statuspageApi": null,
       "categories": [
         "amazon"
@@ -1960,33 +1915,11 @@
       ]
     },
     {
-      "name": "Telegram",
-      "slug": "telegram",
-      "faviconDomain": "telegram.org",
-      "statusUrl": "https://telegram.org",
-      "homepageUrl": "https://telegram.org",
-      "statuspageApi": null,
-      "categories": [
-        "social-media"
-      ]
-    },
-    {
       "name": "Threads",
       "slug": "threads",
       "faviconDomain": "threads.net",
       "statusUrl": "https://metastatus.com",
       "homepageUrl": "https://www.threads.net",
-      "statuspageApi": null,
-      "categories": [
-        "social-media"
-      ]
-    },
-    {
-      "name": "TikTok",
-      "slug": "tiktok",
-      "faviconDomain": "tiktok.com",
-      "statusUrl": "https://www.tiktok.com",
-      "homepageUrl": "https://www.tiktok.com",
       "statuspageApi": null,
       "categories": [
         "social-media"
@@ -2009,17 +1942,6 @@
       "faviconDomain": "whatsapp.com",
       "statusUrl": "https://metastatus.com",
       "homepageUrl": "https://www.whatsapp.com",
-      "statuspageApi": null,
-      "categories": [
-        "social-media"
-      ]
-    },
-    {
-      "name": "X / Twitter",
-      "slug": "x-twitter",
-      "faviconDomain": "x.com",
-      "statusUrl": "https://x.com",
-      "homepageUrl": "https://x.com",
       "statuspageApi": null,
       "categories": [
         "social-media"
@@ -2097,28 +2019,6 @@
       "faviconDomain": "netflix.com",
       "statusUrl": "https://help.netflix.com/en/is-netflix-down",
       "homepageUrl": "https://www.netflix.com",
-      "statuspageApi": null,
-      "categories": [
-        "streaming-media"
-      ]
-    },
-    {
-      "name": "Paramount+",
-      "slug": "paramountplus",
-      "faviconDomain": "paramountplus.com",
-      "statusUrl": "https://www.paramountplus.com",
-      "homepageUrl": "https://www.paramountplus.com",
-      "statuspageApi": null,
-      "categories": [
-        "streaming-media"
-      ]
-    },
-    {
-      "name": "Peacock",
-      "slug": "peacock",
-      "faviconDomain": "peacocktv.com",
-      "statusUrl": "https://www.peacocktv.com",
-      "homepageUrl": "https://www.peacocktv.com",
       "statuspageApi": null,
       "categories": [
         "streaming-media"
@@ -2775,8 +2675,7 @@
         "google-maps",
         "google-meet",
         "google-search",
-        "google-workspace",
-        "youtube"
+        "google-workspace"
       ]
     },
     {
@@ -2797,10 +2696,7 @@
       "slug": "amazon",
       "icon": "database-regular.svg",
       "serviceSlugs": [
-        "alexa",
-        "amazoncom",
         "aws",
-        "prime-video",
         "ring"
       ]
     },
@@ -2841,12 +2737,9 @@
         "pinterest",
         "reddit",
         "substack",
-        "telegram",
         "threads",
-        "tiktok",
         "tumblr",
-        "whatsapp",
-        "x-twitter"
+        "whatsapp"
       ]
     },
     {
@@ -2861,12 +2754,9 @@
         "imgur",
         "kick",
         "netflix",
-        "paramountplus",
-        "peacock",
         "spotify",
         "twitch",
-        "vimeo",
-        "youtube"
+        "vimeo"
       ]
     },
     {
