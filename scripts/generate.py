@@ -24,6 +24,11 @@ GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260413"
 PLATFORM_DEVICE_LIST = "iPhone, iPad, Mac, Apple Watch, Apple TV, and Vision Pro"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
+OG_IMAGE_ALT = "Vultyr app icon — Service Status Monitor"
+
+# App facts referenced across home copy, alt text, and stats — keep in sync here.
+THEMES_COUNT = 12
+APP_LANGUAGE_COUNT = 16
 
 ALLOWED_URL_SCHEMES = {"https", "mailto"}
 
@@ -116,13 +121,67 @@ def json_ld_block(obj):
 
 
 def load_data():
-    """Load services data with error handling."""
+    """Load and validate services data. Fails fast on schema problems."""
     try:
         with open(JSON_PATH, encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
     except (OSError, json.JSONDecodeError) as exc:
         print(f"Error loading {JSON_PATH}: {exc}")
         raise SystemExit(1)
+
+    errors = []
+    services = data.get("services")
+    categories = data.get("categories")
+    if not isinstance(services, list):
+        errors.append("'services' must be a list")
+    if not isinstance(categories, list):
+        errors.append("'categories' must be a list")
+    if errors:
+        _schema_fail(errors)
+
+    required_svc = ("name", "slug", "faviconDomain", "statusUrl", "homepageUrl", "categories")
+    seen_slugs = set()
+    for i, svc in enumerate(services):
+        if not isinstance(svc, dict):
+            errors.append(f"services[{i}] is not an object")
+            continue
+        for key in required_svc:
+            if not svc.get(key):
+                errors.append(f"services[{i}] ({svc.get('slug', '?')}) missing required field {key!r}")
+        slug = svc.get("slug")
+        if slug and slug in seen_slugs:
+            errors.append(f"duplicate service slug: {slug!r}")
+        elif slug:
+            seen_slugs.add(slug)
+
+    required_cat = ("name", "slug", "serviceSlugs")
+    seen_cat_slugs = set()
+    for i, cat in enumerate(categories):
+        if not isinstance(cat, dict):
+            errors.append(f"categories[{i}] is not an object")
+            continue
+        for key in required_cat:
+            if cat.get(key) is None:
+                errors.append(f"categories[{i}] ({cat.get('slug', '?')}) missing required field {key!r}")
+        cslug = cat.get("slug")
+        if cslug and cslug in seen_cat_slugs:
+            errors.append(f"duplicate category slug: {cslug!r}")
+        elif cslug:
+            seen_cat_slugs.add(cslug)
+        for ss in cat.get("serviceSlugs", []) or []:
+            if ss not in seen_slugs:
+                errors.append(f"category {cslug!r} references unknown service slug {ss!r}")
+
+    if errors:
+        _schema_fail(errors)
+    return data
+
+
+def _schema_fail(errors):
+    print(f"Schema validation failed for {JSON_PATH}:")
+    for err in errors:
+        print(f"  - {err}")
+    raise SystemExit(1)
 
 
 def write_file(path, content):
@@ -252,7 +311,8 @@ def generate_services_page(data, favicon):
     <meta name="theme-color" content="#000000">
     <meta property="og:title" content="{e(title)}">
     <meta property="og:description" content="{e(description)}">
-    <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:image" content="{OG_IMAGE}">
+    <meta property="og:image:alt" content="{OG_IMAGE_ALT}">
     <meta property="og:url" content="https://vultyr.app/services.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
@@ -402,7 +462,8 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon)
     <meta name="theme-color" content="#000000">
     <meta property="og:title" content="{e(title)}">
     <meta property="og:description" content="{e(description)}">
-    <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:image" content="{OG_IMAGE}">
+    <meta property="og:image:alt" content="{OG_IMAGE_ALT}">
     <meta property="og:url" content="https://vultyr.app/status/{e(slug)}.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
@@ -561,7 +622,8 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
     <meta name="theme-color" content="#000000">
     <meta property="og:title" content="{e(title)}">
     <meta property="og:description" content="{e(description)}">
-    <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:image" content="{OG_IMAGE}">
+    <meta property="og:image:alt" content="{OG_IMAGE_ALT}">
     <meta property="og:url" content="https://vultyr.app/categories/{e(slug)}.html">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
@@ -630,11 +692,11 @@ HOME_FEATURES = [
      "See affected components, active incidents, scheduled maintenance, and timeline updates from the source."),
     ("battery-charging-regular.svg", "Battery-Aware Polling",
      "Smart auto-refresh adapts to battery, power state, and thermals. Every minute on Mac, 5-15 on iPhone."),
-    ("palette-regular.svg", "12 Themes",
+    ("palette-regular.svg", f"{THEMES_COUNT} Themes",
      "Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, HAL, or Standard."),
     ("shield-check-regular.svg", "App Data Stays Local",
      "The app has no sign-up and no in-app analytics. Your watched services stay on your device."),
-    ("translate-regular.svg", "16 App Languages",
+    ("translate-regular.svg", f"{APP_LANGUAGE_COUNT} App Languages",
      "English, German, French, Spanish, Japanese, Korean, Chinese, Portuguese, and more."),
 ]
 
@@ -684,6 +746,8 @@ def generate_home_page(data):
     app_ld_html, app_ld_hash = json_ld_block(app_ld)
     org_ld_html, org_ld_hash = json_ld_block(org_ld)
 
+    category_count = len(data["categories"])
+
     feature_cards = "\n".join(
         f'            <div class="feature-card">\n'
         f'                <div class="feature-icon"><img src="/assets/icons/{icon}" alt="" width="22" height="22" aria-hidden="true"></div>\n'
@@ -705,7 +769,7 @@ def generate_home_page(data):
     <meta property="og:title" content="{e(og_title)}">
     <meta property="og:description" content="{e(description)}">
     <meta property="og:image" content="{OG_IMAGE}">
-    <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
+    <meta property="og:image:alt" content="{OG_IMAGE_ALT}">
     <meta property="og:url" content="{SITE_ORIGIN}/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Vultyr">
@@ -749,10 +813,10 @@ def generate_home_page(data):
                 <img src="/assets/dash.webp" alt="Vultyr dashboard showing All Clear status with services like AWS, GitHub, and Slack monitored" width="390" height="844" decoding="async">
             </div>
             <div class="phone-frame">
-                <img src="/assets/settings.webp" alt="Vultyr appearance settings with 12 themes including Terminal, Amber, Dracula, and Nord" width="390" height="844" decoding="async">
+                <img src="/assets/settings.webp" alt="Vultyr appearance settings with {THEMES_COUNT} themes including Terminal, Amber, Dracula, and Nord" width="390" height="844" decoding="async">
             </div>
             <div class="phone-frame">
-                <img src="/assets/services.webp" alt="Vultyr service browser showing 16 categories including Cloud, Dev Tools, and AI" width="390" height="844" decoding="async">
+                <img src="/assets/services.webp" alt="Vultyr service browser showing {category_count} categories including Cloud, Dev Tools, and AI" width="390" height="844" decoding="async">
             </div>
         </div>
     </section>
@@ -767,7 +831,7 @@ def generate_home_page(data):
                 <span class="stat-label">Checks</span>
             </div>
             <div class="stat">
-                <span class="stat-value">{len(data["categories"])}</span>
+                <span class="stat-value">{category_count}</span>
                 <span class="stat-label">Categories</span>
             </div>
             <div class="stat">
@@ -775,7 +839,7 @@ def generate_home_page(data):
                 <span class="stat-label">Platforms</span>
             </div>
             <div class="stat">
-                <span class="stat-value">16</span>
+                <span class="stat-value">{APP_LANGUAGE_COUNT}</span>
                 <span class="stat-label">App Languages</span>
             </div>
         </div>
