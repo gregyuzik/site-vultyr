@@ -75,7 +75,7 @@ def probe_statuspage_api(status_url):
         return _try_fetch(api_url)
     except (urllib.error.URLError, urllib.error.HTTPError, ssl.SSLError,
             json.JSONDecodeError, TimeoutError, OSError) as exc:
-        logger.debug("Probe failed for %s: %s", api_url, exc)
+        logger.info("Probe failed for %s: %s", api_url, exc)
     return None
 
 
