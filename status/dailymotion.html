@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-XEZ2/6iN6Dq6ftawrZ79Aden1taI6esq2WbPZv5bFhM=' 'sha256-4ElW4OJ2O2qdXdqXmLsx1Kt4n2gpKQHkn6B7D+aDh8U='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-ppkqpdrAKQ5ifLxN87PkDEboHd/eRDXDPwmsjiltUN4=' 'sha256-4ElW4OJ2O2qdXdqXmLsx1Kt4n2gpKQHkn6B7D+aDh8U='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -16,15 +16,19 @@
     <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
     <meta property="og:url" content="https://vultyr.app/status/dailymotion.html">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Is Dailymotion Down? Dailymotion Status Monitor | Vultyr">
     <meta name="twitter:description" content="Check if Dailymotion is down right now. Live Dailymotion status updates and outage monitoring with Vultyr. Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Vision Pro.">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/status/dailymotion.html">
+    <link rel="alternate" hreflang="en" href="https://vultyr.app/status/dailymotion.html">
+    <link rel="alternate" hreflang="ru" href="https://vultyr.app/ru/status/dailymotion.html">
+    <link rel="alternate" hreflang="x-default" href="https://vultyr.app/status/dailymotion.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260413">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260417c">
-    <link rel="stylesheet" href="/assets/css/service.css?v=20260417c">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260417d">
+    <link rel="stylesheet" href="/assets/css/service.css?v=20260417d">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,7 +38,7 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Vultyr",
-      "item": "https://vultyr.app"
+      "item": "https://vultyr.app/"
     },
     {
       "@type": "ListItem",
@@ -95,6 +99,10 @@
             <div class="topbar-nav">
                 <a href="/services.html">services</a>
                 <a href="/support.html">support</a>
+                <div class="lang-switch" role="group" aria-label="Language">
+                    <a href="/status/dailymotion.html" class="lang-active" aria-current="page">EN</a>
+                    <a href="/ru/status/dailymotion.html">RU</a>
+                </div>
                 <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Download</a>
             </div>
         </div>
@@ -118,7 +126,7 @@
                 Live check
             </div>
             <a href="https://status.dailymotion.com" target="_blank" rel="noopener noreferrer" class="status-badge">
-                <span class="status-text">View Current Status &rarr;</span>
+                <span class="status-text">View Current Status →</span>
             </a>
             <p class="status-time">For instant alerts, <a href="https://apps.apple.com/us/app/vultyr/id6761264004">download Vultyr</a></p>
         </div>
@@ -186,7 +194,7 @@
             <a href="/support.html">Support</a>
             <a href="mailto:support@vultyr.app">Contact</a>
         </nav>
-        <p class="copyright">&copy; 2026 Vultyr. All rights reserved.</p>
+        <p class="copyright">© 2026 Vultyr. All rights reserved.</p>
     </footer>
 </body>
 </html>
