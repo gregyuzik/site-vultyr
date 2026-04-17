@@ -32,7 +32,7 @@ APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260417e"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
-ASSET_VERSION = "20260417e"
+ASSET_VERSION = "20260417f"
 # Bump when icon-256.png changes so CDN edges pick up the new asset.
 ICON_VERSION = "20260417e"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
@@ -81,6 +81,14 @@ LOCALE_NATIVE_NAMES = {
     "vi": "Ti\u1ebfng Vi\u1ec7t",
     "zh-Hans": "\u7b80\u4f53\u4e2d\u6587",
     "zh-Hant": "\u7e41\u9ad4\u4e2d\u6587",
+}
+
+# Short code shown on the closed topbar language dropdown.
+LOCALE_SHORT_CODES = {
+    "en": "EN", "da": "DA", "de": "DE", "es": "ES", "fr": "FR",
+    "it": "IT", "ja": "JA", "ko": "KO", "nb": "NB", "nl": "NL",
+    "pt-BR": "PT", "ru": "RU", "sv": "SV", "tr": "TR", "vi": "VI",
+    "zh-Hans": "\u7b80", "zh-Hant": "\u7e41",
 }
 
 ALLOWED_URL_SCHEMES = {"https", "mailto"}
@@ -633,14 +641,30 @@ def head_common(script_hashes=()):
         '    <link rel="preconnect" href="https://www.googletagmanager.com">',
         '    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>',
         '    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>',
-        '    <script src="/assets/js/locale-detect.js"></script>',
-        '    <script defer src="/assets/js/lang-switch.js"></script>',
+        f'    <script src="/assets/js/locale-detect.js?v={ASSET_VERSION}"></script>',
+        f'    <script defer src="/assets/js/lang-switch.js?v={ASSET_VERSION}"></script>',
     ])
 
 
-def topbar_html(locale, alt_urls=None):
-    """Top navigation. The language picker now lives in the languages section
-    on the home page, so the topbar stays minimal across every page."""
+def topbar_html(locale, alt_urls):
+    """Top navigation. Includes a compact language dropdown that links to the
+    equivalent page in every supported locale; falls back to each locale's home
+    if a mapping for the current page isn't present."""
+    items = []
+    for loc in LOCALES:
+        href = alt_urls.get(loc, home_url_path(loc))
+        native = LOCALE_NATIVE_NAMES[loc]
+        short = LOCALE_SHORT_CODES[loc]
+        attrs = ' aria-current="page"' if loc == locale else ""
+        items.append(
+            f'                    <a href="{href}" lang="{loc}" data-locale="{loc}" role="menuitem"{attrs}>'
+            f'<span class="lang-native">{e(native)}</span>'
+            f'<span class="lang-code" aria-hidden="true">{e(short)}</span>'
+            f'</a>'
+        )
+    items_html = "\n".join(items)
+    lang_aria = e(t(locale, 'lang_switch_aria'))
+    current_short = LOCALE_SHORT_CODES[locale]
     return f"""    <nav class="topbar" aria-label="{e(t(locale, 'nav_primary_aria'))}">
         <div class="topbar-inner">
             <a href="{home_url_path(locale)}" class="topbar-brand" aria-label="{e(t(locale, 'topbar_brand_aria'))}">
@@ -651,6 +675,15 @@ def topbar_html(locale, alt_urls=None):
                 <a href="{services_path(locale)}">{e(t(locale, 'nav_services'))}</a>
                 <a href="{support_path(locale)}">{e(t(locale, 'nav_support'))}</a>
                 <a href="{APP_STORE_URL}" target="_blank" rel="noopener noreferrer" class="topbar-cta">{e(t(locale, 'nav_download'))}</a>
+                <details class="lang-menu" data-lang-menu>
+                    <summary class="lang-summary" aria-label="{lang_aria}" aria-haspopup="menu">
+                        <span class="lang-summary-code">{e(current_short)}</span>
+                        <span class="lang-summary-caret" aria-hidden="true">\u25be</span>
+                    </summary>
+                    <div class="lang-menu-panel" role="menu" aria-label="{lang_aria}">
+{items_html}
+                    </div>
+                </details>
             </div>
         </div>
     </nav>"""
@@ -1575,7 +1608,7 @@ def _docs_page(locale, page_key, alt_urls, title, description, body_html, extra_
 </head>
 <body>
     <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
-{topbar_html(locale)}
+{topbar_html(locale, alt_urls)}
     <main id="main" class="docs">
 {body_html}
     </main>
@@ -1665,7 +1698,7 @@ def generate_support_page(locale):
 </head>
 <body>
     <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
-{topbar_html(locale)}
+{topbar_html(locale, alt_urls)}
     <main id="main" class="docs">
 {body_html}
     </main>
