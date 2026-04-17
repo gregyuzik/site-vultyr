@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-QplVSNqhBFf9DVF9tiLIRb42w01vu6sIh0EQrcHc85k=' 'sha256-Ga00Xsh6twLPGE/A4/24MVWZPcJ32dYZvM9tKcNV2i8='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
+    <script src="/assets/js/locale-detect.js"></script>
+    <script defer src="/assets/js/lang-switch.js"></script>
+    <title>Vultyr — Service Status Monitor for AWS, Slack, GitHub &amp; More</title>
+    <meta name="description" content="Is it down? 200+ status checks across cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Vultyr — Service Status Monitor">
+    <meta property="og:description" content="Is it down? 200+ status checks across cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro.">
+    <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
+    <meta property="og:url" content="https://vultyr.app/zh-Hans/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vultyr">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vultyr — Service Status Monitor">
+    <meta name="twitter:description" content="Is it down? 200+ status checks across cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro.">
+    <meta name="twitter:image" content="https://vultyr.app/icon.png">
+    <link rel="canonical" href="https://vultyr.app/zh-Hans/">
+    <link rel="alternate" hreflang="en" href="https://vultyr.app/">
+    <link rel="alternate" hreflang="da" href="https://vultyr.app/da/">
+    <link rel="alternate" hreflang="de" href="https://vultyr.app/de/">
+    <link rel="alternate" hreflang="es" href="https://vultyr.app/es/">
+    <link rel="alternate" hreflang="fr" href="https://vultyr.app/fr/">
+    <link rel="alternate" hreflang="it" href="https://vultyr.app/it/">
+    <link rel="alternate" hreflang="ja" href="https://vultyr.app/ja/">
+    <link rel="alternate" hreflang="ko" href="https://vultyr.app/ko/">
+    <link rel="alternate" hreflang="nb" href="https://vultyr.app/nb/">
+    <link rel="alternate" hreflang="nl" href="https://vultyr.app/nl/">
+    <link rel="alternate" hreflang="pt-BR" href="https://vultyr.app/pt-BR/">
+    <link rel="alternate" hreflang="ru" href="https://vultyr.app/ru/">
+    <link rel="alternate" hreflang="sv" href="https://vultyr.app/sv/">
+    <link rel="alternate" hreflang="tr" href="https://vultyr.app/tr/">
+    <link rel="alternate" hreflang="vi" href="https://vultyr.app/vi/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://vultyr.app/zh-Hans/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://vultyr.app/zh-Hant/">
+    <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260413">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260417d">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260417d">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Vultyr",
+  "alternateName": "vultyr",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": [
+    "iOS",
+    "iPadOS",
+    "macOS",
+    "tvOS",
+    "watchOS",
+    "visionOS"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Monitor 200+ status checks across cloud services, dev tools, and platforms with instant outage alerts.",
+  "url": "https://vultyr.app/zh-Hans/",
+  "downloadUrl": "https://apps.apple.com/us/app/vultyr/id6761264004",
+  "screenshot": [
+    "https://vultyr.app/assets/dash.webp",
+    "https://vultyr.app/assets/settings.webp",
+    "https://vultyr.app/assets/services.webp"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Vultyr",
+    "url": "https://vultyr.app/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Vultyr",
+    "url": "https://vultyr.app/"
+  }
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vultyr",
+  "url": "https://vultyr.app/",
+  "logo": "https://vultyr.app/icon.png",
+  "sameAs": [
+    "https://apps.apple.com/us/app/vultyr/id6761264004"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "support@vultyr.app",
+    "contactType": "customer support"
+  }
+}
+</script>
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script defer src="/assets/js/analytics.js"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+</head>
+<body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <nav class="topbar" aria-label="Primary">
+        <div class="topbar-inner">
+            <a href="/zh-Hans/" class="topbar-brand" aria-label="Vultyr home">
+                <img src="/assets/icon-256.png" alt="" width="24" height="24" decoding="async">
+                <span>vultyr</span>
+            </a>
+            <div class="topbar-nav">
+                <a href="/zh-Hans/services.html">services</a>
+                <a href="/zh-Hans/support.html">support</a>
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-tag fade-up fade-up-1" aria-hidden="true">200+ checks</div>
+            <img src="/assets/icon-256.png" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
+            <h1 class="fade-up fade-up-2">vultyr</h1>
+            <p class="tagline fade-up fade-up-3">Is it down? <span class="highlight">Know before your users do.</span></p>
+            <p class="tagline-services fade-up fade-up-3">200+ status checks — AWS, GitHub, Slack, Stripe &amp; more — with instant outage alerts across every Apple device.</p>
+            <div class="cta-group fade-up fade-up-4">
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="Download Vultyr on the App Store">
+                    <img src="/assets/app-store-badge.svg" alt="Download on the App Store" class="badge-img" width="180" height="54" decoding="async">
+                </a>
+                <p class="platforms">Free on <span>iPhone</span> &middot; <span>iPad</span> &middot; <span>Mac</span> &middot; <span>Apple TV</span> &middot; <span>Apple Watch</span> &middot; <span>Vision Pro</span></p>
+            </div>
+        </div>
+    </header>
+
+    <section class="screenshots fade-up fade-up-5" aria-labelledby="screenshots-heading">
+        <h2 id="screenshots-heading" class="sr-only">App screenshots</h2>
+        <div class="screenshots-track">
+            <div class="phone-frame">
+                <img src="/assets/dash.webp" alt="Vultyr dashboard showing All Clear status with services like AWS, GitHub, and Slack monitored" width="390" height="844" decoding="async">
+            </div>
+            <div class="phone-frame">
+                <img src="/assets/settings.webp" alt="Vultyr appearance settings with 12 themes including Terminal, Amber, Dracula, and Nord" width="390" height="844" decoding="async">
+            </div>
+            <div class="phone-frame">
+                <img src="/assets/services.webp" alt="Vultyr service browser showing 16 categories including Cloud, Dev Tools, and AI" width="390" height="844" decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="stats" aria-labelledby="stats-heading">
+        <h2 id="stats-heading" class="sr-only">Key numbers</h2>
+        <div class="stats-strip">
+            <div class="stat">
+                <span class="stat-value">200+</span>
+                <span class="stat-label">Checks</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">16</span>
+                <span class="stat-label">Categories</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">6</span>
+                <span class="stat-label">Platforms</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">17</span>
+                <span class="stat-label">Languages</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="features" aria-labelledby="features-heading">
+        <div class="features-heading">
+            <h2 id="features-heading">Everything you need to stay ahead of outages</h2>
+            <p>No app accounts, no servers, no in-app tracking. Just status.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Live Status Dashboard</h3>
+                    <p>AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic and 200+ more — all in one place.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Smart Alerts</h3>
+                    <p>Get notified when a service goes down or comes back up. Mute known incidents and star critical services.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Cross-Device Sync</h3>
+                    <p>Your Mac monitors continuously and pushes status changes to all your devices via iCloud. No setup needed.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Every Apple Platform</h3>
+                    <p>iPhone, iPad, Mac menu bar, Apple TV, Apple Watch, and Vision Pro. Services sync across all devices.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Incident Details</h3>
+                    <p>See affected components, active incidents, scheduled maintenance, and timeline updates from the source.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Battery-Aware Polling</h3>
+                    <p>Smart auto-refresh adapts to battery, power state, and thermals. Every minute on Mac, 5-15 on iPhone.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>12 Themes</h3>
+                    <p>Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, HAL, or Standard.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>App Data Stays Local</h3>
+                    <p>The app has no sign-up and no in-app analytics. Your watched services stay on your device.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>17 App Languages</h3>
+                    <p>English, German, French, Spanish, Japanese, Korean, Chinese, Portuguese, Russian, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="bottom-cta" aria-labelledby="bottom-cta-heading">
+        <h2 id="bottom-cta-heading">Ready to monitor your stack?</h2>
+        <p>Free. No app account required. Available everywhere.</p>
+        <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Download Vultyr free on the App Store">
+            <img src="/assets/icons/download-simple-regular.svg" alt="" width="18" height="18" aria-hidden="true">
+            Download Free
+        </a>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="languages-section" aria-labelledby="lang-heading">
+        <h2 id="lang-heading" class="lang-heading">Available in 17 languages</h2>
+        <nav aria-labelledby="lang-heading">
+            <ul class="lang-row" role="list">
+                <li><a href="/" lang="en" data-locale="en">English</a></li>
+                <li><a href="/da/" lang="da" data-locale="da">Dansk</a></li>
+                <li><a href="/de/" lang="de" data-locale="de">Deutsch</a></li>
+                <li><a href="/es/" lang="es" data-locale="es">Español</a></li>
+                <li><a href="/fr/" lang="fr" data-locale="fr">Français</a></li>
+                <li><a href="/it/" lang="it" data-locale="it">Italiano</a></li>
+                <li><a href="/ja/" lang="ja" data-locale="ja">日本語</a></li>
+                <li><a href="/ko/" lang="ko" data-locale="ko">한국어</a></li>
+                <li><a href="/nb/" lang="nb" data-locale="nb">Norsk</a></li>
+                <li><a href="/nl/" lang="nl" data-locale="nl">Nederlands</a></li>
+                <li><a href="/pt-BR/" lang="pt-BR" data-locale="pt-BR">Português</a></li>
+                <li><a href="/ru/" lang="ru" data-locale="ru">Русский</a></li>
+                <li><a href="/sv/" lang="sv" data-locale="sv">Svenska</a></li>
+                <li><a href="/tr/" lang="tr" data-locale="tr">Türkçe</a></li>
+                <li><a href="/vi/" lang="vi" data-locale="vi">Tiếng Việt</a></li>
+                <li><a href="/zh-Hans/" lang="zh-Hans" data-locale="zh-Hans" aria-current="page">简体中文</a></li>
+                <li><a href="/zh-Hant/" lang="zh-Hant" data-locale="zh-Hant">繁體中文</a></li>
+            </ul>
+        </nav>
+    </section>
+    </main>
+
+    <footer>
+        <nav aria-label="Footer navigation">
+            <a href="/zh-Hans/">Home</a>
+            <a href="/zh-Hans/services.html">Services</a>
+            <a href="/zh-Hans/privacy.html">Privacy</a>
+            <a href="/zh-Hans/support.html">Support</a>
+            <a href="mailto:support@vultyr.app">Contact</a>
+        </nav>
+        <p class="copyright">© 2026 Vultyr. All rights reserved.</p>
+    </footer>
+</body>
+</html>

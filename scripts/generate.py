@@ -38,8 +38,48 @@ OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
 THEMES_COUNT = 12
 APP_LANGUAGE_COUNT = 17
 
-LOCALES = ("en", "ru")
+LOCALES = (
+    "en", "da", "de", "es", "fr", "it", "ja", "ko", "nb", "nl",
+    "pt-BR", "ru", "sv", "tr", "vi", "zh-Hans", "zh-Hant",
+)
 DEFAULT_LOCALE = "en"
+
+OG_LOCALES = {
+    "en": "en_US", "da": "da_DK", "de": "de_DE", "es": "es_ES",
+    "fr": "fr_FR", "it": "it_IT", "ja": "ja_JP", "ko": "ko_KR",
+    "nb": "nb_NO", "nl": "nl_NL", "pt-BR": "pt_BR", "ru": "ru_RU",
+    "sv": "sv_SE", "tr": "tr_TR", "vi": "vi_VN",
+    "zh-Hans": "zh_CN", "zh-Hant": "zh_TW",
+}
+
+
+def html_lang(locale):
+    return locale
+
+
+def og_locale(locale):
+    return OG_LOCALES.get(locale, "en_US")
+
+
+LOCALE_NATIVE_NAMES = {
+    "en": "English",
+    "da": "Dansk",
+    "de": "Deutsch",
+    "es": "Espa\u00f1ol",
+    "fr": "Fran\u00e7ais",
+    "it": "Italiano",
+    "ja": "\u65e5\u672c\u8a9e",
+    "ko": "\ud55c\uad6d\uc5b4",
+    "nb": "Norsk",
+    "nl": "Nederlands",
+    "pt-BR": "Portugu\u00eas",
+    "ru": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+    "sv": "Svenska",
+    "tr": "T\u00fcrk\u00e7e",
+    "vi": "Ti\u1ebfng Vi\u1ec7t",
+    "zh-Hans": "\u7b80\u4f53\u4e2d\u6587",
+    "zh-Hant": "\u7e41\u9ad4\u4e2d\u6587",
+}
 
 ALLOWED_URL_SCHEMES = {"https", "mailto"}
 
@@ -142,6 +182,7 @@ STRINGS = {
         "home_bottom_sub": "Free. No app account required. Available everywhere.",
         "home_bottom_button": "Download Free",
         "home_bottom_aria": "Download Vultyr free on the App Store",
+        "home_languages_heading": "Available in 17 languages",
         "home_features": [
             ("chart-bar-regular.svg", "Live Status Dashboard",
              "AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic and 200+ more \u2014 all in one place."),
@@ -169,6 +210,71 @@ STRINGS = {
         "err_message": "The page you're looking for doesn't exist or has been moved.",
         "err_popular_heading": "Popular services",
         "err_browse_heading": "Browse categories",
+        # privacy
+        "privacy_title": "Privacy Policy",
+        "privacy_description": "Vultyr privacy policy. The app collects no personal data. This website uses cookieless Google Analytics for aggregate visitor traffic.",
+        "privacy_last_updated": "Last updated: April 11, 2026",
+        "privacy_sections": [
+            ("Summary",
+             "<p>The Vultyr <strong>app</strong> collects, stores, and transmits no personal data. The Vultyr <strong>website</strong> (vultyr.app) uses cookieless Google Analytics to understand aggregate visitor traffic. This page explains both in detail.</p>"),
+            ("App \u2014 Data Collection",
+             "<p>The vultyr app does not collect any personal information. It does not require an account, does not include any third-party analytics or tracking SDKs, and does not phone home to any server we operate.</p>"),
+            ("App \u2014 Network Requests",
+             "<p>The app makes direct HTTPS requests to public status page APIs (such as Statuspage.io, Apple, Google Cloud, and others) to check service status. These requests go directly from your device to the service's public API \u2014 they do not pass through any server we operate.</p>"),
+            ("App \u2014 Data Storage",
+             "<p>All data is stored locally on your device using Apple's SwiftData framework. If you enable iCloud Sync, your list of watched services is synced via Apple's iCloud Key-Value Store, which is governed by Apple's privacy policy. We never see this data.</p>"),
+            ("App \u2014 Cross-Device Alerts",
+             "<p>If you enable Cross-Device Alerts, status changes are shared between your devices via Apple's iCloud Key-Value Store. When your Mac detects a status change, it writes a lightweight signal to your iCloud account. Your other devices observe the change and run their own local check. No third-party server is involved \u2014 all communication goes through Apple's iCloud infrastructure. You can toggle this from any device.</p>"),
+            ("App \u2014 Favicons",
+             "<p>Service favicons are fetched from Google's public favicon service and cached locally on your device.</p>"),
+            ("Website \u2014 Analytics",
+             "<p>This website (vultyr.app) uses Google Analytics 4 in cookieless, IP-anonymized mode to count aggregate page views. Specifically, we configure gtag.js with <code>anonymize_ip: true</code>, <code>client_storage: 'none'</code>, <code>allow_google_signals: false</code>, and <code>allow_ad_personalization_signals: false</code>. This means no <code>_ga</code> cookie is set, your IP is truncated before storage, and no advertising identifiers are collected. The vultyr app itself does not include any analytics.</p>"),
+            ("Website \u2014 Third-Party Domains",
+             "<p>Loading vultyr.app will contact the following third-party domains:</p>\n    <ul>\n        <li><strong>www.googletagmanager.com</strong> \u2014 loads the gtag.js script</li>\n        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong> \u2014 receives anonymized page-view beacons</li>\n        <li><strong>www.google.com/g/collect</strong> \u2014 receives the same anonymized page-view beacons (Google Analytics 4 fallback collection endpoint)</li>\n    </ul>\n    <p>We do not load Google Fonts (the Audiowide font is self-hosted on vultyr.app) and do not use a third-party favicon service for the website's own imagery.</p>"),
+            ("App \u2014 Third-Party Services",
+             "<p>The vultyr app does not integrate with any third-party analytics, advertising, or tracking services. The only external requests are to public status APIs and Google's favicon service.</p>"),
+            ("Children's Privacy",
+             "<p>The vultyr app does not collect data from anyone, including children under 13. The website logs only anonymized, aggregate visitor counts.</p>"),
+            ("Changes",
+             "<p>If this policy changes, we will update the date above.</p>"),
+            ("Contact",
+             "<p>Questions? Email <a href=\"mailto:support@vultyr.app\">support@vultyr.app</a></p>"),
+        ],
+        # support
+        "support_title": "Support",
+        "support_description": "Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.",
+        "support_contact_heading": "Contact",
+        "support_contact_html": "<p>For bug reports, feature requests, or questions:<br>\n    <a href=\"mailto:support@vultyr.app\">support@vultyr.app</a></p>",
+        "support_faq_heading": "FAQ",
+        "support_faqs": [
+            ("How often does vultyr check service status?",
+             "On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions.",
+             "<p>On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions.</p>"),
+            ("How do Cross-Device Alerts work?",
+             "When your Mac detects a status change, it writes a lightweight signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup \u2014 just enable \"Cross-Device Alerts\" in settings on any device. Keep the Mac app running for real-time monitoring.",
+             "<p>When your Mac detects a status change, it writes a lightweight signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup \u2014 just enable \"Cross-Device Alerts\" in settings on any device. Keep the Mac app running for real-time monitoring.</p>"),
+            ("Why do some services say \"Link only\"?",
+             "Some services don't have a public status API. For these, vultyr links directly to their official status page so you can check manually. Link-only services are hidden by default but can be shown in Settings.",
+             "<p>Some services don't have a public status API. For these, vultyr links directly to their official status page so you can check manually. Link-only services are hidden by default but can be shown in Settings.</p>"),
+            ("Does the vultyr app collect my data?",
+             "No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts \u2014 see the Privacy Policy for details.",
+             "<p>No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts \u2014 see the <a href=\"/privacy.html\">Privacy Policy</a> for details.</p>"),
+            ("How do I sync my services across devices?",
+             "Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store.",
+             "<p>Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store.</p>"),
+            ("What are the theme options?",
+             "12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Themes sync across all your devices automatically.",
+             "<p>12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Themes sync across all your devices automatically.</p>"),
+            ("Can I mute notifications for a known incident?",
+             "Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about.",
+             "<p>Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about.</p>"),
+            ("What platforms are supported?",
+             "iPhone, iPad, Mac (with menu bar app), Apple Watch (with complications), Apple TV, and Apple Vision Pro. The app is completely free on all platforms.",
+             "<p>iPhone, iPad, Mac (with menu bar app), Apple Watch (with complications), Apple TV, and Apple Vision Pro. The app is completely free on all platforms.</p>"),
+            ("Can I request a new service?",
+             "Yes! Email support@vultyr.app with the service name and its status page URL.",
+             "<p>Yes! Email <a href=\"mailto:support@vultyr.app\">support@vultyr.app</a> with the service name and its status page URL.</p>"),
+        ],
     },
     "ru": {
         "html_lang": "ru",
@@ -261,6 +367,7 @@ STRINGS = {
         "home_bottom_sub": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e. \u0411\u0435\u0437 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u0430. \u0412\u0435\u0437\u0434\u0435 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e.",
         "home_bottom_button": "\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e",
         "home_bottom_aria": "\u0421\u043a\u0430\u0447\u0430\u0442\u044c Vultyr \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e \u0432 App Store",
+        "home_languages_heading": "\u0414\u043e\u0441\u0442\u0443\u043f\u043d\u043e \u043d\u0430 17 \u044f\u0437\u044b\u043a\u0430\u0445",
         "home_features": [
             ("chart-bar-regular.svg",
              "\u0414\u0430\u0448\u0431\u043e\u0440\u0434 \u0441\u0442\u0430\u0442\u0443\u0441\u0430 \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438",
@@ -295,11 +402,78 @@ STRINGS = {
         "err_message": "\u0417\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u043c\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0430 \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0430.",
         "err_popular_heading": "\u041f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u044b\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u044b",
         "err_browse_heading": "\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0439",
+        # privacy
+        "privacy_title": "\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438",
+        "privacy_description": "\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438 Vultyr. \u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043d\u0435 \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445. \u0421\u0430\u0439\u0442 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 Google Analytics \u0431\u0435\u0437 \u0444\u0430\u0439\u043b\u043e\u0432 cookie \u0434\u043b\u044f \u0430\u0433\u0440\u0435\u0433\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u043e\u0439 \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0438 \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u0439.",
+        "privacy_last_updated": "\u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u043e: 11 \u0430\u043f\u0440\u0435\u043b\u044f 2026 \u0433.",
+        "privacy_sections": [
+            ("\u041a\u0440\u0430\u0442\u043a\u043e\u0435 \u0441\u043e\u0434\u0435\u0440\u0436\u0430\u043d\u0438\u0435",
+             "<p><strong>\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435</strong> Vultyr \u043d\u0435 \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442, \u043d\u0435 \u0445\u0440\u0430\u043d\u0438\u0442 \u0438 \u043d\u0435 \u043f\u0435\u0440\u0435\u0434\u0430\u0451\u0442 \u043d\u0438\u043a\u0430\u043a\u0438\u0445 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0445 \u0434\u0430\u043d\u043d\u044b\u0445. <strong>\u0421\u0430\u0439\u0442</strong> Vultyr (vultyr.app) \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 Google Analytics \u0431\u0435\u0437 \u0444\u0430\u0439\u043b\u043e\u0432 cookie \u0434\u043b\u044f \u043f\u043e\u043d\u0438\u043c\u0430\u043d\u0438\u044f \u0430\u0433\u0440\u0435\u0433\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u043e\u0439 \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0438 \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u0439. \u041d\u0438\u0436\u0435 \u043f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0441\u0442\u0438 \u043f\u043e \u043e\u0431\u043e\u0438\u043c \u043f\u0443\u043d\u043a\u0442\u0430\u043c.</p>"),
+            ("\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u2014 \u0441\u0431\u043e\u0440 \u0434\u0430\u043d\u043d\u044b\u0445",
+             "<p>\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 vultyr \u043d\u0435 \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442 \u043d\u0438\u043a\u0430\u043a\u043e\u0439 \u043f\u0435\u0440\u0441\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0439 \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u0438. \u041e\u043d\u043e \u043d\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u0438, \u043d\u0435 \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u0442 \u0441\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u0445 SDK \u0434\u043b\u044f \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0438 \u0438\u043b\u0438 \u0442\u0440\u0435\u043a\u0438\u043d\u0433\u0430 \u0438 \u043d\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u044f\u0435\u0442 \u0434\u0430\u043d\u043d\u044b\u0435 \u043d\u0430 \u043d\u0430\u0448\u0438 \u0441\u0435\u0440\u0432\u0435\u0440\u044b.</p>"),
+            ("\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u2014 \u0441\u0435\u0442\u0435\u0432\u044b\u0435 \u0437\u0430\u043f\u0440\u043e\u0441\u044b",
+             "<p>\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u0435\u043b\u0430\u0435\u0442 \u043f\u0440\u044f\u043c\u044b\u0435 HTTPS-\u0437\u0430\u043f\u0440\u043e\u0441\u044b \u043a \u043f\u0443\u0431\u043b\u0438\u0447\u043d\u044b\u043c API \u0441\u0442\u0430\u0442\u0443\u0441-\u0441\u0442\u0440\u0430\u043d\u0438\u0446 (\u0442\u0430\u043a\u0438\u043c \u043a\u0430\u043a Statuspage.io, Apple, Google Cloud \u0438 \u0434\u0440\u0443\u0433\u0438\u043c), \u0447\u0442\u043e\u0431\u044b \u043f\u0440\u043e\u0432\u0435\u0440\u044f\u0442\u044c \u0441\u0442\u0430\u0442\u0443\u0441 \u0441\u0435\u0440\u0432\u0438\u0441\u043e\u0432. \u042d\u0442\u0438 \u0437\u0430\u043f\u0440\u043e\u0441\u044b \u0438\u0434\u0443\u0442 \u043d\u0430\u043f\u0440\u044f\u043c\u0443\u044e \u0441 \u0432\u0430\u0448\u0435\u0433\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u043a \u043f\u0443\u0431\u043b\u0438\u0447\u043d\u043e\u043c\u0443 API \u0441\u0435\u0440\u0432\u0438\u0441\u0430 \u2014 \u043e\u043d\u0438 \u043d\u0435 \u043f\u0440\u043e\u0445\u043e\u0434\u044f\u0442 \u0447\u0435\u0440\u0435\u0437 \u043d\u0430\u0448\u0438 \u0441\u0435\u0440\u0432\u0435\u0440\u044b.</p>"),
+            ("\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u2014 \u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u0434\u0430\u043d\u043d\u044b\u0445",
+             "<p>\u0412\u0441\u0435 \u0434\u0430\u043d\u043d\u044b\u0435 \u0445\u0440\u0430\u043d\u044f\u0442\u0441\u044f \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435 \u0441 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u0435\u043c SwiftData \u043e\u0442 Apple. \u0415\u0441\u043b\u0438 \u0432\u044b \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044e iCloud, \u0441\u043f\u0438\u0441\u043e\u043a \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0435\u043c\u044b\u0445 \u0441\u0435\u0440\u0432\u0438\u0441\u043e\u0432 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u0447\u0435\u0440\u0435\u0437 iCloud Key-Value Store \u043e\u0442 Apple, \u0440\u0435\u0433\u0443\u043b\u0438\u0440\u0443\u0435\u043c\u044b\u0439 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u043e\u0439 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438 Apple. \u041c\u044b \u043d\u0438\u043a\u043e\u0433\u0434\u0430 \u043d\u0435 \u0432\u0438\u0434\u0438\u043c \u044d\u0442\u0438 \u0434\u0430\u043d\u043d\u044b\u0435.</p>"),
+            ("\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u2014 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043c\u0435\u0436\u0434\u0443 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438",
+             "<p>\u0415\u0441\u043b\u0438 \u0432\u044b \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043c\u0435\u0436\u0434\u0443 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438, \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0441\u0442\u0430\u0442\u0443\u0441\u0430 \u043f\u0435\u0440\u0435\u0434\u0430\u044e\u0442\u0441\u044f \u043c\u0435\u0436\u0434\u0443 \u0432\u0430\u0448\u0438\u043c\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438 \u0447\u0435\u0440\u0435\u0437 iCloud Key-Value Store \u043e\u0442 Apple. \u041a\u043e\u0433\u0434\u0430 Mac \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u0432\u0430\u0435\u0442 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u0441\u0442\u0430\u0442\u0443\u0441\u0430, \u043e\u043d \u0437\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442 \u043b\u0451\u0433\u043a\u0438\u0439 \u0441\u0438\u0433\u043d\u0430\u043b \u0432 \u0432\u0430\u0448 \u0430\u043a\u043a\u0430\u0443\u043d\u0442 iCloud. \u0414\u0440\u0443\u0433\u0438\u0435 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u0437\u0430\u043c\u0435\u0447\u0430\u044e\u0442 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u0438 \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u044e\u0442 \u0441\u0432\u043e\u044e \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u0443\u044e \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0443. \u0421\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u0435 \u0441\u0435\u0440\u0432\u0435\u0440\u044b \u043d\u0435 \u0437\u0430\u0434\u0435\u0439\u0441\u0442\u0432\u043e\u0432\u0430\u043d\u044b \u2014 \u0432\u0441\u044f \u043a\u043e\u043c\u043c\u0443\u043d\u0438\u043a\u0430\u0446\u0438\u044f \u0438\u0434\u0451\u0442 \u0447\u0435\u0440\u0435\u0437 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0443 iCloud \u043e\u0442 Apple. \u0412\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u0432\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u0438 \u043e\u0442\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u044d\u0442\u0443 \u0444\u0443\u043d\u043a\u0446\u0438\u044e \u0441 \u043b\u044e\u0431\u043e\u0433\u043e \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430.</p>"),
+            ("\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u2014 \u0444\u0430\u0432\u0438\u043a\u043e\u043d\u044b",
+             "<p>\u0424\u0430\u0432\u0438\u043a\u043e\u043d\u044b \u0441\u0435\u0440\u0432\u0438\u0441\u043e\u0432 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u0438\u0437 \u043f\u0443\u0431\u043b\u0438\u0447\u043d\u043e\u0439 \u0441\u043b\u0443\u0436\u0431\u044b \u0444\u0430\u0432\u0438\u043a\u043e\u043d\u043e\u0432 Google \u0438 \u043a\u044d\u0448\u0438\u0440\u0443\u044e\u0442\u0441\u044f \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435.</p>"),
+            ("\u0421\u0430\u0439\u0442 \u2014 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0430",
+             "<p>\u042d\u0442\u043e\u0442 \u0441\u0430\u0439\u0442 (vultyr.app) \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 Google Analytics 4 \u0432 \u0440\u0435\u0436\u0438\u043c\u0435 \u0431\u0435\u0437 \u0444\u0430\u0439\u043b\u043e\u0432 cookie \u0441 \u0430\u043d\u043e\u043d\u0438\u043c\u0438\u0437\u0430\u0446\u0438\u0435\u0439 IP \u0434\u043b\u044f \u043f\u043e\u0434\u0441\u0447\u0451\u0442\u0430 \u0430\u0433\u0440\u0435\u0433\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u043e\u0432 \u0441\u0442\u0440\u0430\u043d\u0438\u0446. \u041a\u043e\u043d\u043a\u0440\u0435\u0442\u043d\u043e \u043c\u044b \u043d\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u043c gtag.js \u0441\u043e \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u043c\u0438 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u0430\u043c\u0438: <code>anonymize_ip: true</code>, <code>client_storage: 'none'</code>, <code>allow_google_signals: false</code>, <code>allow_ad_personalization_signals: false</code>. \u042d\u0442\u043e \u043e\u0437\u043d\u0430\u0447\u0430\u0435\u0442, \u0447\u0442\u043e cookie <code>_ga</code> \u043d\u0435 \u0443\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442\u0441\u044f, \u0432\u0430\u0448 IP \u0443\u0441\u0435\u043a\u0430\u0435\u0442\u0441\u044f \u0434\u043e \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u044f, \u0440\u0435\u043a\u043b\u0430\u043c\u043d\u044b\u0435 \u0438\u0434\u0435\u043d\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0440\u044b \u043d\u0435 \u0441\u043e\u0431\u0438\u0440\u0430\u044e\u0442\u0441\u044f. \u0421\u0430\u043c\u043e \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 vultyr \u043d\u0438\u043a\u0430\u043a\u043e\u0439 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0438 \u043d\u0435 \u0441\u043e\u0434\u0435\u0440\u0436\u0438\u0442.</p>"),
+            ("\u0421\u0430\u0439\u0442 \u2014 \u0441\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u0435 \u0434\u043e\u043c\u0435\u043d\u044b",
+             "<p>\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430 vultyr.app \u0441\u0432\u044f\u0437\u044b\u0432\u0430\u0435\u0442\u0441\u044f \u0441\u043e \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u043c\u0438 \u0441\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u043c\u0438 \u0434\u043e\u043c\u0435\u043d\u0430\u043c\u0438:</p>\n    <ul>\n        <li><strong>www.googletagmanager.com</strong> \u2014 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0435\u0442 \u0441\u043a\u0440\u0438\u043f\u0442 gtag.js</li>\n        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong> \u2014 \u043f\u0440\u0438\u043d\u0438\u043c\u0430\u0435\u0442 \u0430\u043d\u043e\u043d\u0438\u043c\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0441\u0438\u0433\u043d\u0430\u043b\u044b \u043e \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0430\u0445</li>\n        <li><strong>www.google.com/g/collect</strong> \u2014 \u043f\u0440\u0438\u043d\u0438\u043c\u0430\u0435\u0442 \u0442\u0435 \u0436\u0435 \u0430\u043d\u043e\u043d\u0438\u043c\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0441\u0438\u0433\u043d\u0430\u043b\u044b (\u0440\u0435\u0437\u0435\u0440\u0432\u043d\u044b\u0439 \u044d\u043d\u0434\u043f\u043e\u0438\u043d\u0442 \u0441\u0431\u043e\u0440\u0430 \u0434\u0430\u043d\u043d\u044b\u0445 Google Analytics 4)</li>\n    </ul>\n    <p>\u041c\u044b \u043d\u0435 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0435\u043c Google Fonts (\u0448\u0440\u0438\u0444\u0442 Audiowide \u0440\u0430\u0437\u043c\u0435\u0449\u0451\u043d \u043d\u0430 vultyr.app) \u0438 \u043d\u0435 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u043c \u0441\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u0439 \u0441\u0435\u0440\u0432\u0438\u0441 \u0444\u0430\u0432\u0438\u043a\u043e\u043d\u043e\u0432 \u0434\u043b\u044f \u0441\u043e\u0431\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0445 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0439 \u0441\u0430\u0439\u0442\u0430.</p>"),
+            ("\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u2014 \u0441\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u044b",
+             "<p>\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 vultyr \u043d\u0435 \u0438\u043d\u0442\u0435\u0433\u0440\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043d\u0438 \u0441 \u043a\u0430\u043a\u0438\u043c\u0438 \u0441\u0442\u043e\u0440\u043e\u043d\u043d\u0438\u043c\u0438 \u0441\u0435\u0440\u0432\u0438\u0441\u0430\u043c\u0438 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0438, \u0440\u0435\u043a\u043b\u0430\u043c\u044b \u0438\u043b\u0438 \u0442\u0440\u0435\u043a\u0438\u043d\u0433\u0430. \u0415\u0434\u0438\u043d\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u0435 \u0432\u043d\u0435\u0448\u043d\u0438\u0435 \u0437\u0430\u043f\u0440\u043e\u0441\u044b \u2014 \u043a \u043f\u0443\u0431\u043b\u0438\u0447\u043d\u044b\u043c API \u0441\u0442\u0430\u0442\u0443\u0441-\u0441\u0442\u0440\u0430\u043d\u0438\u0446 \u0438 \u043a \u0441\u043b\u0443\u0436\u0431\u0435 \u0444\u0430\u0432\u0438\u043a\u043e\u043d\u043e\u0432 Google.</p>"),
+            ("\u041a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u0434\u0435\u0442\u0435\u0439",
+             "<p>\u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 vultyr \u043d\u0438 \u0443 \u043a\u043e\u0433\u043e \u043d\u0435 \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u0442 \u0434\u0430\u043d\u043d\u044b\u0435, \u0432 \u0442\u043e\u043c \u0447\u0438\u0441\u043b\u0435 \u0443 \u0434\u0435\u0442\u0435\u0439 \u043c\u043b\u0430\u0434\u0448\u0435 13 \u043b\u0435\u0442. \u0421\u0430\u0439\u0442 \u0444\u0438\u043a\u0441\u0438\u0440\u0443\u0435\u0442 \u0442\u043e\u043b\u044c\u043a\u043e \u0430\u043d\u043e\u043d\u0438\u043c\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0430\u0433\u0440\u0435\u0433\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u0441\u0447\u0451\u0442\u0447\u0438\u043a\u0438 \u043f\u043e\u0441\u0435\u0449\u0435\u043d\u0438\u0439.</p>"),
+            ("\u0418\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f",
+             "<p>\u0415\u0441\u043b\u0438 \u044d\u0442\u0430 \u043f\u043e\u043b\u0438\u0442\u0438\u043a\u0430 \u0438\u0437\u043c\u0435\u043d\u0438\u0442\u0441\u044f, \u043c\u044b \u043e\u0431\u043d\u043e\u0432\u0438\u043c \u0434\u0430\u0442\u0443 \u0432\u044b\u0448\u0435.</p>"),
+            ("\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+             "<p>\u0412\u043e\u043f\u0440\u043e\u0441\u044b? \u041f\u0438\u0448\u0438\u0442\u0435 \u043d\u0430 <a href=\"mailto:support@vultyr.app\">support@vultyr.app</a></p>"),
+        ],
+        # support
+        "support_title": "\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430",
+        "support_description": "\u041f\u043e\u043c\u043e\u0449\u044c \u043f\u043e Vultyr \u2014 \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433\u0443 \u0441\u0442\u0430\u0442\u0443\u0441\u0430 \u0441\u0435\u0440\u0432\u0438\u0441\u043e\u0432 \u0434\u043b\u044f iPhone, iPad, Mac, Apple Watch, Apple TV \u0438 Apple Vision Pro. \u0412\u043e\u043f\u0440\u043e\u0441\u044b \u0438 \u043e\u0442\u0432\u0435\u0442\u044b, \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u044b, \u0434\u0438\u0430\u0433\u043d\u043e\u0441\u0442\u0438\u043a\u0430.",
+        "support_contact_heading": "\u041a\u043e\u043d\u0442\u0430\u043a\u0442\u044b",
+        "support_contact_html": "<p>\u0414\u043b\u044f \u043e\u0442\u0447\u0451\u0442\u043e\u0432 \u043e\u0431 \u043e\u0448\u0438\u0431\u043a\u0430\u0445, \u0437\u0430\u043f\u0440\u043e\u0441\u043e\u0432 \u0444\u0443\u043d\u043a\u0446\u0438\u0439 \u0438 \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432:<br>\n    <a href=\"mailto:support@vultyr.app\">support@vultyr.app</a></p>",
+        "support_faq_heading": "\u0412\u043e\u043f\u0440\u043e\u0441\u044b \u0438 \u043e\u0442\u0432\u0435\u0442\u044b",
+        "support_faqs": [
+            ("\u041a\u0430\u043a \u0447\u0430\u0441\u0442\u043e vultyr \u043f\u0440\u043e\u0432\u0435\u0440\u044f\u0435\u0442 \u0441\u0442\u0430\u0442\u0443\u0441 \u0441\u0435\u0440\u0432\u0438\u0441\u043e\u0432?",
+             "\u041d\u0430 Mac: \u0440\u0430\u0437 \u0432 60 \u0441\u0435\u043a\u0443\u043d\u0434 \u043f\u0440\u0438 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0438 \u043a \u043f\u0438\u0442\u0430\u043d\u0438\u044e. \u041d\u0430 iPhone: \u043a\u0430\u0436\u0434\u044b\u0435 5, 10 \u0438\u043b\u0438 15 \u043c\u0438\u043d\u0443\u0442 (\u043d\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u0442\u0441\u044f), \u0441 \u043f\u0435\u0440\u0438\u043e\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438 \u0444\u043e\u043d\u043e\u0432\u044b\u043c\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430\u043c\u0438. \u041d\u0430 Apple Watch: \u043a\u0430\u0436\u0434\u044b\u0435 15 \u043c\u0438\u043d\u0443\u0442. \u041d\u0430 Apple TV: \u043a\u0430\u0436\u0434\u044b\u0435 5 \u043c\u0438\u043d\u0443\u0442. \u041e\u043f\u0440\u043e\u0441 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0430\u0434\u0430\u043f\u0442\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043a \u0437\u0430\u0440\u044f\u0434\u0443 \u0431\u0430\u0442\u0430\u0440\u0435\u0438, \u043f\u0438\u0442\u0430\u043d\u0438\u044e \u0438 \u0442\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0435.",
+             "<p>\u041d\u0430 Mac: \u0440\u0430\u0437 \u0432 60 \u0441\u0435\u043a\u0443\u043d\u0434 \u043f\u0440\u0438 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0438 \u043a \u043f\u0438\u0442\u0430\u043d\u0438\u044e. \u041d\u0430 iPhone: \u043a\u0430\u0436\u0434\u044b\u0435 5, 10 \u0438\u043b\u0438 15 \u043c\u0438\u043d\u0443\u0442 (\u043d\u0430\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u0442\u0441\u044f), \u0441 \u043f\u0435\u0440\u0438\u043e\u0434\u0438\u0447\u0435\u0441\u043a\u0438\u043c\u0438 \u0444\u043e\u043d\u043e\u0432\u044b\u043c\u0438 \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0430\u043c\u0438. \u041d\u0430 Apple Watch: \u043a\u0430\u0436\u0434\u044b\u0435 15 \u043c\u0438\u043d\u0443\u0442. \u041d\u0430 Apple TV: \u043a\u0430\u0436\u0434\u044b\u0435 5 \u043c\u0438\u043d\u0443\u0442. \u041e\u043f\u0440\u043e\u0441 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0430\u0434\u0430\u043f\u0442\u0438\u0440\u0443\u0435\u0442\u0441\u044f \u043a \u0437\u0430\u0440\u044f\u0434\u0443 \u0431\u0430\u0442\u0430\u0440\u0435\u0438, \u043f\u0438\u0442\u0430\u043d\u0438\u044e \u0438 \u0442\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0435.</p>"),
+            ("\u041a\u0430\u043a \u0440\u0430\u0431\u043e\u0442\u0430\u044e\u0442 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043c\u0435\u0436\u0434\u0443 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438?",
+             "\u041a\u043e\u0433\u0434\u0430 Mac \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u0432\u0430\u0435\u0442 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u0441\u0442\u0430\u0442\u0443\u0441\u0430, \u043e\u043d \u0437\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442 \u043b\u0451\u0433\u043a\u0438\u0439 \u0441\u0438\u0433\u043d\u0430\u043b \u0432 iCloud Key-Value Store. \u0414\u0440\u0443\u0433\u0438\u0435 \u0432\u0430\u0448\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u043f\u043e\u0434\u0445\u0432\u0430\u0442\u044b\u0432\u0430\u044e\u0442 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u0438 \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u044e\u0442 \u0441\u0432\u043e\u044e \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u0443\u044e \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0443. \u041d\u0438\u043a\u0430\u043a\u0438\u0445 \u043a\u043b\u044e\u0447\u0435\u0439, \u0442\u043e\u043a\u0435\u043d\u043e\u0432 \u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043a \u2014 \u043f\u0440\u043e\u0441\u0442\u043e \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u00ab\u0423\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043c\u0435\u0436\u0434\u0443 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438\u00bb \u0432 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\u0445 \u043d\u0430 \u043b\u044e\u0431\u043e\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435. \u0414\u0435\u0440\u0436\u0438\u0442\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 Mac \u0437\u0430\u043f\u0443\u0449\u0435\u043d\u043d\u044b\u043c \u0434\u043b\u044f \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433\u0430 \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438.",
+             "<p>\u041a\u043e\u0433\u0434\u0430 Mac \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u0432\u0430\u0435\u0442 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u0441\u0442\u0430\u0442\u0443\u0441\u0430, \u043e\u043d \u0437\u0430\u043f\u0438\u0441\u044b\u0432\u0430\u0435\u0442 \u043b\u0451\u0433\u043a\u0438\u0439 \u0441\u0438\u0433\u043d\u0430\u043b \u0432 iCloud Key-Value Store. \u0414\u0440\u0443\u0433\u0438\u0435 \u0432\u0430\u0448\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430 \u043f\u043e\u0434\u0445\u0432\u0430\u0442\u044b\u0432\u0430\u044e\u0442 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u0438 \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u044e\u0442 \u0441\u0432\u043e\u044e \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u0443\u044e \u043f\u0440\u043e\u0432\u0435\u0440\u043a\u0443. \u041d\u0438\u043a\u0430\u043a\u0438\u0445 \u043a\u043b\u044e\u0447\u0435\u0439, \u0442\u043e\u043a\u0435\u043d\u043e\u0432 \u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0435\u043a \u2014 \u043f\u0440\u043e\u0441\u0442\u043e \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u00ab\u0423\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043c\u0435\u0436\u0434\u0443 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438\u00bb \u0432 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\u0445 \u043d\u0430 \u043b\u044e\u0431\u043e\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435. \u0414\u0435\u0440\u0436\u0438\u0442\u0435 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 Mac \u0437\u0430\u043f\u0443\u0449\u0435\u043d\u043d\u044b\u043c \u0434\u043b\u044f \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433\u0430 \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438.</p>"),
+            ("\u041f\u043e\u0447\u0435\u043c\u0443 \u0443 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u0441\u0435\u0440\u0432\u0438\u0441\u043e\u0432 \u043e\u0442\u043c\u0435\u0447\u0435\u043d\u043e \u00ab\u0422\u043e\u043b\u044c\u043a\u043e \u0441\u0441\u044b\u043b\u043a\u0430\u00bb?",
+             "\u0423 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u0441\u0435\u0440\u0432\u0438\u0441\u043e\u0432 \u043d\u0435\u0442 \u043f\u0443\u0431\u043b\u0438\u0447\u043d\u043e\u0433\u043e API \u0441\u0442\u0430\u0442\u0443\u0441\u0430. \u0414\u043b\u044f \u043d\u0438\u0445 vultyr \u0434\u0430\u0451\u0442 \u043f\u0440\u044f\u043c\u0443\u044e \u0441\u0441\u044b\u043b\u043a\u0443 \u043d\u0430 \u043e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u0443\u044e \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u0441\u0442\u0430\u0442\u0443\u0441\u0430. \u0421\u0435\u0440\u0432\u0438\u0441\u044b \u0442\u043e\u043b\u044c\u043a\u043e-\u0441\u043e-\u0441\u0441\u044b\u043b\u043a\u043e\u0439 \u043f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e \u0441\u043a\u0440\u044b\u0442\u044b, \u043d\u043e \u0438\u0445 \u043c\u043e\u0436\u043d\u043e \u043f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u0432 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\u0445.",
+             "<p>\u0423 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u0441\u0435\u0440\u0432\u0438\u0441\u043e\u0432 \u043d\u0435\u0442 \u043f\u0443\u0431\u043b\u0438\u0447\u043d\u043e\u0433\u043e API \u0441\u0442\u0430\u0442\u0443\u0441\u0430. \u0414\u043b\u044f \u043d\u0438\u0445 vultyr \u0434\u0430\u0451\u0442 \u043f\u0440\u044f\u043c\u0443\u044e \u0441\u0441\u044b\u043b\u043a\u0443 \u043d\u0430 \u043e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u0443\u044e \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u0441\u0442\u0430\u0442\u0443\u0441\u0430. \u0421\u0435\u0440\u0432\u0438\u0441\u044b \u0442\u043e\u043b\u044c\u043a\u043e-\u0441\u043e-\u0441\u0441\u044b\u043b\u043a\u043e\u0439 \u043f\u043e \u0443\u043c\u043e\u043b\u0447\u0430\u043d\u0438\u044e \u0441\u043a\u0440\u044b\u0442\u044b, \u043d\u043e \u0438\u0445 \u043c\u043e\u0436\u043d\u043e \u043f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u0432 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430\u0445.</p>"),
+            ("\u0421\u043e\u0431\u0438\u0440\u0430\u0435\u0442 \u043b\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 vultyr \u043c\u043e\u0438 \u0434\u0430\u043d\u043d\u044b\u0435?",
+             "\u041d\u0435\u0442. \u0423 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u043d\u0435\u0442 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u043e\u0432, \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u0432, \u0432\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u043e\u0433\u043e \u0442\u0440\u0435\u043a\u0438\u043d\u0433\u0430 \u0438 \u0432\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u043e\u0439 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0438. \u0412\u0441\u0435 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0435\u043c\u044b\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u044b \u043e\u0441\u0442\u0430\u044e\u0442\u0441\u044f \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435. \u0417\u0430\u043c\u0435\u0447\u0430\u043d\u0438\u0435: \u044d\u0442\u043e\u0442 \u0441\u0430\u0439\u0442 (vultyr.app) \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 Google Analytics \u0431\u0435\u0437 \u0444\u0430\u0439\u043b\u043e\u0432 cookie \u0434\u043b\u044f \u0430\u0433\u0440\u0435\u0433\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u0441\u0447\u0451\u0442\u0447\u0438\u043a\u043e\u0432 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u0435\u0439 \u2014 \u043f\u043e\u0434\u0440\u043e\u0431\u043d\u0435\u0435 \u0432 \u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0435 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438.",
+             "<p>\u041d\u0435\u0442. \u0423 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u043d\u0435\u0442 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u043e\u0432, \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u0432, \u0432\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u043e\u0433\u043e \u0442\u0440\u0435\u043a\u0438\u043d\u0433\u0430 \u0438 \u0432\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u043e\u0439 \u0430\u043d\u0430\u043b\u0438\u0442\u0438\u043a\u0438. \u0412\u0441\u0435 \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0435\u043c\u044b\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u044b \u043e\u0441\u0442\u0430\u044e\u0442\u0441\u044f \u043d\u0430 \u0432\u0430\u0448\u0435\u043c \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0435. \u0417\u0430\u043c\u0435\u0447\u0430\u043d\u0438\u0435: \u044d\u0442\u043e\u0442 \u0441\u0430\u0439\u0442 (vultyr.app) \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442 Google Analytics \u0431\u0435\u0437 \u0444\u0430\u0439\u043b\u043e\u0432 cookie \u0434\u043b\u044f \u0430\u0433\u0440\u0435\u0433\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u0441\u0447\u0451\u0442\u0447\u0438\u043a\u043e\u0432 \u043f\u043e\u0441\u0435\u0442\u0438\u0442\u0435\u043b\u0435\u0439 \u2014 \u043f\u043e\u0434\u0440\u043e\u0431\u043d\u0435\u0435 \u0432 <a href=\"/ru/privacy.html\">\u041f\u043e\u043b\u0438\u0442\u0438\u043a\u0435 \u043a\u043e\u043d\u0444\u0438\u0434\u0435\u043d\u0446\u0438\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438</a>.</p>"),
+            ("\u041a\u0430\u043a \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0441\u0435\u0440\u0432\u0438\u0441\u044b \u043c\u0435\u0436\u0434\u0443 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438?",
+             "\u041e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0435\u043c\u044b\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u044b \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0443\u044e\u0442\u0441\u044f \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0447\u0435\u0440\u0435\u0437 iCloud. \u0422\u0435\u043c\u044b \u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0442\u0430\u043a\u0436\u0435 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0443\u044e\u0442\u0441\u044f \u043c\u0435\u0436\u0434\u0443 \u0432\u0441\u0435\u043c\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438 Apple \u0447\u0435\u0440\u0435\u0437 iCloud Key-Value Store.",
+             "<p>\u041e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0435\u043c\u044b\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u044b \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0443\u044e\u0442\u0441\u044f \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0447\u0435\u0440\u0435\u0437 iCloud. \u0422\u0435\u043c\u044b \u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0442\u0430\u043a\u0436\u0435 \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0443\u044e\u0442\u0441\u044f \u043c\u0435\u0436\u0434\u0443 \u0432\u0441\u0435\u043c\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438 Apple \u0447\u0435\u0440\u0435\u0437 iCloud Key-Value Store.</p>"),
+            ("\u041a\u0430\u043a\u0438\u0435 \u0435\u0441\u0442\u044c \u0442\u0435\u043c\u044b \u043e\u0444\u043e\u0440\u043c\u043b\u0435\u043d\u0438\u044f?",
+             "12 \u0442\u0435\u043c: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith \u0438 HAL. \u0422\u0435\u043c\u044b \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0443\u044e\u0442\u0441\u044f \u043c\u0435\u0436\u0434\u0443 \u0432\u0441\u0435\u043c\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438.",
+             "<p>12 \u0442\u0435\u043c: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith \u0438 HAL. \u0422\u0435\u043c\u044b \u0441\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0438\u0440\u0443\u044e\u0442\u0441\u044f \u043c\u0435\u0436\u0434\u0443 \u0432\u0441\u0435\u043c\u0438 \u0443\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u0430\u043c\u0438 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438.</p>"),
+            ("\u041c\u043e\u0436\u043d\u043e \u043b\u0438 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043e \u0438\u0437\u0432\u0435\u0441\u0442\u043d\u043e\u043c \u0438\u043d\u0446\u0438\u0434\u0435\u043d\u0442\u0435?",
+             "\u0414\u0430. \u041f\u0440\u0438 \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u0430 \u0441 \u0430\u043a\u0442\u0438\u0432\u043d\u044b\u043c \u0438\u043d\u0446\u0438\u0434\u0435\u043d\u0442\u043e\u043c \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043d\u0430 \u0437\u0430\u0434\u0430\u043d\u043d\u044b\u0439 \u043f\u0435\u0440\u0438\u043e\u0434, \u0447\u0442\u043e\u0431\u044b \u043d\u0435 \u043f\u043e\u043b\u0443\u0447\u0430\u0442\u044c \u043f\u043e\u0432\u0442\u043e\u0440\u043d\u044b\u0435 \u043e\u043f\u043e\u0432\u0435\u0449\u0435\u043d\u0438\u044f.",
+             "<p>\u0414\u0430. \u041f\u0440\u0438 \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u0430 \u0441 \u0430\u043a\u0442\u0438\u0432\u043d\u044b\u043c \u0438\u043d\u0446\u0438\u0434\u0435\u043d\u0442\u043e\u043c \u0432\u044b \u043c\u043e\u0436\u0435\u0442\u0435 \u043e\u0442\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f \u043d\u0430 \u0437\u0430\u0434\u0430\u043d\u043d\u044b\u0439 \u043f\u0435\u0440\u0438\u043e\u0434, \u0447\u0442\u043e\u0431\u044b \u043d\u0435 \u043f\u043e\u043b\u0443\u0447\u0430\u0442\u044c \u043f\u043e\u0432\u0442\u043e\u0440\u043d\u044b\u0435 \u043e\u043f\u043e\u0432\u0435\u0449\u0435\u043d\u0438\u044f.</p>"),
+            ("\u041a\u0430\u043a\u0438\u0435 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u044b \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u044e\u0442\u0441\u044f?",
+             "iPhone, iPad, Mac (\u0441 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u043c \u0432 \u0441\u0442\u0440\u043e\u043a\u0435 \u043c\u0435\u043d\u044e), Apple Watch (\u0441 \u043e\u0441\u043b\u043e\u0436\u043d\u0435\u043d\u0438\u044f\u043c\u0438), Apple TV \u0438 Apple Vision Pro. \u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e \u043d\u0430 \u0432\u0441\u0435\u0445 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u0430\u0445.",
+             "<p>iPhone, iPad, Mac (\u0441 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u043c \u0432 \u0441\u0442\u0440\u043e\u043a\u0435 \u043c\u0435\u043d\u044e), Apple Watch (\u0441 \u043e\u0441\u043b\u043e\u0436\u043d\u0435\u043d\u0438\u044f\u043c\u0438), Apple TV \u0438 Apple Vision Pro. \u041f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e \u043d\u0430 \u0432\u0441\u0435\u0445 \u043f\u043b\u0430\u0442\u0444\u043e\u0440\u043c\u0430\u0445.</p>"),
+            ("\u041c\u043e\u0436\u043d\u043e \u043b\u0438 \u0437\u0430\u043f\u0440\u043e\u0441\u0438\u0442\u044c \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043d\u043e\u0432\u043e\u0433\u043e \u0441\u0435\u0440\u0432\u0438\u0441\u0430?",
+             "\u0414\u0430! \u041d\u0430\u043f\u0438\u0448\u0438\u0442\u0435 \u043d\u0430 support@vultyr.app, \u0443\u043a\u0430\u0437\u0430\u0432 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u0430 \u0438 URL \u0435\u0433\u043e \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b \u0441\u0442\u0430\u0442\u0443\u0441\u0430.",
+             "<p>\u0414\u0430! \u041d\u0430\u043f\u0438\u0448\u0438\u0442\u0435 \u043d\u0430 <a href=\"mailto:support@vultyr.app\">support@vultyr.app</a>, \u0443\u043a\u0430\u0437\u0430\u0432 \u043d\u0430\u0437\u0432\u0430\u043d\u0438\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u0430 \u0438 URL \u0435\u0433\u043e \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b \u0441\u0442\u0430\u0442\u0443\u0441\u0430.</p>"),
+        ],
     },
 }
 
-# Russian translations of category names, keyed by slug.
-CATEGORY_NAMES_RU = {
+# Per-locale translations of category names, keyed by slug. Locales without
+# an entry fall back to the source name in data/services.json.
+CATEGORY_NAMES = {}
+CATEGORY_NAMES["ru"] = {
     "cloud-infrastructure": "\u041e\u0431\u043b\u0430\u043a\u043e \u0438 \u0438\u043d\u0444\u0440\u0430\u0441\u0442\u0440\u0443\u043a\u0442\u0443\u0440\u0430",
     "developer-tools": "\u0418\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0447\u0438\u043a\u0430",
     "communication": "\u041a\u043e\u043c\u043c\u0443\u043d\u0438\u043a\u0430\u0446\u0438\u0438",
@@ -320,15 +494,20 @@ CATEGORY_NAMES_RU = {
 
 
 def t(locale, key):
-    """Fetch a string for a locale, falling back to English if missing."""
-    return STRINGS[locale].get(key, STRINGS[DEFAULT_LOCALE][key])
+    """Fetch a string for a locale, falling back to English if missing.
+    Locales not yet present in STRINGS fall back wholesale to English so the
+    site still renders while translations are filled in."""
+    bundle = STRINGS.get(locale, STRINGS[DEFAULT_LOCALE])
+    if key in bundle:
+        return bundle[key]
+    return STRINGS[DEFAULT_LOCALE][key]
 
 
 def category_display_name(cat, locale):
-    """Return the display name for a category in the given locale."""
-    if locale == "ru":
-        return CATEGORY_NAMES_RU.get(cat["slug"], cat["name"])
-    return cat["name"]
+    """Return the display name for a category in the given locale, falling
+    back to the source name from data/services.json when no translation exists."""
+    names = CATEGORY_NAMES.get(locale, {})
+    return names.get(cat["slug"], cat["name"])
 
 
 def count_services_phrase(locale, n):
@@ -442,7 +621,9 @@ def hreflang_links(alt_urls):
 
 
 def head_common(script_hashes=()):
-    """Shared head tags: charset, viewport, CSP, preconnects, font preload."""
+    """Shared head tags: charset, viewport, CSP, preconnects, font preload,
+    and the locale-detect script (loaded synchronously so it can redirect
+    before the page paints if the user's preferred locale differs)."""
     return "\n".join([
         '    <meta charset="UTF-8">',
         '    <meta name="viewport" content="width=device-width, initial-scale=1.0">',
@@ -450,18 +631,14 @@ def head_common(script_hashes=()):
         '    <link rel="preconnect" href="https://www.googletagmanager.com">',
         '    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>',
         '    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>',
+        '    <script src="/assets/js/locale-detect.js"></script>',
+        '    <script defer src="/assets/js/lang-switch.js"></script>',
     ])
 
 
-def topbar_html(locale, alt_urls):
-    """Top navigation with language switcher. alt_urls[locale] gives the URL
-    for this same page in each locale (for the switcher)."""
-    en_url = alt_urls.get("en", home_url_path("en"))
-    ru_url = alt_urls.get("ru", home_url_path("ru"))
-    en_current = ' aria-current="page"' if locale == "en" else ""
-    ru_current = ' aria-current="page"' if locale == "ru" else ""
-    en_class = ' class="lang-active"' if locale == "en" else ""
-    ru_class = ' class="lang-active"' if locale == "ru" else ""
+def topbar_html(locale, alt_urls=None):
+    """Top navigation. The language picker now lives in the languages section
+    on the home page, so the topbar stays minimal across every page."""
     return f"""    <nav class="topbar" aria-label="{e(t(locale, 'nav_primary_aria'))}">
         <div class="topbar-inner">
             <a href="{home_url_path(locale)}" class="topbar-brand" aria-label="{e(t(locale, 'topbar_brand_aria'))}">
@@ -471,14 +648,34 @@ def topbar_html(locale, alt_urls):
             <div class="topbar-nav">
                 <a href="{services_path(locale)}">{e(t(locale, 'nav_services'))}</a>
                 <a href="{support_path(locale)}">{e(t(locale, 'nav_support'))}</a>
-                <div class="lang-switch" role="group" aria-label="{e(t(locale, 'lang_switch_aria'))}">
-                    <a href="{en_url}"{en_class}{en_current}>EN</a>
-                    <a href="{ru_url}"{ru_class}{ru_current}>RU</a>
-                </div>
                 <a href="{APP_STORE_URL}" target="_blank" rel="noopener noreferrer" class="topbar-cta">{e(t(locale, 'nav_download'))}</a>
             </div>
         </div>
     </nav>"""
+
+
+def languages_section_html(locale, page_alt_urls):
+    """Klosyt-style languages section: native-name links to every locale's
+    version of this page. Used near the bottom of the home page (and any
+    other page where it makes sense). page_alt_urls maps locale -> path."""
+    items = []
+    for loc in LOCALES:
+        href = page_alt_urls.get(loc, home_url_path(loc))
+        native = LOCALE_NATIVE_NAMES[loc]
+        active = ' aria-current="page"' if loc == locale else ""
+        items.append(
+            f'                <li><a href="{href}" lang="{loc}" data-locale="{loc}"{active}>{e(native)}</a></li>'
+        )
+    items_html = "\n".join(items)
+    heading = e(t(locale, "home_languages_heading"))
+    return f"""    <section class="languages-section" aria-labelledby="lang-heading">
+        <h2 id="lang-heading" class="lang-heading">{heading}</h2>
+        <nav aria-labelledby="lang-heading">
+            <ul class="lang-row" role="list">
+{items_html}
+            </ul>
+        </nav>
+    </section>"""
 
 
 def footer_html(locale):
@@ -683,7 +880,7 @@ def generate_services_page(data, favicon, locale):
     canonical = absolute(services_path(locale))
 
     return f"""<!DOCTYPE html>
-<html lang="{t(locale, 'html_lang')}">
+<html lang="{html_lang(locale)}">
 <head>
 {head_common(script_hashes=(item_list_ld_hash,))}
     <title>{e(title)}</title>
@@ -695,7 +892,7 @@ def generate_services_page(data, favicon, locale):
     <meta property="og:image:alt" content="{e(t(locale, 'og_image_alt'))}">
     <meta property="og:url" content="{canonical}">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="{t(locale, 'og_locale')}">
+    <meta property="og:locale" content="{og_locale(locale)}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{e(title)}">
     <meta name="twitter:description" content="{e(description)}">
@@ -846,7 +1043,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon,
     alert_link_text = t(locale, "svcp_alert_hint_link")
 
     return f"""<!DOCTYPE html>
-<html lang="{t(locale, 'html_lang')}">
+<html lang="{html_lang(locale)}">
 <head>
 {head_common(script_hashes=(breadcrumb_ld_hash, faq_ld_hash))}
     <title>{e(title)}</title>
@@ -858,7 +1055,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon,
     <meta property="og:image:alt" content="{e(t(locale, 'og_image_alt'))}">
     <meta property="og:url" content="{canonical}">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="{t(locale, 'og_locale')}">
+    <meta property="og:locale" content="{og_locale(locale)}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{e(title)}">
     <meta name="twitter:description" content="{e(description)}">
@@ -1021,7 +1218,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon, l
     canonical = absolute(category_path(locale, slug))
 
     return f"""<!DOCTYPE html>
-<html lang="{t(locale, 'html_lang')}">
+<html lang="{html_lang(locale)}">
 <head>
 {head_common(script_hashes=(breadcrumb_ld_hash, item_list_ld_hash))}
     <title>{e(title)}</title>
@@ -1033,7 +1230,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon, l
     <meta property="og:image:alt" content="{e(t(locale, 'og_image_alt'))}">
     <meta property="og:url" content="{canonical}">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="{t(locale, 'og_locale')}">
+    <meta property="og:locale" content="{og_locale(locale)}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{e(title)}">
     <meta name="twitter:description" content="{e(description)}">
@@ -1152,7 +1349,7 @@ def generate_home_page(data, locale):
     canonical = absolute(home_url_path(locale))
 
     return f"""<!DOCTYPE html>
-<html lang="{t(locale, 'html_lang')}">
+<html lang="{html_lang(locale)}">
 <head>
 {head_common(script_hashes=(app_ld_hash, org_ld_hash))}
     <title>{e(title)}</title>
@@ -1165,7 +1362,7 @@ def generate_home_page(data, locale):
     <meta property="og:url" content="{canonical}">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Vultyr">
-    <meta property="og:locale" content="{t(locale, 'og_locale')}">
+    <meta property="og:locale" content="{og_locale(locale)}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{e(og_title)}">
     <meta name="twitter:description" content="{e(description)}">
@@ -1262,6 +1459,10 @@ def generate_home_page(data, locale):
             {e(t(locale, 'home_bottom_button'))}
         </a>
     </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+{languages_section_html(locale, alt_urls)}
     </main>
 
 {footer_html(locale)}
@@ -1298,7 +1499,7 @@ def generate_404(data, favicon, locale):
     )
 
     return f"""<!DOCTYPE html>
-<html lang="{t(locale, 'html_lang')}">
+<html lang="{html_lang(locale)}">
 <head>
 {head_common()}
     <title>{e(t(locale, 'err_title'))}</title>
@@ -1332,6 +1533,139 @@ def generate_404(data, favicon, locale):
 {cat_links}
             </div>
         </div>
+    </main>
+{footer_html(locale)}
+</body>
+</html>
+"""
+
+
+# ─── PRIVACY / SUPPORT PAGES ───────────────────────────────────────────────────
+
+def _docs_page(locale, page_key, alt_urls, title, description, body_html, extra_head=""):
+    """Shared shell for the privacy and support docs pages."""
+    canonical = absolute(alt_urls[locale])
+    return f"""<!DOCTYPE html>
+<html lang="{html_lang(locale)}">
+<head>
+{head_common()}
+{extra_head}    <title>{e(title)}</title>
+    <meta name="description" content="{e(description)}">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="{e(title)}">
+    <meta property="og:description" content="{e(description)}">
+    <meta property="og:image" content="{OG_IMAGE}">
+    <meta property="og:image:alt" content="{e(t(locale, 'og_image_alt'))}">
+    <meta property="og:url" content="{canonical}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="{og_locale(locale)}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{e(title)}">
+    <meta name="twitter:description" content="{e(description)}">
+    <meta name="twitter:image" content="{OG_IMAGE}">
+    <link rel="canonical" href="{canonical}">
+{hreflang_links(alt_urls)}
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
+    <link rel="stylesheet" href="/assets/css/shared.css?v={ASSET_VERSION}">
+    <link rel="stylesheet" href="/assets/css/docs.css?v={ASSET_VERSION}">
+{GA_SNIPPET}
+</head>
+<body>
+    <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
+{topbar_html(locale)}
+    <main id="main" class="docs">
+{body_html}
+    </main>
+{footer_html(locale)}
+</body>
+</html>
+"""
+
+
+def generate_privacy_page(locale):
+    alt_urls = {loc: privacy_path(loc) for loc in LOCALES}
+    title = t(locale, "privacy_title")
+    description = t(locale, "privacy_description")
+    sections = "".join(
+        f"\n    <h2>{e(heading)}</h2>\n    {body}"
+        for heading, body in t(locale, "privacy_sections")
+    )
+    body_html = (
+        f'    <h1>{e(title)}</h1>\n'
+        f'    <p class="date">{e(t(locale, "privacy_last_updated"))}</p>'
+        f'{sections}\n'
+    )
+    return _docs_page(locale, "privacy", alt_urls, title, description, body_html)
+
+
+def generate_support_page(locale):
+    alt_urls = {loc: support_path(loc) for loc in LOCALES}
+    title = t(locale, "support_title")
+    description = t(locale, "support_description")
+    faqs = t(locale, "support_faqs")
+
+    faq_ld = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": q,
+                "acceptedAnswer": {"@type": "Answer", "text": a_text},
+            }
+            for q, a_text, _ in faqs
+        ],
+    }
+    faq_ld_html, faq_ld_hash = json_ld_block(faq_ld)
+    extra_head = f"{faq_ld_html}\n"
+
+    contact_html = t(locale, "support_contact_html")
+    faq_blocks = "".join(
+        f'\n    <div class="faq">\n        <h3>{e(q)}</h3>\n        {a_html}\n    </div>'
+        for q, _, a_html in faqs
+    )
+    body_html = (
+        f'    <h1>{e(title)}</h1>\n\n'
+        f'    <h2>{e(t(locale, "support_contact_heading"))}</h2>\n'
+        f'    {contact_html}\n\n'
+        f'    <h2>{e(t(locale, "support_faq_heading"))}</h2>\n'
+        f'{faq_blocks}\n'
+    )
+
+    canonical = absolute(alt_urls[locale])
+    return f"""<!DOCTYPE html>
+<html lang="{html_lang(locale)}">
+<head>
+{head_common(script_hashes=(faq_ld_hash,))}
+    <title>{e(title)}</title>
+    <meta name="description" content="{e(description)}">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="{e(title)}">
+    <meta property="og:description" content="{e(description)}">
+    <meta property="og:image" content="{OG_IMAGE}">
+    <meta property="og:image:alt" content="{e(t(locale, 'og_image_alt'))}">
+    <meta property="og:url" content="{canonical}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="{og_locale(locale)}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{e(title)}">
+    <meta name="twitter:description" content="{e(description)}">
+    <meta name="twitter:image" content="{OG_IMAGE}">
+    <link rel="canonical" href="{canonical}">
+{hreflang_links(alt_urls)}
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
+    <link rel="stylesheet" href="/assets/css/shared.css?v={ASSET_VERSION}">
+    <link rel="stylesheet" href="/assets/css/docs.css?v={ASSET_VERSION}">
+{faq_ld_html}
+{GA_SNIPPET}
+</head>
+<body>
+    <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
+{topbar_html(locale)}
+    <main id="main" class="docs">
+{body_html}
     </main>
 {footer_html(locale)}
 </body>
@@ -1426,12 +1760,6 @@ def main():
     services = data["services"]
     categories = data["categories"]
 
-    # Sanity-check Russian category coverage.
-    missing_ru = [c["slug"] for c in categories if c["slug"] not in CATEGORY_NAMES_RU]
-    if missing_ru:
-        print(f"Error: missing Russian category names for: {missing_ru}")
-        raise SystemExit(1)
-
     services_by_slug = {s["slug"]: s for s in services}
     categories_by_slug = {c["slug"]: c for c in categories}
     favicon = build_favicon_lookup()
@@ -1476,6 +1804,16 @@ def main():
         path_404 = (ROOT_DIR / prefix.lstrip("/") / "404.html") if prefix else (ROOT_DIR / "404.html")
         write_file(path_404, generate_404(data, favicon, locale))
         written_paths.append(path_404)
+
+        print(f"[{locale}] Generating privacy.html...")
+        privacy_file = (ROOT_DIR / prefix.lstrip("/") / "privacy.html") if prefix else (ROOT_DIR / "privacy.html")
+        write_file(privacy_file, generate_privacy_page(locale))
+        written_paths.append(privacy_file)
+
+        print(f"[{locale}] Generating support.html...")
+        support_file = (ROOT_DIR / prefix.lstrip("/") / "support.html") if prefix else (ROOT_DIR / "support.html")
+        write_file(support_file, generate_support_page(locale))
+        written_paths.append(support_file)
 
     print("Generating sitemap.xml...")
     write_file(ROOT_DIR / "sitemap.xml", generate_sitemap(services, categories))
