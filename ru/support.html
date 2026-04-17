@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-4Oe5xYyabmVibp/S2YdkoL+49eQhbseU6JVUDQvT3MQ='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
+    <title>Поддержка — Vultyr</title>
+    <meta name="description" content="Помощь по Vultyr — мониторингу статуса сервисов для iPhone, iPad, Mac, Apple Watch, Apple TV и Apple Vision Pro. Вопросы и ответы, контакты, диагностика.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Поддержка — Vultyr">
+    <meta property="og:description" content="Помощь по Vultyr — мониторингу статуса сервисов для iPhone, iPad, Mac, Apple Watch, Apple TV и Apple Vision Pro.">
+    <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:url" content="https://vultyr.app/ru/support.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Поддержка — Vultyr">
+    <meta name="twitter:description" content="Помощь по Vultyr — мониторингу статуса сервисов для iPhone, iPad, Mac, Apple Watch, Apple TV и Apple Vision Pro.">
+    <meta name="twitter:image" content="https://vultyr.app/icon.png">
+    <link rel="canonical" href="https://vultyr.app/ru/support.html">
+    <link rel="alternate" hreflang="en" href="https://vultyr.app/support.html">
+    <link rel="alternate" hreflang="ru" href="https://vultyr.app/ru/support.html">
+    <link rel="alternate" hreflang="x-default" href="https://vultyr.app/support.html">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260413">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260417d">
+    <link rel="stylesheet" href="/assets/css/docs.css?v=20260417d">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как часто vultyr проверяет статус сервисов?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "На Mac: раз в 60 секунд при подключении к питанию. На iPhone: каждые 5, 10 или 15 минут (настраивается), с периодическими фоновыми проверками, когда позволяют условия. На Apple Watch: каждые 15 минут. На Apple TV: каждые 5 минут. Опрос автоматически адаптируется к заряду батареи, питанию и температуре."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как работают уведомления между устройствами?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Когда Mac обнаруживает изменение статуса, он записывает лёгкий сигнал в iCloud Key-Value Store. Другие ваши устройства подхватывают изменение и выполняют свою локальную проверку. Никаких ключей, токенов и настроек — просто включите «Уведомления между устройствами» в настройках на любом устройстве. Держите приложение Mac запущенным для мониторинга в реальном времени."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Почему у некоторых сервисов отмечено «Только ссылка»?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "У некоторых сервисов нет публичного API статуса. Для них vultyr даёт прямую ссылку на официальную страницу статуса, чтобы вы могли проверить вручную. Сервисы только-со-ссылкой по умолчанию скрыты, но их можно показать в настройках."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Собирает ли приложение vultyr мои данные?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. У приложения нет аккаунтов, серверов, встроенного трекинга и встроенной аналитики. Все отслеживаемые сервисы остаются на вашем устройстве. Замечание: этот сайт (vultyr.app) использует Google Analytics без файлов cookie для агрегированных счётчиков посетителей — подробнее в Политике конфиденциальности."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как синхронизировать сервисы между устройствами?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Отслеживаемые сервисы синхронизируются автоматически через iCloud. Темы и настройки также синхронизируются между всеми устройствами Apple через iCloud Key-Value Store."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие есть темы оформления?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "12 тем: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith и HAL. Темы синхронизируются между всеми устройствами автоматически."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли отключить уведомления о известном инциденте?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. При просмотре сервиса с активным инцидентом вы можете отключить уведомления на заданный период, чтобы не получать повторные оповещения о том, что вам уже известно."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какие платформы поддерживаются?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "iPhone, iPad, Mac (с приложением в строке меню), Apple Watch (с осложнениями), Apple TV и Apple Vision Pro. Приложение полностью бесплатно на всех платформах."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли запросить добавление нового сервиса?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да! Напишите на support@vultyr.app, указав название сервиса и URL его страницы статуса."
+          }
+        }
+      ]
+    }
+    </script>
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script defer src="/assets/js/analytics.js"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+</head>
+<body>
+    <a href="#main" class="sr-only">Перейти к основному содержанию</a>
+    <nav class="topbar" aria-label="Основная">
+        <div class="topbar-inner">
+            <a href="/ru/" class="topbar-brand" aria-label="Главная Vultyr">
+                <img src="/assets/icon-256.png" alt="" width="24" height="24" decoding="async">
+                <span>vultyr</span>
+            </a>
+            <div class="topbar-nav">
+                <a href="/ru/services.html">сервисы</a>
+                <a href="/ru/support.html">поддержка</a>
+                <div class="lang-switch" role="group" aria-label="Язык">
+                    <a href="/support.html">EN</a>
+                    <a href="/ru/support.html" class="lang-active" aria-current="page">RU</a>
+                </div>
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Скачать</a>
+            </div>
+        </div>
+    </nav>
+    <main id="main" class="docs">
+    <h1>Поддержка</h1>
+
+    <h2>Контакты</h2>
+    <p>Для отчётов об ошибках, запросов функций и вопросов:<br>
+    <a href="mailto:support@vultyr.app">support@vultyr.app</a></p>
+
+    <h2>Вопросы и ответы</h2>
+
+    <div class="faq">
+        <h3>Как часто vultyr проверяет статус сервисов?</h3>
+        <p>На Mac: раз в 60 секунд при подключении к питанию. На iPhone: каждые 5, 10 или 15 минут (настраивается), с периодическими фоновыми проверками, когда позволяют условия. На Apple Watch: каждые 15 минут. На Apple TV: каждые 5 минут. Опрос автоматически адаптируется к заряду батареи, питанию и температуре.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Как работают уведомления между устройствами?</h3>
+        <p>Когда Mac обнаруживает изменение статуса, он записывает лёгкий сигнал в iCloud Key-Value Store. Другие ваши устройства подхватывают изменение и выполняют свою локальную проверку. Никаких ключей, токенов и настроек — просто включите «Уведомления между устройствами» в настройках на любом устройстве. Держите приложение Mac запущенным для мониторинга в реальном времени.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Почему у некоторых сервисов отмечено «Только ссылка»?</h3>
+        <p>У некоторых сервисов нет публичного API статуса. Для них vultyr даёт прямую ссылку на официальную страницу статуса, чтобы вы могли проверить вручную. Сервисы только-со-ссылкой по умолчанию скрыты, но их можно показать в настройках.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Собирает ли приложение vultyr мои данные?</h3>
+        <p>Нет. У приложения нет аккаунтов, серверов, встроенного трекинга и встроенной аналитики. Все отслеживаемые сервисы остаются на вашем устройстве. Замечание: этот сайт (vultyr.app) использует Google Analytics без файлов cookie для агрегированных счётчиков посетителей — подробнее в <a href="/ru/privacy.html">Политике конфиденциальности</a>.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Как синхронизировать сервисы между устройствами?</h3>
+        <p>Отслеживаемые сервисы синхронизируются автоматически через iCloud. Темы и настройки также синхронизируются между всеми устройствами Apple через iCloud Key-Value Store.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Какие есть темы оформления?</h3>
+        <p>12 тем: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith и HAL. Темы синхронизируются между всеми устройствами автоматически.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Можно ли отключить уведомления о известном инциденте?</h3>
+        <p>Да. При просмотре сервиса с активным инцидентом вы можете отключить уведомления на заданный период, чтобы не получать повторные оповещения о том, что вам уже известно.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Какие платформы поддерживаются?</h3>
+        <p>iPhone, iPad, Mac (с приложением в строке меню), Apple Watch (с осложнениями), Apple TV и Apple Vision Pro. Приложение полностью бесплатно на всех платформах.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Можно ли запросить добавление нового сервиса?</h3>
+        <p>Да! Напишите на <a href="mailto:support@vultyr.app">support@vultyr.app</a>, указав название сервиса и URL его страницы статуса.</p>
+    </div>
+
+    </main>
+    <footer>
+        <nav aria-label="Навигация подвала">
+            <a href="/ru/">Главная</a>
+            <a href="/ru/services.html">Сервисы</a>
+            <a href="/ru/privacy.html">Конфиденциальность</a>
+            <a href="/ru/support.html">Поддержка</a>
+            <a href="mailto:support@vultyr.app">Контакты</a>
+        </nav>
+        <p class="copyright">&copy; 2026 Vultyr. Все права защищены.</p>
+    </footer>
+</body>
+</html>
