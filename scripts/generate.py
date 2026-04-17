@@ -23,7 +23,7 @@ APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260413"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
-ASSET_VERSION = "20260417"
+ASSET_VERSION = "20260417b"
 PLATFORM_DEVICE_LIST = "iPhone, iPad, Mac, Apple Watch, Apple TV, and Vision Pro"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
 OG_IMAGE_ALT = "Vultyr app icon — Service Status Monitor"
@@ -822,7 +822,7 @@ def generate_home_page(data):
                 <span class="pulse-dot"></span>
                 200+ checks · live
             </div>
-            <img src="/assets/icon-256.png" alt="" class="icon fade-up fade-up-1" width="120" height="120" fetchpriority="high" decoding="async">
+            <img src="/assets/icon-256.png" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
             <h1 class="fade-up fade-up-2">vultyr</h1>
             <p class="tagline fade-up fade-up-3">Is it down? <span class="highlight">Know before your users do.</span></p>
             <p class="tagline-services fade-up fade-up-3">200+ status checks — AWS, GitHub, Slack, Stripe &amp; more — with instant outage alerts across every Apple device.</p>
