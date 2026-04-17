@@ -30,9 +30,11 @@ TODAY = date.today().isoformat()
 SITE_ORIGIN = "https://vultyr.app"
 APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
-FAVICON_HREF = "/favicon.png?v=20260413"
+FAVICON_HREF = "/favicon.png?v=20260417e"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
-ASSET_VERSION = "20260417d"
+ASSET_VERSION = "20260417e"
+# Bump when icon-256.png changes so CDN edges pick up the new asset.
+ICON_VERSION = "20260417e"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
 
 THEMES_COUNT = 12
@@ -642,7 +644,7 @@ def topbar_html(locale, alt_urls=None):
     return f"""    <nav class="topbar" aria-label="{e(t(locale, 'nav_primary_aria'))}">
         <div class="topbar-inner">
             <a href="{home_url_path(locale)}" class="topbar-brand" aria-label="{e(t(locale, 'topbar_brand_aria'))}">
-                <img src="/assets/icon-256.png" alt="" width="24" height="24" decoding="async">
+                <img src="/assets/icon-256.png?v={ICON_VERSION}" alt="" width="24" height="24" decoding="async">
                 <span>vultyr</span>
             </a>
             <div class="topbar-nav">
@@ -1385,7 +1387,7 @@ def generate_home_page(data, locale):
     <header class="hero">
         <div class="hero-inner">
             <div class="hero-tag fade-up fade-up-1" aria-hidden="true">{e(t(locale, 'home_hero_tag'))}</div>
-            <img src="/assets/icon-256.png" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
+            <img src="/assets/icon-256.png?v={ICON_VERSION}" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
             <h1 class="fade-up fade-up-2">vultyr</h1>
             <p class="tagline fade-up fade-up-3">{e(t(locale, 'home_hero_question'))} <span class="highlight">{e(t(locale, 'home_hero_answer'))}</span></p>
             <p class="tagline-services fade-up fade-up-3">{t(locale, 'home_hero_services')}</p>
