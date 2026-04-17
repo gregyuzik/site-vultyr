@@ -3,8 +3,8 @@
     to { opacity: 1; transform: translateY(0); }
 }
 @keyframes halo {
-    0%, 100% { box-shadow: 0 0 40px rgba(0, 255, 65, 0.18), 0 0 80px rgba(0, 255, 65, 0.08); }
-    50% { box-shadow: 0 0 60px rgba(0, 255, 65, 0.28), 0 0 120px rgba(0, 255, 65, 0.12); }
+    0%, 100% { box-shadow: 0 0 44px rgba(0, 255, 65, 0.25), 0 0 90px rgba(0, 255, 65, 0.12); }
+    50% { box-shadow: 0 0 72px rgba(0, 255, 65, 0.45), 0 0 140px rgba(0, 255, 65, 0.22); }
 }
 
 .fade-up { opacity: 0; animation: fadeUp 0.7s var(--ease) forwards; }
@@ -26,9 +26,10 @@
 .hero-inner { max-width: 720px; margin: 0 auto; position: relative; }
 
 .hero-tag {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 8px;
+    width: fit-content;
     font-family: var(--font-mono);
     font-size: 0.78rem;
     color: var(--accent);
@@ -36,16 +37,17 @@
     border: 1px solid var(--border-green);
     border-radius: var(--radius-pill);
     background: var(--accent-dim);
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
 
 .icon {
+    display: block;
     width: 120px;
     height: 120px;
     border-radius: 28px;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
     animation: halo 4s ease-in-out infinite;
 }
 
