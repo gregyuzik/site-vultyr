@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-/LMET9WI1izS3tLCm6mhSC2fSF05ZKhpg7mz7i8TCGs='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
+    <script src="/assets/js/locale-detect.js"></script>
+    <script defer src="/assets/js/lang-switch.js"></script>
+    <title>Support</title>
+    <meta name="description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Support">
+    <meta property="og:description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta property="og:image" content="https://vultyr.app/icon.png">
+    <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
+    <meta property="og:url" content="https://vultyr.app/es/support.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Support">
+    <meta name="twitter:description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta name="twitter:image" content="https://vultyr.app/icon.png">
+    <link rel="canonical" href="https://vultyr.app/es/support.html">
+    <link rel="alternate" hreflang="en" href="https://vultyr.app/support.html">
+    <link rel="alternate" hreflang="da" href="https://vultyr.app/da/support.html">
+    <link rel="alternate" hreflang="de" href="https://vultyr.app/de/support.html">
+    <link rel="alternate" hreflang="es" href="https://vultyr.app/es/support.html">
+    <link rel="alternate" hreflang="fr" href="https://vultyr.app/fr/support.html">
+    <link rel="alternate" hreflang="it" href="https://vultyr.app/it/support.html">
+    <link rel="alternate" hreflang="ja" href="https://vultyr.app/ja/support.html">
+    <link rel="alternate" hreflang="ko" href="https://vultyr.app/ko/support.html">
+    <link rel="alternate" hreflang="nb" href="https://vultyr.app/nb/support.html">
+    <link rel="alternate" hreflang="nl" href="https://vultyr.app/nl/support.html">
+    <link rel="alternate" hreflang="pt-BR" href="https://vultyr.app/pt-BR/support.html">
+    <link rel="alternate" hreflang="ru" href="https://vultyr.app/ru/support.html">
+    <link rel="alternate" hreflang="sv" href="https://vultyr.app/sv/support.html">
+    <link rel="alternate" hreflang="tr" href="https://vultyr.app/tr/support.html">
+    <link rel="alternate" hreflang="vi" href="https://vultyr.app/vi/support.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://vultyr.app/zh-Hans/support.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://vultyr.app/zh-Hant/support.html">
+    <link rel="alternate" hreflang="x-default" href="https://vultyr.app/support.html">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260417e">
+    <link rel="stylesheet" href="/assets/css/docs.css?v=20260417e">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How often does vultyr check service status?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Cross-Device Alerts work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When your Mac detects a status change, it writes a lightweight signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup — just enable \"Cross-Device Alerts\" in settings on any device. Keep the Mac app running for real-time monitoring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some services say \"Link only\"?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some services don't have a public status API. For these, vultyr links directly to their official status page so you can check manually. Link-only services are hidden by default but can be shown in Settings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the vultyr app collect my data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts — see the Privacy Policy for details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I sync my services across devices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the theme options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Themes sync across all your devices automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I mute notifications for a known incident?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What platforms are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iPhone, iPad, Mac (with menu bar app), Apple Watch (with complications), Apple TV, and Apple Vision Pro. The app is completely free on all platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I request a new service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Email support@vultyr.app with the service name and its status page URL."
+      }
+    }
+  ]
+}
+</script>
+    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <script defer src="/assets/js/analytics.js"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
+</head>
+<body>
+    <a href="#main" class="sr-only">Skip to main content</a>
+    <nav class="topbar" aria-label="Primary">
+        <div class="topbar-inner">
+            <a href="/es/" class="topbar-brand" aria-label="Vultyr home">
+                <img src="/assets/icon-256.png?v=20260417e" alt="" width="24" height="24" decoding="async">
+                <span>vultyr</span>
+            </a>
+            <div class="topbar-nav">
+                <a href="/es/services.html">services</a>
+                <a href="/es/support.html">support</a>
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Download</a>
+            </div>
+        </div>
+    </nav>
+    <main id="main" class="docs">
+    <h1>Support</h1>
+
+    <h2>Contact</h2>
+    <p>For bug reports, feature requests, or questions:<br>
+    <a href="mailto:support@vultyr.app">support@vultyr.app</a></p>
+
+    <h2>FAQ</h2>
+
+    <div class="faq">
+        <h3>How often does vultyr check service status?</h3>
+        <p>On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions.</p>
+    </div>
+    <div class="faq">
+        <h3>How do Cross-Device Alerts work?</h3>
+        <p>When your Mac detects a status change, it writes a lightweight signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup — just enable "Cross-Device Alerts" in settings on any device. Keep the Mac app running for real-time monitoring.</p>
+    </div>
+    <div class="faq">
+        <h3>Why do some services say &quot;Link only&quot;?</h3>
+        <p>Some services don't have a public status API. For these, vultyr links directly to their official status page so you can check manually. Link-only services are hidden by default but can be shown in Settings.</p>
+    </div>
+    <div class="faq">
+        <h3>Does the vultyr app collect my data?</h3>
+        <p>No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts — see the <a href="/privacy.html">Privacy Policy</a> for details.</p>
+    </div>
+    <div class="faq">
+        <h3>How do I sync my services across devices?</h3>
+        <p>Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store.</p>
+    </div>
+    <div class="faq">
+        <h3>What are the theme options?</h3>
+        <p>12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Themes sync across all your devices automatically.</p>
+    </div>
+    <div class="faq">
+        <h3>Can I mute notifications for a known incident?</h3>
+        <p>Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about.</p>
+    </div>
+    <div class="faq">
+        <h3>What platforms are supported?</h3>
+        <p>iPhone, iPad, Mac (with menu bar app), Apple Watch (with complications), Apple TV, and Apple Vision Pro. The app is completely free on all platforms.</p>
+    </div>
+    <div class="faq">
+        <h3>Can I request a new service?</h3>
+        <p>Yes! Email <a href="mailto:support@vultyr.app">support@vultyr.app</a> with the service name and its status page URL.</p>
+    </div>
+
+    </main>
+    <footer>
+        <nav aria-label="Footer navigation">
+            <a href="/es/">Home</a>
+            <a href="/es/services.html">Services</a>
+            <a href="/es/privacy.html">Privacy</a>
+            <a href="/es/support.html">Support</a>
+            <a href="mailto:support@vultyr.app">Contact</a>
+        </nav>
+        <p class="copyright">© 2026 Vultyr. All rights reserved.</p>
+    </footer>
+</body>
+</html>

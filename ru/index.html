@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
+    <script src="/assets/js/locale-detect.js"></script>
+    <script defer src="/assets/js/lang-switch.js"></script>
     <title>Vultyr — мониторинг статуса AWS, Slack, GitHub и других</title>
     <meta name="description" content="Не работает? 200+ проверок статуса облачных сервисов, инструментов разработки и платформ с мгновенными уведомлениями о сбоях. Бесплатно на iPhone, iPad, Mac, Apple Watch, Apple TV и Apple Vision Pro.">
     <meta name="theme-color" content="#000000">
@@ -24,12 +26,27 @@
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/ru/">
     <link rel="alternate" hreflang="en" href="https://vultyr.app/">
+    <link rel="alternate" hreflang="da" href="https://vultyr.app/da/">
+    <link rel="alternate" hreflang="de" href="https://vultyr.app/de/">
+    <link rel="alternate" hreflang="es" href="https://vultyr.app/es/">
+    <link rel="alternate" hreflang="fr" href="https://vultyr.app/fr/">
+    <link rel="alternate" hreflang="it" href="https://vultyr.app/it/">
+    <link rel="alternate" hreflang="ja" href="https://vultyr.app/ja/">
+    <link rel="alternate" hreflang="ko" href="https://vultyr.app/ko/">
+    <link rel="alternate" hreflang="nb" href="https://vultyr.app/nb/">
+    <link rel="alternate" hreflang="nl" href="https://vultyr.app/nl/">
+    <link rel="alternate" hreflang="pt-BR" href="https://vultyr.app/pt-BR/">
     <link rel="alternate" hreflang="ru" href="https://vultyr.app/ru/">
+    <link rel="alternate" hreflang="sv" href="https://vultyr.app/sv/">
+    <link rel="alternate" hreflang="tr" href="https://vultyr.app/tr/">
+    <link rel="alternate" hreflang="vi" href="https://vultyr.app/vi/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://vultyr.app/zh-Hans/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://vultyr.app/zh-Hant/">
     <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
     <link rel="apple-touch-icon" href="/icon.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260413">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260417d">
-    <link rel="stylesheet" href="/assets/css/home.css?v=20260417d">
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260417e">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260417e">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -96,16 +113,12 @@
     <nav class="topbar" aria-label="Основная">
         <div class="topbar-inner">
             <a href="/ru/" class="topbar-brand" aria-label="Главная Vultyr">
-                <img src="/assets/icon-256.png" alt="" width="24" height="24" decoding="async">
+                <img src="/assets/icon-256.png?v=20260417e" alt="" width="24" height="24" decoding="async">
                 <span>vultyr</span>
             </a>
             <div class="topbar-nav">
                 <a href="/ru/services.html">сервисы</a>
                 <a href="/ru/support.html">поддержка</a>
-                <div class="lang-switch" role="group" aria-label="Язык">
-                    <a href="/">EN</a>
-                    <a href="/ru/" class="lang-active" aria-current="page">RU</a>
-                </div>
                 <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Скачать</a>
             </div>
         </div>
@@ -115,7 +128,7 @@
     <header class="hero">
         <div class="hero-inner">
             <div class="hero-tag fade-up fade-up-1" aria-hidden="true">200+ проверок</div>
-            <img src="/assets/icon-256.png" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
+            <img src="/assets/icon-256.png?v=20260417e" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
             <h1 class="fade-up fade-up-2">vultyr</h1>
             <p class="tagline fade-up fade-up-3">Не работает? <span class="highlight">Узнайте раньше своих пользователей.</span></p>
             <p class="tagline-services fade-up fade-up-3">200+ проверок статуса — AWS, GitHub, Slack, Stripe и другие — с мгновенными уведомлениями о сбоях на всех устройствах Apple.</p>
@@ -250,6 +263,33 @@
             <img src="/assets/icons/download-simple-regular.svg" alt="" width="18" height="18" aria-hidden="true">
             Скачать бесплатно
         </a>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section class="languages-section" aria-labelledby="lang-heading">
+        <h2 id="lang-heading" class="lang-heading">Доступно на 17 языках</h2>
+        <nav aria-labelledby="lang-heading">
+            <ul class="lang-row" role="list">
+                <li><a href="/" lang="en" data-locale="en">English</a></li>
+                <li><a href="/da/" lang="da" data-locale="da">Dansk</a></li>
+                <li><a href="/de/" lang="de" data-locale="de">Deutsch</a></li>
+                <li><a href="/es/" lang="es" data-locale="es">Español</a></li>
+                <li><a href="/fr/" lang="fr" data-locale="fr">Français</a></li>
+                <li><a href="/it/" lang="it" data-locale="it">Italiano</a></li>
+                <li><a href="/ja/" lang="ja" data-locale="ja">日本語</a></li>
+                <li><a href="/ko/" lang="ko" data-locale="ko">한국어</a></li>
+                <li><a href="/nb/" lang="nb" data-locale="nb">Norsk</a></li>
+                <li><a href="/nl/" lang="nl" data-locale="nl">Nederlands</a></li>
+                <li><a href="/pt-BR/" lang="pt-BR" data-locale="pt-BR">Português</a></li>
+                <li><a href="/ru/" lang="ru" data-locale="ru" aria-current="page">Русский</a></li>
+                <li><a href="/sv/" lang="sv" data-locale="sv">Svenska</a></li>
+                <li><a href="/tr/" lang="tr" data-locale="tr">Türkçe</a></li>
+                <li><a href="/vi/" lang="vi" data-locale="vi">Tiếng Việt</a></li>
+                <li><a href="/zh-Hans/" lang="zh-Hans" data-locale="zh-Hans">简体中文</a></li>
+                <li><a href="/zh-Hant/" lang="zh-Hant" data-locale="zh-Hant">繁體中文</a></li>
+            </ul>
+        </nav>
     </section>
     </main>
 
