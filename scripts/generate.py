@@ -22,6 +22,8 @@ SITE_ORIGIN = "https://vultyr.app"
 APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260413"
+# Bump when any CSS file changes so caches (Safari, CDN edges) reload.
+ASSET_VERSION = "20260417"
 PLATFORM_DEVICE_LIST = "iPhone, iPad, Mac, Apple Watch, Apple TV, and Vision Pro"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
 OG_IMAGE_ALT = "Vultyr app icon — Service Status Monitor"
@@ -336,8 +338,8 @@ def generate_services_page(data, favicon):
     <link rel="canonical" href="https://vultyr.app/services.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/services-list.css">
+    <link rel="stylesheet" href="/assets/css/shared.css?v={ASSET_VERSION}">
+    <link rel="stylesheet" href="/assets/css/services-list.css?v={ASSET_VERSION}">
 {item_list_ld_html}
 {GA_SNIPPET}
 </head>
@@ -489,8 +491,8 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon)
     <link rel="canonical" href="https://vultyr.app/status/{e(slug)}.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/service.css">
+    <link rel="stylesheet" href="/assets/css/shared.css?v={ASSET_VERSION}">
+    <link rel="stylesheet" href="/assets/css/service.css?v={ASSET_VERSION}">
 {breadcrumb_ld_html}
 {faq_ld_html}
 {GA_SNIPPET}
@@ -654,8 +656,8 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
     <link rel="canonical" href="https://vultyr.app/categories/{e(slug)}.html">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/category.css">
+    <link rel="stylesheet" href="/assets/css/shared.css?v={ASSET_VERSION}">
+    <link rel="stylesheet" href="/assets/css/category.css?v={ASSET_VERSION}">
 {breadcrumb_ld_html}
 {item_list_ld_html}
 {GA_SNIPPET}
@@ -803,8 +805,8 @@ def generate_home_page(data):
     <link rel="canonical" href="{SITE_ORIGIN}/">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/shared.css?v={ASSET_VERSION}">
+    <link rel="stylesheet" href="/assets/css/home.css?v={ASSET_VERSION}">
 {app_ld_html}
 {org_ld_html}
 {GA_SNIPPET}
@@ -946,8 +948,8 @@ def generate_404(data, favicon):
     <meta name="robots" content="noindex">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="{FAVICON_HREF}">
-    <link rel="stylesheet" href="/assets/css/shared.css">
-    <link rel="stylesheet" href="/assets/css/404.css">
+    <link rel="stylesheet" href="/assets/css/shared.css?v={ASSET_VERSION}">
+    <link rel="stylesheet" href="/assets/css/404.css?v={ASSET_VERSION}">
 {GA_SNIPPET}
 </head>
 <body>
