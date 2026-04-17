@@ -51,6 +51,20 @@ FOOTER_HTML = """    <footer>
         <p class="copyright">&copy; 2026 Vultyr. All rights reserved.</p>
     </footer>"""
 
+TOPBAR_HTML = f"""    <nav class="topbar" aria-label="Primary">
+        <div class="topbar-inner">
+            <a href="/" class="topbar-brand" aria-label="Vultyr home">
+                <img src="/assets/icon-256.png" alt="" width="24" height="24" decoding="async">
+                <span>vultyr</span>
+            </a>
+            <div class="topbar-nav">
+                <a href="/services.html">services</a>
+                <a href="/support.html">support</a>
+                <a href="{APP_STORE_URL}" target="_blank" rel="noopener noreferrer" class="topbar-cta">Download</a>
+            </div>
+        </div>
+    </nav>"""
+
 
 def e(text):
     """HTML-escape text, including attribute quotes."""
@@ -276,8 +290,8 @@ def generate_services_page(data, favicon):
         rows_html = "\n".join(rows)
         sections.append(
             f'        <div class="category">\n'
-            f'            <h2><a href="/categories/{e(cat["slug"])}.html">{e(cat["name"])}</a> '
-            f'<span>{len(cat["serviceSlugs"])} services</span></h2>\n'
+            f'            <h2><a href="/categories/{e(cat["slug"])}.html">{e(cat["name"])}</a>'
+            f'<span class="count">{len(cat["serviceSlugs"])}</span></h2>\n'
             f'{rows_html}\n'
             f'        </div>'
         )
@@ -329,9 +343,9 @@ def generate_services_page(data, favicon):
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
+{TOPBAR_HTML}
     <main id="main">
     <div class="header">
-        <a href="/">&larr; Back to vultyr</a>
         <h1>Status <span class="highlight-orange">Checks</span></h1>
         <p class="subtitle">200+ status checks vultyr runs across cloud services, dev tools, and platforms.</p>
     </div>
@@ -341,7 +355,9 @@ def generate_services_page(data, favicon):
     </nav>
 
     <div class="content">
+        <div class="sections">
 {sections_html}
+        </div>
     </div>
     </main>
 
@@ -481,6 +497,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon)
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
+{TOPBAR_HTML}
     <main id="main">
     <div class="container">
 {breadcrumb_html}
@@ -490,10 +507,14 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon)
         </div>
 
         <div class="status-card">
+            <div class="status-live" aria-hidden="true">
+                <span class="pulse-dot"></span>
+                Live check
+            </div>
             <a href="{status_href}" target="_blank" rel="noopener noreferrer" class="status-badge">
                 <span class="status-text">View Current Status &rarr;</span>
             </a>
-            <p class="status-time">For live alerts, <a href="https://apps.apple.com/us/app/vultyr/id6761264004">download Vultyr</a></p>
+            <p class="status-time">For instant alerts, <a href="https://apps.apple.com/us/app/vultyr/id6761264004">download Vultyr</a></p>
         </div>
 {cat_links_html}
         <div class="links-row">
@@ -641,6 +662,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
+{TOPBAR_HTML}
     <main id="main">
     <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -650,10 +672,10 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon):
         </nav>
 
         <div class="cat-header">
-            {icon_html}
+            <div class="cat-icon-box">{icon_html}</div>
             <h1>{e(name)}</h1>
         </div>
-        <p class="cat-subtitle">{count} services monitored by Vultyr</p>
+        <p class="cat-subtitle"><span class="pulse-dot" aria-hidden="true"></span>{count} services monitored by Vultyr</p>
 
         <nav class="services-grid" aria-label="{e(name)} services">
 {cards}        </nav>
@@ -789,13 +811,18 @@ def generate_home_page(data):
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
+{TOPBAR_HTML}
 
     <main id="main">
     <header class="hero">
         <div class="hero-inner">
-            <img src="/assets/icon-256.png" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
-            <h1 class="fade-up fade-up-1">vultyr</h1>
-            <p class="tagline fade-up fade-up-2">Is it down? <span class="highlight">Know before your users do.</span></p>
+            <div class="hero-tag fade-up fade-up-1" aria-hidden="true">
+                <span class="pulse-dot"></span>
+                200+ checks · live
+            </div>
+            <img src="/assets/icon-256.png" alt="" class="icon fade-up fade-up-1" width="120" height="120" fetchpriority="high" decoding="async">
+            <h1 class="fade-up fade-up-2">vultyr</h1>
+            <p class="tagline fade-up fade-up-3">Is it down? <span class="highlight">Know before your users do.</span></p>
             <p class="tagline-services fade-up fade-up-3">200+ status checks — AWS, GitHub, Slack, Stripe &amp; more — with instant outage alerts across every Apple device.</p>
             <div class="cta-group fade-up fade-up-4">
                 <a href="{APP_STORE_URL}" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="Download Vultyr on the App Store">
@@ -825,7 +852,7 @@ def generate_home_page(data):
 
     <section class="stats" aria-labelledby="stats-heading">
         <h2 id="stats-heading" class="sr-only">Key numbers</h2>
-        <div class="stats-grid">
+        <div class="stats-strip">
             <div class="stat">
                 <span class="stat-value">200+</span>
                 <span class="stat-label">Checks</span>
@@ -840,7 +867,7 @@ def generate_home_page(data):
             </div>
             <div class="stat">
                 <span class="stat-value">{APP_LANGUAGE_COUNT}</span>
-                <span class="stat-label">App Languages</span>
+                <span class="stat-label">Languages</span>
             </div>
         </div>
     </section>
@@ -925,6 +952,7 @@ def generate_404(data, favicon):
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
+{TOPBAR_HTML}
     <main id="main" class="error-main">
         <p class="error-code" aria-hidden="true">404</p>
         <h1 class="error-title">Page not found</h1>

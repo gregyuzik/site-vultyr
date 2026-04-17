@@ -90,13 +90,30 @@
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
+    <nav class="topbar" aria-label="Primary">
+        <div class="topbar-inner">
+            <a href="/" class="topbar-brand" aria-label="Vultyr home">
+                <img src="/assets/icon-256.png" alt="" width="24" height="24" decoding="async">
+                <span>vultyr</span>
+            </a>
+            <div class="topbar-nav">
+                <a href="/services.html">services</a>
+                <a href="/support.html">support</a>
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Download</a>
+            </div>
+        </div>
+    </nav>
 
     <main id="main">
     <header class="hero">
         <div class="hero-inner">
-            <img src="/assets/icon-256.png" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
-            <h1 class="fade-up fade-up-1">vultyr</h1>
-            <p class="tagline fade-up fade-up-2">Is it down? <span class="highlight">Know before your users do.</span></p>
+            <div class="hero-tag fade-up fade-up-1" aria-hidden="true">
+                <span class="pulse-dot"></span>
+                200+ checks · live
+            </div>
+            <img src="/assets/icon-256.png" alt="" class="icon fade-up fade-up-1" width="120" height="120" fetchpriority="high" decoding="async">
+            <h1 class="fade-up fade-up-2">vultyr</h1>
+            <p class="tagline fade-up fade-up-3">Is it down? <span class="highlight">Know before your users do.</span></p>
             <p class="tagline-services fade-up fade-up-3">200+ status checks — AWS, GitHub, Slack, Stripe &amp; more — with instant outage alerts across every Apple device.</p>
             <div class="cta-group fade-up fade-up-4">
                 <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="badge-link" aria-label="Download Vultyr on the App Store">
@@ -126,7 +143,7 @@
 
     <section class="stats" aria-labelledby="stats-heading">
         <h2 id="stats-heading" class="sr-only">Key numbers</h2>
-        <div class="stats-grid">
+        <div class="stats-strip">
             <div class="stat">
                 <span class="stat-value">200+</span>
                 <span class="stat-label">Checks</span>
@@ -141,7 +158,7 @@
             </div>
             <div class="stat">
                 <span class="stat-value">16</span>
-                <span class="stat-label">App Languages</span>
+                <span class="stat-label">Languages</span>
             </div>
         </div>
     </section>

@@ -1397,9 +1397,21 @@
 </head>
 <body>
     <a href="#main" class="sr-only">Skip to main content</a>
+    <nav class="topbar" aria-label="Primary">
+        <div class="topbar-inner">
+            <a href="/" class="topbar-brand" aria-label="Vultyr home">
+                <img src="/assets/icon-256.png" alt="" width="24" height="24" decoding="async">
+                <span>vultyr</span>
+            </a>
+            <div class="topbar-nav">
+                <a href="/services.html">services</a>
+                <a href="/support.html">support</a>
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Download</a>
+            </div>
+        </div>
+    </nav>
     <main id="main">
     <div class="header">
-        <a href="/">&larr; Back to vultyr</a>
         <h1>Status <span class="highlight-orange">Checks</span></h1>
         <p class="subtitle">200+ status checks vultyr runs across cloud services, dev tools, and platforms.</p>
     </div>
@@ -1424,8 +1436,9 @@
     </nav>
 
     <div class="content">
+        <div class="sections">
         <div class="category">
-            <h2><a href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a> <span>30 services</span></h2>
+            <h2><a href="/categories/cloud-infrastructure.html">Cloud &amp; Infrastructure</a><span class="count">30</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/aiven.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/aiven.html">Aiven</a></div>
@@ -1669,7 +1682,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/developer-tools.html">Developer Tools</a> <span>54 services</span></h2>
+            <h2><a href="/categories/developer-tools.html">Developer Tools</a><span class="count">54</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/airbyte.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/airbyte.html">Airbyte</a></div>
@@ -2105,7 +2118,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/communication.html">Communication</a> <span>9 services</span></h2>
+            <h2><a href="/categories/communication.html">Communication</a><span class="count">9</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/discord.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/discord.html">Discord</a></div>
@@ -2181,7 +2194,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/productivity-saas.html">Productivity &amp; SaaS</a> <span>27 services</span></h2>
+            <h2><a href="/categories/productivity-saas.html">Productivity &amp; SaaS</a><span class="count">27</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/airtable.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/airtable.html">Airtable</a></div>
@@ -2401,7 +2414,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/payments-commerce.html">Payments &amp; Commerce</a> <span>11 services</span></h2>
+            <h2><a href="/categories/payments-commerce.html">Payments &amp; Commerce</a><span class="count">11</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/cash.app-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/cash-app.html">Cash App</a></div>
@@ -2493,7 +2506,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/apple.html">Apple</a> <span>2 services</span></h2>
+            <h2><a href="/categories/apple.html">Apple</a><span class="count">2</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/developer.apple.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/apple-developer.html">Apple Developer</a></div>
@@ -2513,7 +2526,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/google.html">Google</a> <span>8 services</span></h2>
+            <h2><a href="/categories/google.html">Google</a><span class="count">8</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/mail.google.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/gmail.html">Gmail</a></div>
@@ -2581,7 +2594,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/microsoft.html">Microsoft</a> <span>6 services</span></h2>
+            <h2><a href="/categories/microsoft.html">Microsoft</a><span class="count">6</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/azure.microsoft.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/azure.html">Azure</a></div>
@@ -2633,7 +2646,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/amazon.html">Amazon</a> <span>2 services</span></h2>
+            <h2><a href="/categories/amazon.html">Amazon</a><span class="count">2</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/aws.amazon.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/aws.html">AWS</a></div>
@@ -2653,7 +2666,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a> <span>16 services</span></h2>
+            <h2><a href="/categories/ai-machine-learning.html">AI &amp; Machine Learning</a><span class="count">16</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/anthropic.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/anthropic.html">Anthropic</a></div>
@@ -2785,7 +2798,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/social-media.html">Social Media</a> <span>12 services</span></h2>
+            <h2><a href="/categories/social-media.html">Social Media</a><span class="count">12</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/bsky.app-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/bluesky.html">Bluesky</a></div>
@@ -2885,7 +2898,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/streaming-media.html">Streaming &amp; Media</a> <span>10 services</span></h2>
+            <h2><a href="/categories/streaming-media.html">Streaming &amp; Media</a><span class="count">10</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/crunchyroll.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/crunchyroll.html">Crunchyroll</a></div>
@@ -2969,7 +2982,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/gaming.html">Gaming</a> <span>5 services</span></h2>
+            <h2><a href="/categories/gaming.html">Gaming</a><span class="count">5</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/epicgames.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/epic-games.html">Epic Games</a></div>
@@ -3013,7 +3026,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/telecom-isp.html">Telecom &amp; ISP</a> <span>11 services</span></h2>
+            <h2><a href="/categories/telecom-isp.html">Telecom &amp; ISP</a><span class="count">11</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/att.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/atandt.html">AT&amp;T</a></div>
@@ -3105,7 +3118,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/security.html">Security</a> <span>19 services</span></h2>
+            <h2><a href="/categories/security.html">Security</a><span class="count">19</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/1password.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/1password.html">1Password</a></div>
@@ -3261,7 +3274,7 @@
         </div>
 
         <div class="category">
-            <h2><a href="/categories/email-marketing.html">Email &amp; Marketing</a> <span>4 services</span></h2>
+            <h2><a href="/categories/email-marketing.html">Email &amp; Marketing</a><span class="count">4</span></h2>
             <div class="service">
                 <img class="service-favicon" src="/assets/favicons/mailchimp.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <div class="service-name"><a href="/status/mailchimp.html">Mailchimp</a></div>
@@ -3294,6 +3307,7 @@
                     <a href="https://sendgrid.com" target="_blank" rel="noopener noreferrer">Homepage</a>
                 </div>
             </div>
+        </div>
         </div>
     </div>
     </main>
