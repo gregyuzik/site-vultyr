@@ -13,13 +13,16 @@ Chosen for visual consistency with SF Symbols used in the Vultyr app.
 |---------|------|
 | Live Status Dashboard | `chart-bar-regular.svg` |
 | Smart Alerts | `bell-ringing-regular.svg` |
+| Siri & Shortcuts | `microphone-regular.svg` |
+| Widgets & Live Activities | `squares-four-regular.svg` |
+| Watch Complications | `watch-regular.svg` |
 | Cross-Device Sync | `cloud-check-regular.svg` |
 | Every Apple Platform | `devices-regular.svg` |
 | Incident Details | `lightning-regular.svg` |
 | Battery-Aware Polling | `battery-charging-regular.svg` |
 | 12 Themes | `palette-regular.svg` |
 | App Data Stays Local | `shield-check-regular.svg` |
-| 16 App Languages | `translate-regular.svg` |
+| 17 App Languages | `translate-regular.svg` |
 | Download CTA | `download-simple-regular.svg` |
 
 ## Service Categories (`categories/*.html`)

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-/LMET9WI1izS3tLCm6mhSC2fSF05ZKhpg7mz7i8TCGs='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-MSnEG5LY0PqOkwFxgMhgSVu/Bx/zO3Xp8HCBdQREcKo='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -69,10 +69,18 @@
     },
     {
       "@type": "Question",
-      "name": "Why do some services say \"Link only\"?",
+      "name": "Does vultyr work with Siri and Shortcuts?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Some services don't have a public status API. For these, vultyr links directly to their official status page so you can check manually. Link-only services are hidden by default but can be shown in Settings."
+        "text": "Yes. Built-in App Intents let you say “Hey Siri, mute GitHub for 2 hours,” “check Stripe status,” or “show current issues,” and you can wire those same actions into the Shortcuts app. There's also a Focus Filter so a “vultyr Focus” mode can quiet non-critical services automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there widgets and Live Activities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On iOS, there are Home Screen and Lock Screen widgets (single-service and status summary) plus a Control Center widget. Active outages pin to the Dynamic Island as Live Activities. On watchOS, complications are available for all watch faces, with Smart Stack relevance so the right service surfaces when something is down."
       }
     },
     {
@@ -96,7 +104,7 @@
       "name": "What are the theme options?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Themes sync across all your devices automatically."
+        "text": "12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Standard and the three retro themes (Terminal, Amber, Blue) are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs ($0.99 / $4.99 / $9.99), which also helps fund development. Themes sync across all your devices automatically."
       }
     },
     {
@@ -104,7 +112,7 @@
       "name": "Can I mute notifications for a known incident?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about."
+        "text": "Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about. You can also mute by voice — “Hey Siri, mute GitHub for 2 hours” — or from the Shortcuts app."
       }
     },
     {
@@ -112,7 +120,7 @@
       "name": "What platforms are supported?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "iPhone, iPad, Mac (with menu bar app), Apple Watch (with complications), Apple TV, and Apple Vision Pro. The app is completely free on all platforms."
+        "text": "iPhone and iPad (with widgets and Live Activities), Mac (with a menu bar app plus full window), Apple Watch (with complications and Smart Stack), Apple TV, and Apple Vision Pro. The app is free to download on every platform."
       }
     },
     {
@@ -188,8 +196,12 @@
         <p>When your Mac detects a status change, it writes a lightweight signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup — just enable "Cross-Device Alerts" in settings on any device. Keep the Mac app running for real-time monitoring.</p>
     </div>
     <div class="faq">
-        <h3>Why do some services say &quot;Link only&quot;?</h3>
-        <p>Some services don't have a public status API. For these, vultyr links directly to their official status page so you can check manually. Link-only services are hidden by default but can be shown in Settings.</p>
+        <h3>Does vultyr work with Siri and Shortcuts?</h3>
+        <p>Yes. Built-in App Intents let you say “Hey Siri, mute GitHub for 2 hours,” “check Stripe status,” or “show current issues,” and you can wire those same actions into the Shortcuts app. There's also a Focus Filter so a “vultyr Focus” mode can quiet non-critical services automatically.</p>
+    </div>
+    <div class="faq">
+        <h3>Are there widgets and Live Activities?</h3>
+        <p>On iOS, there are Home Screen and Lock Screen widgets (single-service and status summary) plus a Control Center widget. Active outages pin to the Dynamic Island as Live Activities. On watchOS, complications are available for all watch faces, with Smart Stack relevance so the right service surfaces when something is down.</p>
     </div>
     <div class="faq">
         <h3>Does the vultyr app collect my data?</h3>
@@ -201,15 +213,15 @@
     </div>
     <div class="faq">
         <h3>What are the theme options?</h3>
-        <p>12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Themes sync across all your devices automatically.</p>
+        <p>12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Standard and the three retro themes (Terminal, Amber, Blue) are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs ($0.99 / $4.99 / $9.99), which also helps fund development. Themes sync across all your devices automatically.</p>
     </div>
     <div class="faq">
         <h3>Can I mute notifications for a known incident?</h3>
-        <p>Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about.</p>
+        <p>Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about. You can also mute by voice — “Hey Siri, mute GitHub for 2 hours” — or from the Shortcuts app.</p>
     </div>
     <div class="faq">
         <h3>What platforms are supported?</h3>
-        <p>iPhone, iPad, Mac (with menu bar app), Apple Watch (with complications), Apple TV, and Apple Vision Pro. The app is completely free on all platforms.</p>
+        <p>iPhone and iPad (with widgets and Live Activities), Mac (with a menu bar app plus full window), Apple Watch (with complications and Smart Stack), Apple TV, and Apple Vision Pro. The app is free to download on every platform.</p>
     </div>
     <div class="faq">
         <h3>Can I request a new service?</h3>
