@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-FCzx5C8SC6TxStaueB1ldVFDQNF3hYVU9NmgREakBCY=' 'sha256-Wm+WMbPyZ+TcdZQ7w2zY0flJ1IUsv14NljzTsGRyPuM='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-FCzx5C8SC6TxStaueB1ldVFDQNF3hYVU9NmgREakBCY=' 'sha256-7e3HBLqfGOCggR8mAUrrJoxbc9KAP7CbswxADlS/IWM='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
     <script src="/assets/js/locale-detect.js?v=20260417f"></script>
     <script defer src="/assets/js/lang-switch.js?v=20260417f"></script>
-    <title>Communication Status Monitor — 9 Services | Vultyr</title>
-    <meta name="description" content="Monitor the status of 9 Services in communication. Real-time outage alerts for Discord, LiveKit, Matrix, Signal, and more.">
+    <title>Communication Status Monitor — 10 Services | Vultyr</title>
+    <meta name="description" content="Monitor the status of 10 Services in communication. Real-time outage alerts for Dialpad, Discord, Front, LiveKit, and more.">
     <meta name="theme-color" content="#000000">
-    <meta property="og:title" content="Communication Status Monitor — 9 Services | Vultyr">
-    <meta property="og:description" content="Monitor the status of 9 Services in communication. Real-time outage alerts for Discord, LiveKit, Matrix, Signal, and more.">
+    <meta property="og:title" content="Communication Status Monitor — 10 Services | Vultyr">
+    <meta property="og:description" content="Monitor the status of 10 Services in communication. Real-time outage alerts for Dialpad, Discord, Front, LiveKit, and more.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
     <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
     <meta property="og:url" content="https://vultyr.app/de/categories/communication.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="de_DE">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Communication Status Monitor — 9 Services | Vultyr">
-    <meta name="twitter:description" content="Monitor the status of 9 Services in communication. Real-time outage alerts for Discord, LiveKit, Matrix, Signal, and more.">
+    <meta name="twitter:title" content="Communication Status Monitor — 10 Services | Vultyr">
+    <meta name="twitter:description" content="Monitor the status of 10 Services in communication. Real-time outage alerts for Dialpad, Discord, Front, LiveKit, and more.">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/de/categories/communication.html">
     <link rel="alternate" hreflang="en" href="https://vultyr.app/categories/communication.html">
@@ -76,59 +76,65 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Communication Status Monitors",
-  "numberOfItems": 9,
+  "numberOfItems": 10,
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
+      "name": "Dialpad",
+      "url": "https://vultyr.app/de/status/dialpad.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
       "name": "Discord",
       "url": "https://vultyr.app/de/status/discord.html"
     },
     {
       "@type": "ListItem",
-      "position": 2,
+      "position": 3,
+      "name": "Front",
+      "url": "https://vultyr.app/de/status/front.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
       "name": "LiveKit",
       "url": "https://vultyr.app/de/status/livekit.html"
     },
     {
       "@type": "ListItem",
-      "position": 3,
+      "position": 5,
       "name": "Matrix",
       "url": "https://vultyr.app/de/status/matrix.html"
     },
     {
       "@type": "ListItem",
-      "position": 4,
-      "name": "Signal",
-      "url": "https://vultyr.app/de/status/signal.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
+      "position": 6,
       "name": "Slack",
       "url": "https://vultyr.app/de/status/slack.html"
     },
     {
       "@type": "ListItem",
-      "position": 6,
+      "position": 7,
       "name": "Twilio",
       "url": "https://vultyr.app/de/status/twilio.html"
     },
     {
       "@type": "ListItem",
-      "position": 7,
+      "position": 8,
       "name": "Vonage",
       "url": "https://vultyr.app/de/status/vonage.html"
     },
     {
       "@type": "ListItem",
-      "position": 8,
+      "position": 9,
       "name": "Webex",
       "url": "https://vultyr.app/de/status/webex.html"
     },
     {
       "@type": "ListItem",
-      "position": 9,
+      "position": 10,
       "name": "Zoom",
       "url": "https://vultyr.app/de/status/zoom.html"
     }
@@ -191,12 +197,20 @@
             <div class="cat-icon-box"><svg class="cat-icon" width="36" height="36" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg></div>
             <h1>Communication</h1>
         </div>
-        <p class="cat-subtitle"><span class="pulse-dot" aria-hidden="true"></span>9 Services monitored by Vultyr</p>
+        <p class="cat-subtitle"><span class="pulse-dot" aria-hidden="true"></span>10 Services monitored by Vultyr</p>
 
         <nav class="services-grid" aria-label="Communication services">
+            <a class="service-card" href="/de/status/dialpad.html">
+                <img src="/assets/favicons/www.dialpad.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
+                <span>Dialpad</span>
+            </a>
             <a class="service-card" href="/de/status/discord.html">
                 <img src="/assets/favicons/discord.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Discord</span>
+            </a>
+            <a class="service-card" href="/de/status/front.html">
+                <img src="/assets/favicons/front.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
+                <span>Front</span>
             </a>
             <a class="service-card" href="/de/status/livekit.html">
                 <img src="/assets/favicons/livekit.io-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
@@ -205,10 +219,6 @@
             <a class="service-card" href="/de/status/matrix.html">
                 <img src="/assets/favicons/matrix.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Matrix</span>
-            </a>
-            <a class="service-card" href="/de/status/signal.html">
-                <img src="/assets/favicons/signal.org-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
-                <span>Signal</span>
             </a>
             <a class="service-card" href="/de/status/slack.html">
                 <img src="/assets/favicons/slack.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
@@ -254,7 +264,7 @@
         </nav>
 
         <div class="cta">
-            <h2>Monitor all 9 Services instantly</h2>
+            <h2>Monitor all 10 Services instantly</h2>
             <p>Get real-time outage alerts on all your Apple devices. Free.</p>
             <a href="https://apps.apple.com/us/app/vultyr/id6761264004" aria-label="Download Vultyr on the App Store">Download Vultyr</a>
         </div>

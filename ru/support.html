@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-Tizzz7j6yioOh5B+YVW8ZvCbVSr5pzKQ2PF+iAlH3Kg='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-yjoz1BpR9qqfP/dFoqIlZyh/P+wgd1JsrM1IvQJZ1ug='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -69,10 +69,18 @@
     },
     {
       "@type": "Question",
-      "name": "Почему у некоторых сервисов отмечено «Только ссылка»?",
+      "name": "Работает ли vultyr с Siri и Командами?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "У некоторых сервисов нет публичного API статуса. Для них vultyr даёт прямую ссылку на официальную страницу статуса. Сервисы только-со-ссылкой по умолчанию скрыты, но их можно показать в настройках."
+        "text": "Да. Встроенные App Intents позволяют сказать «Hey Siri, отключи GitHub на 2 часа», «проверь статус Stripe» или «покажи текущие проблемы», а те же действия можно добавить в приложение Команды. Есть и Focus Filter — режим «vultyr Focus» автоматически заглушает неважные сервисы."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Есть ли виджеты и Live Activities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "На iOS — виджеты на экране «Домой» и экране блокировки (по одному сервису и сводка), плюс виджет в Пункте управления. Активные сбои закрепляются в Dynamic Island как Live Activities. На watchOS — осложнения для всех циферблатов с поддержкой Smart Stack: нужный сервис всплывает, когда что-то упало."
       }
     },
     {
@@ -96,7 +104,7 @@
       "name": "Какие есть темы оформления?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "12 тем: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith и HAL. Темы синхронизируются между всеми устройствами автоматически."
+        "text": "12 тем: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith и HAL. Standard и три ретро-темы (Terminal, Amber, Blue) включены. Fossil, Monolith, HAL и остальные открываются опциональными донатами через IAP ($0.99 / $4.99 / $9.99) — это же поддерживает разработку. Темы синхронизируются между всеми устройствами автоматически."
       }
     },
     {
@@ -104,7 +112,7 @@
       "name": "Можно ли отключить уведомления о известном инциденте?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Да. При просмотре сервиса с активным инцидентом вы можете отключить уведомления на заданный период, чтобы не получать повторные оповещения."
+        "text": "Да. При просмотре сервиса с активным инцидентом вы можете отключить уведомления на заданный период, чтобы не получать повторные оповещения. Также можно отключить голосом — «Hey Siri, отключи GitHub на 2 часа» — или через приложение Команды."
       }
     },
     {
@@ -112,7 +120,7 @@
       "name": "Какие платформы поддерживаются?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "iPhone, iPad, Mac (с приложением в строке меню), Apple Watch (с осложнениями), Apple TV и Apple Vision Pro. Приложение полностью бесплатно на всех платформах."
+        "text": "iPhone и iPad (с виджетами и Live Activities), Mac (с приложением в строке меню и полным окном), Apple Watch (с осложнениями и Smart Stack), Apple TV и Apple Vision Pro. Приложение можно скачать бесплатно на любой платформе."
       }
     },
     {
@@ -188,8 +196,12 @@
         <p>Когда Mac обнаруживает изменение статуса, он записывает лёгкий сигнал в iCloud Key-Value Store. Другие ваши устройства подхватывают изменение и выполняют свою локальную проверку. Никаких ключей, токенов и настроек — просто включите «Уведомления между устройствами» в настройках на любом устройстве. Держите приложение Mac запущенным для мониторинга в реальном времени.</p>
     </div>
     <div class="faq">
-        <h3>Почему у некоторых сервисов отмечено «Только ссылка»?</h3>
-        <p>У некоторых сервисов нет публичного API статуса. Для них vultyr даёт прямую ссылку на официальную страницу статуса. Сервисы только-со-ссылкой по умолчанию скрыты, но их можно показать в настройках.</p>
+        <h3>Работает ли vultyr с Siri и Командами?</h3>
+        <p>Да. Встроенные App Intents позволяют сказать «Hey Siri, отключи GitHub на 2 часа», «проверь статус Stripe» или «покажи текущие проблемы», а те же действия можно добавить в приложение Команды. Есть и Focus Filter — режим «vultyr Focus» автоматически заглушает неважные сервисы.</p>
+    </div>
+    <div class="faq">
+        <h3>Есть ли виджеты и Live Activities?</h3>
+        <p>На iOS — виджеты на экране «Домой» и экране блокировки (по одному сервису и сводка), плюс виджет в Пункте управления. Активные сбои закрепляются в Dynamic Island как Live Activities. На watchOS — осложнения для всех циферблатов с поддержкой Smart Stack: нужный сервис всплывает, когда что-то упало.</p>
     </div>
     <div class="faq">
         <h3>Собирает ли приложение vultyr мои данные?</h3>
@@ -201,15 +213,15 @@
     </div>
     <div class="faq">
         <h3>Какие есть темы оформления?</h3>
-        <p>12 тем: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith и HAL. Темы синхронизируются между всеми устройствами автоматически.</p>
+        <p>12 тем: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith и HAL. Standard и три ретро-темы (Terminal, Amber, Blue) включены. Fossil, Monolith, HAL и остальные открываются опциональными донатами через IAP ($0.99 / $4.99 / $9.99) — это же поддерживает разработку. Темы синхронизируются между всеми устройствами автоматически.</p>
     </div>
     <div class="faq">
         <h3>Можно ли отключить уведомления о известном инциденте?</h3>
-        <p>Да. При просмотре сервиса с активным инцидентом вы можете отключить уведомления на заданный период, чтобы не получать повторные оповещения.</p>
+        <p>Да. При просмотре сервиса с активным инцидентом вы можете отключить уведомления на заданный период, чтобы не получать повторные оповещения. Также можно отключить голосом — «Hey Siri, отключи GitHub на 2 часа» — или через приложение Команды.</p>
     </div>
     <div class="faq">
         <h3>Какие платформы поддерживаются?</h3>
-        <p>iPhone, iPad, Mac (с приложением в строке меню), Apple Watch (с осложнениями), Apple TV и Apple Vision Pro. Приложение полностью бесплатно на всех платформах.</p>
+        <p>iPhone и iPad (с виджетами и Live Activities), Mac (с приложением в строке меню и полным окном), Apple Watch (с осложнениями и Smart Stack), Apple TV и Apple Vision Pro. Приложение можно скачать бесплатно на любой платформе.</p>
     </div>
     <div class="faq">
         <h3>Можно ли запросить добавление нового сервиса?</h3>
