@@ -32,7 +32,7 @@ APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260417e"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
-ASSET_VERSION = "20260417f"
+ASSET_VERSION = "20260419a"
 # Bump when icon-256.png changes so CDN edges pick up the new asset.
 ICON_VERSION = "20260417e"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
@@ -83,14 +83,6 @@ LOCALE_NATIVE_NAMES = {
     "zh-Hant": "\u7e41\u9ad4\u4e2d\u6587",
 }
 
-# Short code shown on the closed topbar language dropdown.
-LOCALE_SHORT_CODES = {
-    "en": "EN", "da": "DA", "de": "DE", "es": "ES", "fr": "FR",
-    "it": "IT", "ja": "JA", "ko": "KO", "nb": "NB", "nl": "NL",
-    "pt-BR": "PT", "ru": "RU", "sv": "SV", "tr": "TR", "vi": "VI",
-    "zh-Hans": "\u7b80", "zh-Hant": "\u7e41",
-}
-
 ALLOWED_URL_SCHEMES = {"https", "mailto"}
 
 GA_SNIPPET = f"""    <!-- Google tag (gtag.js) — cookieless, anonymized -->
@@ -112,7 +104,6 @@ STRINGS = {
         "nav_services": "services",
         "nav_support": "support",
         "nav_download": "Download",
-        "lang_switch_aria": "Language",
         "footer_nav_aria": "Footer navigation",
         "footer_home": "Home",
         "footer_services": "Services",
@@ -306,7 +297,6 @@ STRINGS = {
         "nav_services": "\u0441\u0435\u0440\u0432\u0438\u0441\u044b",
         "nav_support": "\u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430",
         "nav_download": "\u0421\u043a\u0430\u0447\u0430\u0442\u044c",
-        "lang_switch_aria": "\u042f\u0437\u044b\u043a",
         "footer_nav_aria": "\u041d\u0430\u0432\u0438\u0433\u0430\u0446\u0438\u044f \u043f\u043e\u0434\u0432\u0430\u043b\u0430",
         "footer_home": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f",
         "footer_services": "\u0421\u0435\u0440\u0432\u0438\u0441\u044b",
@@ -667,25 +657,9 @@ def head_common(script_hashes=()):
     ])
 
 
-def topbar_html(locale, alt_urls):
-    """Top navigation. Includes a compact language dropdown that links to the
-    equivalent page in every supported locale; falls back to each locale's home
-    if a mapping for the current page isn't present."""
-    items = []
-    for loc in LOCALES:
-        href = alt_urls.get(loc, home_url_path(loc))
-        native = LOCALE_NATIVE_NAMES[loc]
-        short = LOCALE_SHORT_CODES[loc]
-        attrs = ' aria-current="page"' if loc == locale else ""
-        items.append(
-            f'                    <a href="{href}" lang="{loc}" data-locale="{loc}" role="menuitem"{attrs}>'
-            f'<span class="lang-native">{e(native)}</span>'
-            f'<span class="lang-code" aria-hidden="true">{e(short)}</span>'
-            f'</a>'
-        )
-    items_html = "\n".join(items)
-    lang_aria = e(t(locale, 'lang_switch_aria'))
-    current_short = LOCALE_SHORT_CODES[locale]
+def topbar_html(locale):
+    """Top navigation. Language selection lives in the bottom languages
+    section, not here."""
     return f"""    <nav class="topbar" aria-label="{e(t(locale, 'nav_primary_aria'))}">
         <div class="topbar-inner">
             <a href="{home_url_path(locale)}" class="topbar-brand" aria-label="{e(t(locale, 'topbar_brand_aria'))}">
@@ -696,15 +670,6 @@ def topbar_html(locale, alt_urls):
                 <a href="{services_path(locale)}">{e(t(locale, 'nav_services'))}</a>
                 <a href="{support_path(locale)}">{e(t(locale, 'nav_support'))}</a>
                 <a href="{APP_STORE_URL}" target="_blank" rel="noopener noreferrer" class="topbar-cta">{e(t(locale, 'nav_download'))}</a>
-                <details class="lang-menu" data-lang-menu>
-                    <summary class="lang-summary" aria-label="{lang_aria}" aria-haspopup="menu">
-                        <span class="lang-summary-code">{e(current_short)}</span>
-                        <span class="lang-summary-caret" aria-hidden="true">\u25be</span>
-                    </summary>
-                    <div class="lang-menu-panel" role="menu" aria-label="{lang_aria}">
-{items_html}
-                    </div>
-                </details>
             </div>
         </div>
     </nav>"""
@@ -964,7 +929,7 @@ def generate_services_page(data, favicon, locale):
 </head>
 <body>
     <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
-{topbar_html(locale, alt_urls)}
+{topbar_html(locale)}
     <main id="main">
     <div class="header">
         <h1>{e(t(locale, 'svcs_h1_lead'))} <span class="highlight-orange">{e(t(locale, 'svcs_h1_highlight'))}</span></h1>
@@ -1128,7 +1093,7 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon,
 </head>
 <body>
     <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
-{topbar_html(locale, alt_urls)}
+{topbar_html(locale)}
     <main id="main">
     <div class="container">
 {breadcrumb_html}
@@ -1303,7 +1268,7 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon, l
 </head>
 <body>
     <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
-{topbar_html(locale, alt_urls)}
+{topbar_html(locale)}
     <main id="main">
     <div class="container">
         <nav class="breadcrumb" aria-label="{e(t(locale, 'breadcrumb_aria'))}">
@@ -1435,7 +1400,7 @@ def generate_home_page(data, locale):
 </head>
 <body>
     <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
-{topbar_html(locale, alt_urls)}
+{topbar_html(locale)}
 
     <main id="main">
     <header class="hero">
@@ -1570,7 +1535,7 @@ def generate_404(data, favicon, locale):
 </head>
 <body>
     <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
-{topbar_html(locale, alt_urls)}
+{topbar_html(locale)}
     <main id="main" class="error-main">
         <p class="error-code" aria-hidden="true">404</p>
         <h1 class="error-title">{e(t(locale, 'err_heading'))}</h1>
@@ -1629,7 +1594,7 @@ def _docs_page(locale, page_key, alt_urls, title, description, body_html, extra_
 </head>
 <body>
     <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
-{topbar_html(locale, alt_urls)}
+{topbar_html(locale)}
     <main id="main" class="docs">
 {body_html}
     </main>
@@ -1719,7 +1684,7 @@ def generate_support_page(locale):
 </head>
 <body>
     <a href="#main" class="sr-only">{e(t(locale, 'skip_to_main'))}</a>
-{topbar_html(locale, alt_urls)}
+{topbar_html(locale)}
     <main id="main" class="docs">
 {body_html}
     </main>
