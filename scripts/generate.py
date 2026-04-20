@@ -40,9 +40,11 @@ OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
 THEMES_COUNT = 12
 APP_LANGUAGE_COUNT = 17
 
+# Ordered alphabetically by LOCALE_NATIVE_NAMES value (what users see in the
+# language picker): Latin-script names A-Z, then Cyrillic, then CJK by codepoint.
 LOCALES = (
-    "en", "da", "de", "es", "fr", "it", "ja", "ko", "nb", "nl",
-    "pt-BR", "ru", "sv", "tr", "vi", "zh-Hans", "zh-Hant",
+    "da", "de", "en", "es", "fr", "it", "nl", "nb", "pt-BR", "sv",
+    "vi", "tr", "ru", "ja", "zh-Hans", "zh-Hant", "ko",
 )
 DEFAULT_LOCALE = "en"
 
