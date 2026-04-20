@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-MSnEG5LY0PqOkwFxgMhgSVu/Bx/zO3Xp8HCBdQREcKo='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-x3cfm0ytAiQru8OSmWe/jD6k2fHc312gDCY6E0cSt8E='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
     <script src="/assets/js/locale-detect.js?v=20260419a"></script>
     <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
-    <title>Support</title>
-    <meta name="description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <title>サポート</title>
+    <meta name="description" content="iPhone、iPad、Mac、Apple Watch、Apple TV、Apple Vision Pro向けサービスステータスモニター Vultyr のヘルプ。よくある質問、お問い合わせ、トラブルシューティング。">
     <meta name="theme-color" content="#000000">
-    <meta property="og:title" content="Support">
-    <meta property="og:description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta property="og:title" content="サポート">
+    <meta property="og:description" content="iPhone、iPad、Mac、Apple Watch、Apple TV、Apple Vision Pro向けサービスステータスモニター Vultyr のヘルプ。よくある質問、お問い合わせ、トラブルシューティング。">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
+    <meta property="og:image:alt" content="Vultyrアプリアイコン — サービスステータスモニター">
     <meta property="og:url" content="https://vultyr.app/ja/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Support">
-    <meta name="twitter:description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta name="twitter:title" content="サポート">
+    <meta name="twitter:description" content="iPhone、iPad、Mac、Apple Watch、Apple TV、Apple Vision Pro向けサービスステータスモニター Vultyr のヘルプ。よくある質問、お問い合わせ、トラブルシューティング。">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/ja/support.html">
     <link rel="alternate" hreflang="en" href="https://vultyr.app/support.html">
@@ -53,82 +53,90 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How often does vultyr check service status?",
+      "name": "vultyrはどのくらいの頻度でサービスのステータスを確認しますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions."
+        "text": "Macでは、電源接続時に最短60秒ごと。iPhoneでは5分、10分、または15分ごと(設定可能)に加え、条件が許せば定期的にバックグラウンドチェックを実行します。Apple Watchでは15分ごと、Apple TVでは5分ごと。ポーリングはバッテリー残量、電源状態、温度条件に応じて自動で調整されます。"
       }
     },
     {
       "@type": "Question",
-      "name": "How do Cross-Device Alerts work?",
+      "name": "クロスデバイスアラートはどのように動作しますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "When your Mac detects a status change, it writes a lightweight signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup — just enable \"Cross-Device Alerts\" in settings on any device. Keep the Mac app running for real-time monitoring."
+        "text": "Macアプリがハブです。メニューバーまたはフルウィンドウで起動したままにしておけば、60秒ごとにポーリングします。ステータスの変化を検出すると、軽量なシグナルをiCloud Key-Value Storeに書き込み、iPhone、iPad、Watch、Apple TV、Vision Proがその変化を受け取ってそれぞれローカルでチェックを実行します。鍵もトークンもセットアップも不要 — どのデバイスの設定でも「クロスデバイスアラート」を有効にするだけです。Macをハブにしない場合、アラートはiOSのバックグラウンド実行に依存するため遅延または欠落します。"
       }
     },
     {
       "@type": "Question",
-      "name": "Does vultyr work with Siri and Shortcuts?",
+      "name": "確実なアラートのためにMacアプリは必要ですか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Built-in App Intents let you say “Hey Siri, mute GitHub for 2 hours,” “check Stripe status,” or “show current issues,” and you can wire those same actions into the Shortcuts app. There's also a Focus Filter so a “vultyr Focus” mode can quiet non-critical services automatically."
+        "text": "はい — 強くお勧めします。iOSはバックグラウンド実行を制限するため、iPhoneとiPadは5〜15分ごと(設定可能)にしかチェックできず、バッテリー残量の低下、低電力モード、通信状況の悪化でさらに遅延することがあります。Macアプリは連続的にポーリングし(電源接続時は60秒ごと)、iCloud経由で他のデバイスにステータスの変化をブロードキャストします。VultyrをMacで動かしていない場合、iOS、watchOS、tvOSのアラートは動作しますが大幅に遅延したり欠落したりする可能性があります。リアルタイム監視のためにはMacアプリを起動したままにしておいてください — メニューバーに小さく常駐し、これがVultyr本来の使い方です。"
       }
     },
     {
       "@type": "Question",
-      "name": "Are there widgets and Live Activities?",
+      "name": "vultyrはSiriやShortcutsと連携しますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On iOS, there are Home Screen and Lock Screen widgets (single-service and status summary) plus a Control Center widget. Active outages pin to the Dynamic Island as Live Activities. On watchOS, complications are available for all watch faces, with Smart Stack relevance so the right service surfaces when something is down."
+        "text": "はい。ビルトインのApp Intentsによって、「Hey Siri、GitHubを2時間ミュート」「Stripeのステータスをチェック」「現在の問題を表示」と話しかけられます。同じ操作をShortcutsアプリにも組み込めます。Focus Filterもあり、「vultyr Focus」モードは重要でないサービスを自動で静かにします。"
       }
     },
     {
       "@type": "Question",
-      "name": "Does the vultyr app collect my data?",
+      "name": "ウィジェットやLive Activitiesはありますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts — see the Privacy Policy for details."
+        "text": "iOSにはホーム画面とロック画面のウィジェット(単一サービスおよびステータスサマリー)があり、Control Centerウィジェットも備えています。発生中の障害はLive ActivitiesとしてDynamic Islandに表示されます。watchOSではすべての文字盤でコンプリケーションが利用可能で、Smart Stack対応により必要なサービスが障害時に自動で表示されます。"
       }
     },
     {
       "@type": "Question",
-      "name": "How do I sync my services across devices?",
+      "name": "vultyrアプリは私のデータを収集しますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store."
+        "text": "いいえ。アプリにはアカウントもサーバーもアプリ内トラッキングもアプリ内分析もありません。監視中のサービスはすべてお使いのデバイスに留まります。注意: このウェブサイト(vultyr.app)は集計訪問者数のためにCookieを使用しないGoogle Analyticsを利用しています — 詳細はプライバシーポリシーをご覧ください。"
       }
     },
     {
       "@type": "Question",
-      "name": "What are the theme options?",
+      "name": "デバイス間でサービスを同期するにはどうすればよいですか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Standard and the three retro themes (Terminal, Amber, Blue) are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs ($0.99 / $4.99 / $9.99), which also helps fund development. Themes sync across all your devices automatically."
+        "text": "監視中のサービスはiCloud経由で自動的に同期されます。テーマや設定もiCloud Key-Value Store経由ですべてのAppleデバイスで同期されます。"
       }
     },
     {
       "@type": "Question",
-      "name": "Can I mute notifications for a known incident?",
+      "name": "テーマの選択肢は何がありますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about. You can also mute by voice — “Hey Siri, mute GitHub for 2 hours” — or from the Shortcuts app."
+        "text": "12種類のテーマ: Standard、Terminal、Amber、Blue、Neon、Dracula、Nord、Solarized、Catppuccin、Fossil、Monolith、HAL。Standardと3つのレトロテーマ(Terminal、Amber、Blue)は同梱されています。Fossil、Monolith、HALなどはオプションのチップジャーIAP(0.99ドル / 4.99ドル / 9.99ドル)で解放され、これが開発支援にもなります。テーマはすべてのデバイスで自動的に同期されます。"
       }
     },
     {
       "@type": "Question",
-      "name": "What platforms are supported?",
+      "name": "既知のインシデントの通知をミュートできますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "iPhone and iPad (with widgets and Live Activities), Mac (with a menu bar app plus full window), Apple Watch (with complications and Smart Stack), Apple TV, and Apple Vision Pro. The app is free to download on every platform."
+        "text": "はい。発生中のインシデントがあるサービスを表示しているときに、一定期間通知をミュートできるので、すでに知っている事象について繰り返しアラートを受け取ることはありません。音声でもミュートできます — 「Hey Siri、GitHubを2時間ミュート」 — Shortcutsアプリからも可能です。"
       }
     },
     {
       "@type": "Question",
-      "name": "Can I request a new service?",
+      "name": "サポートされているプラットフォームは何ですか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! Email support@vultyr.app with the service name and its status page URL."
+        "text": "iPhoneとiPad(ウィジェットとLive Activities対応)、Mac(メニューバーアプリとフルウィンドウ)、Apple Watch(コンプリケーションとSmart Stack対応)、Apple TV、Apple Vision Pro。アプリはすべてのプラットフォームで無料でダウンロードできます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "新しいサービスをリクエストできますか?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい! サービス名とそのステータスページのURLを添えて support@vultyr.app までメールをお送りください。"
       }
     }
   ]
@@ -139,78 +147,82 @@
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
 <body>
-    <a href="#main" class="sr-only">Skip to main content</a>
-    <nav class="topbar" aria-label="Primary">
+    <a href="#main" class="sr-only">メインコンテンツへスキップ</a>
+    <nav class="topbar" aria-label="メイン">
         <div class="topbar-inner">
-            <a href="/ja/" class="topbar-brand" aria-label="Vultyr home">
+            <a href="/ja/" class="topbar-brand" aria-label="Vultyrホーム">
                 <img src="/assets/icon-256.png?v=20260417e" alt="" width="24" height="24" decoding="async">
                 <span>vultyr</span>
             </a>
             <div class="topbar-nav">
-                <a href="/ja/services.html">services</a>
-                <a href="/ja/support.html">support</a>
-                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Download</a>
+                <a href="/ja/services.html">サービス</a>
+                <a href="/ja/support.html">サポート</a>
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">ダウンロード</a>
             </div>
         </div>
     </nav>
     <main id="main" class="docs">
-    <h1>Support</h1>
+    <h1>サポート</h1>
 
-    <h2>Contact</h2>
-    <p>For bug reports, feature requests, or questions:<br>
+    <h2>お問い合わせ</h2>
+    <p>バグ報告、機能リクエスト、ご質問はこちらまで:<br>
     <a href="mailto:support@vultyr.app">support@vultyr.app</a></p>
 
-    <h2>FAQ</h2>
+    <h2>よくある質問</h2>
 
     <div class="faq">
-        <h3>How often does vultyr check service status?</h3>
-        <p>On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions.</p>
+        <h3>vultyrはどのくらいの頻度でサービスのステータスを確認しますか?</h3>
+        <p>Macでは、電源接続時に最短60秒ごと。iPhoneでは5分、10分、または15分ごと(設定可能)に加え、条件が許せば定期的にバックグラウンドチェックを実行します。Apple Watchでは15分ごと、Apple TVでは5分ごと。ポーリングはバッテリー残量、電源状態、温度条件に応じて自動で調整されます。</p>
     </div>
     <div class="faq">
-        <h3>How do Cross-Device Alerts work?</h3>
-        <p>When your Mac detects a status change, it writes a lightweight signal to iCloud Key-Value Store. Your other devices pick up the change and run their own local check. No keys, no tokens, no setup — just enable "Cross-Device Alerts" in settings on any device. Keep the Mac app running for real-time monitoring.</p>
+        <h3>クロスデバイスアラートはどのように動作しますか?</h3>
+        <p>Macアプリがハブです。メニューバーまたはフルウィンドウで起動したままにしておけば、60秒ごとにポーリングします。ステータスの変化を検出すると、軽量なシグナルをiCloud Key-Value Storeに書き込み、iPhone、iPad、Watch、Apple TV、Vision Proがその変化を受け取ってそれぞれローカルでチェックを実行します。鍵もトークンもセットアップも不要 — どのデバイスの設定でも「クロスデバイスアラート」を有効にするだけです。Macをハブにしない場合、アラートはiOSのバックグラウンド実行に依存するため遅延または欠落します。</p>
     </div>
     <div class="faq">
-        <h3>Does vultyr work with Siri and Shortcuts?</h3>
-        <p>Yes. Built-in App Intents let you say “Hey Siri, mute GitHub for 2 hours,” “check Stripe status,” or “show current issues,” and you can wire those same actions into the Shortcuts app. There's also a Focus Filter so a “vultyr Focus” mode can quiet non-critical services automatically.</p>
+        <h3>確実なアラートのためにMacアプリは必要ですか?</h3>
+        <p>はい — 強くお勧めします。iOSはバックグラウンド実行を制限するため、iPhoneとiPadは5〜15分ごと(設定可能)にしかチェックできず、バッテリー残量の低下、低電力モード、通信状況の悪化でさらに遅延することがあります。Macアプリは連続的にポーリングし(電源接続時は60秒ごと)、iCloud経由で他のデバイスにステータスの変化をブロードキャストします。VultyrをMacで動かしていない場合、iOS、watchOS、tvOSのアラートは動作しますが大幅に遅延したり欠落したりする可能性があります。リアルタイム監視のためにはMacアプリを起動したままにしておいてください — メニューバーに小さく常駐し、これがVultyr本来の使い方です。</p>
     </div>
     <div class="faq">
-        <h3>Are there widgets and Live Activities?</h3>
-        <p>On iOS, there are Home Screen and Lock Screen widgets (single-service and status summary) plus a Control Center widget. Active outages pin to the Dynamic Island as Live Activities. On watchOS, complications are available for all watch faces, with Smart Stack relevance so the right service surfaces when something is down.</p>
+        <h3>vultyrはSiriやShortcutsと連携しますか?</h3>
+        <p>はい。ビルトインのApp Intentsによって、「Hey Siri、GitHubを2時間ミュート」「Stripeのステータスをチェック」「現在の問題を表示」と話しかけられます。同じ操作をShortcutsアプリにも組み込めます。Focus Filterもあり、「vultyr Focus」モードは重要でないサービスを自動で静かにします。</p>
     </div>
     <div class="faq">
-        <h3>Does the vultyr app collect my data?</h3>
-        <p>No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts — see the <a href="/privacy.html">Privacy Policy</a> for details.</p>
+        <h3>ウィジェットやLive Activitiesはありますか?</h3>
+        <p>iOSにはホーム画面とロック画面のウィジェット(単一サービスおよびステータスサマリー)があり、Control Centerウィジェットも備えています。発生中の障害はLive ActivitiesとしてDynamic Islandに表示されます。watchOSではすべての文字盤でコンプリケーションが利用可能で、Smart Stack対応により必要なサービスが障害時に自動で表示されます。</p>
     </div>
     <div class="faq">
-        <h3>How do I sync my services across devices?</h3>
-        <p>Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store.</p>
+        <h3>vultyrアプリは私のデータを収集しますか?</h3>
+        <p>いいえ。アプリにはアカウントもサーバーもアプリ内トラッキングもアプリ内分析もありません。監視中のサービスはすべてお使いのデバイスに留まります。注意: このウェブサイト(vultyr.app)は集計訪問者数のためにCookieを使用しないGoogle Analyticsを利用しています — 詳細は<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
     </div>
     <div class="faq">
-        <h3>What are the theme options?</h3>
-        <p>12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Standard and the three retro themes (Terminal, Amber, Blue) are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs ($0.99 / $4.99 / $9.99), which also helps fund development. Themes sync across all your devices automatically.</p>
+        <h3>デバイス間でサービスを同期するにはどうすればよいですか?</h3>
+        <p>監視中のサービスはiCloud経由で自動的に同期されます。テーマや設定もiCloud Key-Value Store経由ですべてのAppleデバイスで同期されます。</p>
     </div>
     <div class="faq">
-        <h3>Can I mute notifications for a known incident?</h3>
-        <p>Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about. You can also mute by voice — “Hey Siri, mute GitHub for 2 hours” — or from the Shortcuts app.</p>
+        <h3>テーマの選択肢は何がありますか?</h3>
+        <p>12種類のテーマ: Standard、Terminal、Amber、Blue、Neon、Dracula、Nord、Solarized、Catppuccin、Fossil、Monolith、HAL。Standardと3つのレトロテーマ(Terminal、Amber、Blue)は同梱されています。Fossil、Monolith、HALなどはオプションのチップジャーIAP(0.99ドル / 4.99ドル / 9.99ドル)で解放され、これが開発支援にもなります。テーマはすべてのデバイスで自動的に同期されます。</p>
     </div>
     <div class="faq">
-        <h3>What platforms are supported?</h3>
-        <p>iPhone and iPad (with widgets and Live Activities), Mac (with a menu bar app plus full window), Apple Watch (with complications and Smart Stack), Apple TV, and Apple Vision Pro. The app is free to download on every platform.</p>
+        <h3>既知のインシデントの通知をミュートできますか?</h3>
+        <p>はい。発生中のインシデントがあるサービスを表示しているときに、一定期間通知をミュートできるので、すでに知っている事象について繰り返しアラートを受け取ることはありません。音声でもミュートできます — 「Hey Siri、GitHubを2時間ミュート」 — Shortcutsアプリからも可能です。</p>
     </div>
     <div class="faq">
-        <h3>Can I request a new service?</h3>
-        <p>Yes! Email <a href="mailto:support@vultyr.app">support@vultyr.app</a> with the service name and its status page URL.</p>
+        <h3>サポートされているプラットフォームは何ですか?</h3>
+        <p>iPhoneとiPad(ウィジェットとLive Activities対応)、Mac(メニューバーアプリとフルウィンドウ)、Apple Watch(コンプリケーションとSmart Stack対応)、Apple TV、Apple Vision Pro。アプリはすべてのプラットフォームで無料でダウンロードできます。</p>
+    </div>
+    <div class="faq">
+        <h3>新しいサービスをリクエストできますか?</h3>
+        <p>はい! サービス名とそのステータスページのURLを添えて <a href="mailto:support@vultyr.app">support@vultyr.app</a> までメールをお送りください。</p>
     </div>
 
     </main>
     <footer>
-        <nav aria-label="Footer navigation">
-            <a href="/ja/">Home</a>
-            <a href="/ja/services.html">Services</a>
-            <a href="/ja/privacy.html">Privacy</a>
-            <a href="/ja/support.html">Support</a>
-            <a href="mailto:support@vultyr.app">Contact</a>
+        <nav aria-label="フッターナビゲーション">
+            <a href="/ja/">ホーム</a>
+            <a href="/ja/services.html">サービス</a>
+            <a href="/ja/privacy.html">プライバシー</a>
+            <a href="/ja/support.html">サポート</a>
+            <a href="mailto:support@vultyr.app">お問い合わせ</a>
         </nav>
         <p class="copyright">© 2026 Vultyr. All rights reserved.</p>
     </footer>
