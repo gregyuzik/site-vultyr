@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-hTBCAhLqJOLiowFz1DxQWtWWuO35to0r8+1GemX40d4='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-yT+QbyLnyJSD8IpxoVjkbIxM7J3B3qtwoCGr5EygJbk='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
     <script src="/assets/js/locale-detect.js?v=20260419a"></script>
     <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
-    <title>Support</title>
-    <meta name="description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <title>Hỗ trợ</title>
+    <meta name="description" content="Nhận trợ giúp với Vultyr, trình theo dõi trạng thái dịch vụ cho iPhone, iPad, Mac, Apple Watch, Apple TV và Apple Vision Pro. Câu hỏi thường gặp, liên hệ và khắc phục sự cố.">
     <meta name="theme-color" content="#000000">
-    <meta property="og:title" content="Support">
-    <meta property="og:description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta property="og:title" content="Hỗ trợ">
+    <meta property="og:description" content="Nhận trợ giúp với Vultyr, trình theo dõi trạng thái dịch vụ cho iPhone, iPad, Mac, Apple Watch, Apple TV và Apple Vision Pro. Câu hỏi thường gặp, liên hệ và khắc phục sự cố.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
+    <meta property="og:image:alt" content="Biểu tượng ứng dụng Vultyr — Trình theo dõi trạng thái dịch vụ">
     <meta property="og:url" content="https://vultyr.app/vi/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="vi_VN">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Support">
-    <meta name="twitter:description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta name="twitter:title" content="Hỗ trợ">
+    <meta name="twitter:description" content="Nhận trợ giúp với Vultyr, trình theo dõi trạng thái dịch vụ cho iPhone, iPad, Mac, Apple Watch, Apple TV và Apple Vision Pro. Câu hỏi thường gặp, liên hệ và khắc phục sự cố.">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/vi/support.html">
     <link rel="alternate" hreflang="en" href="https://vultyr.app/support.html">
@@ -53,90 +53,90 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How often does vultyr check service status?",
+      "name": "vultyr kiểm tra trạng thái dịch vụ thường xuyên đến mức nào?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions."
+        "text": "Trên Mac: nhanh tới mỗi 60 giây khi cắm sạc. Trên iPhone: mỗi 5, 10 hoặc 15 phút (có thể cấu hình), với các kiểm tra nền định kỳ khi điều kiện cho phép. Trên Apple Watch: mỗi 15 phút. Trên Apple TV: mỗi 5 phút. Việc truy vấn tự động thích ứng theo mức pin, trạng thái nguồn và điều kiện nhiệt."
       }
     },
     {
       "@type": "Question",
-      "name": "How do Cross-Device Alerts work?",
+      "name": "Cảnh báo giữa các thiết bị hoạt động như thế nào?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Mac app is the hub. Keep it running (menu bar or full window) and it polls every 60 seconds. When a status change is detected, it writes a lightweight signal to iCloud Key-Value Store; your iPhone, iPad, Watch, Apple TV, and Vision Pro pick up the change and run their own local check. No keys, no tokens, no setup — just enable \"Cross-Device Alerts\" in settings on any device. Without a Mac acting as the hub, alerts rely on iOS background execution and will be delayed or missed."
+        "text": "Ứng dụng Mac là trung tâm. Hãy giữ nó chạy (trong thanh menu hoặc cửa sổ đầy đủ) và nó sẽ truy vấn mỗi 60 giây. Khi phát hiện thay đổi trạng thái, nó ghi một tín hiệu nhẹ vào iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV và Vision Pro của bạn sẽ nhận thay đổi và tự thực hiện kiểm tra cục bộ. Không cần khóa, không token, không phải thiết lập — chỉ cần bật “Cảnh báo giữa các thiết bị” trong cài đặt trên bất kỳ thiết bị nào. Không có Mac đóng vai trò trung tâm, cảnh báo sẽ phụ thuộc vào thực thi nền của iOS và sẽ bị trễ hoặc bỏ lỡ."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I need the Mac app for reliable alerts?",
+      "name": "Tôi có cần ứng dụng Mac để có cảnh báo đáng tin cậy không?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — we strongly recommend it. iOS limits background execution, so iPhone and iPad can only check every 5-15 minutes (configurable) and may defer further on low battery, Low Power Mode, or poor connectivity. The Mac app polls continuously (every 60 seconds when plugged in) and broadcasts status changes to your other devices via iCloud. Without a Mac running Vultyr, iOS, watchOS, and tvOS alerts still work but can be significantly delayed or missed. For real-time monitoring, keep the Mac app running — it's tiny in the menu bar and is how Vultyr is meant to be used."
+        "text": "Có — chúng tôi đặc biệt khuyến nghị. iOS giới hạn thực thi nền, nên iPhone và iPad chỉ có thể kiểm tra mỗi 5–15 phút (có thể cấu hình) và có thể bị trì hoãn thêm khi pin yếu, Chế độ tiết kiệm năng lượng hoặc kết nối kém. Ứng dụng Mac truy vấn liên tục (mỗi 60 giây khi cắm sạc) và phát các thay đổi trạng thái đến các thiết bị khác qua iCloud. Nếu không có Mac chạy Vultyr, cảnh báo trên iOS, watchOS và tvOS vẫn hoạt động nhưng có thể bị trễ đáng kể hoặc bỏ lỡ. Để theo dõi theo thời gian thực, hãy giữ ứng dụng Mac chạy — nó nhỏ gọn trong thanh menu và đó chính là cách Vultyr được thiết kế để sử dụng."
       }
     },
     {
       "@type": "Question",
-      "name": "Does vultyr work with Siri and Shortcuts?",
+      "name": "vultyr có hoạt động với Siri và Shortcuts không?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Built-in App Intents let you say “Hey Siri, mute GitHub for 2 hours,” “check Stripe status,” or “show current issues,” and you can wire those same actions into the Shortcuts app. There's also a Focus Filter so a “vultyr Focus” mode can quiet non-critical services automatically."
+        "text": "Có. App Intents tích hợp sẵn cho phép bạn nói “Hey Siri, tắt tiếng GitHub trong 2 giờ,” “kiểm tra trạng thái Stripe,” hoặc “hiển thị sự cố hiện tại,” và bạn có thể đưa những thao tác tương tự vào ứng dụng Shortcuts. Cũng có Focus Filter để chế độ “vultyr Focus” tự động làm im các dịch vụ không quan trọng."
       }
     },
     {
       "@type": "Question",
-      "name": "Are there widgets and Live Activities?",
+      "name": "Có widget và Live Activities không?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On iOS, there are Home Screen and Lock Screen widgets (single-service and status summary) plus a Control Center widget. Active outages pin to the Dynamic Island as Live Activities. On watchOS, complications are available for all watch faces, with Smart Stack relevance so the right service surfaces when something is down."
+        "text": "Trên iOS có widget cho Màn hình chính và Màn hình khóa (một dịch vụ và bản tóm tắt trạng thái) cộng với widget trong Control Center. Các sự cố đang diễn ra được ghim vào Dynamic Island dưới dạng Live Activities. Trên watchOS có complication cho tất cả các mặt đồng hồ, với độ phù hợp Smart Stack để dịch vụ đúng lúc xuất hiện khi có vấn đề."
       }
     },
     {
       "@type": "Question",
-      "name": "Does the vultyr app collect my data?",
+      "name": "Ứng dụng vultyr có thu thập dữ liệu của tôi không?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts — see the Privacy Policy for details."
+        "text": "Không. Ứng dụng không có tài khoản, không máy chủ, không theo dõi trong ứng dụng, không phân tích trong ứng dụng. Tất cả các dịch vụ bạn theo dõi vẫn ở trên thiết bị của bạn. Lưu ý: trang web này (vultyr.app) sử dụng Google Analytics không dùng cookie để đếm lượt khách truy cập tổng hợp — xem Chính sách quyền riêng tư để biết chi tiết."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I sync my services across devices?",
+      "name": "Làm cách nào để đồng bộ dịch vụ giữa các thiết bị?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store."
+        "text": "Các dịch vụ bạn theo dõi tự động đồng bộ qua iCloud. Chủ đề và cài đặt cũng đồng bộ trên tất cả thiết bị Apple của bạn qua iCloud Key-Value Store."
       }
     },
     {
       "@type": "Question",
-      "name": "What are the theme options?",
+      "name": "Có những tùy chọn chủ đề nào?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Standard and the three retro themes (Terminal, Amber, Blue) are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs ($0.99 / $4.99 / $9.99), which also helps fund development. Themes sync across all your devices automatically."
+        "text": "12 chủ đề: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith và HAL. Standard và ba chủ đề retro (Terminal, Amber, Blue) được bao gồm sẵn. Fossil, Monolith, HAL và các chủ đề còn lại được mở khóa qua IAP ủng hộ tùy chọn ($0.99 / $4.99 / $9.99), đồng thời giúp tài trợ cho việc phát triển. Chủ đề tự động đồng bộ trên tất cả thiết bị của bạn."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I mute notifications for a known incident?",
+      "name": "Tôi có thể tắt tiếng thông báo cho một sự cố đã biết không?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about. You can also mute by voice — “Hey Siri, mute GitHub for 2 hours” — or from the Shortcuts app."
+        "text": "Có. Khi xem một dịch vụ có sự cố đang diễn ra, bạn có thể tắt tiếng thông báo trong một khoảng thời gian nhất định để không bị cảnh báo lặp lại về điều đã biết. Bạn cũng có thể tắt tiếng bằng giọng nói — “Hey Siri, tắt tiếng GitHub trong 2 giờ” — hoặc từ ứng dụng Shortcuts."
       }
     },
     {
       "@type": "Question",
-      "name": "What platforms are supported?",
+      "name": "Những nền tảng nào được hỗ trợ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "iPhone and iPad (with widgets and Live Activities), Mac (with a menu bar app plus full window), Apple Watch (with complications and Smart Stack), Apple TV, and Apple Vision Pro. The app is free to download on every platform."
+        "text": "iPhone và iPad (với widget và Live Activities), Mac (với ứng dụng thanh menu cộng với cửa sổ đầy đủ), Apple Watch (với complication và Smart Stack), Apple TV và Apple Vision Pro. Ứng dụng được tải miễn phí trên mọi nền tảng."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I request a new service?",
+      "name": "Tôi có thể yêu cầu thêm một dịch vụ mới không?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! Email support@vultyr.app with the service name and its status page URL."
+        "text": "Có! Hãy gửi email tới support@vultyr.app với tên dịch vụ và URL trang trạng thái của nó."
       }
     }
   ]
@@ -147,84 +147,84 @@
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
 <body>
-    <a href="#main" class="sr-only">Skip to main content</a>
-    <nav class="topbar" aria-label="Primary">
+    <a href="#main" class="sr-only">Chuyển đến nội dung chính</a>
+    <nav class="topbar" aria-label="Chính">
         <div class="topbar-inner">
-            <a href="/vi/" class="topbar-brand" aria-label="Vultyr home">
+            <a href="/vi/" class="topbar-brand" aria-label="Trang chủ Vultyr">
                 <img src="/assets/icon-256.png?v=20260417e" alt="" width="24" height="24" decoding="async">
                 <span>vultyr</span>
             </a>
             <div class="topbar-nav">
-                <a href="/vi/services.html">services</a>
-                <a href="/vi/support.html">support</a>
-                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Download</a>
+                <a href="/vi/services.html">dịch vụ</a>
+                <a href="/vi/support.html">hỗ trợ</a>
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Tải xuống</a>
             </div>
         </div>
     </nav>
     <main id="main" class="docs">
-    <h1>Support</h1>
+    <h1>Hỗ trợ</h1>
 
-    <h2>Contact</h2>
-    <p>For bug reports, feature requests, or questions:<br>
+    <h2>Liên hệ</h2>
+    <p>Để báo lỗi, yêu cầu tính năng hoặc đặt câu hỏi:<br>
     <a href="mailto:support@vultyr.app">support@vultyr.app</a></p>
 
-    <h2>FAQ</h2>
+    <h2>Câu hỏi thường gặp</h2>
 
     <div class="faq">
-        <h3>How often does vultyr check service status?</h3>
-        <p>On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions.</p>
+        <h3>vultyr kiểm tra trạng thái dịch vụ thường xuyên đến mức nào?</h3>
+        <p>Trên Mac: nhanh tới mỗi 60 giây khi cắm sạc. Trên iPhone: mỗi 5, 10 hoặc 15 phút (có thể cấu hình), với các kiểm tra nền định kỳ khi điều kiện cho phép. Trên Apple Watch: mỗi 15 phút. Trên Apple TV: mỗi 5 phút. Việc truy vấn tự động thích ứng theo mức pin, trạng thái nguồn và điều kiện nhiệt.</p>
     </div>
     <div class="faq">
-        <h3>How do Cross-Device Alerts work?</h3>
-        <p>The Mac app is the hub. Keep it running (menu bar or full window) and it polls every 60 seconds. When a status change is detected, it writes a lightweight signal to iCloud Key-Value Store; your iPhone, iPad, Watch, Apple TV, and Vision Pro pick up the change and run their own local check. No keys, no tokens, no setup — just enable "Cross-Device Alerts" in settings on any device. Without a Mac acting as the hub, alerts rely on iOS background execution and will be delayed or missed.</p>
+        <h3>Cảnh báo giữa các thiết bị hoạt động như thế nào?</h3>
+        <p>Ứng dụng Mac là trung tâm. Hãy giữ nó chạy (trong thanh menu hoặc cửa sổ đầy đủ) và nó sẽ truy vấn mỗi 60 giây. Khi phát hiện thay đổi trạng thái, nó ghi một tín hiệu nhẹ vào iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV và Vision Pro của bạn sẽ nhận thay đổi và tự thực hiện kiểm tra cục bộ. Không cần khóa, không token, không phải thiết lập — chỉ cần bật “Cảnh báo giữa các thiết bị” trong cài đặt trên bất kỳ thiết bị nào. Không có Mac đóng vai trò trung tâm, cảnh báo sẽ phụ thuộc vào thực thi nền của iOS và sẽ bị trễ hoặc bỏ lỡ.</p>
     </div>
     <div class="faq">
-        <h3>Do I need the Mac app for reliable alerts?</h3>
-        <p>Yes — we strongly recommend it. iOS limits background execution, so iPhone and iPad can only check every 5-15 minutes (configurable) and may defer further on low battery, Low Power Mode, or poor connectivity. The Mac app polls continuously (every 60 seconds when plugged in) and broadcasts status changes to your other devices via iCloud. Without a Mac running Vultyr, iOS, watchOS, and tvOS alerts still work but can be significantly delayed or missed. For real-time monitoring, keep the Mac app running — it's tiny in the menu bar and is how Vultyr is meant to be used.</p>
+        <h3>Tôi có cần ứng dụng Mac để có cảnh báo đáng tin cậy không?</h3>
+        <p>Có — chúng tôi đặc biệt khuyến nghị. iOS giới hạn thực thi nền, nên iPhone và iPad chỉ có thể kiểm tra mỗi 5–15 phút (có thể cấu hình) và có thể bị trì hoãn thêm khi pin yếu, Chế độ tiết kiệm năng lượng hoặc kết nối kém. Ứng dụng Mac truy vấn liên tục (mỗi 60 giây khi cắm sạc) và phát các thay đổi trạng thái đến các thiết bị khác qua iCloud. Nếu không có Mac chạy Vultyr, cảnh báo trên iOS, watchOS và tvOS vẫn hoạt động nhưng có thể bị trễ đáng kể hoặc bỏ lỡ. Để theo dõi theo thời gian thực, hãy giữ ứng dụng Mac chạy — nó nhỏ gọn trong thanh menu và đó chính là cách Vultyr được thiết kế để sử dụng.</p>
     </div>
     <div class="faq">
-        <h3>Does vultyr work with Siri and Shortcuts?</h3>
-        <p>Yes. Built-in App Intents let you say “Hey Siri, mute GitHub for 2 hours,” “check Stripe status,” or “show current issues,” and you can wire those same actions into the Shortcuts app. There's also a Focus Filter so a “vultyr Focus” mode can quiet non-critical services automatically.</p>
+        <h3>vultyr có hoạt động với Siri và Shortcuts không?</h3>
+        <p>Có. App Intents tích hợp sẵn cho phép bạn nói “Hey Siri, tắt tiếng GitHub trong 2 giờ,” “kiểm tra trạng thái Stripe,” hoặc “hiển thị sự cố hiện tại,” và bạn có thể đưa những thao tác tương tự vào ứng dụng Shortcuts. Cũng có Focus Filter để chế độ “vultyr Focus” tự động làm im các dịch vụ không quan trọng.</p>
     </div>
     <div class="faq">
-        <h3>Are there widgets and Live Activities?</h3>
-        <p>On iOS, there are Home Screen and Lock Screen widgets (single-service and status summary) plus a Control Center widget. Active outages pin to the Dynamic Island as Live Activities. On watchOS, complications are available for all watch faces, with Smart Stack relevance so the right service surfaces when something is down.</p>
+        <h3>Có widget và Live Activities không?</h3>
+        <p>Trên iOS có widget cho Màn hình chính và Màn hình khóa (một dịch vụ và bản tóm tắt trạng thái) cộng với widget trong Control Center. Các sự cố đang diễn ra được ghim vào Dynamic Island dưới dạng Live Activities. Trên watchOS có complication cho tất cả các mặt đồng hồ, với độ phù hợp Smart Stack để dịch vụ đúng lúc xuất hiện khi có vấn đề.</p>
     </div>
     <div class="faq">
-        <h3>Does the vultyr app collect my data?</h3>
-        <p>No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts — see the <a href="/privacy.html">Privacy Policy</a> for details.</p>
+        <h3>Ứng dụng vultyr có thu thập dữ liệu của tôi không?</h3>
+        <p>Không. Ứng dụng không có tài khoản, không máy chủ, không theo dõi trong ứng dụng, không phân tích trong ứng dụng. Tất cả các dịch vụ bạn theo dõi vẫn ở trên thiết bị của bạn. Lưu ý: trang web này (vultyr.app) sử dụng Google Analytics không dùng cookie để đếm lượt khách truy cập tổng hợp — xem <a href="/privacy.html">Chính sách quyền riêng tư</a> để biết chi tiết.</p>
     </div>
     <div class="faq">
-        <h3>How do I sync my services across devices?</h3>
-        <p>Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store.</p>
+        <h3>Làm cách nào để đồng bộ dịch vụ giữa các thiết bị?</h3>
+        <p>Các dịch vụ bạn theo dõi tự động đồng bộ qua iCloud. Chủ đề và cài đặt cũng đồng bộ trên tất cả thiết bị Apple của bạn qua iCloud Key-Value Store.</p>
     </div>
     <div class="faq">
-        <h3>What are the theme options?</h3>
-        <p>12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Standard and the three retro themes (Terminal, Amber, Blue) are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs ($0.99 / $4.99 / $9.99), which also helps fund development. Themes sync across all your devices automatically.</p>
+        <h3>Có những tùy chọn chủ đề nào?</h3>
+        <p>12 chủ đề: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith và HAL. Standard và ba chủ đề retro (Terminal, Amber, Blue) được bao gồm sẵn. Fossil, Monolith, HAL và các chủ đề còn lại được mở khóa qua IAP ủng hộ tùy chọn ($0.99 / $4.99 / $9.99), đồng thời giúp tài trợ cho việc phát triển. Chủ đề tự động đồng bộ trên tất cả thiết bị của bạn.</p>
     </div>
     <div class="faq">
-        <h3>Can I mute notifications for a known incident?</h3>
-        <p>Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about. You can also mute by voice — “Hey Siri, mute GitHub for 2 hours” — or from the Shortcuts app.</p>
+        <h3>Tôi có thể tắt tiếng thông báo cho một sự cố đã biết không?</h3>
+        <p>Có. Khi xem một dịch vụ có sự cố đang diễn ra, bạn có thể tắt tiếng thông báo trong một khoảng thời gian nhất định để không bị cảnh báo lặp lại về điều đã biết. Bạn cũng có thể tắt tiếng bằng giọng nói — “Hey Siri, tắt tiếng GitHub trong 2 giờ” — hoặc từ ứng dụng Shortcuts.</p>
     </div>
     <div class="faq">
-        <h3>What platforms are supported?</h3>
-        <p>iPhone and iPad (with widgets and Live Activities), Mac (with a menu bar app plus full window), Apple Watch (with complications and Smart Stack), Apple TV, and Apple Vision Pro. The app is free to download on every platform.</p>
+        <h3>Những nền tảng nào được hỗ trợ?</h3>
+        <p>iPhone và iPad (với widget và Live Activities), Mac (với ứng dụng thanh menu cộng với cửa sổ đầy đủ), Apple Watch (với complication và Smart Stack), Apple TV và Apple Vision Pro. Ứng dụng được tải miễn phí trên mọi nền tảng.</p>
     </div>
     <div class="faq">
-        <h3>Can I request a new service?</h3>
-        <p>Yes! Email <a href="mailto:support@vultyr.app">support@vultyr.app</a> with the service name and its status page URL.</p>
+        <h3>Tôi có thể yêu cầu thêm một dịch vụ mới không?</h3>
+        <p>Có! Hãy gửi email tới <a href="mailto:support@vultyr.app">support@vultyr.app</a> với tên dịch vụ và URL trang trạng thái của nó.</p>
     </div>
 
     </main>
     <footer>
-        <nav aria-label="Footer navigation">
-            <a href="/vi/">Home</a>
-            <a href="/vi/services.html">Services</a>
-            <a href="/vi/privacy.html">Privacy</a>
-            <a href="/vi/support.html">Support</a>
-            <a href="mailto:support@vultyr.app">Contact</a>
+        <nav aria-label="Điều hướng chân trang">
+            <a href="/vi/">Trang chủ</a>
+            <a href="/vi/services.html">Dịch vụ</a>
+            <a href="/vi/privacy.html">Quyền riêng tư</a>
+            <a href="/vi/support.html">Hỗ trợ</a>
+            <a href="mailto:support@vultyr.app">Liên hệ</a>
         </nav>
-        <p class="copyright">© 2026 Vultyr. All rights reserved.</p>
+        <p class="copyright">© 2026 Vultyr. Bảo lưu mọi quyền.</p>
     </footer>
 </body>
 </html>

@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-hTBCAhLqJOLiowFz1DxQWtWWuO35to0r8+1GemX40d4='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-lfZ5xft5C2zTVYW8F6qIiOvixC4cAPaB7d88M7ta+VQ='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
     <script src="/assets/js/locale-detect.js?v=20260419a"></script>
     <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
     <title>Support</title>
-    <meta name="description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta name="description" content="Få hjälp med Vultyr, tjänstestatusövervakaren för iPhone, iPad, Mac, Apple Watch, Apple TV och Apple Vision Pro. Vanliga frågor, kontakt och felsökning.">
     <meta name="theme-color" content="#000000">
     <meta property="og:title" content="Support">
-    <meta property="og:description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta property="og:description" content="Få hjälp med Vultyr, tjänstestatusövervakaren för iPhone, iPad, Mac, Apple Watch, Apple TV och Apple Vision Pro. Vanliga frågor, kontakt och felsökning.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr app icon — Service Status Monitor">
+    <meta property="og:image:alt" content="Vultyr-appikon — tjänstestatusövervakare">
     <meta property="og:url" content="https://vultyr.app/sv/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="sv_SE">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Support">
-    <meta name="twitter:description" content="Get help with Vultyr, the service status monitor for iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro. FAQs, contact, and troubleshooting.">
+    <meta name="twitter:description" content="Få hjälp med Vultyr, tjänstestatusövervakaren för iPhone, iPad, Mac, Apple Watch, Apple TV och Apple Vision Pro. Vanliga frågor, kontakt och felsökning.">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/sv/support.html">
     <link rel="alternate" hreflang="en" href="https://vultyr.app/support.html">
@@ -53,90 +53,90 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How often does vultyr check service status?",
+      "name": "Hur ofta kontrollerar vultyr tjänsternas status?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions."
+        "text": "På Mac: så ofta som var 60:e sekund när den är ansluten till ström. På iPhone: var 5:e, 10:e eller 15:e minut (kan konfigureras), med periodiska bakgrundskontroller när förhållandena tillåter. På Apple Watch: var 15:e minut. På Apple TV: var 5:e minut. Avsökningen anpassas automatiskt efter batterinivå, strömförsörjning och värmeförhållanden."
       }
     },
     {
       "@type": "Question",
-      "name": "How do Cross-Device Alerts work?",
+      "name": "Hur fungerar aviseringar mellan enheter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Mac app is the hub. Keep it running (menu bar or full window) and it polls every 60 seconds. When a status change is detected, it writes a lightweight signal to iCloud Key-Value Store; your iPhone, iPad, Watch, Apple TV, and Vision Pro pick up the change and run their own local check. No keys, no tokens, no setup — just enable \"Cross-Device Alerts\" in settings on any device. Without a Mac acting as the hub, alerts rely on iOS background execution and will be delayed or missed."
+        "text": "Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den var 60:e sekund. När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning — aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas."
       }
     },
     {
       "@type": "Question",
-      "name": "Do I need the Mac app for reliable alerts?",
+      "name": "Behöver jag Mac-appen för tillförlitliga aviseringar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — we strongly recommend it. iOS limits background execution, so iPhone and iPad can only check every 5-15 minutes (configurable) and may defer further on low battery, Low Power Mode, or poor connectivity. The Mac app polls continuously (every 60 seconds when plugged in) and broadcasts status changes to your other devices via iCloud. Without a Mac running Vultyr, iOS, watchOS, and tvOS alerts still work but can be significantly delayed or missed. For real-time monitoring, keep the Mac app running — it's tiny in the menu bar and is how Vultyr is meant to be used."
+        "text": "Ja — vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker kontinuerligt (var 60:e sekund när den är ansluten till ström) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång — den är liten i menyraden och är så Vultyr är avsedd att användas."
       }
     },
     {
       "@type": "Question",
-      "name": "Does vultyr work with Siri and Shortcuts?",
+      "name": "Fungerar vultyr med Siri och Shortcuts?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Built-in App Intents let you say “Hey Siri, mute GitHub for 2 hours,” “check Stripe status,” or “show current issues,” and you can wire those same actions into the Shortcuts app. There's also a Focus Filter so a “vultyr Focus” mode can quiet non-critical services automatically."
+        "text": "Ja. Inbyggda App Intents låter dig säga ”Hey Siri, tysta GitHub i 2 timmar”, ”kolla Stripe-status” eller ”visa aktuella problem”, och du kan koppla samma åtgärder till Shortcuts-appen. Det finns även ett Focus-filter så att ett ”vultyr Focus”-läge automatiskt kan tysta icke-kritiska tjänster."
       }
     },
     {
       "@type": "Question",
-      "name": "Are there widgets and Live Activities?",
+      "name": "Finns det widgets och Live Activities?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On iOS, there are Home Screen and Lock Screen widgets (single-service and status summary) plus a Control Center widget. Active outages pin to the Dynamic Island as Live Activities. On watchOS, complications are available for all watch faces, with Smart Stack relevance so the right service surfaces when something is down."
+        "text": "På iOS finns widgets på hemskärmen och låsskärmen (enskild tjänst och statussammanfattning) plus en widget i Control Center. Aktiva driftstörningar fästs i Dynamic Island som Live Activities. På watchOS finns komplikationer för alla urtavlor, med Smart Stack-relevans så att rätt tjänst lyfts fram när något ligger nere."
       }
     },
     {
       "@type": "Question",
-      "name": "Does the vultyr app collect my data?",
+      "name": "Samlar vultyr-appen in mina data?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts — see the Privacy Policy for details."
+        "text": "Nej. Appen har inga konton, inga servrar, ingen spårning i appen och ingen analys i appen. Alla dina bevakade tjänster stannar på din enhet. Observera: denna webbplats (vultyr.app) använder cookielös Google Analytics för aggregerade besöksräkningar — se integritetspolicyn för detaljer."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I sync my services across devices?",
+      "name": "Hur synkroniserar jag mina tjänster mellan enheter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store."
+        "text": "Dina bevakade tjänster synkroniseras automatiskt via iCloud. Teman och inställningar synkroniseras också mellan alla dina Apple-enheter via iCloud Key-Value Store."
       }
     },
     {
       "@type": "Question",
-      "name": "What are the theme options?",
+      "name": "Vilka temaalternativ finns det?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Standard and the three retro themes (Terminal, Amber, Blue) are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs ($0.99 / $4.99 / $9.99), which also helps fund development. Themes sync across all your devices automatically."
+        "text": "12 teman: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith och HAL. Standard och de tre retrotemana (Terminal, Amber, Blue) ingår. Fossil, Monolith, HAL och de övriga låses upp via valfria dricksburks-IAP:er ($0.99 / $4.99 / $9.99), vilket också hjälper till att finansiera utvecklingen. Teman synkroniseras automatiskt mellan alla dina enheter."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I mute notifications for a known incident?",
+      "name": "Kan jag tysta aviseringar för en känd incident?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about. You can also mute by voice — “Hey Siri, mute GitHub for 2 hours” — or from the Shortcuts app."
+        "text": "Ja. När du visar en tjänst med en aktiv incident kan du tysta aviseringar under en viss period så att du inte upprepade gånger meddelas om något du redan känner till. Du kan också tysta med rösten — ”Hey Siri, tysta GitHub i 2 timmar” — eller från Shortcuts-appen."
       }
     },
     {
       "@type": "Question",
-      "name": "What platforms are supported?",
+      "name": "Vilka plattformar stöds?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "iPhone and iPad (with widgets and Live Activities), Mac (with a menu bar app plus full window), Apple Watch (with complications and Smart Stack), Apple TV, and Apple Vision Pro. The app is free to download on every platform."
+        "text": "iPhone och iPad (med widgets och Live Activities), Mac (med en app i menyraden plus ett fullständigt fönster), Apple Watch (med komplikationer och Smart Stack), Apple TV och Apple Vision Pro. Appen är gratis att ladda ner på varje plattform."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I request a new service?",
+      "name": "Kan jag begära en ny tjänst?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes! Email support@vultyr.app with the service name and its status page URL."
+        "text": "Ja! Mejla support@vultyr.app med tjänstens namn och URL till dess statussida."
       }
     }
   ]
@@ -147,84 +147,84 @@
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
 <body>
-    <a href="#main" class="sr-only">Skip to main content</a>
-    <nav class="topbar" aria-label="Primary">
+    <a href="#main" class="sr-only">Hoppa till huvudinnehåll</a>
+    <nav class="topbar" aria-label="Primär">
         <div class="topbar-inner">
-            <a href="/sv/" class="topbar-brand" aria-label="Vultyr home">
+            <a href="/sv/" class="topbar-brand" aria-label="Vultyr start">
                 <img src="/assets/icon-256.png?v=20260417e" alt="" width="24" height="24" decoding="async">
                 <span>vultyr</span>
             </a>
             <div class="topbar-nav">
-                <a href="/sv/services.html">services</a>
+                <a href="/sv/services.html">tjänster</a>
                 <a href="/sv/support.html">support</a>
-                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Download</a>
+                <a href="https://apps.apple.com/us/app/vultyr/id6761264004" target="_blank" rel="noopener noreferrer" class="topbar-cta">Ladda ner</a>
             </div>
         </div>
     </nav>
     <main id="main" class="docs">
     <h1>Support</h1>
 
-    <h2>Contact</h2>
-    <p>For bug reports, feature requests, or questions:<br>
+    <h2>Kontakt</h2>
+    <p>För felrapporter, funktionsförfrågningar eller frågor:<br>
     <a href="mailto:support@vultyr.app">support@vultyr.app</a></p>
 
-    <h2>FAQ</h2>
+    <h2>Vanliga frågor</h2>
 
     <div class="faq">
-        <h3>How often does vultyr check service status?</h3>
-        <p>On Mac: as often as every 60 seconds when plugged in. On iPhone: every 5, 10, or 15 minutes (configurable), with periodic background checks when conditions allow. On Apple Watch: every 15 minutes. On Apple TV: every 5 minutes. Polling adapts automatically to battery level, power state, and thermal conditions.</p>
+        <h3>Hur ofta kontrollerar vultyr tjänsternas status?</h3>
+        <p>På Mac: så ofta som var 60:e sekund när den är ansluten till ström. På iPhone: var 5:e, 10:e eller 15:e minut (kan konfigureras), med periodiska bakgrundskontroller när förhållandena tillåter. På Apple Watch: var 15:e minut. På Apple TV: var 5:e minut. Avsökningen anpassas automatiskt efter batterinivå, strömförsörjning och värmeförhållanden.</p>
     </div>
     <div class="faq">
-        <h3>How do Cross-Device Alerts work?</h3>
-        <p>The Mac app is the hub. Keep it running (menu bar or full window) and it polls every 60 seconds. When a status change is detected, it writes a lightweight signal to iCloud Key-Value Store; your iPhone, iPad, Watch, Apple TV, and Vision Pro pick up the change and run their own local check. No keys, no tokens, no setup — just enable "Cross-Device Alerts" in settings on any device. Without a Mac acting as the hub, alerts rely on iOS background execution and will be delayed or missed.</p>
+        <h3>Hur fungerar aviseringar mellan enheter?</h3>
+        <p>Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den var 60:e sekund. När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning — aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas.</p>
     </div>
     <div class="faq">
-        <h3>Do I need the Mac app for reliable alerts?</h3>
-        <p>Yes — we strongly recommend it. iOS limits background execution, so iPhone and iPad can only check every 5-15 minutes (configurable) and may defer further on low battery, Low Power Mode, or poor connectivity. The Mac app polls continuously (every 60 seconds when plugged in) and broadcasts status changes to your other devices via iCloud. Without a Mac running Vultyr, iOS, watchOS, and tvOS alerts still work but can be significantly delayed or missed. For real-time monitoring, keep the Mac app running — it's tiny in the menu bar and is how Vultyr is meant to be used.</p>
+        <h3>Behöver jag Mac-appen för tillförlitliga aviseringar?</h3>
+        <p>Ja — vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker kontinuerligt (var 60:e sekund när den är ansluten till ström) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång — den är liten i menyraden och är så Vultyr är avsedd att användas.</p>
     </div>
     <div class="faq">
-        <h3>Does vultyr work with Siri and Shortcuts?</h3>
-        <p>Yes. Built-in App Intents let you say “Hey Siri, mute GitHub for 2 hours,” “check Stripe status,” or “show current issues,” and you can wire those same actions into the Shortcuts app. There's also a Focus Filter so a “vultyr Focus” mode can quiet non-critical services automatically.</p>
+        <h3>Fungerar vultyr med Siri och Shortcuts?</h3>
+        <p>Ja. Inbyggda App Intents låter dig säga ”Hey Siri, tysta GitHub i 2 timmar”, ”kolla Stripe-status” eller ”visa aktuella problem”, och du kan koppla samma åtgärder till Shortcuts-appen. Det finns även ett Focus-filter så att ett ”vultyr Focus”-läge automatiskt kan tysta icke-kritiska tjänster.</p>
     </div>
     <div class="faq">
-        <h3>Are there widgets and Live Activities?</h3>
-        <p>On iOS, there are Home Screen and Lock Screen widgets (single-service and status summary) plus a Control Center widget. Active outages pin to the Dynamic Island as Live Activities. On watchOS, complications are available for all watch faces, with Smart Stack relevance so the right service surfaces when something is down.</p>
+        <h3>Finns det widgets och Live Activities?</h3>
+        <p>På iOS finns widgets på hemskärmen och låsskärmen (enskild tjänst och statussammanfattning) plus en widget i Control Center. Aktiva driftstörningar fästs i Dynamic Island som Live Activities. På watchOS finns komplikationer för alla urtavlor, med Smart Stack-relevans så att rätt tjänst lyfts fram när något ligger nere.</p>
     </div>
     <div class="faq">
-        <h3>Does the vultyr app collect my data?</h3>
-        <p>No. The app has no accounts, no servers, no in-app tracking, no in-app analytics. All your watched services stay on your device. Note: this website (vultyr.app) uses cookieless Google Analytics for aggregate visitor counts — see the <a href="/privacy.html">Privacy Policy</a> for details.</p>
+        <h3>Samlar vultyr-appen in mina data?</h3>
+        <p>Nej. Appen har inga konton, inga servrar, ingen spårning i appen och ingen analys i appen. Alla dina bevakade tjänster stannar på din enhet. Observera: denna webbplats (vultyr.app) använder cookielös Google Analytics för aggregerade besöksräkningar — se <a href="/sv/privacy.html">integritetspolicyn</a> för detaljer.</p>
     </div>
     <div class="faq">
-        <h3>How do I sync my services across devices?</h3>
-        <p>Your watched services sync automatically via iCloud. Themes and settings also sync across all your Apple devices via iCloud Key-Value Store.</p>
+        <h3>Hur synkroniserar jag mina tjänster mellan enheter?</h3>
+        <p>Dina bevakade tjänster synkroniseras automatiskt via iCloud. Teman och inställningar synkroniseras också mellan alla dina Apple-enheter via iCloud Key-Value Store.</p>
     </div>
     <div class="faq">
-        <h3>What are the theme options?</h3>
-        <p>12 themes: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith, and HAL. Standard and the three retro themes (Terminal, Amber, Blue) are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs ($0.99 / $4.99 / $9.99), which also helps fund development. Themes sync across all your devices automatically.</p>
+        <h3>Vilka temaalternativ finns det?</h3>
+        <p>12 teman: Standard, Terminal, Amber, Blue, Neon, Dracula, Nord, Solarized, Catppuccin, Fossil, Monolith och HAL. Standard och de tre retrotemana (Terminal, Amber, Blue) ingår. Fossil, Monolith, HAL och de övriga låses upp via valfria dricksburks-IAP:er ($0.99 / $4.99 / $9.99), vilket också hjälper till att finansiera utvecklingen. Teman synkroniseras automatiskt mellan alla dina enheter.</p>
     </div>
     <div class="faq">
-        <h3>Can I mute notifications for a known incident?</h3>
-        <p>Yes. When viewing a service with an active incident, you can mute notifications for a set period so you're not repeatedly alerted about something you already know about. You can also mute by voice — “Hey Siri, mute GitHub for 2 hours” — or from the Shortcuts app.</p>
+        <h3>Kan jag tysta aviseringar för en känd incident?</h3>
+        <p>Ja. När du visar en tjänst med en aktiv incident kan du tysta aviseringar under en viss period så att du inte upprepade gånger meddelas om något du redan känner till. Du kan också tysta med rösten — ”Hey Siri, tysta GitHub i 2 timmar” — eller från Shortcuts-appen.</p>
     </div>
     <div class="faq">
-        <h3>What platforms are supported?</h3>
-        <p>iPhone and iPad (with widgets and Live Activities), Mac (with a menu bar app plus full window), Apple Watch (with complications and Smart Stack), Apple TV, and Apple Vision Pro. The app is free to download on every platform.</p>
+        <h3>Vilka plattformar stöds?</h3>
+        <p>iPhone och iPad (med widgets och Live Activities), Mac (med en app i menyraden plus ett fullständigt fönster), Apple Watch (med komplikationer och Smart Stack), Apple TV och Apple Vision Pro. Appen är gratis att ladda ner på varje plattform.</p>
     </div>
     <div class="faq">
-        <h3>Can I request a new service?</h3>
-        <p>Yes! Email <a href="mailto:support@vultyr.app">support@vultyr.app</a> with the service name and its status page URL.</p>
+        <h3>Kan jag begära en ny tjänst?</h3>
+        <p>Ja! Mejla <a href="mailto:support@vultyr.app">support@vultyr.app</a> med tjänstens namn och URL till dess statussida.</p>
     </div>
 
     </main>
     <footer>
-        <nav aria-label="Footer navigation">
-            <a href="/sv/">Home</a>
-            <a href="/sv/services.html">Services</a>
-            <a href="/sv/privacy.html">Privacy</a>
+        <nav aria-label="Sidfotsnavigering">
+            <a href="/sv/">Start</a>
+            <a href="/sv/services.html">Tjänster</a>
+            <a href="/sv/privacy.html">Integritet</a>
             <a href="/sv/support.html">Support</a>
-            <a href="mailto:support@vultyr.app">Contact</a>
+            <a href="mailto:support@vultyr.app">Kontakt</a>
         </nav>
-        <p class="copyright">© 2026 Vultyr. All rights reserved.</p>
+        <p class="copyright">© 2026 Vultyr. Alla rättigheter förbehållna.</p>
     </footer>
 </body>
 </html>
