@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
-    <script src="/assets/js/locale-detect.js?v=20260419a"></script>
-    <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
+    <script src="/assets/js/locale-detect.js?v=20260423a"></script>
+    <script defer src="/assets/js/lang-switch.js?v=20260423a"></script>
     <title>Vultyr — statusövervakare för AWS, Slack, GitHub och mer</title>
     <meta name="description" content="Ligger det nere? 200+ statuskontroller av molntjänster, utvecklarverktyg och plattformar med direkta aviseringar om driftstörningar. Gratis på iPhone, iPad, Mac, Apple Watch, Apple TV och Apple Vision Pro.">
     <meta name="theme-color" content="#000000">
@@ -45,8 +45,8 @@
     <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260419a">
-    <link rel="stylesheet" href="/assets/css/home.css?v=20260419a">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260423a">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260423a">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,96 +187,133 @@
             <h2 id="features-heading">Allt du behöver för att ligga steget före driftstörningar</h2>
             <p>Inga appkonton, ingen spårning i appen. Bara status.</p>
         </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Live-statusinstrumentpanel</h3>
+        <div class="chapter">
+            <header class="chapter-head">
+                <span class="chapter-tag" aria-hidden="true">[ch_01]</span>
+                <h3>se din stack</h3>
+            </header>
+            <article class="flagship">
+                <div class="flagship-text">
+                    <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
+                    <h4>Live-statusinstrumentpanel</h4>
                     <p>AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic och 200+ till — allt på ett ställe. Statusindikatorerna synkroniseras med 120Hz ProMotion på iPhone Pro och iPad Pro.</p>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Smarta aviseringar</h3>
-                    <p>Aviseringar om avbrott och återställning med varje tjänsts favicon på iOS. Stora avbrott pulserar tydligt större än små incidenter så allvarlighetsgraden syns direkt. Tysta kända incidenter, stjärnmärk kritiska tjänster.</p>
+                <div class="flagship-visual">
+                    <img src="/assets/dash.webp" alt="Vultyr-instrumentpanel som visar statusen Allt klart med tjänster som AWS, GitHub och Slack under övervakning" width="390" height="844" decoding="async" loading="lazy">
+                </div>
+            </article>
+            <div class="features-grid features-grid-sm">
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Smarta aviseringar</h3>
+                        <p>Aviseringar om avbrott och återställning med varje tjänsts favicon på iOS. Stora avbrott pulserar tydligt större än små incidenter så allvarlighetsgraden syns direkt. Tysta kända incidenter, stjärnmärk kritiska tjänster.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/squares-four-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Widgets och Live Activities</h3>
+                        <p>Widgets på hemskärmen och låsskärmen på iOS, plus en widget i Control Center. Aktiva driftstörningar fästs i Dynamic Island.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Incidentdetaljer</h3>
+                        <p>Berörda komponenter, aktiva incidenter, planerat underhåll och tidslinjeuppdateringar — lokaliserade till ditt språk.</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/microphone-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Siri och Shortcuts</h3>
-                    <p>Be Siri ”tysta GitHub i 2 timmar” eller ”visa aktuella problem”. App Intents för varje åtgärd, plus ett Focus-filter som tystar icke-kritiska tjänster.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/squares-four-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Widgets och Live Activities</h3>
-                    <p>Widgets på hemskärmen och låsskärmen på iOS, plus en widget i Control Center. Aktiva driftstörningar fästs i Dynamic Island.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/watch-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Klockkomplikationer</h3>
-                    <p>Fäst en kritisk tjänst på en urtavla eller låt Smart Stack automatiskt lyfta fram aktiva problem.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Mac-hub — iPhone som reserv</h3>
+        </div>
+        <div class="chapter">
+            <header class="chapter-head">
+                <span class="chapter-tag" aria-hidden="true">[ch_02]</span>
+                <h3>mac är navet</h3>
+            </header>
+            <article class="flagship">
+                <div class="flagship-text">
+                    <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
+                    <h4>Mac-hub — iPhone som reserv</h4>
                     <p>Mac är den pålitligaste huben: den pollar var 60:e sekund och skickar statusförändringar till iPhone, iPad, Watch och Vision Pro via iCloud. Om ingen Mac är online tar din iPhone över som reservavsändare så att de andra enheterna fortfarande får aviseringar.</p>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Vy över aviseringarnas tillförlitlighet</h3>
-                    <p>Se med en blick om aviseringarna verkligen når fram — Mac-hjärtslag, status för bakgrundsuppdatering, CloudKit-push och när varje enhet senast kollade.</p>
+                <pre class="flagship-ascii" aria-label="Alert Reliability terminal mock"><span class="dim">$</span> vultyr alert-reliability
+
+  <span class="ok">●</span> mac heartbeat        12s ago    <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> bg refresh           2m 31s     <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> cloudkit push        active     <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> iphone fallback      ready      <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> last check           17s ago    <span class="ok">[HEALTHY]</span>
+
+  alerts: ready <span class="cur">▌</span></pre>
+            </article>
+            <div class="features-grid features-grid-sm">
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Vy över aviseringarnas tillförlitlighet</h3>
+                        <p>Se med en blick om aviseringarna verkligen når fram — Mac-hjärtslag, status för bakgrundsuppdatering, CloudKit-push och när varje enhet senast kollade.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Batterismart avsökning</h3>
+                        <p>Smart automatisk uppdatering anpassas efter batteri, strömtillstånd och temperatur. Varje minut på Mac, 5–15 på iPhone, med bakgrundsuppdatering på iPad, Apple Watch, Vision Pro och Apple TV.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/watch-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Klockkomplikationer</h3>
+                        <p>Fäst en kritisk tjänst på en urtavla eller låt Smart Stack automatiskt lyfta fram aktiva problem.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Varje Apple-plattform</h3>
+                        <p>iPhone, iPad, Mac-menyrad, Apple TV, Apple Watch och Vision Pro. Tjänster synkroniseras mellan alla enheter.</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Varje Apple-plattform</h3>
-                    <p>iPhone, iPad, Mac-menyrad, Apple TV, Apple Watch och Vision Pro. Tjänster synkroniseras mellan alla enheter.</p>
+        </div>
+        <div class="chapter">
+            <header class="chapter-head">
+                <span class="chapter-tag" aria-hidden="true">[ch_03]</span>
+                <h3>skräddarsytt för dig</h3>
+            </header>
+            <article class="flagship">
+                <div class="flagship-text">
+                    <div class="feature-icon"><img src="/assets/icons/microphone-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
+                    <h4>Siri och Shortcuts</h4>
+                    <p>Be Siri ”tysta GitHub i 2 timmar” eller ”visa aktuella problem”. App Intents för varje åtgärd, plus ett Focus-filter som tystar icke-kritiska tjänster.</p>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Incidentdetaljer</h3>
-                    <p>Berörda komponenter, aktiva incidenter, planerat underhåll och tidslinjeuppdateringar — lokaliserade till ditt språk.</p>
+                <div class="flagship-visual">
+                    <img src="/assets/settings.webp" alt="Vultyrs utseendeinställningar med 12 teman inklusive Terminal, Amber, Dracula och Nord" width="390" height="844" decoding="async" loading="lazy">
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Batterismart avsökning</h3>
-                    <p>Smart automatisk uppdatering anpassas efter batteri, strömtillstånd och temperatur. Varje minut på Mac, 5–15 på iPhone, med bakgrundsuppdatering på iPad, Apple Watch, Vision Pro och Apple TV.</p>
+            </article>
+            <div class="features-grid features-grid-sm">
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>12 teman</h3>
+                        <p>Standard och tre retroteman ingår. Fossil, Monolith, HAL och de övriga låses upp via valfria dricksburks-IAP:er.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>12 teman</h3>
-                    <p>Standard och tre retroteman ingår. Fossil, Monolith, HAL och de övriga låses upp via valfria dricksburks-IAP:er.</p>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Appdata stannar lokalt</h3>
+                        <p>Appen har ingen registrering och ingen analys i appen. Dina bevakade tjänster stannar på din enhet.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Appdata stannar lokalt</h3>
-                    <p>Appen har ingen registrering och ingen analys i appen. Dina bevakade tjänster stannar på din enhet.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>17 appspråk</h3>
-                    <p>Engelska, tyska, franska, spanska, japanska, koreanska, kinesiska, portugisiska, ryska och fler.</p>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>17 appspråk</h3>
+                        <p>Engelska, tyska, franska, spanska, japanska, koreanska, kinesiska, portugisiska, ryska och fler.</p>
+                    </div>
                 </div>
             </div>
         </div>

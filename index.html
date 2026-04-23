@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
-    <script src="/assets/js/locale-detect.js?v=20260419a"></script>
-    <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
+    <script src="/assets/js/locale-detect.js?v=20260423a"></script>
+    <script defer src="/assets/js/lang-switch.js?v=20260423a"></script>
     <title>Vultyr — Service Status Monitor for AWS, Slack, GitHub &amp; More</title>
     <meta name="description" content="Is it down? 200+ status checks across cloud services, dev tools, and platforms with instant outage alerts. Free on iPhone, iPad, Mac, Apple Watch, Apple TV, and Apple Vision Pro.">
     <meta name="theme-color" content="#000000">
@@ -45,8 +45,8 @@
     <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260419a">
-    <link rel="stylesheet" href="/assets/css/home.css?v=20260419a">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260423a">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260423a">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,96 +187,133 @@
             <h2 id="features-heading">Everything you need to stay ahead of outages</h2>
             <p>No app accounts, no in-app tracking. Just status.</p>
         </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Live Status Dashboard</h3>
+        <div class="chapter">
+            <header class="chapter-head">
+                <span class="chapter-tag" aria-hidden="true">[ch_01]</span>
+                <h3>see your stack</h3>
+            </header>
+            <article class="flagship">
+                <div class="flagship-text">
+                    <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
+                    <h4>Live Status Dashboard</h4>
                     <p>AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic and 200+ more — all in one place. Status orbs sync to 120Hz ProMotion on iPhone Pro and iPad Pro.</p>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Smart Alerts</h3>
-                    <p>Down and recovery notifications with each service&#x27;s favicon attached on iOS. Major outages pulse noticeably larger than minor incidents, so severity reads at a glance. Mute known issues, star critical services.</p>
+                <div class="flagship-visual">
+                    <img src="/assets/dash.webp" alt="Vultyr dashboard showing All Clear status with services like AWS, GitHub, and Slack monitored" width="390" height="844" decoding="async" loading="lazy">
+                </div>
+            </article>
+            <div class="features-grid features-grid-sm">
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Smart Alerts</h3>
+                        <p>Down and recovery notifications with each service&#x27;s favicon attached on iOS. Major outages pulse noticeably larger than minor incidents, so severity reads at a glance. Mute known issues, star critical services.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/squares-four-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Widgets &amp; Live Activities</h3>
+                        <p>Home Screen and Lock Screen widgets on iOS, plus a Control Center widget. Active outages pin to the Dynamic Island.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Incident Details</h3>
+                        <p>Affected components, active incidents, scheduled maintenance, and timeline updates — localized into your language.</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/microphone-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Siri &amp; Shortcuts</h3>
-                    <p>Ask Siri “mute GitHub for 2 hours” or “show current issues.” App Intents for every action, plus a Focus Filter that quiets non-critical services.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/squares-four-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Widgets &amp; Live Activities</h3>
-                    <p>Home Screen and Lock Screen widgets on iOS, plus a Control Center widget. Active outages pin to the Dynamic Island.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/watch-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Watch Complications</h3>
-                    <p>Pin a critical service to a watch face, or let Smart Stack surface active issues automatically.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Mac Hub — iPhone Fallback</h3>
+        </div>
+        <div class="chapter">
+            <header class="chapter-head">
+                <span class="chapter-tag" aria-hidden="true">[ch_02]</span>
+                <h3>mac is the hub</h3>
+            </header>
+            <article class="flagship">
+                <div class="flagship-text">
+                    <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
+                    <h4>Mac Hub — iPhone Fallback</h4>
                     <p>Mac is the most reliable hub: it polls every 60 seconds and broadcasts status changes to iPhone, iPad, Watch, and Vision Pro via iCloud. If no Mac is online, your iPhone steps in as the fallback publisher so the other devices still get alerts.</p>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Alert Reliability View</h3>
-                    <p>See at a glance whether alerts will actually reach you — Mac heartbeat freshness, background-refresh status, CloudKit push, and when each device last checked.</p>
+                <pre class="flagship-ascii" aria-label="Alert Reliability terminal mock"><span class="dim">$</span> vultyr alert-reliability
+
+  <span class="ok">●</span> mac heartbeat        12s ago    <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> bg refresh           2m 31s     <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> cloudkit push        active     <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> iphone fallback      ready      <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> last check           17s ago    <span class="ok">[HEALTHY]</span>
+
+  alerts: ready <span class="cur">▌</span></pre>
+            </article>
+            <div class="features-grid features-grid-sm">
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Alert Reliability View</h3>
+                        <p>See at a glance whether alerts will actually reach you — Mac heartbeat freshness, background-refresh status, CloudKit push, and when each device last checked.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Battery-Aware Polling</h3>
+                        <p>Smart auto-refresh adapts to battery, power state, and thermals. Every minute on Mac, 5–15 on iPhone, with background refresh honoured on iPad, Apple Watch, Vision Pro, and Apple TV.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/watch-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Watch Complications</h3>
+                        <p>Pin a critical service to a watch face, or let Smart Stack surface active issues automatically.</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Every Apple Platform</h3>
+                        <p>iPhone, iPad, Mac menu bar, Apple TV, Apple Watch, and Vision Pro. Services sync across all devices.</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Every Apple Platform</h3>
-                    <p>iPhone, iPad, Mac menu bar, Apple TV, Apple Watch, and Vision Pro. Services sync across all devices.</p>
+        </div>
+        <div class="chapter">
+            <header class="chapter-head">
+                <span class="chapter-tag" aria-hidden="true">[ch_03]</span>
+                <h3>tailored to you</h3>
+            </header>
+            <article class="flagship">
+                <div class="flagship-text">
+                    <div class="feature-icon"><img src="/assets/icons/microphone-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
+                    <h4>Siri &amp; Shortcuts</h4>
+                    <p>Ask Siri “mute GitHub for 2 hours” or “show current issues.” App Intents for every action, plus a Focus Filter that quiets non-critical services.</p>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Incident Details</h3>
-                    <p>Affected components, active incidents, scheduled maintenance, and timeline updates — localized into your language.</p>
+                <div class="flagship-visual">
+                    <img src="/assets/settings.webp" alt="Vultyr appearance settings with 12 themes including Terminal, Amber, Dracula, and Nord" width="390" height="844" decoding="async" loading="lazy">
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Battery-Aware Polling</h3>
-                    <p>Smart auto-refresh adapts to battery, power state, and thermals. Every minute on Mac, 5–15 on iPhone, with background refresh honoured on iPad, Apple Watch, Vision Pro, and Apple TV.</p>
+            </article>
+            <div class="features-grid features-grid-sm">
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>12 Themes</h3>
+                        <p>Standard and three retro themes are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>12 Themes</h3>
-                    <p>Standard and three retro themes are included. Fossil, Monolith, HAL and the rest unlock through optional tip-jar IAPs.</p>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>App Data Stays Local</h3>
+                        <p>The app has no sign-up and no in-app analytics. Your watched services stay on your device.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>App Data Stays Local</h3>
-                    <p>The app has no sign-up and no in-app analytics. Your watched services stay on your device.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>17 App Languages</h3>
-                    <p>English, German, French, Spanish, Japanese, Korean, Chinese, Portuguese, Russian, and more.</p>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>17 App Languages</h3>
+                        <p>English, German, French, Spanish, Japanese, Korean, Chinese, Portuguese, Russian, and more.</p>
+                    </div>
                 </div>
             </div>
         </div>
