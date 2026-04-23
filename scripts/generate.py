@@ -40,6 +40,41 @@ OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
 THEMES_COUNT = 12
 APP_LANGUAGE_COUNT = 17
 
+# Old slug -> new slug. When a service is renamed, we emit a redirect stub at
+# /status/<old>.html (and under each locale) so external links and search
+# results don't 404. GitHub Pages has no server-side redirects, so the stub
+# uses meta-refresh + canonical + noindex.
+SLUG_ALIASES = {
+    "app-center": "appcenter",
+    "apple-services": "apple-system",
+    "atandt": "att",
+    "bell-canada": "bell",
+    "bunny-cdn": "bunnycdn",
+    "cash-app": "cashapp",
+    "cloudflare-zero-trust": "cloudflare-security",
+    "coinbase-exchange": "coinbase-ex",
+    "dbt-cloud": "dbt",
+    "dropbox-sign": "dropboxsign",
+    "duo-security": "duo",
+    "elastic-cloud": "elastic",
+    "epic-games": "epicgames",
+    "falai": "fal",
+    "flyio": "fly",
+    "gemini-exchange": "gemini-ex",
+    "influxdb-cloud": "influxdb",
+    "maven-central": "mavencentral",
+    "mondaycom": "monday",
+    "mongodb-cloud": "mongodb",
+    "new-relic": "newrelic",
+    "otterai": "otter",
+    "palo-alto-networks": "paloalto",
+    "sauce-labs": "saucelabs",
+    "splunk-cloud": "splunk",
+    "splunk-on-call": "splunk-oncall",
+    "stability-ai": "stability",
+    "travis-ci": "travisci",
+}
+
 # Ordered alphabetically by LOCALE_NATIVE_NAMES value (what users see in the
 # language picker): Latin-script names A-Z, then Cyrillic, then CJK by codepoint.
 LOCALES = (
@@ -217,6 +252,7 @@ STRINGS = {
         "err_description": "The page you're looking for doesn't exist.",
         "err_heading": "Page not found",
         "err_message": "The page you're looking for doesn't exist or has been moved.",
+        "redirect_moved_fmt": "This page has moved. Redirecting to {name}…",
         "err_popular_heading": "Popular services",
         "err_browse_heading": "Browse categories",
         # privacy
@@ -423,6 +459,7 @@ STRINGS = {
         "err_description": "\u0417\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u043c\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442.",
         "err_heading": "\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u0430",
         "err_message": "\u0417\u0430\u043f\u0440\u0430\u0448\u0438\u0432\u0430\u0435\u043c\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0430 \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0430.",
+        "redirect_moved_fmt": "\u042d\u0442\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0430. \u041f\u0435\u0440\u0435\u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043d\u0430 {name}\u2026",
         "err_popular_heading": "\u041f\u043e\u043f\u0443\u043b\u044f\u0440\u043d\u044b\u0435 \u0441\u0435\u0440\u0432\u0438\u0441\u044b",
         "err_browse_heading": "\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0439",
         # privacy
@@ -619,6 +656,7 @@ STRINGS = {
     "err_description": "Siden du leder efter findes ikke.",
     "err_heading": "Siden blev ikke fundet",
     "err_message": "Siden du leder efter findes ikke eller er blevet flyttet.",
+    "redirect_moved_fmt": "Denne side er flyttet. Omdirigerer til {name}…",
     "err_popular_heading": "Populære tjenester",
     "err_browse_heading": "Gennemse kategorier",
     # privacy
@@ -825,6 +863,7 @@ STRINGS = {
     "err_description": "Die gesuchte Seite existiert nicht.",
     "err_heading": "Seite nicht gefunden",
     "err_message": "Die Seite, die du suchst, existiert nicht oder wurde verschoben.",
+    "redirect_moved_fmt": "Diese Seite wurde verschoben. Weiterleitung zu {name}…",
     "err_popular_heading": "Beliebte Dienste",
     "err_browse_heading": "Kategorien durchsuchen",
     # privacy
@@ -1021,6 +1060,7 @@ STRINGS = {
     "err_description": "La página que buscas no existe.",
     "err_heading": "Página no encontrada",
     "err_message": "La página que buscas no existe o ha sido movida.",
+    "redirect_moved_fmt": "Esta página se ha movido. Redirigiendo a {name}…",
     "err_popular_heading": "Servicios populares",
     "err_browse_heading": "Explorar categorías",
     # privacy
@@ -1217,6 +1257,7 @@ STRINGS = {
     "err_description": "La page que vous recherchez n\u2019existe pas.",
     "err_heading": "Page introuvable",
     "err_message": "La page que vous recherchez n\u2019existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.",
+    "redirect_moved_fmt": "Cette page a \u00e9t\u00e9 d\u00e9plac\u00e9e. Redirection vers {name}\u2026",
     "err_popular_heading": "Services populaires",
     "err_browse_heading": "Parcourir les cat\u00e9gories",
     # privacy
@@ -1413,6 +1454,7 @@ STRINGS = {
     "err_description": "La pagina che stai cercando non esiste.",
     "err_heading": "Pagina non trovata",
     "err_message": "La pagina che stai cercando non esiste o \u00e8 stata spostata.",
+    "redirect_moved_fmt": "Questa pagina \u00e8 stata spostata. Reindirizzamento a {name}\u2026",
     "err_popular_heading": "Servizi popolari",
     "err_browse_heading": "Sfoglia le categorie",
     # privacy
@@ -1609,6 +1651,7 @@ STRINGS = {
     "err_description": "お探しのページは存在しません。",
     "err_heading": "ページが見つかりません",
     "err_message": "お探しのページは存在しないか、移動された可能性があります。",
+    "redirect_moved_fmt": "このページは移動しました。{name}にリダイレクトしています…",
     "err_popular_heading": "人気のサービス",
     "err_browse_heading": "カテゴリを見る",
     # privacy
@@ -1815,6 +1858,7 @@ STRINGS = {
     "err_description": "찾고 계신 페이지가 존재하지 않습니다.",
     "err_heading": "페이지를 찾을 수 없음",
     "err_message": "찾고 계신 페이지가 존재하지 않거나 이동되었습니다.",
+    "redirect_moved_fmt": "이 페이지는 이동되었습니다. {name}(으)로 리디렉션 중…",
     "err_popular_heading": "인기 서비스",
     "err_browse_heading": "카테고리 둘러보기",
     # privacy
@@ -2021,6 +2065,7 @@ STRINGS = {
     "err_description": "Siden du leter etter, finnes ikke.",
     "err_heading": "Siden ble ikke funnet",
     "err_message": "Siden du leter etter, finnes ikke eller er flyttet.",
+    "redirect_moved_fmt": "Denne siden er flyttet. Omdirigerer til {name}…",
     "err_popular_heading": "Populære tjenester",
     "err_browse_heading": "Bla i kategorier",
     # privacy
@@ -2217,6 +2262,7 @@ STRINGS = {
     "err_description": "De pagina die je zoekt bestaat niet.",
     "err_heading": "Pagina niet gevonden",
     "err_message": "De pagina die je zoekt bestaat niet of is verplaatst.",
+    "redirect_moved_fmt": "Deze pagina is verplaatst. Wordt doorgestuurd naar {name}…",
     "err_popular_heading": "Populaire services",
     "err_browse_heading": "Bladeren door categorie\u00ebn",
     # privacy
@@ -2423,6 +2469,7 @@ STRINGS = {
     "err_description": "A página que você está procurando não existe.",
     "err_heading": "Página não encontrada",
     "err_message": "A página que você está procurando não existe ou foi movida.",
+    "redirect_moved_fmt": "Esta página foi movida. Redirecionando para {name}…",
     "err_popular_heading": "Serviços populares",
     "err_browse_heading": "Ver categorias",
     # privacy
@@ -2619,6 +2666,7 @@ STRINGS = {
     "err_description": "Sidan du letar efter finns inte.",
     "err_heading": "Sidan hittades inte",
     "err_message": "Sidan du letar efter finns inte eller har flyttats.",
+    "redirect_moved_fmt": "Den här sidan har flyttats. Omdirigerar till {name}…",
     "err_popular_heading": "Populära tjänster",
     "err_browse_heading": "Bläddra bland kategorier",
     # privacy
@@ -2815,6 +2863,7 @@ STRINGS = {
     "err_description": "Aradığınız sayfa mevcut değil.",
     "err_heading": "Sayfa bulunamadı",
     "err_message": "Aradığınız sayfa mevcut değil veya taşınmış.",
+    "redirect_moved_fmt": "Bu sayfa taşındı. {name} sayfasına yönlendiriliyor…",
     "err_popular_heading": "Popüler servisler",
     "err_browse_heading": "Kategorilere göz at",
     # privacy
@@ -3011,6 +3060,7 @@ STRINGS = {
     "err_description": "Trang bạn đang tìm không tồn tại.",
     "err_heading": "Không tìm thấy trang",
     "err_message": "Trang bạn đang tìm không tồn tại hoặc đã bị di chuyển.",
+    "redirect_moved_fmt": "Trang này đã được di chuyển. Đang chuyển hướng đến {name}…",
     "err_popular_heading": "Dịch vụ phổ biến",
     "err_browse_heading": "Duyệt danh mục",
     # privacy
@@ -3207,6 +3257,7 @@ STRINGS = {
     "err_description": "您访问的页面不存在。",
     "err_heading": "页面未找到",
     "err_message": "您访问的页面不存在或已被移动。",
+    "redirect_moved_fmt": "此页面已移动。正在重定向到 {name}…",
     "err_popular_heading": "热门服务",
     "err_browse_heading": "浏览类别",
     # privacy
@@ -3403,6 +3454,7 @@ STRINGS = {
     "err_description": "您所尋找的頁面不存在。",
     "err_heading": "找不到頁面",
     "err_message": "您所尋找的頁面不存在或已被移動。",
+    "redirect_moved_fmt": "此頁面已移動。正在重新導向至 {name}…",
     "err_popular_heading": "熱門服務",
     "err_browse_heading": "瀏覽類別",
     # privacy
@@ -4765,6 +4817,43 @@ def generate_home_page(data, locale):
 """
 
 
+# ─── REDIRECT STUB ─────────────────────────────────────────────────────────────
+
+def generate_redirect_stub(old_slug, new_slug, locale, services_by_slug):
+    """Static-hosting-friendly redirect from a renamed status page to its new
+    URL. Uses <meta http-equiv="refresh"> (GitHub Pages can't issue 301s),
+    <link rel="canonical"> so search engines consolidate ranking onto the new
+    URL, and <meta name="robots" content="noindex"> so the stub itself drops
+    from the index."""
+    svc = services_by_slug[new_slug]
+    target = service_path(locale, new_slug)
+    absolute_target = absolute(target)
+    name = svc["name"]
+    # Split the localized "{name}" phrase around the placeholder so the service
+    # name stays a real anchor (good for screen readers + non-JS fallback).
+    message = t(locale, "redirect_moved_fmt").format(name="{{NAME}}")
+    before, _, after = message.partition("{{NAME}}")
+    body_html = f"{e(before)}<a href=\"{target}\">{e(name)}</a>{e(after)}"
+    # Minimal head — no CSS or favicons — but keep the CSP meta so the generator's
+    # validator passes, and include <html lang> + closing tags for the same reason.
+    return f"""<!DOCTYPE html>
+<html lang="{html_lang(locale)}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
+    <meta http-equiv="refresh" content="0; url={absolute_target}">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="{absolute_target}">
+    <title>{e(name)} — Vultyr</title>
+    <style>body{{font-family:system-ui,sans-serif;padding:2rem;color:#ccc;background:#0a0a0a}}a{{color:#6af}}</style>
+</head>
+<body>
+    <p>{body_html}</p>
+</body>
+</html>
+"""
+
+
 # ─── 404 PAGE ──────────────────────────────────────────────────────────────────
 
 def generate_404(data, favicon, locale):
@@ -5084,7 +5173,18 @@ def main():
             html = generate_service_page(svc, categories_by_slug, services_by_slug, favicon, locale)
             write_file(path, html)
             written_paths.append(path)
-        prune_generated_dir(status_dir, {f"{svc['slug']}.html" for svc in services})
+
+        for old_slug, new_slug in SLUG_ALIASES.items():
+            if new_slug not in services_by_slug:
+                print(f"Error: SLUG_ALIASES points {old_slug!r} at missing service {new_slug!r}")
+                raise SystemExit(1)
+            path = status_dir / f"{old_slug}.html"
+            write_file(path, generate_redirect_stub(old_slug, new_slug, locale, services_by_slug))
+            written_paths.append(path)
+
+        expected_status = {f"{svc['slug']}.html" for svc in services}
+        expected_status |= {f"{old}.html" for old in SLUG_ALIASES}
+        prune_generated_dir(status_dir, expected_status)
 
         print(f"[{locale}] Generating {len(categories)} category pages...")
         for cat in categories:
