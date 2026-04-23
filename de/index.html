@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
-    <script src="/assets/js/locale-detect.js?v=20260419a"></script>
-    <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
+    <script src="/assets/js/locale-detect.js?v=20260423b"></script>
+    <script defer src="/assets/js/lang-switch.js?v=20260423b"></script>
     <title>Vultyr — Service-Status-Monitor für AWS, Slack, GitHub und mehr</title>
     <meta name="description" content="Ist es ausgefallen? Über 200 Status-Checks für Cloud-Dienste, Entwickler-Tools und Plattformen mit sofortigen Ausfallbenachrichtigungen. Kostenlos auf iPhone, iPad, Mac, Apple Watch, Apple TV und Apple Vision Pro.">
     <meta name="theme-color" content="#000000">
@@ -45,8 +45,8 @@
     <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260419a">
-    <link rel="stylesheet" href="/assets/css/home.css?v=20260419a">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260423b">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260423b">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,8 +128,8 @@
     <header class="hero">
         <div class="hero-inner">
             <div class="hero-tag fade-up fade-up-1" aria-hidden="true">200+ Checks</div>
-            <img src="/assets/icon-256.png?v=20260417e" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
-            <h1 class="fade-up fade-up-2">vultyr</h1>
+            <img src="/assets/icon-256.png?v=20260417e" alt="" class="icon" width="144" height="144" fetchpriority="high" decoding="async">
+            <h1 class="fade-up fade-up-2">vultyr<span class="cursor" aria-hidden="true">▌</span></h1>
             <p class="tagline fade-up fade-up-3">Ist es ausgefallen? <span class="highlight">Wisse es vor deinen Nutzern.</span></p>
             <p class="tagline-services fade-up fade-up-3">Über 200 Status-Checks — AWS, GitHub, Slack, Stripe und mehr — mit sofortigen Ausfallbenachrichtigungen auf jedem Apple-Gerät.</p>
             <div class="cta-group fade-up fade-up-4">
@@ -156,7 +156,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §01 stats ]</span></div>
 
     <section class="stats" aria-labelledby="stats-heading">
         <h2 id="stats-heading" class="sr-only">Kennzahlen</h2>
@@ -180,7 +180,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §02 features ]</span></div>
 
     <section class="features" aria-labelledby="features-heading">
         <div class="features-heading">
@@ -188,7 +188,7 @@
             <p>Keine App-Konten, kein In-App-Tracking. Nur Status.</p>
         </div>
         <div class="features-grid">
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Live-Status-Dashboard</h3>
@@ -196,7 +196,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Intelligente Benachrichtigungen</h3>
                     <p>Ausfall- und Wiederherstellungsbenachrichtigungen mit dem Favicon jedes Dienstes unter iOS. Größere Ausfälle pulsieren merklich größer als kleinere Vorfälle, sodass der Schweregrad auf einen Blick erkennbar ist. Bekannte Probleme stummschalten, kritische Dienste markieren.</p>
@@ -223,14 +223,14 @@
                     <p>Hefte einen kritischen Dienst an ein Zifferblatt oder lass Smart Stack aktive Probleme automatisch einblenden.</p>
                 </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Mac-Hub — iPhone als Fallback</h3>
                     <p>Der Mac ist der zuverlässigste Hub: Er fragt alle 60 Sekunden ab und sendet Statusänderungen per iCloud an iPhone, iPad, Watch und Vision Pro. Wenn kein Mac online ist, übernimmt dein iPhone als Fallback-Publisher, damit die anderen Geräte weiterhin Benachrichtigungen erhalten.</p>
                 </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Ansicht der Benachrichtigungszuverlässigkeit</h3>
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Vorfalldetails</h3>
                     <p>Betroffene Komponenten, aktive Vorfälle, geplante Wartungen und Timeline-Updates — in deiner Sprache lokalisiert.</p>
@@ -259,7 +259,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>12 Themes</h3>
                     <p>Standard und drei Retro-Themes sind enthalten. Fossil, Monolith, HAL und die restlichen werden über optionale Trinkgeld-IAPs freigeschaltet.</p>
@@ -282,7 +282,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §03 install ]</span></div>
 
     <section class="bottom-cta" aria-labelledby="bottom-cta-heading">
         <h2 id="bottom-cta-heading">Bereit, deinen Stack zu überwachen?</h2>
@@ -293,7 +293,7 @@
         </a>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §04 i18n ]</span></div>
 
     <section class="languages-section" aria-labelledby="lang-heading">
         <h2 id="lang-heading" class="lang-heading">Verfügbar in 17 Sprachen</h2>

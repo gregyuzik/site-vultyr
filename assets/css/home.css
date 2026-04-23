@@ -44,9 +44,9 @@
 
 .icon {
     display: block;
-    width: 120px;
-    height: 120px;
-    border-radius: 28px;
+    width: 144px;
+    height: 144px;
+    border-radius: 32px;
     margin: 0 auto 24px;
     animation: halo 4s ease-in-out infinite;
 }
@@ -59,6 +59,14 @@ h1 {
     margin-bottom: 18px;
     line-height: 1;
     color: var(--text-strong);
+}
+h1 .cursor {
+    font-family: var(--font-mono);
+    font-size: 0.55em;
+    color: var(--accent);
+    margin-left: 4px;
+    vertical-align: 0.18em;
+    text-shadow: 0 0 12px rgba(0, 255, 65, 0.6);
 }
 
 .tagline {
@@ -129,8 +137,8 @@ h1 {
 }
 .phone-frame {
     flex-shrink: 0;
-    width: 220px;
-    border-radius: 32px;
+    width: 280px;
+    border-radius: 38px;
     overflow: hidden;
     border: 2px solid var(--border-strong);
     box-shadow:
@@ -148,6 +156,9 @@ h1 {
 }
 .phone-frame img { width: 100%; height: auto; display: block; }
 
+@media (max-width: 940px) {
+    .phone-frame { width: 220px; border-radius: 32px; }
+}
 @media (max-width: 720px) {
     .phone-frame { width: 180px; }
     .screenshots-track { gap: 14px; }
@@ -163,7 +174,7 @@ h1 {
     .phone-frame { scroll-snap-align: center; width: 240px; }
 }
 
-/* ─── Divider ─────────────────────────────────────────────────────────────── */
+/* ─── Divider + section markers ───────────────────────────────────────────── */
 
 .divider {
     width: 100%;
@@ -172,6 +183,31 @@ h1 {
     background: linear-gradient(90deg, transparent, var(--accent), transparent);
     margin: 0 auto;
     opacity: 0.4;
+}
+
+.section-marker {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.section-marker::before,
+.section-marker::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.55), transparent);
+    opacity: 0.55;
+}
+.section-marker .marker-tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
 
 /* ─── Stats ───────────────────────────────────────────────────────────────── */
@@ -252,11 +288,29 @@ h1 {
 }
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     max-width: 960px;
     margin: 0 auto;
 }
+@media (max-width: 720px) {
+    .features-grid { grid-template-columns: 1fr; }
+}
+
+/* Flagship feature cards take both columns and get larger headline +
+   description type so the grid has hierarchy. */
+.feature-card-wide { grid-column: span 2; }
+@media (max-width: 720px) {
+    .feature-card-wide { grid-column: span 1; }
+}
+.feature-card-wide { padding: 28px; gap: 20px; }
+.feature-card-wide .feature-icon {
+    width: 48px;
+    height: 48px;
+}
+.feature-card-wide .feature-icon img { width: 26px; height: 26px; }
+.feature-card-wide h3 { font-size: 1.15rem; margin-bottom: 8px; }
+.feature-card-wide p { font-size: 0.95rem; line-height: 1.6; }
 .feature-card {
     display: flex;
     gap: 16px;
@@ -302,6 +356,24 @@ h1 {
     width: 22px;
     height: 22px;
     filter: brightness(0) saturate(100%) invert(62%) sepia(92%) saturate(3000%) hue-rotate(95deg) brightness(105%);
+}
+
+/* Warm-tinted icon variant: pulls a few cards toward the secondary
+   accent so the grid isn't a wall of phosphor green. */
+.feature-icon-warm {
+    background: var(--accent-warm-soft);
+    border-color: rgba(255, 153, 38, 0.22);
+}
+.feature-icon-warm img {
+    filter: brightness(0) saturate(100%) invert(74%) sepia(72%) saturate(2500%) hue-rotate(345deg) brightness(102%);
+}
+.feature-card:has(.feature-icon-warm):hover {
+    border-color: rgba(255, 153, 38, 0.5);
+    background: var(--accent-warm-soft);
+    box-shadow: 0 8px 32px rgba(255, 153, 38, 0.08);
+}
+.feature-card:has(.feature-icon-warm):hover::before {
+    border-color: var(--accent-warm);
 }
 .feature-card h3 {
     font-size: 1rem;

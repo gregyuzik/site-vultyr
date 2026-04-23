@@ -32,7 +32,7 @@ APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260417e"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
-ASSET_VERSION = "20260419a"
+ASSET_VERSION = "20260423b"
 # Bump when icon-256.png changes so CDN edges pick up the new asset.
 ICON_VERSION = "20260417e"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
@@ -4694,16 +4694,41 @@ def generate_home_page(data, locale):
 
     category_count = len(data["categories"])
 
+    # Polish: a few flagship features span two grid columns to break the
+    # "all cards same size" rhythm. A few others get a warm-orange icon
+    # tint so the grid isn't a wall of green.
+    flagship_icons = {"chart-bar-regular.svg", "cloud-check-regular.svg",
+                      "monitor-regular.svg"}
+    warm_icons = {"bell-ringing-regular.svg", "lightning-regular.svg",
+                  "palette-regular.svg"}
+
+    def render_feature_card(icon, name, body):
+        card_classes = "feature-card"
+        if icon in flagship_icons:
+            card_classes += " feature-card-wide"
+        icon_classes = "feature-icon"
+        if icon in warm_icons:
+            icon_classes += " feature-icon-warm"
+        return (
+            f'            <div class="{card_classes}">\n'
+            f'                <div class="{icon_classes}"><img src="/assets/icons/{icon}" alt="" width="22" height="22" aria-hidden="true"></div>\n'
+            f'                <div>\n'
+            f'                    <h3>{e(name)}</h3>\n'
+            f'                    <p>{e(body)}</p>\n'
+            f'                </div>\n'
+            f'            </div>'
+        )
+
     feature_cards = "\n".join(
-        f'            <div class="feature-card">\n'
-        f'                <div class="feature-icon"><img src="/assets/icons/{icon}" alt="" width="22" height="22" aria-hidden="true"></div>\n'
-        f'                <div>\n'
-        f'                    <h3>{e(name)}</h3>\n'
-        f'                    <p>{e(body)}</p>\n'
-        f'                </div>\n'
-        f'            </div>'
+        render_feature_card(icon, name, body)
         for icon, name, body in t(locale, "home_features")
     )
+
+    def section_marker(label):
+        return (
+            f'    <div class="section-marker" aria-hidden="true">'
+            f'<span class="marker-tag">[ §{label} ]</span></div>'
+        )
 
     platforms_html = " &middot; ".join(f"<span>{e(p)}</span>" for p in PLATFORM_BADGES)
     canonical = absolute(home_url_path(locale))
@@ -4745,8 +4770,8 @@ def generate_home_page(data, locale):
     <header class="hero">
         <div class="hero-inner">
             <div class="hero-tag fade-up fade-up-1" aria-hidden="true">{e(t(locale, 'home_hero_tag'))}</div>
-            <img src="/assets/icon-256.png?v={ICON_VERSION}" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
-            <h1 class="fade-up fade-up-2">vultyr</h1>
+            <img src="/assets/icon-256.png?v={ICON_VERSION}" alt="" class="icon" width="144" height="144" fetchpriority="high" decoding="async">
+            <h1 class="fade-up fade-up-2">vultyr<span class="cursor" aria-hidden="true">▌</span></h1>
             <p class="tagline fade-up fade-up-3">{e(t(locale, 'home_hero_question'))} <span class="highlight">{e(t(locale, 'home_hero_answer'))}</span></p>
             <p class="tagline-services fade-up fade-up-3">{t(locale, 'home_hero_services')}</p>
             <div class="cta-group fade-up fade-up-4">
@@ -4773,7 +4798,7 @@ def generate_home_page(data, locale):
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+{section_marker("01 stats")}
 
     <section class="stats" aria-labelledby="stats-heading">
         <h2 id="stats-heading" class="sr-only">{e(t(locale, 'home_stats_aria'))}</h2>
@@ -4797,7 +4822,7 @@ def generate_home_page(data, locale):
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+{section_marker("02 features")}
 
     <section class="features" aria-labelledby="features-heading">
         <div class="features-heading">
@@ -4809,7 +4834,7 @@ def generate_home_page(data, locale):
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+{section_marker("03 install")}
 
     <section class="bottom-cta" aria-labelledby="bottom-cta-heading">
         <h2 id="bottom-cta-heading">{e(t(locale, 'home_bottom_heading'))}</h2>
@@ -4820,7 +4845,7 @@ def generate_home_page(data, locale):
         </a>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+{section_marker("04 i18n")}
 
 {languages_section_html(locale, alt_urls)}
     </main>
