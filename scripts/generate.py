@@ -32,7 +32,7 @@ APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260417e"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
-ASSET_VERSION = "20260423b"
+ASSET_VERSION = "20260423c"
 # Bump when icon-256.png changes so CDN edges pick up the new asset.
 ICON_VERSION = "20260417e"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
@@ -4695,23 +4695,23 @@ def generate_home_page(data, locale):
     category_count = len(data["categories"])
 
     # Polish: a few flagship features span two grid columns to break the
-    # "all cards same size" rhythm. A few others get a warm-orange icon
-    # tint so the grid isn't a wall of green.
+    # "all cards same size" rhythm. Every card also gets its own unique
+    # icon color so the grid reads as a varied palette, not a wall of
+    # one accent. Colors stay bright/saturated to fit the dark+phosphor
+    # aesthetic; chosen so adjacent cards in the grid don't collide.
+    # Per-card color comes from a data-icon attribute; the actual --icon-color
+    # and --icon-svg custom properties are set by matching CSS rules in
+    # home.css. Keeps the page CSP-clean (no inline style="" attributes).
     flagship_icons = {"chart-bar-regular.svg", "cloud-check-regular.svg",
                       "monitor-regular.svg"}
-    warm_icons = {"bell-ringing-regular.svg", "lightning-regular.svg",
-                  "palette-regular.svg"}
 
     def render_feature_card(icon, name, body):
         card_classes = "feature-card"
         if icon in flagship_icons:
             card_classes += " feature-card-wide"
-        icon_classes = "feature-icon"
-        if icon in warm_icons:
-            icon_classes += " feature-icon-warm"
         return (
-            f'            <div class="{card_classes}">\n'
-            f'                <div class="{icon_classes}"><img src="/assets/icons/{icon}" alt="" width="22" height="22" aria-hidden="true"></div>\n'
+            f'            <div class="{card_classes}" data-icon="{icon}">\n'
+            f'                <div class="feature-icon" aria-hidden="true"></div>\n'
             f'                <div>\n'
             f'                    <h3>{e(name)}</h3>\n'
             f'                    <p>{e(body)}</p>\n'
@@ -4771,7 +4771,7 @@ def generate_home_page(data, locale):
         <div class="hero-inner">
             <div class="hero-tag fade-up fade-up-1" aria-hidden="true">{e(t(locale, 'home_hero_tag'))}</div>
             <img src="/assets/icon-256.png?v={ICON_VERSION}" alt="" class="icon" width="144" height="144" fetchpriority="high" decoding="async">
-            <h1 class="fade-up fade-up-2">vultyr<span class="cursor" aria-hidden="true">▌</span></h1>
+            <h1 class="fade-up fade-up-2">vultyr</h1>
             <p class="tagline fade-up fade-up-3">{e(t(locale, 'home_hero_question'))} <span class="highlight">{e(t(locale, 'home_hero_answer'))}</span></p>
             <p class="tagline-services fade-up fade-up-3">{t(locale, 'home_hero_services')}</p>
             <div class="cta-group fade-up fade-up-4">

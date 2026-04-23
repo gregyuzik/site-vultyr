@@ -60,14 +60,6 @@ h1 {
     line-height: 1;
     color: var(--text-strong);
 }
-h1 .cursor {
-    font-family: var(--font-mono);
-    font-size: 0.55em;
-    color: var(--accent);
-    margin-left: 4px;
-    vertical-align: 0.18em;
-    text-shadow: 0 0 12px rgba(0, 255, 65, 0.6);
-}
 
 .tagline {
     font-size: clamp(1.15rem, 2.8vw, 1.4rem);
@@ -308,10 +300,12 @@ h1 .cursor {
     width: 48px;
     height: 48px;
 }
-.feature-card-wide .feature-icon img { width: 26px; height: 26px; }
 .feature-card-wide h3 { font-size: 1.15rem; margin-bottom: 8px; }
 .feature-card-wide p { font-size: 0.95rem; line-height: 1.6; }
+.feature-card-wide .feature-icon { width: 48px; height: 48px; }
+.feature-card-wide .feature-icon::after { width: 26px; height: 26px; }
 .feature-card {
+    --icon-color: var(--accent);  /* fallback */
     display: flex;
     gap: 16px;
     padding: 22px;
@@ -335,12 +329,13 @@ h1 .cursor {
     transition: border-color 0.3s var(--ease);
 }
 .feature-card:hover {
-    border-color: var(--border-green);
-    background: var(--accent-dim);
+    border-color: color-mix(in srgb, var(--icon-color) 38%, transparent);
+    background: color-mix(in srgb, var(--icon-color) 6%, var(--surface));
     transform: translateY(-2px);
-    box-shadow: 0 8px 32px rgba(0, 255, 65, 0.08);
+    box-shadow: 0 8px 32px color-mix(in srgb, var(--icon-color) 10%, transparent);
 }
-.feature-card:hover::before { border-color: var(--accent); }
+.feature-card:hover::before { border-color: var(--icon-color); }
+
 .feature-icon {
     flex-shrink: 0;
     width: 42px;
@@ -349,32 +344,39 @@ h1 .cursor {
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
-    background: var(--accent-soft);
-    border: 1px solid rgba(0, 255, 65, 0.15);
+    background: color-mix(in srgb, var(--icon-color) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--icon-color) 24%, transparent);
 }
-.feature-icon img {
+.feature-icon::after {
+    content: '';
     width: 22px;
     height: 22px;
-    filter: brightness(0) saturate(100%) invert(62%) sepia(92%) saturate(3000%) hue-rotate(95deg) brightness(105%);
+    background-color: var(--icon-color);
+    -webkit-mask-image: var(--icon-svg);
+    mask-image: var(--icon-svg);
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 }
 
-/* Warm-tinted icon variant: pulls a few cards toward the secondary
-   accent so the grid isn't a wall of phosphor green. */
-.feature-icon-warm {
-    background: var(--accent-warm-soft);
-    border-color: rgba(255, 153, 38, 0.22);
-}
-.feature-icon-warm img {
-    filter: brightness(0) saturate(100%) invert(74%) sepia(72%) saturate(2500%) hue-rotate(345deg) brightness(102%);
-}
-.feature-card:has(.feature-icon-warm):hover {
-    border-color: rgba(255, 153, 38, 0.5);
-    background: var(--accent-warm-soft);
-    box-shadow: 0 8px 32px rgba(255, 153, 38, 0.08);
-}
-.feature-card:has(.feature-icon-warm):hover::before {
-    border-color: var(--accent-warm);
-}
+/* Per-icon color + mask URL. One row per feature so the page stays
+   CSP-clean (no inline style="" attributes — style-src is 'self'). */
+.feature-card[data-icon="chart-bar-regular.svg"]        { --icon-color: #00ff41; --icon-svg: url('/assets/icons/chart-bar-regular.svg'); }
+.feature-card[data-icon="bell-ringing-regular.svg"]     { --icon-color: #ff9926; --icon-svg: url('/assets/icons/bell-ringing-regular.svg'); }
+.feature-card[data-icon="microphone-regular.svg"]       { --icon-color: #ff3a8a; --icon-svg: url('/assets/icons/microphone-regular.svg'); }
+.feature-card[data-icon="squares-four-regular.svg"]     { --icon-color: #00e5ff; --icon-svg: url('/assets/icons/squares-four-regular.svg'); }
+.feature-card[data-icon="watch-regular.svg"]            { --icon-color: #ffd23f; --icon-svg: url('/assets/icons/watch-regular.svg'); }
+.feature-card[data-icon="cloud-check-regular.svg"]      { --icon-color: #4d9fff; --icon-svg: url('/assets/icons/cloud-check-regular.svg'); }
+.feature-card[data-icon="monitor-regular.svg"]          { --icon-color: #5dffb0; --icon-svg: url('/assets/icons/monitor-regular.svg'); }
+.feature-card[data-icon="devices-regular.svg"]          { --icon-color: #b58aff; --icon-svg: url('/assets/icons/devices-regular.svg'); }
+.feature-card[data-icon="lightning-regular.svg"]        { --icon-color: #ff4d4d; --icon-svg: url('/assets/icons/lightning-regular.svg'); }
+.feature-card[data-icon="battery-charging-regular.svg"] { --icon-color: #c5ff45; --icon-svg: url('/assets/icons/battery-charging-regular.svg'); }
+.feature-card[data-icon="palette-regular.svg"]          { --icon-color: #ff5dff; --icon-svg: url('/assets/icons/palette-regular.svg'); }
+.feature-card[data-icon="shield-check-regular.svg"]     { --icon-color: #2ee5b8; --icon-svg: url('/assets/icons/shield-check-regular.svg'); }
+.feature-card[data-icon="translate-regular.svg"]        { --icon-color: #ffaa00; --icon-svg: url('/assets/icons/translate-regular.svg'); }
 .feature-card h3 {
     font-size: 1rem;
     font-weight: 600;
