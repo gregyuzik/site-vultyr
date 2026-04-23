@@ -16,7 +16,8 @@ Chosen for visual consistency with SF Symbols used in the Vultyr app.
 | Siri & Shortcuts | `microphone-regular.svg` |
 | Widgets & Live Activities | `squares-four-regular.svg` |
 | Watch Complications | `watch-regular.svg` |
-| Cross-Device Sync | `cloud-check-regular.svg` |
+| Mac Hub — iPhone Fallback | `cloud-check-regular.svg` |
+| Alert Reliability View | `monitor-regular.svg` |
 | Every Apple Platform | `devices-regular.svg` |
 | Incident Details | `lightning-regular.svg` |
 | Battery-Aware Polling | `battery-charging-regular.svg` |
