@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
-    <script src="/assets/js/locale-detect.js?v=20260419a"></script>
-    <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
+    <script src="/assets/js/locale-detect.js?v=20260423b"></script>
+    <script defer src="/assets/js/lang-switch.js?v=20260423b"></script>
     <title>Vultyr — AWS, Slack, GitHub 등을 위한 서비스 상태 모니터</title>
     <meta name="description" content="장애가 발생했나요? 클라우드 서비스, 개발 도구, 플랫폼 전반의 200개 이상의 상태 점검과 즉시 장애 알림. iPhone, iPad, Mac, Apple Watch, Apple TV 및 Apple Vision Pro에서 무료로 이용하세요.">
     <meta name="theme-color" content="#000000">
@@ -45,8 +45,8 @@
     <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260419a">
-    <link rel="stylesheet" href="/assets/css/home.css?v=20260419a">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260423b">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260423b">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,8 +128,8 @@
     <header class="hero">
         <div class="hero-inner">
             <div class="hero-tag fade-up fade-up-1" aria-hidden="true">200개 이상의 점검</div>
-            <img src="/assets/icon-256.png?v=20260417e" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
-            <h1 class="fade-up fade-up-2">vultyr</h1>
+            <img src="/assets/icon-256.png?v=20260417e" alt="" class="icon" width="144" height="144" fetchpriority="high" decoding="async">
+            <h1 class="fade-up fade-up-2">vultyr<span class="cursor" aria-hidden="true">▌</span></h1>
             <p class="tagline fade-up fade-up-3">장애가 발생했나요? <span class="highlight">사용자보다 먼저 알아차리세요.</span></p>
             <p class="tagline-services fade-up fade-up-3">200개 이상의 상태 점검 — AWS, GitHub, Slack, Stripe 등 — 모든 Apple 기기에서 즉시 장애 알림을 받을 수 있습니다.</p>
             <div class="cta-group fade-up fade-up-4">
@@ -156,7 +156,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §01 stats ]</span></div>
 
     <section class="stats" aria-labelledby="stats-heading">
         <h2 id="stats-heading" class="sr-only">주요 수치</h2>
@@ -180,7 +180,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §02 features ]</span></div>
 
     <section class="features" aria-labelledby="features-heading">
         <div class="features-heading">
@@ -188,7 +188,7 @@
             <p>앱 계정도, 인앱 추적도 없습니다. 오직 상태만.</p>
         </div>
         <div class="features-grid">
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>실시간 상태 대시보드</h3>
@@ -196,7 +196,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>스마트 알림</h3>
                     <p>iOS에서 각 서비스의 favicon과 함께 장애 및 복구 알림을 받습니다. 대규모 장애는 소규모 사고보다 눈에 띄게 더 크게 맥동하여 심각도를 한눈에 알 수 있습니다. 이미 알고 있는 문제는 음소거하고 중요한 서비스는 별표로 표시하세요.</p>
@@ -223,14 +223,14 @@
                     <p>중요한 서비스를 시계 페이스에 고정하거나 Smart Stack이 활성 문제를 자동으로 표시하도록 맡기세요.</p>
                 </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Mac 허브 — iPhone 폴백</h3>
                     <p>Mac은 가장 안정적인 허브입니다. 60초마다 상태를 폴링하고 iCloud를 통해 iPhone, iPad, Watch, Vision Pro에 상태 변경을 전파합니다. Mac이 오프라인이면 iPhone이 폴백 퍼블리셔로 나서서 다른 기기들이 여전히 알림을 받도록 합니다.</p>
                 </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>알림 신뢰성 보기</h3>
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>장애 상세 정보</h3>
                     <p>영향을 받은 구성 요소, 활성 장애, 예정된 점검, 타임라인 업데이트 — 모두 사용자의 언어로 현지화됩니다.</p>
@@ -259,7 +259,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>12개 테마</h3>
                     <p>Standard와 세 가지 레트로 테마가 기본 포함되어 있습니다. Fossil, Monolith, HAL 등은 선택적인 팁 자 인앱 구매를 통해 잠금 해제됩니다.</p>
@@ -282,7 +282,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §03 install ]</span></div>
 
     <section class="bottom-cta" aria-labelledby="bottom-cta-heading">
         <h2 id="bottom-cta-heading">스택을 모니터링할 준비가 되셨나요?</h2>
@@ -293,7 +293,7 @@
         </a>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §04 i18n ]</span></div>
 
     <section class="languages-section" aria-labelledby="lang-heading">
         <h2 id="lang-heading" class="lang-heading">17개 언어로 이용 가능</h2>

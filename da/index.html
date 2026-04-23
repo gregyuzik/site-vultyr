@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
-    <script src="/assets/js/locale-detect.js?v=20260419a"></script>
-    <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
+    <script src="/assets/js/locale-detect.js?v=20260423b"></script>
+    <script defer src="/assets/js/lang-switch.js?v=20260423b"></script>
     <title>Vultyr — statusovervågning for AWS, Slack, GitHub og flere</title>
     <meta name="description" content="Er den nede? 200+ statustjek på tværs af cloud-tjenester, udviklerværktøjer og platforme med øjeblikkelige nedbrudsunderretninger. Gratis på iPhone, iPad, Mac, Apple Watch, Apple TV og Apple Vision Pro.">
     <meta name="theme-color" content="#000000">
@@ -45,8 +45,8 @@
     <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260419a">
-    <link rel="stylesheet" href="/assets/css/home.css?v=20260419a">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260423b">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260423b">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,8 +128,8 @@
     <header class="hero">
         <div class="hero-inner">
             <div class="hero-tag fade-up fade-up-1" aria-hidden="true">200+ tjek</div>
-            <img src="/assets/icon-256.png?v=20260417e" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
-            <h1 class="fade-up fade-up-2">vultyr</h1>
+            <img src="/assets/icon-256.png?v=20260417e" alt="" class="icon" width="144" height="144" fetchpriority="high" decoding="async">
+            <h1 class="fade-up fade-up-2">vultyr<span class="cursor" aria-hidden="true">▌</span></h1>
             <p class="tagline fade-up fade-up-3">Er den nede? <span class="highlight">Vid det, før dine brugere gør.</span></p>
             <p class="tagline-services fade-up fade-up-3">200+ statustjek — AWS, GitHub, Slack, Stripe &amp; flere — med øjeblikkelige nedbrudsunderretninger på alle Apple-enheder.</p>
             <div class="cta-group fade-up fade-up-4">
@@ -156,7 +156,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §01 stats ]</span></div>
 
     <section class="stats" aria-labelledby="stats-heading">
         <h2 id="stats-heading" class="sr-only">Nøgletal</h2>
@@ -180,7 +180,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §02 features ]</span></div>
 
     <section class="features" aria-labelledby="features-heading">
         <div class="features-heading">
@@ -188,7 +188,7 @@
             <p>Ingen app-konti, ingen sporing i appen. Bare status.</p>
         </div>
         <div class="features-grid">
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Live-statusdashboard</h3>
@@ -196,7 +196,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Smarte underretninger</h3>
                     <p>Notifikationer om nedbrud og gendannelse med favicon for hver tjeneste på iOS. Store udfald pulserer markant større end mindre hændelser, så sværhedsgraden kan aflæses på et øjeblik. Slå kendte problemer fra, og marker kritiske tjenester med stjerne.</p>
@@ -223,14 +223,14 @@
                     <p>Fastgør en kritisk tjeneste på en urskive, eller lad Smart Stack automatisk vise aktive problemer.</p>
                 </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Mac-hub — iPhone som reserve</h3>
                     <p>Mac er den mest pålidelige hub: den poller hvert 60. sekund og sender statusændringer til iPhone, iPad, Watch og Vision Pro via iCloud. Hvis ingen Mac er online, overtager din iPhone som reserveudgiver, så de andre enheder stadig får notifikationer.</p>
                 </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Visning af notifikationspålidelighed</h3>
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Hændelsesdetaljer</h3>
                     <p>Berørte komponenter, aktive hændelser, planlagt vedligeholdelse og tidslinjeopdateringer — oversat til dit sprog.</p>
@@ -259,7 +259,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>12 temaer</h3>
                     <p>Standard og tre retro-temaer er inkluderet. Fossil, Monolith, HAL og resten låses op via valgfri tip-jar-IAP&#x27;er.</p>
@@ -282,7 +282,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §03 install ]</span></div>
 
     <section class="bottom-cta" aria-labelledby="bottom-cta-heading">
         <h2 id="bottom-cta-heading">Klar til at overvåge din stack?</h2>
@@ -293,7 +293,7 @@
         </a>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §04 i18n ]</span></div>
 
     <section class="languages-section" aria-labelledby="lang-heading">
         <h2 id="lang-heading" class="lang-heading">Tilgængelig på 17 sprog</h2>

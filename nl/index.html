@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
-    <script src="/assets/js/locale-detect.js?v=20260419a"></script>
-    <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
+    <script src="/assets/js/locale-detect.js?v=20260423b"></script>
+    <script defer src="/assets/js/lang-switch.js?v=20260423b"></script>
     <title>Vultyr — Servicestatusmonitor voor AWS, Slack, GitHub en meer</title>
     <meta name="description" content="Is het offline? 200+ statuscontroles voor cloudservices, ontwikkeltools en platforms met directe storingsmeldingen. Gratis op iPhone, iPad, Mac, Apple Watch, Apple TV en Apple Vision Pro.">
     <meta name="theme-color" content="#000000">
@@ -45,8 +45,8 @@
     <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260419a">
-    <link rel="stylesheet" href="/assets/css/home.css?v=20260419a">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260423b">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260423b">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -128,8 +128,8 @@
     <header class="hero">
         <div class="hero-inner">
             <div class="hero-tag fade-up fade-up-1" aria-hidden="true">200+ controles</div>
-            <img src="/assets/icon-256.png?v=20260417e" alt="" class="icon" width="120" height="120" fetchpriority="high" decoding="async">
-            <h1 class="fade-up fade-up-2">vultyr</h1>
+            <img src="/assets/icon-256.png?v=20260417e" alt="" class="icon" width="144" height="144" fetchpriority="high" decoding="async">
+            <h1 class="fade-up fade-up-2">vultyr<span class="cursor" aria-hidden="true">▌</span></h1>
             <p class="tagline fade-up fade-up-3">Is het offline? <span class="highlight">Weet het voordat je gebruikers het weten.</span></p>
             <p class="tagline-services fade-up fade-up-3">200+ statuscontroles — AWS, GitHub, Slack, Stripe &amp; meer — met directe storingsmeldingen op elk Apple‑apparaat.</p>
             <div class="cta-group fade-up fade-up-4">
@@ -156,7 +156,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §01 stats ]</span></div>
 
     <section class="stats" aria-labelledby="stats-heading">
         <h2 id="stats-heading" class="sr-only">Kerncijfers</h2>
@@ -180,7 +180,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §02 features ]</span></div>
 
     <section class="features" aria-labelledby="features-heading">
         <div class="features-heading">
@@ -188,7 +188,7 @@
             <p>Geen accounts, geen tracking in de app. Alleen status.</p>
         </div>
         <div class="features-grid">
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Live statusdashboard</h3>
@@ -196,7 +196,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Slimme meldingen</h3>
                     <p>Storings- en herstelmeldingen met het favicon van elke dienst op iOS. Grote storingen pulseren merkbaar groter dan kleine incidenten, zodat de ernst in één oogopslag zichtbaar is. Demp bekende problemen, markeer kritieke diensten.</p>
@@ -223,14 +223,14 @@
                     <p>Zet een kritieke service vast op een wijzerplaat of laat Smart Stack actieve problemen automatisch tonen.</p>
                 </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Mac-hub — iPhone als reserve</h3>
                     <p>Mac is de betrouwbaarste hub: peilt elke 60 seconden en stuurt statuswijzigingen via iCloud door naar iPhone, iPad, Watch en Vision Pro. Als er geen Mac online is, neemt je iPhone het als reserve-publisher over zodat de andere apparaten toch meldingen krijgen.</p>
                 </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-card feature-card-wide">
                 <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Overzicht meldingsbetrouwbaarheid</h3>
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>Incidentdetails</h3>
                     <p>Betrokken componenten, actieve incidenten, geplande onderhoudswerken en tijdlijn‑updates — in jouw taal.</p>
@@ -259,7 +259,7 @@
                 </div>
             </div>
             <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div class="feature-icon feature-icon-warm"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
                 <div>
                     <h3>12 thema’s</h3>
                     <p>Standard en drie retrothema’s zijn inbegrepen. Fossil, Monolith, HAL en de rest zijn te ontgrendelen via optionele fooi‑IAP’s.</p>
@@ -282,7 +282,7 @@
         </div>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §03 install ]</span></div>
 
     <section class="bottom-cta" aria-labelledby="bottom-cta-heading">
         <h2 id="bottom-cta-heading">Klaar om je stack te monitoren?</h2>
@@ -293,7 +293,7 @@
         </a>
     </section>
 
-    <div class="divider" aria-hidden="true"></div>
+    <div class="section-marker" aria-hidden="true"><span class="marker-tag">[ §04 i18n ]</span></div>
 
     <section class="languages-section" aria-labelledby="lang-heading">
         <h2 id="lang-heading" class="lang-heading">Beschikbaar in 17 talen</h2>
