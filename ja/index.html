@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
-    <script src="/assets/js/locale-detect.js?v=20260419a"></script>
-    <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
+    <script src="/assets/js/locale-detect.js?v=20260423a"></script>
+    <script defer src="/assets/js/lang-switch.js?v=20260423a"></script>
     <title>Vultyr — AWS、Slack、GitHubなどのサービスステータスモニター</title>
     <meta name="description" content="停止中?クラウドサービス、開発ツール、プラットフォーム向けの200以上のステータスチェックと即時障害通知。iPhone、iPad、Mac、Apple Watch、Apple TV、Apple Vision Proで無料。">
     <meta name="theme-color" content="#000000">
@@ -45,8 +45,8 @@
     <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260419a">
-    <link rel="stylesheet" href="/assets/css/home.css?v=20260419a">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260423a">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260423a">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,96 +187,133 @@
             <h2 id="features-heading">障害に先回りするために必要なものすべて</h2>
             <p>アプリアカウント不要、アプリ内トラッキングなし。ただステータスを。</p>
         </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>リアルタイムステータスダッシュボード</h3>
+        <div class="chapter">
+            <header class="chapter-head">
+                <span class="chapter-tag" aria-hidden="true">[ch_01]</span>
+                <h3>スタックを把握</h3>
+            </header>
+            <article class="flagship">
+                <div class="flagship-text">
+                    <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
+                    <h4>リアルタイムステータスダッシュボード</h4>
                     <p>AWS、GitHub、Cloudflare、Slack、Stripe、Discord、OpenAI、Anthropicなど200以上のサービスを一ヶ所で。ステータスインジケーターはiPhone ProとiPad Proの120Hz ProMotionに同期します。</p>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>スマートアラート</h3>
-                    <p>iOSでは各サービスのfavicon付きで障害と復旧を通知。大規模な障害は軽微なインシデントよりも明らかに大きく脉動し、深刻度を一目で把握できます。既知の問題はミュートし、重要なサービスにはスターを付けましょう。</p>
+                <div class="flagship-visual">
+                    <img src="/assets/dash.webp" alt="AWS、GitHub、Slackなどのサービスを監視し「すべて正常」ステータスを表示するVultyrダッシュボード" width="390" height="844" decoding="async" loading="lazy">
+                </div>
+            </article>
+            <div class="features-grid features-grid-sm">
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>スマートアラート</h3>
+                        <p>iOSでは各サービスのfavicon付きで障害と復旧を通知。大規模な障害は軽微なインシデントよりも明らかに大きく脉動し、深刻度を一目で把握できます。既知の問題はミュートし、重要なサービスにはスターを付けましょう。</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/squares-four-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>ウィジェットとLive Activities</h3>
+                        <p>iOSではホーム画面とロック画面のウィジェット、さらにControl Centerウィジェット。発生中の障害はDynamic Islandに表示されます。</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>インシデントの詳細</h3>
+                        <p>影響を受けるコンポーネント、発生中のインシデント、予定メンテナンス、タイムラインの更新 — あなたの言語にローカライズ済み。</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/microphone-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>SiriとShortcuts</h3>
-                    <p>Siriに「GitHubを2時間ミュート」や「現在の問題を表示」と話しかけられます。あらゆる操作にApp Intents対応、さらに重要でないサービスを静かにするFocus Filterも。</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/squares-four-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>ウィジェットとLive Activities</h3>
-                    <p>iOSではホーム画面とロック画面のウィジェット、さらにControl Centerウィジェット。発生中の障害はDynamic Islandに表示されます。</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/watch-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Watchコンプリケーション</h3>
-                    <p>重要なサービスを文字盤にピン留めしたり、Smart Stackに発生中の問題を自動表示させたりできます。</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>Macがハブ — iPhoneがフォールバック</h3>
+        </div>
+        <div class="chapter">
+            <header class="chapter-head">
+                <span class="chapter-tag" aria-hidden="true">[ch_02]</span>
+                <h3>macがハブ</h3>
+            </header>
+            <article class="flagship">
+                <div class="flagship-text">
+                    <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
+                    <h4>Macがハブ — iPhoneがフォールバック</h4>
                     <p>Macは最も信頼性の高いハブです。60秒ごとにチェックし、状態変更をiCloud経由でiPhone、iPad、Watch、Vision Proにブロードキャストします。Macがオンラインになければ、iPhoneがフォールバックパブリッシャーとして代わりに、ほかのデバイスにアラートを届けます。</p>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>アラート信頼性ビュー</h3>
-                    <p>アラートが実際に届くかどうかを一目で確認できます — Macのハートビート、バックグラウンド更新の状況、CloudKitプッシュ、各デバイスの最新チェック時刻。</p>
+                <pre class="flagship-ascii" aria-label="Alert Reliability terminal mock"><span class="dim">$</span> vultyr alert-reliability
+
+  <span class="ok">●</span> mac heartbeat        12s ago    <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> bg refresh           2m 31s     <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> cloudkit push        active     <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> iphone fallback      ready      <span class="ok">[HEALTHY]</span>
+  <span class="ok">●</span> last check           17s ago    <span class="ok">[HEALTHY]</span>
+
+  alerts: ready <span class="cur">▌</span></pre>
+            </article>
+            <div class="features-grid features-grid-sm">
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>アラート信頼性ビュー</h3>
+                        <p>アラートが実際に届くかどうかを一目で確認できます — Macのハートビート、バックグラウンド更新の状況、CloudKitプッシュ、各デバイスの最新チェック時刻。</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>バッテリーを考慮したポーリング</h3>
+                        <p>スマート自動更新はバッテリー、電源状態、熱に適応します。Macでは毎分1回、iPhoneでは5～15分ごと。iPad、Apple Watch、Vision Pro、Apple TVでもバックグラウンド更新が有効です。</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/watch-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>Watchコンプリケーション</h3>
+                        <p>重要なサービスを文字盤にピン留めしたり、Smart Stackに発生中の問題を自動表示させたりできます。</p>
+                    </div>
+                </div>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>すべてのAppleプラットフォーム</h3>
+                        <p>iPhone、iPad、Macのメニューバー、Apple TV、Apple Watch、Vision Pro。サービスは全デバイスで同期されます。</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>すべてのAppleプラットフォーム</h3>
-                    <p>iPhone、iPad、Macのメニューバー、Apple TV、Apple Watch、Vision Pro。サービスは全デバイスで同期されます。</p>
+        </div>
+        <div class="chapter">
+            <header class="chapter-head">
+                <span class="chapter-tag" aria-hidden="true">[ch_03]</span>
+                <h3>あなたに合わせて</h3>
+            </header>
+            <article class="flagship">
+                <div class="flagship-text">
+                    <div class="feature-icon"><img src="/assets/icons/microphone-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
+                    <h4>SiriとShortcuts</h4>
+                    <p>Siriに「GitHubを2時間ミュート」や「現在の問題を表示」と話しかけられます。あらゆる操作にApp Intents対応、さらに重要でないサービスを静かにするFocus Filterも。</p>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>インシデントの詳細</h3>
-                    <p>影響を受けるコンポーネント、発生中のインシデント、予定メンテナンス、タイムラインの更新 — あなたの言語にローカライズ済み。</p>
+                <div class="flagship-visual">
+                    <img src="/assets/settings.webp" alt="Terminal、Amber、Dracula、Nordを含む12種類のテーマを備えたVultyrの外観設定" width="390" height="844" decoding="async" loading="lazy">
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>バッテリーを考慮したポーリング</h3>
-                    <p>スマート自動更新はバッテリー、電源状態、熱に適応します。Macでは毎分1回、iPhoneでは5～15分ごと。iPad、Apple Watch、Vision Pro、Apple TVでもバックグラウンド更新が有効です。</p>
+            </article>
+            <div class="features-grid features-grid-sm">
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>12種類のテーマ</h3>
+                        <p>StandardとレトロなテーマのTerminal、Amber、Blueを同梱。Fossil、Monolith、HALなどはオプションのチップジャーIAPで解放されます。</p>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>12種類のテーマ</h3>
-                    <p>StandardとレトロなテーマのTerminal、Amber、Blueを同梱。Fossil、Monolith、HALなどはオプションのチップジャーIAPで解放されます。</p>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>アプリデータはローカルに保存</h3>
+                        <p>アプリにはサインアップもアプリ内分析もありません。監視中のサービスはあなたのデバイスに留まります。</p>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>アプリデータはローカルに保存</h3>
-                    <p>アプリにはサインアップもアプリ内分析もありません。監視中のサービスはあなたのデバイスに留まります。</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                <div>
-                    <h3>17言語対応のアプリ</h3>
-                    <p>英語、ドイツ語、フランス語、スペイン語、日本語、韓国語、中国語、ポルトガル語、ロシア語など。</p>
+                <div class="feature-card feature-card-sm">
+                    <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                    <div>
+                        <h3>17言語対応のアプリ</h3>
+                        <p>英語、ドイツ語、フランス語、スペイン語、日本語、韓国語、中国語、ポルトガル語、ロシア語など。</p>
+                    </div>
                 </div>
             </div>
         </div>

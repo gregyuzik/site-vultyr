@@ -32,7 +32,7 @@ APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260417e"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
-ASSET_VERSION = "20260419a"
+ASSET_VERSION = "20260423a"
 # Bump when icon-256.png changes so CDN edges pick up the new asset.
 ICON_VERSION = "20260417e"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
@@ -215,6 +215,9 @@ STRINGS = {
         "home_stats_platforms": "Platforms",
         "home_stats_languages": "Languages",
         "home_features_heading": "Everything you need to stay ahead of outages",
+        "home_ch1_title": "see your stack",
+        "home_ch2_title": "mac is the hub",
+        "home_ch3_title": "tailored to you",
         "home_features_sub": "No app accounts, no in-app tracking. Just status.",
         "home_bottom_heading": "Ready to monitor your stack?",
         "home_bottom_sub": "Free. No app account required. Available everywhere.",
@@ -414,6 +417,9 @@ STRINGS = {
         "home_stats_platforms": "\u041f\u043b\u0430\u0442\u0444\u043e\u0440\u043c",
         "home_stats_languages": "\u042f\u0437\u044b\u043a\u043e\u0432",
         "home_features_heading": "\u0412\u0441\u0451 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e\u0435, \u0447\u0442\u043e\u0431\u044b \u043e\u043f\u0435\u0440\u0435\u0436\u0430\u0442\u044c \u0441\u0431\u043e\u0438",
+        "home_ch1_title": "следи за стеком",
+        "home_ch2_title": "mac — это центр",
+        "home_ch3_title": "настроено под вас",
         "home_features_sub": "\u0411\u0435\u0437 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u043e\u0432, \u0431\u0435\u0437 \u0432\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u043e\u0433\u043e \u0442\u0440\u0435\u043a\u0438\u043d\u0433\u0430. \u0422\u043e\u043b\u044c\u043a\u043e \u0441\u0442\u0430\u0442\u0443\u0441.",
         "home_bottom_heading": "\u0413\u043e\u0442\u043e\u0432\u044b \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u0442\u044c \u0441\u0432\u043e\u0439 \u0441\u0442\u0435\u043a?",
         "home_bottom_sub": "\u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e. \u0411\u0435\u0437 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u0430. \u0412\u0435\u0437\u0434\u0435 \u0434\u043e\u0441\u0442\u0443\u043f\u043d\u043e.",
@@ -619,6 +625,9 @@ STRINGS = {
     "home_stats_platforms": "Platforme",
     "home_stats_languages": "Sprog",
     "home_features_heading": "Alt du har brug for, så du er på forkant med nedbrud",
+    "home_ch1_title": "se din stak",
+    "home_ch2_title": "mac er centralen",
+    "home_ch3_title": "skræddersyet til dig",
     "home_features_sub": "Ingen app-konti, ingen sporing i appen. Bare status.",
     "home_bottom_heading": "Klar til at overvåge din stack?",
     "home_bottom_sub": "Gratis. Ingen app-konto nødvendig. Tilgængelig alle steder.",
@@ -818,6 +827,9 @@ STRINGS = {
     "home_stats_platforms": "Plattformen",
     "home_stats_languages": "Sprachen",
     "home_features_heading": "Alles, was du brauchst, um Ausfällen voraus zu sein",
+    "home_ch1_title": "dein stack im blick",
+    "home_ch2_title": "mac ist der hub",
+    "home_ch3_title": "auf dich zugeschnitten",
     "home_features_sub": "Keine App-Konten, kein In-App-Tracking. Nur Status.",
     "home_bottom_heading": "Bereit, deinen Stack zu überwachen?",
     "home_bottom_sub": "Kostenlos. Kein App-Konto nötig. Überall verfügbar.",
@@ -1023,6 +1035,9 @@ STRINGS = {
     "home_stats_platforms": "Plataformas",
     "home_stats_languages": "Idiomas",
     "home_features_heading": "Todo lo que necesitas para anticiparte a las caídas",
+    "home_ch1_title": "mira tu stack",
+    "home_ch2_title": "mac es el hub",
+    "home_ch3_title": "a tu medida",
     "home_features_sub": "Sin cuentas de app, sin rastreo dentro de la app. Solo estado.",
     "home_bottom_heading": "¿Listo para monitorear tu stack?",
     "home_bottom_sub": "Gratis. Sin cuenta. Disponible en todas partes.",
@@ -1222,6 +1237,9 @@ STRINGS = {
     "home_stats_platforms": "Plateformes",
     "home_stats_languages": "Langues",
     "home_features_heading": "Tout ce qu\u2019il vous faut pour anticiper les pannes",
+    "home_ch1_title": "vois ton stack",
+    "home_ch2_title": "mac est le hub",
+    "home_ch3_title": "adapté à toi",
     "home_features_sub": "Aucun compte dans l\u2019app, aucun suivi int\u00e9gr\u00e9. Juste l\u2019\u00e9tat.",
     "home_bottom_heading": "Pr\u00eat \u00e0 surveiller votre stack\u00a0?",
     "home_bottom_sub": "Gratuit. Aucun compte requis. Disponible partout.",
@@ -1421,6 +1439,9 @@ STRINGS = {
     "home_stats_platforms": "Piattaforme",
     "home_stats_languages": "Lingue",
     "home_features_heading": "Tutto quello che ti serve per anticipare i disservizi",
+    "home_ch1_title": "vedi il tuo stack",
+    "home_ch2_title": "mac è l’hub",
+    "home_ch3_title": "su misura per te",
     "home_features_sub": "Nessun account, nessun tracciamento interno. Solo stato.",
     "home_bottom_heading": "Pronto a monitorare il tuo stack?",
     "home_bottom_sub": "Gratis. Nessun account richiesto. Disponibile ovunque.",
@@ -1620,6 +1641,9 @@ STRINGS = {
     "home_stats_platforms": "プラットフォーム",
     "home_stats_languages": "言語",
     "home_features_heading": "障害に先回りするために必要なものすべて",
+    "home_ch1_title": "スタックを把握",
+    "home_ch2_title": "macがハブ",
+    "home_ch3_title": "あなたに合わせて",
     "home_features_sub": "アプリアカウント不要、アプリ内トラッキングなし。ただステータスを。",
     "home_bottom_heading": "スタックを監視する準備はできましたか?",
     "home_bottom_sub": "無料。アプリアカウント不要。どこでも利用可能。",
@@ -1819,6 +1843,9 @@ STRINGS = {
     "home_stats_platforms": "플랫폼",
     "home_stats_languages": "언어",
     "home_features_heading": "장애를 한발 앞서 파악하기 위한 모든 기능",
+    "home_ch1_title": "당신의 스택 보기",
+    "home_ch2_title": "mac이 허브",
+    "home_ch3_title": "당신에게 맞춤",
     "home_features_sub": "앱 계정도, 인앱 추적도 없습니다. 오직 상태만.",
     "home_bottom_heading": "스택을 모니터링할 준비가 되셨나요?",
     "home_bottom_sub": "무료. 앱 계정 불필요. 어디서나 이용 가능.",
@@ -2024,6 +2051,9 @@ STRINGS = {
     "home_stats_platforms": "Plattformer",
     "home_stats_languages": "Språk",
     "home_features_heading": "Alt du trenger for å ligge i forkant av nedetid",
+    "home_ch1_title": "se stacken din",
+    "home_ch2_title": "mac er navet",
+    "home_ch3_title": "skreddersydd for deg",
     "home_features_sub": "Ingen appkontoer, ingen sporing i appen. Bare status.",
     "home_bottom_heading": "Klar til å overvåke stakken din?",
     "home_bottom_sub": "Gratis. Ingen appkonto nødvendig. Tilgjengelig overalt.",
@@ -2229,6 +2259,9 @@ STRINGS = {
     "home_stats_platforms": "Platforms",
     "home_stats_languages": "Talen",
     "home_features_heading": "Alles wat je nodig hebt om storingen voor te zijn",
+    "home_ch1_title": "zie je stack",
+    "home_ch2_title": "mac is de hub",
+    "home_ch3_title": "op jou afgestemd",
     "home_features_sub": "Geen accounts, geen tracking in de app. Alleen status.",
     "home_bottom_heading": "Klaar om je stack te monitoren?",
     "home_bottom_sub": "Gratis. Geen account nodig. Overal beschikbaar.",
@@ -2428,6 +2461,9 @@ STRINGS = {
     "home_stats_platforms": "Plataformas",
     "home_stats_languages": "Idiomas",
     "home_features_heading": "Tudo o que você precisa para se antecipar às quedas",
+    "home_ch1_title": "veja seu stack",
+    "home_ch2_title": "mac é o hub",
+    "home_ch3_title": "feito sob medida",
     "home_features_sub": "Sem contas, sem rastreamento no app. Apenas status.",
     "home_bottom_heading": "Pronto para monitorar sua stack?",
     "home_bottom_sub": "Grátis. Sem conta no app. Disponível em todos os lugares.",
@@ -2633,6 +2669,9 @@ STRINGS = {
     "home_stats_platforms": "Plattformar",
     "home_stats_languages": "Språk",
     "home_features_heading": "Allt du behöver för att ligga steget före driftstörningar",
+    "home_ch1_title": "se din stack",
+    "home_ch2_title": "mac är navet",
+    "home_ch3_title": "skräddarsytt för dig",
     "home_features_sub": "Inga appkonton, ingen spårning i appen. Bara status.",
     "home_bottom_heading": "Redo att övervaka din stack?",
     "home_bottom_sub": "Gratis. Inget appkonto krävs. Tillgängligt överallt.",
@@ -2832,6 +2871,9 @@ STRINGS = {
     "home_stats_platforms": "Platform",
     "home_stats_languages": "Dil",
     "home_features_heading": "Kesintilerin önüne geçmek için ihtiyacınız olan her şey",
+    "home_ch1_title": "yığınını gör",
+    "home_ch2_title": "mac merkezdir",
+    "home_ch3_title": "size özel",
     "home_features_sub": "Uygulama hesabı yok, uygulama içi takip yok. Yalnızca durum.",
     "home_bottom_heading": "Yığınınızı izlemeye hazır mısınız?",
     "home_bottom_sub": "Ücretsiz. Uygulama hesabı gerekmez. Her yerde kullanılabilir.",
@@ -3031,6 +3073,9 @@ STRINGS = {
     "home_stats_platforms": "Nền tảng",
     "home_stats_languages": "Ngôn ngữ",
     "home_features_heading": "Mọi thứ bạn cần để đón đầu sự cố",
+    "home_ch1_title": "xem stack của bạn",
+    "home_ch2_title": "mac là trung tâm",
+    "home_ch3_title": "dành riêng cho bạn",
     "home_features_sub": "Không tài khoản ứng dụng, không theo dõi trong ứng dụng. Chỉ có trạng thái.",
     "home_bottom_heading": "Sẵn sàng theo dõi hệ thống của bạn?",
     "home_bottom_sub": "Miễn phí. Không cần tài khoản ứng dụng. Có sẵn ở mọi nơi.",
@@ -3230,6 +3275,9 @@ STRINGS = {
     "home_stats_platforms": "平台",
     "home_stats_languages": "语言",
     "home_features_heading": "应对故障所需的一切",
+    "home_ch1_title": "一览你的技术栈",
+    "home_ch2_title": "mac 是中心",
+    "home_ch3_title": "为你定制",
     "home_features_sub": "无需应用账号,无内置追踪。只有状态。",
     "home_bottom_heading": "准备好监测你的技术栈了吗?",
     "home_bottom_sub": "免费。无需应用账号。全平台可用。",
@@ -3429,6 +3477,9 @@ STRINGS = {
     "home_stats_platforms": "個平台",
     "home_stats_languages": "種語言",
     "home_features_heading": "掌握中斷狀況所需的一切",
+    "home_ch1_title": "一覽你的技術堆疊",
+    "home_ch2_title": "mac 是中心",
+    "home_ch3_title": "為你打造",
     "home_features_sub": "不需應用程式帳號、無應用程式內追蹤。只有狀態。",
     "home_bottom_heading": "準備好監控您的技術堆疊了嗎?",
     "home_bottom_sub": "免費。不需應用程式帳號。隨處可用。",
@@ -4649,6 +4700,122 @@ def generate_category_page(cat, all_services_by_slug, all_categories, favicon, l
 PLATFORM_BADGES = ["iPhone", "iPad", "Mac", "Apple TV", "Apple Watch", "Vision Pro"]
 
 
+# Chapter layout for the home features section. Each chapter has one flagship
+# feature paired with a visual (real product screenshot OR an ASCII terminal
+# block), followed by 2-4 supporting features. Features are matched into
+# chapters by their icon filename — keeps the home_features list as the
+# single source of truth for copy/translations.
+HOME_CHAPTERS = [
+    {
+        "label": "[ch_01]",
+        "title_key": "home_ch1_title",
+        "flagship_icon": "chart-bar-regular.svg",
+        "visual": {"kind": "image", "src": "/assets/dash.webp",
+                   "alt_key": "home_screenshot_dash_alt"},
+        "supporting": ["bell-ringing-regular.svg", "squares-four-regular.svg",
+                       "lightning-regular.svg"],
+    },
+    {
+        "label": "[ch_02]",
+        "title_key": "home_ch2_title",
+        "flagship_icon": "cloud-check-regular.svg",
+        "visual": {"kind": "ascii"},
+        "supporting": ["monitor-regular.svg", "battery-charging-regular.svg",
+                       "watch-regular.svg", "devices-regular.svg"],
+    },
+    {
+        "label": "[ch_03]",
+        "title_key": "home_ch3_title",
+        "flagship_icon": "microphone-regular.svg",
+        "visual": {"kind": "image", "src": "/assets/settings.webp",
+                   "alt_key": "home_screenshot_settings_alt_fmt"},
+        "supporting": ["palette-regular.svg", "shield-check-regular.svg",
+                       "translate-regular.svg"],
+    },
+]
+
+
+def render_chapter_visual(visual, locale):
+    if visual["kind"] == "image":
+        alt_raw = t(locale, visual["alt_key"])
+        if "{themes}" in alt_raw:
+            alt_raw = alt_raw.format(themes=THEMES_COUNT)
+        return (
+            f'                <div class="flagship-visual">\n'
+            f'                    <img src="{visual["src"]}" alt="{e(alt_raw)}" width="390" height="844" decoding="async" loading="lazy">\n'
+            f'                </div>'
+        )
+    if visual["kind"] == "ascii":
+        # Terminal-style mock of the in-app Alert Reliability view. English-only
+        # by design — it's a CLI mock, conventionally not localized.
+        return (
+            '                <pre class="flagship-ascii" aria-label="Alert Reliability terminal mock">'
+            '<span class="dim">$</span> vultyr alert-reliability\n\n'
+            '  <span class="ok">●</span> mac heartbeat        12s ago    <span class="ok">[HEALTHY]</span>\n'
+            '  <span class="ok">●</span> bg refresh           2m 31s     <span class="ok">[HEALTHY]</span>\n'
+            '  <span class="ok">●</span> cloudkit push        active     <span class="ok">[HEALTHY]</span>\n'
+            '  <span class="ok">●</span> iphone fallback      ready      <span class="ok">[HEALTHY]</span>\n'
+            '  <span class="ok">●</span> last check           17s ago    <span class="ok">[HEALTHY]</span>\n\n'
+            '  alerts: ready <span class="cur">▌</span></pre>'
+        )
+    raise ValueError(f"unknown visual kind: {visual!r}")
+
+
+def render_chapter(chapter, features_by_icon, locale):
+    label = chapter["label"]
+    title = t(locale, chapter["title_key"])
+    flagship_tup = features_by_icon[chapter["flagship_icon"]]
+    fl_icon, fl_name, fl_body = flagship_tup
+    visual_html = render_chapter_visual(chapter["visual"], locale)
+
+    supporting_cards = "\n".join(
+        f'                <div class="feature-card feature-card-sm">\n'
+        f'                    <div class="feature-icon"><img src="/assets/icons/{icon}" alt="" width="22" height="22" aria-hidden="true"></div>\n'
+        f'                    <div>\n'
+        f'                        <h3>{e(name)}</h3>\n'
+        f'                        <p>{e(body)}</p>\n'
+        f'                    </div>\n'
+        f'                </div>'
+        for icon, name, body in (features_by_icon[i] for i in chapter["supporting"])
+    )
+
+    return (
+        f'        <div class="chapter">\n'
+        f'            <header class="chapter-head">\n'
+        f'                <span class="chapter-tag" aria-hidden="true">{label}</span>\n'
+        f'                <h3>{e(title)}</h3>\n'
+        f'            </header>\n'
+        f'            <article class="flagship">\n'
+        f'                <div class="flagship-text">\n'
+        f'                    <div class="feature-icon"><img src="/assets/icons/{fl_icon}" alt="" width="26" height="26" aria-hidden="true"></div>\n'
+        f'                    <h4>{e(fl_name)}</h4>\n'
+        f'                    <p>{e(fl_body)}</p>\n'
+        f'                </div>\n'
+        f'{visual_html}\n'
+        f'            </article>\n'
+        f'            <div class="features-grid features-grid-sm">\n'
+        f'{supporting_cards}\n'
+        f'            </div>\n'
+        f'        </div>'
+    )
+
+
+def render_chapters(features_by_icon, locale):
+    # Sanity check: every feature must land in exactly one chapter
+    placed = set()
+    for ch in HOME_CHAPTERS:
+        placed.add(ch["flagship_icon"])
+        for s in ch["supporting"]:
+            placed.add(s)
+    extras = set(features_by_icon) - placed
+    if extras:
+        raise SystemExit(f"home_features icons not placed in any chapter: {sorted(extras)}")
+    missing = placed - set(features_by_icon)
+    if missing:
+        raise SystemExit(f"chapter references icons not in home_features: {sorted(missing)}")
+    return "\n".join(render_chapter(ch, features_by_icon, locale) for ch in HOME_CHAPTERS)
+
+
 def generate_home_page(data, locale):
     title = t(locale, "home_title")
     description = t(locale, "home_description")
@@ -4694,16 +4861,8 @@ def generate_home_page(data, locale):
 
     category_count = len(data["categories"])
 
-    feature_cards = "\n".join(
-        f'            <div class="feature-card">\n'
-        f'                <div class="feature-icon"><img src="/assets/icons/{icon}" alt="" width="22" height="22" aria-hidden="true"></div>\n'
-        f'                <div>\n'
-        f'                    <h3>{e(name)}</h3>\n'
-        f'                    <p>{e(body)}</p>\n'
-        f'                </div>\n'
-        f'            </div>'
-        for icon, name, body in t(locale, "home_features")
-    )
+    features_by_icon = {icon: (icon, name, body) for icon, name, body in t(locale, "home_features")}
+    chapters_html = render_chapters(features_by_icon, locale)
 
     platforms_html = " &middot; ".join(f"<span>{e(p)}</span>" for p in PLATFORM_BADGES)
     canonical = absolute(home_url_path(locale))
@@ -4804,9 +4963,7 @@ def generate_home_page(data, locale):
             <h2 id="features-heading">{e(t(locale, 'home_features_heading'))}</h2>
             <p>{e(t(locale, 'home_features_sub'))}</p>
         </div>
-        <div class="features-grid">
-{feature_cards}
-        </div>
+{chapters_html}
     </section>
 
     <div class="divider" aria-hidden="true"></div>
