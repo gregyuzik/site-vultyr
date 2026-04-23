@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
-    <script src="/assets/js/locale-detect.js?v=20260423a"></script>
-    <script defer src="/assets/js/lang-switch.js?v=20260423a"></script>
+    <script src="/assets/js/locale-detect.js?v=20260419a"></script>
+    <script defer src="/assets/js/lang-switch.js?v=20260419a"></script>
     <title>Vultyr — monitor de estado de servicios para AWS, Slack, GitHub y más</title>
     <meta name="description" content="¿Está caído? Más de 200 comprobaciones de estado en servicios en la nube, herramientas para desarrolladores y plataformas con alertas instantáneas de caídas. Gratis en iPhone, iPad, Mac, Apple Watch, Apple TV y Apple Vision Pro.">
     <meta name="theme-color" content="#000000">
@@ -45,8 +45,8 @@
     <link rel="alternate" hreflang="x-default" href="https://vultyr.app/">
     <link rel="apple-touch-icon" href="/icon.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
-    <link rel="stylesheet" href="/assets/css/shared.css?v=20260423a">
-    <link rel="stylesheet" href="/assets/css/home.css?v=20260423a">
+    <link rel="stylesheet" href="/assets/css/shared.css?v=20260419a">
+    <link rel="stylesheet" href="/assets/css/home.css?v=20260419a">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,133 +187,96 @@
             <h2 id="features-heading">Todo lo que necesitas para anticiparte a las caídas</h2>
             <p>Sin cuentas de app, sin rastreo dentro de la app. Solo estado.</p>
         </div>
-        <div class="chapter">
-            <header class="chapter-head">
-                <span class="chapter-tag" aria-hidden="true">[ch_01]</span>
-                <h3>mira tu stack</h3>
-            </header>
-            <article class="flagship">
-                <div class="flagship-text">
-                    <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
-                    <h4>Panel de estado en vivo</h4>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/chart-bar-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Panel de estado en vivo</h3>
                     <p>AWS, GitHub, Cloudflare, Slack, Stripe, Discord, OpenAI, Anthropic y más de 200 — todo en un solo lugar. Los indicadores de estado se sincronizan con ProMotion de 120Hz en iPhone Pro y iPad Pro.</p>
                 </div>
-                <div class="flagship-visual">
-                    <img src="/assets/dash.webp" alt="Panel de Vultyr mostrando el estado Todo Correcto con servicios como AWS, GitHub y Slack monitoreados" width="390" height="844" decoding="async" loading="lazy">
-                </div>
-            </article>
-            <div class="features-grid features-grid-sm">
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>Alertas inteligentes</h3>
-                        <p>Notificaciones de caída y recuperación con el favicon de cada servicio en iOS. Las interrupciones graves pulsan notablemente más grandes que los incidentes menores, para ver la gravedad de un vistazo. Silencia incidencias conocidas, marca servicios críticos.</p>
-                    </div>
-                </div>
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/squares-four-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>Widgets y Live Activities</h3>
-                        <p>Widgets de pantalla de inicio y pantalla de bloqueo en iOS, además de un widget en el Centro de control. Las caídas activas se fijan en la Dynamic Island.</p>
-                    </div>
-                </div>
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>Detalles de incidentes</h3>
-                        <p>Componentes afectados, incidentes activos, mantenimiento programado y actualizaciones de la cronología — localizados a tu idioma.</p>
-                    </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/bell-ringing-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Alertas inteligentes</h3>
+                    <p>Notificaciones de caída y recuperación con el favicon de cada servicio en iOS. Las interrupciones graves pulsan notablemente más grandes que los incidentes menores, para ver la gravedad de un vistazo. Silencia incidencias conocidas, marca servicios críticos.</p>
                 </div>
             </div>
-        </div>
-        <div class="chapter">
-            <header class="chapter-head">
-                <span class="chapter-tag" aria-hidden="true">[ch_02]</span>
-                <h3>mac es el hub</h3>
-            </header>
-            <article class="flagship">
-                <div class="flagship-text">
-                    <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
-                    <h4>Mac como hub — iPhone de respaldo</h4>
-                    <p>El Mac es el hub más fiable: consulta cada 60 segundos y difunde los cambios de estado al iPhone, iPad, Watch y Vision Pro mediante iCloud. Si ningún Mac está en línea, tu iPhone actúa como publicador de respaldo para que los demás dispositivos sigan recibiendo alertas.</p>
-                </div>
-                <pre class="flagship-ascii" aria-label="Alert Reliability terminal mock"><span class="dim">$</span> vultyr alert-reliability
-
-  <span class="ok">●</span> mac heartbeat        12s ago    <span class="ok">[HEALTHY]</span>
-  <span class="ok">●</span> bg refresh           2m 31s     <span class="ok">[HEALTHY]</span>
-  <span class="ok">●</span> cloudkit push        active     <span class="ok">[HEALTHY]</span>
-  <span class="ok">●</span> iphone fallback      ready      <span class="ok">[HEALTHY]</span>
-  <span class="ok">●</span> last check           17s ago    <span class="ok">[HEALTHY]</span>
-
-  alerts: ready <span class="cur">▌</span></pre>
-            </article>
-            <div class="features-grid features-grid-sm">
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>Vista de fiabilidad de alertas</h3>
-                        <p>Consulta de un vistazo si las alertas te llegarán realmente — latido del Mac, estado de la actualización en segundo plano, envío por CloudKit y cuándo verificó cada dispositivo.</p>
-                    </div>
-                </div>
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>Sondeo consciente de la batería</h3>
-                        <p>La actualización automática se adapta a la batería, el estado de alimentación y la temperatura. Cada minuto en Mac, 5–15 en iPhone, con actualización en segundo plano en iPad, Apple Watch, Vision Pro y Apple TV.</p>
-                    </div>
-                </div>
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/watch-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>Complicaciones para Watch</h3>
-                        <p>Fija un servicio crítico en la esfera del reloj o deja que Smart Stack muestre los problemas activos automáticamente.</p>
-                    </div>
-                </div>
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>Todas las plataformas Apple</h3>
-                        <p>iPhone, iPad, barra de menús del Mac, Apple TV, Apple Watch y Vision Pro. Los servicios se sincronizan entre todos los dispositivos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="chapter">
-            <header class="chapter-head">
-                <span class="chapter-tag" aria-hidden="true">[ch_03]</span>
-                <h3>a tu medida</h3>
-            </header>
-            <article class="flagship">
-                <div class="flagship-text">
-                    <div class="feature-icon"><img src="/assets/icons/microphone-regular.svg" alt="" width="26" height="26" aria-hidden="true"></div>
-                    <h4>Siri y Shortcuts</h4>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/microphone-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Siri y Shortcuts</h3>
                     <p>Dile a Siri “silencia GitHub durante 2 horas” o “muestra los problemas actuales”. App Intents para cada acción, además de un Focus Filter que silencia los servicios no críticos.</p>
                 </div>
-                <div class="flagship-visual">
-                    <img src="/assets/settings.webp" alt="Ajustes de apariencia de Vultyr con 12 temas, incluidos Terminal, Amber, Dracula y Nord" width="390" height="844" decoding="async" loading="lazy">
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/squares-four-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Widgets y Live Activities</h3>
+                    <p>Widgets de pantalla de inicio y pantalla de bloqueo en iOS, además de un widget en el Centro de control. Las caídas activas se fijan en la Dynamic Island.</p>
                 </div>
-            </article>
-            <div class="features-grid features-grid-sm">
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>12 temas</h3>
-                        <p>Se incluyen Standard y tres temas retro. Fossil, Monolith, HAL y los demás se desbloquean con compras opcionales tipo propina dentro de la app.</p>
-                    </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/watch-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Complicaciones para Watch</h3>
+                    <p>Fija un servicio crítico en la esfera del reloj o deja que Smart Stack muestre los problemas activos automáticamente.</p>
                 </div>
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>Los datos de la app permanecen locales</h3>
-                        <p>La app no requiere registro ni incluye analíticas dentro de ella. Los servicios que sigues se quedan en tu dispositivo.</p>
-                    </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/cloud-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Mac como hub — iPhone de respaldo</h3>
+                    <p>El Mac es el hub más fiable: consulta cada 60 segundos y difunde los cambios de estado al iPhone, iPad, Watch y Vision Pro mediante iCloud. Si ningún Mac está en línea, tu iPhone actúa como publicador de respaldo para que los demás dispositivos sigan recibiendo alertas.</p>
                 </div>
-                <div class="feature-card feature-card-sm">
-                    <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
-                    <div>
-                        <h3>17 idiomas en la app</h3>
-                        <p>Inglés, alemán, francés, español, japonés, coreano, chino, portugués, ruso y más.</p>
-                    </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/monitor-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Vista de fiabilidad de alertas</h3>
+                    <p>Consulta de un vistazo si las alertas te llegarán realmente — latido del Mac, estado de la actualización en segundo plano, envío por CloudKit y cuándo verificó cada dispositivo.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/devices-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Todas las plataformas Apple</h3>
+                    <p>iPhone, iPad, barra de menús del Mac, Apple TV, Apple Watch y Vision Pro. Los servicios se sincronizan entre todos los dispositivos.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/lightning-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Detalles de incidentes</h3>
+                    <p>Componentes afectados, incidentes activos, mantenimiento programado y actualizaciones de la cronología — localizados a tu idioma.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/battery-charging-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Sondeo consciente de la batería</h3>
+                    <p>La actualización automática se adapta a la batería, el estado de alimentación y la temperatura. Cada minuto en Mac, 5–15 en iPhone, con actualización en segundo plano en iPad, Apple Watch, Vision Pro y Apple TV.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/palette-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>12 temas</h3>
+                    <p>Se incluyen Standard y tres temas retro. Fossil, Monolith, HAL y los demás se desbloquean con compras opcionales tipo propina dentro de la app.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/shield-check-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>Los datos de la app permanecen locales</h3>
+                    <p>La app no requiere registro ni incluye analíticas dentro de ella. Los servicios que sigues se quedan en tu dispositivo.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><img src="/assets/icons/translate-regular.svg" alt="" width="22" height="22" aria-hidden="true"></div>
+                <div>
+                    <h3>17 idiomas en la app</h3>
+                    <p>Inglés, alemán, francés, español, japonés, coreano, chino, portugués, ruso y más.</p>
                 </div>
             </div>
         </div>
