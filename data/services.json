@@ -123,7 +123,7 @@
     },
     {
       "name": "App Center",
-      "slug": "app-center",
+      "slug": "appcenter",
       "faviconDomain": "appcenter.ms",
       "statusUrl": "https://status.appcenter.ms",
       "homepageUrl": "https://appcenter.ms",
@@ -145,7 +145,7 @@
     },
     {
       "name": "Apple Services",
-      "slug": "apple-services",
+      "slug": "apple-system",
       "faviconDomain": "apple.com",
       "statusUrl": "https://www.apple.com/support/systemstatus/",
       "homepageUrl": "https://www.apple.com",
@@ -178,7 +178,7 @@
     },
     {
       "name": "AT&T",
-      "slug": "atandt",
+      "slug": "att",
       "faviconDomain": "att.com",
       "statusUrl": "https://att.statuspage.io",
       "homepageUrl": "https://www.att.com",
@@ -233,7 +233,7 @@
     },
     {
       "name": "Bell Canada",
-      "slug": "bell-canada",
+      "slug": "bell",
       "faviconDomain": "bell.ca",
       "statusUrl": "https://bell.statuspage.io",
       "homepageUrl": "https://www.bell.ca",
@@ -365,7 +365,7 @@
     },
     {
       "name": "Bunny CDN",
-      "slug": "bunny-cdn",
+      "slug": "bunnycdn",
       "faviconDomain": "bunny.net",
       "statusUrl": "https://status.bunny.net",
       "homepageUrl": "https://bunny.net",
@@ -387,13 +387,24 @@
     },
     {
       "name": "Cash App",
-      "slug": "cash-app",
+      "slug": "cashapp",
       "faviconDomain": "cash.app",
       "statusUrl": "https://status.cash.app",
       "homepageUrl": "https://cash.app",
       "statuspageApi": "https://status.cash.app/api/v2/summary.json",
       "categories": [
         "payments-commerce"
+      ]
+    },
+    {
+      "name": "Character.AI",
+      "slug": "character-ai",
+      "faviconDomain": "character.ai",
+      "statusUrl": "https://status.character.ai",
+      "homepageUrl": "https://character.ai",
+      "statuspageApi": "https://status.character.ai/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -464,7 +475,7 @@
     },
     {
       "name": "Cloudflare Zero Trust",
-      "slug": "cloudflare-zero-trust",
+      "slug": "cloudflare-security",
       "faviconDomain": "cloudflare.com",
       "statusUrl": "https://www.cloudflarestatus.com",
       "homepageUrl": "https://www.cloudflare.com/zero-trust/",
@@ -585,7 +596,7 @@
     },
     {
       "name": "Coinbase Exchange",
-      "slug": "coinbase-exchange",
+      "slug": "coinbase-ex",
       "faviconDomain": "exchange.coinbase.com",
       "statusUrl": "https://status.exchange.coinbase.com",
       "homepageUrl": "https://exchange.coinbase.com",
@@ -684,7 +695,7 @@
     },
     {
       "name": "dbt Cloud",
-      "slug": "dbt-cloud",
+      "slug": "dbt",
       "faviconDomain": "getdbt.com",
       "statusUrl": "https://status.getdbt.com",
       "homepageUrl": "https://www.getdbt.com",
@@ -794,7 +805,7 @@
     },
     {
       "name": "Dropbox Sign",
-      "slug": "dropbox-sign",
+      "slug": "dropboxsign",
       "faviconDomain": "sign.dropbox.com",
       "statusUrl": "https://status.hellosign.com",
       "homepageUrl": "https://sign.dropbox.com",
@@ -805,7 +816,7 @@
     },
     {
       "name": "Duo Security",
-      "slug": "duo-security",
+      "slug": "duo",
       "faviconDomain": "duo.com",
       "statusUrl": "https://status.duo.com",
       "homepageUrl": "https://duo.com",
@@ -816,7 +827,7 @@
     },
     {
       "name": "Elastic Cloud",
-      "slug": "elastic-cloud",
+      "slug": "elastic",
       "faviconDomain": "elastic.co",
       "statusUrl": "https://status.elastic.co",
       "homepageUrl": "https://www.elastic.co",
@@ -849,7 +860,7 @@
     },
     {
       "name": "Epic Games",
-      "slug": "epic-games",
+      "slug": "epicgames",
       "faviconDomain": "epicgames.com",
       "statusUrl": "https://status.epicgames.com",
       "homepageUrl": "https://www.epicgames.com",
@@ -871,7 +882,7 @@
     },
     {
       "name": "Fal.ai",
-      "slug": "falai",
+      "slug": "fal",
       "faviconDomain": "fal.ai",
       "statusUrl": "https://status.fal.ai",
       "homepageUrl": "https://fal.ai",
@@ -926,7 +937,7 @@
     },
     {
       "name": "Fly.io",
-      "slug": "flyio",
+      "slug": "fly",
       "faviconDomain": "fly.io",
       "statusUrl": "https://status.flyio.net",
       "homepageUrl": "https://fly.io",
@@ -970,7 +981,7 @@
     },
     {
       "name": "Gemini Exchange",
-      "slug": "gemini-exchange",
+      "slug": "gemini-ex",
       "faviconDomain": "gemini.com",
       "statusUrl": "https://status.gemini.com",
       "homepageUrl": "https://www.gemini.com",
@@ -1189,6 +1200,17 @@
       ]
     },
     {
+      "name": "Ideogram",
+      "slug": "ideogram",
+      "faviconDomain": "ideogram.ai",
+      "statusUrl": "https://status.ideogram.ai",
+      "homepageUrl": "https://ideogram.ai",
+      "statuspageApi": "https://status.ideogram.ai/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "Imgur",
       "slug": "imgur",
       "faviconDomain": "imgur.com",
@@ -1212,7 +1234,7 @@
     },
     {
       "name": "InfluxDB Cloud",
-      "slug": "influxdb-cloud",
+      "slug": "influxdb",
       "faviconDomain": "influxdata.com",
       "statusUrl": "https://status.influxdata.com",
       "homepageUrl": "https://www.influxdata.com",
@@ -1443,7 +1465,7 @@
     },
     {
       "name": "Maven Central",
-      "slug": "maven-central",
+      "slug": "mavencentral",
       "faviconDomain": "search.maven.org",
       "statusUrl": "https://status.maven.org",
       "homepageUrl": "https://search.maven.org",
@@ -1498,7 +1520,7 @@
     },
     {
       "name": "Monday.com",
-      "slug": "mondaycom",
+      "slug": "monday",
       "faviconDomain": "monday.com",
       "statusUrl": "https://status.monday.com",
       "homepageUrl": "https://monday.com",
@@ -1509,7 +1531,7 @@
     },
     {
       "name": "MongoDB Cloud",
-      "slug": "mongodb-cloud",
+      "slug": "mongodb",
       "faviconDomain": "mongodb.com",
       "statusUrl": "https://status.mongodb.com",
       "homepageUrl": "https://www.mongodb.com",
@@ -1542,7 +1564,7 @@
     },
     {
       "name": "New Relic",
-      "slug": "new-relic",
+      "slug": "newrelic",
       "faviconDomain": "newrelic.com",
       "statusUrl": "https://status.newrelic.com",
       "homepageUrl": "https://newrelic.com",
@@ -1630,7 +1652,7 @@
     },
     {
       "name": "Otter.ai",
-      "slug": "otterai",
+      "slug": "otter",
       "faviconDomain": "otter.ai",
       "statusUrl": "https://status.otter.ai",
       "homepageUrl": "https://otter.ai",
@@ -1641,7 +1663,7 @@
     },
     {
       "name": "Palo Alto Networks",
-      "slug": "palo-alto-networks",
+      "slug": "paloalto",
       "faviconDomain": "paloaltonetworks.com",
       "statusUrl": "https://status.paloaltonetworks.com",
       "homepageUrl": "https://www.paloaltonetworks.com",
@@ -1739,6 +1761,17 @@
       ]
     },
     {
+      "name": "Podium",
+      "slug": "podium",
+      "faviconDomain": "podium.com",
+      "statusUrl": "https://status.podium.com",
+      "homepageUrl": "https://www.podium.com",
+      "statuspageApi": null,
+      "categories": [
+        "communication"
+      ]
+    },
+    {
       "name": "Postman",
       "slug": "postman",
       "faviconDomain": "postman.com",
@@ -1802,6 +1835,17 @@
       "statuspageApi": "https://railway.statuspage.io/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
+      ]
+    },
+    {
+      "name": "Recraft",
+      "slug": "recraft",
+      "faviconDomain": "www.recraft.ai",
+      "statusUrl": "https://recraft.instatus.com",
+      "homepageUrl": "https://www.recraft.ai",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -1905,7 +1949,7 @@
     },
     {
       "name": "Sauce Labs",
-      "slug": "sauce-labs",
+      "slug": "saucelabs",
       "faviconDomain": "saucelabs.com",
       "statusUrl": "https://status.saucelabs.com",
       "homepageUrl": "https://saucelabs.com",
@@ -2037,7 +2081,7 @@
     },
     {
       "name": "Splunk Cloud",
-      "slug": "splunk-cloud",
+      "slug": "splunk",
       "faviconDomain": "splunk.com",
       "statusUrl": "https://status.splunkcloud.com",
       "homepageUrl": "https://www.splunk.com",
@@ -2048,7 +2092,7 @@
     },
     {
       "name": "Splunk On-Call",
-      "slug": "splunk-on-call",
+      "slug": "splunk-oncall",
       "faviconDomain": "splunk.com",
       "statusUrl": "https://status.victorops.com",
       "homepageUrl": "https://www.splunk.com/en_us/products/on-call.html",
@@ -2092,7 +2136,7 @@
     },
     {
       "name": "Stability AI",
-      "slug": "stability-ai",
+      "slug": "stability",
       "faviconDomain": "stability.ai",
       "statusUrl": "https://status.stability.ai",
       "homepageUrl": "https://stability.ai",
@@ -2168,6 +2212,17 @@
       ]
     },
     {
+      "name": "Synthesia",
+      "slug": "synthesia",
+      "faviconDomain": "www.synthesia.io",
+      "statusUrl": "https://status.synthesia.io",
+      "homepageUrl": "https://www.synthesia.io",
+      "statuspageApi": "https://status.synthesia.io/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "Tailscale",
       "slug": "tailscale",
       "faviconDomain": "tailscale.com",
@@ -2180,7 +2235,7 @@
     },
     {
       "name": "Travis CI",
-      "slug": "travis-ci",
+      "slug": "travisci",
       "faviconDomain": "travis-ci.com",
       "statusUrl": "https://www.traviscistatus.com",
       "homepageUrl": "https://www.travis-ci.com",
@@ -2377,6 +2432,28 @@
       ]
     },
     {
+      "name": "WHOOP",
+      "slug": "whoop",
+      "faviconDomain": "www.whoop.com",
+      "statusUrl": "https://status.whoop.com",
+      "homepageUrl": "https://www.whoop.com",
+      "statuspageApi": "https://status.whoop.com/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Windsurf",
+      "slug": "windsurf",
+      "faviconDomain": "windsurf.com",
+      "statusUrl": "https://status.windsurf.com",
+      "homepageUrl": "https://windsurf.com",
+      "statuspageApi": "https://status.windsurf.com/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "Wise",
       "slug": "wise",
       "faviconDomain": "wise.com",
@@ -2452,7 +2529,7 @@
         "aiven",
         "akamai",
         "aptible",
-        "bunny-cdn",
+        "bunnycdn",
         "clickhouse",
         "cloudflare",
         "cloudways",
@@ -2460,13 +2537,13 @@
         "confluent",
         "digitalocean",
         "dropbox",
-        "elastic-cloud",
-        "flyio",
+        "elastic",
+        "fly",
         "godaddy",
-        "influxdb-cloud",
+        "influxdb",
         "kinsta",
         "linode",
-        "mongodb-cloud",
+        "mongodb",
         "pantheon",
         "planetscale",
         "railway",
@@ -2484,7 +2561,7 @@
       "serviceSlugs": [
         "ably",
         "airbyte",
-        "app-center",
+        "appcenter",
         "bitbucket",
         "bitrise",
         "browserstack",
@@ -2499,7 +2576,7 @@
         "contentful",
         "convex",
         "cratesio",
-        "dbt-cloud",
+        "dbt",
         "deno",
         "doppler",
         "env0",
@@ -2515,10 +2592,10 @@
         "jfrog",
         "launchdarkly",
         "logrocket",
-        "maven-central",
+        "mavencentral",
         "mux",
         "netlify",
-        "new-relic",
+        "newrelic",
         "ngrok",
         "npm",
         "nuget",
@@ -2532,15 +2609,15 @@
         "retool",
         "rollbar",
         "rubygems",
-        "sauce-labs",
+        "saucelabs",
         "sentry",
         "snyk",
         "sourcegraph",
         "spacelift",
-        "splunk-cloud",
-        "splunk-on-call",
+        "splunk",
+        "splunk-oncall",
         "supabase",
-        "travis-ci",
+        "travisci",
         "upstash",
         "warp",
         "webflow"
@@ -2556,6 +2633,7 @@
         "front",
         "livekit",
         "matrix",
+        "podium",
         "slack",
         "twilio",
         "vonage",
@@ -2579,7 +2657,7 @@
         "coda",
         "datadog",
         "docusign",
-        "dropbox-sign",
+        "dropboxsign",
         "fathom",
         "figma",
         "fullstory",
@@ -2595,9 +2673,9 @@
         "make",
         "miro",
         "mixpanel",
-        "mondaycom",
+        "monday",
         "notion",
-        "otterai",
+        "otter",
         "sanity",
         "segment",
         "squarespace",
@@ -2617,13 +2695,13 @@
         "afterpay",
         "bitpay",
         "brex",
-        "cash-app",
+        "cashapp",
         "chime",
         "circle",
         "coinbase",
-        "coinbase-exchange",
+        "coinbase-ex",
         "doordash",
-        "gemini-exchange",
+        "gemini-ex",
         "kraken",
         "paypal",
         "plaid",
@@ -2640,7 +2718,7 @@
       "icon": "apple-logo-regular.svg",
       "serviceSlugs": [
         "apple-developer",
-        "apple-services"
+        "apple-system"
       ]
     },
     {
@@ -2678,19 +2756,25 @@
       "icon": "robot-regular.svg",
       "serviceSlugs": [
         "anthropic",
+        "character-ai",
         "cohere",
         "cursor",
         "deepseek",
         "elevenlabs",
-        "falai",
+        "fal",
         "groq",
+        "ideogram",
         "midjourney",
         "openai",
         "perplexity",
         "pinecone",
+        "recraft",
         "replicate",
         "runway",
-        "stability-ai"
+        "stability",
+        "synthesia",
+        "whoop",
+        "windsurf"
       ]
     },
     {
@@ -2726,7 +2810,7 @@
       "slug": "gaming",
       "icon": "game-controller-regular.svg",
       "serviceSlugs": [
-        "epic-games",
+        "epicgames",
         "fortnite",
         "unity"
       ]
@@ -2736,8 +2820,8 @@
       "slug": "telecom-isp",
       "icon": "wifi-high-regular.svg",
       "serviceSlugs": [
-        "atandt",
-        "bell-canada",
+        "att",
+        "bell",
         "cox",
         "starlink",
         "verizon",
@@ -2751,11 +2835,11 @@
       "serviceSlugs": [
         "1password",
         "auth0",
-        "cloudflare-zero-trust",
-        "duo-security",
+        "cloudflare-security",
+        "duo",
         "keeper",
         "lastpass",
-        "palo-alto-networks",
+        "paloalto",
         "proton",
         "semgrep",
         "stytch",
