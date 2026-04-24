@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-oH2i5PMcFTa1DSClglPLvmDnYavmVpqKnCBq1mhIKuA='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-hnyfJQho6U73ZxBNIRPcD2JzFr1dL0EeZI2blKzvWUo='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -56,7 +56,7 @@
       "name": "Vultyr servis durumunu ne sıklıkta kontrol eder?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac'te: şarja bağlıyken 60 saniyede bir. iPhone'da: her 5, 10 veya 15 dakikada bir (yapılandırılabilir), koşullar izin verdiğinde periyodik arka plan kontrolleriyle birlikte. Apple Watch'ta: 15 dakikada bir. Apple TV'de: 5 dakikada bir. Yoklama; pil seviyesi, güç durumu ve termal koşullara otomatik olarak uyum sağlar."
+        "text": "Mac'te: şarja bağlıyken en sık 60 saniyede bir (15 dakikaya kadar yapılandırılabilir). iPhone'da: her 5, 10 veya 15 dakikada bir (yapılandırılabilir), koşullar izin verdiğinde periyodik arka plan kontrolleriyle birlikte. Apple Watch'ta: 15 dakikada bir. Apple TV'de: 5 dakikada bir. Yoklama; pil seviyesi, güç durumu ve termal koşullara otomatik olarak uyum sağlar."
       }
     },
     {
@@ -64,7 +64,7 @@
       "name": "Cihazlar Arası Uyarılar nasıl çalışır?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Merkez Mac uygulamasıdır. Çalışır durumda tutun (menü çubuğunda veya tam pencerede) ve her 60 saniyede bir yoklama yapar. Bir durum değişikliği algılandığında, iCloud Anahtar-Değer Deposu'na hafif bir sinyal yazar; iPhone'unuz, iPad'iniz, Watch'ınız, Apple TV'niz ve Vision Pro'nuz değişikliği alır ve kendi yerel kontrolünü çalıştırır. Anahtar yok, jeton yok, kurulum yok — herhangi bir cihazdaki ayarlardan “Cihazlar Arası Uyarılar” seçeneğini etkinleştirmeniz yeter. Merkez görevi gören bir Mac olmadan, uyarılar iOS arka plan çalışmasına bağlı kalır ve gecikir ya da kaçırılır."
+        "text": "Merkez Mac uygulamasıdır. Çalışır durumda tutun (menü çubuğunda veya tam pencerede) ve en sık 60 saniyede bir yoklama yapar (15 dakikaya kadar yapılandırılabilir). Bir durum değişikliği algılandığında, iCloud Anahtar-Değer Deposu'na hafif bir sinyal yazar; iPhone'unuz, iPad'iniz, Watch'ınız, Apple TV'niz ve Vision Pro'nuz değişikliği alır ve kendi yerel kontrolünü çalıştırır. Anahtar yok, jeton yok, kurulum yok — herhangi bir cihazdaki ayarlardan “Cihazlar Arası Uyarılar” seçeneğini etkinleştirmeniz yeter. Merkez görevi gören bir Mac olmadan, uyarılar iOS arka plan çalışmasına bağlı kalır ve gecikir ya da kaçırılır."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Güvenilir uyarılar için Mac uygulamasına ihtiyacım var mı?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Evet — kesinlikle öneriyoruz. iOS arka plan çalışmasını kısıtlar, bu nedenle iPhone ve iPad yalnızca 5–15 dakikada bir kontrol edebilir (yapılandırılabilir) ve düşük pil, Düşük Güç Modu veya zayıf bağlantıda daha fazla geciktirebilir. Mac uygulaması sürekli yoklama yapar (şarja bağlıyken 60 saniyede bir) ve durum değişikliklerini iCloud üzerinden diğer cihazlarınıza yayınlar. Vultyr çalıştıran bir Mac olmadan iOS, watchOS ve tvOS uyarıları çalışmaya devam eder ama önemli ölçüde gecikebilir veya kaçırılabilir. Gerçek zamanlı izleme için Mac uygulamasını çalışır durumda tutun — menü çubuğunda çok az yer kaplar ve Vultyr'ın bu şekilde kullanılması amaçlanmıştır."
+        "text": "Evet — kesinlikle öneriyoruz. iOS arka plan çalışmasını kısıtlar, bu nedenle iPhone ve iPad yalnızca 5–15 dakikada bir kontrol edebilir (yapılandırılabilir) ve düşük pil, Düşük Güç Modu veya zayıf bağlantıda daha fazla geciktirebilir. Mac uygulaması en sık 60 saniyede bir yoklama yapar (15 dakikaya kadar yapılandırılabilir, şarja bağlıyken) ve durum değişikliklerini iCloud üzerinden diğer cihazlarınıza yayınlar. Vultyr çalıştıran bir Mac olmadan iOS, watchOS ve tvOS uyarıları çalışmaya devam eder ama önemli ölçüde gecikebilir veya kaçırılabilir. Gerçek zamanlı izleme için Mac uygulamasını çalışır durumda tutun — menü çubuğunda çok az yer kaplar ve Vultyr'ın bu şekilde kullanılması amaçlanmıştır."
       }
     },
     {
@@ -172,15 +172,15 @@
 
     <div class="faq">
         <h3>Vultyr servis durumunu ne sıklıkta kontrol eder?</h3>
-        <p>Mac'te: şarja bağlıyken 60 saniyede bir. iPhone'da: her 5, 10 veya 15 dakikada bir (yapılandırılabilir), koşullar izin verdiğinde periyodik arka plan kontrolleriyle birlikte. Apple Watch'ta: 15 dakikada bir. Apple TV'de: 5 dakikada bir. Yoklama; pil seviyesi, güç durumu ve termal koşullara otomatik olarak uyum sağlar.</p>
+        <p>Mac'te: şarja bağlıyken en sık 60 saniyede bir (15 dakikaya kadar yapılandırılabilir). iPhone'da: her 5, 10 veya 15 dakikada bir (yapılandırılabilir), koşullar izin verdiğinde periyodik arka plan kontrolleriyle birlikte. Apple Watch'ta: 15 dakikada bir. Apple TV'de: 5 dakikada bir. Yoklama; pil seviyesi, güç durumu ve termal koşullara otomatik olarak uyum sağlar.</p>
     </div>
     <div class="faq">
         <h3>Cihazlar Arası Uyarılar nasıl çalışır?</h3>
-        <p>Merkez Mac uygulamasıdır. Çalışır durumda tutun (menü çubuğunda veya tam pencerede) ve her 60 saniyede bir yoklama yapar. Bir durum değişikliği algılandığında, iCloud Anahtar-Değer Deposu'na hafif bir sinyal yazar; iPhone'unuz, iPad'iniz, Watch'ınız, Apple TV'niz ve Vision Pro'nuz değişikliği alır ve kendi yerel kontrolünü çalıştırır. Anahtar yok, jeton yok, kurulum yok — herhangi bir cihazdaki ayarlardan “Cihazlar Arası Uyarılar” seçeneğini etkinleştirmeniz yeter. Merkez görevi gören bir Mac olmadan, uyarılar iOS arka plan çalışmasına bağlı kalır ve gecikir ya da kaçırılır.</p>
+        <p>Merkez Mac uygulamasıdır. Çalışır durumda tutun (menü çubuğunda veya tam pencerede) ve en sık 60 saniyede bir yoklama yapar (15 dakikaya kadar yapılandırılabilir). Bir durum değişikliği algılandığında, iCloud Anahtar-Değer Deposu'na hafif bir sinyal yazar; iPhone'unuz, iPad'iniz, Watch'ınız, Apple TV'niz ve Vision Pro'nuz değişikliği alır ve kendi yerel kontrolünü çalıştırır. Anahtar yok, jeton yok, kurulum yok — herhangi bir cihazdaki ayarlardan “Cihazlar Arası Uyarılar” seçeneğini etkinleştirmeniz yeter. Merkez görevi gören bir Mac olmadan, uyarılar iOS arka plan çalışmasına bağlı kalır ve gecikir ya da kaçırılır.</p>
     </div>
     <div class="faq">
         <h3>Güvenilir uyarılar için Mac uygulamasına ihtiyacım var mı?</h3>
-        <p>Evet — kesinlikle öneriyoruz. iOS arka plan çalışmasını kısıtlar, bu nedenle iPhone ve iPad yalnızca 5–15 dakikada bir kontrol edebilir (yapılandırılabilir) ve düşük pil, Düşük Güç Modu veya zayıf bağlantıda daha fazla geciktirebilir. Mac uygulaması sürekli yoklama yapar (şarja bağlıyken 60 saniyede bir) ve durum değişikliklerini iCloud üzerinden diğer cihazlarınıza yayınlar. Vultyr çalıştıran bir Mac olmadan iOS, watchOS ve tvOS uyarıları çalışmaya devam eder ama önemli ölçüde gecikebilir veya kaçırılabilir. Gerçek zamanlı izleme için Mac uygulamasını çalışır durumda tutun — menü çubuğunda çok az yer kaplar ve Vultyr'ın bu şekilde kullanılması amaçlanmıştır.</p>
+        <p>Evet — kesinlikle öneriyoruz. iOS arka plan çalışmasını kısıtlar, bu nedenle iPhone ve iPad yalnızca 5–15 dakikada bir kontrol edebilir (yapılandırılabilir) ve düşük pil, Düşük Güç Modu veya zayıf bağlantıda daha fazla geciktirebilir. Mac uygulaması en sık 60 saniyede bir yoklama yapar (15 dakikaya kadar yapılandırılabilir, şarja bağlıyken) ve durum değişikliklerini iCloud üzerinden diğer cihazlarınıza yayınlar. Vultyr çalıştıran bir Mac olmadan iOS, watchOS ve tvOS uyarıları çalışmaya devam eder ama önemli ölçüde gecikebilir veya kaçırılabilir. Gerçek zamanlı izleme için Mac uygulamasını çalışır durumda tutun — menü çubuğunda çok az yer kaplar ve Vultyr'ın bu şekilde kullanılması amaçlanmıştır.</p>
     </div>
     <div class="faq">
         <h3>Vultyr, Siri ve Shortcuts ile çalışır mı?</h3>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-8E2YtzrysoA9OET8npEHa/2WOxWaZD8aL+dSt/ng6HE='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-xgv6T7zeSl8lpKxp5zlxrQ9qDx4YY3FEl27XY7Iy4V4='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -56,7 +56,7 @@
       "name": "Hur ofta kontrollerar vultyr tjänsternas status?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "På Mac: så ofta som var 60:e sekund när den är ansluten till ström. På iPhone: var 5:e, 10:e eller 15:e minut (kan konfigureras), med periodiska bakgrundskontroller när förhållandena tillåter. På Apple Watch: var 15:e minut. På Apple TV: var 5:e minut. Avsökningen anpassas automatiskt efter batterinivå, strömförsörjning och värmeförhållanden."
+        "text": "På Mac: så ofta som var 60:e sekund när den är ansluten till ström (kan ställas in upp till 15 min). På iPhone: var 5:e, 10:e eller 15:e minut (kan konfigureras), med periodiska bakgrundskontroller när förhållandena tillåter. På Apple Watch: var 15:e minut. På Apple TV: var 5:e minut. Avsökningen anpassas automatiskt efter batterinivå, strömförsörjning och värmeförhållanden."
       }
     },
     {
@@ -64,7 +64,7 @@
       "name": "Hur fungerar aviseringar mellan enheter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den var 60:e sekund. När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning — aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas."
+        "text": "Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den så ofta som var 60:e sekund (kan ställas in upp till 15 min). När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning — aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Behöver jag Mac-appen för tillförlitliga aviseringar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker kontinuerligt (var 60:e sekund när den är ansluten till ström) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång — den är liten i menyraden och är så Vultyr är avsedd att användas."
+        "text": "Ja — vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker så ofta som var 60:e sekund när den är ansluten till ström (kan ställas in upp till 15 min) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång — den är liten i menyraden och är så Vultyr är avsedd att användas."
       }
     },
     {
@@ -172,15 +172,15 @@
 
     <div class="faq">
         <h3>Hur ofta kontrollerar vultyr tjänsternas status?</h3>
-        <p>På Mac: så ofta som var 60:e sekund när den är ansluten till ström. På iPhone: var 5:e, 10:e eller 15:e minut (kan konfigureras), med periodiska bakgrundskontroller när förhållandena tillåter. På Apple Watch: var 15:e minut. På Apple TV: var 5:e minut. Avsökningen anpassas automatiskt efter batterinivå, strömförsörjning och värmeförhållanden.</p>
+        <p>På Mac: så ofta som var 60:e sekund när den är ansluten till ström (kan ställas in upp till 15 min). På iPhone: var 5:e, 10:e eller 15:e minut (kan konfigureras), med periodiska bakgrundskontroller när förhållandena tillåter. På Apple Watch: var 15:e minut. På Apple TV: var 5:e minut. Avsökningen anpassas automatiskt efter batterinivå, strömförsörjning och värmeförhållanden.</p>
     </div>
     <div class="faq">
         <h3>Hur fungerar aviseringar mellan enheter?</h3>
-        <p>Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den var 60:e sekund. När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning — aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas.</p>
+        <p>Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den så ofta som var 60:e sekund (kan ställas in upp till 15 min). När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning — aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas.</p>
     </div>
     <div class="faq">
         <h3>Behöver jag Mac-appen för tillförlitliga aviseringar?</h3>
-        <p>Ja — vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker kontinuerligt (var 60:e sekund när den är ansluten till ström) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång — den är liten i menyraden och är så Vultyr är avsedd att användas.</p>
+        <p>Ja — vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker så ofta som var 60:e sekund när den är ansluten till ström (kan ställas in upp till 15 min) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång — den är liten i menyraden och är så Vultyr är avsedd att användas.</p>
     </div>
     <div class="faq">
         <h3>Fungerar vultyr med Siri och Shortcuts?</h3>
