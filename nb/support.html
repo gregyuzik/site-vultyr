@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-yt2wjaaLdNqyR4x0LmNDvhmuXqvwsmWkYuZGkS2pgzg='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-umFwPOfhhMBI48w2F823YljUm48yTvpgvn86HJ7ZE3c='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -64,7 +64,7 @@
       "name": "Hvordan fungerer varsler mellom enheter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac-appen er navet. Hold den i gang (menylinje eller fullt vindu), så opprører den hvert 60. sekund. Når en statusendring oppdages, skriver den et lett signal til iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV og Vision Pro plukker opp endringen og kjører sin egen lokale sjekk. Ingen nøkler, ingen tokener, ingen oppsett — bare aktiver «Varsler mellom enheter» i innstillingene på en hvilken som helst enhet. Uten en Mac som nav er varsler avhengige av iOS-bakgrunnseksekvering, og vil bli forsinket eller gå tapt."
+        "text": "Mac-appen er navet. Hold den i gang (menylinje eller fullt vindu), så opprører den så ofte som hvert 60. sekund (kan stilles inn opp til 15 min). Når en statusendring oppdages, skriver den et lett signal til iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV og Vision Pro plukker opp endringen og kjører sin egen lokale sjekk. Ingen nøkler, ingen tokener, ingen oppsett — bare aktiver «Varsler mellom enheter» i innstillingene på en hvilken som helst enhet. Uten en Mac som nav er varsler avhengige av iOS-bakgrunnseksekvering, og vil bli forsinket eller gå tapt."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Trenger jeg Mac-appen for pålitelige varsler?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — vi anbefaler det sterkt. iOS begrenser bakgrunnseksekvering, så iPhone og iPad kan bare sjekke hvert 5.–15. minutt (konfigurerbart) og kan utsette ytterligere ved lavt batteri, strømsparingsmodus eller dårlig dekning. Mac-appen opprører kontinuerlig (hvert 60. sekund når den er koblet til strøm) og kringkaster statusendringer til de andre enhetene dine via iCloud. Uten en Mac som kjører Vultyr, fungerer varsler på iOS, watchOS og tvOS fortsatt, men kan bli betydelig forsinket eller gå tapt. For sanntidsovervåkning, hold Mac-appen i gang — den er bitte liten i menylinjen, og det er slik Vultyr er ment å brukes."
+        "text": "Ja — vi anbefaler det sterkt. iOS begrenser bakgrunnseksekvering, så iPhone og iPad kan bare sjekke hvert 5.–15. minutt (konfigurerbart) og kan utsette ytterligere ved lavt batteri, strømsparingsmodus eller dårlig dekning. Mac-appen opprører så ofte som hvert 60. sekund når den er koblet til strøm (kan stilles inn opp til 15 min) og kringkaster statusendringer til de andre enhetene dine via iCloud. Uten en Mac som kjører Vultyr, fungerer varsler på iOS, watchOS og tvOS fortsatt, men kan bli betydelig forsinket eller gå tapt. For sanntidsovervåkning, hold Mac-appen i gang — den er bitte liten i menylinjen, og det er slik Vultyr er ment å brukes."
       }
     },
     {
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>Hvordan fungerer varsler mellom enheter?</h3>
-        <p>Mac-appen er navet. Hold den i gang (menylinje eller fullt vindu), så opprører den hvert 60. sekund. Når en statusendring oppdages, skriver den et lett signal til iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV og Vision Pro plukker opp endringen og kjører sin egen lokale sjekk. Ingen nøkler, ingen tokener, ingen oppsett — bare aktiver «Varsler mellom enheter» i innstillingene på en hvilken som helst enhet. Uten en Mac som nav er varsler avhengige av iOS-bakgrunnseksekvering, og vil bli forsinket eller gå tapt.</p>
+        <p>Mac-appen er navet. Hold den i gang (menylinje eller fullt vindu), så opprører den så ofte som hvert 60. sekund (kan stilles inn opp til 15 min). Når en statusendring oppdages, skriver den et lett signal til iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV og Vision Pro plukker opp endringen og kjører sin egen lokale sjekk. Ingen nøkler, ingen tokener, ingen oppsett — bare aktiver «Varsler mellom enheter» i innstillingene på en hvilken som helst enhet. Uten en Mac som nav er varsler avhengige av iOS-bakgrunnseksekvering, og vil bli forsinket eller gå tapt.</p>
     </div>
     <div class="faq">
         <h3>Trenger jeg Mac-appen for pålitelige varsler?</h3>
-        <p>Ja — vi anbefaler det sterkt. iOS begrenser bakgrunnseksekvering, så iPhone og iPad kan bare sjekke hvert 5.–15. minutt (konfigurerbart) og kan utsette ytterligere ved lavt batteri, strømsparingsmodus eller dårlig dekning. Mac-appen opprører kontinuerlig (hvert 60. sekund når den er koblet til strøm) og kringkaster statusendringer til de andre enhetene dine via iCloud. Uten en Mac som kjører Vultyr, fungerer varsler på iOS, watchOS og tvOS fortsatt, men kan bli betydelig forsinket eller gå tapt. For sanntidsovervåkning, hold Mac-appen i gang — den er bitte liten i menylinjen, og det er slik Vultyr er ment å brukes.</p>
+        <p>Ja — vi anbefaler det sterkt. iOS begrenser bakgrunnseksekvering, så iPhone og iPad kan bare sjekke hvert 5.–15. minutt (konfigurerbart) og kan utsette ytterligere ved lavt batteri, strømsparingsmodus eller dårlig dekning. Mac-appen opprører så ofte som hvert 60. sekund når den er koblet til strøm (kan stilles inn opp til 15 min) og kringkaster statusendringer til de andre enhetene dine via iCloud. Uten en Mac som kjører Vultyr, fungerer varsler på iOS, watchOS og tvOS fortsatt, men kan bli betydelig forsinket eller gå tapt. For sanntidsovervåkning, hold Mac-appen i gang — den er bitte liten i menylinjen, og det er slik Vultyr er ment å brukes.</p>
     </div>
     <div class="faq">
         <h3>Fungerer vultyr med Siri og Shortcuts?</h3>

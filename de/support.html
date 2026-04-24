@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-2AjnKga+rr3X9MYp9LVBOBxIUgjr5M4IKaUzBGDXUO0='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-cKdpGcQqpOvFv8dOLczWYlfIm1d8hpaWS5P/myNSEVc='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -64,7 +64,7 @@
       "name": "Wie funktionieren geräteübergreifende Benachrichtigungen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Die Mac-App ist die Zentrale. Lass sie laufen (Menüleiste oder Vollfenster), dann fragt sie alle 60 Sekunden ab. Wird eine Statusänderung erkannt, schreibt sie ein leichtes Signal in iCloud Key-Value Store; dein iPhone, iPad, Watch, Apple TV und Vision Pro greifen die Änderung auf und führen eine eigene lokale Prüfung durch. Keine Schlüssel, keine Tokens, keine Einrichtung — aktiviere einfach „Geräteübergreifende Benachrichtigungen“ in den Einstellungen auf einem beliebigen Gerät. Ohne einen Mac als Zentrale hängen Benachrichtigungen von der iOS-Hintergrundausführung ab und werden verzögert oder verpasst."
+        "text": "Die Mac-App ist die Zentrale. Lass sie laufen (Menüleiste oder Vollfenster), dann fragt sie bis zu alle 60 Sekunden ab (konfigurierbar bis 15 Min). Wird eine Statusänderung erkannt, schreibt sie ein leichtes Signal in iCloud Key-Value Store; dein iPhone, iPad, Watch, Apple TV und Vision Pro greifen die Änderung auf und führen eine eigene lokale Prüfung durch. Keine Schlüssel, keine Tokens, keine Einrichtung — aktiviere einfach „Geräteübergreifende Benachrichtigungen“ in den Einstellungen auf einem beliebigen Gerät. Ohne einen Mac als Zentrale hängen Benachrichtigungen von der iOS-Hintergrundausführung ab und werden verzögert oder verpasst."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Brauche ich die Mac-App für zuverlässige Benachrichtigungen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — wir empfehlen sie dringend. iOS begrenzt die Hintergrundausführung, sodass iPhone und iPad nur alle 5 bis 15 Minuten prüfen können (konfigurierbar) und bei niedrigem Akku, Stromsparmodus oder schlechter Verbindung weiter verzögern können. Die Mac-App fragt kontinuierlich ab (alle 60 Sekunden am Stromnetz) und sendet Statusänderungen per iCloud an deine anderen Geräte. Ohne einen Mac, der Vultyr ausführt, funktionieren Benachrichtigungen auf iOS, watchOS und tvOS zwar weiterhin, können aber deutlich verzögert oder verpasst werden. Für Echtzeit-Monitoring lass die Mac-App laufen — sie ist winzig in der Menüleiste und so ist Vultyr gedacht."
+        "text": "Ja — wir empfehlen sie dringend. iOS begrenzt die Hintergrundausführung, sodass iPhone und iPad nur alle 5 bis 15 Minuten prüfen können (konfigurierbar) und bei niedrigem Akku, Stromsparmodus oder schlechter Verbindung weiter verzögern können. Die Mac-App fragt bis zu alle 60 Sekunden am Stromnetz ab (konfigurierbar bis 15 Min) und sendet Statusänderungen per iCloud an deine anderen Geräte. Ohne einen Mac, der Vultyr ausführt, funktionieren Benachrichtigungen auf iOS, watchOS und tvOS zwar weiterhin, können aber deutlich verzögert oder verpasst werden. Für Echtzeit-Monitoring lass die Mac-App laufen — sie ist winzig in der Menüleiste und so ist Vultyr gedacht."
       }
     },
     {
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>Wie funktionieren geräteübergreifende Benachrichtigungen?</h3>
-        <p>Die Mac-App ist die Zentrale. Lass sie laufen (Menüleiste oder Vollfenster), dann fragt sie alle 60 Sekunden ab. Wird eine Statusänderung erkannt, schreibt sie ein leichtes Signal in iCloud Key-Value Store; dein iPhone, iPad, Watch, Apple TV und Vision Pro greifen die Änderung auf und führen eine eigene lokale Prüfung durch. Keine Schlüssel, keine Tokens, keine Einrichtung — aktiviere einfach „Geräteübergreifende Benachrichtigungen“ in den Einstellungen auf einem beliebigen Gerät. Ohne einen Mac als Zentrale hängen Benachrichtigungen von der iOS-Hintergrundausführung ab und werden verzögert oder verpasst.</p>
+        <p>Die Mac-App ist die Zentrale. Lass sie laufen (Menüleiste oder Vollfenster), dann fragt sie bis zu alle 60 Sekunden ab (konfigurierbar bis 15 Min). Wird eine Statusänderung erkannt, schreibt sie ein leichtes Signal in iCloud Key-Value Store; dein iPhone, iPad, Watch, Apple TV und Vision Pro greifen die Änderung auf und führen eine eigene lokale Prüfung durch. Keine Schlüssel, keine Tokens, keine Einrichtung — aktiviere einfach „Geräteübergreifende Benachrichtigungen“ in den Einstellungen auf einem beliebigen Gerät. Ohne einen Mac als Zentrale hängen Benachrichtigungen von der iOS-Hintergrundausführung ab und werden verzögert oder verpasst.</p>
     </div>
     <div class="faq">
         <h3>Brauche ich die Mac-App für zuverlässige Benachrichtigungen?</h3>
-        <p>Ja — wir empfehlen sie dringend. iOS begrenzt die Hintergrundausführung, sodass iPhone und iPad nur alle 5 bis 15 Minuten prüfen können (konfigurierbar) und bei niedrigem Akku, Stromsparmodus oder schlechter Verbindung weiter verzögern können. Die Mac-App fragt kontinuierlich ab (alle 60 Sekunden am Stromnetz) und sendet Statusänderungen per iCloud an deine anderen Geräte. Ohne einen Mac, der Vultyr ausführt, funktionieren Benachrichtigungen auf iOS, watchOS und tvOS zwar weiterhin, können aber deutlich verzögert oder verpasst werden. Für Echtzeit-Monitoring lass die Mac-App laufen — sie ist winzig in der Menüleiste und so ist Vultyr gedacht.</p>
+        <p>Ja — wir empfehlen sie dringend. iOS begrenzt die Hintergrundausführung, sodass iPhone und iPad nur alle 5 bis 15 Minuten prüfen können (konfigurierbar) und bei niedrigem Akku, Stromsparmodus oder schlechter Verbindung weiter verzögern können. Die Mac-App fragt bis zu alle 60 Sekunden am Stromnetz ab (konfigurierbar bis 15 Min) und sendet Statusänderungen per iCloud an deine anderen Geräte. Ohne einen Mac, der Vultyr ausführt, funktionieren Benachrichtigungen auf iOS, watchOS und tvOS zwar weiterhin, können aber deutlich verzögert oder verpasst werden. Für Echtzeit-Monitoring lass die Mac-App laufen — sie ist winzig in der Menüleiste und so ist Vultyr gedacht.</p>
     </div>
     <div class="faq">
         <h3>Funktioniert Vultyr mit Siri und Shortcuts?</h3>

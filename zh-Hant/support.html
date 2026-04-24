@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-hsH5ITJj0z3S2UL+Z/lpKRvkLTsLA9Swba3CVKgSmk0='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-uIJRMxrnwboJ58hydXgrOZNahQTVUy4gf8xyGTYLARw='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -64,7 +64,7 @@
       "name": "跨裝置通知如何運作?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac 應用程式是中樞。讓它持續執行(選單列或完整視窗皆可),它會每 60 秒輪詢一次。偵測到狀態變更時,它會寫入一個輕量訊號至 iCloud Key-Value Store;您的 iPhone、iPad、Watch、Apple TV 與 Vision Pro 會接收此變更並各自執行本機檢查。無需金鑰、無需權杖、無需設定 — 只要在任一裝置的設定中啟用「跨裝置通知」即可。若沒有 Mac 擔任中樞,通知將仰賴 iOS 背景執行,會被延遲或錯過。"
+        "text": "Mac 應用程式是中樞。讓它持續執行(選單列或完整視窗皆可),它會最快每 60 秒輪詢一次（可設定至 15 分鐘）。偵測到狀態變更時,它會寫入一個輕量訊號至 iCloud Key-Value Store;您的 iPhone、iPad、Watch、Apple TV 與 Vision Pro 會接收此變更並各自執行本機檢查。無需金鑰、無需權杖、無需設定 — 只要在任一裝置的設定中啟用「跨裝置通知」即可。若沒有 Mac 擔任中樞,通知將仰賴 iOS 背景執行,會被延遲或錯過。"
       }
     },
     {
@@ -176,7 +176,7 @@
     </div>
     <div class="faq">
         <h3>跨裝置通知如何運作?</h3>
-        <p>Mac 應用程式是中樞。讓它持續執行(選單列或完整視窗皆可),它會每 60 秒輪詢一次。偵測到狀態變更時,它會寫入一個輕量訊號至 iCloud Key-Value Store;您的 iPhone、iPad、Watch、Apple TV 與 Vision Pro 會接收此變更並各自執行本機檢查。無需金鑰、無需權杖、無需設定 — 只要在任一裝置的設定中啟用「跨裝置通知」即可。若沒有 Mac 擔任中樞,通知將仰賴 iOS 背景執行,會被延遲或錯過。</p>
+        <p>Mac 應用程式是中樞。讓它持續執行(選單列或完整視窗皆可),它會最快每 60 秒輪詢一次（可設定至 15 分鐘）。偵測到狀態變更時,它會寫入一個輕量訊號至 iCloud Key-Value Store;您的 iPhone、iPad、Watch、Apple TV 與 Vision Pro 會接收此變更並各自執行本機檢查。無需金鑰、無需權杖、無需設定 — 只要在任一裝置的設定中啟用「跨裝置通知」即可。若沒有 Mac 擔任中樞,通知將仰賴 iOS 背景執行,會被延遲或錯過。</p>
     </div>
     <div class="faq">
         <h3>我需要 Mac 應用程式才能取得可靠的通知嗎?</h3>

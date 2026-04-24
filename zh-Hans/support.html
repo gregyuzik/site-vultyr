@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-uTxpIOc14BfJl3FtGPfQQizDm2L0iwIQykuxGzx95BE='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-QklwudNtegADFkB0Kix2U4hSxtdlYA41mYo+JN895hM='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -64,7 +64,7 @@
       "name": "跨设备提醒是如何工作的?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac 应用是枢纽。让它保持运行(菜单栏或完整窗口),它会每 60 秒轮询一次。一旦检测到状态变化,它会向 iCloud Key-Value Store 写入一个轻量信号;您的 iPhone、iPad、Watch、Apple TV 和 Vision Pro 会接收到该变化并各自执行本地检查。无需密钥、令牌或配置 —— 只需在任一设备的设置中启用「跨设备提醒」。如果没有 Mac 作为枢纽,提醒将依赖 iOS 的后台执行,可能被延迟或遗漏。"
+        "text": "Mac 应用是枢纽。让它保持运行(菜单栏或完整窗口),它会最快每 60 秒轮询一次（可配置至 15 分钟）。一旦检测到状态变化,它会向 iCloud Key-Value Store 写入一个轻量信号;您的 iPhone、iPad、Watch、Apple TV 和 Vision Pro 会接收到该变化并各自执行本地检查。无需密钥、令牌或配置 —— 只需在任一设备的设置中启用「跨设备提醒」。如果没有 Mac 作为枢纽,提醒将依赖 iOS 的后台执行,可能被延迟或遗漏。"
       }
     },
     {
@@ -176,7 +176,7 @@
     </div>
     <div class="faq">
         <h3>跨设备提醒是如何工作的?</h3>
-        <p>Mac 应用是枢纽。让它保持运行(菜单栏或完整窗口),它会每 60 秒轮询一次。一旦检测到状态变化,它会向 iCloud Key-Value Store 写入一个轻量信号;您的 iPhone、iPad、Watch、Apple TV 和 Vision Pro 会接收到该变化并各自执行本地检查。无需密钥、令牌或配置 —— 只需在任一设备的设置中启用「跨设备提醒」。如果没有 Mac 作为枢纽,提醒将依赖 iOS 的后台执行,可能被延迟或遗漏。</p>
+        <p>Mac 应用是枢纽。让它保持运行(菜单栏或完整窗口),它会最快每 60 秒轮询一次（可配置至 15 分钟）。一旦检测到状态变化,它会向 iCloud Key-Value Store 写入一个轻量信号;您的 iPhone、iPad、Watch、Apple TV 和 Vision Pro 会接收到该变化并各自执行本地检查。无需密钥、令牌或配置 —— 只需在任一设备的设置中启用「跨设备提醒」。如果没有 Mac 作为枢纽,提醒将依赖 iOS 的后台执行,可能被延迟或遗漏。</p>
     </div>
     <div class="faq">
         <h3>要获得可靠的提醒,是否必须使用 Mac 应用?</h3>

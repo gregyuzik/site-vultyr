@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-FjKFEbdhWLpW+QHB/gD2tQZlbN5wIObmqRe0EnVyrt0='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-3i0MrHJep+MXKWkJbUw6LEpAv2erFhg3vsOgPKeTP3U='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -64,7 +64,7 @@
       "name": "Comment fonctionnent les alertes entre appareils ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "L’app Mac est le hub. Gardez-la en fonctionnement (barre de menus ou fenêtre pleine) et elle interroge toutes les 60 secondes. Lorsqu’un changement d’état est détecté, elle écrit un signal léger dans l’iCloud Key-Value Store ; vos iPhone, iPad, Watch, Apple TV et Vision Pro captent le changement et exécutent leur propre vérification locale. Aucune clé, aucun jeton, aucune configuration — activez simplement « Alertes entre appareils » dans les réglages sur n’importe quel appareil. Sans un Mac jouant le rôle de hub, les alertes reposent sur l’exécution en arrière-plan d’iOS et seront retardées ou manquées."
+        "text": "L’app Mac est le hub. Gardez-la en fonctionnement (barre de menus ou fenêtre pleine) et elle interroge aussi souvent que toutes les 60 secondes (configurable jusqu’à 15 min). Lorsqu’un changement d’état est détecté, elle écrit un signal léger dans l’iCloud Key-Value Store ; vos iPhone, iPad, Watch, Apple TV et Vision Pro captent le changement et exécutent leur propre vérification locale. Aucune clé, aucun jeton, aucune configuration — activez simplement « Alertes entre appareils » dans les réglages sur n’importe quel appareil. Sans un Mac jouant le rôle de hub, les alertes reposent sur l’exécution en arrière-plan d’iOS et seront retardées ou manquées."
       }
     },
     {
@@ -176,7 +176,7 @@
     </div>
     <div class="faq">
         <h3>Comment fonctionnent les alertes entre appareils ?</h3>
-        <p>L’app Mac est le hub. Gardez-la en fonctionnement (barre de menus ou fenêtre pleine) et elle interroge toutes les 60 secondes. Lorsqu’un changement d’état est détecté, elle écrit un signal léger dans l’iCloud Key-Value Store ; vos iPhone, iPad, Watch, Apple TV et Vision Pro captent le changement et exécutent leur propre vérification locale. Aucune clé, aucun jeton, aucune configuration — activez simplement « Alertes entre appareils » dans les réglages sur n’importe quel appareil. Sans un Mac jouant le rôle de hub, les alertes reposent sur l’exécution en arrière-plan d’iOS et seront retardées ou manquées.</p>
+        <p>L’app Mac est le hub. Gardez-la en fonctionnement (barre de menus ou fenêtre pleine) et elle interroge aussi souvent que toutes les 60 secondes (configurable jusqu’à 15 min). Lorsqu’un changement d’état est détecté, elle écrit un signal léger dans l’iCloud Key-Value Store ; vos iPhone, iPad, Watch, Apple TV et Vision Pro captent le changement et exécutent leur propre vérification locale. Aucune clé, aucun jeton, aucune configuration — activez simplement « Alertes entre appareils » dans les réglages sur n’importe quel appareil. Sans un Mac jouant le rôle de hub, les alertes reposent sur l’exécution en arrière-plan d’iOS et seront retardées ou manquées.</p>
     </div>
     <div class="faq">
         <h3>Ai-je besoin de l’app Mac pour des alertes fiables ?</h3>

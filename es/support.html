@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-57jnrxuXzxtQsE3xuPNUkYQyUR3kA9wq36RKFEc9n3I='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-OA5wSHM6VNHxR2BdD2JvM3ECvqzzXC1NQQ8YoTmppEk='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -64,7 +64,7 @@
       "name": "¿Cómo funcionan las alertas entre dispositivos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "La app de Mac es el centro. Mantenla en ejecución (en la barra de menús o en ventana completa) y sondeará cada 60 segundos. Cuando detecta un cambio de estado, escribe una señal ligera en iCloud Key-Value Store; tu iPhone, iPad, Watch, Apple TV y Vision Pro captan el cambio y ejecutan su propia comprobación local. Sin claves, sin tokens, sin configuración — solo activa “Alertas entre dispositivos” en los ajustes desde cualquier dispositivo. Sin un Mac actuando como centro, las alertas dependen de la ejecución en segundo plano de iOS y se retrasarán o se perderán."
+        "text": "La app de Mac es el centro. Mantenla en ejecución (en la barra de menús o en ventana completa) y sondeará tan a menudo como cada 60 segundos (configurable hasta 15 min). Cuando detecta un cambio de estado, escribe una señal ligera en iCloud Key-Value Store; tu iPhone, iPad, Watch, Apple TV y Vision Pro captan el cambio y ejecutan su propia comprobación local. Sin claves, sin tokens, sin configuración — solo activa “Alertas entre dispositivos” en los ajustes desde cualquier dispositivo. Sin un Mac actuando como centro, las alertas dependen de la ejecución en segundo plano de iOS y se retrasarán o se perderán."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "¿Necesito la app de Mac para alertas fiables?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí — la recomendamos encarecidamente. iOS limita la ejecución en segundo plano, por lo que iPhone y iPad solo pueden comprobar cada 5-15 minutos (configurable) y pueden aplazarse aún más con batería baja, Modo de bajo consumo o conectividad deficiente. La app de Mac sondea continuamente (cada 60 segundos cuando está conectada a la corriente) y difunde los cambios de estado a tus demás dispositivos mediante iCloud. Sin un Mac ejecutando Vultyr, las alertas en iOS, watchOS y tvOS siguen funcionando, pero pueden retrasarse o perderse notablemente. Para un monitoreo en tiempo real, mantén la app de Mac en ejecución — es minúscula en la barra de menús y es como se supone que hay que usar Vultyr."
+        "text": "Sí — la recomendamos encarecidamente. iOS limita la ejecución en segundo plano, por lo que iPhone y iPad solo pueden comprobar cada 5-15 minutos (configurable) y pueden aplazarse aún más con batería baja, Modo de bajo consumo o conectividad deficiente. La app de Mac sondea tan a menudo como cada 60 segundos cuando está conectada a la corriente (configurable hasta 15 min) y difunde los cambios de estado a tus demás dispositivos mediante iCloud. Sin un Mac ejecutando Vultyr, las alertas en iOS, watchOS y tvOS siguen funcionando, pero pueden retrasarse o perderse notablemente. Para un monitoreo en tiempo real, mantén la app de Mac en ejecución — es minúscula en la barra de menús y es como se supone que hay que usar Vultyr."
       }
     },
     {
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>¿Cómo funcionan las alertas entre dispositivos?</h3>
-        <p>La app de Mac es el centro. Mantenla en ejecución (en la barra de menús o en ventana completa) y sondeará cada 60 segundos. Cuando detecta un cambio de estado, escribe una señal ligera en iCloud Key-Value Store; tu iPhone, iPad, Watch, Apple TV y Vision Pro captan el cambio y ejecutan su propia comprobación local. Sin claves, sin tokens, sin configuración — solo activa “Alertas entre dispositivos” en los ajustes desde cualquier dispositivo. Sin un Mac actuando como centro, las alertas dependen de la ejecución en segundo plano de iOS y se retrasarán o se perderán.</p>
+        <p>La app de Mac es el centro. Mantenla en ejecución (en la barra de menús o en ventana completa) y sondeará tan a menudo como cada 60 segundos (configurable hasta 15 min). Cuando detecta un cambio de estado, escribe una señal ligera en iCloud Key-Value Store; tu iPhone, iPad, Watch, Apple TV y Vision Pro captan el cambio y ejecutan su propia comprobación local. Sin claves, sin tokens, sin configuración — solo activa “Alertas entre dispositivos” en los ajustes desde cualquier dispositivo. Sin un Mac actuando como centro, las alertas dependen de la ejecución en segundo plano de iOS y se retrasarán o se perderán.</p>
     </div>
     <div class="faq">
         <h3>¿Necesito la app de Mac para alertas fiables?</h3>
-        <p>Sí — la recomendamos encarecidamente. iOS limita la ejecución en segundo plano, por lo que iPhone y iPad solo pueden comprobar cada 5-15 minutos (configurable) y pueden aplazarse aún más con batería baja, Modo de bajo consumo o conectividad deficiente. La app de Mac sondea continuamente (cada 60 segundos cuando está conectada a la corriente) y difunde los cambios de estado a tus demás dispositivos mediante iCloud. Sin un Mac ejecutando Vultyr, las alertas en iOS, watchOS y tvOS siguen funcionando, pero pueden retrasarse o perderse notablemente. Para un monitoreo en tiempo real, mantén la app de Mac en ejecución — es minúscula en la barra de menús y es como se supone que hay que usar Vultyr.</p>
+        <p>Sí — la recomendamos encarecidamente. iOS limita la ejecución en segundo plano, por lo que iPhone y iPad solo pueden comprobar cada 5-15 minutos (configurable) y pueden aplazarse aún más con batería baja, Modo de bajo consumo o conectividad deficiente. La app de Mac sondea tan a menudo como cada 60 segundos cuando está conectada a la corriente (configurable hasta 15 min) y difunde los cambios de estado a tus demás dispositivos mediante iCloud. Sin un Mac ejecutando Vultyr, las alertas en iOS, watchOS y tvOS siguen funcionando, pero pueden retrasarse o perderse notablemente. Para un monitoreo en tiempo real, mantén la app de Mac en ejecución — es minúscula en la barra de menús y es como se supone que hay que usar Vultyr.</p>
     </div>
     <div class="faq">
         <h3>¿Vultyr funciona con Siri y Shortcuts?</h3>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-wXq58riHjAiTlKbbcmI2tJTad2ZuuzmFWESYnDzKPb8='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-h7nnDViz8MNqCOkhbLsifJhWJ8tpH6iPvHOfPCC/Z68='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -64,7 +64,7 @@
       "name": "Hvordan fungerer underretninger på tværs af enheder?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac-appen er centralen. Hold den kørende (i menubjælken eller som fuldt vindue), og den afstemmer hvert 60. sekund. Når en statusændring opdages, skriver den et let signal til iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV og Vision Pro opfanger ændringen og kører deres eget lokale tjek. Ingen nøgler, ingen tokens, ingen opsætning — slå blot »Underretninger på tværs af enheder« til i indstillingerne på en vilkårlig enhed. Uden en Mac som central er underretninger afhængige af iOS' baggrundsafvikling og vil blive forsinket eller gå tabt."
+        "text": "Mac-appen er centralen. Hold den kørende (i menubjælken eller som fuldt vindue), og den afstemmer så ofte som hvert 60. sekund (kan indstilles op til 15 min). Når en statusændring opdages, skriver den et let signal til iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV og Vision Pro opfanger ændringen og kører deres eget lokale tjek. Ingen nøgler, ingen tokens, ingen opsætning — slå blot »Underretninger på tværs af enheder« til i indstillingerne på en vilkårlig enhed. Uden en Mac som central er underretninger afhængige af iOS' baggrundsafvikling og vil blive forsinket eller gå tabt."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Har jeg brug for Mac-appen for at få pålidelige underretninger?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — vi anbefaler det kraftigt. iOS begrænser baggrundsafvikling, så iPhone og iPad kan kun tjekke hvert 5.-15. minut (kan indstilles) og kan udskyde yderligere ved lavt batteri, Low Power Mode eller dårlig forbindelse. Mac-appen afstemmer løbende (hvert 60. sekund, når enheden er tilsluttet strøm) og sender statusændringer til dine andre enheder via iCloud. Uden en Mac, der kører Vultyr, fungerer underretninger på iOS, watchOS og tvOS stadig, men de kan være væsentligt forsinkede eller gå tabt. For realtidsovervågning bør du holde Mac-appen kørende — den er minimal i menubjælken, og det er sådan, Vultyr er tænkt til at blive brugt."
+        "text": "Ja — vi anbefaler det kraftigt. iOS begrænser baggrundsafvikling, så iPhone og iPad kan kun tjekke hvert 5.-15. minut (kan indstilles) og kan udskyde yderligere ved lavt batteri, Low Power Mode eller dårlig forbindelse. Mac-appen afstemmer så ofte som hvert 60. sekund, når enheden er tilsluttet strøm (kan indstilles op til 15 min) og sender statusændringer til dine andre enheder via iCloud. Uden en Mac, der kører Vultyr, fungerer underretninger på iOS, watchOS og tvOS stadig, men de kan være væsentligt forsinkede eller gå tabt. For realtidsovervågning bør du holde Mac-appen kørende — den er minimal i menubjælken, og det er sådan, Vultyr er tænkt til at blive brugt."
       }
     },
     {
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>Hvordan fungerer underretninger på tværs af enheder?</h3>
-        <p>Mac-appen er centralen. Hold den kørende (i menubjælken eller som fuldt vindue), og den afstemmer hvert 60. sekund. Når en statusændring opdages, skriver den et let signal til iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV og Vision Pro opfanger ændringen og kører deres eget lokale tjek. Ingen nøgler, ingen tokens, ingen opsætning — slå blot »Underretninger på tværs af enheder« til i indstillingerne på en vilkårlig enhed. Uden en Mac som central er underretninger afhængige af iOS' baggrundsafvikling og vil blive forsinket eller gå tabt.</p>
+        <p>Mac-appen er centralen. Hold den kørende (i menubjælken eller som fuldt vindue), og den afstemmer så ofte som hvert 60. sekund (kan indstilles op til 15 min). Når en statusændring opdages, skriver den et let signal til iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV og Vision Pro opfanger ændringen og kører deres eget lokale tjek. Ingen nøgler, ingen tokens, ingen opsætning — slå blot »Underretninger på tværs af enheder« til i indstillingerne på en vilkårlig enhed. Uden en Mac som central er underretninger afhængige af iOS' baggrundsafvikling og vil blive forsinket eller gå tabt.</p>
     </div>
     <div class="faq">
         <h3>Har jeg brug for Mac-appen for at få pålidelige underretninger?</h3>
-        <p>Ja — vi anbefaler det kraftigt. iOS begrænser baggrundsafvikling, så iPhone og iPad kan kun tjekke hvert 5.-15. minut (kan indstilles) og kan udskyde yderligere ved lavt batteri, Low Power Mode eller dårlig forbindelse. Mac-appen afstemmer løbende (hvert 60. sekund, når enheden er tilsluttet strøm) og sender statusændringer til dine andre enheder via iCloud. Uden en Mac, der kører Vultyr, fungerer underretninger på iOS, watchOS og tvOS stadig, men de kan være væsentligt forsinkede eller gå tabt. For realtidsovervågning bør du holde Mac-appen kørende — den er minimal i menubjælken, og det er sådan, Vultyr er tænkt til at blive brugt.</p>
+        <p>Ja — vi anbefaler det kraftigt. iOS begrænser baggrundsafvikling, så iPhone og iPad kan kun tjekke hvert 5.-15. minut (kan indstilles) og kan udskyde yderligere ved lavt batteri, Low Power Mode eller dårlig forbindelse. Mac-appen afstemmer så ofte som hvert 60. sekund, når enheden er tilsluttet strøm (kan indstilles op til 15 min) og sender statusændringer til dine andre enheder via iCloud. Uden en Mac, der kører Vultyr, fungerer underretninger på iOS, watchOS og tvOS stadig, men de kan være væsentligt forsinkede eller gå tabt. For realtidsovervågning bør du holde Mac-appen kørende — den er minimal i menubjælken, og det er sådan, Vultyr er tænkt til at blive brugt.</p>
     </div>
     <div class="faq">
         <h3>Fungerer vultyr med Siri og Shortcuts?</h3>

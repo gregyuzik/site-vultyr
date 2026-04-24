@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-OkZVqwY7WYXcojPGY3jyj73D7sAW8Vqk1NjQEcAEV1s='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-zAOQSjcjtuNkillOEeeyn21jceAfRyjqaI/XhjD45B0='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -64,7 +64,7 @@
       "name": "Come funzionano gli avvisi tra dispositivi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "L'app Mac è il fulcro. Tienila in esecuzione (nella barra dei menu o a finestra piena) ed eseguirà il polling ogni 60 secondi. Quando viene rilevato un cambio di stato, scrive un segnale leggero in iCloud Key-Value Store; il tuo iPhone, iPad, Watch, Apple TV e Vision Pro rilevano il cambiamento ed eseguono il proprio controllo locale. Nessuna chiave, nessun token, nessuna configurazione — basta attivare «Avvisi tra dispositivi» nelle impostazioni di qualsiasi dispositivo. Senza un Mac che funge da fulcro, gli avvisi dipendono dall'esecuzione in background di iOS e saranno ritardati o persi."
+        "text": "L'app Mac è il fulcro. Tienila in esecuzione (nella barra dei menu o a finestra piena) ed eseguirà il polling fino a ogni 60 secondi (configurabile fino a 15 min). Quando viene rilevato un cambio di stato, scrive un segnale leggero in iCloud Key-Value Store; il tuo iPhone, iPad, Watch, Apple TV e Vision Pro rilevano il cambiamento ed eseguono il proprio controllo locale. Nessuna chiave, nessun token, nessuna configurazione — basta attivare «Avvisi tra dispositivi» nelle impostazioni di qualsiasi dispositivo. Senza un Mac che funge da fulcro, gli avvisi dipendono dall'esecuzione in background di iOS e saranno ritardati o persi."
       }
     },
     {
@@ -176,7 +176,7 @@
     </div>
     <div class="faq">
         <h3>Come funzionano gli avvisi tra dispositivi?</h3>
-        <p>L'app Mac è il fulcro. Tienila in esecuzione (nella barra dei menu o a finestra piena) ed eseguirà il polling ogni 60 secondi. Quando viene rilevato un cambio di stato, scrive un segnale leggero in iCloud Key-Value Store; il tuo iPhone, iPad, Watch, Apple TV e Vision Pro rilevano il cambiamento ed eseguono il proprio controllo locale. Nessuna chiave, nessun token, nessuna configurazione — basta attivare «Avvisi tra dispositivi» nelle impostazioni di qualsiasi dispositivo. Senza un Mac che funge da fulcro, gli avvisi dipendono dall'esecuzione in background di iOS e saranno ritardati o persi.</p>
+        <p>L'app Mac è il fulcro. Tienila in esecuzione (nella barra dei menu o a finestra piena) ed eseguirà il polling fino a ogni 60 secondi (configurabile fino a 15 min). Quando viene rilevato un cambio di stato, scrive un segnale leggero in iCloud Key-Value Store; il tuo iPhone, iPad, Watch, Apple TV e Vision Pro rilevano il cambiamento ed eseguono il proprio controllo locale. Nessuna chiave, nessun token, nessuna configurazione — basta attivare «Avvisi tra dispositivi» nelle impostazioni di qualsiasi dispositivo. Senza un Mac che funge da fulcro, gli avvisi dipendono dall'esecuzione in background di iOS e saranno ritardati o persi.</p>
     </div>
     <div class="faq">
         <h3>Mi serve l&#x27;app Mac per avvisi affidabili?</h3>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-3X53zq/EqFSemM0j+sesmkoqGeYe2jcfgh5V1nardSE='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-/nAk7boPlIMElmV30h9xSfkv3WiNNPK91jrVPMvkgRg='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -56,7 +56,7 @@
       "name": "Hoe vaak controleert Vultyr de servicestatus?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Op Mac: elke 60 seconden bij een stroomaansluiting. Op iPhone: elke 5, 10 of 15 minuten (instelbaar), met periodieke achtergrondcontroles waar dat kan. Op Apple Watch: elke 15 minuten. Op Apple TV: elke 5 minuten. Het pollen past zich automatisch aan batterijniveau, stroomvoorziening en temperatuur aan."
+        "text": "Op Mac: zo vaak als elke 60 seconden bij een stroomaansluiting (instelbaar tot 15 min). Op iPhone: elke 5, 10 of 15 minuten (instelbaar), met periodieke achtergrondcontroles waar dat kan. Op Apple Watch: elke 15 minuten. Op Apple TV: elke 5 minuten. Het pollen past zich automatisch aan batterijniveau, stroomvoorziening en temperatuur aan."
       }
     },
     {
@@ -64,7 +64,7 @@
       "name": "Hoe werken meldingen tussen apparaten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "De Mac‑app is het centrum. Houd die draaiend (in de menubalk of als volledig venster) en die peilt elke 60 seconden. Zodra een statuswijziging wordt gedetecteerd, schrijft de app een klein signaal naar de iCloud Key‑Value Store; je iPhone, iPad, Watch, Apple TV en Vision Pro pikken de wijziging op en voeren hun eigen lokale controle uit. Geen sleutels, geen tokens, geen setup — zet gewoon „Meldingen tussen apparaten” aan in de instellingen op een willekeurig apparaat. Zonder Mac als centrum leunen meldingen op iOS‑achtergronduitvoering en zullen ze vertraagd of gemist worden."
+        "text": "De Mac‑app is het centrum. Houd die draaiend (in de menubalk of als volledig venster) en die peilt zo vaak als elke 60 seconden (instelbaar tot 15 min). Zodra een statuswijziging wordt gedetecteerd, schrijft de app een klein signaal naar de iCloud Key‑Value Store; je iPhone, iPad, Watch, Apple TV en Vision Pro pikken de wijziging op en voeren hun eigen lokale controle uit. Geen sleutels, geen tokens, geen setup — zet gewoon „Meldingen tussen apparaten” aan in de instellingen op een willekeurig apparaat. Zonder Mac als centrum leunen meldingen op iOS‑achtergronduitvoering en zullen ze vertraagd of gemist worden."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Heb ik de Mac‑app nodig voor betrouwbare meldingen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — we raden het sterk aan. iOS beperkt achtergronduitvoering, dus iPhone en iPad kunnen alleen elke 5–15 minuten controleren (instelbaar) en kunnen verder uitstellen bij een lage batterij, Energiebesparingsmodus of slechte verbinding. De Mac‑app peilt continu (elke 60 seconden bij een stroomaansluiting) en verspreidt statuswijzigingen naar je andere apparaten via iCloud. Zonder een Mac waarop Vultyr draait, werken meldingen op iOS, watchOS en tvOS nog steeds, maar kunnen ze aanzienlijk vertraagd of gemist worden. Voor realtime monitoring laat je de Mac‑app draaien — hij is klein in de menubalk en zo is Vultyr bedoeld om gebruikt te worden."
+        "text": "Ja — we raden het sterk aan. iOS beperkt achtergronduitvoering, dus iPhone en iPad kunnen alleen elke 5–15 minuten controleren (instelbaar) en kunnen verder uitstellen bij een lage batterij, Energiebesparingsmodus of slechte verbinding. De Mac‑app peilt zo vaak als elke 60 seconden bij een stroomaansluiting (instelbaar tot 15 min) en verspreidt statuswijzigingen naar je andere apparaten via iCloud. Zonder een Mac waarop Vultyr draait, werken meldingen op iOS, watchOS en tvOS nog steeds, maar kunnen ze aanzienlijk vertraagd of gemist worden. Voor realtime monitoring laat je de Mac‑app draaien — hij is klein in de menubalk en zo is Vultyr bedoeld om gebruikt te worden."
       }
     },
     {
@@ -172,15 +172,15 @@
 
     <div class="faq">
         <h3>Hoe vaak controleert Vultyr de servicestatus?</h3>
-        <p>Op Mac: elke 60 seconden bij een stroomaansluiting. Op iPhone: elke 5, 10 of 15 minuten (instelbaar), met periodieke achtergrondcontroles waar dat kan. Op Apple Watch: elke 15 minuten. Op Apple TV: elke 5 minuten. Het pollen past zich automatisch aan batterijniveau, stroomvoorziening en temperatuur aan.</p>
+        <p>Op Mac: zo vaak als elke 60 seconden bij een stroomaansluiting (instelbaar tot 15 min). Op iPhone: elke 5, 10 of 15 minuten (instelbaar), met periodieke achtergrondcontroles waar dat kan. Op Apple Watch: elke 15 minuten. Op Apple TV: elke 5 minuten. Het pollen past zich automatisch aan batterijniveau, stroomvoorziening en temperatuur aan.</p>
     </div>
     <div class="faq">
         <h3>Hoe werken meldingen tussen apparaten?</h3>
-        <p>De Mac‑app is het centrum. Houd die draaiend (in de menubalk of als volledig venster) en die peilt elke 60 seconden. Zodra een statuswijziging wordt gedetecteerd, schrijft de app een klein signaal naar de iCloud Key‑Value Store; je iPhone, iPad, Watch, Apple TV en Vision Pro pikken de wijziging op en voeren hun eigen lokale controle uit. Geen sleutels, geen tokens, geen setup — zet gewoon „Meldingen tussen apparaten” aan in de instellingen op een willekeurig apparaat. Zonder Mac als centrum leunen meldingen op iOS‑achtergronduitvoering en zullen ze vertraagd of gemist worden.</p>
+        <p>De Mac‑app is het centrum. Houd die draaiend (in de menubalk of als volledig venster) en die peilt zo vaak als elke 60 seconden (instelbaar tot 15 min). Zodra een statuswijziging wordt gedetecteerd, schrijft de app een klein signaal naar de iCloud Key‑Value Store; je iPhone, iPad, Watch, Apple TV en Vision Pro pikken de wijziging op en voeren hun eigen lokale controle uit. Geen sleutels, geen tokens, geen setup — zet gewoon „Meldingen tussen apparaten” aan in de instellingen op een willekeurig apparaat. Zonder Mac als centrum leunen meldingen op iOS‑achtergronduitvoering en zullen ze vertraagd of gemist worden.</p>
     </div>
     <div class="faq">
         <h3>Heb ik de Mac‑app nodig voor betrouwbare meldingen?</h3>
-        <p>Ja — we raden het sterk aan. iOS beperkt achtergronduitvoering, dus iPhone en iPad kunnen alleen elke 5–15 minuten controleren (instelbaar) en kunnen verder uitstellen bij een lage batterij, Energiebesparingsmodus of slechte verbinding. De Mac‑app peilt continu (elke 60 seconden bij een stroomaansluiting) en verspreidt statuswijzigingen naar je andere apparaten via iCloud. Zonder een Mac waarop Vultyr draait, werken meldingen op iOS, watchOS en tvOS nog steeds, maar kunnen ze aanzienlijk vertraagd of gemist worden. Voor realtime monitoring laat je de Mac‑app draaien — hij is klein in de menubalk en zo is Vultyr bedoeld om gebruikt te worden.</p>
+        <p>Ja — we raden het sterk aan. iOS beperkt achtergronduitvoering, dus iPhone en iPad kunnen alleen elke 5–15 minuten controleren (instelbaar) en kunnen verder uitstellen bij een lage batterij, Energiebesparingsmodus of slechte verbinding. De Mac‑app peilt zo vaak als elke 60 seconden bij een stroomaansluiting (instelbaar tot 15 min) en verspreidt statuswijzigingen naar je andere apparaten via iCloud. Zonder een Mac waarop Vultyr draait, werken meldingen op iOS, watchOS en tvOS nog steeds, maar kunnen ze aanzienlijk vertraagd of gemist worden. Voor realtime monitoring laat je de Mac‑app draaien — hij is klein in de menubalk en zo is Vultyr bedoeld om gebruikt te worden.</p>
     </div>
     <div class="faq">
         <h3>Werkt Vultyr met Siri en Shortcuts?</h3>

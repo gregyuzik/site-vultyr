@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-SpWjjEkGxCE/bO6ivEgR5U2tx9lx0pn2blu+ZRFKwGs='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-XMiZb50dSs0bKgGB659i1jFBcd4xWiC/5/nwjrxb0XI='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -56,7 +56,7 @@
       "name": "Com que frequência o vultyr verifica o status dos serviços?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No Mac: a cada 60 segundos quando está conectado à tomada. No iPhone: a cada 5, 10 ou 15 minutos (configurável), com verificações periódicas em segundo plano quando as condições permitem. No Apple Watch: a cada 15 minutos. Na Apple TV: a cada 5 minutos. A frequência de verificação se adapta automaticamente ao nível da bateria, ao estado de energia e às condições térmicas."
+        "text": "No Mac: com a frequência de até 60 segundos quando está conectado à tomada (configurável até 15 min). No iPhone: a cada 5, 10 ou 15 minutos (configurável), com verificações periódicas em segundo plano quando as condições permitem. No Apple Watch: a cada 15 minutos. Na Apple TV: a cada 5 minutos. A frequência de verificação se adapta automaticamente ao nível da bateria, ao estado de energia e às condições térmicas."
       }
     },
     {
@@ -64,7 +64,7 @@
       "name": "Como funcionam os Alertas entre dispositivos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O app para Mac é o hub. Mantenha-o em execução (na barra de menus ou em janela completa) e ele faz verificações a cada 60 segundos. Quando detecta uma mudança de status, grava um sinal leve no iCloud Key-Value Store; seu iPhone, iPad, Watch, Apple TV e Vision Pro captam a mudança e fazem sua própria verificação local. Sem chaves, sem tokens, sem configuração — basta ativar \"Alertas entre dispositivos\" nos ajustes em qualquer dispositivo. Sem um Mac atuando como hub, os alertas dependem da execução em segundo plano do iOS e podem atrasar ou ser perdidos."
+        "text": "O app para Mac é o hub. Mantenha-o em execução (na barra de menus ou em janela completa) e ele faz verificações com frequência de até 60 segundos (configurável até 15 min). Quando detecta uma mudança de status, grava um sinal leve no iCloud Key-Value Store; seu iPhone, iPad, Watch, Apple TV e Vision Pro captam a mudança e fazem sua própria verificação local. Sem chaves, sem tokens, sem configuração — basta ativar \"Alertas entre dispositivos\" nos ajustes em qualquer dispositivo. Sem um Mac atuando como hub, os alertas dependem da execução em segundo plano do iOS e podem atrasar ou ser perdidos."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Eu preciso do app para Mac para ter alertas confiáveis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim — recomendamos fortemente. O iOS limita a execução em segundo plano, então iPhone e iPad só podem verificar a cada 5 a 15 minutos (configurável) e podem adiar ainda mais com bateria fraca, Modo de Pouca Energia ou conectividade ruim. O app para Mac faz verificações contínuas (a cada 60 segundos quando está conectado à tomada) e transmite mudanças de status para seus outros dispositivos via iCloud. Sem um Mac rodando o Vultyr, os alertas no iOS, watchOS e tvOS ainda funcionam, mas podem atrasar bastante ou ser perdidos. Para monitoramento em tempo real, mantenha o app para Mac em execução — ele é minúsculo na barra de menus e é assim que o Vultyr foi feito para ser usado."
+        "text": "Sim — recomendamos fortemente. O iOS limita a execução em segundo plano, então iPhone e iPad só podem verificar a cada 5 a 15 minutos (configurável) e podem adiar ainda mais com bateria fraca, Modo de Pouca Energia ou conectividade ruim. O app para Mac faz verificações com frequência de até 60 segundos quando está conectado à tomada (configurável até 15 min) e transmite mudanças de status para seus outros dispositivos via iCloud. Sem um Mac rodando o Vultyr, os alertas no iOS, watchOS e tvOS ainda funcionam, mas podem atrasar bastante ou ser perdidos. Para monitoramento em tempo real, mantenha o app para Mac em execução — ele é minúsculo na barra de menus e é assim que o Vultyr foi feito para ser usado."
       }
     },
     {
@@ -172,15 +172,15 @@
 
     <div class="faq">
         <h3>Com que frequência o vultyr verifica o status dos serviços?</h3>
-        <p>No Mac: a cada 60 segundos quando está conectado à tomada. No iPhone: a cada 5, 10 ou 15 minutos (configurável), com verificações periódicas em segundo plano quando as condições permitem. No Apple Watch: a cada 15 minutos. Na Apple TV: a cada 5 minutos. A frequência de verificação se adapta automaticamente ao nível da bateria, ao estado de energia e às condições térmicas.</p>
+        <p>No Mac: com a frequência de até 60 segundos quando está conectado à tomada (configurável até 15 min). No iPhone: a cada 5, 10 ou 15 minutos (configurável), com verificações periódicas em segundo plano quando as condições permitem. No Apple Watch: a cada 15 minutos. Na Apple TV: a cada 5 minutos. A frequência de verificação se adapta automaticamente ao nível da bateria, ao estado de energia e às condições térmicas.</p>
     </div>
     <div class="faq">
         <h3>Como funcionam os Alertas entre dispositivos?</h3>
-        <p>O app para Mac é o hub. Mantenha-o em execução (na barra de menus ou em janela completa) e ele faz verificações a cada 60 segundos. Quando detecta uma mudança de status, grava um sinal leve no iCloud Key-Value Store; seu iPhone, iPad, Watch, Apple TV e Vision Pro captam a mudança e fazem sua própria verificação local. Sem chaves, sem tokens, sem configuração — basta ativar "Alertas entre dispositivos" nos ajustes em qualquer dispositivo. Sem um Mac atuando como hub, os alertas dependem da execução em segundo plano do iOS e podem atrasar ou ser perdidos.</p>
+        <p>O app para Mac é o hub. Mantenha-o em execução (na barra de menus ou em janela completa) e ele faz verificações com frequência de até 60 segundos (configurável até 15 min). Quando detecta uma mudança de status, grava um sinal leve no iCloud Key-Value Store; seu iPhone, iPad, Watch, Apple TV e Vision Pro captam a mudança e fazem sua própria verificação local. Sem chaves, sem tokens, sem configuração — basta ativar "Alertas entre dispositivos" nos ajustes em qualquer dispositivo. Sem um Mac atuando como hub, os alertas dependem da execução em segundo plano do iOS e podem atrasar ou ser perdidos.</p>
     </div>
     <div class="faq">
         <h3>Eu preciso do app para Mac para ter alertas confiáveis?</h3>
-        <p>Sim — recomendamos fortemente. O iOS limita a execução em segundo plano, então iPhone e iPad só podem verificar a cada 5 a 15 minutos (configurável) e podem adiar ainda mais com bateria fraca, Modo de Pouca Energia ou conectividade ruim. O app para Mac faz verificações contínuas (a cada 60 segundos quando está conectado à tomada) e transmite mudanças de status para seus outros dispositivos via iCloud. Sem um Mac rodando o Vultyr, os alertas no iOS, watchOS e tvOS ainda funcionam, mas podem atrasar bastante ou ser perdidos. Para monitoramento em tempo real, mantenha o app para Mac em execução — ele é minúsculo na barra de menus e é assim que o Vultyr foi feito para ser usado.</p>
+        <p>Sim — recomendamos fortemente. O iOS limita a execução em segundo plano, então iPhone e iPad só podem verificar a cada 5 a 15 minutos (configurável) e podem adiar ainda mais com bateria fraca, Modo de Pouca Energia ou conectividade ruim. O app para Mac faz verificações com frequência de até 60 segundos quando está conectado à tomada (configurável até 15 min) e transmite mudanças de status para seus outros dispositivos via iCloud. Sem um Mac rodando o Vultyr, os alertas no iOS, watchOS e tvOS ainda funcionam, mas podem atrasar bastante ou ser perdidos. Para monitoramento em tempo real, mantenha o app para Mac em execução — ele é minúsculo na barra de menus e é assim que o Vultyr foi feito para ser usado.</p>
     </div>
     <div class="faq">
         <h3>O vultyr funciona com Siri e Shortcuts?</h3>
