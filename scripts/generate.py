@@ -32,7 +32,7 @@ APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260417e"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
-ASSET_VERSION = "20260425a"
+ASSET_VERSION = "20260425b"
 # Bump when icon-256.png changes so CDN edges pick up the new asset.
 ICON_VERSION = "20260417e"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
@@ -162,12 +162,10 @@ STRINGS = {
         # service page
         "svcp_title_fmt": "Is {name} Down? {name} Status Monitor | Vultyr",
         "svcp_description_fmt": "Check if {name} is down right now. Live {name} status updates and outage monitoring with Vultyr. Free on {devices}.",
-        "svcp_live_check": "Live check",
         "svcp_view_current_status": "View Current Status \u2192",
         "svcp_alert_hint_prefix": "For instant alerts, ",
         "svcp_alert_hint_link": "download Vultyr",
         "svcp_categories_label": "Categories:",
-        "svcp_official_status": "Official Status Page",
         "svcp_homepage_fmt": "{name} Homepage",
         "svcp_faq_heading": "FAQ",
         "svcp_faq_q1_fmt": "Is {name} down right now?",
@@ -361,12 +359,10 @@ STRINGS = {
         # service page
         "svcp_title_fmt": "{name} \u043d\u0435 \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442? \u041c\u043e\u043d\u0438\u0442\u043e\u0440 \u0441\u0442\u0430\u0442\u0443\u0441\u0430 {name} | Vultyr",
         "svcp_description_fmt": "\u041f\u0440\u043e\u0432\u0435\u0440\u044c\u0442\u0435, \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043b\u0438 {name} \u043f\u0440\u044f\u043c\u043e \u0441\u0435\u0439\u0447\u0430\u0441. \u0410\u043a\u0442\u0443\u0430\u043b\u044c\u043d\u044b\u0439 \u0441\u0442\u0430\u0442\u0443\u0441 {name} \u0438 \u043c\u043e\u043d\u0438\u0442\u043e\u0440\u0438\u043d\u0433 \u0441\u0431\u043e\u0435\u0432 \u0441 Vultyr. \u0411\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u043e \u043d\u0430 {devices}.",
-        "svcp_live_check": "\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438",
         "svcp_view_current_status": "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0442\u0435\u043a\u0443\u0449\u0438\u0439 \u0441\u0442\u0430\u0442\u0443\u0441 \u2192",
         "svcp_alert_hint_prefix": "\u0427\u0442\u043e\u0431\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u0442\u044c \u043c\u0433\u043d\u043e\u0432\u0435\u043d\u043d\u044b\u0435 \u0443\u0432\u0435\u0434\u043e\u043c\u043b\u0435\u043d\u0438\u044f, ",
         "svcp_alert_hint_link": "\u0441\u043a\u0430\u0447\u0430\u0439\u0442\u0435 Vultyr",
         "svcp_categories_label": "\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u0438:",
-        "svcp_official_status": "\u041e\u0444\u0438\u0446\u0438\u0430\u043b\u044c\u043d\u0430\u044f \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u0441\u0442\u0430\u0442\u0443\u0441\u0430",
         "svcp_homepage_fmt": "\u0421\u0430\u0439\u0442 {name}",
         "svcp_faq_heading": "\u0412\u043e\u043f\u0440\u043e\u0441\u044b \u0438 \u043e\u0442\u0432\u0435\u0442\u044b",
         "svcp_faq_q1_fmt": "\u0420\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u043b\u0438 {name} \u043f\u0440\u044f\u043c\u043e \u0441\u0435\u0439\u0447\u0430\u0441?",
@@ -566,12 +562,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "Er {name} nede? {name}-statusovervågning | Vultyr",
     "svcp_description_fmt": "Tjek om {name} er nede lige nu. Live {name}-statusopdateringer og nedbrudsovervågning med Vultyr. Gratis på {devices}.",
-    "svcp_live_check": "Live-tjek",
     "svcp_view_current_status": "Se aktuel status \u2192",
     "svcp_alert_hint_prefix": "For øjeblikkelige underretninger, ",
     "svcp_alert_hint_link": "hent Vultyr",
     "svcp_categories_label": "Kategorier:",
-    "svcp_official_status": "Officiel statusside",
     "svcp_homepage_fmt": "{name}-hjemmeside",
     "svcp_faq_heading": "Ofte stillede spørgsmål",
     "svcp_faq_q1_fmt": "Er {name} nede lige nu?",
@@ -765,12 +759,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "Ist {name} ausgefallen? {name} Status-Monitor | Vultyr",
     "svcp_description_fmt": "Prüfe, ob {name} gerade ausgefallen ist. Live-Status-Updates zu {name} und Ausfallüberwachung mit Vultyr. Kostenlos auf {devices}.",
-    "svcp_live_check": "Live-Prüfung",
     "svcp_view_current_status": "Aktuellen Status ansehen \u2192",
     "svcp_alert_hint_prefix": "Für sofortige Benachrichtigungen ",
     "svcp_alert_hint_link": "Vultyr herunterladen",
     "svcp_categories_label": "Kategorien:",
-    "svcp_official_status": "Offizielle Statusseite",
     "svcp_homepage_fmt": "{name} Website",
     "svcp_faq_heading": "FAQ",
     "svcp_faq_q1_fmt": "Ist {name} gerade ausgefallen?",
@@ -970,12 +962,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "¿{name} está caído? Monitor de estado de {name} | Vultyr",
     "svcp_description_fmt": "Comprueba si {name} está caído ahora mismo. Estado en tiempo real de {name} y monitoreo de caídas con Vultyr. Gratis en {devices}.",
-    "svcp_live_check": "Comprobación en vivo",
     "svcp_view_current_status": "Ver estado actual \u2192",
     "svcp_alert_hint_prefix": "Para alertas instantáneas, ",
     "svcp_alert_hint_link": "descarga Vultyr",
     "svcp_categories_label": "Categorías:",
-    "svcp_official_status": "Página de estado oficial",
     "svcp_homepage_fmt": "Sitio web de {name}",
     "svcp_faq_heading": "Preguntas frecuentes",
     "svcp_faq_q1_fmt": "¿{name} está caído ahora mismo?",
@@ -1169,12 +1159,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "{name} est-il en panne\u00a0? Moniteur d\u2019\u00e9tat de {name} | Vultyr",
     "svcp_description_fmt": "V\u00e9rifiez si {name} est en panne en ce moment. Suivi en direct de l\u2019\u00e9tat de {name} et surveillance des pannes avec Vultyr. Gratuit sur {devices}.",
-    "svcp_live_check": "V\u00e9rification en direct",
     "svcp_view_current_status": "Voir l\u2019\u00e9tat actuel \u2192",
     "svcp_alert_hint_prefix": "Pour des alertes instantan\u00e9es, ",
     "svcp_alert_hint_link": "t\u00e9l\u00e9chargez Vultyr",
     "svcp_categories_label": "Cat\u00e9gories\u00a0:",
-    "svcp_official_status": "Page d\u2019\u00e9tat officielle",
     "svcp_homepage_fmt": "Site de {name}",
     "svcp_faq_heading": "FAQ",
     "svcp_faq_q1_fmt": "{name} est-il en panne en ce moment\u00a0?",
@@ -1368,12 +1356,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "{name} non funziona? Monitor dello stato di {name} | Vultyr",
     "svcp_description_fmt": "Controlla se {name} non funziona in questo momento. Aggiornamenti di stato in tempo reale e monitoraggio dei disservizi di {name} con Vultyr. Gratis su {devices}.",
-    "svcp_live_check": "Controllo in tempo reale",
     "svcp_view_current_status": "Visualizza stato attuale \u2192",
     "svcp_alert_hint_prefix": "Per avvisi immediati, ",
     "svcp_alert_hint_link": "scarica Vultyr",
     "svcp_categories_label": "Categorie:",
-    "svcp_official_status": "Pagina di stato ufficiale",
     "svcp_homepage_fmt": "Sito di {name}",
     "svcp_faq_heading": "FAQ",
     "svcp_faq_q1_fmt": "{name} non funziona in questo momento?",
@@ -1567,12 +1553,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "{name}は停止中ですか?{name}のステータスモニター | Vultyr",
     "svcp_description_fmt": "{name}が現在停止しているか確認できます。Vultyrによる{name}のリアルタイムステータスと障害監視。{devices}で無料。",
-    "svcp_live_check": "リアルタイムチェック",
     "svcp_view_current_status": "現在のステータスを見る \u2192",
     "svcp_alert_hint_prefix": "即時通知を受け取るには、",
     "svcp_alert_hint_link": "Vultyrをダウンロード",
     "svcp_categories_label": "カテゴリ:",
-    "svcp_official_status": "公式ステータスページ",
     "svcp_homepage_fmt": "{name}のホームページ",
     "svcp_faq_heading": "よくある質問",
     "svcp_faq_q1_fmt": "{name}は現在停止していますか?",
@@ -1766,12 +1750,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "{name} 장애 발생? {name} 상태 모니터 | Vultyr",
     "svcp_description_fmt": "{name}의 현재 장애 여부를 확인하세요. {name}의 실시간 상태 업데이트 및 장애 모니터링을 Vultyr로 이용하세요. {devices}에서 무료로 사용 가능합니다.",
-    "svcp_live_check": "실시간 점검",
     "svcp_view_current_status": "현재 상태 보기 →",
     "svcp_alert_hint_prefix": "즉시 알림을 받으려면 ",
     "svcp_alert_hint_link": "Vultyr 다운로드",
     "svcp_categories_label": "카테고리:",
-    "svcp_official_status": "공식 상태 페이지",
     "svcp_homepage_fmt": "{name} 홈페이지",
     "svcp_faq_heading": "자주 묻는 질문",
     "svcp_faq_q1_fmt": "{name}이(가) 지금 장애 상태인가요?",
@@ -1971,12 +1953,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "Er {name} nede? {name} statusmonitor | Vultyr",
     "svcp_description_fmt": "Sjekk om {name} er nede akkurat nå. Sanntidsoppdateringer av {name}-status og nedetidsovervåkning med Vultyr. Gratis på {devices}.",
-    "svcp_live_check": "Sanntidssjekk",
     "svcp_view_current_status": "Se nåværende status →",
     "svcp_alert_hint_prefix": "For øyeblikkelige varsler, ",
     "svcp_alert_hint_link": "last ned Vultyr",
     "svcp_categories_label": "Kategorier:",
-    "svcp_official_status": "Offisiell statusside",
     "svcp_homepage_fmt": "{name}-nettsted",
     "svcp_faq_heading": "Vanlige spørsmål",
     "svcp_faq_q1_fmt": "Er {name} nede akkurat nå?",
@@ -2176,12 +2156,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "Is {name} offline? Statusmonitor voor {name} | Vultyr",
     "svcp_description_fmt": "Controleer of {name} nu offline is. Live statusupdates voor {name} en storingsmonitoring met Vultyr. Gratis op {devices}.",
-    "svcp_live_check": "Live controle",
     "svcp_view_current_status": "Bekijk huidige status \u2192",
     "svcp_alert_hint_prefix": "Voor directe meldingen, ",
     "svcp_alert_hint_link": "download Vultyr",
     "svcp_categories_label": "Categorie\u00ebn:",
-    "svcp_official_status": "Offici\u00eble statuspagina",
     "svcp_homepage_fmt": "Homepage van {name}",
     "svcp_faq_heading": "Veelgestelde vragen",
     "svcp_faq_q1_fmt": "Is {name} nu offline?",
@@ -2375,12 +2353,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "{name} está fora do ar? Monitor de status de {name} | Vultyr",
     "svcp_description_fmt": "Verifique se {name} está fora do ar agora. Atualizações de status em tempo real e monitoramento de quedas de {name} com o Vultyr. Grátis em {devices}.",
-    "svcp_live_check": "Verificação em tempo real",
     "svcp_view_current_status": "Ver status atual →",
     "svcp_alert_hint_prefix": "Para receber alertas instantâneos, ",
     "svcp_alert_hint_link": "baixe o Vultyr",
     "svcp_categories_label": "Categorias:",
-    "svcp_official_status": "Página de status oficial",
     "svcp_homepage_fmt": "Site de {name}",
     "svcp_faq_heading": "Perguntas frequentes",
     "svcp_faq_q1_fmt": "{name} está fora do ar agora?",
@@ -2580,12 +2556,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "Är {name} nere? Statusövervakare för {name} | Vultyr",
     "svcp_description_fmt": "Kontrollera om {name} är nere just nu. Live-uppdateringar av {name}-status och övervakning av driftstörningar med Vultyr. Gratis på {devices}.",
-    "svcp_live_check": "Live-kontroll",
     "svcp_view_current_status": "Visa aktuell status →",
     "svcp_alert_hint_prefix": "För direkta aviseringar, ",
     "svcp_alert_hint_link": "ladda ner Vultyr",
     "svcp_categories_label": "Kategorier:",
-    "svcp_official_status": "Officiell statussida",
     "svcp_homepage_fmt": "Webbplats för {name}",
     "svcp_faq_heading": "Vanliga frågor",
     "svcp_faq_q1_fmt": "Är {name} nere just nu?",
@@ -2779,12 +2753,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "{name} çalışmıyor mu? {name} durum izleyicisi | Vultyr",
     "svcp_description_fmt": "{name} şu anda çalışıyor mu kontrol edin. Canlı {name} durum güncellemeleri ve kesinti izleme, Vultyr ile. {devices} cihazlarında ücretsiz.",
-    "svcp_live_check": "Canlı kontrol",
     "svcp_view_current_status": "Mevcut durumu görüntüle \u2192",
     "svcp_alert_hint_prefix": "Anında uyarılar için ",
     "svcp_alert_hint_link": "Vultyr'ı indirin",
     "svcp_categories_label": "Kategoriler:",
-    "svcp_official_status": "Resmi durum sayfası",
     "svcp_homepage_fmt": "{name} ana sayfa",
     "svcp_faq_heading": "SSS",
     "svcp_faq_q1_fmt": "{name} şu anda çalışmıyor mu?",
@@ -2978,12 +2950,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "{name} có gặp sự cố không? Trình theo dõi trạng thái {name} | Vultyr",
     "svcp_description_fmt": "Kiểm tra xem {name} có đang gặp sự cố hay không. Cập nhật trạng thái {name} trực tiếp và theo dõi sự cố với Vultyr. Miễn phí trên {devices}.",
-    "svcp_live_check": "Kiểm tra trực tiếp",
     "svcp_view_current_status": "Xem trạng thái hiện tại \u2192",
     "svcp_alert_hint_prefix": "Để nhận cảnh báo tức thì, ",
     "svcp_alert_hint_link": "tải xuống Vultyr",
     "svcp_categories_label": "Danh mục:",
-    "svcp_official_status": "Trang trạng thái chính thức",
     "svcp_homepage_fmt": "Trang chủ {name}",
     "svcp_faq_heading": "Câu hỏi thường gặp",
     "svcp_faq_q1_fmt": "{name} có đang gặp sự cố không?",
@@ -3177,12 +3147,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "{name} 宕机了吗?{name} 状态监测 | Vultyr",
     "svcp_description_fmt": "立即查看 {name} 是否宕机。通过 Vultyr 获取实时 {name} 状态更新与故障监测。在 {devices} 上免费使用。",
-    "svcp_live_check": "实时检查",
     "svcp_view_current_status": "查看当前状态 \u2192",
     "svcp_alert_hint_prefix": "如需即时提醒,请",
     "svcp_alert_hint_link": "下载 Vultyr",
     "svcp_categories_label": "类别:",
-    "svcp_official_status": "官方状态页面",
     "svcp_homepage_fmt": "{name} 官方网站",
     "svcp_faq_heading": "常见问题",
     "svcp_faq_q1_fmt": "{name} 现在宕机了吗?",
@@ -3376,12 +3344,10 @@ STRINGS = {
     # service page
     "svcp_title_fmt": "{name} 故障了嗎?{name} 狀態監控器 | Vultyr",
     "svcp_description_fmt": "立即查看 {name} 是否故障。透過 Vultyr 取得即時 {name} 狀態更新與中斷監控。在 {devices} 上免費使用。",
-    "svcp_live_check": "即時檢查",
     "svcp_view_current_status": "檢視目前狀態 →",
     "svcp_alert_hint_prefix": "若要取得即時通知,請",
     "svcp_alert_hint_link": "下載 Vultyr",
     "svcp_categories_label": "類別:",
-    "svcp_official_status": "官方狀態頁面",
     "svcp_homepage_fmt": "{name} 官方網站",
     "svcp_faq_heading": "常見問題",
     "svcp_faq_q1_fmt": "{name} 現在故障了嗎?",
@@ -4440,10 +4406,6 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon,
         </div>
 
         <div class="status-card">
-            <div class="status-live" aria-hidden="true">
-                <span class="pulse-dot"></span>
-                {e(t(locale, 'svcp_live_check'))}
-            </div>
             <a href="{status_href}" target="_blank" rel="noopener noreferrer" class="status-badge">
                 <span class="status-text">{e(t(locale, 'svcp_view_current_status'))}</span>
             </a>
@@ -4451,10 +4413,6 @@ def generate_service_page(svc, categories_lookup, all_services_by_slug, favicon,
         </div>
 {cat_links_html}
         <div class="links-row">
-            <a href="{status_href}" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/icons/chart-bar-regular.svg" alt="" width="16" height="16" aria-hidden="true">
-                {e(t(locale, 'svcp_official_status'))}
-            </a>
             <a href="{home_href}" target="_blank" rel="noopener noreferrer">
                 <img src="/assets/icons/globe-regular.svg" alt="" width="16" height="16" aria-hidden="true">
                 {e(t(locale, 'svcp_homepage_fmt').format(name=name))}
