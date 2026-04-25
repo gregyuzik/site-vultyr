@@ -287,6 +287,17 @@
       ]
     },
     {
+      "name": "BigCommerce",
+      "slug": "bigcommerce",
+      "faviconDomain": "bigcommerce.com",
+      "statusUrl": "https://status.bigcommerce.com",
+      "homepageUrl": "https://www.bigcommerce.com",
+      "statuspageApi": "https://status.bigcommerce.com/api/v2/summary.json",
+      "categories": [
+        "payments-commerce"
+      ]
+    },
+    {
       "name": "Bitbucket",
       "slug": "bitbucket",
       "faviconDomain": "bitbucket.org",
@@ -749,12 +760,12 @@
       ]
     },
     {
-      "name": "ConvertKit",
+      "name": "Kit",
       "slug": "convertkit",
-      "faviconDomain": "convertkit.com",
-      "statusUrl": "https://status.convertkit.com",
-      "homepageUrl": "https://convertkit.com",
-      "statuspageApi": "https://status.convertkit.com/api/v2/summary.json",
+      "faviconDomain": "kit.com",
+      "statusUrl": "https://status.kit.com",
+      "homepageUrl": "https://kit.com",
+      "statuspageApi": "https://status.kit.com/api/v2/summary.json",
       "categories": [
         "email-marketing"
       ]
@@ -790,6 +801,17 @@
       "statuspageApi": "https://status.cursor.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Cypress",
+      "slug": "cypress",
+      "faviconDomain": "cypress.io",
+      "statusUrl": "https://www.cypressstatus.com",
+      "homepageUrl": "https://www.cypress.io",
+      "statuspageApi": "https://www.cypressstatus.com/api/v2/summary.json",
+      "categories": [
+        "developer-tools"
       ]
     },
     {
@@ -1698,9 +1720,9 @@
       "name": "Loom",
       "slug": "loom",
       "faviconDomain": "loom.com",
-      "statusUrl": "https://status.loom.com",
+      "statusUrl": "https://loom.status.atlassian.com",
       "homepageUrl": "https://www.loom.com",
-      "statuspageApi": "https://status.loom.com/api/v2/summary.json",
+      "statuspageApi": "https://loom.status.atlassian.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -1849,12 +1871,12 @@
       ]
     },
     {
-      "name": "MessageBird",
+      "name": "Bird",
       "slug": "messagebird",
-      "faviconDomain": "messagebird.com",
-      "statusUrl": "https://status.messagebird.com",
-      "homepageUrl": "https://www.messagebird.com",
-      "statuspageApi": "https://status.messagebird.com/api/v2/summary.json",
+      "faviconDomain": "bird.com",
+      "statusUrl": "https://status.bird.com",
+      "homepageUrl": "https://bird.com",
+      "statuspageApi": "https://status.bird.com/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -3349,6 +3371,7 @@
         "contentful",
         "convex",
         "cratesio",
+        "cypress",
         "dbt",
         "deno",
         "doppler",
@@ -3504,6 +3527,7 @@
       "serviceSlugs": [
         "affirm",
         "afterpay",
+        "bigcommerce",
         "bitpay",
         "brex",
         "cashapp",
