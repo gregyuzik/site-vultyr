@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-xttzsTg8UqzAXgVdfBbGQnNLuVS4WgZPjwfnvEx9ako=' 'sha256-CJa7+QL5m/zXob0o+rdKHPhFSeiKqiRMxzlspazCRxw='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-xttzsTg8UqzAXgVdfBbGQnNLuVS4WgZPjwfnvEx9ako=' 'sha256-ARsi1rkHpZ4SXcUVFBrXE4SLnavmNN3ONp0cxijh0WY='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
     <script src="/assets/js/locale-detect.js?v=20260423c"></script>
     <script defer src="/assets/js/lang-switch.js?v=20260423c"></script>
-    <title>Amazon 状态监测 —— 2 Services | Vultyr</title>
-    <meta name="description" content="监测 amazon 分类下 2 Services 的状态。为 AWS, Ring 等提供实时故障提醒。">
+    <title>Amazon 状态监测 —— 5 Services | Vultyr</title>
+    <meta name="description" content="监测 amazon 分类下 5 Services 的状态。为 AWS, eero, Ring, SmartThings 等提供实时故障提醒。">
     <meta name="theme-color" content="#000000">
-    <meta property="og:title" content="Amazon 状态监测 —— 2 Services | Vultyr">
-    <meta property="og:description" content="监测 amazon 分类下 2 Services 的状态。为 AWS, Ring 等提供实时故障提醒。">
+    <meta property="og:title" content="Amazon 状态监测 —— 5 Services | Vultyr">
+    <meta property="og:description" content="监测 amazon 分类下 5 Services 的状态。为 AWS, eero, Ring, SmartThings 等提供实时故障提醒。">
     <meta property="og:image" content="https://vultyr.app/icon.png">
     <meta property="og:image:alt" content="Vultyr 应用图标 —— 服务状态监测">
     <meta property="og:url" content="https://vultyr.app/zh-Hans/categories/amazon.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Amazon 状态监测 —— 2 Services | Vultyr">
-    <meta name="twitter:description" content="监测 amazon 分类下 2 Services 的状态。为 AWS, Ring 等提供实时故障提醒。">
+    <meta name="twitter:title" content="Amazon 状态监测 —— 5 Services | Vultyr">
+    <meta name="twitter:description" content="监测 amazon 分类下 5 Services 的状态。为 AWS, eero, Ring, SmartThings 等提供实时故障提醒。">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/zh-Hans/categories/amazon.html">
     <link rel="alternate" hreflang="da" href="https://vultyr.app/da/categories/amazon.html">
@@ -76,7 +76,7 @@
   "@context": "https://schema.org",
   "@type": "ItemList",
   "name": "Amazon 状态监测",
-  "numberOfItems": 2,
+  "numberOfItems": 5,
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -87,8 +87,26 @@
     {
       "@type": "ListItem",
       "position": 2,
+      "name": "eero",
+      "url": "https://vultyr.app/zh-Hans/status/eero.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
       "name": "Ring",
       "url": "https://vultyr.app/zh-Hans/status/ring.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "SmartThings",
+      "url": "https://vultyr.app/zh-Hans/status/smartthings.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Ubiquiti",
+      "url": "https://vultyr.app/zh-Hans/status/ubiquiti.html"
     }
   ]
 }
@@ -124,16 +142,28 @@
             <div class="cat-icon-box"><svg class="cat-icon" width="36" height="36" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24C74.17,24,32,48.6,32,80v96c0,31.4,42.17,56,96,56s96-24.6,96-56V80C224,48.6,181.83,24,128,24Zm80,104c0,9.62-7.88,19.43-21.61,26.92C170.93,163.35,150.19,168,128,168s-42.93-4.65-58.39-13.08C55.88,147.43,48,137.62,48,128V111.36c17.06,15,46.23,24.64,80,24.64s62.94-9.68,80-24.64ZM69.61,53.08C85.07,44.65,105.81,40,128,40s42.93,4.65,58.39,13.08C200.12,60.57,208,70.38,208,80s-7.88,19.43-21.61,26.92C170.93,115.35,150.19,120,128,120s-42.93-4.65-58.39-13.08C55.88,99.43,48,89.62,48,80S55.88,60.57,69.61,53.08ZM186.39,202.92C170.93,211.35,150.19,216,128,216s-42.93-4.65-58.39-13.08C55.88,195.43,48,185.62,48,176V159.36c17.06,15,46.23,24.64,80,24.64s62.94-9.68,80-24.64V176C208,185.62,200.12,195.43,186.39,202.92Z"/></svg></div>
             <h1>Amazon</h1>
         </div>
-        <p class="cat-subtitle"><span class="pulse-dot" aria-hidden="true"></span>Vultyr 监测中的 2 Services</p>
+        <p class="cat-subtitle"><span class="pulse-dot" aria-hidden="true"></span>Vultyr 监测中的 5 Services</p>
 
         <nav class="services-grid" aria-label="Amazon 服务">
             <a class="service-card" href="/zh-Hans/status/aws.html">
                 <img src="/assets/favicons/aws.amazon.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>AWS</span>
             </a>
+            <a class="service-card" href="/zh-Hans/status/eero.html">
+                <img src="/assets/favicons/eero.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
+                <span>eero</span>
+            </a>
             <a class="service-card" href="/zh-Hans/status/ring.html">
                 <img src="/assets/favicons/ring.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
                 <span>Ring</span>
+            </a>
+            <a class="service-card" href="/zh-Hans/status/smartthings.html">
+                <img src="/assets/favicons/smartthings.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
+                <span>SmartThings</span>
+            </a>
+            <a class="service-card" href="/zh-Hans/status/ubiquiti.html">
+                <img src="/assets/favicons/ui.com-32.png" alt="" width="24" height="24" loading="lazy" decoding="async" aria-hidden="true">
+                <span>Ubiquiti</span>
             </a>
         </nav>
 
@@ -159,7 +189,7 @@
         </nav>
 
         <div class="cta">
-            <h2>即刻监测全部 2 Services</h2>
+            <h2>即刻监测全部 5 Services</h2>
             <p>在所有 Apple 设备上获取实时故障提醒。免费。</p>
             <a href="https://apps.apple.com/us/app/vultyr/id6761264004" aria-label="在 App Store 下载 Vultyr">下载 Vultyr</a>
         </div>
