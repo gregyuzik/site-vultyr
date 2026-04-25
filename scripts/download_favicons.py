@@ -7,8 +7,16 @@ Saves two sizes per domain:
   - {domain}-64.png  (used in service page headers)
 
 Output directory: assets/favicons/
+
+When Google has no favicon for a domain it returns a generic 16x16 globe
+sentinel (SHA1 below). This script refuses to write that response — any
+existing on-disk favicon survives. To seed a manual replacement, fetch
+the icon from another source (DuckDuckGo's ip3 service is reliable),
+convert ICO/WebP to PNG at 32 and 64 with ImageMagick, and drop both
+files in assets/favicons/. They'll persist across re-runs of this script.
 """
 
+import hashlib
 import json
 import re
 import sys
@@ -25,6 +33,12 @@ SIZES = [32, 64]
 GOOGLE_FAVICON_URL = "https://www.google.com/s2/favicons?domain={domain}&sz={size}"
 MAX_WORKERS = 6  # Google rate-limits aggressive concurrency
 TIMEOUT = 10  # seconds per request
+
+# Google returns this exact 726-byte PNG when it has no real favicon for
+# the domain. Identical for every "missing" domain — we detect it by SHA1
+# and skip overwriting whatever's already on disk (which may be a manual
+# replacement seeded from another source).
+GOOGLE_PLACEHOLDER_SHA1 = "2d7c9b60d1e2b4f4726141de2e4ab738110b9287"
 
 # Allow only the subset of characters that make up real DNS labels.
 _SAFE_DOMAIN = re.compile(r"^[a-z0-9][a-z0-9.\-]*$")
@@ -56,6 +70,8 @@ def download_favicon(domain, size):
             data = resp.read()
             if len(data) < 10:
                 return (domain, size, False, "Empty response")
+            if hashlib.sha1(data).hexdigest() == GOOGLE_PLACEHOLDER_SHA1:
+                return (domain, size, False, "Google placeholder (kept existing)")
             out_path.write_bytes(data)
             return (domain, size, True, None)
     except HTTPError as exc:
