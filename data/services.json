@@ -3314,6 +3314,72 @@
   ],
   "categories": [
     {
+      "name": "AI & Machine Learning",
+      "slug": "ai-machine-learning",
+      "icon": "robot-regular.svg",
+      "serviceSlugs": [
+        "anthropic",
+        "assemblyai",
+        "baseten",
+        "blackforestlabs",
+        "bolt",
+        "character-ai",
+        "cohere",
+        "cursor",
+        "deepgram",
+        "deepseek",
+        "elevenlabs",
+        "fal",
+        "gamma",
+        "groq",
+        "harvey",
+        "heygen",
+        "huggingface",
+        "ideogram",
+        "lovable",
+        "lumalabs",
+        "midjourney",
+        "openai",
+        "perplexity",
+        "pinecone",
+        "podium",
+        "recraft",
+        "replicate",
+        "replit",
+        "runway",
+        "stability",
+        "synthesia",
+        "tavily",
+        "together-ai",
+        "vapi",
+        "vellum",
+        "whoop",
+        "windsurf",
+        "xai"
+      ]
+    },
+    {
+      "name": "Amazon",
+      "slug": "amazon",
+      "icon": "database-regular.svg",
+      "serviceSlugs": [
+        "aws",
+        "eero",
+        "ring",
+        "smartthings",
+        "ubiquiti"
+      ]
+    },
+    {
+      "name": "Apple",
+      "slug": "apple",
+      "icon": "apple-logo-regular.svg",
+      "serviceSlugs": [
+        "apple-developer",
+        "apple-system"
+      ]
+    },
+    {
       "name": "Cloud & Infrastructure",
       "slug": "cloud-infrastructure",
       "icon": "cloud-check-regular.svg",
@@ -3345,6 +3411,27 @@
         "snowflake",
         "vercel",
         "wasabi"
+      ]
+    },
+    {
+      "name": "Communication",
+      "slug": "communication",
+      "icon": "chat-circle-regular.svg",
+      "serviceSlugs": [
+        "dialpad",
+        "discord",
+        "front",
+        "livekit",
+        "matrix",
+        "mattermost",
+        "messagebird",
+        "sinch",
+        "slack",
+        "telnyx",
+        "twilio",
+        "vonage",
+        "webex",
+        "zoom"
       ]
     },
     {
@@ -3430,24 +3517,79 @@
       ]
     },
     {
-      "name": "Communication",
-      "slug": "communication",
-      "icon": "chat-circle-regular.svg",
+      "name": "Email & Marketing",
+      "slug": "email-marketing",
+      "icon": "envelope-simple-regular.svg",
       "serviceSlugs": [
-        "dialpad",
-        "discord",
-        "front",
-        "livekit",
-        "matrix",
-        "mattermost",
-        "messagebird",
-        "sinch",
-        "slack",
-        "telnyx",
-        "twilio",
-        "vonage",
-        "webex",
-        "zoom"
+        "activecampaign",
+        "brevo",
+        "convertkit",
+        "fastmail",
+        "mailerlite",
+        "mailersend",
+        "mailgun",
+        "mailjet",
+        "sendgrid"
+      ]
+    },
+    {
+      "name": "Gaming",
+      "slug": "gaming",
+      "icon": "game-controller-regular.svg",
+      "serviceSlugs": [
+        "epicgames"
+      ]
+    },
+    {
+      "name": "Google",
+      "slug": "google",
+      "icon": "globe-regular.svg",
+      "serviceSlugs": [
+        "gmail",
+        "google-cloud",
+        "google-drive",
+        "google-meet",
+        "google-workspace"
+      ]
+    },
+    {
+      "name": "Microsoft",
+      "slug": "microsoft",
+      "icon": "monitor-regular.svg",
+      "serviceSlugs": [
+        "azure"
+      ]
+    },
+    {
+      "name": "Payments & Commerce",
+      "slug": "payments-commerce",
+      "icon": "credit-card-regular.svg",
+      "serviceSlugs": [
+        "affirm",
+        "afterpay",
+        "bigcommerce",
+        "bitpay",
+        "brex",
+        "cashapp",
+        "chargebee",
+        "chime",
+        "circle",
+        "coinbase",
+        "coinbase-ex",
+        "doordash",
+        "gemini-ex",
+        "klarna",
+        "kraken",
+        "paddle",
+        "paypal",
+        "paystack",
+        "plaid",
+        "robinhood",
+        "shopify",
+        "shopware",
+        "square",
+        "stripe",
+        "wise"
       ]
     },
     {
@@ -3521,121 +3663,31 @@
       ]
     },
     {
-      "name": "Payments & Commerce",
-      "slug": "payments-commerce",
-      "icon": "credit-card-regular.svg",
+      "name": "Security",
+      "slug": "security",
+      "icon": "shield-check-regular.svg",
       "serviceSlugs": [
-        "affirm",
-        "afterpay",
-        "bigcommerce",
-        "bitpay",
-        "brex",
-        "cashapp",
-        "chargebee",
-        "chime",
-        "circle",
-        "coinbase",
-        "coinbase-ex",
-        "doordash",
-        "gemini-ex",
-        "klarna",
-        "kraken",
-        "paddle",
-        "paypal",
-        "paystack",
-        "plaid",
-        "robinhood",
-        "shopify",
-        "shopware",
-        "square",
-        "stripe",
-        "wise"
-      ]
-    },
-    {
-      "name": "Apple",
-      "slug": "apple",
-      "icon": "apple-logo-regular.svg",
-      "serviceSlugs": [
-        "apple-developer",
-        "apple-system"
-      ]
-    },
-    {
-      "name": "Google",
-      "slug": "google",
-      "icon": "globe-regular.svg",
-      "serviceSlugs": [
-        "gmail",
-        "google-cloud",
-        "google-drive",
-        "google-meet",
-        "google-workspace"
-      ]
-    },
-    {
-      "name": "Microsoft",
-      "slug": "microsoft",
-      "icon": "monitor-regular.svg",
-      "serviceSlugs": [
-        "azure"
-      ]
-    },
-    {
-      "name": "Amazon",
-      "slug": "amazon",
-      "icon": "database-regular.svg",
-      "serviceSlugs": [
-        "aws",
-        "eero",
-        "ring",
-        "smartthings",
-        "ubiquiti"
-      ]
-    },
-    {
-      "name": "AI & Machine Learning",
-      "slug": "ai-machine-learning",
-      "icon": "robot-regular.svg",
-      "serviceSlugs": [
-        "anthropic",
-        "assemblyai",
-        "baseten",
-        "blackforestlabs",
-        "bolt",
-        "character-ai",
-        "cohere",
-        "cursor",
-        "deepgram",
-        "deepseek",
-        "elevenlabs",
-        "fal",
-        "gamma",
-        "groq",
-        "harvey",
-        "heygen",
-        "huggingface",
-        "ideogram",
-        "lovable",
-        "lumalabs",
-        "midjourney",
-        "openai",
-        "perplexity",
-        "pinecone",
-        "podium",
-        "recraft",
-        "replicate",
-        "replit",
-        "runway",
-        "stability",
-        "synthesia",
-        "tavily",
-        "together-ai",
-        "vapi",
-        "vellum",
-        "whoop",
-        "windsurf",
-        "xai"
+        "1password",
+        "auth0",
+        "cloudflare-security",
+        "dashlane",
+        "digicert",
+        "duo",
+        "keeper",
+        "lastpass",
+        "paloalto",
+        "pingidentity",
+        "proton",
+        "rapid7",
+        "semgrep",
+        "sentinelone",
+        "stytch",
+        "tailscale",
+        "tenable",
+        "tresorit",
+        "wiz",
+        "workos",
+        "yubico"
       ]
     },
     {
@@ -3668,62 +3720,10 @@
       ]
     },
     {
-      "name": "Gaming",
-      "slug": "gaming",
-      "icon": "game-controller-regular.svg",
-      "serviceSlugs": [
-        "epicgames"
-      ]
-    },
-    {
       "name": "Telecom & ISP",
       "slug": "telecom-isp",
       "icon": "wifi-high-regular.svg",
       "serviceSlugs": []
-    },
-    {
-      "name": "Security",
-      "slug": "security",
-      "icon": "shield-check-regular.svg",
-      "serviceSlugs": [
-        "1password",
-        "auth0",
-        "cloudflare-security",
-        "dashlane",
-        "digicert",
-        "duo",
-        "keeper",
-        "lastpass",
-        "paloalto",
-        "pingidentity",
-        "proton",
-        "rapid7",
-        "semgrep",
-        "sentinelone",
-        "stytch",
-        "tailscale",
-        "tenable",
-        "tresorit",
-        "wiz",
-        "workos",
-        "yubico"
-      ]
-    },
-    {
-      "name": "Email & Marketing",
-      "slug": "email-marketing",
-      "icon": "envelope-simple-regular.svg",
-      "serviceSlugs": [
-        "activecampaign",
-        "brevo",
-        "convertkit",
-        "fastmail",
-        "mailerlite",
-        "mailersend",
-        "mailgun",
-        "mailjet",
-        "sendgrid"
-      ]
     }
   ]
 }
