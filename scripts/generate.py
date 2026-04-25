@@ -32,7 +32,7 @@ APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
 FAVICON_HREF = "/favicon.png?v=20260417e"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
-ASSET_VERSION = "20260423c"
+ASSET_VERSION = "20260425a"
 # Bump when icon-256.png changes so CDN edges pick up the new asset.
 ICON_VERSION = "20260417e"
 OG_IMAGE = f"{SITE_ORIGIN}/icon.png"
@@ -4723,11 +4723,8 @@ def generate_home_page(data, locale):
         for icon, name, body in t(locale, "home_features")
     )
 
-    def section_marker(label):
-        return (
-            f'    <div class="section-marker" aria-hidden="true">'
-            f'<span class="marker-tag">[ §{label} ]</span></div>'
-        )
+    def section_marker():
+        return '    <div class="section-marker" aria-hidden="true"></div>'
 
     platforms_html = " &middot; ".join(f"<span>{e(p)}</span>" for p in PLATFORM_BADGES)
     canonical = absolute(home_url_path(locale))
@@ -4797,7 +4794,7 @@ def generate_home_page(data, locale):
         </div>
     </section>
 
-{section_marker("01 stats")}
+{section_marker()}
 
     <section class="stats" aria-labelledby="stats-heading">
         <h2 id="stats-heading" class="sr-only">{e(t(locale, 'home_stats_aria'))}</h2>
@@ -4821,7 +4818,7 @@ def generate_home_page(data, locale):
         </div>
     </section>
 
-{section_marker("02 features")}
+{section_marker()}
 
     <section class="features" aria-labelledby="features-heading">
         <div class="features-heading">
@@ -4833,7 +4830,7 @@ def generate_home_page(data, locale):
         </div>
     </section>
 
-{section_marker("03 install")}
+{section_marker()}
 
     <section class="bottom-cta" aria-labelledby="bottom-cta-heading">
         <h2 id="bottom-cta-heading">{e(t(locale, 'home_bottom_heading'))}</h2>
@@ -4844,7 +4841,7 @@ def generate_home_page(data, locale):
         </a>
     </section>
 
-{section_marker("04 i18n")}
+{section_marker()}
 
 {languages_section_html(locale, alt_urls)}
     </main>
