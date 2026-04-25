@@ -178,28 +178,12 @@ h1 {
 }
 
 .section-marker {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+    width: 100%;
     max-width: 520px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
-.section-marker::before,
-.section-marker::after {
-    content: '';
-    flex: 1;
     height: 1px;
+    margin: 0 auto;
     background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.55), transparent);
     opacity: 0.55;
-}
-.section-marker .marker-tag {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--accent);
-    letter-spacing: 0.06em;
-    flex-shrink: 0;
-    text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
 
 /* ─── Stats ───────────────────────────────────────────────────────────────── */
