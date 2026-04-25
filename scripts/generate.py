@@ -47,8 +47,6 @@ APP_LANGUAGE_COUNT = 17
 SLUG_ALIASES = {
     "app-center": "appcenter",
     "apple-services": "apple-system",
-    "atandt": "att",
-    "bell-canada": "bell",
     "bunny-cdn": "bunnycdn",
     "cash-app": "cashapp",
     "cloudflare-zero-trust": "cloudflare-security",

@@ -56,6 +56,17 @@
       ]
     },
     {
+      "name": "Airbase",
+      "slug": "airbase",
+      "faviconDomain": "airbase.com",
+      "statusUrl": "https://status.airbase.com",
+      "homepageUrl": "https://www.airbase.com",
+      "statuspageApi": "https://status.airbase.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Airbyte",
       "slug": "airbyte",
       "faviconDomain": "airbyte.com",
@@ -122,6 +133,17 @@
       ]
     },
     {
+      "name": "Apollo GraphQL",
+      "slug": "apollo-graphql",
+      "faviconDomain": "apollographql.com",
+      "statusUrl": "https://status.apollographql.com",
+      "homepageUrl": "https://www.apollographql.com",
+      "statuspageApi": "https://status.apollographql.com/api/v2/summary.json",
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
       "name": "App Center",
       "slug": "appcenter",
       "faviconDomain": "appcenter.ms",
@@ -177,14 +199,14 @@
       ]
     },
     {
-      "name": "AT&T",
-      "slug": "att",
-      "faviconDomain": "att.com",
-      "statusUrl": "https://att.statuspage.io",
-      "homepageUrl": "https://www.att.com",
-      "statuspageApi": "https://att.statuspage.io/api/v2/summary.json",
+      "name": "AssemblyAI",
+      "slug": "assemblyai",
+      "faviconDomain": "assemblyai.com",
+      "statusUrl": "https://status.assemblyai.com",
+      "homepageUrl": "https://www.assemblyai.com",
+      "statuspageApi": "https://status.assemblyai.com/api/v2/summary.json",
       "categories": [
-        "telecom-isp"
+        "ai-machine-learning"
       ]
     },
     {
@@ -232,14 +254,36 @@
       ]
     },
     {
-      "name": "Bell Canada",
-      "slug": "bell",
-      "faviconDomain": "bell.ca",
-      "statusUrl": "https://bell.statuspage.io",
-      "homepageUrl": "https://www.bell.ca",
-      "statuspageApi": "https://bell.statuspage.io/api/v2/summary.json",
+      "name": "BambooHR",
+      "slug": "bamboohr",
+      "faviconDomain": "bamboohr.com",
+      "statusUrl": "https://bamboohr.statuspage.io",
+      "homepageUrl": "https://www.bamboohr.com",
+      "statuspageApi": "https://bamboohr.statuspage.io/api/v2/summary.json",
       "categories": [
-        "telecom-isp"
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "Basecamp",
+      "slug": "basecamp",
+      "faviconDomain": "basecamp.com",
+      "statusUrl": "https://37signals.statuspage.io",
+      "homepageUrl": "https://basecamp.com",
+      "statuspageApi": "https://37signals.statuspage.io/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "Baseten",
+      "slug": "baseten",
+      "faviconDomain": "baseten.co",
+      "statusUrl": "https://status.baseten.co",
+      "homepageUrl": "https://www.baseten.co",
+      "statuspageApi": "https://status.baseten.co/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -276,14 +320,25 @@
       ]
     },
     {
-      "name": "Bluesky",
-      "slug": "bluesky",
-      "faviconDomain": "bsky.app",
-      "statusUrl": "https://bluesky.statuspage.io",
-      "homepageUrl": "https://bsky.app",
-      "statuspageApi": "https://bluesky.statuspage.io/api/v2/summary.json",
+      "name": "Black Forest Labs",
+      "slug": "blackforestlabs",
+      "faviconDomain": "bfl.ai",
+      "statusUrl": "https://status.bfl.ai",
+      "homepageUrl": "https://bfl.ai",
+      "statuspageApi": "https://status.bfl.ai/api/v2/summary.json",
       "categories": [
-        "social-media"
+        "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Bolt.new",
+      "slug": "bolt",
+      "faviconDomain": "bolt.new",
+      "statusUrl": "https://status.bolt.new",
+      "homepageUrl": "https://bolt.new",
+      "statuspageApi": "https://status.bolt.new/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -293,6 +348,17 @@
       "statusUrl": "https://status.box.com",
       "homepageUrl": "https://www.box.com",
       "statuspageApi": "https://status.box.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "Braze",
+      "slug": "braze",
+      "faviconDomain": "braze.com",
+      "statusUrl": "https://status.braze.com",
+      "homepageUrl": "https://www.braze.com",
+      "statuspageApi": "https://status.braze.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -375,6 +441,17 @@
       ]
     },
     {
+      "name": "Calendly",
+      "slug": "calendly",
+      "faviconDomain": "calendly.com",
+      "statusUrl": "https://calendlystatus.com",
+      "homepageUrl": "https://calendly.com",
+      "statuspageApi": "https://calendlystatus.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Canva",
       "slug": "canva",
       "faviconDomain": "canva.com",
@@ -405,6 +482,17 @@
       "statuspageApi": "https://status.character.ai/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Chargebee",
+      "slug": "chargebee",
+      "faviconDomain": "chargebee.com",
+      "statusUrl": "https://status.chargebee.com",
+      "homepageUrl": "https://www.chargebee.com",
+      "statuspageApi": "https://status.chargebee.com/api/v2/summary.json",
+      "categories": [
+        "payments-commerce"
       ]
     },
     {
@@ -460,6 +548,17 @@
       "statuspageApi": "https://status.clickhouse.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
+      ]
+    },
+    {
+      "name": "ClickUp",
+      "slug": "clickup",
+      "faviconDomain": "clickup.com",
+      "statusUrl": "https://clickup.statuspage.io",
+      "homepageUrl": "https://clickup.com",
+      "statuspageApi": "https://clickup.statuspage.io/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
       ]
     },
     {
@@ -573,6 +672,17 @@
       ]
     },
     {
+      "name": "CodeSandbox",
+      "slug": "codesandbox",
+      "faviconDomain": "codesandbox.io",
+      "statusUrl": "https://status.codesandbox.io",
+      "homepageUrl": "https://codesandbox.io",
+      "statuspageApi": null,
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
       "name": "Cohere",
       "slug": "cohere",
       "faviconDomain": "cohere.com",
@@ -606,6 +716,17 @@
       ]
     },
     {
+      "name": "Commerce Cloud",
+      "slug": "commerce-cloud",
+      "faviconDomain": "salesforce.com",
+      "statusUrl": "https://status.salesforce.com",
+      "homepageUrl": "https://www.salesforce.com/commerce",
+      "statuspageApi": null,
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Confluent (Kafka)",
       "slug": "confluent",
       "faviconDomain": "confluent.io",
@@ -628,6 +749,17 @@
       ]
     },
     {
+      "name": "ConvertKit",
+      "slug": "convertkit",
+      "faviconDomain": "convertkit.com",
+      "statusUrl": "https://status.convertkit.com",
+      "homepageUrl": "https://convertkit.com",
+      "statuspageApi": "https://status.convertkit.com/api/v2/summary.json",
+      "categories": [
+        "email-marketing"
+      ]
+    },
+    {
       "name": "Convex",
       "slug": "convex",
       "faviconDomain": "convex.dev",
@@ -636,17 +768,6 @@
       "statuspageApi": "https://status.convex.dev/api/v2/summary.json",
       "categories": [
         "developer-tools"
-      ]
-    },
-    {
-      "name": "Cox",
-      "slug": "cox",
-      "faviconDomain": "cox.com",
-      "statusUrl": "https://cox.statuspage.io",
-      "homepageUrl": "https://www.cox.com",
-      "statuspageApi": "https://cox.statuspage.io/api/v2/summary.json",
-      "categories": [
-        "telecom-isp"
       ]
     },
     {
@@ -683,6 +804,17 @@
       ]
     },
     {
+      "name": "Dashlane",
+      "slug": "dashlane",
+      "faviconDomain": "dashlane.com",
+      "statusUrl": "https://status.dashlane.com",
+      "homepageUrl": "https://www.dashlane.com",
+      "statuspageApi": null,
+      "categories": [
+        "security"
+      ]
+    },
+    {
       "name": "Datadog",
       "slug": "datadog",
       "faviconDomain": "datadoghq.com",
@@ -702,6 +834,17 @@
       "statuspageApi": "https://status.getdbt.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
+      ]
+    },
+    {
+      "name": "Deepgram",
+      "slug": "deepgram",
+      "faviconDomain": "deepgram.com",
+      "statusUrl": "https://status.deepgram.com",
+      "homepageUrl": "https://deepgram.com",
+      "statuspageApi": "https://status.deepgram.com/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -735,6 +878,17 @@
       "statuspageApi": "https://status.dialpad.com/api/v2/summary.json",
       "categories": [
         "communication"
+      ]
+    },
+    {
+      "name": "DigiCert",
+      "slug": "digicert",
+      "faviconDomain": "digicert.com",
+      "statusUrl": "https://status.digicert.com",
+      "homepageUrl": "https://www.digicert.com",
+      "statuspageApi": "https://status.digicert.com/api/v2/summary.json",
+      "categories": [
+        "security"
       ]
     },
     {
@@ -793,6 +947,17 @@
       ]
     },
     {
+      "name": "Dovetail",
+      "slug": "dovetail",
+      "faviconDomain": "dovetail.com",
+      "statusUrl": "https://status.dovetail.com",
+      "homepageUrl": "https://dovetail.com",
+      "statuspageApi": "https://status.dovetail.com/api/v2/summary.json",
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
       "name": "Dropbox",
       "slug": "dropbox",
       "faviconDomain": "dropbox.com",
@@ -823,6 +988,17 @@
       "statuspageApi": "https://status.duo.com/api/v2/summary.json",
       "categories": [
         "security"
+      ]
+    },
+    {
+      "name": "eero",
+      "slug": "eero",
+      "faviconDomain": "eero.com",
+      "statusUrl": "https://status.eero.com",
+      "homepageUrl": "https://eero.com",
+      "statuspageApi": "https://status.eero.com/api/v2/summary.json",
+      "categories": [
+        "amazon"
       ]
     },
     {
@@ -947,14 +1123,14 @@
       ]
     },
     {
-      "name": "Fortnite",
-      "slug": "fortnite",
-      "faviconDomain": "fortnite.com",
-      "statusUrl": "https://fortnite.statuspage.io",
-      "homepageUrl": "https://www.fortnite.com",
-      "statuspageApi": "https://fortnite.statuspage.io/api/v2/summary.json",
+      "name": "Frame.io",
+      "slug": "frame-io",
+      "faviconDomain": "frame.io",
+      "statusUrl": "https://status.frame.io",
+      "homepageUrl": "https://frame.io",
+      "statuspageApi": "https://status.frame.io/api/v2/summary.json",
       "categories": [
-        "gaming"
+        "developer-tools"
       ]
     },
     {
@@ -977,6 +1153,17 @@
       "statuspageApi": "https://status.fullstory.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
+      ]
+    },
+    {
+      "name": "Gamma",
+      "slug": "gamma",
+      "faviconDomain": "gamma.app",
+      "statusUrl": "https://status.gamma.app",
+      "homepageUrl": "https://gamma.app",
+      "statuspageApi": "https://status.gamma.app/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -1145,6 +1332,17 @@
       ]
     },
     {
+      "name": "GrowthBook",
+      "slug": "growthbook",
+      "faviconDomain": "growthbook.io",
+      "statusUrl": "https://status.growthbook.io",
+      "homepageUrl": "https://www.growthbook.io",
+      "statuspageApi": null,
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
       "name": "Gusto",
       "slug": "gusto",
       "faviconDomain": "www.gusto.com",
@@ -1167,6 +1365,17 @@
       ]
     },
     {
+      "name": "Harvey",
+      "slug": "harvey",
+      "faviconDomain": "harvey.ai",
+      "statusUrl": "https://status.harvey.ai",
+      "homepageUrl": "https://www.harvey.ai",
+      "statuspageApi": "https://status.harvey.ai/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "HashiCorp",
       "slug": "hashicorp",
       "faviconDomain": "hashicorp.com",
@@ -1175,6 +1384,28 @@
       "statuspageApi": "https://status.hashicorp.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
+      ]
+    },
+    {
+      "name": "Heroku",
+      "slug": "heroku",
+      "faviconDomain": "heroku.com",
+      "statusUrl": "https://status.heroku.com",
+      "homepageUrl": "https://www.heroku.com",
+      "statuspageApi": null,
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
+      "name": "HeyGen",
+      "slug": "heygen",
+      "faviconDomain": "heygen.com",
+      "statusUrl": "https://status.heygen.com",
+      "homepageUrl": "https://www.heygen.com",
+      "statuspageApi": "https://status.heygen.com/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -1197,6 +1428,17 @@
       "statuspageApi": "https://status.hubspot.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
+      ]
+    },
+    {
+      "name": "Hugging Face",
+      "slug": "huggingface",
+      "faviconDomain": "huggingface.co",
+      "statusUrl": "https://status.huggingface.co",
+      "homepageUrl": "https://huggingface.co",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -1255,6 +1497,17 @@
       ]
     },
     {
+      "name": "Jamf",
+      "slug": "jamf",
+      "faviconDomain": "jamf.com",
+      "statusUrl": "https://status.jamf.com",
+      "homepageUrl": "https://www.jamf.com",
+      "statuspageApi": "https://status.jamf.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "JFrog",
       "slug": "jfrog",
       "faviconDomain": "jfrog.com",
@@ -1263,6 +1516,39 @@
       "statuspageApi": "https://status.jfrog.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
+      ]
+    },
+    {
+      "name": "Jira Software",
+      "slug": "jira-software",
+      "faviconDomain": "atlassian.com",
+      "statusUrl": "https://jira-software.status.atlassian.com",
+      "homepageUrl": "https://www.atlassian.com/software/jira",
+      "statuspageApi": "https://jira-software.status.atlassian.com/api/v2/summary.json",
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
+      "name": "JW Player",
+      "slug": "jwplayer",
+      "faviconDomain": "jwplayer.com",
+      "statusUrl": "https://status.jwplayer.com",
+      "homepageUrl": "https://www.jwplayer.com",
+      "statuspageApi": "https://status.jwplayer.com/api/v2/summary.json",
+      "categories": [
+        "streaming-media"
+      ]
+    },
+    {
+      "name": "Kaltura",
+      "slug": "kaltura",
+      "faviconDomain": "corp.kaltura.com",
+      "statusUrl": "https://status.kaltura.com",
+      "homepageUrl": "https://corp.kaltura.com",
+      "statuspageApi": "https://status.kaltura.com/api/v2/summary.json",
+      "categories": [
+        "streaming-media"
       ]
     },
     {
@@ -1285,6 +1571,17 @@
       "statuspageApi": "https://status.kinsta.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
+      ]
+    },
+    {
+      "name": "Klarna",
+      "slug": "klarna",
+      "faviconDomain": "klarna.com",
+      "statusUrl": "https://status.klarna.com",
+      "homepageUrl": "https://www.klarna.com",
+      "statuspageApi": "https://status.klarna.com/api/v2/summary.json",
+      "categories": [
+        "payments-commerce"
       ]
     },
     {
@@ -1398,12 +1695,56 @@
       ]
     },
     {
+      "name": "Loom",
+      "slug": "loom",
+      "faviconDomain": "loom.com",
+      "statusUrl": "https://status.loom.com",
+      "homepageUrl": "https://www.loom.com",
+      "statuspageApi": "https://status.loom.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "Lovable",
+      "slug": "lovable",
+      "faviconDomain": "lovable.dev",
+      "statusUrl": "https://status.lovable.dev",
+      "homepageUrl": "https://lovable.dev",
+      "statuspageApi": "https://status.lovable.dev/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Luma AI",
+      "slug": "lumalabs",
+      "faviconDomain": "lumalabs.ai",
+      "statusUrl": "https://status.lumalabs.ai",
+      "homepageUrl": "https://lumalabs.ai",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "MailerLite",
       "slug": "mailerlite",
       "faviconDomain": "www.mailerlite.com",
       "statusUrl": "https://status.mailerlite.com",
       "homepageUrl": "https://www.mailerlite.com",
       "statuspageApi": "https://status.mailerlite.com/api/v2/summary.json",
+      "categories": [
+        "email-marketing"
+      ]
+    },
+    {
+      "name": "MailerSend",
+      "slug": "mailersend",
+      "faviconDomain": "mailersend.com",
+      "statusUrl": "https://status.mailersend.com",
+      "homepageUrl": "https://www.mailersend.com",
+      "statuspageApi": "https://status.mailersend.com/api/v2/summary.json",
       "categories": [
         "email-marketing"
       ]
@@ -1442,6 +1783,17 @@
       ]
     },
     {
+      "name": "Marketing Cloud",
+      "slug": "marketing-cloud",
+      "faviconDomain": "salesforce.com",
+      "statusUrl": "https://status.salesforce.com",
+      "homepageUrl": "https://www.salesforce.com/products/marketing",
+      "statuspageApi": null,
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Mastodon",
       "slug": "mastodon",
       "faviconDomain": "mastodon.social",
@@ -1459,6 +1811,17 @@
       "statusUrl": "https://status.matrix.org",
       "homepageUrl": "https://matrix.org",
       "statuspageApi": "https://status.matrix.org/api/v2/summary.json",
+      "categories": [
+        "communication"
+      ]
+    },
+    {
+      "name": "Mattermost",
+      "slug": "mattermost",
+      "faviconDomain": "mattermost.com",
+      "statusUrl": "https://status.mattermost.com",
+      "homepageUrl": "https://mattermost.com",
+      "statuspageApi": "https://status.mattermost.com/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -1483,6 +1846,17 @@
       "statuspageApi": "https://medium.statuspage.io/api/v2/summary.json",
       "categories": [
         "social-media"
+      ]
+    },
+    {
+      "name": "MessageBird",
+      "slug": "messagebird",
+      "faviconDomain": "messagebird.com",
+      "statusUrl": "https://status.messagebird.com",
+      "homepageUrl": "https://www.messagebird.com",
+      "statuspageApi": "https://status.messagebird.com/api/v2/summary.json",
+      "categories": [
+        "communication"
       ]
     },
     {
@@ -1538,6 +1912,17 @@
       "statuspageApi": "https://status.mongodb.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
+      ]
+    },
+    {
+      "name": "MuleSoft",
+      "slug": "mulesoft",
+      "faviconDomain": "mulesoft.com",
+      "statusUrl": "https://status.salesforce.com",
+      "homepageUrl": "https://www.mulesoft.com",
+      "statuspageApi": null,
+      "categories": [
+        "developer-tools"
       ]
     },
     {
@@ -1607,17 +1992,6 @@
       ]
     },
     {
-      "name": "NuGet",
-      "slug": "nuget",
-      "faviconDomain": "nuget.org",
-      "statusUrl": "https://nuget.statuspage.io",
-      "homepageUrl": "https://www.nuget.org",
-      "statuspageApi": "https://nuget.statuspage.io/api/v2/summary.json",
-      "categories": [
-        "developer-tools"
-      ]
-    },
-    {
       "name": "OneSignal",
       "slug": "onesignal",
       "faviconDomain": "onesignal.com",
@@ -1651,6 +2025,17 @@
       ]
     },
     {
+      "name": "Optimizely",
+      "slug": "optimizely",
+      "faviconDomain": "optimizely.com",
+      "statusUrl": "https://status.optimizely.com",
+      "homepageUrl": "https://www.optimizely.com",
+      "statuspageApi": "https://status.optimizely.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Otter.ai",
       "slug": "otter",
       "faviconDomain": "otter.ai",
@@ -1659,6 +2044,17 @@
       "statuspageApi": "https://status.otter.ai/api/v2/summary.json",
       "categories": [
         "productivity-saas"
+      ]
+    },
+    {
+      "name": "Paddle",
+      "slug": "paddle",
+      "faviconDomain": "paddle.com",
+      "statusUrl": "https://paddlestatus.com",
+      "homepageUrl": "https://www.paddle.com",
+      "statuspageApi": null,
+      "categories": [
+        "payments-commerce"
       ]
     },
     {
@@ -1684,6 +2080,17 @@
       ]
     },
     {
+      "name": "Pardot",
+      "slug": "pardot",
+      "faviconDomain": "salesforce.com",
+      "statusUrl": "https://status.salesforce.com",
+      "homepageUrl": "https://www.salesforce.com/marketing/b2b-automation",
+      "statuspageApi": null,
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "PayPal",
       "slug": "paypal",
       "faviconDomain": "www.paypal.com",
@@ -1692,6 +2099,28 @@
       "statuspageApi": null,
       "categories": [
         "payments-commerce"
+      ]
+    },
+    {
+      "name": "Paystack",
+      "slug": "paystack",
+      "faviconDomain": "paystack.com",
+      "statusUrl": "https://status.paystack.com",
+      "homepageUrl": "https://paystack.com",
+      "statuspageApi": null,
+      "categories": [
+        "payments-commerce"
+      ]
+    },
+    {
+      "name": "Pendo",
+      "slug": "pendo",
+      "faviconDomain": "pendo.io",
+      "statusUrl": "https://status.pendo.io",
+      "homepageUrl": "https://www.pendo.io",
+      "statuspageApi": "https://status.pendo.io/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
       ]
     },
     {
@@ -1728,6 +2157,17 @@
       ]
     },
     {
+      "name": "Ping Identity",
+      "slug": "pingidentity",
+      "faviconDomain": "pingidentity.com",
+      "statusUrl": "https://status.pingidentity.com",
+      "homepageUrl": "https://www.pingidentity.com",
+      "statuspageApi": "https://status.pingidentity.com/api/v2/summary.json",
+      "categories": [
+        "security"
+      ]
+    },
+    {
       "name": "Pinterest",
       "slug": "pinterest",
       "faviconDomain": "pinterest.com",
@@ -1736,6 +2176,17 @@
       "statuspageApi": "https://www.pintereststatus.com/api/v2/summary.json",
       "categories": [
         "social-media"
+      ]
+    },
+    {
+      "name": "Pipedream",
+      "slug": "pipedream",
+      "faviconDomain": "pipedream.com",
+      "statusUrl": "https://status.pipedream.com",
+      "homepageUrl": "https://pipedream.com",
+      "statuspageApi": "https://status.pipedream.com/api/v2/summary.json",
+      "categories": [
+        "developer-tools"
       ]
     },
     {
@@ -1768,7 +2219,7 @@
       "homepageUrl": "https://www.podium.com",
       "statuspageApi": null,
       "categories": [
-        "communication"
+        "ai-machine-learning"
       ]
     },
     {
@@ -1778,6 +2229,28 @@
       "statusUrl": "https://status.postman.com",
       "homepageUrl": "https://www.postman.com",
       "statuspageApi": "https://status.postman.com/api/v2/summary.json",
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
+      "name": "Prisma Data Platform",
+      "slug": "prisma",
+      "faviconDomain": "prisma.io",
+      "statusUrl": "https://status.prisma.io",
+      "homepageUrl": "https://www.prisma.io",
+      "statuspageApi": "https://status.prisma.io/api/v2/summary.json",
+      "categories": [
+        "cloud-infrastructure"
+      ]
+    },
+    {
+      "name": "Prismic",
+      "slug": "prismic",
+      "faviconDomain": "prismic.io",
+      "statusUrl": "https://status.prismic.io",
+      "homepageUrl": "https://prismic.io",
+      "statuspageApi": "https://status.prismic.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -1827,6 +2300,17 @@
       ]
     },
     {
+      "name": "Qualtrics",
+      "slug": "qualtrics",
+      "faviconDomain": "qualtrics.com",
+      "statusUrl": "https://status.qualtrics.com",
+      "homepageUrl": "https://www.qualtrics.com",
+      "statuspageApi": "https://status.qualtrics.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Railway",
       "slug": "railway",
       "faviconDomain": "railway.app",
@@ -1835,6 +2319,17 @@
       "statuspageApi": "https://railway.statuspage.io/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
+      ]
+    },
+    {
+      "name": "Rapid7",
+      "slug": "rapid7",
+      "faviconDomain": "rapid7.com",
+      "statusUrl": "https://status.rapid7.com",
+      "homepageUrl": "https://www.rapid7.com",
+      "statuspageApi": "https://status.rapid7.com/api/v2/summary.json",
+      "categories": [
+        "security"
       ]
     },
     {
@@ -1882,6 +2377,17 @@
       ]
     },
     {
+      "name": "Replit",
+      "slug": "replit",
+      "faviconDomain": "replit.com",
+      "statusUrl": "https://replit.instatus.com",
+      "homepageUrl": "https://replit.com",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "Retool",
       "slug": "retool",
       "faviconDomain": "retool.com",
@@ -1893,6 +2399,17 @@
       ]
     },
     {
+      "name": "RevenueCat",
+      "slug": "revenuecat",
+      "faviconDomain": "revenuecat.com",
+      "statusUrl": "https://status.revenuecat.com",
+      "homepageUrl": "https://www.revenuecat.com",
+      "statuspageApi": "https://status.revenuecat.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Ring",
       "slug": "ring",
       "faviconDomain": "ring.com",
@@ -1901,6 +2418,39 @@
       "statuspageApi": "https://status.ring.com/api/v2/summary.json",
       "categories": [
         "amazon"
+      ]
+    },
+    {
+      "name": "Rippling",
+      "slug": "rippling",
+      "faviconDomain": "rippling.com",
+      "statusUrl": "https://status.rippling.com",
+      "homepageUrl": "https://www.rippling.com",
+      "statuspageApi": "https://status.rippling.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "Robinhood",
+      "slug": "robinhood",
+      "faviconDomain": "robinhood.com",
+      "statusUrl": "https://status.robinhood.com",
+      "homepageUrl": "https://robinhood.com",
+      "statuspageApi": "https://status.robinhood.com/api/v2/summary.json",
+      "categories": [
+        "payments-commerce"
+      ]
+    },
+    {
+      "name": "Roblox",
+      "slug": "roblox",
+      "faviconDomain": "roblox.com",
+      "statusUrl": "https://roblox.instatus.com",
+      "homepageUrl": "https://www.roblox.com",
+      "statuspageApi": null,
+      "categories": [
+        "streaming-media"
       ]
     },
     {
@@ -1926,6 +2476,17 @@
       ]
     },
     {
+      "name": "Rudderstack",
+      "slug": "rudderstack",
+      "faviconDomain": "rudderstack.com",
+      "statusUrl": "https://status.rudderstack.com",
+      "homepageUrl": "https://www.rudderstack.com",
+      "statuspageApi": "https://status.rudderstack.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Runway",
       "slug": "runway",
       "faviconDomain": "runwayml.com",
@@ -1934,6 +2495,28 @@
       "statuspageApi": "https://status.runwayml.com/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "faviconDomain": "salesforce.com",
+      "statusUrl": "https://status.salesforce.com",
+      "homepageUrl": "https://www.salesforce.com",
+      "statuspageApi": null,
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "Salesloft",
+      "slug": "salesloft",
+      "faviconDomain": "salesloft.com",
+      "statusUrl": "https://status.salesloft.com",
+      "homepageUrl": "https://salesloft.com",
+      "statuspageApi": "https://status.salesloft.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
       ]
     },
     {
@@ -1981,6 +2564,17 @@
       ]
     },
     {
+      "name": "Semaphore CI",
+      "slug": "semaphore",
+      "faviconDomain": "semaphoreci.com",
+      "statusUrl": "https://status.semaphoreci.com",
+      "homepageUrl": "https://semaphoreci.com",
+      "statuspageApi": "https://status.semaphoreci.com/api/v2/summary.json",
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
       "name": "Semgrep",
       "slug": "semgrep",
       "faviconDomain": "semgrep.dev",
@@ -2000,6 +2594,17 @@
       "statuspageApi": "https://status.sendgrid.com/api/v2/summary.json",
       "categories": [
         "email-marketing"
+      ]
+    },
+    {
+      "name": "SentinelOne",
+      "slug": "sentinelone",
+      "faviconDomain": "sentinelone.com",
+      "statusUrl": "https://status.sentinelone.com",
+      "homepageUrl": "https://www.sentinelone.com",
+      "statuspageApi": "https://status.sentinelone.com/api/v2/summary.json",
+      "categories": [
+        "security"
       ]
     },
     {
@@ -2025,6 +2630,50 @@
       ]
     },
     {
+      "name": "Shopware",
+      "slug": "shopware",
+      "faviconDomain": "shopware.com",
+      "statusUrl": "https://status.shopware.com",
+      "homepageUrl": "https://www.shopware.com",
+      "statuspageApi": null,
+      "categories": [
+        "payments-commerce"
+      ]
+    },
+    {
+      "name": "Shortcut",
+      "slug": "shortcut",
+      "faviconDomain": "shortcut.com",
+      "statusUrl": "https://status.shortcut.com",
+      "homepageUrl": "https://www.shortcut.com",
+      "statuspageApi": "https://status.shortcut.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "Sinch",
+      "slug": "sinch",
+      "faviconDomain": "sinch.com",
+      "statusUrl": "https://status.sinch.com",
+      "homepageUrl": "https://www.sinch.com",
+      "statuspageApi": "https://status.sinch.com/api/v2/summary.json",
+      "categories": [
+        "communication"
+      ]
+    },
+    {
+      "name": "Sketch",
+      "slug": "sketch",
+      "faviconDomain": "sketch.com",
+      "statusUrl": "https://status.sketch.com",
+      "homepageUrl": "https://www.sketch.com",
+      "statuspageApi": null,
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
       "name": "Slack",
       "slug": "slack",
       "faviconDomain": "slack.com",
@@ -2033,6 +2682,28 @@
       "statuspageApi": null,
       "categories": [
         "communication"
+      ]
+    },
+    {
+      "name": "Smartsheet",
+      "slug": "smartsheet",
+      "faviconDomain": "smartsheet.com",
+      "statusUrl": "https://status.smartsheet.com",
+      "homepageUrl": "https://www.smartsheet.com",
+      "statuspageApi": "https://status.smartsheet.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "SmartThings",
+      "slug": "smartthings",
+      "faviconDomain": "smartthings.com",
+      "statusUrl": "https://status.smartthings.com",
+      "homepageUrl": "https://smartthings.com",
+      "statuspageApi": "https://status.smartthings.com/api/v2/summary.json",
+      "categories": [
+        "amazon"
       ]
     },
     {
@@ -2102,17 +2773,6 @@
       ]
     },
     {
-      "name": "Spotify",
-      "slug": "spotify",
-      "faviconDomain": "spotify.com",
-      "statusUrl": "https://spotify.statuspage.io",
-      "homepageUrl": "https://www.spotify.com",
-      "statuspageApi": "https://spotify.statuspage.io/api/v2/summary.json",
-      "categories": [
-        "streaming-media"
-      ]
-    },
-    {
       "name": "Square",
       "slug": "square",
       "faviconDomain": "squareup.com",
@@ -2143,17 +2803,6 @@
       "statuspageApi": "https://status.stability.ai/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
-      ]
-    },
-    {
-      "name": "Starlink",
-      "slug": "starlink",
-      "faviconDomain": "starlink.com",
-      "statusUrl": "https://starlink.statuspage.io",
-      "homepageUrl": "https://www.starlink.com",
-      "statuspageApi": "https://starlink.statuspage.io/api/v2/summary.json",
-      "categories": [
-        "telecom-isp"
       ]
     },
     {
@@ -2223,6 +2872,17 @@
       ]
     },
     {
+      "name": "Tableau",
+      "slug": "tableau",
+      "faviconDomain": "tableau.com",
+      "statusUrl": "https://status.salesforce.com",
+      "homepageUrl": "https://www.tableau.com",
+      "statuspageApi": null,
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Tailscale",
       "slug": "tailscale",
       "faviconDomain": "tailscale.com",
@@ -2231,6 +2891,61 @@
       "statuspageApi": "https://status.tailscale.com/api/v2/summary.json",
       "categories": [
         "security"
+      ]
+    },
+    {
+      "name": "Tavily",
+      "slug": "tavily",
+      "faviconDomain": "tavily.com",
+      "statusUrl": "https://status.tavily.com",
+      "homepageUrl": "https://tavily.com",
+      "statuspageApi": "https://status.tavily.com/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Telnyx",
+      "slug": "telnyx",
+      "faviconDomain": "telnyx.com",
+      "statusUrl": "https://status.telnyx.com",
+      "homepageUrl": "https://telnyx.com",
+      "statuspageApi": "https://status.telnyx.com/api/v2/summary.json",
+      "categories": [
+        "communication"
+      ]
+    },
+    {
+      "name": "Temporal",
+      "slug": "temporal",
+      "faviconDomain": "temporal.io",
+      "statusUrl": "https://status.temporal.io",
+      "homepageUrl": "https://temporal.io",
+      "statuspageApi": "https://status.temporal.io/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "Tenable",
+      "slug": "tenable",
+      "faviconDomain": "tenable.com",
+      "statusUrl": "https://status.tenable.com",
+      "homepageUrl": "https://www.tenable.com",
+      "statuspageApi": "https://status.tenable.com/api/v2/summary.json",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "Together AI",
+      "slug": "together-ai",
+      "faviconDomain": "together.ai",
+      "statusUrl": "https://status.together.ai",
+      "homepageUrl": "https://www.together.ai",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -2256,14 +2971,25 @@
       ]
     },
     {
-      "name": "Tumblr",
-      "slug": "tumblr",
-      "faviconDomain": "tumblr.com",
-      "statusUrl": "https://tumblr.statuspage.io",
-      "homepageUrl": "https://www.tumblr.com",
-      "statuspageApi": "https://tumblr.statuspage.io/api/v2/summary.json",
+      "name": "Tresorit",
+      "slug": "tresorit",
+      "faviconDomain": "tresorit.com",
+      "statusUrl": "https://status.tresorit.com",
+      "homepageUrl": "https://tresorit.com",
+      "statuspageApi": "https://status.tresorit.com/api/v2/summary.json",
       "categories": [
-        "social-media"
+        "security"
+      ]
+    },
+    {
+      "name": "Turso",
+      "slug": "turso",
+      "faviconDomain": "turso.tech",
+      "statusUrl": "https://status.turso.tech",
+      "homepageUrl": "https://turso.tech",
+      "statuspageApi": null,
+      "categories": [
+        "developer-tools"
       ]
     },
     {
@@ -2300,25 +3026,14 @@
       ]
     },
     {
-      "name": "Uber",
-      "slug": "uber",
-      "faviconDomain": "uber.com",
-      "statusUrl": "https://uber.statuspage.io",
-      "homepageUrl": "https://www.uber.com",
-      "statuspageApi": "https://uber.statuspage.io/api/v2/summary.json",
+      "name": "Ubiquiti",
+      "slug": "ubiquiti",
+      "faviconDomain": "ui.com",
+      "statusUrl": "https://status.ui.com",
+      "homepageUrl": "https://ui.com",
+      "statuspageApi": "https://status.ui.com/api/v2/summary.json",
       "categories": [
-        "payments-commerce"
-      ]
-    },
-    {
-      "name": "Unity",
-      "slug": "unity",
-      "faviconDomain": "unity.com",
-      "statusUrl": "https://unity.statuspage.io",
-      "homepageUrl": "https://unity.com",
-      "statuspageApi": "https://unity.statuspage.io/api/v2/summary.json",
-      "categories": [
-        "gaming"
+        "amazon"
       ]
     },
     {
@@ -2333,6 +3048,28 @@
       ]
     },
     {
+      "name": "Vapi",
+      "slug": "vapi",
+      "faviconDomain": "vapi.ai",
+      "statusUrl": "https://status.vapi.ai",
+      "homepageUrl": "https://vapi.ai",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Vellum",
+      "slug": "vellum",
+      "faviconDomain": "vellum.ai",
+      "statusUrl": "https://status.vellum.ai",
+      "homepageUrl": "https://www.vellum.ai",
+      "statuspageApi": "https://status.vellum.ai/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "Vercel",
       "slug": "vercel",
       "faviconDomain": "vercel.com",
@@ -2341,17 +3078,6 @@
       "statuspageApi": "https://www.vercel-status.com/api/v2/summary.json",
       "categories": [
         "cloud-infrastructure"
-      ]
-    },
-    {
-      "name": "Verizon",
-      "slug": "verizon",
-      "faviconDomain": "verizon.com",
-      "statusUrl": "https://verizon.statuspage.io",
-      "homepageUrl": "https://www.verizon.com",
-      "statuspageApi": "https://verizon.statuspage.io/api/v2/summary.json",
-      "categories": [
-        "telecom-isp"
       ]
     },
     {
@@ -2366,17 +3092,6 @@
       ]
     },
     {
-      "name": "Visible",
-      "slug": "visible",
-      "faviconDomain": "visible.com",
-      "statusUrl": "https://status.visible.vc",
-      "homepageUrl": "https://www.visible.com",
-      "statuspageApi": "https://status.visible.vc/api/v2/summary.json",
-      "categories": [
-        "telecom-isp"
-      ]
-    },
-    {
       "name": "Vonage",
       "slug": "vonage",
       "faviconDomain": "vonage.com",
@@ -2385,6 +3100,17 @@
       "statuspageApi": "https://vonageapi.statuspage.io/api/v2/summary.json",
       "categories": [
         "communication"
+      ]
+    },
+    {
+      "name": "WalkMe",
+      "slug": "walkme",
+      "faviconDomain": "walkme.com",
+      "statusUrl": "https://status.walkme.com",
+      "homepageUrl": "https://www.walkme.com",
+      "statuspageApi": "https://status.walkme.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
       ]
     },
     {
@@ -2465,6 +3191,17 @@
       ]
     },
     {
+      "name": "Wistia",
+      "slug": "wistia",
+      "faviconDomain": "wistia.com",
+      "statusUrl": "https://status.wistia.com",
+      "homepageUrl": "https://wistia.com",
+      "statuspageApi": "https://status.wistia.com/api/v2/summary.json",
+      "categories": [
+        "streaming-media"
+      ]
+    },
+    {
       "name": "Wix",
       "slug": "wix",
       "faviconDomain": "www.wix.com",
@@ -2493,6 +3230,39 @@
       "statusUrl": "https://status.workos.com",
       "homepageUrl": "https://workos.com",
       "statuspageApi": "https://status.workos.com/api/v2/summary.json",
+      "categories": [
+        "security"
+      ]
+    },
+    {
+      "name": "Wunderkind",
+      "slug": "wunderkind",
+      "faviconDomain": "wunderkind.co",
+      "statusUrl": "https://status.wunderkind.co",
+      "homepageUrl": "https://www.wunderkind.co",
+      "statuspageApi": "https://status.wunderkind.co/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "xAI",
+      "slug": "xai",
+      "faviconDomain": "x.ai",
+      "statusUrl": "https://xai.instatus.com",
+      "homepageUrl": "https://x.ai",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Yubico",
+      "slug": "yubico",
+      "faviconDomain": "yubico.com",
+      "statusUrl": "https://status.yubico.com",
+      "homepageUrl": "https://www.yubico.com",
+      "statuspageApi": "https://status.yubico.com/api/v2/summary.json",
       "categories": [
         "security"
       ]
@@ -2546,6 +3316,7 @@
         "mongodb",
         "pantheon",
         "planetscale",
+        "prisma",
         "railway",
         "render",
         "scaleway",
@@ -2561,6 +3332,7 @@
       "serviceSlugs": [
         "ably",
         "airbyte",
+        "apollo-graphql",
         "appcenter",
         "bitbucket",
         "bitrise",
@@ -2573,36 +3345,44 @@
         "cocoapods",
         "codecov",
         "codefresh",
+        "codesandbox",
         "contentful",
         "convex",
         "cratesio",
         "dbt",
         "deno",
         "doppler",
+        "dovetail",
         "env0",
         "expo",
         "fivetran",
+        "frame-io",
         "github",
         "gitpod",
         "grafana",
+        "growthbook",
         "harness",
         "hashicorp",
+        "heroku",
         "honeycomb",
         "incidentio",
         "jfrog",
+        "jira-software",
         "launchdarkly",
         "logrocket",
         "mavencentral",
+        "mulesoft",
         "mux",
         "netlify",
         "newrelic",
         "ngrok",
         "npm",
-        "nuget",
         "onesignal",
         "opsgenie",
         "percy",
+        "pipedream",
         "postman",
+        "prismic",
         "pulumi",
         "pusher",
         "pypi",
@@ -2610,7 +3390,9 @@
         "rollbar",
         "rubygems",
         "saucelabs",
+        "semaphore",
         "sentry",
+        "sketch",
         "snyk",
         "sourcegraph",
         "spacelift",
@@ -2618,6 +3400,7 @@
         "splunk-oncall",
         "supabase",
         "travisci",
+        "turso",
         "upstash",
         "warp",
         "webflow"
@@ -2633,8 +3416,11 @@
         "front",
         "livekit",
         "matrix",
-        "podium",
+        "mattermost",
+        "messagebird",
+        "sinch",
         "slack",
+        "telnyx",
         "twilio",
         "vonage",
         "webex",
@@ -2646,15 +3432,22 @@
       "slug": "productivity-saas",
       "icon": "gear-regular.svg",
       "serviceSlugs": [
+        "airbase",
         "airtable",
         "amplitude",
         "asana",
         "atlassian",
+        "bamboohr",
+        "basecamp",
         "box",
+        "braze",
         "buffer",
+        "calendly",
         "canva",
         "clerk",
+        "clickup",
         "coda",
+        "commerce-cloud",
         "datadog",
         "docusign",
         "dropboxsign",
@@ -2667,22 +3460,40 @@
         "gusto",
         "hubspot",
         "intercom",
+        "jamf",
         "klaviyo",
         "linear",
         "logingov",
+        "loom",
         "make",
+        "marketing-cloud",
         "miro",
         "mixpanel",
         "monday",
         "notion",
+        "optimizely",
         "otter",
+        "pardot",
+        "pendo",
+        "qualtrics",
+        "revenuecat",
+        "rippling",
+        "rudderstack",
+        "salesforce",
+        "salesloft",
         "sanity",
         "segment",
+        "shortcut",
+        "smartsheet",
         "squarespace",
         "surveymonkey",
+        "tableau",
+        "temporal",
         "trello",
         "typeform",
+        "walkme",
         "wix",
+        "wunderkind",
         "zapier"
       ]
     },
@@ -2696,19 +3507,24 @@
         "bitpay",
         "brex",
         "cashapp",
+        "chargebee",
         "chime",
         "circle",
         "coinbase",
         "coinbase-ex",
         "doordash",
         "gemini-ex",
+        "klarna",
         "kraken",
+        "paddle",
         "paypal",
+        "paystack",
         "plaid",
+        "robinhood",
         "shopify",
+        "shopware",
         "square",
         "stripe",
-        "uber",
         "wise"
       ]
     },
@@ -2747,7 +3563,10 @@
       "icon": "database-regular.svg",
       "serviceSlugs": [
         "aws",
-        "ring"
+        "eero",
+        "ring",
+        "smartthings",
+        "ubiquiti"
       ]
     },
     {
@@ -2756,25 +3575,43 @@
       "icon": "robot-regular.svg",
       "serviceSlugs": [
         "anthropic",
+        "assemblyai",
+        "baseten",
+        "blackforestlabs",
+        "bolt",
         "character-ai",
         "cohere",
         "cursor",
+        "deepgram",
         "deepseek",
         "elevenlabs",
         "fal",
+        "gamma",
         "groq",
+        "harvey",
+        "heygen",
+        "huggingface",
         "ideogram",
+        "lovable",
+        "lumalabs",
         "midjourney",
         "openai",
         "perplexity",
         "pinecone",
+        "podium",
         "recraft",
         "replicate",
+        "replit",
         "runway",
         "stability",
         "synthesia",
+        "tavily",
+        "together-ai",
+        "vapi",
+        "vellum",
         "whoop",
-        "windsurf"
+        "windsurf",
+        "xai"
       ]
     },
     {
@@ -2782,14 +3619,12 @@
       "slug": "social-media",
       "icon": "users-regular.svg",
       "serviceSlugs": [
-        "bluesky",
         "linkedin",
         "mastodon",
         "medium",
         "pinterest",
         "reddit",
-        "substack",
-        "tumblr"
+        "substack"
       ]
     },
     {
@@ -2800,9 +3635,12 @@
         "dailymotion",
         "giphy",
         "imgur",
-        "spotify",
+        "jwplayer",
+        "kaltura",
+        "roblox",
         "twitch",
-        "vimeo"
+        "vimeo",
+        "wistia"
       ]
     },
     {
@@ -2810,23 +3648,14 @@
       "slug": "gaming",
       "icon": "game-controller-regular.svg",
       "serviceSlugs": [
-        "epicgames",
-        "fortnite",
-        "unity"
+        "epicgames"
       ]
     },
     {
       "name": "Telecom & ISP",
       "slug": "telecom-isp",
       "icon": "wifi-high-regular.svg",
-      "serviceSlugs": [
-        "att",
-        "bell",
-        "cox",
-        "starlink",
-        "verizon",
-        "visible"
-      ]
+      "serviceSlugs": []
     },
     {
       "name": "Security",
@@ -2836,16 +3665,24 @@
         "1password",
         "auth0",
         "cloudflare-security",
+        "dashlane",
+        "digicert",
         "duo",
         "keeper",
         "lastpass",
         "paloalto",
+        "pingidentity",
         "proton",
+        "rapid7",
         "semgrep",
+        "sentinelone",
         "stytch",
         "tailscale",
+        "tenable",
+        "tresorit",
         "wiz",
-        "workos"
+        "workos",
+        "yubico"
       ]
     },
     {
@@ -2855,8 +3692,10 @@
       "serviceSlugs": [
         "activecampaign",
         "brevo",
+        "convertkit",
         "fastmail",
         "mailerlite",
+        "mailersend",
         "mailgun",
         "mailjet",
         "sendgrid"
