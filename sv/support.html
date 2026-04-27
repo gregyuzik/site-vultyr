@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-xgv6T7zeSl8lpKxp5zlxrQ9qDx4YY3FEl27XY7Iy4V4='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-kEYE4VAkAjzEWX8Ye+AibYYgRxaPFzuEIZ+vhXFUzTI='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Support">
     <meta property="og:description" content="Få hjälp med Vultyr, tjänstestatusövervakaren för iPhone, iPad, Mac, Apple Watch, Apple TV och Apple Vision Pro. Vanliga frågor, kontakt och felsökning.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr-appikon — tjänstestatusövervakare">
+    <meta property="og:image:alt" content="Vultyr-appikon: tjänstestatusövervakare">
     <meta property="og:url" content="https://vultyr.app/sv/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="sv_SE">
@@ -64,7 +64,7 @@
       "name": "Hur fungerar aviseringar mellan enheter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den så ofta som var 60:e sekund (kan ställas in upp till 15 min). När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning — aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas."
+        "text": "Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den så ofta som var 60:e sekund (kan ställas in upp till 15 min). När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning, aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Behöver jag Mac-appen för tillförlitliga aviseringar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker så ofta som var 60:e sekund när den är ansluten till ström (kan ställas in upp till 15 min) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång — den är liten i menyraden och är så Vultyr är avsedd att användas."
+        "text": "Ja, vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker så ofta som var 60:e sekund när den är ansluten till ström (kan ställas in upp till 15 min) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång, den är liten i menyraden och är så Vultyr är avsedd att användas."
       }
     },
     {
@@ -96,7 +96,7 @@
       "name": "Samlar vultyr-appen in mina data?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nej. Appen har inga konton, ingen spårning i appen och ingen analys i appen. Alla dina bevakade tjänster stannar på din enhet. Observera: denna webbplats (vultyr.app) använder cookielös Google Analytics för aggregerade besöksräkningar — se integritetspolicyn för detaljer."
+        "text": "Nej. Appen har inga konton, ingen spårning i appen och ingen analys i appen. Alla dina bevakade tjänster stannar på din enhet. Observera: denna webbplats (vultyr.app) använder cookielös Google Analytics för aggregerade besöksräkningar, se integritetspolicyn för detaljer."
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "Kan jag tysta aviseringar för en känd incident?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. När du visar en tjänst med en aktiv incident kan du tysta aviseringar under en viss period så att du inte upprepade gånger meddelas om något du redan känner till. Du kan också tysta med rösten — ”Hey Siri, tysta GitHub i 2 timmar” — eller från Shortcuts-appen."
+        "text": "Ja. När du visar en tjänst med en aktiv incident kan du tysta aviseringar under en viss period så att du inte upprepade gånger meddelas om något du redan känner till. Du kan också tysta med rösten, ”Hey Siri, tysta GitHub i 2 timmar”, eller från Shortcuts-appen."
       }
     },
     {
@@ -142,7 +142,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>Hur fungerar aviseringar mellan enheter?</h3>
-        <p>Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den så ofta som var 60:e sekund (kan ställas in upp till 15 min). När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning — aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas.</p>
+        <p>Mac-appen är navet. Håll den igång (i menyraden eller i ett fullständigt fönster) så avsöker den så ofta som var 60:e sekund (kan ställas in upp till 15 min). När en statusändring upptäcks skriver den en lättviktssignal till iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV och Vision Pro uppfattar ändringen och kör sin egen lokala kontroll. Inga nycklar, inga tokens, ingen inställning, aktivera bara ”Aviseringar mellan enheter” i inställningarna på valfri enhet. Utan en Mac som nav förlitar sig aviseringarna på iOS bakgrundsexekvering och kommer att fördröjas eller missas.</p>
     </div>
     <div class="faq">
         <h3>Behöver jag Mac-appen för tillförlitliga aviseringar?</h3>
-        <p>Ja — vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker så ofta som var 60:e sekund när den är ansluten till ström (kan ställas in upp till 15 min) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång — den är liten i menyraden och är så Vultyr är avsedd att användas.</p>
+        <p>Ja, vi rekommenderar det starkt. iOS begränsar bakgrundsexekvering, så iPhone och iPad kan bara kontrollera var 5:e till 15:e minut (kan konfigureras) och kan fördröja ytterligare vid låg batterinivå, lågenergiläge eller dålig uppkoppling. Mac-appen avsöker så ofta som var 60:e sekund när den är ansluten till ström (kan ställas in upp till 15 min) och skickar statusändringar till dina andra enheter via iCloud. Utan en Mac som kör Vultyr fungerar aviseringar på iOS, watchOS och tvOS fortfarande men kan fördröjas betydligt eller missas. För realtidsövervakning, håll Mac-appen igång, den är liten i menyraden och är så Vultyr är avsedd att användas.</p>
     </div>
     <div class="faq">
         <h3>Fungerar vultyr med Siri och Shortcuts?</h3>
@@ -192,7 +192,7 @@
     </div>
     <div class="faq">
         <h3>Samlar vultyr-appen in mina data?</h3>
-        <p>Nej. Appen har inga konton, ingen spårning i appen och ingen analys i appen. Alla dina bevakade tjänster stannar på din enhet. Observera: denna webbplats (vultyr.app) använder cookielös Google Analytics för aggregerade besöksräkningar — se <a href="/sv/privacy.html">integritetspolicyn</a> för detaljer.</p>
+        <p>Nej. Appen har inga konton, ingen spårning i appen och ingen analys i appen. Alla dina bevakade tjänster stannar på din enhet. Observera: denna webbplats (vultyr.app) använder cookielös Google Analytics för aggregerade besöksräkningar, se <a href="/sv/privacy.html">integritetspolicyn</a> för detaljer.</p>
     </div>
     <div class="faq">
         <h3>Hur synkroniserar jag mina tjänster mellan enheter?</h3>
@@ -204,7 +204,7 @@
     </div>
     <div class="faq">
         <h3>Kan jag tysta aviseringar för en känd incident?</h3>
-        <p>Ja. När du visar en tjänst med en aktiv incident kan du tysta aviseringar under en viss period så att du inte upprepade gånger meddelas om något du redan känner till. Du kan också tysta med rösten — ”Hey Siri, tysta GitHub i 2 timmar” — eller från Shortcuts-appen.</p>
+        <p>Ja. När du visar en tjänst med en aktiv incident kan du tysta aviseringar under en viss period så att du inte upprepade gånger meddelas om något du redan känner till. Du kan också tysta med rösten, ”Hey Siri, tysta GitHub i 2 timmar”, eller från Shortcuts-appen.</p>
     </div>
     <div class="faq">
         <h3>Vilka plattformar stöds?</h3>

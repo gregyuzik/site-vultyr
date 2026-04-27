@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-XMiZb50dSs0bKgGB659i1jFBcd4xWiC/5/nwjrxb0XI='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-iNG9C1Zu89l2x+HJdWnp1EdmZR7flsTsPzYnWF+zeKc='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Suporte">
     <meta property="og:description" content="Receba ajuda com o Vultyr, o monitor de status de serviços para iPhone, iPad, Mac, Apple Watch, Apple TV e Apple Vision Pro. Perguntas frequentes, contato e solução de problemas.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Ícone do app Vultyr — Monitor de status de serviços">
+    <meta property="og:image:alt" content="Ícone do app Vultyr: Monitor de status de serviços">
     <meta property="og:url" content="https://vultyr.app/pt-BR/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
@@ -64,7 +64,7 @@
       "name": "Como funcionam os Alertas entre dispositivos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "O app para Mac é o hub. Mantenha-o em execução (na barra de menus ou em janela completa) e ele faz verificações com frequência de até 60 segundos (configurável até 15 min). Quando detecta uma mudança de status, grava um sinal leve no iCloud Key-Value Store; seu iPhone, iPad, Watch, Apple TV e Vision Pro captam a mudança e fazem sua própria verificação local. Sem chaves, sem tokens, sem configuração — basta ativar \"Alertas entre dispositivos\" nos ajustes em qualquer dispositivo. Sem um Mac atuando como hub, os alertas dependem da execução em segundo plano do iOS e podem atrasar ou ser perdidos."
+        "text": "O app para Mac é o hub. Mantenha-o em execução (na barra de menus ou em janela completa) e ele faz verificações com frequência de até 60 segundos (configurável até 15 min). Quando detecta uma mudança de status, grava um sinal leve no iCloud Key-Value Store; seu iPhone, iPad, Watch, Apple TV e Vision Pro captam a mudança e fazem sua própria verificação local. Sem chaves, sem tokens, sem configuração, basta ativar \"Alertas entre dispositivos\" nos ajustes em qualquer dispositivo. Sem um Mac atuando como hub, os alertas dependem da execução em segundo plano do iOS e podem atrasar ou ser perdidos."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Eu preciso do app para Mac para ter alertas confiáveis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim — recomendamos fortemente. O iOS limita a execução em segundo plano, então iPhone e iPad só podem verificar a cada 5 a 15 minutos (configurável) e podem adiar ainda mais com bateria fraca, Modo de Pouca Energia ou conectividade ruim. O app para Mac faz verificações com frequência de até 60 segundos quando está conectado à tomada (configurável até 15 min) e transmite mudanças de status para seus outros dispositivos via iCloud. Sem um Mac rodando o Vultyr, os alertas no iOS, watchOS e tvOS ainda funcionam, mas podem atrasar bastante ou ser perdidos. Para monitoramento em tempo real, mantenha o app para Mac em execução — ele é minúsculo na barra de menus e é assim que o Vultyr foi feito para ser usado."
+        "text": "Sim, recomendamos fortemente. O iOS limita a execução em segundo plano, então iPhone e iPad só podem verificar a cada 5 a 15 minutos (configurável) e podem adiar ainda mais com bateria fraca, Modo de Pouca Energia ou conectividade ruim. O app para Mac faz verificações com frequência de até 60 segundos quando está conectado à tomada (configurável até 15 min) e transmite mudanças de status para seus outros dispositivos via iCloud. Sem um Mac rodando o Vultyr, os alertas no iOS, watchOS e tvOS ainda funcionam, mas podem atrasar bastante ou ser perdidos. Para monitoramento em tempo real, mantenha o app para Mac em execução, ele é minúsculo na barra de menus e é assim que o Vultyr foi feito para ser usado."
       }
     },
     {
@@ -96,7 +96,7 @@
       "name": "O app vultyr coleta meus dados?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Não. O app não tem contas, rastreamento interno nem análise interna. Todos os serviços que você acompanha ficam no seu dispositivo. Observação: este site (vultyr.app) usa Google Analytics sem cookies para contagens agregadas de visitantes — veja a Política de privacidade para detalhes."
+        "text": "Não. O app não tem contas, rastreamento interno nem análise interna. Todos os serviços que você acompanha ficam no seu dispositivo. Observação: este site (vultyr.app) usa Google Analytics sem cookies para contagens agregadas de visitantes, veja a Política de privacidade para detalhes."
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "Posso silenciar notificações de um incidente conhecido?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sim. Ao visualizar um serviço com um incidente ativo, você pode silenciar as notificações por um período definido para não receber alertas repetidos sobre algo que já sabe. Também dá para silenciar por voz — \"E aí Siri, silencie o GitHub por 2 horas\" — ou pelo app Shortcuts."
+        "text": "Sim. Ao visualizar um serviço com um incidente ativo, você pode silenciar as notificações por um período definido para não receber alertas repetidos sobre algo que já sabe. Também dá para silenciar por voz, \"E aí Siri, silencie o GitHub por 2 horas\", ou pelo app Shortcuts."
       }
     },
     {
@@ -142,7 +142,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>Como funcionam os Alertas entre dispositivos?</h3>
-        <p>O app para Mac é o hub. Mantenha-o em execução (na barra de menus ou em janela completa) e ele faz verificações com frequência de até 60 segundos (configurável até 15 min). Quando detecta uma mudança de status, grava um sinal leve no iCloud Key-Value Store; seu iPhone, iPad, Watch, Apple TV e Vision Pro captam a mudança e fazem sua própria verificação local. Sem chaves, sem tokens, sem configuração — basta ativar "Alertas entre dispositivos" nos ajustes em qualquer dispositivo. Sem um Mac atuando como hub, os alertas dependem da execução em segundo plano do iOS e podem atrasar ou ser perdidos.</p>
+        <p>O app para Mac é o hub. Mantenha-o em execução (na barra de menus ou em janela completa) e ele faz verificações com frequência de até 60 segundos (configurável até 15 min). Quando detecta uma mudança de status, grava um sinal leve no iCloud Key-Value Store; seu iPhone, iPad, Watch, Apple TV e Vision Pro captam a mudança e fazem sua própria verificação local. Sem chaves, sem tokens, sem configuração, basta ativar "Alertas entre dispositivos" nos ajustes em qualquer dispositivo. Sem um Mac atuando como hub, os alertas dependem da execução em segundo plano do iOS e podem atrasar ou ser perdidos.</p>
     </div>
     <div class="faq">
         <h3>Eu preciso do app para Mac para ter alertas confiáveis?</h3>
-        <p>Sim — recomendamos fortemente. O iOS limita a execução em segundo plano, então iPhone e iPad só podem verificar a cada 5 a 15 minutos (configurável) e podem adiar ainda mais com bateria fraca, Modo de Pouca Energia ou conectividade ruim. O app para Mac faz verificações com frequência de até 60 segundos quando está conectado à tomada (configurável até 15 min) e transmite mudanças de status para seus outros dispositivos via iCloud. Sem um Mac rodando o Vultyr, os alertas no iOS, watchOS e tvOS ainda funcionam, mas podem atrasar bastante ou ser perdidos. Para monitoramento em tempo real, mantenha o app para Mac em execução — ele é minúsculo na barra de menus e é assim que o Vultyr foi feito para ser usado.</p>
+        <p>Sim, recomendamos fortemente. O iOS limita a execução em segundo plano, então iPhone e iPad só podem verificar a cada 5 a 15 minutos (configurável) e podem adiar ainda mais com bateria fraca, Modo de Pouca Energia ou conectividade ruim. O app para Mac faz verificações com frequência de até 60 segundos quando está conectado à tomada (configurável até 15 min) e transmite mudanças de status para seus outros dispositivos via iCloud. Sem um Mac rodando o Vultyr, os alertas no iOS, watchOS e tvOS ainda funcionam, mas podem atrasar bastante ou ser perdidos. Para monitoramento em tempo real, mantenha o app para Mac em execução, ele é minúsculo na barra de menus e é assim que o Vultyr foi feito para ser usado.</p>
     </div>
     <div class="faq">
         <h3>O vultyr funciona com Siri e Shortcuts?</h3>
@@ -192,7 +192,7 @@
     </div>
     <div class="faq">
         <h3>O app vultyr coleta meus dados?</h3>
-        <p>Não. O app não tem contas, rastreamento interno nem análise interna. Todos os serviços que você acompanha ficam no seu dispositivo. Observação: este site (vultyr.app) usa Google Analytics sem cookies para contagens agregadas de visitantes — veja a <a href="/pt-BR/privacy.html">Política de privacidade</a> para detalhes.</p>
+        <p>Não. O app não tem contas, rastreamento interno nem análise interna. Todos os serviços que você acompanha ficam no seu dispositivo. Observação: este site (vultyr.app) usa Google Analytics sem cookies para contagens agregadas de visitantes, veja a <a href="/pt-BR/privacy.html">Política de privacidade</a> para detalhes.</p>
     </div>
     <div class="faq">
         <h3>Como sincronizo meus serviços entre dispositivos?</h3>
@@ -204,7 +204,7 @@
     </div>
     <div class="faq">
         <h3>Posso silenciar notificações de um incidente conhecido?</h3>
-        <p>Sim. Ao visualizar um serviço com um incidente ativo, você pode silenciar as notificações por um período definido para não receber alertas repetidos sobre algo que já sabe. Também dá para silenciar por voz — "E aí Siri, silencie o GitHub por 2 horas" — ou pelo app Shortcuts.</p>
+        <p>Sim. Ao visualizar um serviço com um incidente ativo, você pode silenciar as notificações por um período definido para não receber alertas repetidos sobre algo que já sabe. Também dá para silenciar por voz, "E aí Siri, silencie o GitHub por 2 horas", ou pelo app Shortcuts.</p>
     </div>
     <div class="faq">
         <h3>Quais plataformas são suportadas?</h3>

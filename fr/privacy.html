@@ -15,7 +15,7 @@
     <meta property="og:title" content="Politique de confidentialité">
     <meta property="og:description" content="Politique de confidentialité de Vultyr. L’application ne collecte aucune donnée personnelle. Ce site utilise Google Analytics sans cookies pour le trafic agrégé des visiteurs.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Icône de l’application Vultyr — moniteur d’état des services">
+    <meta property="og:image:alt" content="Icône de l’application Vultyr: moniteur d’état des services">
     <meta property="og:url" content="https://vultyr.app/fr/privacy.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
@@ -46,7 +46,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
     <link rel="stylesheet" href="/assets/css/shared.css?v=20260425b">
     <link rel="stylesheet" href="/assets/css/docs.css?v=20260425b">
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -70,27 +70,27 @@
     <p class="date">Dernière mise à jour : 11 avril 2026</p>
     <h2>Résumé</h2>
     <p>L’<strong>application</strong> Vultyr ne collecte, ne stocke ni ne transmet aucune donnée personnelle. Le <strong>site</strong> Vultyr (vultyr.app) utilise Google Analytics sans cookies pour comprendre le trafic agrégé des visiteurs. Cette page détaille les deux.</p>
-    <h2>Application — Collecte de données</h2>
+    <h2>Application: Collecte de données</h2>
     <p>L’application vultyr ne collecte aucune information personnelle. Elle ne nécessite aucun compte, n’inclut aucun SDK tiers d’analyse ou de suivi, et ne contacte aucun serveur que nous exploitons.</p>
-    <h2>Application — Requêtes réseau</h2>
-    <p>L’application effectue des requêtes HTTPS directes vers les API publiques de pages d’état (telles que Statuspage.io, Apple, Google Cloud et d’autres) pour vérifier l’état des services. Ces requêtes vont directement de votre appareil à l’API publique du service — elles ne transitent par aucun serveur que nous exploitons.</p>
-    <h2>Application — Stockage des données</h2>
+    <h2>Application: Requêtes réseau</h2>
+    <p>L’application effectue des requêtes HTTPS directes vers les API publiques de pages d’état (telles que Statuspage.io, Apple, Google Cloud et d’autres) pour vérifier l’état des services. Ces requêtes vont directement de votre appareil à l’API publique du service, elles ne transitent par aucun serveur que nous exploitons.</p>
+    <h2>Application: Stockage des données</h2>
     <p>Toutes les données sont stockées localement sur votre appareil à l’aide du framework SwiftData d’Apple. Si vous activez la synchronisation iCloud, votre liste de services surveillés est synchronisée via l’iCloud Key-Value Store d’Apple, régi par la politique de confidentialité d’Apple. Nous ne voyons jamais ces données.</p>
-    <h2>Application — Alertes entre appareils</h2>
-    <p>Si vous activez les alertes entre appareils, les changements d’état sont partagés entre vos appareils via l’iCloud Key-Value Store d’Apple. Lorsque votre Mac détecte un changement d’état, il écrit un signal léger dans votre compte iCloud. Vos autres appareils observent le changement et exécutent leur propre vérification locale. Aucun serveur tiers n’est impliqué — toute la communication passe par l’infrastructure iCloud d’Apple. Vous pouvez activer ou désactiver cette option depuis n’importe quel appareil.</p>
-    <h2>Application — Favicons</h2>
+    <h2>Application: Alertes entre appareils</h2>
+    <p>Si vous activez les alertes entre appareils, les changements d’état sont partagés entre vos appareils via l’iCloud Key-Value Store d’Apple. Lorsque votre Mac détecte un changement d’état, il écrit un signal léger dans votre compte iCloud. Vos autres appareils observent le changement et exécutent leur propre vérification locale. Aucun serveur tiers n’est impliqué, toute la communication passe par l’infrastructure iCloud d’Apple. Vous pouvez activer ou désactiver cette option depuis n’importe quel appareil.</p>
+    <h2>Application: Favicons</h2>
     <p>Les favicons des services sont récupérés depuis le service public de favicons de Google et mis en cache localement sur votre appareil.</p>
-    <h2>Site — Analytique</h2>
+    <h2>Site: Analytique</h2>
     <p>Ce site (vultyr.app) utilise Google Analytics 4 en mode sans cookies avec anonymisation d’IP pour compter les vues de page agrégées. Plus précisément, nous configurons gtag.js avec <code>anonymize_ip: true</code>, <code>client_storage: 'none'</code>, <code>allow_google_signals: false</code> et <code>allow_ad_personalization_signals: false</code>. Cela signifie qu’aucun cookie <code>_ga</code> n’est déposé, que votre IP est tronquée avant stockage et qu’aucun identifiant publicitaire n’est collecté. L’application vultyr elle-même ne contient aucune analyse.</p>
-    <h2>Site — Domaines tiers</h2>
+    <h2>Site: Domaines tiers</h2>
     <p>Le chargement de vultyr.app contacte les domaines tiers suivants :</p>
     <ul>
-        <li><strong>www.googletagmanager.com</strong> — charge le script gtag.js</li>
-        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong> — reçoit les signaux anonymisés de vues de page</li>
-        <li><strong>www.google.com/g/collect</strong> — reçoit les mêmes signaux anonymisés de vues de page (endpoint de collecte de secours de Google Analytics 4)</li>
+        <li><strong>www.googletagmanager.com</strong>, charge le script gtag.js</li>
+        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong>, reçoit les signaux anonymisés de vues de page</li>
+        <li><strong>www.google.com/g/collect</strong>, reçoit les mêmes signaux anonymisés de vues de page (endpoint de collecte de secours de Google Analytics 4)</li>
     </ul>
     <p>Nous ne chargeons pas Google Fonts (la police Audiowide est hébergée sur vultyr.app) et n’utilisons pas de service tiers de favicons pour les images du site lui-même.</p>
-    <h2>Application — Services tiers</h2>
+    <h2>Application: Services tiers</h2>
     <p>L’application vultyr ne s’intègre à aucun service tiers d’analyse, de publicité ou de suivi. Les seules requêtes externes vont vers les API publiques de pages d’état et vers le service de favicons de Google.</p>
     <h2>Confidentialité des enfants</h2>
     <p>L’application vultyr ne collecte de données auprès de personne, y compris des enfants de moins de 13 ans. Le site n’enregistre que des comptages de visiteurs anonymisés et agrégés.</p>

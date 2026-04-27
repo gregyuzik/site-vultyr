@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-umFwPOfhhMBI48w2F823YljUm48yTvpgvn86HJ7ZE3c='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-jvRZn+jdcVIQ6ZTEmWjzFRkZkLg7y9ADwCc7nhHbW+U='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Støtte">
     <meta property="og:description" content="Få hjelp med Vultyr, tjenestestatusmonitoren for iPhone, iPad, Mac, Apple Watch, Apple TV og Apple Vision Pro. Vanlige spørsmål, kontakt og feilsøking.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr-appikon — tjenestestatusmonitor">
+    <meta property="og:image:alt" content="Vultyr-appikon: tjenestestatusmonitor">
     <meta property="og:url" content="https://vultyr.app/nb/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="nb_NO">
@@ -64,7 +64,7 @@
       "name": "Hvordan fungerer varsler mellom enheter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac-appen er navet. Hold den i gang (menylinje eller fullt vindu), så opprører den så ofte som hvert 60. sekund (kan stilles inn opp til 15 min). Når en statusendring oppdages, skriver den et lett signal til iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV og Vision Pro plukker opp endringen og kjører sin egen lokale sjekk. Ingen nøkler, ingen tokener, ingen oppsett — bare aktiver «Varsler mellom enheter» i innstillingene på en hvilken som helst enhet. Uten en Mac som nav er varsler avhengige av iOS-bakgrunnseksekvering, og vil bli forsinket eller gå tapt."
+        "text": "Mac-appen er navet. Hold den i gang (menylinje eller fullt vindu), så opprører den så ofte som hvert 60. sekund (kan stilles inn opp til 15 min). Når en statusendring oppdages, skriver den et lett signal til iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV og Vision Pro plukker opp endringen og kjører sin egen lokale sjekk. Ingen nøkler, ingen tokener, ingen oppsett, bare aktiver «Varsler mellom enheter» i innstillingene på en hvilken som helst enhet. Uten en Mac som nav er varsler avhengige av iOS-bakgrunnseksekvering, og vil bli forsinket eller gå tapt."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Trenger jeg Mac-appen for pålitelige varsler?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — vi anbefaler det sterkt. iOS begrenser bakgrunnseksekvering, så iPhone og iPad kan bare sjekke hvert 5.–15. minutt (konfigurerbart) og kan utsette ytterligere ved lavt batteri, strømsparingsmodus eller dårlig dekning. Mac-appen opprører så ofte som hvert 60. sekund når den er koblet til strøm (kan stilles inn opp til 15 min) og kringkaster statusendringer til de andre enhetene dine via iCloud. Uten en Mac som kjører Vultyr, fungerer varsler på iOS, watchOS og tvOS fortsatt, men kan bli betydelig forsinket eller gå tapt. For sanntidsovervåkning, hold Mac-appen i gang — den er bitte liten i menylinjen, og det er slik Vultyr er ment å brukes."
+        "text": "Ja, vi anbefaler det sterkt. iOS begrenser bakgrunnseksekvering, så iPhone og iPad kan bare sjekke hvert 5.–15. minutt (konfigurerbart) og kan utsette ytterligere ved lavt batteri, strømsparingsmodus eller dårlig dekning. Mac-appen opprører så ofte som hvert 60. sekund når den er koblet til strøm (kan stilles inn opp til 15 min) og kringkaster statusendringer til de andre enhetene dine via iCloud. Uten en Mac som kjører Vultyr, fungerer varsler på iOS, watchOS og tvOS fortsatt, men kan bli betydelig forsinket eller gå tapt. For sanntidsovervåkning, hold Mac-appen i gang, den er bitte liten i menylinjen, og det er slik Vultyr er ment å brukes."
       }
     },
     {
@@ -96,7 +96,7 @@
       "name": "Samler vultyr-appen inn dataene mine?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nei. Appen har ingen kontoer, ingen sporing i appen, ingen analyse i appen. Alle tjenestene du følger, blir værende på enheten din. Merk: dette nettstedet (vultyr.app) bruker Google Analytics uten informasjonskapsler for aggregerte besøkstellinger — se personvernerklæringen for detaljer."
+        "text": "Nei. Appen har ingen kontoer, ingen sporing i appen, ingen analyse i appen. Alle tjenestene du følger, blir værende på enheten din. Merk: dette nettstedet (vultyr.app) bruker Google Analytics uten informasjonskapsler for aggregerte besøkstellinger, se personvernerklæringen for detaljer."
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "Kan jeg dempe varsler for en kjent hendelse?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. Når du ser på en tjeneste med en aktiv hendelse, kan du dempe varsler for en angitt periode, slik at du ikke blir varslet gjentatte ganger om noe du allerede vet om. Du kan også dempe med stemmen — «Hei Siri, demp GitHub i 2 timer» — eller fra Shortcuts-appen."
+        "text": "Ja. Når du ser på en tjeneste med en aktiv hendelse, kan du dempe varsler for en angitt periode, slik at du ikke blir varslet gjentatte ganger om noe du allerede vet om. Du kan også dempe med stemmen, «Hei Siri, demp GitHub i 2 timer», eller fra Shortcuts-appen."
       }
     },
     {
@@ -142,7 +142,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>Hvordan fungerer varsler mellom enheter?</h3>
-        <p>Mac-appen er navet. Hold den i gang (menylinje eller fullt vindu), så opprører den så ofte som hvert 60. sekund (kan stilles inn opp til 15 min). Når en statusendring oppdages, skriver den et lett signal til iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV og Vision Pro plukker opp endringen og kjører sin egen lokale sjekk. Ingen nøkler, ingen tokener, ingen oppsett — bare aktiver «Varsler mellom enheter» i innstillingene på en hvilken som helst enhet. Uten en Mac som nav er varsler avhengige av iOS-bakgrunnseksekvering, og vil bli forsinket eller gå tapt.</p>
+        <p>Mac-appen er navet. Hold den i gang (menylinje eller fullt vindu), så opprører den så ofte som hvert 60. sekund (kan stilles inn opp til 15 min). Når en statusendring oppdages, skriver den et lett signal til iCloud Key-Value Store; iPhone, iPad, Watch, Apple TV og Vision Pro plukker opp endringen og kjører sin egen lokale sjekk. Ingen nøkler, ingen tokener, ingen oppsett, bare aktiver «Varsler mellom enheter» i innstillingene på en hvilken som helst enhet. Uten en Mac som nav er varsler avhengige av iOS-bakgrunnseksekvering, og vil bli forsinket eller gå tapt.</p>
     </div>
     <div class="faq">
         <h3>Trenger jeg Mac-appen for pålitelige varsler?</h3>
-        <p>Ja — vi anbefaler det sterkt. iOS begrenser bakgrunnseksekvering, så iPhone og iPad kan bare sjekke hvert 5.–15. minutt (konfigurerbart) og kan utsette ytterligere ved lavt batteri, strømsparingsmodus eller dårlig dekning. Mac-appen opprører så ofte som hvert 60. sekund når den er koblet til strøm (kan stilles inn opp til 15 min) og kringkaster statusendringer til de andre enhetene dine via iCloud. Uten en Mac som kjører Vultyr, fungerer varsler på iOS, watchOS og tvOS fortsatt, men kan bli betydelig forsinket eller gå tapt. For sanntidsovervåkning, hold Mac-appen i gang — den er bitte liten i menylinjen, og det er slik Vultyr er ment å brukes.</p>
+        <p>Ja, vi anbefaler det sterkt. iOS begrenser bakgrunnseksekvering, så iPhone og iPad kan bare sjekke hvert 5.–15. minutt (konfigurerbart) og kan utsette ytterligere ved lavt batteri, strømsparingsmodus eller dårlig dekning. Mac-appen opprører så ofte som hvert 60. sekund når den er koblet til strøm (kan stilles inn opp til 15 min) og kringkaster statusendringer til de andre enhetene dine via iCloud. Uten en Mac som kjører Vultyr, fungerer varsler på iOS, watchOS og tvOS fortsatt, men kan bli betydelig forsinket eller gå tapt. For sanntidsovervåkning, hold Mac-appen i gang, den er bitte liten i menylinjen, og det er slik Vultyr er ment å brukes.</p>
     </div>
     <div class="faq">
         <h3>Fungerer vultyr med Siri og Shortcuts?</h3>
@@ -192,7 +192,7 @@
     </div>
     <div class="faq">
         <h3>Samler vultyr-appen inn dataene mine?</h3>
-        <p>Nei. Appen har ingen kontoer, ingen sporing i appen, ingen analyse i appen. Alle tjenestene du følger, blir værende på enheten din. Merk: dette nettstedet (vultyr.app) bruker Google Analytics uten informasjonskapsler for aggregerte besøkstellinger — se <a href="/nb/privacy.html">personvernerklæringen</a> for detaljer.</p>
+        <p>Nei. Appen har ingen kontoer, ingen sporing i appen, ingen analyse i appen. Alle tjenestene du følger, blir værende på enheten din. Merk: dette nettstedet (vultyr.app) bruker Google Analytics uten informasjonskapsler for aggregerte besøkstellinger, se <a href="/nb/privacy.html">personvernerklæringen</a> for detaljer.</p>
     </div>
     <div class="faq">
         <h3>Hvordan synkroniserer jeg tjenestene mine mellom enheter?</h3>
@@ -204,7 +204,7 @@
     </div>
     <div class="faq">
         <h3>Kan jeg dempe varsler for en kjent hendelse?</h3>
-        <p>Ja. Når du ser på en tjeneste med en aktiv hendelse, kan du dempe varsler for en angitt periode, slik at du ikke blir varslet gjentatte ganger om noe du allerede vet om. Du kan også dempe med stemmen — «Hei Siri, demp GitHub i 2 timer» — eller fra Shortcuts-appen.</p>
+        <p>Ja. Når du ser på en tjeneste med en aktiv hendelse, kan du dempe varsler for en angitt periode, slik at du ikke blir varslet gjentatte ganger om noe du allerede vet om. Du kan også dempe med stemmen, «Hei Siri, demp GitHub i 2 timer», eller fra Shortcuts-appen.</p>
     </div>
     <div class="faq">
         <h3>Hvilke plattformer støttes?</h3>

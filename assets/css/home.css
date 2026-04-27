@@ -300,25 +300,12 @@ h1 {
     position: relative;
     overflow: hidden;
 }
-.feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 18px;
-    height: 18px;
-    border-top: 1px solid var(--border-hover);
-    border-right: 1px solid var(--border-hover);
-    border-top-right-radius: var(--radius-lg);
-    transition: border-color 0.3s var(--ease);
-}
 .feature-card:hover {
     border-color: color-mix(in srgb, var(--icon-color) 38%, transparent);
     background: color-mix(in srgb, var(--icon-color) 6%, var(--surface));
     transform: translateY(-2px);
     box-shadow: 0 8px 32px color-mix(in srgb, var(--icon-color) 10%, transparent);
 }
-.feature-card:hover::before { border-color: var(--icon-color); }
 
 .feature-icon {
     flex-shrink: 0;
