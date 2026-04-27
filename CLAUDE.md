@@ -75,7 +75,8 @@ python3 scripts/probe_statuspage.py
 
 - **Python**: stdlib only, no external deps, no type hints needed (script-level
   code), prefer pure functions, escape user/data input (`html.escape`,
-  `safe_url`). The generator is run by hand, not in CI.
+  `safe_url`). Run the generator by hand before committing; CI validates that
+  the committed output matches what the generator produces (`.github/workflows/validate.yml`).
 - **HTML**: 4-space indent, lowercase tags, double-quoted attributes. The
   generator emits this style — match it when hand-editing.
 - **CSS**: Custom properties live in `:root` in `shared.css`. Per-page-type
