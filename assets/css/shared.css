@@ -54,8 +54,8 @@ body {
     overflow-x: hidden;
 }
 
-/* Subtle green terminal ambiance — pure black with a whisper of phosphor glow
-   in opposite corners. Fixed so it doesn't scroll. */
+/* Warm phosphor glow only in the bottom-right corner. The top-left green
+   glow was dropped because it read as a half-orb / globe shape. */
 body::before {
     content: '';
     position: fixed;
@@ -63,7 +63,6 @@ body::before {
     pointer-events: none;
     z-index: -2;
     background:
-        radial-gradient(ellipse 800px 600px at 15% 0%, rgba(0, 255, 65, 0.05), transparent 60%),
         radial-gradient(ellipse 600px 500px at 90% 100%, rgba(255, 153, 38, 0.03), transparent 60%);
 }
 
