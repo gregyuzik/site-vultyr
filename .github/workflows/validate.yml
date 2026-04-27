@@ -1,0 +1,49 @@
+name: Validate generator output
+
+# Catches the "forgot to re-run scripts/generate.py" failure mode by
+# running the generator in CI and failing if it produces a diff against
+# what's committed. GitHub Pages still serves from main directly — this
+# workflow only validates.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '*.md'
+      - '.claude/**'
+      - 'README.md'
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - '*.md'
+      - '.claude/**'
+      - 'README.md'
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Run generator and check for diff
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Run generator
+      run: python3 scripts/generate.py
+
+    - name: Verify generated files match what's committed
+      run: |
+        if ! git diff --exit-code; then
+          echo "::error::Generator output differs from committed files."
+          echo "::error::Run 'python3 scripts/generate.py' locally, commit the result, and push."
+          exit 1
+        fi
+        echo "Generator output matches committed files"
