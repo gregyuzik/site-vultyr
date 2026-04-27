@@ -2,6 +2,11 @@
     from { opacity: 0; transform: translateY(18px); }
     to { opacity: 1; transform: translateY(0); }
 }
+@keyframes halo {
+    0%, 100% { box-shadow: 0 0 44px rgba(0, 255, 65, 0.25), 0 0 90px rgba(0, 255, 65, 0.12); }
+    50% { box-shadow: 0 0 72px rgba(0, 255, 65, 0.45), 0 0 140px rgba(0, 255, 65, 0.22); }
+}
+
 .fade-up { opacity: 0; animation: fadeUp 0.7s var(--ease) forwards; }
 .fade-up-1 { animation-delay: 0.05s; }
 .fade-up-2 { animation-delay: 0.15s; }
@@ -43,6 +48,7 @@
     height: 144px;
     border-radius: 32px;
     margin: 0 auto 24px;
+    animation: halo 4s ease-in-out infinite;
 }
 
 h1 {
