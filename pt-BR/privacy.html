@@ -15,7 +15,7 @@
     <meta property="og:title" content="Política de privacidade">
     <meta property="og:description" content="Política de privacidade do Vultyr. O app não coleta dados pessoais. Este site usa Google Analytics sem cookies para estatísticas agregadas de visitantes.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Ícone do app Vultyr — Monitor de status de serviços">
+    <meta property="og:image:alt" content="Ícone do app Vultyr: Monitor de status de serviços">
     <meta property="og:url" content="https://vultyr.app/pt-BR/privacy.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
@@ -46,7 +46,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
     <link rel="stylesheet" href="/assets/css/shared.css?v=20260425b">
     <link rel="stylesheet" href="/assets/css/docs.css?v=20260425b">
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -70,27 +70,27 @@
     <p class="date">Atualizado em: 11 de abril de 2026</p>
     <h2>Resumo</h2>
     <p>O <strong>app</strong> Vultyr não coleta, não armazena nem transmite nenhum dado pessoal. O <strong>site</strong> do Vultyr (vultyr.app) usa Google Analytics sem cookies para entender estatísticas agregadas de visitantes. Esta página detalha os dois pontos.</p>
-    <h2>App — Coleta de dados</h2>
+    <h2>App: Coleta de dados</h2>
     <p>O app vultyr não coleta nenhuma informação pessoal. Ele não exige cadastro, não inclui nenhum SDK de análise ou rastreamento de terceiros e não envia dados para nenhum servidor operado por nós.</p>
-    <h2>App — Requisições de rede</h2>
-    <p>O app faz requisições HTTPS diretas para APIs públicas de páginas de status (como Statuspage.io, Apple, Google Cloud e outras) para verificar o status dos serviços. Essas requisições vão direto do seu dispositivo para a API pública do serviço — elas não passam por nenhum servidor operado por nós.</p>
-    <h2>App — Armazenamento de dados</h2>
+    <h2>App: Requisições de rede</h2>
+    <p>O app faz requisições HTTPS diretas para APIs públicas de páginas de status (como Statuspage.io, Apple, Google Cloud e outras) para verificar o status dos serviços. Essas requisições vão direto do seu dispositivo para a API pública do serviço, elas não passam por nenhum servidor operado por nós.</p>
+    <h2>App: Armazenamento de dados</h2>
     <p>Todos os dados são armazenados localmente no seu dispositivo usando o framework SwiftData da Apple. Se você ativar a sincronização via iCloud, sua lista de serviços acompanhados é sincronizada pelo iCloud Key-Value Store da Apple, regido pela política de privacidade da Apple. Nós nunca vemos esses dados.</p>
-    <h2>App — Alertas entre dispositivos</h2>
-    <p>Se você ativar os Alertas entre dispositivos, as mudanças de status são compartilhadas entre seus dispositivos pelo iCloud Key-Value Store da Apple. Quando seu Mac detecta uma mudança de status, ele grava um sinal leve na sua conta do iCloud. Seus outros dispositivos observam a mudança e fazem sua própria verificação local. Nenhum servidor de terceiros é envolvido — toda a comunicação passa pela infraestrutura do iCloud da Apple. Você pode ativar ou desativar esse recurso em qualquer dispositivo.</p>
-    <h2>App — Favicons</h2>
+    <h2>App: Alertas entre dispositivos</h2>
+    <p>Se você ativar os Alertas entre dispositivos, as mudanças de status são compartilhadas entre seus dispositivos pelo iCloud Key-Value Store da Apple. Quando seu Mac detecta uma mudança de status, ele grava um sinal leve na sua conta do iCloud. Seus outros dispositivos observam a mudança e fazem sua própria verificação local. Nenhum servidor de terceiros é envolvido, toda a comunicação passa pela infraestrutura do iCloud da Apple. Você pode ativar ou desativar esse recurso em qualquer dispositivo.</p>
+    <h2>App: Favicons</h2>
     <p>Os favicons dos serviços são obtidos pelo serviço público de favicons do Google e armazenados em cache localmente no seu dispositivo.</p>
-    <h2>Site — Analytics</h2>
+    <h2>Site: Analytics</h2>
     <p>Este site (vultyr.app) usa o Google Analytics 4 no modo sem cookies e com IP anonimizado para contar visualizações agregadas de página. Especificamente, configuramos o gtag.js com <code>anonymize_ip: true</code>, <code>client_storage: 'none'</code>, <code>allow_google_signals: false</code> e <code>allow_ad_personalization_signals: false</code>. Isso significa que nenhum cookie <code>_ga</code> é definido, seu IP é truncado antes do armazenamento e nenhum identificador de anúncios é coletado. O próprio app vultyr não inclui nenhum tipo de analytics.</p>
-    <h2>Site — Domínios de terceiros</h2>
+    <h2>Site: Domínios de terceiros</h2>
     <p>Carregar o vultyr.app entra em contato com os seguintes domínios de terceiros:</p>
     <ul>
-        <li><strong>www.googletagmanager.com</strong> — carrega o script do gtag.js</li>
-        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong> — recebe os beacons anônimos de visualização de página</li>
-        <li><strong>www.google.com/g/collect</strong> — recebe os mesmos beacons anônimos de visualização de página (endpoint de coleta de fallback do Google Analytics 4)</li>
+        <li><strong>www.googletagmanager.com</strong>, carrega o script do gtag.js</li>
+        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong>, recebe os beacons anônimos de visualização de página</li>
+        <li><strong>www.google.com/g/collect</strong>, recebe os mesmos beacons anônimos de visualização de página (endpoint de coleta de fallback do Google Analytics 4)</li>
     </ul>
     <p>Não carregamos o Google Fonts (a fonte Audiowide é hospedada no próprio vultyr.app) e não usamos um serviço de favicons de terceiros para as imagens do site.</p>
-    <h2>App — Serviços de terceiros</h2>
+    <h2>App: Serviços de terceiros</h2>
     <p>O app vultyr não se integra com nenhum serviço de terceiros de análise, publicidade ou rastreamento. As únicas requisições externas são para APIs públicas de páginas de status e para o serviço de favicons do Google.</p>
     <h2>Privacidade de crianças</h2>
     <p>O app vultyr não coleta dados de ninguém, incluindo crianças com menos de 13 anos. O site registra apenas contagens anônimas e agregadas de visitantes.</p>

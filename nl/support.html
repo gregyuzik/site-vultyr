@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-/nAk7boPlIMElmV30h9xSfkv3WiNNPK91jrVPMvkgRg='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-n8W4TIgldxY79b4V8Q4IVuSvN4vi/UcUDwJCMSJWqbg='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Support">
     <meta property="og:description" content="Hulp bij Vultyr, de servicestatusmonitor voor iPhone, iPad, Mac, Apple Watch, Apple TV en Apple Vision Pro. Veelgestelde vragen, contact en probleemoplossing.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr-app‑icoon — monitor voor servicestatus">
+    <meta property="og:image:alt" content="Vultyr-app‑icoon: monitor voor servicestatus">
     <meta property="og:url" content="https://vultyr.app/nl/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="nl_NL">
@@ -64,7 +64,7 @@
       "name": "Hoe werken meldingen tussen apparaten?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "De Mac‑app is het centrum. Houd die draaiend (in de menubalk of als volledig venster) en die peilt zo vaak als elke 60 seconden (instelbaar tot 15 min). Zodra een statuswijziging wordt gedetecteerd, schrijft de app een klein signaal naar de iCloud Key‑Value Store; je iPhone, iPad, Watch, Apple TV en Vision Pro pikken de wijziging op en voeren hun eigen lokale controle uit. Geen sleutels, geen tokens, geen setup — zet gewoon „Meldingen tussen apparaten” aan in de instellingen op een willekeurig apparaat. Zonder Mac als centrum leunen meldingen op iOS‑achtergronduitvoering en zullen ze vertraagd of gemist worden."
+        "text": "De Mac‑app is het centrum. Houd die draaiend (in de menubalk of als volledig venster) en die peilt zo vaak als elke 60 seconden (instelbaar tot 15 min). Zodra een statuswijziging wordt gedetecteerd, schrijft de app een klein signaal naar de iCloud Key‑Value Store; je iPhone, iPad, Watch, Apple TV en Vision Pro pikken de wijziging op en voeren hun eigen lokale controle uit. Geen sleutels, geen tokens, geen setup, zet gewoon „Meldingen tussen apparaten” aan in de instellingen op een willekeurig apparaat. Zonder Mac als centrum leunen meldingen op iOS‑achtergronduitvoering en zullen ze vertraagd of gemist worden."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Heb ik de Mac‑app nodig voor betrouwbare meldingen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — we raden het sterk aan. iOS beperkt achtergronduitvoering, dus iPhone en iPad kunnen alleen elke 5–15 minuten controleren (instelbaar) en kunnen verder uitstellen bij een lage batterij, Energiebesparingsmodus of slechte verbinding. De Mac‑app peilt zo vaak als elke 60 seconden bij een stroomaansluiting (instelbaar tot 15 min) en verspreidt statuswijzigingen naar je andere apparaten via iCloud. Zonder een Mac waarop Vultyr draait, werken meldingen op iOS, watchOS en tvOS nog steeds, maar kunnen ze aanzienlijk vertraagd of gemist worden. Voor realtime monitoring laat je de Mac‑app draaien — hij is klein in de menubalk en zo is Vultyr bedoeld om gebruikt te worden."
+        "text": "Ja, we raden het sterk aan. iOS beperkt achtergronduitvoering, dus iPhone en iPad kunnen alleen elke 5–15 minuten controleren (instelbaar) en kunnen verder uitstellen bij een lage batterij, Energiebesparingsmodus of slechte verbinding. De Mac‑app peilt zo vaak als elke 60 seconden bij een stroomaansluiting (instelbaar tot 15 min) en verspreidt statuswijzigingen naar je andere apparaten via iCloud. Zonder een Mac waarop Vultyr draait, werken meldingen op iOS, watchOS en tvOS nog steeds, maar kunnen ze aanzienlijk vertraagd of gemist worden. Voor realtime monitoring laat je de Mac‑app draaien, hij is klein in de menubalk en zo is Vultyr bedoeld om gebruikt te worden."
       }
     },
     {
@@ -96,7 +96,7 @@
       "name": "Verzamelt de Vultyr‑app mijn gegevens?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nee. De app heeft geen accounts, geen tracking in de app en geen analytics in de app. Al je gevolgde services blijven op je apparaat. Let op: deze website (vultyr.app) gebruikt cookieloze Google Analytics voor geaggregeerde bezoekersaantallen — zie het Privacybeleid voor details."
+        "text": "Nee. De app heeft geen accounts, geen tracking in de app en geen analytics in de app. Al je gevolgde services blijven op je apparaat. Let op: deze website (vultyr.app) gebruikt cookieloze Google Analytics voor geaggregeerde bezoekersaantallen, zie het Privacybeleid voor details."
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "Kan ik meldingen dempen voor een bekend incident?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. Bij een service met een actief incident kun je meldingen voor een ingestelde periode dempen, zodat je niet telkens gewaarschuwd wordt over iets dat je al weet. Dempen kan ook met je stem — „Hey Siri, demp GitHub 2 uur” — of via de Shortcuts‑app."
+        "text": "Ja. Bij een service met een actief incident kun je meldingen voor een ingestelde periode dempen, zodat je niet telkens gewaarschuwd wordt over iets dat je al weet. Dempen kan ook met je stem, „Hey Siri, demp GitHub 2 uur”, of via de Shortcuts‑app."
       }
     },
     {
@@ -142,7 +142,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>Hoe werken meldingen tussen apparaten?</h3>
-        <p>De Mac‑app is het centrum. Houd die draaiend (in de menubalk of als volledig venster) en die peilt zo vaak als elke 60 seconden (instelbaar tot 15 min). Zodra een statuswijziging wordt gedetecteerd, schrijft de app een klein signaal naar de iCloud Key‑Value Store; je iPhone, iPad, Watch, Apple TV en Vision Pro pikken de wijziging op en voeren hun eigen lokale controle uit. Geen sleutels, geen tokens, geen setup — zet gewoon „Meldingen tussen apparaten” aan in de instellingen op een willekeurig apparaat. Zonder Mac als centrum leunen meldingen op iOS‑achtergronduitvoering en zullen ze vertraagd of gemist worden.</p>
+        <p>De Mac‑app is het centrum. Houd die draaiend (in de menubalk of als volledig venster) en die peilt zo vaak als elke 60 seconden (instelbaar tot 15 min). Zodra een statuswijziging wordt gedetecteerd, schrijft de app een klein signaal naar de iCloud Key‑Value Store; je iPhone, iPad, Watch, Apple TV en Vision Pro pikken de wijziging op en voeren hun eigen lokale controle uit. Geen sleutels, geen tokens, geen setup, zet gewoon „Meldingen tussen apparaten” aan in de instellingen op een willekeurig apparaat. Zonder Mac als centrum leunen meldingen op iOS‑achtergronduitvoering en zullen ze vertraagd of gemist worden.</p>
     </div>
     <div class="faq">
         <h3>Heb ik de Mac‑app nodig voor betrouwbare meldingen?</h3>
-        <p>Ja — we raden het sterk aan. iOS beperkt achtergronduitvoering, dus iPhone en iPad kunnen alleen elke 5–15 minuten controleren (instelbaar) en kunnen verder uitstellen bij een lage batterij, Energiebesparingsmodus of slechte verbinding. De Mac‑app peilt zo vaak als elke 60 seconden bij een stroomaansluiting (instelbaar tot 15 min) en verspreidt statuswijzigingen naar je andere apparaten via iCloud. Zonder een Mac waarop Vultyr draait, werken meldingen op iOS, watchOS en tvOS nog steeds, maar kunnen ze aanzienlijk vertraagd of gemist worden. Voor realtime monitoring laat je de Mac‑app draaien — hij is klein in de menubalk en zo is Vultyr bedoeld om gebruikt te worden.</p>
+        <p>Ja, we raden het sterk aan. iOS beperkt achtergronduitvoering, dus iPhone en iPad kunnen alleen elke 5–15 minuten controleren (instelbaar) en kunnen verder uitstellen bij een lage batterij, Energiebesparingsmodus of slechte verbinding. De Mac‑app peilt zo vaak als elke 60 seconden bij een stroomaansluiting (instelbaar tot 15 min) en verspreidt statuswijzigingen naar je andere apparaten via iCloud. Zonder een Mac waarop Vultyr draait, werken meldingen op iOS, watchOS en tvOS nog steeds, maar kunnen ze aanzienlijk vertraagd of gemist worden. Voor realtime monitoring laat je de Mac‑app draaien, hij is klein in de menubalk en zo is Vultyr bedoeld om gebruikt te worden.</p>
     </div>
     <div class="faq">
         <h3>Werkt Vultyr met Siri en Shortcuts?</h3>
@@ -192,7 +192,7 @@
     </div>
     <div class="faq">
         <h3>Verzamelt de Vultyr‑app mijn gegevens?</h3>
-        <p>Nee. De app heeft geen accounts, geen tracking in de app en geen analytics in de app. Al je gevolgde services blijven op je apparaat. Let op: deze website (vultyr.app) gebruikt cookieloze Google Analytics voor geaggregeerde bezoekersaantallen — zie het <a href="/privacy.html">Privacybeleid</a> voor details.</p>
+        <p>Nee. De app heeft geen accounts, geen tracking in de app en geen analytics in de app. Al je gevolgde services blijven op je apparaat. Let op: deze website (vultyr.app) gebruikt cookieloze Google Analytics voor geaggregeerde bezoekersaantallen, zie het <a href="/privacy.html">Privacybeleid</a> voor details.</p>
     </div>
     <div class="faq">
         <h3>Hoe synchroniseer ik mijn services tussen apparaten?</h3>
@@ -204,7 +204,7 @@
     </div>
     <div class="faq">
         <h3>Kan ik meldingen dempen voor een bekend incident?</h3>
-        <p>Ja. Bij een service met een actief incident kun je meldingen voor een ingestelde periode dempen, zodat je niet telkens gewaarschuwd wordt over iets dat je al weet. Dempen kan ook met je stem — „Hey Siri, demp GitHub 2 uur” — of via de Shortcuts‑app.</p>
+        <p>Ja. Bij een service met een actief incident kun je meldingen voor een ingestelde periode dempen, zodat je niet telkens gewaarschuwd wordt over iets dat je al weet. Dempen kan ook met je stem, „Hey Siri, demp GitHub 2 uur”, of via de Shortcuts‑app.</p>
     </div>
     <div class="faq">
         <h3>Welke platforms worden ondersteund?</h3>

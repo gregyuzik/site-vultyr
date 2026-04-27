@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-uIJRMxrnwboJ58hydXgrOZNahQTVUy4gf8xyGTYLARw='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-yhECr1cao5tt9O33W75A2jmhyIxGWxDcsjnA+9PY/8I='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
     <script src="/assets/js/locale-detect.js?v=20260425b"></script>
     <script defer src="/assets/js/lang-switch.js?v=20260425b"></script>
     <title>支援</title>
-    <meta name="description" content="取得 Vultyr 的協助 — 適用於 iPhone、iPad、Mac、Apple Watch、Apple TV 與 Apple Vision Pro 的服務狀態監控器。常見問題、聯絡方式與疑難排解。">
+    <meta name="description" content="取得 Vultyr 的協助, 適用於 iPhone、iPad、Mac、Apple Watch、Apple TV 與 Apple Vision Pro 的服務狀態監控器。常見問題、聯絡方式與疑難排解。">
     <meta name="theme-color" content="#000000">
     <meta property="og:title" content="支援">
-    <meta property="og:description" content="取得 Vultyr 的協助 — 適用於 iPhone、iPad、Mac、Apple Watch、Apple TV 與 Apple Vision Pro 的服務狀態監控器。常見問題、聯絡方式與疑難排解。">
+    <meta property="og:description" content="取得 Vultyr 的協助, 適用於 iPhone、iPad、Mac、Apple Watch、Apple TV 與 Apple Vision Pro 的服務狀態監控器。常見問題、聯絡方式與疑難排解。">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr 應用程式圖示 — 服務狀態監控器">
+    <meta property="og:image:alt" content="Vultyr 應用程式圖示: 服務狀態監控器">
     <meta property="og:url" content="https://vultyr.app/zh-Hant/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_TW">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="支援">
-    <meta name="twitter:description" content="取得 Vultyr 的協助 — 適用於 iPhone、iPad、Mac、Apple Watch、Apple TV 與 Apple Vision Pro 的服務狀態監控器。常見問題、聯絡方式與疑難排解。">
+    <meta name="twitter:description" content="取得 Vultyr 的協助, 適用於 iPhone、iPad、Mac、Apple Watch、Apple TV 與 Apple Vision Pro 的服務狀態監控器。常見問題、聯絡方式與疑難排解。">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/zh-Hant/support.html">
     <link rel="alternate" hreflang="da" href="https://vultyr.app/da/support.html">
@@ -64,7 +64,7 @@
       "name": "跨裝置通知如何運作?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac 應用程式是中樞。讓它持續執行(選單列或完整視窗皆可),它會最快每 60 秒輪詢一次（可設定至 15 分鐘）。偵測到狀態變更時,它會寫入一個輕量訊號至 iCloud Key-Value Store;您的 iPhone、iPad、Watch、Apple TV 與 Vision Pro 會接收此變更並各自執行本機檢查。無需金鑰、無需權杖、無需設定 — 只要在任一裝置的設定中啟用「跨裝置通知」即可。若沒有 Mac 擔任中樞,通知將仰賴 iOS 背景執行,會被延遲或錯過。"
+        "text": "Mac 應用程式是中樞。讓它持續執行(選單列或完整視窗皆可),它會最快每 60 秒輪詢一次（可設定至 15 分鐘）。偵測到狀態變更時,它會寫入一個輕量訊號至 iCloud Key-Value Store;您的 iPhone、iPad、Watch、Apple TV 與 Vision Pro 會接收此變更並各自執行本機檢查。無需金鑰、無需權杖、無需設定, 只要在任一裝置的設定中啟用「跨裝置通知」即可。若沒有 Mac 擔任中樞,通知將仰賴 iOS 背景執行,會被延遲或錯過。"
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "我需要 Mac 應用程式才能取得可靠的通知嗎?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "需要 — 我們強烈建議使用。iOS 會限制背景執行,因此 iPhone 與 iPad 僅能每 5 至 15 分鐘檢查一次(可設定),且在低電量、低耗電模式或連線不佳時可能進一步延後。Mac 應用程式會持續輪詢(接上電源時每 60 秒一次),並透過 iCloud 將狀態變更廣播至其他裝置。若沒有執行 Vultyr 的 Mac,iOS、watchOS 與 tvOS 上的通知仍可運作,但可能會顯著延遲或被錯過。若要進行即時監控,請讓 Mac 應用程式持續執行 — 它在選單列上占用極小,正是 Vultyr 原本設計的使用方式。"
+        "text": "需要, 我們強烈建議使用。iOS 會限制背景執行,因此 iPhone 與 iPad 僅能每 5 至 15 分鐘檢查一次(可設定),且在低電量、低耗電模式或連線不佳時可能進一步延後。Mac 應用程式會持續輪詢(接上電源時每 60 秒一次),並透過 iCloud 將狀態變更廣播至其他裝置。若沒有執行 Vultyr 的 Mac,iOS、watchOS 與 tvOS 上的通知仍可運作,但可能會顯著延遲或被錯過。若要進行即時監控,請讓 Mac 應用程式持續執行, 它在選單列上占用極小,正是 Vultyr 原本設計的使用方式。"
       }
     },
     {
@@ -96,7 +96,7 @@
       "name": "vultyr 應用程式會收集我的資料嗎?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不會。應用程式沒有帳號、沒有應用程式內追蹤、沒有應用程式內分析。您所關注的服務全部留在您的裝置上。請注意:本網站(vultyr.app)使用無 Cookie 的 Google Analytics 以彙總訪客計數 — 詳情請參閱隱私權政策。"
+        "text": "不會。應用程式沒有帳號、沒有應用程式內追蹤、沒有應用程式內分析。您所關注的服務全部留在您的裝置上。請注意:本網站(vultyr.app)使用無 Cookie 的 Google Analytics 以彙總訪客計數, 詳情請參閱隱私權政策。"
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "我能為已知的事件靜音通知嗎?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "可以。檢視有進行中事件的服務時,您可將通知靜音一段時間,避免反覆收到您已知問題的通知。您也可以透過語音靜音 — 「嘿 Siri,將 GitHub 靜音 2 小時」 — 或從 Shortcuts 應用程式執行。"
+        "text": "可以。檢視有進行中事件的服務時,您可將通知靜音一段時間,避免反覆收到您已知問題的通知。您也可以透過語音靜音, 「嘿 Siri,將 GitHub 靜音 2 小時」, 或從 Shortcuts 應用程式執行。"
       }
     },
     {
@@ -142,7 +142,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>跨裝置通知如何運作?</h3>
-        <p>Mac 應用程式是中樞。讓它持續執行(選單列或完整視窗皆可),它會最快每 60 秒輪詢一次（可設定至 15 分鐘）。偵測到狀態變更時,它會寫入一個輕量訊號至 iCloud Key-Value Store;您的 iPhone、iPad、Watch、Apple TV 與 Vision Pro 會接收此變更並各自執行本機檢查。無需金鑰、無需權杖、無需設定 — 只要在任一裝置的設定中啟用「跨裝置通知」即可。若沒有 Mac 擔任中樞,通知將仰賴 iOS 背景執行,會被延遲或錯過。</p>
+        <p>Mac 應用程式是中樞。讓它持續執行(選單列或完整視窗皆可),它會最快每 60 秒輪詢一次（可設定至 15 分鐘）。偵測到狀態變更時,它會寫入一個輕量訊號至 iCloud Key-Value Store;您的 iPhone、iPad、Watch、Apple TV 與 Vision Pro 會接收此變更並各自執行本機檢查。無需金鑰、無需權杖、無需設定, 只要在任一裝置的設定中啟用「跨裝置通知」即可。若沒有 Mac 擔任中樞,通知將仰賴 iOS 背景執行,會被延遲或錯過。</p>
     </div>
     <div class="faq">
         <h3>我需要 Mac 應用程式才能取得可靠的通知嗎?</h3>
-        <p>需要 — 我們強烈建議使用。iOS 會限制背景執行,因此 iPhone 與 iPad 僅能每 5 至 15 分鐘檢查一次(可設定),且在低電量、低耗電模式或連線不佳時可能進一步延後。Mac 應用程式會持續輪詢(接上電源時每 60 秒一次),並透過 iCloud 將狀態變更廣播至其他裝置。若沒有執行 Vultyr 的 Mac,iOS、watchOS 與 tvOS 上的通知仍可運作,但可能會顯著延遲或被錯過。若要進行即時監控,請讓 Mac 應用程式持續執行 — 它在選單列上占用極小,正是 Vultyr 原本設計的使用方式。</p>
+        <p>需要, 我們強烈建議使用。iOS 會限制背景執行,因此 iPhone 與 iPad 僅能每 5 至 15 分鐘檢查一次(可設定),且在低電量、低耗電模式或連線不佳時可能進一步延後。Mac 應用程式會持續輪詢(接上電源時每 60 秒一次),並透過 iCloud 將狀態變更廣播至其他裝置。若沒有執行 Vultyr 的 Mac,iOS、watchOS 與 tvOS 上的通知仍可運作,但可能會顯著延遲或被錯過。若要進行即時監控,請讓 Mac 應用程式持續執行, 它在選單列上占用極小,正是 Vultyr 原本設計的使用方式。</p>
     </div>
     <div class="faq">
         <h3>vultyr 支援 Siri 與 Shortcuts 嗎?</h3>
@@ -192,7 +192,7 @@
     </div>
     <div class="faq">
         <h3>vultyr 應用程式會收集我的資料嗎?</h3>
-        <p>不會。應用程式沒有帳號、沒有應用程式內追蹤、沒有應用程式內分析。您所關注的服務全部留在您的裝置上。請注意:本網站(vultyr.app)使用無 Cookie 的 Google Analytics 以彙總訪客計數 — 詳情請參閱<a href="/privacy.html">隱私權政策</a>。</p>
+        <p>不會。應用程式沒有帳號、沒有應用程式內追蹤、沒有應用程式內分析。您所關注的服務全部留在您的裝置上。請注意:本網站(vultyr.app)使用無 Cookie 的 Google Analytics 以彙總訪客計數, 詳情請參閱<a href="/privacy.html">隱私權政策</a>。</p>
     </div>
     <div class="faq">
         <h3>如何在各裝置間同步我的服務?</h3>
@@ -204,7 +204,7 @@
     </div>
     <div class="faq">
         <h3>我能為已知的事件靜音通知嗎?</h3>
-        <p>可以。檢視有進行中事件的服務時,您可將通知靜音一段時間,避免反覆收到您已知問題的通知。您也可以透過語音靜音 — 「嘿 Siri,將 GitHub 靜音 2 小時」 — 或從 Shortcuts 應用程式執行。</p>
+        <p>可以。檢視有進行中事件的服務時,您可將通知靜音一段時間,避免反覆收到您已知問題的通知。您也可以透過語音靜音, 「嘿 Siri,將 GitHub 靜音 2 小時」, 或從 Shortcuts 應用程式執行。</p>
     </div>
     <div class="faq">
         <h3>支援哪些平台?</h3>

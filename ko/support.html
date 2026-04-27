@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-u7WssrAxLTa8rJuWck3/yVoddoD0GR2gwxeowqjXPuM='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-Q9c9o5Wour1rGEemBusKSGSGzU8aYuDV/M3npOYIceY='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -15,7 +15,7 @@
     <meta property="og:title" content="지원">
     <meta property="og:description" content="iPhone, iPad, Mac, Apple Watch, Apple TV 및 Apple Vision Pro를 위한 서비스 상태 모니터 Vultyr에 대한 도움말. 자주 묻는 질문, 연락처 및 문제 해결.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr 앱 아이콘 — 서비스 상태 모니터">
+    <meta property="og:image:alt" content="Vultyr 앱 아이콘: 서비스 상태 모니터">
     <meta property="og:url" content="https://vultyr.app/ko/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ko_KR">
@@ -64,7 +64,7 @@
       "name": "기기 간 알림은 어떻게 작동하나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac 앱이 허브입니다. Mac 앱을 실행 상태로 유지(메뉴 막대 또는 전체 창)하면 최단 60초마다 폴링합니다(15분까지 설정 가능). 상태 변경이 감지되면 iCloud Key-Value Store에 경량 신호를 기록하며, iPhone, iPad, Watch, Apple TV, Vision Pro가 변경을 감지하고 자체적인 로컬 점검을 실행합니다. 키도, 토큰도, 설정도 필요 없습니다 — 어느 기기에서나 설정에서 「기기 간 알림」을 켜기만 하면 됩니다. Mac이 허브 역할을 하지 않으면 알림은 iOS 백그라운드 실행에 의존하며 지연되거나 누락됩니다."
+        "text": "Mac 앱이 허브입니다. Mac 앱을 실행 상태로 유지(메뉴 막대 또는 전체 창)하면 최단 60초마다 폴링합니다(15분까지 설정 가능). 상태 변경이 감지되면 iCloud Key-Value Store에 경량 신호를 기록하며, iPhone, iPad, Watch, Apple TV, Vision Pro가 변경을 감지하고 자체적인 로컬 점검을 실행합니다. 키도, 토큰도, 설정도 필요 없습니다, 어느 기기에서나 설정에서 「기기 간 알림」을 켜기만 하면 됩니다. Mac이 허브 역할을 하지 않으면 알림은 iOS 백그라운드 실행에 의존하며 지연되거나 누락됩니다."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "안정적인 알림에 Mac 앱이 필요한가요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네 — 강력히 권장합니다. iOS는 백그라운드 실행을 제한하므로 iPhone과 iPad는 5~15분마다(설정 가능)만 점검할 수 있으며, 낮은 배터리, 저전력 모드 또는 연결 상태가 나쁠 때 추가로 지연될 수 있습니다. Mac 앱은 전원 연결 시 최단 60초마다 폴링하며(15분까지 설정 가능) iCloud를 통해 다른 기기에 상태 변경을 방송합니다. Vultyr를 실행하는 Mac이 없으면 iOS, watchOS, tvOS 알림은 여전히 작동하지만 상당히 지연되거나 누락될 수 있습니다. 실시간 모니터링을 위해 Mac 앱을 실행 상태로 유지하세요 — 메뉴 막대에서 매우 작으며 이것이 Vultyr가 사용되도록 의도된 방식입니다."
+        "text": "네, 강력히 권장합니다. iOS는 백그라운드 실행을 제한하므로 iPhone과 iPad는 5~15분마다(설정 가능)만 점검할 수 있으며, 낮은 배터리, 저전력 모드 또는 연결 상태가 나쁠 때 추가로 지연될 수 있습니다. Mac 앱은 전원 연결 시 최단 60초마다 폴링하며(15분까지 설정 가능) iCloud를 통해 다른 기기에 상태 변경을 방송합니다. Vultyr를 실행하는 Mac이 없으면 iOS, watchOS, tvOS 알림은 여전히 작동하지만 상당히 지연되거나 누락될 수 있습니다. 실시간 모니터링을 위해 Mac 앱을 실행 상태로 유지하세요, 메뉴 막대에서 매우 작으며 이것이 Vultyr가 사용되도록 의도된 방식입니다."
       }
     },
     {
@@ -96,7 +96,7 @@
       "name": "vultyr 앱은 제 데이터를 수집하나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "아니요. 앱에는 계정도, 인앱 추적도, 인앱 분석도 없습니다. 모니터링 중인 모든 서비스는 사용자 기기에 남아있습니다. 참고: 본 웹사이트(vultyr.app)는 집계 방문자 수를 위해 쿠키 없는 Google Analytics를 사용합니다 — 자세한 내용은 개인정보 처리방침을 참조하세요."
+        "text": "아니요. 앱에는 계정도, 인앱 추적도, 인앱 분석도 없습니다. 모니터링 중인 모든 서비스는 사용자 기기에 남아있습니다. 참고: 본 웹사이트(vultyr.app)는 집계 방문자 수를 위해 쿠키 없는 Google Analytics를 사용합니다, 자세한 내용은 개인정보 처리방침을 참조하세요."
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "이미 알고 있는 장애의 알림을 음소거할 수 있나요?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네. 활성 장애가 있는 서비스를 볼 때 정해진 기간 동안 알림을 음소거하여 이미 알고 있는 사항에 대해 반복적으로 알림을 받지 않도록 할 수 있습니다. 음성으로도 음소거할 수 있습니다 — 「Siri야, GitHub을 2시간 동안 음소거해」 — 또는 Shortcuts 앱을 통해서도 가능합니다."
+        "text": "네. 활성 장애가 있는 서비스를 볼 때 정해진 기간 동안 알림을 음소거하여 이미 알고 있는 사항에 대해 반복적으로 알림을 받지 않도록 할 수 있습니다. 음성으로도 음소거할 수 있습니다, 「Siri야, GitHub을 2시간 동안 음소거해」, 또는 Shortcuts 앱을 통해서도 가능합니다."
       }
     },
     {
@@ -142,7 +142,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>기기 간 알림은 어떻게 작동하나요?</h3>
-        <p>Mac 앱이 허브입니다. Mac 앱을 실행 상태로 유지(메뉴 막대 또는 전체 창)하면 최단 60초마다 폴링합니다(15분까지 설정 가능). 상태 변경이 감지되면 iCloud Key-Value Store에 경량 신호를 기록하며, iPhone, iPad, Watch, Apple TV, Vision Pro가 변경을 감지하고 자체적인 로컬 점검을 실행합니다. 키도, 토큰도, 설정도 필요 없습니다 — 어느 기기에서나 설정에서 「기기 간 알림」을 켜기만 하면 됩니다. Mac이 허브 역할을 하지 않으면 알림은 iOS 백그라운드 실행에 의존하며 지연되거나 누락됩니다.</p>
+        <p>Mac 앱이 허브입니다. Mac 앱을 실행 상태로 유지(메뉴 막대 또는 전체 창)하면 최단 60초마다 폴링합니다(15분까지 설정 가능). 상태 변경이 감지되면 iCloud Key-Value Store에 경량 신호를 기록하며, iPhone, iPad, Watch, Apple TV, Vision Pro가 변경을 감지하고 자체적인 로컬 점검을 실행합니다. 키도, 토큰도, 설정도 필요 없습니다, 어느 기기에서나 설정에서 「기기 간 알림」을 켜기만 하면 됩니다. Mac이 허브 역할을 하지 않으면 알림은 iOS 백그라운드 실행에 의존하며 지연되거나 누락됩니다.</p>
     </div>
     <div class="faq">
         <h3>안정적인 알림에 Mac 앱이 필요한가요?</h3>
-        <p>네 — 강력히 권장합니다. iOS는 백그라운드 실행을 제한하므로 iPhone과 iPad는 5~15분마다(설정 가능)만 점검할 수 있으며, 낮은 배터리, 저전력 모드 또는 연결 상태가 나쁠 때 추가로 지연될 수 있습니다. Mac 앱은 전원 연결 시 최단 60초마다 폴링하며(15분까지 설정 가능) iCloud를 통해 다른 기기에 상태 변경을 방송합니다. Vultyr를 실행하는 Mac이 없으면 iOS, watchOS, tvOS 알림은 여전히 작동하지만 상당히 지연되거나 누락될 수 있습니다. 실시간 모니터링을 위해 Mac 앱을 실행 상태로 유지하세요 — 메뉴 막대에서 매우 작으며 이것이 Vultyr가 사용되도록 의도된 방식입니다.</p>
+        <p>네, 강력히 권장합니다. iOS는 백그라운드 실행을 제한하므로 iPhone과 iPad는 5~15분마다(설정 가능)만 점검할 수 있으며, 낮은 배터리, 저전력 모드 또는 연결 상태가 나쁠 때 추가로 지연될 수 있습니다. Mac 앱은 전원 연결 시 최단 60초마다 폴링하며(15분까지 설정 가능) iCloud를 통해 다른 기기에 상태 변경을 방송합니다. Vultyr를 실행하는 Mac이 없으면 iOS, watchOS, tvOS 알림은 여전히 작동하지만 상당히 지연되거나 누락될 수 있습니다. 실시간 모니터링을 위해 Mac 앱을 실행 상태로 유지하세요, 메뉴 막대에서 매우 작으며 이것이 Vultyr가 사용되도록 의도된 방식입니다.</p>
     </div>
     <div class="faq">
         <h3>vultyr는 Siri와 Shortcuts와 함께 작동하나요?</h3>
@@ -192,7 +192,7 @@
     </div>
     <div class="faq">
         <h3>vultyr 앱은 제 데이터를 수집하나요?</h3>
-        <p>아니요. 앱에는 계정도, 인앱 추적도, 인앱 분석도 없습니다. 모니터링 중인 모든 서비스는 사용자 기기에 남아있습니다. 참고: 본 웹사이트(vultyr.app)는 집계 방문자 수를 위해 쿠키 없는 Google Analytics를 사용합니다 — 자세한 내용은 <a href="/ko/privacy.html">개인정보 처리방침</a>을 참조하세요.</p>
+        <p>아니요. 앱에는 계정도, 인앱 추적도, 인앱 분석도 없습니다. 모니터링 중인 모든 서비스는 사용자 기기에 남아있습니다. 참고: 본 웹사이트(vultyr.app)는 집계 방문자 수를 위해 쿠키 없는 Google Analytics를 사용합니다, 자세한 내용은 <a href="/ko/privacy.html">개인정보 처리방침</a>을 참조하세요.</p>
     </div>
     <div class="faq">
         <h3>기기 간에 서비스를 어떻게 동기화하나요?</h3>
@@ -204,7 +204,7 @@
     </div>
     <div class="faq">
         <h3>이미 알고 있는 장애의 알림을 음소거할 수 있나요?</h3>
-        <p>네. 활성 장애가 있는 서비스를 볼 때 정해진 기간 동안 알림을 음소거하여 이미 알고 있는 사항에 대해 반복적으로 알림을 받지 않도록 할 수 있습니다. 음성으로도 음소거할 수 있습니다 — 「Siri야, GitHub을 2시간 동안 음소거해」 — 또는 Shortcuts 앱을 통해서도 가능합니다.</p>
+        <p>네. 활성 장애가 있는 서비스를 볼 때 정해진 기간 동안 알림을 음소거하여 이미 알고 있는 사항에 대해 반복적으로 알림을 받지 않도록 할 수 있습니다. 음성으로도 음소거할 수 있습니다, 「Siri야, GitHub을 2시간 동안 음소거해」, 또는 Shortcuts 앱을 통해서도 가능합니다.</p>
     </div>
     <div class="faq">
         <h3>어떤 플랫폼이 지원되나요?</h3>

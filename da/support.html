@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-h7nnDViz8MNqCOkhbLsifJhWJ8tpH6iPvHOfPCC/Z68='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-TeushN8ox4t7SXAWiFTvItfxiHaxSKTUMMPo2ZKjx6A='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Support">
     <meta property="og:description" content="Få hjælp til Vultyr, statusovervågningen for iPhone, iPad, Mac, Apple Watch, Apple TV og Apple Vision Pro. Ofte stillede spørgsmål, kontakt og fejlfinding.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr app-ikon — overvågning af tjenestestatus">
+    <meta property="og:image:alt" content="Vultyr app-ikon: overvågning af tjenestestatus">
     <meta property="og:url" content="https://vultyr.app/da/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="da_DK">
@@ -64,7 +64,7 @@
       "name": "Hvordan fungerer underretninger på tværs af enheder?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac-appen er centralen. Hold den kørende (i menubjælken eller som fuldt vindue), og den afstemmer så ofte som hvert 60. sekund (kan indstilles op til 15 min). Når en statusændring opdages, skriver den et let signal til iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV og Vision Pro opfanger ændringen og kører deres eget lokale tjek. Ingen nøgler, ingen tokens, ingen opsætning — slå blot »Underretninger på tværs af enheder« til i indstillingerne på en vilkårlig enhed. Uden en Mac som central er underretninger afhængige af iOS' baggrundsafvikling og vil blive forsinket eller gå tabt."
+        "text": "Mac-appen er centralen. Hold den kørende (i menubjælken eller som fuldt vindue), og den afstemmer så ofte som hvert 60. sekund (kan indstilles op til 15 min). Når en statusændring opdages, skriver den et let signal til iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV og Vision Pro opfanger ændringen og kører deres eget lokale tjek. Ingen nøgler, ingen tokens, ingen opsætning, slå blot »Underretninger på tværs af enheder« til i indstillingerne på en vilkårlig enhed. Uden en Mac som central er underretninger afhængige af iOS' baggrundsafvikling og vil blive forsinket eller gå tabt."
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "Har jeg brug for Mac-appen for at få pålidelige underretninger?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja — vi anbefaler det kraftigt. iOS begrænser baggrundsafvikling, så iPhone og iPad kan kun tjekke hvert 5.-15. minut (kan indstilles) og kan udskyde yderligere ved lavt batteri, Low Power Mode eller dårlig forbindelse. Mac-appen afstemmer så ofte som hvert 60. sekund, når enheden er tilsluttet strøm (kan indstilles op til 15 min) og sender statusændringer til dine andre enheder via iCloud. Uden en Mac, der kører Vultyr, fungerer underretninger på iOS, watchOS og tvOS stadig, men de kan være væsentligt forsinkede eller gå tabt. For realtidsovervågning bør du holde Mac-appen kørende — den er minimal i menubjælken, og det er sådan, Vultyr er tænkt til at blive brugt."
+        "text": "Ja, vi anbefaler det kraftigt. iOS begrænser baggrundsafvikling, så iPhone og iPad kan kun tjekke hvert 5.-15. minut (kan indstilles) og kan udskyde yderligere ved lavt batteri, Low Power Mode eller dårlig forbindelse. Mac-appen afstemmer så ofte som hvert 60. sekund, når enheden er tilsluttet strøm (kan indstilles op til 15 min) og sender statusændringer til dine andre enheder via iCloud. Uden en Mac, der kører Vultyr, fungerer underretninger på iOS, watchOS og tvOS stadig, men de kan være væsentligt forsinkede eller gå tabt. For realtidsovervågning bør du holde Mac-appen kørende, den er minimal i menubjælken, og det er sådan, Vultyr er tænkt til at blive brugt."
       }
     },
     {
@@ -96,7 +96,7 @@
       "name": "Indsamler vultyr-appen mine data?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nej. Appen har ingen konti, ingen sporing i appen, ingen analytik i appen. Alle dine overvågede tjenester forbliver på din enhed. Bemærk: dette website (vultyr.app) bruger cookieløs Google Analytics til aggregerede besøgstal — se privatlivspolitikken for detaljer."
+        "text": "Nej. Appen har ingen konti, ingen sporing i appen, ingen analytik i appen. Alle dine overvågede tjenester forbliver på din enhed. Bemærk: dette website (vultyr.app) bruger cookieløs Google Analytics til aggregerede besøgstal, se privatlivspolitikken for detaljer."
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "Kan jeg sætte underretninger på lydløs ved en kendt hændelse?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ja. Når du ser en tjeneste med en aktiv hændelse, kan du sætte underretninger på lydløs i en fastsat periode, så du ikke gentagne gange får besked om noget, du allerede er bekendt med. Du kan også gøre det med stemmen — »Hey Siri, sæt GitHub på lydløs i 2 timer« — eller via Shortcuts-appen."
+        "text": "Ja. Når du ser en tjeneste med en aktiv hændelse, kan du sætte underretninger på lydløs i en fastsat periode, så du ikke gentagne gange får besked om noget, du allerede er bekendt med. Du kan også gøre det med stemmen, »Hey Siri, sæt GitHub på lydløs i 2 timer«, eller via Shortcuts-appen."
       }
     },
     {
@@ -142,7 +142,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>Hvordan fungerer underretninger på tværs af enheder?</h3>
-        <p>Mac-appen er centralen. Hold den kørende (i menubjælken eller som fuldt vindue), og den afstemmer så ofte som hvert 60. sekund (kan indstilles op til 15 min). Når en statusændring opdages, skriver den et let signal til iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV og Vision Pro opfanger ændringen og kører deres eget lokale tjek. Ingen nøgler, ingen tokens, ingen opsætning — slå blot »Underretninger på tværs af enheder« til i indstillingerne på en vilkårlig enhed. Uden en Mac som central er underretninger afhængige af iOS' baggrundsafvikling og vil blive forsinket eller gå tabt.</p>
+        <p>Mac-appen er centralen. Hold den kørende (i menubjælken eller som fuldt vindue), og den afstemmer så ofte som hvert 60. sekund (kan indstilles op til 15 min). Når en statusændring opdages, skriver den et let signal til iCloud Key-Value Store; din iPhone, iPad, Watch, Apple TV og Vision Pro opfanger ændringen og kører deres eget lokale tjek. Ingen nøgler, ingen tokens, ingen opsætning, slå blot »Underretninger på tværs af enheder« til i indstillingerne på en vilkårlig enhed. Uden en Mac som central er underretninger afhængige af iOS' baggrundsafvikling og vil blive forsinket eller gå tabt.</p>
     </div>
     <div class="faq">
         <h3>Har jeg brug for Mac-appen for at få pålidelige underretninger?</h3>
-        <p>Ja — vi anbefaler det kraftigt. iOS begrænser baggrundsafvikling, så iPhone og iPad kan kun tjekke hvert 5.-15. minut (kan indstilles) og kan udskyde yderligere ved lavt batteri, Low Power Mode eller dårlig forbindelse. Mac-appen afstemmer så ofte som hvert 60. sekund, når enheden er tilsluttet strøm (kan indstilles op til 15 min) og sender statusændringer til dine andre enheder via iCloud. Uden en Mac, der kører Vultyr, fungerer underretninger på iOS, watchOS og tvOS stadig, men de kan være væsentligt forsinkede eller gå tabt. For realtidsovervågning bør du holde Mac-appen kørende — den er minimal i menubjælken, og det er sådan, Vultyr er tænkt til at blive brugt.</p>
+        <p>Ja, vi anbefaler det kraftigt. iOS begrænser baggrundsafvikling, så iPhone og iPad kan kun tjekke hvert 5.-15. minut (kan indstilles) og kan udskyde yderligere ved lavt batteri, Low Power Mode eller dårlig forbindelse. Mac-appen afstemmer så ofte som hvert 60. sekund, når enheden er tilsluttet strøm (kan indstilles op til 15 min) og sender statusændringer til dine andre enheder via iCloud. Uden en Mac, der kører Vultyr, fungerer underretninger på iOS, watchOS og tvOS stadig, men de kan være væsentligt forsinkede eller gå tabt. For realtidsovervågning bør du holde Mac-appen kørende, den er minimal i menubjælken, og det er sådan, Vultyr er tænkt til at blive brugt.</p>
     </div>
     <div class="faq">
         <h3>Fungerer vultyr med Siri og Shortcuts?</h3>
@@ -192,7 +192,7 @@
     </div>
     <div class="faq">
         <h3>Indsamler vultyr-appen mine data?</h3>
-        <p>Nej. Appen har ingen konti, ingen sporing i appen, ingen analytik i appen. Alle dine overvågede tjenester forbliver på din enhed. Bemærk: dette website (vultyr.app) bruger cookieløs Google Analytics til aggregerede besøgstal — se <a href="/privacy.html">privatlivspolitikken</a> for detaljer.</p>
+        <p>Nej. Appen har ingen konti, ingen sporing i appen, ingen analytik i appen. Alle dine overvågede tjenester forbliver på din enhed. Bemærk: dette website (vultyr.app) bruger cookieløs Google Analytics til aggregerede besøgstal, se <a href="/privacy.html">privatlivspolitikken</a> for detaljer.</p>
     </div>
     <div class="faq">
         <h3>Hvordan synkroniserer jeg mine tjenester på tværs af enheder?</h3>
@@ -204,7 +204,7 @@
     </div>
     <div class="faq">
         <h3>Kan jeg sætte underretninger på lydløs ved en kendt hændelse?</h3>
-        <p>Ja. Når du ser en tjeneste med en aktiv hændelse, kan du sætte underretninger på lydløs i en fastsat periode, så du ikke gentagne gange får besked om noget, du allerede er bekendt med. Du kan også gøre det med stemmen — »Hey Siri, sæt GitHub på lydløs i 2 timer« — eller via Shortcuts-appen.</p>
+        <p>Ja. Når du ser en tjeneste med en aktiv hændelse, kan du sætte underretninger på lydløs i en fastsat periode, så du ikke gentagne gange får besked om noget, du allerede er bekendt med. Du kan også gøre det med stemmen, »Hey Siri, sæt GitHub på lydløs i 2 timer«, eller via Shortcuts-appen.</p>
     </div>
     <div class="faq">
         <h3>Hvilke platforme understøttes?</h3>

@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-QklwudNtegADFkB0Kix2U4hSxtdlYA41mYo+JN895hM='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-8gMzvVnbVfSsUuBlsRo36saiOkWKXdtbbIDKji/1n68='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
     <script src="/assets/js/locale-detect.js?v=20260425b"></script>
     <script defer src="/assets/js/lang-switch.js?v=20260425b"></script>
     <title>支持</title>
-    <meta name="description" content="获取 Vultyr 使用帮助 —— Vultyr 是面向 iPhone、iPad、Mac、Apple Watch、Apple TV 和 Apple Vision Pro 的服务状态监测应用。常见问题、联系方式与故障排查。">
+    <meta name="description" content="获取 Vultyr 使用帮助，Vultyr 是面向 iPhone、iPad、Mac、Apple Watch、Apple TV 和 Apple Vision Pro 的服务状态监测应用。常见问题、联系方式与故障排查。">
     <meta name="theme-color" content="#000000">
     <meta property="og:title" content="支持">
-    <meta property="og:description" content="获取 Vultyr 使用帮助 —— Vultyr 是面向 iPhone、iPad、Mac、Apple Watch、Apple TV 和 Apple Vision Pro 的服务状态监测应用。常见问题、联系方式与故障排查。">
+    <meta property="og:description" content="获取 Vultyr 使用帮助，Vultyr 是面向 iPhone、iPad、Mac、Apple Watch、Apple TV 和 Apple Vision Pro 的服务状态监测应用。常见问题、联系方式与故障排查。">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr 应用图标 —— 服务状态监测">
+    <meta property="og:image:alt" content="Vultyr 应用图标：服务状态监测">
     <meta property="og:url" content="https://vultyr.app/zh-Hans/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="支持">
-    <meta name="twitter:description" content="获取 Vultyr 使用帮助 —— Vultyr 是面向 iPhone、iPad、Mac、Apple Watch、Apple TV 和 Apple Vision Pro 的服务状态监测应用。常见问题、联系方式与故障排查。">
+    <meta name="twitter:description" content="获取 Vultyr 使用帮助，Vultyr 是面向 iPhone、iPad、Mac、Apple Watch、Apple TV 和 Apple Vision Pro 的服务状态监测应用。常见问题、联系方式与故障排查。">
     <meta name="twitter:image" content="https://vultyr.app/icon.png">
     <link rel="canonical" href="https://vultyr.app/zh-Hans/support.html">
     <link rel="alternate" hreflang="da" href="https://vultyr.app/da/support.html">
@@ -64,7 +64,7 @@
       "name": "跨设备提醒是如何工作的?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mac 应用是枢纽。让它保持运行(菜单栏或完整窗口),它会最快每 60 秒轮询一次（可配置至 15 分钟）。一旦检测到状态变化,它会向 iCloud Key-Value Store 写入一个轻量信号;您的 iPhone、iPad、Watch、Apple TV 和 Vision Pro 会接收到该变化并各自执行本地检查。无需密钥、令牌或配置 —— 只需在任一设备的设置中启用「跨设备提醒」。如果没有 Mac 作为枢纽,提醒将依赖 iOS 的后台执行,可能被延迟或遗漏。"
+        "text": "Mac 应用是枢纽。让它保持运行(菜单栏或完整窗口),它会最快每 60 秒轮询一次（可配置至 15 分钟）。一旦检测到状态变化,它会向 iCloud Key-Value Store 写入一个轻量信号;您的 iPhone、iPad、Watch、Apple TV 和 Vision Pro 会接收到该变化并各自执行本地检查。无需密钥、令牌或配置，只需在任一设备的设置中启用「跨设备提醒」。如果没有 Mac 作为枢纽,提醒将依赖 iOS 的后台执行,可能被延迟或遗漏。"
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "要获得可靠的提醒,是否必须使用 Mac 应用?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "是的 —— 我们强烈推荐。iOS 限制后台执行,因此 iPhone 和 iPad 只能每 5–15 分钟检查一次(可配置),并且在低电量、低电量模式或网络状况不佳时,还可能进一步延迟。Mac 应用会持续轮询(接入电源时每 60 秒一次),并通过 iCloud 将状态变化广播给您的其他设备。如果没有运行 Vultyr 的 Mac,iOS、watchOS 和 tvOS 的提醒仍可工作,但可能会显著延迟或遗漏。如需实时监测,请保持 Mac 应用运行 —— 它在菜单栏里占用极小,这正是 Vultyr 的设计用法。"
+        "text": "是的，我们强烈推荐。iOS 限制后台执行,因此 iPhone 和 iPad 只能每 5–15 分钟检查一次(可配置),并且在低电量、低电量模式或网络状况不佳时,还可能进一步延迟。Mac 应用会持续轮询(接入电源时每 60 秒一次),并通过 iCloud 将状态变化广播给您的其他设备。如果没有运行 Vultyr 的 Mac,iOS、watchOS 和 tvOS 的提醒仍可工作,但可能会显著延迟或遗漏。如需实时监测,请保持 Mac 应用运行，它在菜单栏里占用极小,这正是 Vultyr 的设计用法。"
       }
     },
     {
@@ -96,7 +96,7 @@
       "name": "Vultyr 应用会收集我的数据吗?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "不会。应用没有账号、没有内置追踪,也没有内置分析。您关注的所有服务仅保存在您的设备上。注意:本网站(vultyr.app)使用无 Cookie 的 Google Analytics 统计聚合访问量 —— 详情请参阅隐私政策。"
+        "text": "不会。应用没有账号、没有内置追踪,也没有内置分析。您关注的所有服务仅保存在您的设备上。注意:本网站(vultyr.app)使用无 Cookie 的 Google Analytics 统计聚合访问量，详情请参阅隐私政策。"
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "能否为已知事件静音通知?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "可以。查看存在正在发生事件的服务时,您可以在指定时段内静音通知,以免重复收到您已经知晓的提醒。您也可以通过语音静音 —— 「嘿 Siri,将 GitHub 静音 2 小时」—— 或通过 Shortcuts 应用进行操作。"
+        "text": "可以。查看存在正在发生事件的服务时,您可以在指定时段内静音通知,以免重复收到您已经知晓的提醒。您也可以通过语音静音，「嘿 Siri,将 GitHub 静音 2 小时」， 或通过 Shortcuts 应用进行操作。"
       }
     },
     {
@@ -142,7 +142,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>跨设备提醒是如何工作的?</h3>
-        <p>Mac 应用是枢纽。让它保持运行(菜单栏或完整窗口),它会最快每 60 秒轮询一次（可配置至 15 分钟）。一旦检测到状态变化,它会向 iCloud Key-Value Store 写入一个轻量信号;您的 iPhone、iPad、Watch、Apple TV 和 Vision Pro 会接收到该变化并各自执行本地检查。无需密钥、令牌或配置 —— 只需在任一设备的设置中启用「跨设备提醒」。如果没有 Mac 作为枢纽,提醒将依赖 iOS 的后台执行,可能被延迟或遗漏。</p>
+        <p>Mac 应用是枢纽。让它保持运行(菜单栏或完整窗口),它会最快每 60 秒轮询一次（可配置至 15 分钟）。一旦检测到状态变化,它会向 iCloud Key-Value Store 写入一个轻量信号;您的 iPhone、iPad、Watch、Apple TV 和 Vision Pro 会接收到该变化并各自执行本地检查。无需密钥、令牌或配置，只需在任一设备的设置中启用「跨设备提醒」。如果没有 Mac 作为枢纽,提醒将依赖 iOS 的后台执行,可能被延迟或遗漏。</p>
     </div>
     <div class="faq">
         <h3>要获得可靠的提醒,是否必须使用 Mac 应用?</h3>
-        <p>是的 —— 我们强烈推荐。iOS 限制后台执行,因此 iPhone 和 iPad 只能每 5–15 分钟检查一次(可配置),并且在低电量、低电量模式或网络状况不佳时,还可能进一步延迟。Mac 应用会持续轮询(接入电源时每 60 秒一次),并通过 iCloud 将状态变化广播给您的其他设备。如果没有运行 Vultyr 的 Mac,iOS、watchOS 和 tvOS 的提醒仍可工作,但可能会显著延迟或遗漏。如需实时监测,请保持 Mac 应用运行 —— 它在菜单栏里占用极小,这正是 Vultyr 的设计用法。</p>
+        <p>是的，我们强烈推荐。iOS 限制后台执行,因此 iPhone 和 iPad 只能每 5–15 分钟检查一次(可配置),并且在低电量、低电量模式或网络状况不佳时,还可能进一步延迟。Mac 应用会持续轮询(接入电源时每 60 秒一次),并通过 iCloud 将状态变化广播给您的其他设备。如果没有运行 Vultyr 的 Mac,iOS、watchOS 和 tvOS 的提醒仍可工作,但可能会显著延迟或遗漏。如需实时监测,请保持 Mac 应用运行，它在菜单栏里占用极小,这正是 Vultyr 的设计用法。</p>
     </div>
     <div class="faq">
         <h3>Vultyr 支持 Siri 和 Shortcuts 吗?</h3>
@@ -192,7 +192,7 @@
     </div>
     <div class="faq">
         <h3>Vultyr 应用会收集我的数据吗?</h3>
-        <p>不会。应用没有账号、没有内置追踪,也没有内置分析。您关注的所有服务仅保存在您的设备上。注意:本网站(vultyr.app)使用无 Cookie 的 Google Analytics 统计聚合访问量 —— 详情请参阅<a href="/privacy.html">隐私政策</a>。</p>
+        <p>不会。应用没有账号、没有内置追踪,也没有内置分析。您关注的所有服务仅保存在您的设备上。注意:本网站(vultyr.app)使用无 Cookie 的 Google Analytics 统计聚合访问量，详情请参阅<a href="/privacy.html">隐私政策</a>。</p>
     </div>
     <div class="faq">
         <h3>如何在多台设备间同步我的服务?</h3>
@@ -204,7 +204,7 @@
     </div>
     <div class="faq">
         <h3>能否为已知事件静音通知?</h3>
-        <p>可以。查看存在正在发生事件的服务时,您可以在指定时段内静音通知,以免重复收到您已经知晓的提醒。您也可以通过语音静音 —— 「嘿 Siri,将 GitHub 静音 2 小时」—— 或通过 Shortcuts 应用进行操作。</p>
+        <p>可以。查看存在正在发生事件的服务时,您可以在指定时段内静音通知,以免重复收到您已经知晓的提醒。您也可以通过语音静音，「嘿 Siri,将 GitHub 静音 2 小时」， 或通过 Shortcuts 应用进行操作。</p>
     </div>
     <div class="faq">
         <h3>支持哪些平台?</h3>

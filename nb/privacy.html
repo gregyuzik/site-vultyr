@@ -15,7 +15,7 @@
     <meta property="og:title" content="Personvernerklæring">
     <meta property="og:description" content="Vultyrs personvernerklæring. Appen samler ingen personopplysninger. Dette nettstedet bruker Google Analytics uten informasjonskapsler for aggregert besøksstatistikk.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr-appikon — tjenestestatusmonitor">
+    <meta property="og:image:alt" content="Vultyr-appikon: tjenestestatusmonitor">
     <meta property="og:url" content="https://vultyr.app/nb/privacy.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="nb_NO">
@@ -46,7 +46,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
     <link rel="stylesheet" href="/assets/css/shared.css?v=20260425b">
     <link rel="stylesheet" href="/assets/css/docs.css?v=20260425b">
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -70,27 +70,27 @@
     <p class="date">Sist oppdatert: 11. april 2026</p>
     <h2>Sammendrag</h2>
     <p>Vultyr-<strong>appen</strong> samler, lagrer og overfører ingen personopplysninger. Vultyr-<strong>nettstedet</strong> (vultyr.app) bruker Google Analytics uten informasjonskapsler for å forstå aggregert besøkstrafikk. Denne siden forklarer begge deler i detalj.</p>
-    <h2>App — datainnsamling</h2>
+    <h2>App: datainnsamling</h2>
     <p>Vultyr-appen samler ikke inn noen personlig informasjon. Den krever ingen konto, inkluderer ingen tredjeparts analyse- eller sporings-SDK-er, og sender ikke data til noen server vi drifter.</p>
-    <h2>App — nettverksforespørsler</h2>
-    <p>Appen sender direkte HTTPS-forespørsler til offentlige statusside-API-er (som Statuspage.io, Apple, Google Cloud og andre) for å sjekke tjenestestatus. Disse forespørslene går direkte fra enheten din til tjenestens offentlige API — de passerer ikke noen server vi drifter.</p>
-    <h2>App — datalagring</h2>
+    <h2>App: nettverksforespørsler</h2>
+    <p>Appen sender direkte HTTPS-forespørsler til offentlige statusside-API-er (som Statuspage.io, Apple, Google Cloud og andre) for å sjekke tjenestestatus. Disse forespørslene går direkte fra enheten din til tjenestens offentlige API, de passerer ikke noen server vi drifter.</p>
+    <h2>App: datalagring</h2>
     <p>Alle data lagres lokalt på enheten din med Apples SwiftData-rammeverk. Hvis du aktiverer iCloud-synkronisering, synkroniseres listen din over overvåkede tjenester via Apples iCloud Key-Value Store, som styres av Apples personvernerklæring. Vi ser aldri disse dataene.</p>
-    <h2>App — varsler mellom enheter</h2>
-    <p>Hvis du aktiverer varsler mellom enheter, deles statusendringer mellom enhetene dine via Apples iCloud Key-Value Store. Når Mac-en din oppdager en statusendring, skriver den et lett signal til iCloud-kontoen din. De andre enhetene dine observerer endringen og kjører sin egen lokale sjekk. Ingen tredjepartsserver er involvert — all kommunikasjon går gjennom Apples iCloud-infrastruktur. Du kan slå dette av og på fra hvilken som helst enhet.</p>
-    <h2>App — favikoner</h2>
+    <h2>App: varsler mellom enheter</h2>
+    <p>Hvis du aktiverer varsler mellom enheter, deles statusendringer mellom enhetene dine via Apples iCloud Key-Value Store. Når Mac-en din oppdager en statusendring, skriver den et lett signal til iCloud-kontoen din. De andre enhetene dine observerer endringen og kjører sin egen lokale sjekk. Ingen tredjepartsserver er involvert, all kommunikasjon går gjennom Apples iCloud-infrastruktur. Du kan slå dette av og på fra hvilken som helst enhet.</p>
+    <h2>App: favikoner</h2>
     <p>Tjenestefavikoner hentes fra Googles offentlige favikontjeneste og bufres lokalt på enheten din.</p>
-    <h2>Nettstedet — analyse</h2>
+    <h2>Nettstedet: analyse</h2>
     <p>Dette nettstedet (vultyr.app) bruker Google Analytics 4 i modus uten informasjonskapsler, med anonymisert IP, for å telle aggregerte sidevisninger. Nærmere bestemt konfigurerer vi gtag.js med <code>anonymize_ip: true</code>, <code>client_storage: 'none'</code>, <code>allow_google_signals: false</code> og <code>allow_ad_personalization_signals: false</code>. Dette betyr at ingen <code>_ga</code>-informasjonskapsel settes, IP-adressen din kortes ned før lagring, og ingen annonseidentifikatorer samles inn. Selve Vultyr-appen inneholder ingen analyse.</p>
-    <h2>Nettstedet — tredjepartsdomener</h2>
+    <h2>Nettstedet: tredjepartsdomener</h2>
     <p>Når vultyr.app lastes inn, kontaktes følgende tredjepartsdomener:</p>
     <ul>
-        <li><strong>www.googletagmanager.com</strong> — laster gtag.js-skriptet</li>
-        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong> — mottar anonymiserte signaler om sidevisninger</li>
-        <li><strong>www.google.com/g/collect</strong> — mottar de samme anonymiserte signalene om sidevisninger (reservesamlingsendepunktet for Google Analytics 4)</li>
+        <li><strong>www.googletagmanager.com</strong>, laster gtag.js-skriptet</li>
+        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong>, mottar anonymiserte signaler om sidevisninger</li>
+        <li><strong>www.google.com/g/collect</strong>, mottar de samme anonymiserte signalene om sidevisninger (reservesamlingsendepunktet for Google Analytics 4)</li>
     </ul>
     <p>Vi laster ikke inn Google Fonts (Audiowide-fonten er selvhostet på vultyr.app) og bruker ingen tredjeparts favikontjeneste for nettstedets egne bilder.</p>
-    <h2>App — tredjepartstjenester</h2>
+    <h2>App: tredjepartstjenester</h2>
     <p>Vultyr-appen integrerer ikke med noen tredjeparts analyse-, reklame- eller sporingstjenester. De eneste eksterne forespørslene går til offentlige status-API-er og Googles favikontjeneste.</p>
     <h2>Barns personvern</h2>
     <p>Vultyr-appen samler ikke inn data fra noen, inkludert barn under 13 år. Nettstedet logger kun anonymiserte, aggregerte besøkstellinger.</p>

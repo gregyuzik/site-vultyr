@@ -15,7 +15,7 @@
     <meta property="og:title" content="プライバシーポリシー">
     <meta property="og:description" content="Vultyrのプライバシーポリシー。アプリは個人データを収集しません。このウェブサイトは集計トラフィックのためにCookieを使用しないGoogle Analyticsを利用します。">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyrアプリアイコン — サービスステータスモニター">
+    <meta property="og:image:alt" content="Vultyrアプリアイコン: サービスステータスモニター">
     <meta property="og:url" content="https://vultyr.app/ja/privacy.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ja_JP">
@@ -46,7 +46,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
     <link rel="stylesheet" href="/assets/css/shared.css?v=20260425b">
     <link rel="stylesheet" href="/assets/css/docs.css?v=20260425b">
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -70,27 +70,27 @@
     <p class="date">最終更新日: 2026年4月11日</p>
     <h2>概要</h2>
     <p>Vultyr<strong>アプリ</strong>は個人データを一切収集、保存、送信しません。Vultyr<strong>ウェブサイト</strong>(vultyr.app)は集計された訪問者トラフィックを把握するためにCookieを使用しないGoogle Analyticsを利用します。以下、両方について詳しく説明します。</p>
-    <h2>アプリ — データ収集</h2>
+    <h2>アプリ: データ収集</h2>
     <p>vultyrアプリは個人情報を一切収集しません。アカウントは不要で、サードパーティの分析やトラッキングSDKは含まれておらず、当社が運営するサーバーにデータを送信することもありません。</p>
-    <h2>アプリ — ネットワークリクエスト</h2>
+    <h2>アプリ: ネットワークリクエスト</h2>
     <p>アプリはサービスのステータスを確認するため、公開されているステータスページAPI(Statuspage.io、Apple、Google Cloudなど)に直接HTTPSリクエストを送信します。これらのリクエストはお使いのデバイスからサービスの公開APIに直接送信され、当社が運営するサーバーを経由することはありません。</p>
-    <h2>アプリ — データ保存</h2>
+    <h2>アプリ: データ保存</h2>
     <p>すべてのデータはAppleのSwiftDataフレームワークを使ってお使いのデバイス上にローカル保存されます。iCloud同期を有効にすると、監視中のサービスのリストはAppleのiCloud Key-Value Store経由で同期され、Appleのプライバシーポリシーの適用を受けます。当社はこのデータを一切閲覧しません。</p>
-    <h2>アプリ — クロスデバイスアラート</h2>
+    <h2>アプリ: クロスデバイスアラート</h2>
     <p>クロスデバイスアラートを有効にすると、ステータスの変化はAppleのiCloud Key-Value Store経由でお使いのデバイス間で共有されます。Macがステータスの変化を検出すると、軽量なシグナルをお使いのiCloudアカウントに書き込みます。他のデバイスはその変化を検知し、それぞれローカルでチェックを実行します。サードパーティサーバーは関与せず、すべての通信はAppleのiCloudインフラストラクチャを経由します。この機能はどのデバイスからでも切り替えられます。</p>
-    <h2>アプリ — ファビコン</h2>
+    <h2>アプリ: ファビコン</h2>
     <p>サービスのファビコンはGoogleの公開ファビコンサービスから取得され、お使いのデバイスにローカルキャッシュされます。</p>
-    <h2>ウェブサイト — 分析</h2>
+    <h2>ウェブサイト: 分析</h2>
     <p>このウェブサイト(vultyr.app)は、集計ページビューを計測するためにCookieを使用せずIPを匿名化したモードでGoogle Analytics 4を利用します。具体的には、gtag.jsを<code>anonymize_ip: true</code>、<code>client_storage: 'none'</code>、<code>allow_google_signals: false</code>、<code>allow_ad_personalization_signals: false</code>で設定しています。これにより<code>_ga</code>Cookieは設定されず、IPアドレスは保存前に切り詰められ、広告識別子は収集されません。vultyrアプリ自体には分析機能は含まれていません。</p>
-    <h2>ウェブサイト — サードパーティドメイン</h2>
+    <h2>ウェブサイト: サードパーティドメイン</h2>
     <p>vultyr.appを読み込むと、以下のサードパーティドメインと通信します:</p>
     <ul>
-        <li><strong>www.googletagmanager.com</strong> — gtag.jsスクリプトを読み込みます</li>
-        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong> — 匿名化されたページビュービーコンを受信します</li>
-        <li><strong>www.google.com/g/collect</strong> — 同じ匿名化ページビュービーコンを受信します(Google Analytics 4のフォールバック収集エンドポイント)</li>
+        <li><strong>www.googletagmanager.com</strong>, gtag.jsスクリプトを読み込みます</li>
+        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong>, 匿名化されたページビュービーコンを受信します</li>
+        <li><strong>www.google.com/g/collect</strong>, 同じ匿名化ページビュービーコンを受信します(Google Analytics 4のフォールバック収集エンドポイント)</li>
     </ul>
     <p>Google Fontsは使用せず(Audiowideフォントはvultyr.appでセルフホストされています)、ウェブサイト自体の画像にサードパーティのファビコンサービスは使用していません。</p>
-    <h2>アプリ — サードパーティサービス</h2>
+    <h2>アプリ: サードパーティサービス</h2>
     <p>vultyrアプリはサードパーティの分析、広告、トラッキングサービスとは一切連携しません。外部リクエストは公開ステータスAPIとGoogleのファビコンサービスのみです。</p>
     <h2>子どものプライバシー</h2>
     <p>vultyrアプリは誰からもデータを収集しません。13歳未満の子どもも例外ではありません。ウェブサイトは匿名化された集計訪問者数のみを記録します。</p>

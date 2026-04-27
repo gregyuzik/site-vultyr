@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-pPPFyrNuGq9JOAVWuVZeZiCvaSVb2hwr8YM5SwvG8qs='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com 'sha256-+bFme4voHHpR0VZMBEsXuC91y/apiUvhUqRxWRd2jv0='; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.google.com/g/collect; object-src 'none'; base-uri 'self'">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/audiowide.woff2" crossorigin>
@@ -15,7 +15,7 @@
     <meta property="og:title" content="サポート">
     <meta property="og:description" content="iPhone、iPad、Mac、Apple Watch、Apple TV、Apple Vision Pro向けサービスステータスモニター Vultyr のヘルプ。よくある質問、お問い合わせ、トラブルシューティング。">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyrアプリアイコン — サービスステータスモニター">
+    <meta property="og:image:alt" content="Vultyrアプリアイコン: サービスステータスモニター">
     <meta property="og:url" content="https://vultyr.app/ja/support.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ja_JP">
@@ -64,7 +64,7 @@
       "name": "クロスデバイスアラートはどのように動作しますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Macアプリがハブです。メニューバーまたはフルウィンドウで起動したままにしておけば、最速60秒ごとにポーリング(15分まで設定可能)します。ステータスの変化を検出すると、軽量なシグナルをiCloud Key-Value Storeに書き込み、iPhone、iPad、Watch、Apple TV、Vision Proがその変化を受け取ってそれぞれローカルでチェックを実行します。鍵もトークンもセットアップも不要 — どのデバイスの設定でも「クロスデバイスアラート」を有効にするだけです。Macをハブにしない場合、アラートはiOSのバックグラウンド実行に依存するため遅延または欠落します。"
+        "text": "Macアプリがハブです。メニューバーまたはフルウィンドウで起動したままにしておけば、最速60秒ごとにポーリング(15分まで設定可能)します。ステータスの変化を検出すると、軽量なシグナルをiCloud Key-Value Storeに書き込み、iPhone、iPad、Watch、Apple TV、Vision Proがその変化を受け取ってそれぞれローカルでチェックを実行します。鍵もトークンもセットアップも不要, どのデバイスの設定でも「クロスデバイスアラート」を有効にするだけです。Macをハブにしない場合、アラートはiOSのバックグラウンド実行に依存するため遅延または欠落します。"
       }
     },
     {
@@ -72,7 +72,7 @@
       "name": "確実なアラートのためにMacアプリは必要ですか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はい — 強くお勧めします。iOSはバックグラウンド実行を制限するため、iPhoneとiPadは5〜15分ごと(設定可能)にしかチェックできず、バッテリー残量の低下、低電力モード、通信状況の悪化でさらに遅延することがあります。Macアプリは電源接続時に最速最速60秒ごとにポーリング(15分まで設定可能)し(15分まで設定可能)、iCloud経由で他のデバイスにステータスの変化をブロードキャストします。VultyrをMacで動かしていない場合、iOS、watchOS、tvOSのアラートは動作しますが大幅に遅延したり欠落したりする可能性があります。リアルタイム監視のためにはMacアプリを起動したままにしておいてください — メニューバーに小さく常駐し、これがVultyr本来の使い方です。"
+        "text": "はい, 強くお勧めします。iOSはバックグラウンド実行を制限するため、iPhoneとiPadは5〜15分ごと(設定可能)にしかチェックできず、バッテリー残量の低下、低電力モード、通信状況の悪化でさらに遅延することがあります。Macアプリは電源接続時に最速最速60秒ごとにポーリング(15分まで設定可能)し(15分まで設定可能)、iCloud経由で他のデバイスにステータスの変化をブロードキャストします。VultyrをMacで動かしていない場合、iOS、watchOS、tvOSのアラートは動作しますが大幅に遅延したり欠落したりする可能性があります。リアルタイム監視のためにはMacアプリを起動したままにしておいてください, メニューバーに小さく常駐し、これがVultyr本来の使い方です。"
       }
     },
     {
@@ -96,7 +96,7 @@
       "name": "vultyrアプリは私のデータを収集しますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "いいえ。アプリにはアカウントもアプリ内トラッキングもアプリ内分析もありません。監視中のサービスはすべてお使いのデバイスに留まります。注意: このウェブサイト(vultyr.app)は集計訪問者数のためにCookieを使用しないGoogle Analyticsを利用しています — 詳細はプライバシーポリシーをご覧ください。"
+        "text": "いいえ。アプリにはアカウントもアプリ内トラッキングもアプリ内分析もありません。監視中のサービスはすべてお使いのデバイスに留まります。注意: このウェブサイト(vultyr.app)は集計訪問者数のためにCookieを使用しないGoogle Analyticsを利用しています, 詳細はプライバシーポリシーをご覧ください。"
       }
     },
     {
@@ -120,7 +120,7 @@
       "name": "既知のインシデントの通知をミュートできますか?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "はい。発生中のインシデントがあるサービスを表示しているときに、一定期間通知をミュートできるので、すでに知っている事象について繰り返しアラートを受け取ることはありません。音声でもミュートできます — 「Hey Siri、GitHubを2時間ミュート」 — Shortcutsアプリからも可能です。"
+        "text": "はい。発生中のインシデントがあるサービスを表示しているときに、一定期間通知をミュートできるので、すでに知っている事象について繰り返しアラートを受け取ることはありません。音声でもミュートできます, 「Hey Siri、GitHubを2時間ミュート」, Shortcutsアプリからも可能です。"
       }
     },
     {
@@ -142,7 +142,7 @@
   ]
 }
 </script>
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -176,11 +176,11 @@
     </div>
     <div class="faq">
         <h3>クロスデバイスアラートはどのように動作しますか?</h3>
-        <p>Macアプリがハブです。メニューバーまたはフルウィンドウで起動したままにしておけば、最速60秒ごとにポーリング(15分まで設定可能)します。ステータスの変化を検出すると、軽量なシグナルをiCloud Key-Value Storeに書き込み、iPhone、iPad、Watch、Apple TV、Vision Proがその変化を受け取ってそれぞれローカルでチェックを実行します。鍵もトークンもセットアップも不要 — どのデバイスの設定でも「クロスデバイスアラート」を有効にするだけです。Macをハブにしない場合、アラートはiOSのバックグラウンド実行に依存するため遅延または欠落します。</p>
+        <p>Macアプリがハブです。メニューバーまたはフルウィンドウで起動したままにしておけば、最速60秒ごとにポーリング(15分まで設定可能)します。ステータスの変化を検出すると、軽量なシグナルをiCloud Key-Value Storeに書き込み、iPhone、iPad、Watch、Apple TV、Vision Proがその変化を受け取ってそれぞれローカルでチェックを実行します。鍵もトークンもセットアップも不要, どのデバイスの設定でも「クロスデバイスアラート」を有効にするだけです。Macをハブにしない場合、アラートはiOSのバックグラウンド実行に依存するため遅延または欠落します。</p>
     </div>
     <div class="faq">
         <h3>確実なアラートのためにMacアプリは必要ですか?</h3>
-        <p>はい — 強くお勧めします。iOSはバックグラウンド実行を制限するため、iPhoneとiPadは5〜15分ごと(設定可能)にしかチェックできず、バッテリー残量の低下、低電力モード、通信状況の悪化でさらに遅延することがあります。Macアプリは電源接続時に最速最速60秒ごとにポーリング(15分まで設定可能)し(15分まで設定可能)、iCloud経由で他のデバイスにステータスの変化をブロードキャストします。VultyrをMacで動かしていない場合、iOS、watchOS、tvOSのアラートは動作しますが大幅に遅延したり欠落したりする可能性があります。リアルタイム監視のためにはMacアプリを起動したままにしておいてください — メニューバーに小さく常駐し、これがVultyr本来の使い方です。</p>
+        <p>はい, 強くお勧めします。iOSはバックグラウンド実行を制限するため、iPhoneとiPadは5〜15分ごと(設定可能)にしかチェックできず、バッテリー残量の低下、低電力モード、通信状況の悪化でさらに遅延することがあります。Macアプリは電源接続時に最速最速60秒ごとにポーリング(15分まで設定可能)し(15分まで設定可能)、iCloud経由で他のデバイスにステータスの変化をブロードキャストします。VultyrをMacで動かしていない場合、iOS、watchOS、tvOSのアラートは動作しますが大幅に遅延したり欠落したりする可能性があります。リアルタイム監視のためにはMacアプリを起動したままにしておいてください, メニューバーに小さく常駐し、これがVultyr本来の使い方です。</p>
     </div>
     <div class="faq">
         <h3>vultyrはSiriやShortcutsと連携しますか?</h3>
@@ -192,7 +192,7 @@
     </div>
     <div class="faq">
         <h3>vultyrアプリは私のデータを収集しますか?</h3>
-        <p>いいえ。アプリにはアカウントもアプリ内トラッキングもアプリ内分析もありません。監視中のサービスはすべてお使いのデバイスに留まります。注意: このウェブサイト(vultyr.app)は集計訪問者数のためにCookieを使用しないGoogle Analyticsを利用しています — 詳細は<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
+        <p>いいえ。アプリにはアカウントもアプリ内トラッキングもアプリ内分析もありません。監視中のサービスはすべてお使いのデバイスに留まります。注意: このウェブサイト(vultyr.app)は集計訪問者数のためにCookieを使用しないGoogle Analyticsを利用しています, 詳細は<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
     </div>
     <div class="faq">
         <h3>デバイス間でサービスを同期するにはどうすればよいですか?</h3>
@@ -204,7 +204,7 @@
     </div>
     <div class="faq">
         <h3>既知のインシデントの通知をミュートできますか?</h3>
-        <p>はい。発生中のインシデントがあるサービスを表示しているときに、一定期間通知をミュートできるので、すでに知っている事象について繰り返しアラートを受け取ることはありません。音声でもミュートできます — 「Hey Siri、GitHubを2時間ミュート」 — Shortcutsアプリからも可能です。</p>
+        <p>はい。発生中のインシデントがあるサービスを表示しているときに、一定期間通知をミュートできるので、すでに知っている事象について繰り返しアラートを受け取ることはありません。音声でもミュートできます, 「Hey Siri、GitHubを2時間ミュート」, Shortcutsアプリからも可能です。</p>
     </div>
     <div class="faq">
         <h3>サポートされているプラットフォームは何ですか?</h3>

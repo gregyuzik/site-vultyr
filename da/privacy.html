@@ -15,7 +15,7 @@
     <meta property="og:title" content="Privatlivspolitik">
     <meta property="og:description" content="Vultyrs privatlivspolitik. Appen indsamler ingen personlige data. Dette website bruger cookieløs Google Analytics til aggregeret besøgsstatistik.">
     <meta property="og:image" content="https://vultyr.app/icon.png">
-    <meta property="og:image:alt" content="Vultyr app-ikon — overvågning af tjenestestatus">
+    <meta property="og:image:alt" content="Vultyr app-ikon: overvågning af tjenestestatus">
     <meta property="og:url" content="https://vultyr.app/da/privacy.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="da_DK">
@@ -46,7 +46,7 @@
     <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=20260417e">
     <link rel="stylesheet" href="/assets/css/shared.css?v=20260425b">
     <link rel="stylesheet" href="/assets/css/docs.css?v=20260425b">
-    <!-- Google tag (gtag.js) — cookieless, anonymized -->
+    <!-- Google tag (gtag.js), cookieless, anonymized -->
     <script defer src="/assets/js/analytics.js"></script>
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-YYDJLZG0X1"></script>
 </head>
@@ -70,27 +70,27 @@
     <p class="date">Sidst opdateret: 11. april 2026</p>
     <h2>Resumé</h2>
     <p>Vultyr-<strong>appen</strong> indsamler, gemmer og sender ingen personlige data. Vultyr-<strong>websitet</strong> (vultyr.app) bruger cookieløs Google Analytics til at forstå aggregeret besøgstrafik. Denne side forklarer begge dele i detaljer.</p>
-    <h2>App — dataindsamling</h2>
+    <h2>App: dataindsamling</h2>
     <p>Vultyr-appen indsamler ingen personlige oplysninger. Den kræver ingen konto, indeholder ingen tredjepartsanalytik eller sporings-SDK'er og kontakter ingen server, som vi driver.</p>
-    <h2>App — netværksanmodninger</h2>
-    <p>Appen sender direkte HTTPS-anmodninger til offentlige statusside-API'er (f.eks. Statuspage.io, Apple, Google Cloud og andre) for at tjekke tjenestestatus. Disse anmodninger går direkte fra din enhed til tjenestens offentlige API — de passerer ikke gennem nogen server, vi driver.</p>
-    <h2>App — datalagring</h2>
+    <h2>App: netværksanmodninger</h2>
+    <p>Appen sender direkte HTTPS-anmodninger til offentlige statusside-API'er (f.eks. Statuspage.io, Apple, Google Cloud og andre) for at tjekke tjenestestatus. Disse anmodninger går direkte fra din enhed til tjenestens offentlige API, de passerer ikke gennem nogen server, vi driver.</p>
+    <h2>App: datalagring</h2>
     <p>Alle data gemmes lokalt på din enhed ved hjælp af Apples SwiftData-framework. Hvis du aktiverer iCloud-synkronisering, synkroniseres din liste over overvågede tjenester via Apples iCloud Key-Value Store, som er underlagt Apples privatlivspolitik. Vi ser aldrig disse data.</p>
-    <h2>App — underretninger på tværs af enheder</h2>
-    <p>Hvis du aktiverer underretninger på tværs af enheder, deles statusændringer mellem dine enheder via Apples iCloud Key-Value Store. Når din Mac opdager en statusændring, skriver den et let signal til din iCloud-konto. Dine andre enheder bemærker ændringen og kører deres eget lokale tjek. Ingen tredjepartsserver er involveret — al kommunikation går gennem Apples iCloud-infrastruktur. Du kan slå dette til og fra fra enhver enhed.</p>
-    <h2>App — favicons</h2>
+    <h2>App: underretninger på tværs af enheder</h2>
+    <p>Hvis du aktiverer underretninger på tværs af enheder, deles statusændringer mellem dine enheder via Apples iCloud Key-Value Store. Når din Mac opdager en statusændring, skriver den et let signal til din iCloud-konto. Dine andre enheder bemærker ændringen og kører deres eget lokale tjek. Ingen tredjepartsserver er involveret, al kommunikation går gennem Apples iCloud-infrastruktur. Du kan slå dette til og fra fra enhver enhed.</p>
+    <h2>App: favicons</h2>
     <p>Tjenesters favicons hentes fra Googles offentlige favicon-tjeneste og caches lokalt på din enhed.</p>
-    <h2>Website — analytik</h2>
+    <h2>Website: analytik</h2>
     <p>Dette website (vultyr.app) bruger Google Analytics 4 i cookieløs og IP-anonymiseret tilstand til at tælle aggregerede sidevisninger. Konkret konfigurerer vi gtag.js med <code>anonymize_ip: true</code>, <code>client_storage: 'none'</code>, <code>allow_google_signals: false</code> og <code>allow_ad_personalization_signals: false</code>. Det betyder, at der ikke sættes nogen <code>_ga</code>-cookie, din IP afkortes før lagring, og der indsamles ingen reklameidentifikatorer. Selve Vultyr-appen indeholder ingen analytik.</p>
-    <h2>Website — tredjepartsdomæner</h2>
+    <h2>Website: tredjepartsdomæner</h2>
     <p>Indlæsning af vultyr.app kontakter følgende tredjepartsdomæner:</p>
     <ul>
-        <li><strong>www.googletagmanager.com</strong> — indlæser gtag.js-scriptet</li>
-        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong> — modtager anonymiserede sidevisningssignaler</li>
-        <li><strong>www.google.com/g/collect</strong> — modtager de samme anonymiserede sidevisningssignaler (Google Analytics 4's reserve-indsamlingsendpoint)</li>
+        <li><strong>www.googletagmanager.com</strong>, indlæser gtag.js-scriptet</li>
+        <li><strong>www.google-analytics.com</strong> / <strong>*.analytics.google.com</strong>, modtager anonymiserede sidevisningssignaler</li>
+        <li><strong>www.google.com/g/collect</strong>, modtager de samme anonymiserede sidevisningssignaler (Google Analytics 4's reserve-indsamlingsendpoint)</li>
     </ul>
     <p>Vi indlæser ikke Google Fonts (Audiowide-skrifttypen er hostet på vultyr.app) og bruger ikke en tredjeparts favicon-tjeneste til websitets egne billeder.</p>
-    <h2>App — tredjepartstjenester</h2>
+    <h2>App: tredjepartstjenester</h2>
     <p>Vultyr-appen integreres ikke med nogen tredjeparts analyse-, reklame- eller sporingstjenester. De eneste eksterne anmodninger går til offentlige status-API'er og Googles favicon-tjeneste.</p>
     <h2>Børns privatliv</h2>
     <p>Vultyr-appen indsamler ikke data fra nogen, inklusive børn under 13 år. Websitet logger kun anonymiserede, aggregerede besøgstal.</p>
