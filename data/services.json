@@ -3055,7 +3055,7 @@
       "homepageUrl": "https://ui.com",
       "statuspageApi": "https://status.ui.com/api/v2/summary.json",
       "categories": [
-        "amazon"
+        "communication"
       ]
     },
     {
@@ -3366,8 +3366,7 @@
         "aws",
         "eero",
         "ring",
-        "smartthings",
-        "ubiquiti"
+        "smartthings"
       ]
     },
     {
@@ -3429,6 +3428,7 @@
         "slack",
         "telnyx",
         "twilio",
+        "ubiquiti",
         "vonage",
         "webex",
         "zoom"
