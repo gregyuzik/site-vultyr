@@ -25,7 +25,7 @@ RU_STATUS_DIR = RU_DIR / "status"
 RU_CATEGORIES_DIR = RU_DIR / "categories"
 FAVICONS_DIR = ROOT_DIR / "assets" / "favicons"
 ICONS_DIR = ROOT_DIR / "assets" / "icons"
-TODAY = date.today().isoformat()
+TODAY = datetime.now(timezone.utc).date().isoformat()
 
 SITE_ORIGIN = "https://vultyr.app"
 APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
