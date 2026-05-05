@@ -298,6 +298,17 @@
       ]
     },
     {
+      "name": "Bird",
+      "slug": "messagebird",
+      "faviconDomain": "bird.com",
+      "statusUrl": "https://status.bird.com",
+      "homepageUrl": "https://bird.com",
+      "statuspageApi": "https://status.bird.com/api/v2/summary.json",
+      "categories": [
+        "communication"
+      ]
+    },
+    {
       "name": "Bitbucket",
       "slug": "bitbucket",
       "faviconDomain": "bitbucket.org",
@@ -482,6 +493,17 @@
       "statuspageApi": "https://status.cash.app/api/v2/summary.json",
       "categories": [
         "payments-commerce"
+      ]
+    },
+    {
+      "name": "Cerebras",
+      "slug": "cerebras",
+      "faviconDomain": "www.cerebras.ai",
+      "statusUrl": "https://status.cerebras.ai",
+      "homepageUrl": "https://www.cerebras.ai",
+      "statuspageApi": "https://status.cerebras.ai/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -760,17 +782,6 @@
       ]
     },
     {
-      "name": "Kit",
-      "slug": "convertkit",
-      "faviconDomain": "kit.com",
-      "statusUrl": "https://status.kit.com",
-      "homepageUrl": "https://kit.com",
-      "statuspageApi": "https://status.kit.com/api/v2/summary.json",
-      "categories": [
-        "email-marketing"
-      ]
-    },
-    {
       "name": "Convex",
       "slug": "convex",
       "faviconDomain": "convex.dev",
@@ -889,6 +900,17 @@
       "statuspageApi": null,
       "categories": [
         "developer-tools"
+      ]
+    },
+    {
+      "name": "Descript",
+      "slug": "descript",
+      "faviconDomain": "www.descript.com",
+      "statusUrl": "https://status.descript.com",
+      "homepageUrl": "https://www.descript.com",
+      "statuspageApi": "https://status.descript.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
       ]
     },
     {
@@ -1068,6 +1090,17 @@
       ]
     },
     {
+      "name": "Etsy",
+      "slug": "etsy",
+      "faviconDomain": "www.etsy.com",
+      "statusUrl": "https://status.etsy.com",
+      "homepageUrl": "https://www.etsy.com",
+      "statuspageApi": null,
+      "categories": [
+        "payments-commerce"
+      ]
+    },
+    {
       "name": "Expo",
       "slug": "expo",
       "faviconDomain": "expo.dev",
@@ -1123,6 +1156,17 @@
       ]
     },
     {
+      "name": "Fireworks AI",
+      "slug": "fireworks",
+      "faviconDomain": "fireworks.ai",
+      "statusUrl": "https://status.fireworks.ai",
+      "homepageUrl": "https://fireworks.ai",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "Fivetran",
       "slug": "fivetran",
       "faviconDomain": "www.fivetran.com",
@@ -1153,6 +1197,17 @@
       "statuspageApi": "https://status.frame.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
+      ]
+    },
+    {
+      "name": "Framer",
+      "slug": "framer",
+      "faviconDomain": "www.framer.com",
+      "statusUrl": "https://status.framer.com",
+      "homepageUrl": "https://www.framer.com",
+      "statuspageApi": null,
+      "categories": [
+        "productivity-saas"
       ]
     },
     {
@@ -1409,6 +1464,17 @@
       ]
     },
     {
+      "name": "Help Scout",
+      "slug": "helpscout",
+      "faviconDomain": "www.helpscout.com",
+      "statusUrl": "https://status.helpscout.com",
+      "homepageUrl": "https://www.helpscout.com",
+      "statuspageApi": "https://status.helpscout.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Heroku",
       "slug": "heroku",
       "faviconDomain": "heroku.com",
@@ -1442,6 +1508,28 @@
       ]
     },
     {
+      "name": "Hootsuite",
+      "slug": "hootsuite",
+      "faviconDomain": "www.hootsuite.com",
+      "statusUrl": "https://status.hootsuite.com",
+      "homepageUrl": "https://www.hootsuite.com",
+      "statuspageApi": "https://status.hootsuite.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
+      "name": "Hotjar",
+      "slug": "hotjar",
+      "faviconDomain": "www.hotjar.com",
+      "statusUrl": "https://status.hotjar.com",
+      "homepageUrl": "https://www.hotjar.com",
+      "statuspageApi": "https://status.hotjar.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "HubSpot",
       "slug": "hubspot",
       "faviconDomain": "hubspot.com",
@@ -1459,6 +1547,17 @@
       "statusUrl": "https://status.huggingface.co",
       "homepageUrl": "https://huggingface.co",
       "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Hume AI",
+      "slug": "hume",
+      "faviconDomain": "www.hume.ai",
+      "statusUrl": "https://status.hume.ai",
+      "homepageUrl": "https://www.hume.ai",
+      "statuspageApi": "https://status.hume.ai/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
       ]
@@ -1497,6 +1596,17 @@
       ]
     },
     {
+      "name": "Inflection AI",
+      "slug": "inflection",
+      "faviconDomain": "inflection.ai",
+      "statusUrl": "https://status.inflection.ai",
+      "homepageUrl": "https://inflection.ai",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "InfluxDB Cloud",
       "slug": "influxdb",
       "faviconDomain": "influxdata.com",
@@ -1516,6 +1626,17 @@
       "statuspageApi": "https://www.intercomstatus.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
+      ]
+    },
+    {
+      "name": "Iterable",
+      "slug": "iterable",
+      "faviconDomain": "iterable.com",
+      "statusUrl": "https://status.iterable.com",
+      "homepageUrl": "https://iterable.com",
+      "statuspageApi": "https://status.iterable.com/api/v2/summary.json",
+      "categories": [
+        "email-marketing"
       ]
     },
     {
@@ -1596,6 +1717,17 @@
       ]
     },
     {
+      "name": "Kit",
+      "slug": "convertkit",
+      "faviconDomain": "kit.com",
+      "statusUrl": "https://status.kit.com",
+      "homepageUrl": "https://kit.com",
+      "statuspageApi": "https://status.kit.com/api/v2/summary.json",
+      "categories": [
+        "email-marketing"
+      ]
+    },
+    {
       "name": "Klarna",
       "slug": "klarna",
       "faviconDomain": "klarna.com",
@@ -1618,6 +1750,17 @@
       ]
     },
     {
+      "name": "Kong",
+      "slug": "kong",
+      "faviconDomain": "konghq.com",
+      "statusUrl": "https://status.konghq.com",
+      "homepageUrl": "https://konghq.com",
+      "statuspageApi": "https://status.konghq.com/api/v2/summary.json",
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
       "name": "Kraken",
       "slug": "kraken",
       "faviconDomain": "kraken.com",
@@ -1629,6 +1772,28 @@
       ]
     },
     {
+      "name": "Lambda GPU Cloud",
+      "slug": "lambda",
+      "faviconDomain": "lambda.ai",
+      "statusUrl": "https://status.lambdalabs.com",
+      "homepageUrl": "https://lambda.ai",
+      "statuspageApi": "https://status.lambdalabs.com/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Langfuse",
+      "slug": "langfuse",
+      "faviconDomain": "langfuse.com",
+      "statusUrl": "https://status.langfuse.com",
+      "homepageUrl": "https://langfuse.com",
+      "statuspageApi": "https://status.langfuse.com/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
       "name": "LastPass",
       "slug": "lastpass",
       "faviconDomain": "lastpass.com",
@@ -1637,6 +1802,17 @@
       "statuspageApi": "https://status.lastpass.com/api/v2/summary.json",
       "categories": [
         "security"
+      ]
+    },
+    {
+      "name": "Later",
+      "slug": "later",
+      "faviconDomain": "later.com",
+      "statusUrl": "https://status.later.com",
+      "homepageUrl": "https://later.com",
+      "statuspageApi": "https://status.later.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
       ]
     },
     {
@@ -1728,6 +1904,17 @@
       ]
     },
     {
+      "name": "Loops",
+      "slug": "loops",
+      "faviconDomain": "loops.so",
+      "statusUrl": "https://status.loops.so",
+      "homepageUrl": "https://loops.so",
+      "statuspageApi": "https://status.loops.so/api/v2/summary.json",
+      "categories": [
+        "email-marketing"
+      ]
+    },
+    {
       "name": "Lovable",
       "slug": "lovable",
       "faviconDomain": "lovable.dev",
@@ -1736,6 +1923,17 @@
       "statuspageApi": "https://status.lovable.dev/api/v2/summary.json",
       "categories": [
         "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Lucid",
+      "slug": "lucidchart",
+      "faviconDomain": "lucid.co",
+      "statusUrl": "https://status.lucid.co",
+      "homepageUrl": "https://lucid.co",
+      "statuspageApi": "https://status.lucid.co/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
       ]
     },
     {
@@ -1871,17 +2069,6 @@
       ]
     },
     {
-      "name": "Bird",
-      "slug": "messagebird",
-      "faviconDomain": "bird.com",
-      "statusUrl": "https://status.bird.com",
-      "homepageUrl": "https://bird.com",
-      "statuspageApi": "https://status.bird.com/api/v2/summary.json",
-      "categories": [
-        "communication"
-      ]
-    },
-    {
       "name": "Midjourney",
       "slug": "midjourney",
       "faviconDomain": "midjourney.com",
@@ -1912,6 +2099,28 @@
       "statuspageApi": "https://www.mixpanelstatus.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
+      ]
+    },
+    {
+      "name": "Modal",
+      "slug": "modal",
+      "faviconDomain": "modal.com",
+      "statusUrl": "https://status.modal.com",
+      "homepageUrl": "https://modal.com",
+      "statuspageApi": null,
+      "categories": [
+        "ai-machine-learning"
+      ]
+    },
+    {
+      "name": "Mollie",
+      "slug": "mollie",
+      "faviconDomain": "www.mollie.com",
+      "statusUrl": "https://status.mollie.com",
+      "homepageUrl": "https://www.mollie.com",
+      "statuspageApi": null,
+      "categories": [
+        "payments-commerce"
       ]
     },
     {
@@ -2245,6 +2454,17 @@
       ]
     },
     {
+      "name": "PostHog",
+      "slug": "posthog",
+      "faviconDomain": "posthog.com",
+      "statusUrl": "https://www.posthogstatus.com",
+      "homepageUrl": "https://posthog.com",
+      "statuspageApi": null,
+      "categories": [
+        "productivity-saas"
+      ]
+    },
+    {
       "name": "Postman",
       "slug": "postman",
       "faviconDomain": "postman.com",
@@ -2410,6 +2630,17 @@
       ]
     },
     {
+      "name": "Resend",
+      "slug": "resend",
+      "faviconDomain": "resend.com",
+      "statusUrl": "https://status.resend.com",
+      "homepageUrl": "https://resend.com",
+      "statuspageApi": null,
+      "categories": [
+        "email-marketing"
+      ]
+    },
+    {
       "name": "Retool",
       "slug": "retool",
       "faviconDomain": "retool.com",
@@ -2418,6 +2649,17 @@
       "statuspageApi": "https://status.retool.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
+      ]
+    },
+    {
+      "name": "Rev",
+      "slug": "rev",
+      "faviconDomain": "www.rev.com",
+      "statusUrl": "https://status.rev.com",
+      "homepageUrl": "https://www.rev.com",
+      "statuspageApi": "https://status.rev.com/api/v2/summary.json",
+      "categories": [
+        "productivity-saas"
       ]
     },
     {
@@ -2638,6 +2880,17 @@
       "statuspageApi": "https://status.sentry.io/api/v2/summary.json",
       "categories": [
         "developer-tools"
+      ]
+    },
+    {
+      "name": "Shippo",
+      "slug": "shippo",
+      "faviconDomain": "goshippo.com",
+      "statusUrl": "https://status.goshippo.com",
+      "homepageUrl": "https://goshippo.com",
+      "statuspageApi": "https://status.goshippo.com/api/v2/summary.json",
+      "categories": [
+        "payments-commerce"
       ]
     },
     {
@@ -2902,6 +3155,17 @@
       "statuspageApi": null,
       "categories": [
         "productivity-saas"
+      ]
+    },
+    {
+      "name": "Tabnine",
+      "slug": "tabnine",
+      "faviconDomain": "www.tabnine.com",
+      "statusUrl": "https://status.tabnine.com",
+      "homepageUrl": "https://www.tabnine.com",
+      "statuspageApi": "https://status.tabnine.com/api/v2/summary.json",
+      "categories": [
+        "ai-machine-learning"
       ]
     },
     {
@@ -3323,6 +3587,7 @@
         "baseten",
         "blackforestlabs",
         "bolt",
+        "cerebras",
         "character-ai",
         "cohere",
         "cursor",
@@ -3330,15 +3595,21 @@
         "deepseek",
         "elevenlabs",
         "fal",
+        "fireworks",
         "gamma",
         "groq",
         "harvey",
         "heygen",
         "huggingface",
+        "hume",
         "ideogram",
+        "inflection",
+        "lambda",
+        "langfuse",
         "lovable",
         "lumalabs",
         "midjourney",
+        "modal",
         "openai",
         "perplexity",
         "pinecone",
@@ -3349,6 +3620,7 @@
         "runway",
         "stability",
         "synthesia",
+        "tabnine",
         "tavily",
         "together-ai",
         "vapi",
@@ -3478,6 +3750,7 @@
         "incidentio",
         "jfrog",
         "jira-software",
+        "kong",
         "launchdarkly",
         "logrocket",
         "mavencentral",
@@ -3525,10 +3798,13 @@
         "brevo",
         "convertkit",
         "fastmail",
+        "iterable",
+        "loops",
         "mailerlite",
         "mailersend",
         "mailgun",
         "mailjet",
+        "resend",
         "sendgrid"
       ]
     },
@@ -3577,14 +3853,17 @@
         "coinbase",
         "coinbase-ex",
         "doordash",
+        "etsy",
         "gemini-ex",
         "klarna",
         "kraken",
+        "mollie",
         "paddle",
         "paypal",
         "paystack",
         "plaid",
         "robinhood",
+        "shippo",
         "shopify",
         "shopware",
         "square",
@@ -3614,22 +3893,29 @@
         "coda",
         "commerce-cloud",
         "datadog",
+        "descript",
         "docusign",
         "dropboxsign",
         "fathom",
         "figma",
+        "framer",
         "fullstory",
         "gong",
         "grammarly",
         "greenhouse",
         "gusto",
+        "helpscout",
+        "hootsuite",
+        "hotjar",
         "hubspot",
         "intercom",
         "jamf",
         "klaviyo",
+        "later",
         "linear",
         "logingov",
         "loom",
+        "lucidchart",
         "make",
         "marketing-cloud",
         "miro",
@@ -3640,7 +3926,9 @@
         "otter",
         "pardot",
         "pendo",
+        "posthog",
         "qualtrics",
+        "rev",
         "revenuecat",
         "rippling",
         "rudderstack",
