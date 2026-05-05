@@ -11,7 +11,7 @@ import base64
 import hashlib
 import html as html_module
 import json
-from datetime import date
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
