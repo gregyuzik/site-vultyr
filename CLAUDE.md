@@ -67,8 +67,10 @@ python3 scripts/probe_statuspage.py
 
 - **Never commit directly to `main`.** Create a feature branch first:
   `git checkout -b <short-topic>` (kebab-case, no `claude/` prefix).
+- **Branch FROM `main`, every time.** `git checkout main && git pull --ff-only && git checkout -b <topic>` — see `~/.claude/CLAUDE.md` "Session-start branch guard" and "One feature branch → one PR → one merge" for the full rationale (avoiding stacked branches).
 - One branch per logical change. Don't mix unrelated fixes.
-- Open a PR with `gh pr create` and let the user merge.
+- **Push uses SSH.** `git push` (no flags needed — `push.autoSetupRemote=true` is global) talks to `git@github.com:gregyuzik/site-vultyr.git`. If push fails with `Permission denied (publickey)`, run `ssh-add --apple-use-keychain ~/.ssh/github` and retry. **Never `gh push` or `gh repo clone` — gh is for the GitHub API only, not git transport.**
+- **Open a PR with `gh pr create` and auto-merge per the global default** in `~/.claude/CLAUDE.md` ("Pull Requests — auto-merge by default"). Don't leave PRs sitting open waiting for a manual merge command — the act of opening a PR is implicit approval to land it once CI passes.
 - Read-only tasks (audits, exploration) don't need a branch.
 
 ## Code style
