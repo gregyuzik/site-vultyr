@@ -30,7 +30,7 @@ TODAY = datetime.now(timezone.utc).date().isoformat()
 SITE_ORIGIN = "https://vultyr.app"
 APP_STORE_URL = "https://apps.apple.com/us/app/vultyr/id6761264004"
 GA_ID = "G-YYDJLZG0X1"
-FAVICON_HREF = "/favicon.png?v=20260417e"
+FAVICON_HREF = "/favicon.png?v=20260514a"
 # Bump when any CSS file changes so caches (Safari, CDN edges) reload.
 ASSET_VERSION = "20260425b"
 # Bump when icon-256.png changes so CDN edges pick up the new asset.
