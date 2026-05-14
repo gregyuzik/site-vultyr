@@ -50,7 +50,7 @@
       "faviconDomain": "www.afterpay.com",
       "statusUrl": "https://status.afterpay.com",
       "homepageUrl": "https://www.afterpay.com",
-      "statuspageApi": "https://status.afterpay.com/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "payments-commerce"
       ]
@@ -433,9 +433,9 @@
       "name": "Bugsnag",
       "slug": "bugsnag",
       "faviconDomain": "www.bugsnag.com",
-      "statusUrl": "https://status.bugsnag.com",
+      "statusUrl": "https://bugsnag.status.smartbear.com",
       "homepageUrl": "https://www.bugsnag.com",
-      "statuspageApi": "https://status.bugsnag.com/api/v2/summary.json",
+      "statuspageApi": "https://bugsnag.status.smartbear.com/api/v2/summary.json",
       "categories": [
         "developer-tools"
       ]
@@ -864,7 +864,7 @@
       "faviconDomain": "getdbt.com",
       "statusUrl": "https://status.getdbt.com",
       "homepageUrl": "https://www.getdbt.com",
-      "statuspageApi": "https://status.getdbt.com/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "developer-tools"
       ]
@@ -886,7 +886,7 @@
       "faviconDomain": "deepseek.com",
       "statusUrl": "https://status.deepseek.com",
       "homepageUrl": "https://www.deepseek.com",
-      "statuspageApi": "https://status.deepseek.com/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "ai-machine-learning"
       ]
@@ -996,7 +996,7 @@
       "faviconDomain": "dovetail.com",
       "statusUrl": "https://status.dovetail.com",
       "homepageUrl": "https://dovetail.com",
-      "statuspageApi": "https://status.dovetail.com/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "developer-tools"
       ]
@@ -1214,9 +1214,9 @@
       "name": "Front",
       "slug": "front",
       "faviconDomain": "front.com",
-      "statusUrl": "https://status.frontapp.com",
+      "statusUrl": "https://www.frontstatus.com",
       "homepageUrl": "https://front.com",
-      "statuspageApi": "https://status.frontapp.com/api/v2/summary.json",
+      "statuspageApi": "https://www.frontstatus.com/api/v2/summary.json",
       "categories": [
         "communication"
       ]
@@ -1238,7 +1238,7 @@
       "faviconDomain": "gamma.app",
       "statusUrl": "https://status.gamma.app",
       "homepageUrl": "https://gamma.app",
-      "statuspageApi": "https://status.gamma.app/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "ai-machine-learning"
       ]
@@ -1272,6 +1272,17 @@
       "statusUrl": "https://www.githubstatus.com",
       "homepageUrl": "https://github.com",
       "statuspageApi": "https://www.githubstatus.com/api/v2/summary.json",
+      "categories": [
+        "developer-tools"
+      ]
+    },
+    {
+      "name": "GitLab",
+      "slug": "gitlab",
+      "faviconDomain": "about.gitlab.com",
+      "statusUrl": "https://status.gitlab.com",
+      "homepageUrl": "https://about.gitlab.com",
+      "statuspageApi": null,
       "categories": [
         "developer-tools"
       ]
@@ -1623,7 +1634,7 @@
       "faviconDomain": "intercom.com",
       "statusUrl": "https://www.intercomstatus.com",
       "homepageUrl": "https://www.intercom.com",
-      "statuspageApi": "https://www.intercomstatus.com/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "productivity-saas"
       ]
@@ -2017,9 +2028,9 @@
       "name": "Mastodon",
       "slug": "mastodon",
       "faviconDomain": "mastodon.social",
-      "statusUrl": "https://mastodon.statuspage.io",
-      "homepageUrl": "https://mastodon.social",
-      "statuspageApi": "https://mastodon.statuspage.io/api/v2/summary.json",
+      "statusUrl": "https://status.mastodon.social",
+      "homepageUrl": "https://joinmastodon.org",
+      "statuspageApi": null,
       "categories": [
         "social-media"
       ]
@@ -2085,7 +2096,7 @@
       "faviconDomain": "miro.com",
       "statusUrl": "https://status.miro.com",
       "homepageUrl": "https://miro.com",
-      "statuspageApi": "https://status.miro.com/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "productivity-saas"
       ]
@@ -3053,7 +3064,7 @@
       "faviconDomain": "squareup.com",
       "statusUrl": "https://issquareup.com",
       "homepageUrl": "https://squareup.com",
-      "statuspageApi": "https://issquareup.com/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "payments-commerce"
       ]
@@ -3249,9 +3260,9 @@
       "name": "Trello",
       "slug": "trello",
       "faviconDomain": "trello.com",
-      "statusUrl": "https://status.trello.com",
+      "statusUrl": "https://trello.status.atlassian.com",
       "homepageUrl": "https://trello.com",
-      "statuspageApi": "https://status.trello.com/api/v2/summary.json",
+      "statuspageApi": "https://trello.status.atlassian.com/api/v2/summary.json",
       "categories": [
         "productivity-saas"
       ]
@@ -3425,9 +3436,9 @@
       "name": "Webex",
       "slug": "webex",
       "faviconDomain": "webex.com",
-      "statusUrl": "https://ciscospark.statuspage.io",
+      "statusUrl": "https://status.webex.com",
       "homepageUrl": "https://www.webex.com",
-      "statuspageApi": "https://ciscospark.statuspage.io/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "communication"
       ]
@@ -3482,7 +3493,7 @@
       "faviconDomain": "wistia.com",
       "statusUrl": "https://status.wistia.com",
       "homepageUrl": "https://wistia.com",
-      "statuspageApi": "https://status.wistia.com/api/v2/summary.json",
+      "statuspageApi": null,
       "categories": [
         "streaming-media"
       ]
@@ -3740,6 +3751,7 @@
         "fivetran",
         "frame-io",
         "github",
+        "gitlab",
         "gitpod",
         "grafana",
         "growthbook",
