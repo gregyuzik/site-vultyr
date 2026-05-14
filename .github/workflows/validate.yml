@@ -8,16 +8,8 @@ name: Validate generator output
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - '*.md'
-      - '.claude/**'
-      - 'README.md'
   pull_request:
     branches: [main]
-    paths-ignore:
-      - '*.md'
-      - '.claude/**'
-      - 'README.md'
 
 concurrency:
   group: validate-${{ github.ref }}
