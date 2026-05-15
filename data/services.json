@@ -1093,7 +1093,7 @@
       "name": "Etsy",
       "slug": "etsy",
       "faviconDomain": "www.etsy.com",
-      "statusUrl": "https://status.etsy.com",
+      "statusUrl": "https://www.etsystatus.com",
       "homepageUrl": "https://www.etsy.com",
       "statuspageApi": null,
       "categories": [
@@ -2721,7 +2721,7 @@
       "name": "Roblox",
       "slug": "roblox",
       "faviconDomain": "roblox.com",
-      "statusUrl": "https://roblox.instatus.com",
+      "statusUrl": "https://status.roblox.com",
       "homepageUrl": "https://www.roblox.com",
       "statuspageApi": null,
       "categories": [
